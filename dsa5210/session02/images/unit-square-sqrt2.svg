@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 520" role="img" aria-label="Unit square with diagonal of length square root of 2">
+  <rect width="620" height="520" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,1 L0,9 L9,5 z" fill="#005bbb"/>
+    </marker>
+    <style>
+      .title{font:700 28px Arial,sans-serif;fill:#003366}
+      .label{font:700 25px Arial,sans-serif;fill:#102a43}
+      .small{font:18px Arial,sans-serif;fill:#526d82}
+      .edge{stroke:#102a43;stroke-width:5;fill:#f8fbff}
+      .diag{stroke:#cc2222;stroke-width:6;fill:none}
+      .dim{stroke:#005bbb;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <text x="310" y="50" text-anchor="middle" class="title">Unit Square</text>
+  <rect x="155" y="105" width="310" height="310" class="edge"/>
+  <path d="M155 415 L465 105" class="diag"/>
+  <text x="286" y="245" class="label" fill="#cc2222">√2</text>
+  <path d="M155 445 H465" class="dim"/>
+  <path d="M125 415 V105" class="dim"/>
+  <text x="310" y="480" text-anchor="middle" class="label">1</text>
+  <text x="88" y="268" text-anchor="middle" class="label">1</text>
+  <text x="310" y="505" text-anchor="middle" class="small">diagonal² = 1² + 1² = 2</text>
+</svg>
