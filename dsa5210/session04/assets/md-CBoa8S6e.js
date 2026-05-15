@@ -1,9 +1,0 @@
-import{_ as i}from"./slidev/CodeBlockWrapper.vue_vue_type_script_setup_true_lang-4QpfEYla.js";import{o as p,b as m,w as n,g as e,d,m as c,ad as s,v as h,x as f,T as l}from"./modules/vue-BaNth3la.js";import{I as g}from"./slidev/default-BkbbKzro.js";import{u,f as _}from"./slidev/context-DgKkGOlT.js";import"./modules/unplugin-icons-BS1VSoQX.js";import"./index-D0k-uGfc.js";import"./modules/shiki-DtWv6l3B.js";const k={class:"code-compact"},N={__name:"session04.md__slidev_10",setup(v){const{$clicksContext:t,$frontmatter:o}=u();return t.setup(),(x,a)=>{const r=i;return p(),m(g,h(f(l(_)(l(o),9))),{default:n(()=>[a[1]||(a[1]=e("h1",null,"Hall Theorem Demo Files",-1)),e("div",k,[d(r,c({},{title:"",ranges:[]}),{default:n(()=>[...a[0]||(a[0]=[e("pre",{class:"shiki shiki-themes vitesse-dark vitesse-light slidev-code",style:{"--shiki-dark":"#dbd7caee","--shiki-light":"#393a34","--shiki-dark-bg":"#121212","--shiki-light-bg":"#ffffff"}},[e("code",{class:"language-text"},[e("span",{class:"line"},[e("span",null,"~/mydoc/hallproblem/Rethlas")]),s(`
-`),e("span",{class:"line"},[e("span")]),s(`
-`),e("span",{class:"line"},[e("span",null,"agents/generation/data/hall_theorem.md")]),s(`
-`),e("span",{class:"line"},[e("span")]),s(`
-`),e("span",{class:"line"},[e("span",null,"agents/generation/results/hall_theorem/blueprint_verified.md")]),s(`
-`),e("span",{class:"line"},[e("span",null,"agents/generation/results/hall_theorem/verification.json")]),s(`
-`),e("span",{class:"line"},[e("span")]),s(`
-`),e("span",{class:"line"},[e("span",null,"agents/generation/logs/hall_theorem/hall_theorem.md")]),s(`
-`),e("span",{class:"line"},[e("span",null,"agents/generation/memory/hall_theorem/")])])],-1)])]),_:1},16)]),a[2]||(a[2]=e("div",{class:"box-green"}," These files are enough for a reliable classroom demo even if a fresh agent run is slow. ",-1))]),_:1},16)}}};export{N as default};
