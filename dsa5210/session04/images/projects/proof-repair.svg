@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Proof repair assistant diagram">
+  <rect width="800" height="500" rx="28" fill="#f7fbff"/>
+  <text x="400" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#003366">Proof Repair Assistant</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0066cc"/></marker></defs>
+  <rect x="70" y="125" width="220" height="210" rx="14" fill="#0f172a" stroke="#003366" stroke-width="4"/>
+  <text x="100" y="175" font-family="Menlo, monospace" font-size="18" fill="#dbeafe">by</text>
+  <text x="100" y="210" font-family="Menlo, monospace" font-size="18" fill="#fca5a5">  rw [bad_name]</text>
+  <text x="100" y="245" font-family="Menlo, monospace" font-size="18" fill="#dbeafe">  exact h</text>
+  <text x="180" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">broken proof</text>
+  <path d="M290 230 H358" stroke="#0066cc" stroke-width="6" marker-end="url(#arrow)"/>
+  <rect x="365" y="145" width="175" height="170" rx="14" fill="#fff4e6" stroke="#e07000" stroke-width="4"/>
+  <text x="453" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7a3f00">Lean error</text>
+  <text x="453" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7a3f00">unknown</text>
+  <text x="453" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7a3f00">identifier</text>
+  <path d="M540 230 H608" stroke="#0066cc" stroke-width="6" marker-end="url(#arrow)"/>
+  <circle cx="670" cy="230" r="70" fill="#e8f8e8" stroke="#1a8a3a" stroke-width="5"/>
+  <text x="670" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0d5c25">patch</text>
+  <text x="670" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0d5c25">and check</text>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#003366">Track repair success, attempts, and explanation quality.</text>
+</svg>
