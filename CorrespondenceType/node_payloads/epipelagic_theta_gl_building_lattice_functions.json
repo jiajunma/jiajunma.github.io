@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.gl_building_lattice_functions",
+  "title": "GL Building as Lattice Functions",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>GL Building as Lattice Functions</h1>\n<p>The extended building \\(B(\\operatorname{GL}(V))\\) is identified with the set of lattice functions on \\(V\\), equivalently with splittable \\(D\\)-norms, as a \\(\\operatorname{GL}(V)\\)-set. This identification is unique up to translation.</p>\n<p>If \\(x\\in B(\\operatorname{GL}(V))\\) corresponds to \\(L\\), then\n\\[\n\\operatorname{LieGL}(V)_{x,r}=\\operatorname{LieGL}(V)_{L,r},\\qquad\n\\operatorname{GL}(V)_{x,r}=\\operatorname{GL}(V)_{L,r}\\quad(r&gt;0),\n\\]\nand\n\\[\n\\operatorname{GL}(V)_x=\\operatorname{GL}(V)_L.\n\\]</p>",
+  "proof_html": "<p>The paper cites the standard Bruhat-Tits and Moy-Prasad identification. On an apartment, a splittable norm is determined by the values of a splitting basis, and the Moy-Prasad lattice conditions are exactly the operator-shift conditions defining \\(\\operatorname{LieGL}(V)_{L,r}\\) and \\(\\operatorname{GL}(V)_{L,r}\\).</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.d_norm",
+      "title": "D Norm",
+      "href": "epipelagic_theta/epipelagic_theta_d_norm.html"
+    },
+    {
+      "id": "epipelagic_theta.lattice_function",
+      "title": "Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "href": "epipelagic_theta/epipelagic_theta_classical_building_self_dual_lattice_functions.html"
+    }
+  ],
+  "lean_refs": []
+}

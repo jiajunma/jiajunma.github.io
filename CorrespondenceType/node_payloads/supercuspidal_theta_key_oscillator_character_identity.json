@@ -9,8 +9,13 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Key Oscillator Character Identity</h1>\n<p>For elements in the stabilizer factors \\(\\Delta^i\\) or in \\(G_{x,s}\\times G'_{x',s}\\), the phase in the lattice-model action satisfies\n\\[\n\\psi((1/2)\\langle w,h^{-1}w-w\\rangle_W)\n=\n\\Gamma(g)\\Gamma'(g')\n\\]\nwith the sign and inverse conventions of the paper.</p>",
-  "proof_html": "<p>For \\(\\Delta^i\\), expand \\(g\\) and \\(g'\\) by the exponential map and use Lemma 6.7 to replace \\(h^{-1}w-w\\) by the \\(d\\alpha^\\perp\\) term. The commutator correction pairs trivially with \\(\\Gamma'\\) by centralizer properties. For depth \\(s\\) elements, the formula is exactly Lemma 2.4 rewritten through the two moment maps.</p>",
+  "proof_html": "<p>For \\(\\Delta^i\\), expand \\(g\\) and \\(g'\\) by the exponential map and use the\nsingle-block stabilizer structure\n<code>supercuspidal_theta.single_block_stabilizer_structure</code> to replace\n\\(h^{-1}w-w\\) by the \\(d\\alpha^\\perp\\) term. The commutator correction pairs\ntrivially with \\(\\Gamma'\\) by centralizer properties. For depth \\(s\\) elements,\nthe formula is the generalized lattice-model action formula rewritten through\nthe two moment maps.</p>",
   "deps": [
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    },
     {
       "id": "supercuspidal_theta.single_block_stabilizer_structure",
       "title": "Stabilizer Structure in One Positive Depth Block",

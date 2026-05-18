@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -258,6 +270,8 @@
         
         <li><a href="supercuspidal_theta_converse_off_diagonal_oscillator_factorization.html">Converse Off-Diagonal Oscillator Factorization</a></li>
         
+        <li><a href="supercuspidal_theta_positive_depth_moment_map_surjectivity.html">Positive Depth Moment Map Surjectivity</a></li>
+        
       </ul>
     </div>
   </div>
@@ -272,7 +286,22 @@
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>The proof is by induction on the number of positive-depth blocks. Lemma 9.2 uses Appendix B's building-indexed sum formula to choose \(x''\) and a vector \(w\) whose moment map matches the top-depth part of the source datum. Kim-Murnaghan conjugacy moves this moment value into block-diagonal form. Lemmas 9.3 and 9.4 split the target space and lattice function into top and lower blocks. Lemma 9.5 factors the residual oscillator action so the lower block occurrence can be isolated. The top block is adjusted by Proposition 5.10 to satisfy \(M({}^bw)={}^b\Gamma\), while the lower block is handled by induction. Combining the two blocks gives the required lifted datum.</p>
+        <p>The proof is by induction on the number of positive-depth blocks. The
+occurrence vector choice <code>supercuspidal_theta.occurrence_vector_choice</code> uses the
+building-indexed sum formula to choose \(x''\) and a vector \(w\) whose moment
+map matches the top-depth part of the source datum. Kim-Murnaghan conjugacy
+moves this moment value into block-diagonal form. The target top-block
+nondegenerate splitting
+<code>supercuspidal_theta.target_top_block_nondegenerate_splitting</code> and target
+lattice block splitting <code>supercuspidal_theta.target_lattice_block_splitting</code>
+split the target space and lattice function into top and lower blocks. The
+converse off-diagonal oscillator factorization
+<code>supercuspidal_theta.converse_off_diagonal_oscillator_factorization</code> factors the
+residual oscillator action so the lower block occurrence can be isolated. The
+top block is adjusted by positive-depth moment-map surjectivity
+<code>supercuspidal_theta.positive_depth_moment_map_surjectivity</code> to satisfy
+\(M({}^bw)={}^b\Gamma\), while the lower block is handled by induction.
+Combining the two blocks gives the required lifted datum.</p>
       </div>
     </details>
     

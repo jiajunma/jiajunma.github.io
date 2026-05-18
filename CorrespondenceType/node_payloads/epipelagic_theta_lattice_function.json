@@ -8,10 +8,21 @@
   "topics": [
     "epipelagic_theta"
   ],
-  "body_html": "<h1>Lattice Function</h1>\n<p>Let \\(V\\) be a right \\(D\\)-vector space. A lattice function on \\(V\\) assigns to each real number \\(s\\) an \\(o_D\\)-lattice \\(L_s\\), decreasing in \\(s\\), compatible with scalar translation, and left-continuous:\n\\[\nL_t \\subseteq L_s \\quad(s&lt;t), \\qquad L_{s+\\nu(d)}=L_s d, \\qquad L_s=\\bigcap_{t&lt;s} L_t.\n\\]\nOne writes\n\\[\nL_{r+}=\\bigcup_{t&gt;r}L_t,\\qquad\n\\operatorname{Jump}(L)=\\{r\\in \\mathbb R: L_r\\ne L_{r+}\\}.\n\\]</p>\n<p>The lattice function induces filtrations on \\(\\operatorname{End}_D(V)\\) and \\(\\operatorname{GL}_D(V)\\) by requiring operators or group elements to shift every \\(L_s\\) into \\(L_{s+r}\\).</p>",
+  "body_html": "<h1>Lattice Function</h1>\n<p>Let \\(V\\) be a right \\(D\\)-vector space. A lattice function on \\(V\\) assigns to each real number \\(s\\) an \\(o_D\\)-lattice \\(L_s\\), decreasing in \\(s\\), compatible with scalar translation, and left-continuous:\n\\[\nL_t \\subseteq L_s \\quad(s&lt;t), \\qquad L_{s+\\nu(d)}=L_s d, \\qquad L_s=\\bigcap_{t&lt;s} L_t.\n\\]\nOne writes\n\\[\nL_{r+}=\\bigcup_{t&gt;r}L_t,\\qquad\n\\operatorname{Jump}(L)=\\{r\\in \\mathbb R: L_r\\ne L_{r+}\\}.\n\\]</p>\n<p>The lattice function induces filtrations on \\(\\operatorname{End}_D(V)\\) and \\(\\operatorname{GL}_D(V)\\) by requiring operators or group elements to shift every \\(L_s\\) into \\(L_{s+r}\\).</p>\n<p>In the paper, lattice functions are interchangeable with splittable \\(D\\)-norms via \\(L_r=\\ell^{-1}([r,\\infty))\\).</p>",
   "proof_html": null,
-  "deps": [],
+  "deps": [
+    {
+      "id": "epipelagic_theta.d_norm",
+      "title": "D Norm",
+      "href": "epipelagic_theta/epipelagic_theta_d_norm.html"
+    }
+  ],
   "dependents": [
+    {
+      "id": "epipelagic_theta.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "href": "epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html"
+    },
     {
       "id": "epipelagic_theta.self_dual_lattice_function",
       "title": "Self-Dual Lattice Function",

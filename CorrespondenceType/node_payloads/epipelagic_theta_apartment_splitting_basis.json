@@ -1,0 +1,28 @@
+{
+  "id": "epipelagic_theta.apartment_splitting_basis",
+  "title": "Apartment Splitting Basis",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_apartment_splitting_basis.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Apartment Splitting Basis</h1>\n<p>Fix a basis\n\\[\n\\{e_i:i\\in I^+\\oplus I^-\\oplus I^0\\}\n\\]\nadapted to the form: \\(I^-=-I^+\\), the \\(e_i,e_{-i}\\) form hyperbolic pairs, and \\(I^0\\) indexes anisotropic lines. A self-dual lattice function in the associated apartment is determined by real numbers \\(a_i\\) for \\(i\\in I^+\\), with\n\\[\na_{-i}=-a_i,\\qquad\na_i=\\frac12\\nu(\\langle e_i,e_i\\rangle)\n\\quad(i\\in I^0),\n\\]\nand\n\\[\nL_r=\\bigoplus_{i\\in I} e_i\\,p_D^{[(r-a_i)/\\nu_D]}.\n\\]\nThe coordinates \\(a_i\\) identify the apartment with \\(\\mathbb R^n\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "href": "epipelagic_theta/epipelagic_theta_apartment_fractional_jump_decomposition.html"
+    }
+  ],
+  "lean_refs": []
+}

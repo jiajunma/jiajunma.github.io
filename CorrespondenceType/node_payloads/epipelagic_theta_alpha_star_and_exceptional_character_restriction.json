@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
+  "title": "Alpha Star and Exceptional Character Restriction",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_alpha_star_and_exceptional_character_restriction.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Alpha Star and Exceptional Character Restriction</h1>\n<p>The homomorphism\n\\[\n\\alpha:S'_{\\lambda'}\\to S_\\lambda\n\\]\nfrom the residual fiber stabilizer calculation\n<code>epipelagic_theta.residual_fiber_stabilizer</code> induces a character map\n\\[\n\\alpha^*:\\operatorname{Char}(S_\\lambda)\\to \\operatorname{Char}(S'_{\\lambda'}),\\qquad\n\\alpha^*(\\chi)=\\chi\\circ\\alpha.\n\\]\nAlthough \\(\\alpha\\) depends on the chosen \\(\\bar w\\in X_{\\lambda,\\lambda'}\\), the induced map on Grothendieck groups is independent of \\(\\bar w\\), because different choices are conjugate in the residual fiber calculation.</p>\n<p>In the exceptional unitary equal-rank case, not every character of \\(S_\\lambda\\) occurs. A character \\(\\chi\\) contributes to \\(C[X_{\\lambda,\\lambda'}]\\) exactly when its restriction to the stabilizer subgroup \\(S_{\\bar w}\\subset S_\\lambda\\) is trivial.</p>",
+  "proof_html": "<p>The independence follows from the orbit statement in\n<code>epipelagic_theta.residual_fiber_stabilizer</code>: replacing \\(\\bar w\\) conjugates\nthe graph subgroup defining \\(\\alpha\\). The exceptional restriction follows\nfrom the identification \\(X_{\\lambda,\\lambda'}\\simeq S_\\lambda/S_{\\bar w}\\);\nthe regular representation of this quotient contains precisely the characters\ntrivial on \\(S_{\\bar w}\\).</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.residual_fiber_stabilizer",
+      "title": "Residual Moment Fiber and Stabilizer Homomorphism",
+      "href": "epipelagic_theta/epipelagic_theta_residual_fiber_stabilizer.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "title": "Proof Plan for the Main Epipelagic Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_proof_plan.html"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "title": "Main Epipelagic Theta Correspondence Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

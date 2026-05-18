@@ -1,0 +1,28 @@
+{
+  "id": "epipelagic_theta.matrix_calculation_exceptional_unitary_case",
+  "title": "Matrix Calculation in the Exceptional Unitary Case",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_matrix_calculation_exceptional_unitary_case.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Matrix Calculation in the Exceptional Unitary Case</h1>\n<p>In the exceptional case, \\(D/k\\) is ramified quadratic, the dual pair is an equal-rank unitary pair, and the residual regular semisimple element \\(\\lambda^\\circ\\) has rank \\(n-1\\). After base change, the residual space is two copies of \\(n\\times n\\) matrices. The Galois action exchanges the two components of \\(\\bar w=(A,B)\\), forcing \\(A\\) and \\(B\\) to have rank \\(n-1\\).</p>\n<p>The stabilizer of \\(\\bar w\\) in \\(S_\\lambda\\) equals the subgroup acting trivially on \\(\\operatorname{Im}\\lambda^\\circ\\). Hence\n\\[\nX_{\\lambda,\\lambda'}\\simeq S_\\lambda/S_{\\bar w},\n\\]\nand a character occurs in the residual function space exactly when it is trivial on \\(S_{\\bar w}\\).</p>",
+  "proof_html": "<p>The proof replaces the full general linear stabilizer by the special-linear stabilizer of \\(\\lambda^\\circ\\), where the relevant orbit is free. Galois invariance then descends the orbit statement to the original group. The equality \\(S_{\\bar w}=S_\\lambda|_{\\operatorname{Im}\\lambda^\\circ=\\operatorname{id}}\\) follows from \\(\\operatorname{Im}\\bar w^*=\\operatorname{Im}\\lambda^\\circ\\).</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.residual_fiber_stabilizer",
+      "title": "Residual Moment Fiber and Stabilizer Homomorphism",
+      "href": "epipelagic_theta/epipelagic_theta_residual_fiber_stabilizer.html"
+    }
+  ],
+  "lean_refs": []
+}

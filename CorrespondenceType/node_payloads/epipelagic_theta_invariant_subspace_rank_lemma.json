@@ -9,15 +9,30 @@
     "epipelagic_theta"
   ],
   "body_html": "<h1>Invariant-Theory Rank Lemma</h1>\n<p>For split irreducible dual pairs with \\(\\operatorname{rank}G\\le\\operatorname{rank}G'\\), there is a \\(Y\\times Y'\\)-stable linear subspace \\(A\\subset W\\) making the invariant quotient diagram commute:\n\\[\n\\mathbf y/W_G \\to \\mathbf y'/W_{G'}.\n\\]\nThe induced map on Cartan invariant quotients is the natural coordinate inclusion.</p>",
-  "proof_html": "<p>Appendix 2 constructs \\(A\\) by explicit matrices in the general linear, symplectic-orthogonal, and related classical cases. Restricting the two moment maps to \\(A\\) gives diagonal coordinate formulas. Inspecting the discriminant polynomials on the two Cartan quotients yields the rank list in Proposition 7.3.2.</p>",
+  "proof_html": "<p>Appendix 2 constructs \\(A\\) by explicit matrices in the general linear,\nsymplectic-orthogonal, and related classical cases. Restricting the two moment\nmaps to \\(A\\) gives diagonal coordinate formulas. Inspecting the discriminant\npolynomials on the two Cartan quotients yields the finite rank list used by the\nrank-restriction theorem.</p>",
   "deps": [
+    {
+      "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "title": "Moment Maps for a Classical Type I Dual Pair",
+      "href": "epipelagic_theta/epipelagic_theta_moment_maps_classical_dual_pair.html"
+    },
+    {
+      "id": "epipelagic_theta.matrix_calculation_gl_case",
+      "title": "Matrix Calculation in the General Linear Case",
+      "href": "epipelagic_theta/epipelagic_theta_matrix_calculation_gl_case.html"
+    },
+    {
+      "id": "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case",
+      "title": "Matrix Calculation in the Symplectic-Orthogonal Case",
+      "href": "epipelagic_theta/epipelagic_theta_matrix_calculation_symplectic_orthogonal_case.html"
+    }
+  ],
+  "dependents": [
     {
       "id": "epipelagic_theta.epipelagic_rank_restriction",
       "title": "Rank Restrictions for Epipelagic Theta Lifts",
       "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
-    }
-  ],
-  "dependents": [
+    },
     {
       "id": "epipelagic_theta.residual_fiber_stabilizer",
       "title": "Residual Moment Fiber and Stabilizer Homomorphism",

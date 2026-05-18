@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -263,11 +275,11 @@
     <h1>Proof Plan for Main Supercuspidal Theorem</h1>
 <ol>
 <li>Forward direction: construct \(\Sigma'=\#_{V,T'}(\Sigma)\) and the vector \(w\) attached to the block construction.</li>
-<li>Proposition 8.1 gives multiplicity one for the product \(K\)-type in the oscillator model, so the theta lift contains the compactly induced representation attached to \(\Sigma'\).</li>
+<li><code>supercuspidal_theta.k_type_orbit_intertwining_proposition</code> gives multiplicity one for the product \(K\)-type in the oscillator model, so the theta lift contains the compactly induced representation attached to \(\Sigma'\).</li>
 <li>First-occurrence and irreducibility identify the full theta lift with \(\widetilde\pi_{\widetilde\Sigma'}\).</li>
 <li>Converse direction: start with supercuspidal \(\widetilde\pi\) and supercuspidal theta lift \(\widetilde\pi'\).</li>
 <li>Use covering-data exhaustion to write \(\widetilde\pi\) by a covering datum.</li>
-<li>Apply Proposition 9.1 to produce equivalent source data and a target lifted \(K\)-type datum.</li>
+<li>Apply <code>supercuspidal_theta.refined_k_type_occurrence_proposition</code> to produce equivalent source data and a target lifted \(K\)-type datum.</li>
 <li>Use supercuspidality of the target and Kim-Hakim-Murnaghan equivalence to identify the target representation with the datum produced by \(\#_{V,T'}\).</li>
 </ol>
     

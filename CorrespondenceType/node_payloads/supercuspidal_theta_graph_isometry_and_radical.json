@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Graph Isometry and Radical Quotient</h1>\n<p>The map\n\\[\n(X,X')\\mapsto -wX+X'w\n\\]\nfrom source and target Lie algebra layers to \\(W\\) is an isometry for the symplectic forms defined by \\(\\Gamma\\) and \\(\\Gamma'\\). The graph of \\(d\\alpha\\) has radical given by the deepest centralizer layer, and after quotienting by this radical one obtains a nondegenerate finite symplectic space \\(b_0\\). In Case II the graph is already maximal isotropic and \\(b_0=0\\).</p>",
-  "proof_html": "<p>This is the aggregate of Lemma 6.3, Lemma 6.4, and Lemma 6.5. Lemma 6.3 gives the trace-form isometry. Lemma 6.4 computes the radicals using the good-element commutator. Lemma 6.5 applies exactness and dimension counting to identify \\(b_C\\), its orthogonal complement, and \\(b_0\\).</p>",
+  "proof_html": "<p>This aggregates the trace-form isometry\n<code>supercuspidal_theta.lie_layer_to_oscillator_isometry</code>, the radical computation\n<code>supercuspidal_theta.radical_of_gamma_symplectic_layer</code>, and the graph radical\nquotient <code>supercuspidal_theta.graph_radical_quotient</code>. These nodes respectively\ngive the isometry, compute the radicals using the good-element commutator, and\napply exactness plus dimension counting to identify \\(b_C\\), its orthogonal\ncomplement, and \\(b_0\\).</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.lie_layer_to_oscillator_isometry",

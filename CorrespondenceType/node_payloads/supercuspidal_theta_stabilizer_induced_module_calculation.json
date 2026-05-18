@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Stabilizer Induced Module Calculation</h1>\n<p>The evaluation map identifies the \\(K_{M,+}\\)-isotypic part of the induced stabilizer representation with \\(S(b)^{b_C}\\), and the induced module from \\(S K_{M,+}\\) to \\(\\Delta^0K_{M,0+}\\) is isomorphic to the product Heisenberg-Weil representation \\(\\kappa_M\\).</p>",
-  "proof_html": "<p>This is the aggregate of Lemma 7.4 and Lemma 7.5. Lemma 7.4 identifies the \\(K_{M,+}\\)-isotypic part of the induced stabilizer representation with \\(S(b)^{b_C}\\) and then with the product Heisenberg-Weil type. Lemma 7.5 supplies the layer-by-layer one-dimensional Hom calculation for the Yu \\(\\kappa\\)-factors.</p>",
+  "proof_html": "<p>This aggregates the stabilizer evaluation map calculation\n<code>supercuspidal_theta.stabilizer_evaluation_map</code> and the kappa factor Hom\ntriviality calculation <code>supercuspidal_theta.kappa_factor_hom_triviality</code>. The\nfirst identifies the \\(K_{M,+}\\)-isotypic part of the induced stabilizer\nrepresentation with \\(S(b)^{b_C}\\) and then with the product Heisenberg-Weil\ntype. The second supplies the layer-by-layer one-dimensional Hom calculation\nfor the Yu \\(\\kappa\\)-factors.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.stabilizer_evaluation_map",

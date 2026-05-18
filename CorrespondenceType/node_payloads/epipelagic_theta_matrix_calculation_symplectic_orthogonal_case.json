@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case",
+  "title": "Matrix Calculation in the Symplectic-Orthogonal Case",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_matrix_calculation_symplectic_orthogonal_case.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Matrix Calculation in the Symplectic-Orthogonal Case</h1>\n<p>For \\((Sp(2n),O(2n'+1))\\), \\(n\\le n'\\), choose standard matrices \\(J,J'\\) and identify\n\\[\nW=\\operatorname{Mat}_{2n'+1,2n}.\n\\]\nOn the test subspace with diagonal blocks \\(a=\\operatorname{diag}(a_i)\\) and \\(b=\\operatorname{diag}(b_i)\\), the moment maps have diagonal blocks\n\\[\nM(w)=\n\\begin{pmatrix}\nab&amp;0\\\\\n0&amp;-ab\n\\end{pmatrix},\n\\qquad\nM'(w)=\n\\begin{pmatrix}\nab&amp;0&amp;0\\\\\n0&amp;0&amp;0\\\\\n0&amp;0&amp;-ab\n\\end{pmatrix}.\n\\]\nThe even orthogonal and odd orthogonal variants use the same diagonal-block calculation with the corresponding standard form matrices.</p>",
+  "proof_html": "<p>The adjoint is \\(w^*=J^{-1}w^tJ'\\), so the two moment maps are \\(w^*w\\) and \\(ww^*\\). Substituting the diagonal test matrix gives the displayed blocks. The remaining split symplectic-orthogonal cases differ only in the size of the middle zero block and the parity of the orthogonal space.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "title": "Moment Maps for a Classical Type I Dual Pair",
+      "href": "epipelagic_theta/epipelagic_theta_moment_maps_classical_dual_pair.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
+    },
+    {
+      "id": "epipelagic_theta.invariant_subspace_rank_lemma",
+      "title": "Invariant-Theory Rank Lemma",
+      "href": "epipelagic_theta/epipelagic_theta_invariant_subspace_rank_lemma.html"
+    }
+  ],
+  "lean_refs": []
+}

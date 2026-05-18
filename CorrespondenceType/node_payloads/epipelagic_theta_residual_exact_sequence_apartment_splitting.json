@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+  "title": "Apartment Splitting of the Residual Exact Sequence",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_residual_exact_sequence_apartment_splitting.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Apartment Splitting of the Residual Exact Sequence</h1>\n<p>Let\n\\[\n0\\to Y\\to W\\to X\\to0\n\\]\nbe the residual exact sequence in the main epipelagic setup. Appendix 1\nconstructs a splitting of the quotient \\(P\\to J\\) and a \\(J\\)-module splitting\n\\[\nW\\simeq Y\\oplus X.\n\\]</p>",
+  "proof_html": "<p>Using the fractional jump decomposition, define \\(X^{[\\mu]}\\) and \\(X_\\mu=X^{[\\mu]}\\cap B_\\mu\\) for the tensor-product lattice \\(B=L\\otimes L'\\). The natural map\n\\[\nX_{-1/(2m)}/X_{-1/(2m)}p_K\\to B_{-1/(2m)}/B_{1/(2m)}\n\\]\nsplits the quotient \\(W\\to X\\). The group schemes \\(Q,Q'\\) built from the fractional pieces have special fibers identified with \\(G_L/G_{L,0+}\\) and \\(G'_{L'}/G'_{L',0+}\\), so \\(Q\\times Q'\\to P\\) gives a splitting of \\(P\\to J\\). Equivariance of the fractional decomposition gives the \\(J\\)-module splitting.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "href": "epipelagic_theta/epipelagic_theta_apartment_fractional_jump_decomposition.html"
+    },
+    {
+      "id": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_reductive_quotient_of_self_dual_lattice.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.residual_exact_sequence_splitting",
+      "title": "Residual Exact Sequence Splitting",
+      "href": "epipelagic_theta/epipelagic_theta_residual_exact_sequence_splitting.html"
+    }
+  ],
+  "lean_refs": []
+}

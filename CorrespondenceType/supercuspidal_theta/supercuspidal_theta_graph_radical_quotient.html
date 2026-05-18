@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -276,11 +288,21 @@ be the map induced by \((X,X')\mapsto -wX+X'w\). Let \(N(X)=(X,d\alpha(X))\) be 
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>The radical isomorphism follows from the graded isomorphism \(d\alpha\) of Lemma 6.2 and the radical computation of Lemma 6.4. Exactness is proved by writing
+        <p>The radical isomorphism follows from
+<code>supercuspidal_theta.dalpha_layer_properties</code> and the radical computation
+<code>supercuspidal_theta.radical_of_gamma_symplectic_layer</code>. Exactness is proved by
+writing
 \[
 \overline\iota(X,d\alpha(X))=-wX+d\alpha(X)w,
 \]
-and replacing \(wXw^{-1}\) by \(d\alpha(X)+d\alpha^\perp(X)\); the \(d\alpha^\perp\) term is deeper for \(X\in r\). Conversely, if \(\overline\iota(X,X')=0\), the isometry of Lemma 6.3 puts \((X,X')\) in \(r\oplus r'\), and then injectivity on the target quotient forces \(X'=d\alpha(X)\). The statements about \(b_C^\perp\) and \(b_0\) follow by dimension counting and the two cases of Lemma 6.4.</p>
+and replacing \(wXw^{-1}\) by \(d\alpha(X)+d\alpha^\perp(X)\); the
+\(d\alpha^\perp\) term is deeper for \(X\in r\). Conversely, if
+\(\overline\iota(X,X')=0\), the isometry
+<code>supercuspidal_theta.lie_layer_to_oscillator_isometry</code> puts \((X,X')\) in
+\(r\oplus r'\), and then injectivity on the target quotient forces
+\(X'=d\alpha(X)\). The statements about \(b_C^\perp\) and \(b_0\) follow by
+dimension counting and the two cases of
+<code>supercuspidal_theta.radical_of_gamma_symplectic_layer</code>.</p>
       </div>
     </details>
     

@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -280,7 +292,18 @@ if and only if \(\widetilde\Sigma\) and \(\widetilde\Sigma'\) are equivalent.</p
 (\widetilde\eta_{\widetilde\Sigma},
 g\widetilde\eta_{\widetilde\Sigma'})
 \]
-for some \(g\). Since the canonical splittings agree on the pro-unipotent intersection, the positive-depth part reduces to the weak-symmetry criterion of Hakim-Murnaghan. After conjugating, one may align \(\Gamma\) and \(\Gamma'\), hence \(G^0=G'^0\). Lemma 3.9 supplies a common depth character on \(G^0\), reducing the remaining comparison to depth zero. Howard-Weissman's depth-zero result gives a conjugacy \(g\in G^0\) matching the finite reductive quotient representations, and the only extra term is the splitting-difference character \(\mu_{\xi',\xi^g}\). This is exactly Definition 3.16.</p>
+for some \(g\). Since the canonical splittings agree on the pro-unipotent
+intersection, the positive-depth part reduces to the weak-symmetry criterion of
+Hakim-Murnaghan. After conjugating, one may align \(\Gamma\) and \(\Gamma'\),
+hence \(G^0=G'^0\). The negative-depth character extension
+<code>supercuspidal_theta.negative_depth_character_extension</code> supplies a common
+depth character on \(G^0\), reducing the remaining comparison to depth zero.
+Howard-Weissman's depth-zero result gives a conjugacy \(g\in G^0\) matching the
+finite reductive quotient representations, and the only extra term is the
+splitting-difference character
+<code>supercuspidal_theta.covering_splitting_difference_character</code>. This is exactly
+the equivalence relation
+<code>supercuspidal_theta.covering_supercuspidal_datum_equivalence</code>.</p>
       </div>
     </details>
     

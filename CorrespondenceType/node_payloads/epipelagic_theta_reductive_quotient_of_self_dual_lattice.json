@@ -9,14 +9,25 @@
     "epipelagic_theta"
   ],
   "body_html": "<h1>Reductive Quotient of a Self-Dual Lattice Function</h1>\n<p>For a self-dual lattice function \\(L\\), the finite quotient\n\\[\nG_L/G_{L,0+}\n\\]\ndecomposes as a product of unitary factors at the self-dual jumps and general linear factors paired across opposite jumps. In the notation of the paper, this is the product involving \\(G_0\\), \\(G_{\\nu_D/2}\\), and \\(\\operatorname{GL}(L_r)\\) for positive jumps \\(r\\) below \\(\\nu_D/2\\).</p>",
-  "proof_html": "<p>The proof is omitted in the paper as standard. The content follows by decomposing the graded residue spaces \\(L_r/L_{r+}\\), using self-duality to pair \\(r\\) with \\(-r\\), and identifying the automorphisms preserving the induced forms.</p>",
+  "proof_html": "<p>The proof is omitted in the paper as standard. Appendix 1 supplies the explicit mechanism: decompose the apartment into fractional jump classes, identify \\(V^r/V^rp_K\\) with \\(L_r/L_{r+}\\), pair \\(r\\) with \\(-r\\), and read off the unitary self-dual factors and paired general linear factors.</p>",
   "deps": [
     {
       "id": "epipelagic_theta.classical_building_self_dual_lattice_functions",
       "title": "Classical Buildings as Self-Dual Lattice Functions",
       "href": "epipelagic_theta/epipelagic_theta_classical_building_self_dual_lattice_functions.html"
+    },
+    {
+      "id": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "href": "epipelagic_theta/epipelagic_theta_apartment_fractional_jump_decomposition.html"
     }
   ],
-  "dependents": [],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+      "title": "Apartment Splitting of the Residual Exact Sequence",
+      "href": "epipelagic_theta/epipelagic_theta_residual_exact_sequence_apartment_splitting.html"
+    }
+  ],
   "lean_refs": []
 }

@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -266,11 +278,22 @@
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Restrict an irreducible supercuspidal representation \(\pi\) of \(O(V)\) to \(SO(V)\), and choose an irreducible supercuspidal constituent. Kim's connected-group exhaustion writes that constituent as \({}^{\circ}\pi_{{}^{\circ}\Sigma}\). Lemma 3.9 extends the required depth character from the connected centralizer to \(G^0\). The Appendix A.2.2 construction supplies the corresponding \(K\)-module \(\kappa\). The multiplicity space
+        <p>Restrict an irreducible supercuspidal representation \(\pi\) of \(O(V)\) to
+\(SO(V)\), and choose an irreducible supercuspidal constituent. Kim's
+connected-group exhaustion writes that constituent as
+\({}^{\circ}\pi_{{}^{\circ}\Sigma}\). The negative-depth character extension
+<code>supercuspidal_theta.negative_depth_character_extension</code> extends the required
+depth character from the connected centralizer to \(G^0\). The Yu kappa
+construction <code>supercuspidal_theta.yu_kappa_construction</code> supplies the
+corresponding \(K\)-module \(\kappa\). The multiplicity space
 \[
 \operatorname{Hom}_{K_{0+}}(\kappa,\pi)
 \]
-contains the depth-zero piece coming from the connected datum; choosing an irreducible \(G_x^0\)-submodule \(\rho\) gives a datum \(\Sigma\). The representation \(\pi\) embeds in \(\pi_\Sigma\), and Theorem 3.10 makes \(\pi_\Sigma\) irreducible, so \(\pi=\pi_\Sigma\).</p>
+contains the depth-zero piece coming from the connected datum; choosing an
+irreducible \(G_x^0\)-submodule \(\rho\) gives a datum \(\Sigma\). The
+representation \(\pi\) embeds in \(\pi_\Sigma\), and
+<code>supercuspidal_theta.even_orthogonal_yu_irreducibility</code> makes \(\pi_\Sigma\)
+irreducible, so \(\pi=\pi_\Sigma\).</p>
       </div>
     </details>
     

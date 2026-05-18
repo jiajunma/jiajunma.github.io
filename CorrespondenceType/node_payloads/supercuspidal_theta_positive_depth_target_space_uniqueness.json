@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Positive Depth Target Space Uniqueness</h1>\n<p>For a single positive-depth block, the self-dual target lattice functions \\(L'\\) for which\n\\[\n(\\Gamma+\\mathbf g_{x,r+})\\cap M((L\\otimes L')_s)\n\\]\nis nonempty form one \\(G'\\)-orbit. The target hermitian spaces \\(V'\\) admitting such a vector are all isometric to \\(V_\\Gamma\\).</p>",
-  "proof_html": "<p>This is the combination of Corollary 5.11 and Corollary 5.12. Corollary 5.12 identifies the only possible target hermitian space as \\(V_\\Gamma\\). Once the target space is fixed, Corollary 5.11 says that all target self-dual lattice functions satisfying the moment-map condition lie in one \\(G'\\)-orbit.</p>",
+  "proof_html": "<p>This combines the positive-depth target hermitian-space uniqueness\n<code>supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness</code> and the\npositive-depth target lattice orbit\n<code>supercuspidal_theta.positive_depth_target_lattice_orbit</code>. The former\nidentifies the only possible target hermitian space as \\(V_\\Gamma\\). Once the\ntarget space is fixed, the latter says that all target self-dual lattice\nfunctions satisfying the moment-map condition lie in one \\(G'\\)-orbit.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.positive_depth_target_lattice_orbit",

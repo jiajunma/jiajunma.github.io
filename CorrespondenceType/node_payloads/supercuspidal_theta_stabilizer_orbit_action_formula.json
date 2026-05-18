@@ -9,8 +9,13 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Stabilizer Orbit Action Formula</h1>\n<p>In the one positive-depth block setting, let \\(S=\\operatorname{Stab}_{K_M}(w+B_0)\\). On the residual oscillator model \\(S(b)\\), the translated orbit representation \\(\\omega_w\\) restricts to \\(S\\) by\n\\[\n\\omega_w(h)=\\chi_M(h)\\,\\omega_b(h)\\,\\omega_b(h^{-1}w-w)\n\\qquad h\\in S,\n\\]\nwhere \\(\\chi_M\\) is the product of the source and target Moy-Prasad characters.</p>",
-  "proof_html": "<p>Lemma 2.4 gives the lattice-model action on the translated coset \\(w+B_0\\). Lemma 6.7 describes the stabilizer \\(S\\), while Lemma 6.8 identifies the phase term with the product character \\(\\chi_M\\). Substituting these into the generalized lattice-model formula gives the displayed action.</p>",
+  "proof_html": "<p>The generalized lattice model gives the action on the translated coset\n\\(w+B_0\\). The single-block stabilizer structure\n<code>supercuspidal_theta.single_block_stabilizer_structure</code> describes the\nstabilizer \\(S\\), while the key oscillator character identity\n<code>supercuspidal_theta.key_oscillator_character_identity</code> identifies the phase\nterm with the product character \\(\\chi_M\\). Substituting these into the\ngeneralized lattice-model formula gives the displayed action.</p>",
   "deps": [
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    },
     {
       "id": "supercuspidal_theta.single_block_stabilizer_structure",
       "title": "Stabilizer Structure in One Positive Depth Block",

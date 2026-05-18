@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Off-Diagonal Kappa-Oscillator Identification</h1>\n<p>Let \\({}^\\boxminus\\omega\\) be the pullback of the finite oscillator representation on \\(S({}^\\boxminus b)\\) through the off-diagonal stabilizer morphism. Then, as a module for \\({}^\\boxplus S\\ltimes{}^\\boxminus J_M\\),\n\\[\n{}^\\boxminus\\kappa_M\\simeq{}^\\boxminus\\omega.\n\\]</p>",
-  "proof_html": "<p>For \\(h=(\\exp X,\\exp X')\\in{}^\\boxminus J_M\\), the lattice-model phase satisfies\n\\[\n\\frac12\\langle w,h^{-1}w-w\\rangle\n= B(X,\\Gamma)+B(X',\\Gamma')\n\\]\nafter passing to the quotient modulo the conductor. Lemma 8.4 identifies the off-diagonal Lie quotient with \\({}^\\boxminus b\\) as a finite symplectic space. Under that identification, the special morphism used in Yu's \\(\\kappa\\)-construction is the same morphism defining the pulled-back oscillator action.</p>",
+  "proof_html": "<p>For \\(h=(\\exp X,\\exp X')\\in{}^\\boxminus J_M\\), the lattice-model phase satisfies\n\\[\n\\frac12\\langle w,h^{-1}w-w\\rangle\n= B(X,\\Gamma)+B(X',\\Gamma')\n\\]\nafter passing to the quotient modulo the conductor. The off-diagonal block\nisomorphism <code>supercuspidal_theta.off_diagonal_block_isomorphism</code> identifies the\noff-diagonal Lie quotient with \\({}^\\boxminus b\\) as a finite symplectic space.\nUnder that identification, the special morphism used in Yu's\n\\(\\kappa\\)-construction is the same morphism defining the pulled-back oscillator\naction.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.off_diagonal_block_isomorphism",

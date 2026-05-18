@@ -1,0 +1,27 @@
+{
+  "id": "epipelagic_theta.tensor_dual_self_duality",
+  "title": "Tensor Product Self-Duality",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_tensor_dual_self_duality.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Tensor Product Self-Duality</h1>\n<p>Under the identification\n\\[\nV^*\\otimes_D V'^*\\simeq (V\\otimes_D V')^*,\n\\]\nthe dual norm of a tensor-product norm satisfies\n\\[\n(\\ell\\otimes\\ell')^*=\\ell^*\\otimes\\ell'^*.\n\\]\nConsequently, if \\(V\\) and \\(V'\\) are formed spaces and \\(L,L'\\) are self-dual lattice functions, then\n\\[\nL\\otimes L'\n\\]\nis self-dual on \\(V\\otimes_DV'\\).</p>",
+  "proof_html": "<p>Choose bases splitting the two norms. The tensor-product basis splits the tensor norm, and the dual basis calculation gives the displayed identity. Translating the dual norms back through the sesquilinear forms gives \\((\\ell_L\\otimes\\ell_{L'})^\\vee=\\ell_L\\otimes\\ell_{L'}\\), hence self-duality of the tensor-product lattice function.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html"
+    },
+    {
+      "id": "epipelagic_theta.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -254,6 +266,12 @@
         
         <li><a href="epipelagic_theta_stable_lift_regular_good.html">Stable Lift Is Regular Semisimple and Good</a></li>
         
+        <li><a href="epipelagic_theta_invariant_subspace_rank_lemma.html">Invariant-Theory Rank Lemma</a></li>
+        
+        <li><a href="epipelagic_theta_matrix_calculation_gl_case.html">Matrix Calculation in the General Linear Case</a></li>
+        
+        <li><a href="epipelagic_theta_matrix_calculation_symplectic_orthogonal_case.html">Matrix Calculation in the Symplectic-Orthogonal Case</a></li>
+        
       </ul>
     </div>
   </div>
@@ -272,12 +290,19 @@ The restriction is obtained from the residual moment-map condition together with
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Assume that an epipelagic representation of \(G\) has an epipelagic theta lift to \(G'\). Proposition 7.1.1 first converts this representation-theoretic occurrence into geometry: there is a residual vector
+        <p>Assume that an epipelagic representation of \(G\) has an epipelagic theta lift
+to \(G'\). The unrefined minimal K-type correspondence
+<code>epipelagic_theta.unrefined_minimal_k_type_correspondence</code> first converts this
+representation-theoretic occurrence into geometry: there is a residual vector
 \[
 \bar w\in B_{-1/(2m)}/B_{-1/(2m)+}
 \]
 such that the two residual moment maps give the stable functionals of the two epipelagic data.</p>
-<p>Choose a lift \(w\) of \(\bar w\). Lemma 7.3.1 says that any lift of a stable epipelagic functional is regular semisimple and good of the required depth. Hence \(M(w)\) and \(M'(w)\) are both regular semisimple. The existence of the theta lift therefore implies the purely invariant-theoretic condition:
+<p>Choose a lift \(w\) of \(\bar w\). The stable lift regular-good result
+<code>epipelagic_theta.stable_lift_regular_good</code> says that any lift of a stable
+epipelagic functional is regular semisimple and good of the required depth.
+Hence \(M(w)\) and \(M'(w)\) are both regular semisimple. The existence of the
+theta lift therefore implies the purely invariant-theoretic condition:
 \[
 \text{there is } w\in W \text{ such that } M(w) \text{ and } M'(w) \text{ are both regular semisimple.}
 \]</p>
@@ -292,7 +317,7 @@ such that the two residual moment maps give the stable functionals of the two ep
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="epipelagic_theta_invariant_subspace_rank_lemma.html">Invariant-Theory Rank Lemma</a></li>
+      <li><a href="epipelagic_theta_epipelagic_theta_hypotheses_c1_c4.html">Epipelagic Theta Hypotheses C1-C4</a></li>
       
     </ul>
   </section>

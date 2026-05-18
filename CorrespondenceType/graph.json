@@ -1,6 +1,62 @@
 {
   "nodes": [
     {
+      "id": "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
+      "title": "Alpha Star and Exceptional Character Restriction",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "character",
+        "exceptional-case",
+        "theta-correspondence"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.residual_fiber_stabilizer"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.epipelagic_theta_main_theorem"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "lattice-function",
+        "finite-reductive-quotient"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.apartment_splitting_basis"
+      ],
+      "used_by": [
+        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+        "epipelagic_theta.residual_exact_sequence_apartment_splitting"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.apartment_splitting_basis",
+      "title": "Apartment Splitting Basis",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "apartment",
+        "lattice-function"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.self_dual_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.apartment_fractional_jump_decomposition"
+      ]
+    },
+    {
       "id": "epipelagic_theta.building_map_uniqueness",
       "title": "Uniqueness of Equivariant Building Maps",
       "kind": "lemma",
@@ -23,11 +79,28 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
+        "epipelagic_theta.gl_building_lattice_functions",
         "epipelagic_theta.self_dual_lattice_function"
       ],
       "used_by": [
         "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
         "epipelagic_theta.tame_base_change_buildings"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.d_norm",
+      "title": "D Norm",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "building",
+        "norm"
+      ],
+      "topic": "epipelagic_theta",
+      "used_by": [
+        "epipelagic_theta.gl_building_lattice_functions",
+        "epipelagic_theta.lattice_function"
       ]
     },
     {
@@ -122,12 +195,36 @@
       "topic": "epipelagic_theta",
       "uses": [
         "epipelagic_theta.epipelagic_datum",
+        "epipelagic_theta.invariant_subspace_rank_lemma",
+        "epipelagic_theta.matrix_calculation_gl_case",
+        "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case",
         "epipelagic_theta.residual_moment_map_condition",
         "epipelagic_theta.stable_lift_regular_good",
         "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ],
       "used_by": [
-        "epipelagic_theta.invariant_subspace_rank_lemma"
+        "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
+      "title": "Epipelagic Theta Hypotheses C1-C4",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "theta-correspondence",
+        "epipelagic",
+        "moment-map"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_rank_restriction",
+        "epipelagic_theta.residual_moment_map_condition",
+        "epipelagic_theta.tensor_product_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.epipelagic_theta_main_theorem"
       ]
     },
     {
@@ -144,7 +241,9 @@
       "plan_status": "selected",
       "topic": "epipelagic_theta",
       "uses": [
+        "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
         "epipelagic_theta.epipelagic_data_equivalence",
+        "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
         "epipelagic_theta.residual_exact_sequence_splitting",
         "epipelagic_theta.residual_fiber_stabilizer",
         "epipelagic_theta.unrefined_minimal_k_type_correspondence"
@@ -162,12 +261,33 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
+        "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
         "epipelagic_theta.epipelagic_data_equivalence",
         "epipelagic_theta.epipelagic_datum",
+        "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
         "epipelagic_theta.residual_exact_sequence_splitting",
         "epipelagic_theta.residual_fiber_stabilizer",
         "epipelagic_theta.residual_moment_map_condition",
         "epipelagic_theta.unrefined_minimal_k_type_correspondence"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "building",
+        "lattice-function",
+        "moy-prasad"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.d_norm",
+        "epipelagic_theta.lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.classical_building_self_dual_lattice_functions"
       ]
     },
     {
@@ -182,9 +302,12 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.epipelagic_rank_restriction"
+        "epipelagic_theta.matrix_calculation_gl_case",
+        "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case",
+        "epipelagic_theta.moment_maps_classical_dual_pair"
       ],
       "used_by": [
+        "epipelagic_theta.epipelagic_rank_restriction",
         "epipelagic_theta.residual_fiber_stabilizer"
       ]
     },
@@ -218,7 +341,11 @@
         "moy-prasad"
       ],
       "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.d_norm"
+      ],
       "used_by": [
+        "epipelagic_theta.gl_building_lattice_functions",
         "epipelagic_theta.self_dual_lattice_function",
         "epipelagic_theta.tensor_product_lattice_function"
       ]
@@ -254,6 +381,63 @@
       "topic": "epipelagic_theta",
       "uses": [
         "epipelagic_theta.lattice_model_section"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.matrix_calculation_exceptional_unitary_case",
+      "title": "Matrix Calculation in the Exceptional Unitary Case",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "matrix-calculation",
+        "exceptional-case",
+        "unitary"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.residual_moment_map_condition"
+      ],
+      "used_by": [
+        "epipelagic_theta.residual_fiber_stabilizer"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.matrix_calculation_gl_case",
+      "title": "Matrix Calculation in the General Linear Case",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "matrix-calculation",
+        "general-linear"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.moment_maps_classical_dual_pair"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_rank_restriction",
+        "epipelagic_theta.invariant_subspace_rank_lemma"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case",
+      "title": "Matrix Calculation in the Symplectic-Orthogonal Case",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "matrix-calculation",
+        "symplectic-orthogonal"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.moment_maps_classical_dual_pair"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_rank_restriction",
+        "epipelagic_theta.invariant_subspace_rank_lemma"
       ]
     },
     {
@@ -300,6 +484,9 @@
       ],
       "topic": "epipelagic_theta",
       "used_by": [
+        "epipelagic_theta.invariant_subspace_rank_lemma",
+        "epipelagic_theta.matrix_calculation_gl_case",
+        "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case",
         "epipelagic_theta.moment_map_lattice_compatibility",
         "epipelagic_theta.moment_map_pairing_formulas",
         "epipelagic_theta.residual_moment_map_condition",
@@ -318,7 +505,30 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
+        "epipelagic_theta.apartment_fractional_jump_decomposition",
         "epipelagic_theta.classical_building_self_dual_lattice_functions"
+      ],
+      "used_by": [
+        "epipelagic_theta.residual_exact_sequence_apartment_splitting"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+      "title": "Apartment Splitting of the Residual Exact Sequence",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "lattice-model",
+        "exact-sequence"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.apartment_fractional_jump_decomposition",
+        "epipelagic_theta.reductive_quotient_of_self_dual_lattice"
+      ],
+      "used_by": [
+        "epipelagic_theta.residual_exact_sequence_splitting"
       ]
     },
     {
@@ -333,6 +543,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
+        "epipelagic_theta.residual_exact_sequence_apartment_splitting",
         "epipelagic_theta.tensor_product_lattice_function"
       ],
       "used_by": [
@@ -353,9 +564,11 @@
       "topic": "epipelagic_theta",
       "uses": [
         "epipelagic_theta.invariant_subspace_rank_lemma",
+        "epipelagic_theta.matrix_calculation_exceptional_unitary_case",
         "epipelagic_theta.residual_moment_map_condition"
       ],
       "used_by": [
+        "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
         "epipelagic_theta.epipelagic_theta_main_proof_plan",
         "epipelagic_theta.epipelagic_theta_main_theorem"
       ]
@@ -393,7 +606,9 @@
       ],
       "used_by": [
         "epipelagic_theta.epipelagic_rank_restriction",
+        "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
         "epipelagic_theta.epipelagic_theta_main_theorem",
+        "epipelagic_theta.matrix_calculation_exceptional_unitary_case",
         "epipelagic_theta.residual_fiber_stabilizer",
         "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ]
@@ -413,8 +628,10 @@
         "epipelagic_theta.lattice_function"
       ],
       "used_by": [
+        "epipelagic_theta.apartment_splitting_basis",
         "epipelagic_theta.classical_building_self_dual_lattice_functions",
         "epipelagic_theta.lattice_model_section",
+        "epipelagic_theta.tensor_dual_self_duality",
         "supercuspidal_theta.generalized_lattice_model"
       ]
     },
@@ -474,6 +691,22 @@
       ]
     },
     {
+      "id": "epipelagic_theta.tensor_dual_self_duality",
+      "title": "Tensor Product Self-Duality",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "tensor-product",
+        "self-dual",
+        "lattice-function"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.self_dual_lattice_function",
+        "epipelagic_theta.tensor_product_lattice_function"
+      ]
+    },
+    {
       "id": "epipelagic_theta.tensor_product_lattice_function",
       "title": "Tensor Product Lattice Function",
       "kind": "definition",
@@ -488,9 +721,11 @@
         "epipelagic_theta.lattice_function"
       ],
       "used_by": [
+        "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
         "epipelagic_theta.moment_map_lattice_compatibility",
         "epipelagic_theta.residual_exact_sequence_splitting",
-        "epipelagic_theta.residual_moment_map_condition"
+        "epipelagic_theta.residual_moment_map_condition",
+        "epipelagic_theta.tensor_dual_self_duality"
       ]
     },
     {
@@ -1446,6 +1681,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.module_function_self_dual_envelope"
       ],
       "used_by": [
@@ -1471,8 +1707,11 @@
         "supercuspidal_theta.covering_supercuspidal_datum",
         "supercuspidal_theta.depth_preservation_building_sum",
         "supercuspidal_theta.depth_zero_pan_theorem",
+        "supercuspidal_theta.fixed_vector_descent_lemma",
         "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-        "supercuspidal_theta.lattice_fixed_vector_model"
+        "supercuspidal_theta.key_oscillator_character_identity",
+        "supercuspidal_theta.lattice_fixed_vector_model",
+        "supercuspidal_theta.stabilizer_orbit_action_formula"
       ]
     },
     {
@@ -1629,6 +1868,7 @@
       "uses": [
         "epipelagic_theta.moment_map_pairing_formulas",
         "supercuspidal_theta.dalpha_layer_properties",
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.single_block_stabilizer_structure"
       ],
       "used_by": [
@@ -1955,7 +2195,8 @@
       ],
       "used_by": [
         "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
-        "supercuspidal_theta.positive_depth_target_lattice_orbit"
+        "supercuspidal_theta.positive_depth_target_lattice_orbit",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition"
       ]
     },
     {
@@ -2072,6 +2313,7 @@
         "supercuspidal_theta.depth_preservation_building_sum",
         "supercuspidal_theta.k_type_datum_theta_lift",
         "supercuspidal_theta.occurrence_vector_choice",
+        "supercuspidal_theta.positive_depth_moment_map_surjectivity",
         "supercuspidal_theta.target_lattice_block_splitting",
         "supercuspidal_theta.target_top_block_nondegenerate_splitting"
       ],
@@ -2259,6 +2501,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.key_oscillator_character_identity",
         "supercuspidal_theta.single_block_stabilizer_structure"
       ],
@@ -2518,6 +2761,22 @@
   ],
   "edges": [
     {
+      "from": "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
+      "to": "epipelagic_theta.residual_fiber_stabilizer"
+    },
+    {
+      "from": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "to": "epipelagic_theta.apartment_splitting_basis"
+    },
+    {
+      "from": "epipelagic_theta.apartment_splitting_basis",
+      "to": "epipelagic_theta.self_dual_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "to": "epipelagic_theta.gl_building_lattice_functions"
+    },
+    {
       "from": "epipelagic_theta.classical_building_self_dual_lattice_functions",
       "to": "epipelagic_theta.self_dual_lattice_function"
     },
@@ -2547,6 +2806,18 @@
     },
     {
       "from": "epipelagic_theta.epipelagic_rank_restriction",
+      "to": "epipelagic_theta.invariant_subspace_rank_lemma"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_rank_restriction",
+      "to": "epipelagic_theta.matrix_calculation_gl_case"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_rank_restriction",
+      "to": "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_rank_restriction",
       "to": "epipelagic_theta.residual_moment_map_condition"
     },
     {
@@ -2558,8 +2829,28 @@
       "to": "epipelagic_theta.unrefined_minimal_k_type_correspondence"
     },
     {
+      "from": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
+      "to": "epipelagic_theta.epipelagic_rank_restriction"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
+      "to": "epipelagic_theta.residual_moment_map_condition"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
+      "to": "epipelagic_theta.tensor_product_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "to": "epipelagic_theta.alpha_star_and_exceptional_character_restriction"
+    },
+    {
       "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
       "to": "epipelagic_theta.epipelagic_data_equivalence"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "to": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4"
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
@@ -2575,11 +2866,19 @@
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.alpha_star_and_exceptional_character_restriction"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
       "to": "epipelagic_theta.epipelagic_data_equivalence"
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_theorem",
       "to": "epipelagic_theta.epipelagic_datum"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4"
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_theorem",
@@ -2598,8 +2897,24 @@
       "to": "epipelagic_theta.unrefined_minimal_k_type_correspondence"
     },
     {
+      "from": "epipelagic_theta.gl_building_lattice_functions",
+      "to": "epipelagic_theta.d_norm"
+    },
+    {
+      "from": "epipelagic_theta.gl_building_lattice_functions",
+      "to": "epipelagic_theta.lattice_function"
+    },
+    {
       "from": "epipelagic_theta.invariant_subspace_rank_lemma",
-      "to": "epipelagic_theta.epipelagic_rank_restriction"
+      "to": "epipelagic_theta.matrix_calculation_gl_case"
+    },
+    {
+      "from": "epipelagic_theta.invariant_subspace_rank_lemma",
+      "to": "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case"
+    },
+    {
+      "from": "epipelagic_theta.invariant_subspace_rank_lemma",
+      "to": "epipelagic_theta.moment_maps_classical_dual_pair"
     },
     {
       "from": "epipelagic_theta.kac_vinberg_epipelagic_grading",
@@ -2610,12 +2925,28 @@
       "to": "epipelagic_theta.tame_base_change_buildings"
     },
     {
+      "from": "epipelagic_theta.lattice_function",
+      "to": "epipelagic_theta.d_norm"
+    },
+    {
       "from": "epipelagic_theta.lattice_model_section",
       "to": "epipelagic_theta.self_dual_lattice_function"
     },
     {
       "from": "epipelagic_theta.lattice_model_splitting_independence",
       "to": "epipelagic_theta.lattice_model_section"
+    },
+    {
+      "from": "epipelagic_theta.matrix_calculation_exceptional_unitary_case",
+      "to": "epipelagic_theta.residual_moment_map_condition"
+    },
+    {
+      "from": "epipelagic_theta.matrix_calculation_gl_case",
+      "to": "epipelagic_theta.moment_maps_classical_dual_pair"
+    },
+    {
+      "from": "epipelagic_theta.matrix_calculation_symplectic_orthogonal_case",
+      "to": "epipelagic_theta.moment_maps_classical_dual_pair"
     },
     {
       "from": "epipelagic_theta.moment_map_lattice_compatibility",
@@ -2631,7 +2962,23 @@
     },
     {
       "from": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+      "to": "epipelagic_theta.apartment_fractional_jump_decomposition"
+    },
+    {
+      "from": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
       "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
+    },
+    {
+      "from": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+      "to": "epipelagic_theta.apartment_fractional_jump_decomposition"
+    },
+    {
+      "from": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+      "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice"
+    },
+    {
+      "from": "epipelagic_theta.residual_exact_sequence_splitting",
+      "to": "epipelagic_theta.residual_exact_sequence_apartment_splitting"
     },
     {
       "from": "epipelagic_theta.residual_exact_sequence_splitting",
@@ -2640,6 +2987,10 @@
     {
       "from": "epipelagic_theta.residual_fiber_stabilizer",
       "to": "epipelagic_theta.invariant_subspace_rank_lemma"
+    },
+    {
+      "from": "epipelagic_theta.residual_fiber_stabilizer",
+      "to": "epipelagic_theta.matrix_calculation_exceptional_unitary_case"
     },
     {
       "from": "epipelagic_theta.residual_fiber_stabilizer",
@@ -2680,6 +3031,14 @@
     {
       "from": "epipelagic_theta.tame_base_change_buildings",
       "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
+    },
+    {
+      "from": "epipelagic_theta.tensor_dual_self_duality",
+      "to": "epipelagic_theta.self_dual_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.tensor_dual_self_duality",
+      "to": "epipelagic_theta.tensor_product_lattice_function"
     },
     {
       "from": "epipelagic_theta.tensor_product_lattice_function",
@@ -3047,6 +3406,10 @@
     },
     {
       "from": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.fixed_vector_descent_lemma",
       "to": "supercuspidal_theta.module_function_self_dual_envelope"
     },
     {
@@ -3136,6 +3499,10 @@
     {
       "from": "supercuspidal_theta.key_oscillator_character_identity",
       "to": "supercuspidal_theta.dalpha_layer_properties"
+    },
+    {
+      "from": "supercuspidal_theta.key_oscillator_character_identity",
+      "to": "supercuspidal_theta.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.key_oscillator_character_identity",
@@ -3339,6 +3706,10 @@
     },
     {
       "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "to": "supercuspidal_theta.positive_depth_moment_map_surjectivity"
+    },
+    {
+      "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
       "to": "supercuspidal_theta.target_lattice_block_splitting"
     },
     {
@@ -3424,6 +3795,10 @@
     {
       "from": "supercuspidal_theta.stabilizer_induced_module_calculation",
       "to": "supercuspidal_theta.stabilizer_evaluation_map"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_orbit_action_formula",
+      "to": "supercuspidal_theta.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.stabilizer_orbit_action_formula",

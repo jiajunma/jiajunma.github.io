@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -268,7 +280,13 @@ The off-diagonal factor \(\omega_{\boxminus}\) is isomorphic to the off-diagonal
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>This is the aggregate of Lemma 8.5 and Lemma 8.6. Lemma 8.5 identifies the off-diagonal oscillator action with the off-diagonal Yu \(\kappa\)-factor. Lemma 8.6 factors the translated orbit representation into its block-diagonal and off-diagonal tensor factors.</p>
+        <p>This follows by combining the off-diagonal kappa-oscillator identification
+<code>supercuspidal_theta.off_diagonal_kappa_oscillator_identification</code> with the
+block oscillator action factorization
+<code>supercuspidal_theta.block_oscillator_action_factorization</code>. The former
+identifies the off-diagonal oscillator action with the off-diagonal Yu
+\(\kappa\)-factor, and the latter factors the translated orbit representation
+into its block-diagonal and off-diagonal tensor factors.</p>
       </div>
     </details>
     

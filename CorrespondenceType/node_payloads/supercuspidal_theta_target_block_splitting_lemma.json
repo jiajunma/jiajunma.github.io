@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Target Block Splitting Lemma</h1>\n<p>For the vector \\(w\\) chosen in the converse proof, the image of the top source block is a nondegenerate target subspace \\(bV'\\), the target decomposes orthogonally as\n\\[\nV'=bV'\\oplus aV',\n\\]\nand \\(w\\) is block diagonal. The target lattice function also decomposes:\n\\[\nL'=bL'\\oplus aL',\n\\]\nwith \\(bL'_t=bw(bL_{t+s})\\) and \\(aL'\\) self-dual.</p>",
-  "proof_html": "<p>This is the aggregate of Lemma 9.3 and Lemma 9.4. Lemma 9.3 splits the target vector space by showing that the top image \\(w({}^bV)\\) is nondegenerate. Lemma 9.4 then splits the target lattice function and proves self-duality of the lower block lattice.</p>",
+  "proof_html": "<p>This combines the target top-block nondegenerate splitting\n<code>supercuspidal_theta.target_top_block_nondegenerate_splitting</code> and the target\nlattice block splitting <code>supercuspidal_theta.target_lattice_block_splitting</code>.\nThe first splits the target vector space by showing that the top image\n\\(w({}^bV)\\) is nondegenerate. The second splits the target lattice function\nand proves self-duality of the lower block lattice.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.target_top_block_nondegenerate_splitting",

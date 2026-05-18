@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -246,6 +258,8 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
+        <li><a href="supercuspidal_theta_generalized_lattice_model.html">Generalized Lattice Model</a></li>
+        
         <li><a href="supercuspidal_theta_single_block_stabilizer_structure.html">Stabilizer Structure in One Positive Depth Block</a></li>
         
         <li><a href="supercuspidal_theta_dalpha_layer_properties.html">Layer Properties of d Alpha</a></li>
@@ -272,7 +286,13 @@ with the sign and inverse conventions of the paper.</p>
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>For \(\Delta^i\), expand \(g\) and \(g'\) by the exponential map and use Lemma 6.7 to replace \(h^{-1}w-w\) by the \(d\alpha^\perp\) term. The commutator correction pairs trivially with \(\Gamma'\) by centralizer properties. For depth \(s\) elements, the formula is exactly Lemma 2.4 rewritten through the two moment maps.</p>
+        <p>For \(\Delta^i\), expand \(g\) and \(g'\) by the exponential map and use the
+single-block stabilizer structure
+<code>supercuspidal_theta.single_block_stabilizer_structure</code> to replace
+\(h^{-1}w-w\) by the \(d\alpha^\perp\) term. The commutator correction pairs
+trivially with \(\Gamma'\) by centralizer properties. For depth \(s\) elements,
+the formula is the generalized lattice-model action formula rewritten through
+the two moment maps.</p>
       </div>
     </details>
     

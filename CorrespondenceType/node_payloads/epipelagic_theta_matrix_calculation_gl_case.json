@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.matrix_calculation_gl_case",
+  "title": "Matrix Calculation in the General Linear Case",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_matrix_calculation_gl_case.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Matrix Calculation in the General Linear Case</h1>\n<p>For the split dual pair \\((\\operatorname{GL}(n),\\operatorname{GL}(n'))\\), \\(n\\le n'\\), identify\n\\[\nW=\\operatorname{Mat}_{n,n'}\\oplus\\operatorname{Mat}_{n,n'}.\n\\]\nOn the diagonal test subspace\n\\[\nA=\\{(a\\;0,\\;b\\;0):a=\\operatorname{diag}(a_1,\\ldots,a_n),\\ b=\\operatorname{diag}(b_1,\\ldots,b_n)\\},\n\\]\nthe moment maps become\n\\[\nM(a,b)=ab,\\qquad\nM'(a,b)=\n\\begin{pmatrix}\nab&amp;0\\\\\n0&amp;0\n\\end{pmatrix}.\n\\]</p>",
+  "proof_html": "<p>The formulas follow from the standard matrix realization of the type \\(A\\) dual pair, where the two moment maps are \\(xy^t\\) and \\(y^tx\\). Restricting to the diagonal test subspace makes the invariant polynomials visible as elementary symmetric polynomials in the products \\(a_ib_i\\).</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "title": "Moment Maps for a Classical Type I Dual Pair",
+      "href": "epipelagic_theta/epipelagic_theta_moment_maps_classical_dual_pair.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
+    },
+    {
+      "id": "epipelagic_theta.invariant_subspace_rank_lemma",
+      "title": "Invariant-Theory Rank Lemma",
+      "href": "epipelagic_theta/epipelagic_theta_invariant_subspace_rank_lemma.html"
+    }
+  ],
+  "lean_refs": []
+}

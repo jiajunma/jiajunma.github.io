@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Block Oscillator Factorization</h1>\n<p>For the block decomposition \\(W=\\boxplus W\\oplus\\boxminus W\\), the finite oscillator representation and the stabilizer action factor as\n\\[\n\\omega_w=\\omega_{\\boxplus S}\\otimes \\omega_{\\boxminus}.\n\\]\nThe off-diagonal factor \\(\\omega_{\\boxminus}\\) is isomorphic to the off-diagonal Heisenberg-Weil factor \\(\\kappa_{\\boxminus}\\).</p>",
-  "proof_html": "<p>This is the aggregate of Lemma 8.5 and Lemma 8.6. Lemma 8.5 identifies the off-diagonal oscillator action with the off-diagonal Yu \\(\\kappa\\)-factor. Lemma 8.6 factors the translated orbit representation into its block-diagonal and off-diagonal tensor factors.</p>",
+  "proof_html": "<p>This follows by combining the off-diagonal kappa-oscillator identification\n<code>supercuspidal_theta.off_diagonal_kappa_oscillator_identification</code> with the\nblock oscillator action factorization\n<code>supercuspidal_theta.block_oscillator_action_factorization</code>. The former\nidentifies the off-diagonal oscillator action with the off-diagonal Yu\n\\(\\kappa\\)-factor, and the latter factors the translated orbit representation\ninto its block-diagonal and off-diagonal tensor factors.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",

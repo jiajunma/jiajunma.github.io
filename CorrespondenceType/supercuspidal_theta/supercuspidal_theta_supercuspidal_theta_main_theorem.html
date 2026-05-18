@@ -52,6 +52,8 @@
       </button>
       <ul id="keyword-list" class="keyword-list nav-list">
       
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
         <li><a href="../keywords/appendix.html">appendix</a></li>
       
         <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
@@ -85,6 +87,10 @@
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
       
         <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
       
         <li><a href="../keywords/finite-field.html">finite-field</a></li>
       
@@ -134,6 +140,8 @@
       
         <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
       
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
         <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
       
         <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
@@ -143,6 +151,8 @@
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
       
         <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
       
         <li><a href="../keywords/notation.html">notation</a></li>
       
@@ -191,6 +201,8 @@
         <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
       
         <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
       
@@ -287,12 +299,25 @@ Thus the first-occurrence theta correspondence between tame supercuspidal repres
       <summary>Proof</summary>
       <div class="proof-body">
         <p>For the forward direction, start with a covering datum \(\widetilde\Sigma\). The construction of \(\#_{V,T'}\) decomposes \(\Sigma\) into single blocks, transfers each positive-depth block by the moment-map construction, transfers the depth-zero block by finite-field theta correspondence, and then takes the direct sum. This gives a target covering datum \(\widetilde\Sigma'\) and an orbit \(\Omega\) in the generalized lattice model.</p>
-<p>Proposition 8.1 computes the relevant \(K\times K'\)-intertwining space in the oscillator representation:
+<p>The orbit intertwining proposition
+<code>supercuspidal_theta.k_type_orbit_intertwining_proposition</code> computes the
+relevant \(K\times K'\)-intertwining space in the oscillator representation:
 \[
 \dim\operatorname{Hom}_{K_M}(\eta_M,S(B_0)_\Omega)=1.
 \]
 Hence the oscillator representation contains the product of the source \(K\)-type and the contragredient target \(K'\)-type. By compact induction, the theta lift of \(\widetilde\pi_{\widetilde\Sigma}\) has a nonzero quotient containing the \(K'\)-type attached to \(\widetilde\Sigma'\). Supercuspidality and irreducibility at first occurrence identify this quotient with \(\widetilde\pi_{\widetilde\Sigma'}\).</p>
-<p>For the converse, assume that \(\widetilde\pi\) and its theta lift \(\widetilde\pi'\) are both supercuspidal. The exhaustion theorem for covering data writes \(\widetilde\pi\) as \(\widetilde\pi_{\widetilde\Sigma}\) for some covering datum. Proposition 9.1 then applies to any supercuspidal target occurrence: after replacing the source datum by an equivalent one, the target contains the \(K'\)-type datum constructed by \(\#_{V,T'}\). The Hakim-Murnaghan equivalence theorem for the corresponding Yu data identifies the target representation with the representation attached to that target covering datum. Therefore the target datum lies in \(\#_{V,T'}([\Sigma])\), as claimed.</p>
+<p>For the converse, assume that \(\widetilde\pi\) and its theta lift
+\(\widetilde\pi'\) are both supercuspidal. Covering-data exhaustion
+<code>supercuspidal_theta.covering_data_exhaustion</code> writes \(\widetilde\pi\) as
+\(\widetilde\pi_{\widetilde\Sigma}\) for some covering datum. The refined
+K-type occurrence proposition
+<code>supercuspidal_theta.refined_k_type_occurrence_proposition</code> then applies to any
+supercuspidal target occurrence: after replacing the source datum by an
+equivalent one, the target contains the \(K'\)-type datum constructed by
+\(\#_{V,T'}\). The Hakim-Murnaghan equivalence theorem for the corresponding Yu
+data identifies the target representation with the representation attached to
+that target covering datum. Therefore the target datum lies in
+\(\#_{V,T'}([\Sigma])\), as claimed.</p>
       </div>
     </details>
     

@@ -1,0 +1,43 @@
+{
+  "id": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
+  "title": "Epipelagic Theta Hypotheses C1-C4",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_hypotheses_c1_c4.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Epipelagic Theta Hypotheses C1-C4</h1>\n<p>The epipelagic theta theorem is stated under four hypotheses:</p>\n<ul>\n<li>(C1) the type I dual pair is one of the rank-compatible pairs\n\\[\n(D_n,C_n),\\quad (C_n,D_{n+1}),\\quad (C_n,B_n),\\quad (A_n,A_n),\\quad (A_n,A_{n+1});\n\\]</li>\n<li>(C2) the points \\(x\\in B(G,k)\\) and \\(x'\\in B(G',k)\\) are epipelagic points of the same order \\(m\\ge2\\), with corresponding lattice functions \\(L,L'\\);</li>\n<li>(C3) the tensor-product lattice function \\(B=L\\otimes L'\\) has jumps in\n\\[\n\\frac1{2m}+\\frac1m\\mathbb Z;\n\\]</li>\n<li>(C4) there exists\n\\[\n\\bar w\\in X=B_{-1/(2m)}/B_{1/(2m)}\n\\]\nsuch that the residual moment maps satisfy\n\\[\nM(\\bar w)=\\lambda,\\qquad -M'(\\bar w)=\\lambda',\n\\]\nwhere \\(\\lambda\\) and \\(\\lambda'\\) are stable vectors in the corresponding epipelagic graded pieces.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
+    },
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    },
+    {
+      "id": "epipelagic_theta.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "title": "Proof Plan for the Main Epipelagic Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_proof_plan.html"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "title": "Main Epipelagic Theta Correspondence Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}
