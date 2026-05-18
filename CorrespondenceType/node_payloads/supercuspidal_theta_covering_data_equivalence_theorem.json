@@ -1,0 +1,48 @@
+{
+  "id": "supercuspidal_theta.covering_data_equivalence_theorem",
+  "title": "Equivalence Theorem for Covering Data",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_covering_data_equivalence_theorem.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Equivalence Theorem for Covering Data</h1>\n<p>Let \\(\\widetilde\\Sigma\\) and \\(\\widetilde\\Sigma'\\) be covering supercuspidal data. Then\n\\[\n\\widetilde\\pi_{\\widetilde\\Sigma}\\simeq\n\\widetilde\\pi_{\\widetilde\\Sigma'}\n\\]\nif and only if \\(\\widetilde\\Sigma\\) and \\(\\widetilde\\Sigma'\\) are equivalent.</p>",
+  "proof_html": "<p>Equivalence of data immediately identifies the genuine \\(K\\)-types after conjugacy, so the compact inductions are isomorphic.</p>\n<p>Conversely, Mackey theory gives a nonzero summand\n\\[\n\\operatorname{Hom}_{\\widetilde K\\cap g\\widetilde K'\\!g^{-1}}\n(\\widetilde\\eta_{\\widetilde\\Sigma},\ng\\widetilde\\eta_{\\widetilde\\Sigma'})\n\\]\nfor some \\(g\\). Since the canonical splittings agree on the pro-unipotent intersection, the positive-depth part reduces to the weak-symmetry criterion of Hakim-Murnaghan. After conjugating, one may align \\(\\Gamma\\) and \\(\\Gamma'\\), hence \\(G^0=G'^0\\). Lemma 3.9 supplies a common depth character on \\(G^0\\), reducing the remaining comparison to depth zero. Howard-Weissman's depth-zero result gives a conjugacy \\(g\\in G^0\\) matching the finite reductive quotient representations, and the only extra term is the splitting-difference character \\(\\mu_{\\xi',\\xi^g}\\). This is exactly Definition 3.16.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.covering_attached_representation",
+      "title": "Representation Attached to a Covering Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_attached_representation.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "title": "Equivalence of Covering Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum_equivalence.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_splitting_difference_character",
+      "title": "Difference Character of Two Covering Splittings",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_splitting_difference_character.html"
+    },
+    {
+      "id": "supercuspidal_theta.negative_depth_character_extension",
+      "title": "Negative-Depth Character Extension",
+      "href": "supercuspidal_theta/supercuspidal_theta_negative_depth_character_extension.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_data_exhaustion",
+      "title": "Exhaustion for Covering-Group Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
+    },
+    {
+      "id": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+      "title": "Exhaustion for Metaplectic Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_metaplectic_covering_data_exhaustion.html"
+    }
+  ],
+  "lean_refs": []
+}

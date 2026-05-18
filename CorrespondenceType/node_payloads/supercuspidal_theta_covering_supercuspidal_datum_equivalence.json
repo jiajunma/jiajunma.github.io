@@ -8,7 +8,7 @@
   "topics": [
     "supercuspidal_theta"
   ],
-  "body_html": "<h1>Equivalence of Covering Supercuspidal Data</h1>\n<p>Two covering data\n\\[\n\\widetilde\\Sigma=(x,\\Gamma,\\phi,\\rho,\\xi),\\qquad\n\\widetilde\\Sigma'=(x',\\Gamma',\\phi',\\rho',\\xi')\n\\]\nare equivalent if there exists \\(g\\in G\\) such that the underlying points and semisimple elements satisfy\n\\[\nx=gx',\\qquad \\operatorname{Ad}_g(\\Gamma')\\in \\Gamma+\\mathbf g_{x,0},\n\\]\nand the quotient representations become isomorphic after transporting by \\(g\\) and comparing the two splittings of the cover.</p>\n<p>Equivalently, the ordinary condition\n\\[\n\\rho'\\otimes\\phi'\\simeq(\\rho\\otimes\\phi) ∘ \\operatorname{Ad}_g\n\\]\nis modified by the character measuring the difference between \\(\\xi'\\) and the transported splitting. The attached genuine supercuspidal representations are isomorphic exactly when the covering data are equivalent.</p>",
+  "body_html": "<h1>Equivalence of Covering Supercuspidal Data</h1>\n<p>Two covering data\n\\[\n\\widetilde\\Sigma=(x,\\Gamma,\\phi,\\rho,\\xi),\\qquad\n\\widetilde\\Sigma'=(x',\\Gamma',\\phi',\\rho',\\xi')\n\\]\nare equivalent if there exists \\(g\\in G\\) such that the underlying points and semisimple elements satisfy\n\\[\nx=gx',\\qquad \\operatorname{Ad}_g(\\Gamma')\\in \\Gamma+\\mathbf g_{x,0},\n\\]\nand the quotient representations become isomorphic after transporting by \\(g\\) and comparing the two splittings of the cover.</p>\n<p>Equivalently, the ordinary condition\n\\[\n\\rho'\\otimes\\phi'\\simeq(\\rho\\otimes\\phi) ∘ \\operatorname{Ad}_g\n\\]\nis modified by the character measuring the difference between \\(\\xi'\\) and the transported splitting.</p>",
   "proof_html": null,
   "deps": [
     {
@@ -20,13 +20,18 @@
       "id": "supercuspidal_theta.supercuspidal_datum_equivalence",
       "title": "Equivalence of Supercuspidal Data",
       "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum_equivalence.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_splitting_difference_character",
+      "title": "Difference Character of Two Covering Splittings",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_splitting_difference_character.html"
     }
   ],
   "dependents": [
     {
-      "id": "supercuspidal_theta.covering_data_exhaustion",
-      "title": "Exhaustion for Covering-Group Supercuspidal Data",
-      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
+      "id": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "title": "Equivalence Theorem for Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_equivalence_theorem.html"
     }
   ],
   "lean_refs": []

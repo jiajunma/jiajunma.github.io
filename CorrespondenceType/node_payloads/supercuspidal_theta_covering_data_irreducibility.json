@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.covering_data_irreducibility",
+  "title": "Irreducibility for Covering Data",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_covering_data_irreducibility.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Irreducibility for Covering Data</h1>\n<p>For any covering datum \\(\\widetilde\\Sigma\\), the representation\n\\[\n\\widetilde\\pi_{\\widetilde\\Sigma}\n\\]\nis irreducible and supercuspidal.</p>",
+  "proof_html": "<p>Let \\(I(\\eta_\\Sigma)\\) be the ordinary intertwining set for \\(\\eta_\\Sigma\\). Yu's intertwining theorem gives \\(I(\\eta_\\Sigma)=K\\). For the covering group, the adjoint action factors through \\(G\\), and the splitting identifies\n\\[\n\\widetilde K\\cap \\widetilde g\\,\\widetilde K\\,\\widetilde g^{-1}\n\\]\nwith \\((K\\cap gKg^{-1})\\times\\mathbb C^\\times\\). Under this identification, the genuine representation is the ordinary representation tensored with the identity character of \\(\\mathbb C^\\times\\). Hence the covering intertwining set is \\(\\widetilde K\\). Compact induction from \\(\\widetilde K\\) is therefore irreducible and supercuspidal by the same criterion as in Yu's proof.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.covering_attached_representation",
+      "title": "Representation Attached to a Covering Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_attached_representation.html"
+    },
+    {
+      "id": "supercuspidal_theta.attached_supercuspidal_representation",
+      "title": "Supercuspidal Representation Attached to a Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_data_exhaustion",
+      "title": "Exhaustion for Covering-Group Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
+    },
+    {
+      "id": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+      "title": "Exhaustion for Metaplectic Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_metaplectic_covering_data_exhaustion.html"
+    }
+  ],
+  "lean_refs": []
+}

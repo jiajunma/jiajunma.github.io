@@ -9,22 +9,22 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Yu-Kim-Hakim-Murnaghan Extension to Even Orthogonal Groups</h1>\n<p>For \\(G=O(V)\\) with \\(V\\) even-dimensional, the datum construction still gives irreducible supercuspidal representations, these representations exhaust the supercuspidal spectrum under the same large-\\(p\\) hypotheses, and the same equivalence relation on data classifies isomorphism classes.</p>",
-  "proof_html": "<p>The paper reduces to the connected special orthogonal subgroup. Depth-zero types are handled by Clifford theory for an index-two normal subgroup. Twisted Levi subgroups and genericity conditions extend because the centralizers are products of classical factors, and the required Yu conditions SC1-SC3 are checked using the same arguments as in the connected case, with the Heisenberg-Weil extension supplied by Appendix A.2. Exhaustion and equivalence are then lifted from the connected group and the two restriction cases for \\(O(V)\\).</p>",
+  "proof_html": "<p>This is the aggregate of Theorem 3.10, Theorem 3.11, and Theorem 3.12. Irreducibility checks Yu's SC1-SC3 conditions for \\(O(V)\\), exhaustion restricts to \\(SO(V)\\) and lifts Kim's connected result through the \\(K_{0+}\\)-multiplicity space, and equivalence is handled by Clifford theory plus the connected Hakim-Murnaghan theorem.</p>",
   "deps": [
     {
-      "id": "supercuspidal_theta.supercuspidal_datum",
-      "title": "Supercuspidal Datum",
-      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html"
+      "id": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+      "title": "Yu Irreducibility for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_yu_irreducibility.html"
     },
     {
-      "id": "supercuspidal_theta.attached_supercuspidal_representation",
-      "title": "Supercuspidal Representation Attached to a Datum",
-      "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html"
+      "id": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+      "title": "Kim Exhaustion for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_kim_exhaustion.html"
     },
     {
-      "id": "supercuspidal_theta.supercuspidal_datum_equivalence",
-      "title": "Equivalence of Supercuspidal Data",
-      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum_equivalence.html"
+      "id": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+      "title": "Data Equivalence for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_data_equivalence_theorem.html"
     }
   ],
   "dependents": [],

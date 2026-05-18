@@ -1,0 +1,43 @@
+{
+  "id": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+  "title": "Yu Irreducibility for Even Orthogonal Groups",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_yu_irreducibility.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Yu Irreducibility for Even Orthogonal Groups</h1>\n<p>For \\(G=O(V)\\) with \\(V\\) even-dimensional, the representation\n\\[\n\\pi_\\Sigma=\\operatorname{c-Ind}_K^G\\eta_\\Sigma\n\\]\nconstructed from a supercuspidal datum \\(\\Sigma\\) is irreducible and supercuspidal.</p>",
+  "proof_html": "<p>The proof checks Yu's conditions SC1, SC2, and SC3 for \\(O(V)\\). SC1 uses the same root-theoretic argument as Yu after replacing GE2 by the orthogonal-group variant following from the good-element condition. The needed Moy-Prasad integral models are obtained by viewing \\(O(V)\\) as a symmetric subgroup of a general linear group. SC2 is supplied by the Heisenberg-Weil construction in Appendix A.2.1. SC3 follows from Yu's Sections 12-13 without change. Yu's Proposition 4.6 then gives irreducibility and supercuspidality.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.attached_supercuspidal_representation",
+      "title": "Supercuspidal Representation Attached to a Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html"
+    },
+    {
+      "id": "supercuspidal_theta.yu_special_isomorphism",
+      "title": "Yu Special Isomorphism",
+      "href": "supercuspidal_theta/supercuspidal_theta_yu_special_isomorphism.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+      "title": "Data Equivalence for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_data_equivalence_theorem.html"
+    },
+    {
+      "id": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+      "title": "Kim Exhaustion for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_kim_exhaustion.html"
+    },
+    {
+      "id": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "title": "Yu-Kim-Hakim-Murnaghan Extension to Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_yu_extension.html"
+    }
+  ],
+  "lean_refs": []
+}

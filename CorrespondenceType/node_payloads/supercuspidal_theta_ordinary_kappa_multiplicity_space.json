@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.ordinary_kappa_multiplicity_space",
+  "title": "Kappa Multiplicity Space Recovers Rho",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_ordinary_kappa_multiplicity_space.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Kappa Multiplicity Space Recovers Rho</h1>\n<p>Let \\(G\\) be a connected classical group, a special orthogonal group, or an odd orthogonal group as in Theorem 3.7. For a supercuspidal datum \\(\\Sigma=(x,\\Gamma,\\phi,\\rho)\\), let \\(\\kappa=\\kappa_\\Sigma\\) be the positive-depth factor in \\(\\eta_\\Sigma=\\rho\\otimes\\kappa\\). Then\n\\[\n\\rho_0=\\operatorname{Hom}_{K_{0+}}(\\kappa,\\pi_\\Sigma)\n\\]\nis isomorphic to \\(\\rho\\) as a \\(G_x^0/G_{x,0+}^0\\)-module.</p>",
+  "proof_html": "<p>Take an irreducible component \\(\\rho'\\) of \\(\\rho_0\\). Kim's input shows that \\(\\rho'\\) is cuspidal, and Frobenius reciprocity gives an attached datum \\(\\Sigma'=(x,\\Gamma,\\phi,\\rho')\\) with \\(\\pi_\\Sigma\\simeq\\pi_{\\Sigma'}\\). Hakim-Murnaghan equivalence then forces \\(\\rho'\\simeq\\rho\\). The multiplicity is\n\\[\n\\operatorname{Hom}_K(\\rho,\\rho_0)\n=\\operatorname{Hom}_K(\\eta_\\Sigma,\\pi_\\Sigma)\n=\\operatorname{Hom}_G(\\pi_\\Sigma,\\pi_\\Sigma),\n\\]\nwhich is one by irreducibility.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.attached_supercuspidal_representation",
+      "title": "Supercuspidal Representation Attached to a Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html"
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum_equivalence",
+      "title": "Equivalence of Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum_equivalence.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+      "title": "Data Equivalence for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_data_equivalence_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

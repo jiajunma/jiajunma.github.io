@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+  "title": "Kim Exhaustion for Even Orthogonal Groups",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_kim_exhaustion.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Kim Exhaustion for Even Orthogonal Groups</h1>\n<p>Under the paper's large residue-characteristic hypotheses, every irreducible supercuspidal representation of \\(G=O(V)\\), with \\(V\\) even-dimensional, is \\(\\pi_\\Sigma\\) for some supercuspidal datum \\(\\Sigma\\).</p>",
+  "proof_html": "<p>Restrict an irreducible supercuspidal representation \\(\\pi\\) of \\(O(V)\\) to \\(SO(V)\\), and choose an irreducible supercuspidal constituent. Kim's connected-group exhaustion writes that constituent as \\({}^{\\circ}\\pi_{{}^{\\circ}\\Sigma}\\). Lemma 3.9 extends the required depth character from the connected centralizer to \\(G^0\\). The Appendix A.2.2 construction supplies the corresponding \\(K\\)-module \\(\\kappa\\). The multiplicity space\n\\[\n\\operatorname{Hom}_{K_{0+}}(\\kappa,\\pi)\n\\]\ncontains the depth-zero piece coming from the connected datum; choosing an irreducible \\(G_x^0\\)-submodule \\(\\rho\\) gives a datum \\(\\Sigma\\). The representation \\(\\pi\\) embeds in \\(\\pi_\\Sigma\\), and Theorem 3.10 makes \\(\\pi_\\Sigma\\) irreducible, so \\(\\pi=\\pi_\\Sigma\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+      "title": "Yu Irreducibility for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_yu_irreducibility.html"
+    },
+    {
+      "id": "supercuspidal_theta.negative_depth_character_extension",
+      "title": "Negative-Depth Character Extension",
+      "href": "supercuspidal_theta/supercuspidal_theta_negative_depth_character_extension.html"
+    },
+    {
+      "id": "supercuspidal_theta.yu_kappa_construction",
+      "title": "Yu Kappa Construction",
+      "href": "supercuspidal_theta/supercuspidal_theta_yu_kappa_construction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "title": "Yu-Kim-Hakim-Murnaghan Extension to Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_yu_extension.html"
+    }
+  ],
+  "lean_refs": []
+}

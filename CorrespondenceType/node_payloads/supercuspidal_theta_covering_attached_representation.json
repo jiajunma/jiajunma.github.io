@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.covering_attached_representation",
+  "title": "Representation Attached to a Covering Datum",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_covering_attached_representation.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Representation Attached to a Covering Datum</h1>\n<p>For a covering datum \\(\\widetilde\\Sigma=(x,\\Gamma,\\phi,\\rho,\\xi)\\), let\n\\[\n\\widetilde\\xi:K\\times\\mathbb C^\\times\\to\\widetilde K\n\\]\nbe the isomorphism induced by the splitting \\(\\xi\\). The genuine \\(K\\)-type is\n\\[\n\\widetilde\\eta_{\\widetilde\\Sigma}\n=(\\eta_\\Sigma\\boxtimes\\operatorname{id}_{\\mathbb C^\\times})\\circ\\widetilde\\xi^{-1},\n\\]\nand the attached genuine representation is\n\\[\n\\widetilde\\pi_{\\widetilde\\Sigma}\n=\\operatorname{c-Ind}_{\\widetilde K}^{\\widetilde G}\n\\widetilde\\eta_{\\widetilde\\Sigma}.\n\\]</p>\n<p>The paper calls \\(\\widetilde\\pi_{\\widetilde\\Sigma}\\) the supercuspidal representation attached to \\(\\widetilde\\Sigma\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum",
+      "title": "Supercuspidal Datum for a Covering Group",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.attached_supercuspidal_representation",
+      "title": "Supercuspidal Representation Attached to a Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "title": "Equivalence Theorem for Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_equivalence_theorem.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_data_irreducibility",
+      "title": "Irreducibility for Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_irreducibility.html"
+    }
+  ],
+  "lean_refs": []
+}

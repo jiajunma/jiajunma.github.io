@@ -796,7 +796,10 @@
         "supercuspidal_theta.supercuspidal_datum"
       ],
       "used_by": [
-        "supercuspidal_theta.even_orthogonal_yu_extension",
+        "supercuspidal_theta.covering_attached_representation",
+        "supercuspidal_theta.covering_data_irreducibility",
+        "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+        "supercuspidal_theta.ordinary_kappa_multiplicity_space",
         "supercuspidal_theta.yu_kappa_construction"
       ]
     },
@@ -897,6 +900,48 @@
       ]
     },
     {
+      "id": "supercuspidal_theta.covering_attached_representation",
+      "title": "Representation Attached to a Covering Datum",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "covering-group",
+        "compact-induction",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.attached_supercuspidal_representation",
+        "supercuspidal_theta.covering_supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_data_equivalence_theorem",
+        "supercuspidal_theta.covering_data_irreducibility"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "title": "Equivalence Theorem for Covering Data",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "covering-group",
+        "equivalence",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.covering_attached_representation",
+        "supercuspidal_theta.covering_splitting_difference_character",
+        "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+        "supercuspidal_theta.negative_depth_character_extension"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_data_exhaustion",
+        "supercuspidal_theta.metaplectic_covering_data_exhaustion"
+      ]
+    },
+    {
       "id": "supercuspidal_theta.covering_data_exhaustion",
       "title": "Exhaustion for Covering-Group Supercuspidal Data",
       "kind": "proposition",
@@ -908,12 +953,52 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.covering_supercuspidal_datum",
-        "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
+        "supercuspidal_theta.covering_data_equivalence_theorem",
+        "supercuspidal_theta.covering_data_irreducibility",
+        "supercuspidal_theta.metaplectic_covering_data_exhaustion"
       ],
       "used_by": [
         "supercuspidal_theta.main_supercuspidal_proof_plan",
         "supercuspidal_theta.supercuspidal_theta_main_theorem"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.covering_data_irreducibility",
+      "title": "Irreducibility for Covering Data",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "covering-group",
+        "metaplectic-cover",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.attached_supercuspidal_representation",
+        "supercuspidal_theta.covering_attached_representation"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_data_exhaustion",
+        "supercuspidal_theta.metaplectic_covering_data_exhaustion"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.covering_splitting_difference_character",
+      "title": "Difference Character of Two Covering Splittings",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "covering-group",
+        "splitting",
+        "character"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.covering_supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_data_equivalence_theorem",
+        "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
       ]
     },
     {
@@ -932,7 +1017,8 @@
         "supercuspidal_theta.supercuspidal_datum"
       ],
       "used_by": [
-        "supercuspidal_theta.covering_data_exhaustion",
+        "supercuspidal_theta.covering_attached_representation",
+        "supercuspidal_theta.covering_splitting_difference_character",
         "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
         "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
@@ -949,11 +1035,12 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "supercuspidal_theta.covering_splitting_difference_character",
         "supercuspidal_theta.covering_supercuspidal_datum",
         "supercuspidal_theta.supercuspidal_datum_equivalence"
       ],
       "used_by": [
-        "supercuspidal_theta.covering_data_exhaustion"
+        "supercuspidal_theta.covering_data_equivalence_theorem"
       ]
     },
     {
@@ -1118,6 +1205,46 @@
       ]
     },
     {
+      "id": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+      "title": "Data Equivalence for Even Orthogonal Groups",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "even-orthogonal",
+        "equivalence",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+        "supercuspidal_theta.ordinary_kappa_multiplicity_space",
+        "supercuspidal_theta.supercuspidal_datum_equivalence"
+      ],
+      "used_by": [
+        "supercuspidal_theta.even_orthogonal_yu_extension"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+      "title": "Kim Exhaustion for Even Orthogonal Groups",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "even-orthogonal",
+        "kim-exhaustion",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+        "supercuspidal_theta.negative_depth_character_extension",
+        "supercuspidal_theta.yu_kappa_construction"
+      ],
+      "used_by": [
+        "supercuspidal_theta.even_orthogonal_yu_extension"
+      ]
+    },
+    {
       "id": "supercuspidal_theta.even_orthogonal_yu_extension",
       "title": "Yu-Kim-Hakim-Murnaghan Extension to Even Orthogonal Groups",
       "kind": "theorem",
@@ -1129,9 +1256,30 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+        "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+        "supercuspidal_theta.even_orthogonal_yu_irreducibility"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+      "title": "Yu Irreducibility for Even Orthogonal Groups",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "even-orthogonal",
+        "yu-data",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
         "supercuspidal_theta.attached_supercuspidal_representation",
-        "supercuspidal_theta.supercuspidal_datum",
-        "supercuspidal_theta.supercuspidal_datum_equivalence"
+        "supercuspidal_theta.yu_special_isomorphism"
+      ],
+      "used_by": [
+        "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+        "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+        "supercuspidal_theta.even_orthogonal_yu_extension"
       ]
     },
     {
@@ -1463,6 +1611,27 @@
       ]
     },
     {
+      "id": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+      "title": "Exhaustion for Metaplectic Covering Data",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "metaplectic-cover",
+        "kim-exhaustion",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.covering_data_equivalence_theorem",
+        "supercuspidal_theta.covering_data_irreducibility",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition",
+        "supercuspidal_theta.residue_characteristic_bound"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_data_exhaustion"
+      ]
+    },
+    {
       "id": "supercuspidal_theta.module_function_self_dual_envelope",
       "title": "Self-Dual Envelope of a Module Function",
       "kind": "lemma",
@@ -1479,6 +1648,25 @@
       "used_by": [
         "supercuspidal_theta.depth_preservation_building_sum",
         "supercuspidal_theta.fixed_vector_descent_lemma"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.negative_depth_character_extension",
+      "title": "Negative-Depth Character Extension",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "yu-data",
+        "character",
+        "even-orthogonal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_data_equivalence_theorem",
+        "supercuspidal_theta.even_orthogonal_kim_exhaustion"
       ]
     },
     {
@@ -1602,6 +1790,25 @@
       "uses": [
         "supercuspidal_theta.block_oscillator_factorization",
         "supercuspidal_theta.one_block_orbit_k_type_proposition"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.ordinary_kappa_multiplicity_space",
+      "title": "Kappa Multiplicity Space Recovers Rho",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "yu-data",
+        "kappa",
+        "multiplicity"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.attached_supercuspidal_representation",
+        "supercuspidal_theta.supercuspidal_datum_equivalence"
+      ],
+      "used_by": [
+        "supercuspidal_theta.even_orthogonal_data_equivalence_theorem"
       ]
     },
     {
@@ -1740,6 +1947,7 @@
       ],
       "used_by": [
         "supercuspidal_theta.main_supercuspidal_proof_plan",
+        "supercuspidal_theta.metaplectic_covering_data_exhaustion",
         "supercuspidal_theta.occurrence_vector_choice",
         "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
@@ -1754,7 +1962,10 @@
         "yu-data",
         "kim-exhaustion"
       ],
-      "topic": "supercuspidal_theta"
+      "topic": "supercuspidal_theta",
+      "used_by": [
+        "supercuspidal_theta.metaplectic_covering_data_exhaustion"
+      ]
     },
     {
       "id": "supercuspidal_theta.single_block_lattice_transfer",
@@ -1901,7 +2112,7 @@
       "used_by": [
         "supercuspidal_theta.attached_supercuspidal_representation",
         "supercuspidal_theta.covering_supercuspidal_datum",
-        "supercuspidal_theta.even_orthogonal_yu_extension",
+        "supercuspidal_theta.negative_depth_character_extension",
         "supercuspidal_theta.single_block_supercuspidal_datum",
         "supercuspidal_theta.supercuspidal_datum_equivalence"
       ]
@@ -1922,7 +2133,8 @@
       ],
       "used_by": [
         "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
-        "supercuspidal_theta.even_orthogonal_yu_extension"
+        "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+        "supercuspidal_theta.ordinary_kappa_multiplicity_space"
       ]
     },
     {
@@ -2040,6 +2252,9 @@
       "uses": [
         "supercuspidal_theta.attached_supercuspidal_representation",
         "supercuspidal_theta.yu_special_isomorphism"
+      ],
+      "used_by": [
+        "supercuspidal_theta.even_orthogonal_kim_exhaustion"
       ]
     },
     {
@@ -2058,6 +2273,7 @@
         "supercuspidal_theta.good_factorization"
       ],
       "used_by": [
+        "supercuspidal_theta.even_orthogonal_yu_irreducibility",
         "supercuspidal_theta.yu_kappa_construction"
       ]
     }
@@ -2360,12 +2576,52 @@
       "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
     },
     {
-      "from": "supercuspidal_theta.covering_data_exhaustion",
+      "from": "supercuspidal_theta.covering_attached_representation",
+      "to": "supercuspidal_theta.attached_supercuspidal_representation"
+    },
+    {
+      "from": "supercuspidal_theta.covering_attached_representation",
       "to": "supercuspidal_theta.covering_supercuspidal_datum"
     },
     {
-      "from": "supercuspidal_theta.covering_data_exhaustion",
+      "from": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "to": "supercuspidal_theta.covering_attached_representation"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "to": "supercuspidal_theta.covering_splitting_difference_character"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_equivalence_theorem",
       "to": "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "to": "supercuspidal_theta.negative_depth_character_extension"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_exhaustion",
+      "to": "supercuspidal_theta.covering_data_equivalence_theorem"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_exhaustion",
+      "to": "supercuspidal_theta.covering_data_irreducibility"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_exhaustion",
+      "to": "supercuspidal_theta.metaplectic_covering_data_exhaustion"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_irreducibility",
+      "to": "supercuspidal_theta.attached_supercuspidal_representation"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_irreducibility",
+      "to": "supercuspidal_theta.covering_attached_representation"
+    },
+    {
+      "from": "supercuspidal_theta.covering_splitting_difference_character",
+      "to": "supercuspidal_theta.covering_supercuspidal_datum"
     },
     {
       "from": "supercuspidal_theta.covering_supercuspidal_datum",
@@ -2374,6 +2630,10 @@
     {
       "from": "supercuspidal_theta.covering_supercuspidal_datum",
       "to": "supercuspidal_theta.supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "to": "supercuspidal_theta.covering_splitting_difference_character"
     },
     {
       "from": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
@@ -2440,16 +2700,48 @@
       "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
     },
     {
+      "from": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+      "to": "supercuspidal_theta.even_orthogonal_yu_irreducibility"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+      "to": "supercuspidal_theta.ordinary_kappa_multiplicity_space"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem",
+      "to": "supercuspidal_theta.supercuspidal_datum_equivalence"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+      "to": "supercuspidal_theta.even_orthogonal_yu_irreducibility"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+      "to": "supercuspidal_theta.negative_depth_character_extension"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+      "to": "supercuspidal_theta.yu_kappa_construction"
+    },
+    {
       "from": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "to": "supercuspidal_theta.even_orthogonal_data_equivalence_theorem"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "to": "supercuspidal_theta.even_orthogonal_kim_exhaustion"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "to": "supercuspidal_theta.even_orthogonal_yu_irreducibility"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
       "to": "supercuspidal_theta.attached_supercuspidal_representation"
     },
     {
-      "from": "supercuspidal_theta.even_orthogonal_yu_extension",
-      "to": "supercuspidal_theta.supercuspidal_datum"
-    },
-    {
-      "from": "supercuspidal_theta.even_orthogonal_yu_extension",
-      "to": "supercuspidal_theta.supercuspidal_datum_equivalence"
+      "from": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
+      "to": "supercuspidal_theta.yu_special_isomorphism"
     },
     {
       "from": "supercuspidal_theta.exhaustion_proof_plan",
@@ -2584,8 +2876,28 @@
       "to": "supercuspidal_theta.one_block_stabilizer_notation"
     },
     {
+      "from": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+      "to": "supercuspidal_theta.covering_data_equivalence_theorem"
+    },
+    {
+      "from": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+      "to": "supercuspidal_theta.covering_data_irreducibility"
+    },
+    {
+      "from": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+      "to": "supercuspidal_theta.refined_k_type_occurrence_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+      "to": "supercuspidal_theta.residue_characteristic_bound"
+    },
+    {
       "from": "supercuspidal_theta.module_function_self_dual_envelope",
       "to": "supercuspidal_theta.lattice_fixed_vector_model"
+    },
+    {
+      "from": "supercuspidal_theta.negative_depth_character_extension",
+      "to": "supercuspidal_theta.supercuspidal_datum"
     },
     {
       "from": "supercuspidal_theta.occurrence_vector_choice",
@@ -2642,6 +2954,14 @@
     {
       "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
       "to": "supercuspidal_theta.one_block_orbit_k_type_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.ordinary_kappa_multiplicity_space",
+      "to": "supercuspidal_theta.attached_supercuspidal_representation"
+    },
+    {
+      "from": "supercuspidal_theta.ordinary_kappa_multiplicity_space",
+      "to": "supercuspidal_theta.supercuspidal_datum_equivalence"
     },
     {
       "from": "supercuspidal_theta.positive_depth_moment_map_surjectivity",

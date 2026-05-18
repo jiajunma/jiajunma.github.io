@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.negative_depth_character_extension",
+  "title": "Negative-Depth Character Extension",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_negative_depth_character_extension.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Negative-Depth Character Extension</h1>\n<p>Let \\(G_L\\) be a twisted Levi subgroup of \\(G\\) with \\(Z({}^{\\circ}G_L)/Z(G_L)\\) anisotropic. Let \\(\\Gamma\\) be a negative-depth element in the center of \\(\\operatorname{Lie}(G_L)\\), and let \\(x\\in B(G_L)\\). Then there is a character\n\\[\n\\phi:G_{L,x}\\to\\mathbb C^\\times\n\\]\nsuch that for \\(g\\in G_{L,x,0+}\\),\n\\[\n\\phi(g)=\\psi(B(\\Gamma,\\operatorname{log} g)).\n\\]</p>",
+  "proof_html": "<p>The anisotropic-center hypothesis excludes the \\(O(1,1)\\) and general linear factors in the center of \\(G_L\\). Thus the relevant central Lie algebra lies in a product of unitary Lie algebra factors. The connected-group version, Kim's Lemma 5.5, supplies the character on each factor, and their product gives the required \\(\\phi\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum",
+      "title": "Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "title": "Equivalence Theorem for Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_equivalence_theorem.html"
+    },
+    {
+      "id": "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+      "title": "Kim Exhaustion for Even Orthogonal Groups",
+      "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_kim_exhaustion.html"
+    }
+  ],
+  "lean_refs": []
+}

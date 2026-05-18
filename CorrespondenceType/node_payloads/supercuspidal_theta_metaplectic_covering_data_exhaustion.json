@@ -1,0 +1,43 @@
+{
+  "id": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
+  "title": "Exhaustion for Metaplectic Covering Data",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_metaplectic_covering_data_exhaustion.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Exhaustion for Metaplectic Covering Data</h1>\n<p>Let \\(V'\\) be a symplectic \\(F\\)-space of even dimension \\(n\\), and let \\(Mp\\) be the \\(\\mathbb C^\\times\\)-metaplectic cover of \\(Sp(V')\\). If\n\\[\np\\ge \\max\\{2n+3,e_F(n+1)+2\\},\n\\]\nthen every genuine supercuspidal representation of \\(Mp\\) is attached to a covering datum.</p>",
+  "proof_html": "<p>Start with a genuine supercuspidal \\(Mp\\)-module \\(\\widetilde\\pi'\\). The conservation relation gives an odd-dimensional quadratic space \\(V\\), with \\(\\dim_FV\\le n+1\\), and a genuine supercuspidal representation \\(\\widetilde\\pi\\) on the corresponding orthogonal cover such that\n\\[\n\\widetilde\\pi'=\\theta_{V,V'}(\\widetilde\\pi).\n\\]\nThe residue-characteristic bound puts both groups under Kim's hypotheses, so \\(\\widetilde\\pi\\) is attached to a covering datum on the odd orthogonal side. Proposition 9.1 then produces source and target data whose target attached representation is \\(\\widetilde\\pi'\\). The equivalence theorem for covering data identifies the source datum with the original one, so the target representation is attached to the constructed metaplectic datum.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.covering_data_irreducibility",
+      "title": "Irreducibility for Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_irreducibility.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_data_equivalence_theorem",
+      "title": "Equivalence Theorem for Covering Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_equivalence_theorem.html"
+    },
+    {
+      "id": "supercuspidal_theta.residue_characteristic_bound",
+      "title": "Residue Characteristic Bound for Kim Hypotheses",
+      "href": "supercuspidal_theta/supercuspidal_theta_residue_characteristic_bound.html"
+    },
+    {
+      "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "title": "Refined K-Type Occurrence Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_refined_k_type_occurrence_proposition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_data_exhaustion",
+      "title": "Exhaustion for Covering-Group Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
+    }
+  ],
+  "lean_refs": []
+}

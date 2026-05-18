@@ -8,7 +8,7 @@
   "topics": [
     "supercuspidal_theta"
   ],
-  "body_html": "<h1>Supercuspidal Datum for a Covering Group</h1>\n<p>Let \\(\\widetilde G\\to G\\) be a central \\(\\mathbb C^\\times\\)-covering group occurring in a type I dual pair. A supercuspidal datum for \\(\\widetilde G\\) is\n\\[\n\\widetilde\\Sigma=(x,\\Gamma,\\phi,\\rho,\\xi),\n\\]\nwhere \\((x,\\Gamma,\\phi,\\rho)\\) is a supercuspidal datum for \\(G\\) and\n\\[\n\\xi:K\\to \\widetilde K\n\\]\nis a splitting of the cover over the compact subgroup \\(K\\), agreeing on \\(K_{0+}\\) with the canonical pro-unipotent splitting coming from the generalized lattice model.</p>\n<p>The splitting identifies \\(\\widetilde K\\) with \\(K\\times\\mathbb C^\\times\\). The genuine \\(K\\)-type and genuine supercuspidal representation attached to the covering datum are\n\\[\n\\widetilde\\eta_{\\widetilde\\Sigma}=(\\eta_\\Sigma\\otimes\\operatorname{id}_{\\mathbb C^\\times}) ∘ \\widetilde\\xi^{-1},\n\\qquad\n\\widetilde\\pi_{\\widetilde\\Sigma}=\\operatorname{c-Ind}_{\\widetilde K}^{\\widetilde G}\\widetilde\\eta_{\\widetilde\\Sigma}.\n\\]</p>",
+  "body_html": "<h1>Supercuspidal Datum for a Covering Group</h1>\n<p>Let \\(\\widetilde G\\to G\\) be a central \\(\\mathbb C^\\times\\)-covering group occurring in a type I dual pair. A supercuspidal datum for \\(\\widetilde G\\) is\n\\[\n\\widetilde\\Sigma=(x,\\Gamma,\\phi,\\rho,\\xi),\n\\]\nwhere \\((x,\\Gamma,\\phi,\\rho)\\) is a supercuspidal datum for \\(G\\) and\n\\[\n\\xi:K\\to \\widetilde K\n\\]\nis a splitting of the cover over the compact subgroup \\(K\\), agreeing on \\(K_{0+}\\) with the canonical pro-unipotent splitting coming from the generalized lattice model.</p>\n<p>The splitting identifies \\(\\widetilde K\\) with \\(K\\times\\mathbb C^\\times\\). The genuine \\(K\\)-type and compact induction attached to this datum are recorded separately in <code>supercuspidal_theta.covering_attached_representation</code>.</p>",
   "proof_html": null,
   "deps": [
     {
@@ -24,9 +24,14 @@
   ],
   "dependents": [
     {
-      "id": "supercuspidal_theta.covering_data_exhaustion",
-      "title": "Exhaustion for Covering-Group Supercuspidal Data",
-      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
+      "id": "supercuspidal_theta.covering_attached_representation",
+      "title": "Representation Attached to a Covering Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_attached_representation.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_splitting_difference_character",
+      "title": "Difference Character of Two Covering Splittings",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_splitting_difference_character.html"
     },
     {
       "id": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
