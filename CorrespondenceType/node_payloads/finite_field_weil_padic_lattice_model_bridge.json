@@ -1,0 +1,43 @@
+{
+  "id": "finite_field_weil.padic_lattice_model_bridge",
+  "title": "Finite-Field Weil Input for p-adic Lattice Models",
+  "kind": "concept",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_padic_lattice_model_bridge.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Finite-Field Weil Input for p-adic Lattice Models</h1>\n<p>In the generalized lattice model for the p-adic oscillator representation, a building point \\(z\\) or a pair \\((x,x')\\) determines a lattice \\(L=\\mathcal{B}_{z,0}\\) with dual lattice \\(L^{\\mathrm{sh}}\\subseteq L\\). The quotient\n\\[\n\\ell_L=L/L^{\\mathrm{sh}}\n\\]\nis a finite symplectic space, and the fiber of the lattice model is the finite Heisenberg representation attached to \\(\\ell_L\\).</p>\n<p>The stabilizer \\(K_L\\) of \\(L\\) acts on this fiber through the finite quotient\n\\[\nK_L/K_L^+\\simeq \\operatorname{Sp}(\\ell_L).\n\\]\nThus Gérardin's finite-field Weil representation supplies the finite quotient action used in the p-adic lattice model.</p>\n<p>The tensor-product facts for finite Weil representations are used after the lattice quotient decomposes as an orthogonal direct sum. In the theta-correspondence induction, this is the finite-level input behind the decomposition into diagonal brick factors and cross-term factors.</p>\n<p>Finite-field character formulas should only be applied in the p-adic argument after passing to the quotient \\(L/L^{\\mathrm{sh}}\\) and identifying the relevant stabilizer action with a finite reductive quotient. They do not by themselves prove any statement about the full p-adic stabilizer or the metaplectic splitting.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "title": "Finite Heisenberg Stone-von Neumann Property",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_stone_von_neumann.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_direct_sum_tensor",
+      "title": "Symplectic Weil Representation on Orthogonal Direct Sums",
+      "href": "finite_field_weil/finite_field_weil_symplectic_direct_sum_tensor.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_fixed_point_absolute_character",
+      "title": "Absolute Value of the Symplectic Weil Character",
+      "href": "finite_field_weil/finite_field_weil_symplectic_fixed_point_absolute_character.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.request_padic_finite_quotient_reduction",
+      "title": "Request for p-adic to Finite-Quotient Reduction Lemma",
+      "href": "finite_field_weil/finite_field_weil_request_padic_finite_quotient_reduction.html"
+    }
+  ],
+  "lean_refs": []
+}

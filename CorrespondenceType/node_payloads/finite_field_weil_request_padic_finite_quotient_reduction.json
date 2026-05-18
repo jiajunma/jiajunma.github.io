@@ -1,0 +1,22 @@
+{
+  "id": "finite_field_weil.request_padic_finite_quotient_reduction",
+  "title": "Request for p-adic to Finite-Quotient Reduction Lemma",
+  "kind": "task",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_request_padic_finite_quotient_reduction.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Request for p-adic to Finite-Quotient Reduction Lemma</h1>\n<p>Prove a reduction lemma for the p-adic theta argument that identifies the finite quotient action in each generalized lattice model with Gérardin's finite-field Weil representation.</p>\n<p>The lemma should specify:</p>\n<ul>\n<li>the lattice \\(L=\\mathcal{B}_{z,0}\\) and dual lattice \\(L^{\\mathrm{sh}}\\);</li>\n<li>the finite symplectic quotient \\(\\ell_L=L/L^{\\mathrm{sh}}\\);</li>\n<li>the stabilizer \\(K_L\\) and pro-unipotent kernel \\(K_L^+\\);</li>\n<li>the reduction map \\(K_L\\to \\operatorname{Sp}(\\ell_L)\\);</li>\n<li>compatibility between the lattice-model splitting of the metaplectic cover and the finite Weil action on the fiber;</li>\n<li>behavior under orthogonal direct sums of finite quotient symplectic spaces.</li>\n</ul>\n<p>Until this lemma is proved, finite-field Weil character formulas should be cited only as finite quotient input, not as direct p-adic character formulas.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.padic_lattice_model_bridge",
+      "title": "Finite-Field Weil Input for p-adic Lattice Models",
+      "href": "finite_field_weil/finite_field_weil_padic_lattice_model_bridge.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

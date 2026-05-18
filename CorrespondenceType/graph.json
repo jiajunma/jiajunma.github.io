@@ -754,7 +754,7 @@
       "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
       "title": "Finite Heisenberg Central Character Criterion",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -771,7 +771,7 @@
       "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
       "title": "Finite Heisenberg Stone-von Neumann Property",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -783,14 +783,15 @@
         "finite_field_weil.gl_heisenberg_group"
       ],
       "used_by": [
-        "finite_field_weil.gl_weil_representation"
+        "finite_field_weil.gl_weil_representation",
+        "finite_field_weil.padic_lattice_model_bridge"
       ]
     },
     {
       "id": "finite_field_weil.gl_heisenberg_group",
       "title": "Heisenberg Group Attached to a Finite Vector Space",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -806,7 +807,7 @@
       "id": "finite_field_weil.gl_weil_character_fixed_points",
       "title": "General Linear Weil Character Fixed-Point Formula",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "character-formula",
@@ -815,13 +816,16 @@
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.gl_weil_representation"
+      ],
+      "used_by": [
+        "finite_field_weil.gl_weil_representation_decomposition"
       ]
     },
     {
       "id": "finite_field_weil.gl_weil_representation",
       "title": "General Linear Weil Representation over a Finite Field",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "weil-representation",
@@ -834,14 +838,145 @@
       ],
       "used_by": [
         "finite_field_weil.gl_weil_character_fixed_points",
+        "finite_field_weil.gl_weil_representation_decomposition",
         "finite_field_weil.symplectic_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.gl_weil_representation_decomposition",
+      "title": "General Linear Weil Representation Decomposition",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "general-linear",
+        "character-theory",
+        "decomposition"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.gl_weil_character_fixed_points",
+        "finite_field_weil.gl_weil_representation",
+        "finite_field_weil.parabolic_type"
+      ]
+    },
+    {
+      "id": "finite_field_weil.maximal_torus_signed_partitions",
+      "title": "Signed Partitions for Maximal Tori",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "maximal-torus",
+        "signed-partition"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.maximal_torus_weight_orbits",
+        "finite_field_weil.unitary_space_finite_field"
+      ]
+    },
+    {
+      "id": "finite_field_weil.maximal_torus_weight_orbits",
+      "title": "Maximal Torus Weight Orbits in a Finite Symplectic Group",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "maximal-torus",
+        "symplectic"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.symplectic_weil_representation",
+        "finite_field_weil.unitary_space_finite_field"
+      ],
+      "used_by": [
+        "finite_field_weil.maximal_torus_signed_partitions",
+        "finite_field_weil.symplectic_weil_torus_character_formula"
+      ]
+    },
+    {
+      "id": "finite_field_weil.padic_lattice_model_bridge",
+      "title": "Finite-Field Weil Input for p-adic Lattice Models",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "p-adic-theta",
+        "lattice-model",
+        "reductive-quotient"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.symplectic_direct_sum_tensor",
+        "finite_field_weil.symplectic_fixed_point_absolute_character",
+        "finite_field_weil.symplectic_weil_representation"
+      ],
+      "used_by": [
+        "finite_field_weil.request_padic_finite_quotient_reduction"
+      ]
+    },
+    {
+      "id": "finite_field_weil.parabolic_type",
+      "title": "Parabolic Type of a Finite Reductive Group Representation",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "character-theory",
+        "parabolic-type"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "used_by": [
+        "finite_field_weil.gl_weil_representation_decomposition",
+        "finite_field_weil.symplectic_weil_even_odd_components"
+      ]
+    },
+    {
+      "id": "finite_field_weil.request_padic_finite_quotient_reduction",
+      "title": "Request for p-adic to Finite-Quotient Reduction Lemma",
+      "kind": "task",
+      "status": "staged",
+      "tags": [
+        "p-adic-theta",
+        "follow-up-request",
+        "reductive-quotient"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.padic_lattice_model_bridge"
       ]
     },
     {
       "id": "finite_field_weil.symplectic_direct_sum_tensor",
       "title": "Symplectic Weil Representation on Orthogonal Direct Sums",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "tensor-product",
@@ -850,13 +985,18 @@
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.symplectic_weil_representation"
+      ],
+      "used_by": [
+        "finite_field_weil.padic_lattice_model_bridge",
+        "finite_field_weil.symplectic_weil_recursive_character_formula",
+        "finite_field_weil.symplectic_weil_torus_character_formula"
       ]
     },
     {
       "id": "finite_field_weil.symplectic_fixed_point_absolute_character",
       "title": "Absolute Value of the Symplectic Weil Character",
       "kind": "theorem",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "character-formula",
@@ -865,13 +1005,18 @@
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.symplectic_weil_representation"
+      ],
+      "used_by": [
+        "finite_field_weil.padic_lattice_model_bridge",
+        "finite_field_weil.symplectic_weil_even_odd_components",
+        "finite_field_weil.symplectic_weil_recursive_character_formula"
       ]
     },
     {
       "id": "finite_field_weil.symplectic_heisenberg_group",
       "title": "Symplectic Heisenberg Group over a Finite Field",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -884,10 +1029,54 @@
       ]
     },
     {
+      "id": "finite_field_weil.symplectic_weil_even_odd_components",
+      "title": "Even and Odd Components of the Symplectic Weil Representation",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "symplectic",
+        "character-theory",
+        "decomposition"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.parabolic_type",
+        "finite_field_weil.symplectic_fixed_point_absolute_character",
+        "finite_field_weil.symplectic_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_recursive_character_formula",
+      "title": "Recursive Symplectic Weil Character Formula",
+      "kind": "theorem",
+      "status": "needs_statement_review",
+      "tags": [
+        "finite-field",
+        "symplectic",
+        "character-formula",
+        "gaussian-sum"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.symplectic_direct_sum_tensor",
+        "finite_field_weil.symplectic_fixed_point_absolute_character",
+        "finite_field_weil.symplectic_weil_torus_character_formula"
+      ]
+    },
+    {
       "id": "finite_field_weil.symplectic_weil_representation",
       "title": "Symplectic Weil Representation over a Finite Field",
       "kind": "theorem",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "weil-representation",
@@ -900,17 +1089,46 @@
         "finite_field_weil.symplectic_heisenberg_group"
       ],
       "used_by": [
+        "finite_field_weil.maximal_torus_weight_orbits",
+        "finite_field_weil.padic_lattice_model_bridge",
         "finite_field_weil.symplectic_direct_sum_tensor",
         "finite_field_weil.symplectic_fixed_point_absolute_character",
+        "finite_field_weil.symplectic_weil_even_odd_components",
+        "finite_field_weil.symplectic_weil_torus_character_formula",
         "finite_field_weil.unitary_weil_representation",
         "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model"
+      ]
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_torus_character_formula",
+      "title": "Symplectic Weil Character on Semisimple Elements",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "symplectic",
+        "character-formula",
+        "maximal-torus"
+      ],
+      "primary_topic": "finite_field_weil",
+      "topics": [
+        "finite_field_weil"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.maximal_torus_weight_orbits",
+        "finite_field_weil.symplectic_direct_sum_tensor",
+        "finite_field_weil.symplectic_weil_representation"
+      ],
+      "used_by": [
+        "finite_field_weil.symplectic_weil_recursive_character_formula"
       ]
     },
     {
       "id": "finite_field_weil.unitary_direct_sum_tensor",
       "title": "Unitary Weil Representation on Orthogonal Direct Sums",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "tensor-product",
@@ -928,7 +1146,7 @@
       "id": "finite_field_weil.unitary_fixed_point_absolute_character",
       "title": "Absolute Value of the Unitary Weil Character",
       "kind": "theorem",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "character-formula",
@@ -946,7 +1164,7 @@
       "id": "finite_field_weil.unitary_heisenberg_group",
       "title": "Unitary Heisenberg Group over a Finite Field",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -965,7 +1183,7 @@
       "id": "finite_field_weil.unitary_space_finite_field",
       "title": "Finite-Field Unitary Space in Gérardin's Convention",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "unitary",
@@ -973,6 +1191,8 @@
       ],
       "topic": "finite_field_weil",
       "used_by": [
+        "finite_field_weil.maximal_torus_signed_partitions",
+        "finite_field_weil.maximal_torus_weight_orbits",
         "finite_field_weil.unitary_heisenberg_group"
       ]
     },
@@ -980,7 +1200,7 @@
       "id": "finite_field_weil.unitary_weil_character_formula",
       "title": "Unitary Weil Character Formula over a Finite Field",
       "kind": "theorem",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "character-formula",
@@ -997,7 +1217,7 @@
       "id": "finite_field_weil.unitary_weil_representation",
       "title": "Unitary Weil Representation over a Finite Field",
       "kind": "theorem",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "finite-field",
         "weil-representation",
@@ -3073,12 +3293,84 @@
       "to": "finite_field_weil.gl_heisenberg_group"
     },
     {
+      "from": "finite_field_weil.gl_weil_representation_decomposition",
+      "to": "finite_field_weil.gl_weil_character_fixed_points"
+    },
+    {
+      "from": "finite_field_weil.gl_weil_representation_decomposition",
+      "to": "finite_field_weil.gl_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.gl_weil_representation_decomposition",
+      "to": "finite_field_weil.parabolic_type"
+    },
+    {
+      "from": "finite_field_weil.maximal_torus_signed_partitions",
+      "to": "finite_field_weil.maximal_torus_weight_orbits"
+    },
+    {
+      "from": "finite_field_weil.maximal_torus_signed_partitions",
+      "to": "finite_field_weil.unitary_space_finite_field"
+    },
+    {
+      "from": "finite_field_weil.maximal_torus_weight_orbits",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.maximal_torus_weight_orbits",
+      "to": "finite_field_weil.unitary_space_finite_field"
+    },
+    {
+      "from": "finite_field_weil.padic_lattice_model_bridge",
+      "to": "finite_field_weil.finite_heisenberg_stone_von_neumann"
+    },
+    {
+      "from": "finite_field_weil.padic_lattice_model_bridge",
+      "to": "finite_field_weil.symplectic_direct_sum_tensor"
+    },
+    {
+      "from": "finite_field_weil.padic_lattice_model_bridge",
+      "to": "finite_field_weil.symplectic_fixed_point_absolute_character"
+    },
+    {
+      "from": "finite_field_weil.padic_lattice_model_bridge",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.request_padic_finite_quotient_reduction",
+      "to": "finite_field_weil.padic_lattice_model_bridge"
+    },
+    {
       "from": "finite_field_weil.symplectic_direct_sum_tensor",
       "to": "finite_field_weil.symplectic_weil_representation"
     },
     {
       "from": "finite_field_weil.symplectic_fixed_point_absolute_character",
       "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_even_odd_components",
+      "to": "finite_field_weil.parabolic_type"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_even_odd_components",
+      "to": "finite_field_weil.symplectic_fixed_point_absolute_character"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_even_odd_components",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_recursive_character_formula",
+      "to": "finite_field_weil.symplectic_direct_sum_tensor"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_recursive_character_formula",
+      "to": "finite_field_weil.symplectic_fixed_point_absolute_character"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_recursive_character_formula",
+      "to": "finite_field_weil.symplectic_weil_torus_character_formula"
     },
     {
       "from": "finite_field_weil.symplectic_weil_representation",
@@ -3091,6 +3383,18 @@
     {
       "from": "finite_field_weil.symplectic_weil_representation",
       "to": "finite_field_weil.symplectic_heisenberg_group"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_torus_character_formula",
+      "to": "finite_field_weil.maximal_torus_weight_orbits"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_torus_character_formula",
+      "to": "finite_field_weil.symplectic_direct_sum_tensor"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_torus_character_formula",
+      "to": "finite_field_weil.symplectic_weil_representation"
     },
     {
       "from": "finite_field_weil.unitary_direct_sum_tensor",
