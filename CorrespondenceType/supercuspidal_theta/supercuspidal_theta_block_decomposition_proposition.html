@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -248,6 +248,15 @@
 \Sigma=\bigoplus_{l=0}^{b}\Sigma_l
 \]
 where \(\Sigma_0\) is a depth-zero block and each \(\Sigma_l\) for \(l&gt;0\) is a single positive-depth block. The positive depths are distinct and strictly ordered. The decomposition is unique up to the equivalence relation on supercuspidal data used in the paper.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Write the semisimple algebra \(F^0[\Gamma]\) as a product of field factors. The corresponding primitive idempotents decompose \(V\) into mutually orthogonal summands, paired when necessary by the adjoint involution. The components of \(\Gamma\) on these factors have well-defined depths, and factors with the same positive depth are collected into one block. The nonpositive part is collected into the block \(\Sigma_0\).</p>
+<p>Because the idempotents lie in \(F^0[\Gamma]\), the centralizer of \(\Gamma\), the Moy-Prasad point \(x\), the character \(\phi\), and the finite reductive quotient representation \(\rho\) all decompose over the same product. On each positive-depth block the components of \(\Gamma\) have one common valuation, so the block is single positive-depth. The block \(0\) has depth zero.</p>
+<p>Uniqueness follows from uniqueness of the field-factor decomposition of \(F^0[\Gamma]\) and from the intrinsic depths of the components of \(\Gamma\). Equivalence of data only conjugates the factors and transports the same grouped summands, so the resulting block decomposition is unique up to the paper's equivalence relation.</p>
+      </div>
+    </details>
     
   </div>
 

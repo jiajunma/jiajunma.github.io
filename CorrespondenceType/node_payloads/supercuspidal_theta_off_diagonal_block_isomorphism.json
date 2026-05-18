@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Off-Diagonal Block Isomorphism</h1>\n<p>In the induction step separating the top positive-depth block from the remaining blocks, the map\n\\[\n(X,X')\\mapsto -wX+X'w\n\\]\nfrom off-diagonal Lie algebra layers to the off-diagonal residual oscillator space is an equivariant isomorphism.</p>",
-  "proof_html": "<p>Extraction</p>\n<p>Writing everything in \\(2\\times2\\) block matrices, injectivity follows because the top block semisimple element is invertible at the leading depth while lower blocks have strictly smaller depth. Dimension equality is obtained by multiplication with the top-block \\(w\\), identifying source off-diagonal maps with the residual off-diagonal tensor spaces.</p>",
+  "proof_html": "<p>Writing everything in \\(2\\times2\\) block matrices, injectivity follows because the top block semisimple element is invertible at the leading depth while lower blocks have strictly smaller depth. Dimension equality is obtained by multiplication with the top-block \\(w\\), identifying source off-diagonal maps with the residual off-diagonal tensor spaces.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
@@ -27,6 +27,11 @@
       "id": "supercuspidal_theta.block_oscillator_factorization",
       "title": "Block Oscillator Factorization",
       "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
     }
   ],
   "lean_refs": []

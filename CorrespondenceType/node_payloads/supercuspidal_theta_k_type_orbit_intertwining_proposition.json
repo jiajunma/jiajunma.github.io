@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Orbit Intertwining Proposition for the Main Theorem</h1>\n<p>Let \\(\\Sigma'=\\#_{V,T'}(\\Sigma)\\), and let \\(w\\in V\\otimes_D V'\\) be the element produced by the construction of the target datum. In the generalized lattice model \\(S(B_0)\\), let\n\\[\n\\Omega=K_M\\cdot w+B_0\n\\]\nbe the relevant \\(K\\times K'\\)-orbit of the lattice coset, and let \\(\\eta_M\\) be the product of the source and target \\(K\\)-types with the prescribed contragredient on the target side.</p>\n<p>Then\n\\[\n\\dim \\operatorname{Hom}_{K_M}(\\eta_M,S(B_0)_\\Omega)=1.\n\\]\nThe proposition is proved by induction over the block decomposition of \\(\\Sigma\\). It is the representation-theoretic bridge from the data-level construction to the nonzero theta lift in the main theorem.</p>",
-  "proof_html": null,
+  "proof_html": "<p>The proof is by induction on the number of positive-depth blocks. In the one-block case, Proposition 7.1 computes the same Hom space directly. The stabilizer of the relevant orbit is written in terms of the \\(\\Delta^i\\)-layers and the depth-\\(s\\) Moy-Prasad subgroup. Lemma 6.8 compares the oscillator phase with the source and target characters, and the determinant character contribution is shown to be trivial. The remaining finite-field factor is exactly the depth-zero theta occurrence, so the Hom space has dimension one.</p>\n<p>For the induction step, split off the highest-depth block. The residual oscillator space decomposes into block-diagonal and off-diagonal parts. Lemma 8.5 identifies the off-diagonal Lie layer with the off-diagonal residual symplectic space, and Lemma 8.6 factors the oscillator representation into the top-block, lower-block, and off-diagonal factors.</p>\n<p>Under this factorization the stabilizer representation also decomposes. Frobenius reciprocity reduces the desired Hom space to the tensor product of the Hom space for the top block and the Hom space for the remaining blocks. The first factor has dimension one by Proposition 7.1, and the second has dimension one by the induction hypothesis. Therefore the original Hom space has dimension one.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.generalized_lattice_model",
@@ -20,6 +20,21 @@
       "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
       "title": "Theta Lift Map on Supercuspidal Data",
       "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    },
+    {
+      "id": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "title": "One-Block Orbit K-Type Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_orbit_k_type_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "title": "Off-Diagonal Block Isomorphism",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_block_isomorphism.html"
+    },
+    {
+      "id": "supercuspidal_theta.block_oscillator_factorization",
+      "title": "Block Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html"
     }
   ],
   "dependents": [
@@ -27,6 +42,11 @@
       "id": "supercuspidal_theta.main_supercuspidal_proof_plan",
       "title": "Proof Plan for Main Supercuspidal Theorem",
       "href": "supercuspidal_theta/supercuspidal_theta_main_supercuspidal_proof_plan.html"
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "title": "Main Supercuspidal Theta Correspondence Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_theta_main_theorem.html"
     }
   ],
   "lean_refs": []

@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -234,6 +234,10 @@
         
         <li><a href="epipelagic_theta_residual_moment_map_condition.html">Residual Moment-Map Condition for Epipelagic Data</a></li>
         
+        <li><a href="epipelagic_theta_unrefined_minimal_k_type_correspondence.html">Unrefined Minimal K Type Correspondence</a></li>
+        
+        <li><a href="epipelagic_theta_stable_lift_regular_good.html">Stable Lift Is Regular Semisimple and Good</a></li>
+        
       </ul>
     </div>
   </div>
@@ -248,6 +252,22 @@
 (D_n,C_n),\quad (C_n,D_{n+1}),\quad (C_n,B_n),\quad (A_n,A_n),\quad (A_n,A_{n+1}).
 \]
 The restriction is obtained from the residual moment-map condition together with the invariant-theoretic structure of stable vectors in the corresponding Kac-Vinberg graded pieces.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Assume that an epipelagic representation of \(G\) has an epipelagic theta lift to \(G'\). Proposition 7.1.1 first converts this representation-theoretic occurrence into geometry: there is a residual vector
+\[
+\bar w\in B_{-1/(2m)}/B_{-1/(2m)+}
+\]
+such that the two residual moment maps give the stable functionals of the two epipelagic data.</p>
+<p>Choose a lift \(w\) of \(\bar w\). Lemma 7.3.1 says that any lift of a stable epipelagic functional is regular semisimple and good of the required depth. Hence \(M(w)\) and \(M'(w)\) are both regular semisimple. The existence of the theta lift therefore implies the purely invariant-theoretic condition:
+\[
+\text{there is } w\in W \text{ such that } M(w) \text{ and } M'(w) \text{ are both regular semisimple.}
+\]</p>
+<p>The remaining argument is the matrix calculation in the paper. After base change to an algebraic closure, one fixes split maximal tori and examines the invariant polynomials detecting regular semisimplicity. Appendix 2 constructs an invariant subspace \(A\subset W\) on which the two moment maps become explicit diagonal-coordinate maps. Inspecting the resulting characteristic-polynomial coefficients shows that both regularity discriminants can be nonzero only in the five listed type pairs. If the pair is outside the list, one of the discriminants vanishes identically on the image of the moment-map pair, contradicting regular semisimplicity. Reversing the two groups gives the stated "up to order" formulation.</p>
+      </div>
+    </details>
     
   </div>
 

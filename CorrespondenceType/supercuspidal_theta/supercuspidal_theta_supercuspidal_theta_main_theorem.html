@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -236,6 +236,12 @@
         
         <li><a href="supercuspidal_theta_first_occurrence_index.html">First Occurrence Index</a></li>
         
+        <li><a href="supercuspidal_theta_k_type_orbit_intertwining_proposition.html">Orbit Intertwining Proposition for the Main Theorem</a></li>
+        
+        <li><a href="supercuspidal_theta_refined_k_type_occurrence_proposition.html">Refined K-Type Occurrence Proposition</a></li>
+        
+        <li><a href="supercuspidal_theta_covering_data_exhaustion.html">Exhaustion for Covering-Group Supercuspidal Data</a></li>
+        
       </ul>
     </div>
   </div>
@@ -260,6 +266,19 @@ for a target space \(V'\in T'\), then the first-occurrence local theta lift sati
 \#_{V,T'}([\Sigma]).
 \]
 Thus the first-occurrence theta correspondence between tame supercuspidal representations is completely described by the data-level map built from moment maps and finite-field theta lifts.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>For the forward direction, start with a covering datum \(\widetilde\Sigma\). The construction of \(\#_{V,T'}\) decomposes \(\Sigma\) into single blocks, transfers each positive-depth block by the moment-map construction, transfers the depth-zero block by finite-field theta correspondence, and then takes the direct sum. This gives a target covering datum \(\widetilde\Sigma'\) and an orbit \(\Omega\) in the generalized lattice model.</p>
+<p>Proposition 8.1 computes the relevant \(K\times K'\)-intertwining space in the oscillator representation:
+\[
+\dim\operatorname{Hom}_{K_M}(\eta_M,S(B_0)_\Omega)=1.
+\]
+Hence the oscillator representation contains the product of the source \(K\)-type and the contragredient target \(K'\)-type. By compact induction, the theta lift of \(\widetilde\pi_{\widetilde\Sigma}\) has a nonzero quotient containing the \(K'\)-type attached to \(\widetilde\Sigma'\). Supercuspidality and irreducibility at first occurrence identify this quotient with \(\widetilde\pi_{\widetilde\Sigma'}\).</p>
+<p>For the converse, assume that \(\widetilde\pi\) and its theta lift \(\widetilde\pi'\) are both supercuspidal. The exhaustion theorem for covering data writes \(\widetilde\pi\) as \(\widetilde\pi_{\widetilde\Sigma}\) for some covering datum. Proposition 9.1 then applies to any supercuspidal target occurrence: after replacing the source datum by an equivalent one, the target contains the \(K'\)-type datum constructed by \(\#_{V,T'}\). The Hakim-Murnaghan equivalence theorem for the corresponding Yu data identifies the target representation with the representation attached to that target covering datum. Therefore the target datum lies in \(\#_{V,T'}([\Sigma])\), as claimed.</p>
+      </div>
+    </details>
     
   </div>
 

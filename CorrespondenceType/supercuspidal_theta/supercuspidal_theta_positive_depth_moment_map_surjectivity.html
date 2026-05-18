@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -256,6 +256,31 @@ Then for every \(t&gt;-s\),
 M(w+B_t)=M(w)+\mathbf g_{x,s+t}.
 \]</p>
 <p>This is the local geometric input behind the positive-depth block lift: it says that once a moment-map point has the right leading term, all deeper perturbations in the Moy-Prasad lattice are reached by perturbing \(w\) inside the oscillator lattice model.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>The inclusion
+\[
+M(w+B_t)\subseteq M(w)+\mathbf g_{x,s+t}
+\]
+is the direct lattice calculation: if \(b\in B_t\), then \(wb^\ast+bw^\ast+bb^\ast\) has Moy-Prasad depth at least \(s+t\).</p>
+<p>For the opposite inclusion, fix an element \(Z\in M(w)+\mathbf g_{x,s+t}\). The key infinitesimal claim is that the linearized moment-map operator on the graded piece
+\[
+B_t/B_{t+}\to \mathbf g_{x,s+t}/\mathbf g_{x,s+t+}
+\]
+is surjective. The paper proves this by writing the linearization as
+\[
+X\mapsto \Gamma_LX+X^\ast\Gamma_L.
+\]
+On the orthogonal complement of the centralizer of \(\Gamma\), this is the commutator map with \(\Gamma\), which is an isomorphism on the relevant graded quotient by the good-element property. On the centralizer part, the same map is multiplication by \(2\Gamma_L\) after taking the correct involution eigenspace; the large-residue-characteristic hypotheses make this invertible.</p>
+<p>Starting with \(w_1=w\) and \(t_1=t\), use the surjectivity claim to choose \(b_i\in B_{t_i}\) so that
+\[
+M(w_i+b_i)\in Z+\mathbf g_{x,s+t_i+}.
+\]
+Let \(w_{i+1}=w_i+b_i\), and let \(t_{i+1}\) be the next jump of the Moy-Prasad lattice after \(t_i\). Since the jump set is discrete and \(t_i\to\infty\), the sequence \(w_i\) converges to some \(w_\infty\in w+B_t\). Continuity of the moment map gives \(M(w_\infty)=Z\). This proves the required equality.</p>
+      </div>
+    </details>
     
   </div>
 

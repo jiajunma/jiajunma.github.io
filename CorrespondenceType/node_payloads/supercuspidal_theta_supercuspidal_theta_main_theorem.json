@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Main Supercuspidal Theta Correspondence Theorem</h1>\n<p>Let \\(\\Sigma\\) be a supercuspidal datum for \\(G=U(V)\\), and equip it with the canonical splitting over its compact subgroup in the dual pair, giving a covering datum \\(\\widetilde\\Sigma\\). If\n\\[\n[\\Sigma']=\\#_{V,T'}([\\Sigma])\n\\]\nfor a target space \\(V'\\in T'\\), then the first-occurrence local theta lift satisfies\n\\[\n\\theta_{V,V'}(\\widetilde\\pi_{\\widetilde\\Sigma})\n=\n\\widetilde\\pi_{\\widetilde\\Sigma'}.\n\\]</p>\n<p>Conversely, if \\(\\widetilde\\pi\\) and its theta lift \\(\\widetilde\\pi'\\) are both supercuspidal, then \\(\\widetilde\\pi\\) is attached to some covering datum \\(\\widetilde\\Sigma\\), and \\(\\widetilde\\pi'\\) is attached to a covering datum whose underlying ordinary datum lies in\n\\[\n\\#_{V,T'}([\\Sigma]).\n\\]\nThus the first-occurrence theta correspondence between tame supercuspidal representations is completely described by the data-level map built from moment maps and finite-field theta lifts.</p>",
-  "proof_html": null,
+  "proof_html": "<p>For the forward direction, start with a covering datum \\(\\widetilde\\Sigma\\). The construction of \\(\\#_{V,T'}\\) decomposes \\(\\Sigma\\) into single blocks, transfers each positive-depth block by the moment-map construction, transfers the depth-zero block by finite-field theta correspondence, and then takes the direct sum. This gives a target covering datum \\(\\widetilde\\Sigma'\\) and an orbit \\(\\Omega\\) in the generalized lattice model.</p>\n<p>Proposition 8.1 computes the relevant \\(K\\times K'\\)-intertwining space in the oscillator representation:\n\\[\n\\dim\\operatorname{Hom}_{K_M}(\\eta_M,S(B_0)_\\Omega)=1.\n\\]\nHence the oscillator representation contains the product of the source \\(K\\)-type and the contragredient target \\(K'\\)-type. By compact induction, the theta lift of \\(\\widetilde\\pi_{\\widetilde\\Sigma}\\) has a nonzero quotient containing the \\(K'\\)-type attached to \\(\\widetilde\\Sigma'\\). Supercuspidality and irreducibility at first occurrence identify this quotient with \\(\\widetilde\\pi_{\\widetilde\\Sigma'}\\).</p>\n<p>For the converse, assume that \\(\\widetilde\\pi\\) and its theta lift \\(\\widetilde\\pi'\\) are both supercuspidal. The exhaustion theorem for covering data writes \\(\\widetilde\\pi\\) as \\(\\widetilde\\pi_{\\widetilde\\Sigma}\\) for some covering datum. Proposition 9.1 then applies to any supercuspidal target occurrence: after replacing the source datum by an equivalent one, the target contains the \\(K'\\)-type datum constructed by \\(\\#_{V,T'}\\). The Hakim-Murnaghan equivalence theorem for the corresponding Yu data identifies the target representation with the representation attached to that target covering datum. Therefore the target datum lies in \\(\\#_{V,T'}([\\Sigma])\\), as claimed.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.covering_supercuspidal_datum",
@@ -25,6 +25,21 @@
       "id": "supercuspidal_theta.first_occurrence_index",
       "title": "First Occurrence Index",
       "href": "supercuspidal_theta/supercuspidal_theta_first_occurrence_index.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "title": "Refined K-Type Occurrence Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_refined_k_type_occurrence_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_data_exhaustion",
+      "title": "Exhaustion for Covering-Group Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
     }
   ],
   "dependents": [],

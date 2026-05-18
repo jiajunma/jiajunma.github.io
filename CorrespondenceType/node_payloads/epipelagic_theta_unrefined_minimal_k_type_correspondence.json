@@ -9,7 +9,7 @@
     "epipelagic_theta"
   ],
   "body_html": "<h1>Unrefined Minimal K Type Correspondence</h1>\n<p>If two epipelagic representations correspond under theta, then there exists a residual vector \\(\\bar w\\) in the quotient\n\\[\nB_{-1/(2m)}/B_{-1/(2m)+}\n\\]\nsuch that the source functional and target functional are obtained from \\(\\bar w\\) by the two residual moment maps, with the target sign convention of the paper.</p>",
-  "proof_html": "<p>Extraction</p>\n<p>The proof applies Pan's minimal \\(K\\)-type result to the oscillator representation, producing building points \\(y,y'\\) and a vector \\(w\\) whose moment maps give the unrefined minimal \\(K\\)-types of the two representations. Epipelagic data equivalence then conjugates \\(y,y'\\) back to \\(x,x'\\), leaving the residual moment-map condition.</p>",
+  "proof_html": "<p>The proof applies Pan's minimal \\(K\\)-type result to the oscillator representation, producing building points \\(y,y'\\) and a vector \\(w\\) whose moment maps give the unrefined minimal \\(K\\)-types of the two representations. Epipelagic data equivalence then conjugates \\(y,y'\\) back to \\(x,x'\\), leaving the residual moment-map condition.</p>",
   "deps": [
     {
       "id": "epipelagic_theta.residual_moment_map_condition",
@@ -24,9 +24,19 @@
   ],
   "dependents": [
     {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
+    },
+    {
       "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
       "title": "Proof Plan for the Main Epipelagic Theorem",
       "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_proof_plan.html"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "title": "Main Epipelagic Theta Correspondence Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_theorem.html"
     },
     {
       "id": "epipelagic_theta.residual_jump_parity",

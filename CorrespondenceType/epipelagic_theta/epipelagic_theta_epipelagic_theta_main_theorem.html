@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -234,6 +234,14 @@
         
         <li><a href="epipelagic_theta_residual_moment_map_condition.html">Residual Moment-Map Condition for Epipelagic Data</a></li>
         
+        <li><a href="epipelagic_theta_unrefined_minimal_k_type_correspondence.html">Unrefined Minimal K Type Correspondence</a></li>
+        
+        <li><a href="epipelagic_theta_residual_fiber_stabilizer.html">Residual Moment Fiber and Stabilizer Homomorphism</a></li>
+        
+        <li><a href="epipelagic_theta_residual_exact_sequence_splitting.html">Residual Exact Sequence Splitting</a></li>
+        
+        <li><a href="epipelagic_theta_epipelagic_data_equivalence.html">Equivalence of Epipelagic Data</a></li>
+        
       </ul>
     </div>
   </div>
@@ -249,6 +257,35 @@
 \]
 where \(\alpha:S_{\lambda'}\to S_\lambda\) is the stabilizer homomorphism determined by the geometry of the residual moment-map fiber and \(\chi^\ast\) is the contragredient character.</p>
 <p>Conversely, if two epipelagic representations correspond under theta, then the residual moment-map condition holds and the target character is \(\chi^\ast ∘ \alpha\). In the exceptional case, the same formula holds only for the half of the characters satisfying the additional stabilizer-triviality condition.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>First suppose the theta lift is nonzero. Pan's minimal \(K\)-type result, applied to the oscillator representation, gives building points and a vector whose two moment maps are the unrefined minimal \(K\)-types of the source and target representations. Epipelagic data equivalence lets one conjugate these data back to the prescribed points \(x\) and \(x'\). Thus the residual moment-map condition holds.</p>
+<p>Now assume the residual moment-map condition. Put
+\[
+B=B_{-1/(2m)},\qquad A=B_{1/(2m)}
+\]
+for the tensor-product lattice function. Section 8 forms the exact sequence
+\[
+0\to Y\to W\to X\to 0
+\]
+of residual symplectic spaces. Lemma 8.2.1 splits this sequence as a module for the finite reductive quotient \(J=G_x\times G'_{x'}\). Under this splitting, the lattice model subspace supported on \(B\) identifies with the function space \(C[X]\).</p>
+<p>The source and target epipelagic minimal \(K\)-types restrict this function space to the fiber
+\[
+X_{\lambda,\lambda'}=\{\bar w\in X:M(\bar w)=\lambda,\;M'(\bar w)=-\lambda'\}.
+\]
+Lemma 8.1.1 describes this fiber as a single \(S_\lambda\)-orbit and describes the stabilizer of a chosen \(\bar w\). Outside the exceptional case, the stabilizer is exactly the graph of the homomorphism
+\[
+\alpha:S_{\lambda'}\to S_\lambda.
+\]
+Therefore the character \(\chi\boxtimes \chi'\) occurs in \(C[X_{\lambda,\lambda'}]\) precisely when
+\[
+\chi'=\chi^\ast\circ\alpha.
+\]</p>
+<p>In the exceptional unitary case the same orbit calculation leaves an extra stabilizer subgroup. The character \(\chi\) contributes only when it is trivial on that subgroup, which is exactly the additional condition stated in the theorem. Finally, compact induction from the epipelagic \(K\)-types and Howe duality identify the nonzero theta quotient with the target epipelagic representation with the character just computed.</p>
+      </div>
+    </details>
     
   </div>
 

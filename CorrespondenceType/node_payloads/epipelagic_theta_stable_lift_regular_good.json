@@ -9,7 +9,7 @@
     "epipelagic_theta"
   ],
   "body_html": "<h1>Stable Lift Is Regular Semisimple and Good</h1>\n<p>Let \\(\\lambda\\) be a stable vector in the epipelagic Moy-Prasad graded piece, and let \\(\\gamma\\) be any lift of \\(\\lambda\\) to the corresponding negative-depth lattice. Then \\(\\gamma\\) is regular semisimple, and \\(\\gamma\\) is a good element of depth \\(-1/m\\).</p>",
-  "proof_html": "<p>Extraction</p>\n<p>The proof transports \\(\\lambda\\) to the Kac-Vinberg eigenspace at the hyperspecial base point. Stability implies regular semisimplicity after reduction. Evaluating invariant polynomials before and after the tame base-change scaling shows the lift is regular. Root evaluations are then read off from the scaled eigenspace, giving exactly valuation \\(-1/m\\).</p>",
+  "proof_html": "<p>The proof transports \\(\\lambda\\) to the Kac-Vinberg eigenspace at the hyperspecial base point. Stability implies regular semisimplicity after reduction. Evaluating invariant polynomials before and after the tame base-change scaling shows the lift is regular. Root evaluations are then read off from the scaled eigenspace, giving exactly valuation \\(-1/m\\).</p>",
   "deps": [
     {
       "id": "epipelagic_theta.kac_vinberg_epipelagic_grading",
@@ -17,6 +17,12 @@
       "href": "epipelagic_theta/epipelagic_theta_kac_vinberg_epipelagic_grading.html"
     }
   ],
-  "dependents": [],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
+    }
+  ],
   "lean_refs": []
 }

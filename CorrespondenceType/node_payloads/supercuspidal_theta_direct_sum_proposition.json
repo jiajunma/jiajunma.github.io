@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Direct Sums Reconstruct Supercuspidal Data</h1>\n<p>Let \\(\\Sigma_l\\) be single-block supercuspidal data with one depth-zero block and positive-depth blocks of pairwise distinct depths. Their direct sum\n\\[\n\\Sigma=\\bigoplus_l \\Sigma_l\n\\]\nis a supercuspidal datum. Moreover, direct sum reconstruction is inverse to block decomposition on equivalence classes of data.</p>",
-  "proof_html": null,
+  "proof_html": "<p>Take the orthogonal direct sum of the underlying hermitian spaces and define \\(x\\), \\(\\Gamma\\), and \\(\\phi\\) componentwise. Since the positive depths are pairwise distinct, the Moy-Prasad filtration separates the summands: no off-diagonal term has the same leading depth as two different blocks. The centralizer of \\(\\Gamma\\) is therefore the product of the block centralizers.</p>\n<p>The finite reductive quotient representation is the exterior tensor product of the quotient representations on the blocks. The defining Yu-data conditions are checked block by block: the positive-depth blocks supply the required good elements at their depths, and the block \\(\\Sigma_0\\) supplies the depth-zero cuspidal representation.</p>\n<p>Applying block decomposition to the direct sum recovers the original blocks, because the depths and the primitive idempotents of \\(F^0[\\Gamma]\\) are exactly the ones used to form the sum. Thus direct sum reconstruction is inverse to block decomposition on equivalence classes.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.direct_sum_supercuspidal_data",

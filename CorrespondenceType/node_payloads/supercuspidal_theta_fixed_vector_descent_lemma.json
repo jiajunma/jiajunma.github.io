@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Fixed Vector Descent Lemma</h1>\n<p>For a target point \\(x'\\) and a positive integer \\(j\\), the \\(G_{x,j/m}\\)-fixed part of the support subspace attached to \\(B_{x,x',j/(2m)}\\) is contained in a sum of support subspaces at level \\((j+1)/(2m)\\) over target building points with jumps in \\((1/(2m))\\mathbb Z\\).</p>",
-  "proof_html": "<p>Extraction</p>\n<p>Decompose the support space into cosets \\(w+B_{x,x',0}\\). If a coset contributes \\(G_{x,j/m+}\\)-fixed vectors, Lemma 2.4 forces \\(M(w)\\) into the deeper source Lie lattice. The module function \\(N_t=(w+B_0)L_{x,t+s}\\) satisfies the hypotheses of Lemma B.2, producing a self-dual target lattice function \\(L_y\\) that contains the coset at the next support level.</p>",
+  "proof_html": "<p>Decompose the support space into cosets \\(w+B_{x,x',0}\\). If a coset contributes \\(G_{x,j/m+}\\)-fixed vectors, Lemma 2.4 forces \\(M(w)\\) into the deeper source Lie lattice. The module function \\(N_t=(w+B_0)L_{x,t+s}\\) satisfies the hypotheses of Lemma B.2, producing a self-dual target lattice function \\(L_y\\) that contains the coset at the next support level.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.module_function_self_dual_envelope",
@@ -18,6 +18,11 @@
     }
   ],
   "dependents": [
+    {
+      "id": "supercuspidal_theta.depth_preservation_building_sum",
+      "title": "Building Sum Formula for Depth Preservation",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_building_sum.html"
+    },
     {
       "id": "supercuspidal_theta.depth_preservation_proof_plan",
       "title": "Proof Plan for Depth Preservation",

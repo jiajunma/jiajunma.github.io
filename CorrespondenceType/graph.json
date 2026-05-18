@@ -47,6 +47,7 @@
       ],
       "used_by": [
         "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.epipelagic_theta_main_theorem",
         "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ]
     },
@@ -121,7 +122,9 @@
       "topic": "epipelagic_theta",
       "uses": [
         "epipelagic_theta.epipelagic_datum",
-        "epipelagic_theta.residual_moment_map_condition"
+        "epipelagic_theta.residual_moment_map_condition",
+        "epipelagic_theta.stable_lift_regular_good",
+        "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ],
       "used_by": [
         "epipelagic_theta.invariant_subspace_rank_lemma"
@@ -159,8 +162,12 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
+        "epipelagic_theta.epipelagic_data_equivalence",
         "epipelagic_theta.epipelagic_datum",
-        "epipelagic_theta.residual_moment_map_condition"
+        "epipelagic_theta.residual_exact_sequence_splitting",
+        "epipelagic_theta.residual_fiber_stabilizer",
+        "epipelagic_theta.residual_moment_map_condition",
+        "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ]
     },
     {
@@ -329,7 +336,8 @@
         "epipelagic_theta.tensor_product_lattice_function"
       ],
       "used_by": [
-        "epipelagic_theta.epipelagic_theta_main_proof_plan"
+        "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.epipelagic_theta_main_theorem"
       ]
     },
     {
@@ -348,7 +356,8 @@
         "epipelagic_theta.residual_moment_map_condition"
       ],
       "used_by": [
-        "epipelagic_theta.epipelagic_theta_main_proof_plan"
+        "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.epipelagic_theta_main_theorem"
       ]
     },
     {
@@ -440,6 +449,9 @@
       "topic": "epipelagic_theta",
       "uses": [
         "epipelagic_theta.kac_vinberg_epipelagic_grading"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_rank_restriction"
       ]
     },
     {
@@ -497,7 +509,9 @@
         "epipelagic_theta.residual_moment_map_condition"
       ],
       "used_by": [
+        "epipelagic_theta.epipelagic_rank_restriction",
         "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.epipelagic_theta_main_theorem",
         "epipelagic_theta.residual_jump_parity"
       ]
     },
@@ -859,6 +873,7 @@
       ],
       "used_by": [
         "supercuspidal_theta.exhaustion_proof_plan",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
         "supercuspidal_theta.orbit_intertwining_proof_plan"
       ]
     },
@@ -878,7 +893,8 @@
         "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
       ],
       "used_by": [
-        "supercuspidal_theta.main_supercuspidal_proof_plan"
+        "supercuspidal_theta.main_supercuspidal_proof_plan",
+        "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
     },
     {
@@ -952,7 +968,10 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.generalized_lattice_model"
+        "supercuspidal_theta.fixed_vector_descent_lemma",
+        "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.lattice_fixed_vector_model",
+        "supercuspidal_theta.module_function_self_dual_envelope"
       ],
       "used_by": [
         "supercuspidal_theta.occurrence_vector_choice",
@@ -1180,6 +1199,7 @@
         "supercuspidal_theta.module_function_self_dual_envelope"
       ],
       "used_by": [
+        "supercuspidal_theta.depth_preservation_building_sum",
         "supercuspidal_theta.depth_preservation_proof_plan"
       ]
     },
@@ -1290,11 +1310,15 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "supercuspidal_theta.block_oscillator_factorization",
         "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.off_diagonal_block_isomorphism",
+        "supercuspidal_theta.one_block_orbit_k_type_proposition",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
       ],
       "used_by": [
-        "supercuspidal_theta.main_supercuspidal_proof_plan"
+        "supercuspidal_theta.main_supercuspidal_proof_plan",
+        "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
     },
     {
@@ -1331,6 +1355,7 @@
         "supercuspidal_theta.generalized_lattice_model"
       ],
       "used_by": [
+        "supercuspidal_theta.depth_preservation_building_sum",
         "supercuspidal_theta.depth_preservation_proof_plan",
         "supercuspidal_theta.module_function_self_dual_envelope"
       ]
@@ -1387,6 +1412,7 @@
         "supercuspidal_theta.lattice_fixed_vector_model"
       ],
       "used_by": [
+        "supercuspidal_theta.depth_preservation_building_sum",
         "supercuspidal_theta.fixed_vector_descent_lemma"
       ]
     },
@@ -1426,7 +1452,8 @@
         "supercuspidal_theta.single_positive_depth_theta_lift"
       ],
       "used_by": [
-        "supercuspidal_theta.block_oscillator_factorization"
+        "supercuspidal_theta.block_oscillator_factorization",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition"
       ]
     },
     {
@@ -1447,6 +1474,7 @@
         "supercuspidal_theta.triviality_of_bc_character"
       ],
       "used_by": [
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
         "supercuspidal_theta.orbit_intertwining_proof_plan",
         "supercuspidal_theta.stabilizer_induced_module_calculation"
       ]
@@ -1545,7 +1573,8 @@
       ],
       "used_by": [
         "supercuspidal_theta.main_supercuspidal_proof_plan",
-        "supercuspidal_theta.occurrence_vector_choice"
+        "supercuspidal_theta.occurrence_vector_choice",
+        "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
     },
     {
@@ -1735,8 +1764,11 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "supercuspidal_theta.covering_data_exhaustion",
         "supercuspidal_theta.covering_supercuspidal_datum",
         "supercuspidal_theta.first_occurrence_index",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
       ]
     },
@@ -1886,6 +1918,14 @@
       "to": "epipelagic_theta.residual_moment_map_condition"
     },
     {
+      "from": "epipelagic_theta.epipelagic_rank_restriction",
+      "to": "epipelagic_theta.stable_lift_regular_good"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_rank_restriction",
+      "to": "epipelagic_theta.unrefined_minimal_k_type_correspondence"
+    },
+    {
       "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
       "to": "epipelagic_theta.epipelagic_data_equivalence"
     },
@@ -1903,11 +1943,27 @@
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.epipelagic_data_equivalence"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
       "to": "epipelagic_theta.epipelagic_datum"
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.residual_exact_sequence_splitting"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.residual_fiber_stabilizer"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
       "to": "epipelagic_theta.residual_moment_map_condition"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.unrefined_minimal_k_type_correspondence"
     },
     {
       "from": "epipelagic_theta.invariant_subspace_rank_lemma",
@@ -2147,7 +2203,19 @@
     },
     {
       "from": "supercuspidal_theta.depth_preservation_building_sum",
+      "to": "supercuspidal_theta.fixed_vector_descent_lemma"
+    },
+    {
+      "from": "supercuspidal_theta.depth_preservation_building_sum",
       "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.depth_preservation_building_sum",
+      "to": "supercuspidal_theta.lattice_fixed_vector_model"
+    },
+    {
+      "from": "supercuspidal_theta.depth_preservation_building_sum",
+      "to": "supercuspidal_theta.module_function_self_dual_envelope"
     },
     {
       "from": "supercuspidal_theta.depth_preservation_proof_plan",
@@ -2247,7 +2315,19 @@
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "supercuspidal_theta.block_oscillator_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
       "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "supercuspidal_theta.off_diagonal_block_isomorphism"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "supercuspidal_theta.one_block_orbit_k_type_proposition"
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
@@ -2407,11 +2487,23 @@
     },
     {
       "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "to": "supercuspidal_theta.covering_data_exhaustion"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
       "to": "supercuspidal_theta.covering_supercuspidal_datum"
     },
     {
       "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
       "to": "supercuspidal_theta.first_occurrence_index"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "to": "supercuspidal_theta.refined_k_type_occurrence_proposition"
     },
     {
       "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",

@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -234,6 +234,12 @@
         
         <li><a href="supercuspidal_theta_theta_lift_map_supercuspidal_data.html">Theta Lift Map on Supercuspidal Data</a></li>
         
+        <li><a href="supercuspidal_theta_one_block_orbit_k_type_proposition.html">One-Block Orbit K-Type Proposition</a></li>
+        
+        <li><a href="supercuspidal_theta_off_diagonal_block_isomorphism.html">Off-Diagonal Block Isomorphism</a></li>
+        
+        <li><a href="supercuspidal_theta_block_oscillator_factorization.html">Block Oscillator Factorization</a></li>
+        
       </ul>
     </div>
   </div>
@@ -254,6 +260,15 @@ be the relevant \(K\times K'\)-orbit of the lattice coset, and let \(\eta_M\) be
 \]
 The proposition is proved by induction over the block decomposition of \(\Sigma\). It is the representation-theoretic bridge from the data-level construction to the nonzero theta lift in the main theorem.</p>
     
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>The proof is by induction on the number of positive-depth blocks. In the one-block case, Proposition 7.1 computes the same Hom space directly. The stabilizer of the relevant orbit is written in terms of the \(\Delta^i\)-layers and the depth-\(s\) Moy-Prasad subgroup. Lemma 6.8 compares the oscillator phase with the source and target characters, and the determinant character contribution is shown to be trivial. The remaining finite-field factor is exactly the depth-zero theta occurrence, so the Hom space has dimension one.</p>
+<p>For the induction step, split off the highest-depth block. The residual oscillator space decomposes into block-diagonal and off-diagonal parts. Lemma 8.5 identifies the off-diagonal Lie layer with the off-diagonal residual symplectic space, and Lemma 8.6 factors the oscillator representation into the top-block, lower-block, and off-diagonal factors.</p>
+<p>Under this factorization the stabilizer representation also decomposes. Frobenius reciprocity reduces the desired Hom space to the tensor product of the Hom space for the top block and the Hom space for the remaining blocks. The first factor has dimension one by Proposition 7.1, and the second has dimension one by the induction hypothesis. Therefore the original Hom space has dimension one.</p>
+      </div>
+    </details>
+    
   </div>
 
   
@@ -262,6 +277,8 @@ The proposition is proved by induction over the block decomposition of \(\Sigma\
     <ul>
       
       <li><a href="supercuspidal_theta_main_supercuspidal_proof_plan.html">Proof Plan for Main Supercuspidal Theorem</a></li>
+      
+      <li><a href="supercuspidal_theta_supercuspidal_theta_main_theorem.html">Main Supercuspidal Theta Correspondence Theorem</a></li>
       
     </ul>
   </section>

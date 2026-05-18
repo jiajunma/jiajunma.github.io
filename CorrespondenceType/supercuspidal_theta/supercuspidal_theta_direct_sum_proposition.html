@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -248,6 +248,15 @@
 \Sigma=\bigoplus_l \Sigma_l
 \]
 is a supercuspidal datum. Moreover, direct sum reconstruction is inverse to block decomposition on equivalence classes of data.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Take the orthogonal direct sum of the underlying hermitian spaces and define \(x\), \(\Gamma\), and \(\phi\) componentwise. Since the positive depths are pairwise distinct, the Moy-Prasad filtration separates the summands: no off-diagonal term has the same leading depth as two different blocks. The centralizer of \(\Gamma\) is therefore the product of the block centralizers.</p>
+<p>The finite reductive quotient representation is the exterior tensor product of the quotient representations on the blocks. The defining Yu-data conditions are checked block by block: the positive-depth blocks supply the required good elements at their depths, and the block \(\Sigma_0\) supplies the depth-zero cuspidal representation.</p>
+<p>Applying block decomposition to the direct sum recovers the original blocks, because the depths and the primitive idempotents of \(F^0[\Gamma]\) are exactly the ones used to form the sum. Thus direct sum reconstruction is inverse to block decomposition on equivalence classes.</p>
+      </div>
+    </details>
     
   </div>
 

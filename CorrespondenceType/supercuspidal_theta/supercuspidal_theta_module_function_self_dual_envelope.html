@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -249,8 +249,7 @@ N_t\subseteq L_{t+1/(2m)}.
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Extraction</p>
-<p>The proof fixes a good lattice \(R\) containing \(N_0\), defines \(L\) on a fundamental interval by combining \(N\) with \(R^\ast\) on one side and \(N^\ast\cap R\) on the other, and checks self-duality from the construction. The pairing estimate gives the needed inclusion at the midpoint.</p>
+        <p>The proof fixes a good lattice \(R\) containing \(N_0\), defines \(L\) on a fundamental interval by combining \(N\) with \(R^\ast\) on one side and \(N^\ast\cap R\) on the other, and checks self-duality from the construction. The pairing estimate gives the needed inclusion at the midpoint.</p>
       </div>
     </details>
     
@@ -260,6 +259,8 @@ N_t\subseteq L_{t+1/(2m)}.
   <section class="deps deps-used-by">
     <h2>Used by</h2>
     <ul>
+      
+      <li><a href="supercuspidal_theta_depth_preservation_building_sum.html">Building Sum Formula for Depth Preservation</a></li>
       
       <li><a href="supercuspidal_theta_fixed_vector_descent_lemma.html">Fixed Vector Descent Lemma</a></li>
       

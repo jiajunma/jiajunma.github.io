@@ -9,12 +9,27 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Building Sum Formula for Depth Preservation</h1>\n<p>Let \\(x\\in B(G)\\) be a rational building point and suppose the jumps of its lattice function lie in \\((1/m)\\mathbb Z\\). For \\(r\\in(1/m)\\mathbb Z\\), the \\(G_{x,r+}\\)-fixed vectors in the oscillator representation can be written as the sum\n\\[\nS^{G_{x,r+}}=\n\\sum_{y\\in B(G')_{2m}} S_{B_{x,y,r/2}},\n\\]\nwhere \\(B(G')_{2m}\\) denotes target building points with jumps in \\((1/(2m))\\mathbb Z\\).</p>\n<p>This formula gives a short proof of depth preservation: if a theta lift is nonzero, then the depth of the target representation is at most the depth of the source; applying the same argument in the opposite direction gives equality.</p>",
-  "proof_html": null,
+  "proof_html": "<p>The inclusion from right to left is immediate: each summand \\(S_{B_{x,y,r/2}}\\) is fixed by \\(G_{x,r+}\\) by the lattice-model action formula.</p>\n<p>For the reverse inclusion, write \\(r=k/m\\). Fix a target point \\(x'\\in B(G')_{2m}\\). The oscillator model is the union of subspaces\n\\[\nS_{B_{x,x',j/(2m)}}\\qquad (j\\ge k).\n\\]\nLemma B.3 is the descent step: if a vector in \\(S_{B_{x,x',j/(2m)}}\\) is \\(G_{x,r+}\\)-fixed, then it is contained in a sum of spaces\n\\[\nS_{B_{x,y,(j-1)/(2m)}}\n\\]\nas \\(y\\) ranges over \\(B(G')_{2m}\\). The proof of Lemma B.3 uses the character formula for the action of \\(G_{x,r}\\) on a coset \\(w+B_{x,x',0}\\). Fixedness forces \\(M(w)\\in\\mathbf g_{x,r+}\\). From this condition one forms an \\(o_D\\)-module function \\(N_t=(w+B_{x,x',0})L_{x,t+r/2}\\) on \\(V'\\), and Lemma B.2 embeds it in a self-dual lattice function \\(L_y'\\). This gives the desired containment in \\(B_{x,y,(j-1)/(2m)}\\).</p>\n<p>Iterating Lemma B.3 lowers \\(j\\) to \\(k\\), so every \\(G_{x,r+}\\)-fixed vector lies in the displayed sum over \\(y\\). This proves the building-sum formula. If \\(\\pi\\) has depth \\(r\\) and its theta lift is nonzero, an intertwining map from the oscillator representation sends some \\(S_{B_{x,y,r/2}}\\) nontrivially to the target representation; hence the target has \\(G'_{y,r+}\\)-fixed vectors and has depth at most \\(r\\). Applying the same argument with \\(G\\) and \\(G'\\) interchanged gives the opposite inequality.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.generalized_lattice_model",
       "title": "Generalized Lattice Model",
       "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    },
+    {
+      "id": "supercuspidal_theta.lattice_fixed_vector_model",
+      "title": "Lattice Fixed Vector Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_lattice_fixed_vector_model.html"
+    },
+    {
+      "id": "supercuspidal_theta.module_function_self_dual_envelope",
+      "title": "Self-Dual Envelope of a Module Function",
+      "href": "supercuspidal_theta/supercuspidal_theta_module_function_self_dual_envelope.html"
+    },
+    {
+      "id": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "title": "Fixed Vector Descent Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_fixed_vector_descent_lemma.html"
     }
   ],
   "dependents": [

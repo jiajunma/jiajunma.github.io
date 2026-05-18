@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Self-Dual Envelope of a Module Function</h1>\n<p>Let \\(N\\) be an \\(o_D\\)-module function with jumps in \\((1/(2m))\\mathbb Z\\) and satisfying the required almost-self-dual pairing estimate. Then there exists a self-dual lattice function \\(L\\) with jumps in \\((1/(2m))\\mathbb Z\\) such that\n\\[\nN_t\\subseteq L_{t+1/(2m)}.\n\\]</p>",
-  "proof_html": "<p>Extraction</p>\n<p>The proof fixes a good lattice \\(R\\) containing \\(N_0\\), defines \\(L\\) on a fundamental interval by combining \\(N\\) with \\(R^\\ast\\) on one side and \\(N^\\ast\\cap R\\) on the other, and checks self-duality from the construction. The pairing estimate gives the needed inclusion at the midpoint.</p>",
+  "proof_html": "<p>The proof fixes a good lattice \\(R\\) containing \\(N_0\\), defines \\(L\\) on a fundamental interval by combining \\(N\\) with \\(R^\\ast\\) on one side and \\(N^\\ast\\cap R\\) on the other, and checks self-duality from the construction. The pairing estimate gives the needed inclusion at the midpoint.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.lattice_fixed_vector_model",
@@ -18,6 +18,11 @@
     }
   ],
   "dependents": [
+    {
+      "id": "supercuspidal_theta.depth_preservation_building_sum",
+      "title": "Building Sum Formula for Depth Preservation",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_building_sum.html"
+    },
     {
       "id": "supercuspidal_theta.fixed_vector_descent_lemma",
       "title": "Fixed Vector Descent Lemma",
