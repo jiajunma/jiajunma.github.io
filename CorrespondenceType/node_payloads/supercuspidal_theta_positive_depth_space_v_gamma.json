@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.positive_depth_space_v_gamma",
+  "title": "Positive Depth Space V Gamma",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_space_v_gamma.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Positive Depth Space V Gamma</h1>\n<p>Let \\(\\Gamma\\in\\mathbf g\\) be invertible as an element of \\(\\operatorname{End}_D(V)\\). The space \\(V_\\Gamma\\) is the same underlying right \\(D\\)-module as \\(V\\), equipped with the opposite-sign hermitian form\n\\[\n\\langle v_1,v_2\\rangle_{V_\\Gamma}=\\langle v_1,\\Gamma v_2\\rangle_V.\n\\]</p>\n<p>The point of the definition is moment-map rigidity: if \\(V'\\) is a target hermitian space of the same \\(D\\)-dimension and the coset \\(\\Gamma+\\mathbf g_{x,r+}\\) is hit by the moment map \\(M:V\\otimes_D V'\\to\\mathbf g\\), then \\(V'\\) is isometric to \\(V_\\Gamma\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "title": "Single Block Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "title": "Positive Depth Moment Map Surjectivity",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_moment_map_surjectivity.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    }
+  ],
+  "lean_refs": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "epipelagic_theta.tensor_product_lattice_function",
+  "title": "Tensor Product Lattice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Tensor Product Lattice Function</h1>\n<p>Given lattice functions \\(L\\) on \\(V\\) and \\(L'\\) on \\(V'\\), their tensor product lattice function on \\(W=V\\otimes_D V'\\) is\n\\[\n(L\\otimes L')_t=\\sum_{r+r'=t} L_r\\otimes_{o_D}L'_{r'}.\n\\]\nIts jump set satisfies\n\\[\n\\operatorname{Jump}(L\\otimes L')=\\operatorname{Jump}(L)+\\operatorname{Jump}(L').\n\\]</p>\n<p>For building points \\(x\\in B(G)\\) and \\(x'\\in B(G')\\), this construction gives the lattice function \\(B_{x,x'}=L_x\\otimes L_{x'}\\) used in the generalized lattice model of the oscillator representation.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.lattice_function",
+      "title": "Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    }
+  ],
+  "lean_refs": []
+}

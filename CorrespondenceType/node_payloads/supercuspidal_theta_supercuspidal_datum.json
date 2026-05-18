@@ -1,0 +1,43 @@
+{
+  "id": "supercuspidal_theta.supercuspidal_datum",
+  "title": "Supercuspidal Datum",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Supercuspidal Datum</h1>\n<p>For a classical group \\(G=U(V)\\), a supercuspidal datum is a tuple\n\\[\n\\Sigma=(x,\\Gamma,\\phi,\\rho)\n\\]\nwith the following structure.</p>\n<ul>\n<li>\\(\\Gamma\\in\\mathbf g\\) is tamely ramified semisimple and admits a good factorization compatible with \\(G^0=Z_G(\\Gamma)\\).</li>\n<li>The center of the connected component of \\(G^0\\) is anisotropic.</li>\n<li>\\(x\\) is a vertex in the building \\(B(G^0)\\), so the connected component of \\(G_x^0\\) is a maximal parahoric subgroup.</li>\n<li>\\(\\phi:G_x^0\\to\\mathbb C^\\times\\) is a character whose restriction to the pro-unipotent radical agrees with the character determined by \\(\\Gamma\\).</li>\n<li>\\(\\rho\\) is an irreducible cuspidal representation of the finite reductive quotient \\(G_x^0/G_{x,0+}^0\\).</li>\n</ul>\n<p>The depth of \\(\\Sigma\\) is\n\\[\n\\operatorname{depth}(\\Sigma)=\\max\\{\\operatorname{depth}(\\Gamma),0\\}.\n\\]\nIf the same tuple satisfies the conditions except that \\(\\rho\\) is merely irreducible, it is a refined \\(K\\)-type datum rather than a supercuspidal datum.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.good_factorization",
+      "title": "Good Factorization of a Semisimple Element",
+      "href": "supercuspidal_theta/supercuspidal_theta_good_factorization.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.attached_supercuspidal_representation",
+      "title": "Supercuspidal Representation Attached to a Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum",
+      "title": "Supercuspidal Datum for a Covering Group",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "title": "Single Block Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum_equivalence",
+      "title": "Equivalence of Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum_equivalence.html"
+    }
+  ],
+  "lean_refs": []
+}

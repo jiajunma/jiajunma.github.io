@@ -1,0 +1,22 @@
+{
+  "id": "supercuspidal_theta.good_factorization",
+  "title": "Good Factorization of a Semisimple Element",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_good_factorization.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Good Factorization of a Semisimple Element</h1>\n<p>Let \\(\\Gamma\\in\\mathbf g\\) be a tamely ramified semisimple element of negative depth \\(r&lt;0\\). A good factorization of \\(\\Gamma\\) is a decomposition\n\\[\n\\Gamma=\\Gamma_{-1}+\\Gamma_0+\\ldots+\\Gamma_d\n\\]\ninto commuting semisimple elements such that:</p>\n<ul>\n<li>\\(\\Gamma_{-1}\\) has nonnegative depth and is the harmless depth-zero part.</li>\n<li>For \\(0\\le i&lt;d\\), the element \\(\\Gamma_i\\) is good and has negative depth \\(r_i\\).</li>\n<li>\\(\\Gamma_d\\) is central, possibly zero.</li>\n<li>The negative depths are strictly ordered, with the last term determining the depth of \\(\\Gamma\\) in the central case and the penultimate term doing so when \\(\\Gamma_d=0\\).</li>\n</ul>\n<p>The associated twisted Levi sequence is defined recursively by\n\\[\nG^d=G,\\qquad G^i=Z_{G^{i+1}}(\\Gamma_i).\n\\]\nFor the classical groups used in type I dual pairs, Howe factorization gives a choice of good factorization in which every noncentral positive-depth factor is also good inside the ambient general linear group.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum",
+      "title": "Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html"
+    }
+  ],
+  "lean_refs": []
+}

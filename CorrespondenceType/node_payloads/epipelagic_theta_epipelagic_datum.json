@@ -1,0 +1,38 @@
+{
+  "id": "epipelagic_theta.epipelagic_datum",
+  "title": "Epipelagic Datum",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_epipelagic_datum.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Epipelagic Datum</h1>\n<p>An epipelagic datum of order \\(m\\) for \\(G\\) is a triple\n\\[\n(x,\\lambda,\\chi)\n\\]\nwhere \\(x\\) is an epipelagic point of order \\(m\\), \\(\\lambda\\) is a stable vector in \\(\\mathbf g_{x,1/m}^\\vee\\), and \\(\\chi\\) is a character of the finite stabilizer quotient\n\\[\nS_{x,\\lambda}=H_{x,\\lambda}/G_{x,1/m}.\n\\]</p>\n<p>The datum determines a character \\(\\psi_\\lambda\\) of \\(G_{x,1/m}\\), canonically extended to \\(H_{x,\\lambda}\\), and gives the epipelagic supercuspidal representation\n\\[\n\\pi_x(\\lambda,\\chi)=\\operatorname{ind}_{H_{x,\\lambda}}^G(\\psi_\\lambda\\otimes \\chi).\n\\]</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.epipelagic_point",
+      "title": "Epipelagic Point",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_point.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "title": "Main Epipelagic Theta Correspondence Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_theorem.html"
+    },
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    }
+  ],
+  "lean_refs": []
+}

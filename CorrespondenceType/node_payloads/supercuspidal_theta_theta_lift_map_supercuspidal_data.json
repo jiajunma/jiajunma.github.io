@@ -1,0 +1,53 @@
+{
+  "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+  "title": "Theta Lift Map on Supercuspidal Data",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Theta Lift Map on Supercuspidal Data</h1>\n<p>Fix a Witt tower \\(T'\\) of target hermitian spaces. For a supercuspidal datum \\(\\Sigma\\) of \\(G=U(V)\\), write its block decomposition as\n\\[\n\\Sigma=\\bigoplus_{l=0}^{b}\\Sigma_l,\n\\]\nwhere \\(\\Sigma_0\\) is the zero-depth block and the blocks \\(\\Sigma_l\\) for \\(l&gt;0\\) have positive depths.</p>\n<p>For \\(l&gt;0\\), define\n\\[\n\\Sigma_l'=\\#^+(\\Sigma_l).\n\\]\nThese positive-depth blocks determine target spaces \\(V_l'\\). The zero-depth block is then lifted in the residual Witt tower obtained by subtracting the Witt classes of the positive-depth target spaces from \\(T'\\). Finally, take the direct sum of all target blocks:\n\\[\n\\#_{V,T'}([\\Sigma])\n=\n\\left[\\bigoplus_{l=0}^{b}\\Sigma_l'\\right].\n\\]</p>\n<p>This map is the data-level correspondence used in the main theorem. It combines moment-map transport for positive-depth blocks with finite-field theta correspondence for the depth-zero residue.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "title": "Block Decomposition of a Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.direct_sum_supercuspidal_data",
+      "title": "Direct Sum of Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_direct_sum_supercuspidal_data.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    },
+    {
+      "id": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+      "title": "Depth Zero Theta Lift via Finite Fields",
+      "href": "supercuspidal_theta/supercuspidal_theta_finite_field_depth_zero_theta_lift.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.k_type_datum_theta_lift",
+      "title": "Theta Lift of a K Type Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_datum_theta_lift.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "title": "Main Supercuspidal Theta Correspondence Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_theta_main_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

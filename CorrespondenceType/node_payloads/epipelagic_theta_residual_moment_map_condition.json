@@ -1,0 +1,43 @@
+{
+  "id": "epipelagic_theta.residual_moment_map_condition",
+  "title": "Residual Moment-Map Condition for Epipelagic Data",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Residual Moment-Map Condition for Epipelagic Data</h1>\n<p>Let \\((x,\\lambda,\\chi)\\) and \\((x',\\lambda',\\chi')\\) be epipelagic data of the same order \\(m\\) for \\(G\\) and \\(G'\\). Let \\(L_x\\) and \\(L_{x'}\\) be the corresponding self-dual lattice functions, set \\(B=L_x\\otimes L_{x'}\\), and define\n\\[\nX=B_{-1/(2m)}/B_{-1/(2m)+}.\n\\]</p>\n<p>The residual moment-map condition is the existence of \\(\\bar w\\in X\\) such that\n\\[\n\\lambda=M_{-1/(2m)}(\\bar w),\\qquad\n\\lambda'=-M'_{-1/(2m)}(\\bar w).\n\\]\nIt is the geometric condition that the two epipelagic minimal \\(K\\)-type functionals arise from the same residual oscillator-model vector.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.epipelagic_datum",
+      "title": "Epipelagic Datum",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_datum.html"
+    },
+    {
+      "id": "epipelagic_theta.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html"
+    },
+    {
+      "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "title": "Moment Maps for a Classical Type I Dual Pair",
+      "href": "epipelagic_theta/epipelagic_theta_moment_maps_classical_dual_pair.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "title": "Main Epipelagic Theta Correspondence Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

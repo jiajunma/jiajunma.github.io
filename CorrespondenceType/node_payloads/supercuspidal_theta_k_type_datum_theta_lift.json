@@ -1,0 +1,22 @@
+{
+  "id": "supercuspidal_theta.k_type_datum_theta_lift",
+  "title": "Theta Lift of a K Type Datum",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_k_type_datum_theta_lift.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Theta Lift of a K Type Datum</h1>\n<p>A \\(K\\)-type datum \\(\\Sigma'\\) is a theta lift of a supercuspidal datum \\(\\Sigma\\) for the dual pair \\((U(V),U(V'))\\) when:</p>\n<ul>\n<li>\\(\\Sigma\\) is decomposed into blocks as a \\(K\\)-type datum.</li>\n<li>Each positive-depth block of \\(\\Sigma'\\) is obtained from the corresponding block of \\(\\Sigma\\) by the single positive-depth lift \\(\\#^+\\).</li>\n<li>The zero-depth block of \\(\\Sigma'\\) is a finite-field theta lift of the zero-depth block of \\(\\Sigma\\), without requiring supercuspidality.</li>\n<li>The target datum is the direct sum of all target blocks.</li>\n</ul>\n<p>This definition is used in the proof of the main theorem because intermediate oscillator-model \\(K\\)-types need not all be supercuspidal, even when the final first-occurrence representation is.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

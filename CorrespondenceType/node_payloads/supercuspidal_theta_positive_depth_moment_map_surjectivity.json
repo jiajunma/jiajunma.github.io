@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+  "title": "Positive Depth Moment Map Surjectivity",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_moment_map_surjectivity.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Positive Depth Moment Map Surjectivity</h1>\n<p>Let \\(\\Sigma=(x,\\Gamma,\\phi,\\rho)\\) be a single positive-depth block of depth \\(r=2s\\). Let \\(L\\) be the lattice function attached to \\(x\\), let \\(L'\\) be a self-dual lattice function in a target space \\(V'\\), set\n\\[\nB=L\\otimes_D L',\n\\]\nand choose \\(w\\in B_s\\) such that\n\\[\nM(w)\\in \\Gamma+\\mathbf g_{x,r+}.\n\\]\nThen for every \\(t&gt;-s\\),\n\\[\nM(w+B_t)=M(w)+\\mathbf g_{x,s+t}.\n\\]</p>\n<p>This is the local geometric input behind the positive-depth block lift: it says that once a moment-map point has the right leading term, all deeper perturbations in the Moy-Prasad lattice are reached by perturbing \\(w\\) inside the oscillator lattice model.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "title": "Moment Maps for a Classical Type I Dual Pair",
+      "href": "epipelagic_theta/epipelagic_theta_moment_maps_classical_dual_pair.html"
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_space_v_gamma",
+      "title": "Positive Depth Space V Gamma",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_space_v_gamma.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    }
+  ],
+  "lean_refs": []
+}

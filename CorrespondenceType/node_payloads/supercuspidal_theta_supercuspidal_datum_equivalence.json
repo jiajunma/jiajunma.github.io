@@ -1,0 +1,28 @@
+{
+  "id": "supercuspidal_theta.supercuspidal_datum_equivalence",
+  "title": "Equivalence of Supercuspidal Data",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum_equivalence.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Equivalence of Supercuspidal Data</h1>\n<p>Two supercuspidal data\n\\[\n\\Sigma=(x,\\Gamma,\\phi,\\rho),\\qquad \\Sigma'=(x',\\Gamma',\\phi',\\rho')\n\\]\nfor \\(G\\) are equivalent if there exists \\(g\\in G\\) such that\n\\[\nx=gx',\\qquad \\operatorname{Ad}_g(\\Gamma')\\in \\Gamma+\\mathbf g_{x,0},\n\\]\nand the finite reductive quotient representations satisfy\n\\[\n\\rho'\\otimes\\phi'\\simeq(\\rho\\otimes\\phi) ∘ \\operatorname{Ad}_g.\n\\]</p>\n<p>For the classical groups treated in the paper, the Hakim-Murnaghan equivalence relation reduces to this \\(G\\)-conjugacy form, because the center is anisotropic and refactorization is absorbed into the semisimple element. The attached representations are isomorphic exactly when the data are equivalent.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum",
+      "title": "Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "title": "Equivalence of Covering Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum_equivalence.html"
+    }
+  ],
+  "lean_refs": []
+}

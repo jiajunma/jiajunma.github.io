@@ -1,0 +1,27 @@
+{
+  "id": "epipelagic_theta.lattice_function",
+  "title": "Lattice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_lattice_function.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Lattice Function</h1>\n<p>Let \\(V\\) be a right \\(D\\)-vector space. A lattice function on \\(V\\) assigns to each real number \\(s\\) an \\(o_D\\)-lattice \\(L_s\\), decreasing in \\(s\\), compatible with scalar translation, and left-continuous:\n\\[\nL_t \\subseteq L_s \\quad(s&lt;t), \\qquad L_{s+\\nu(d)}=L_s d, \\qquad L_s=\\bigcap_{t&lt;s} L_t.\n\\]\nOne writes\n\\[\nL_{r+}=\\bigcup_{t&gt;r}L_t,\\qquad\n\\operatorname{Jump}(L)=\\{r\\in \\mathbb R: L_r\\ne L_{r+}\\}.\n\\]</p>\n<p>The lattice function induces filtrations on \\(\\operatorname{End}_D(V)\\) and \\(\\operatorname{GL}_D(V)\\) by requiring operators or group elements to shift every \\(L_s\\) into \\(L_{s+r}\\).</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html"
+    },
+    {
+      "id": "epipelagic_theta.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html"
+    }
+  ],
+  "lean_refs": []
+}

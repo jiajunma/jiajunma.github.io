@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 15,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 16,
-    "visible_nodes_with_selected_proof_plans": 16
+    "visible_nodes_without_proof_plans": 17,
+    "visible_nodes_with_selected_proof_plans": 17
   },
   "nodes": [
     {
@@ -243,8 +243,24 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "supercuspidal_theta",
+      "title": "Supercuspidal Theta",
+      "href": "supercuspidal_theta/index.html",
+      "role": "dependent",
+      "node_count": 21
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "finite_field_weil.unitary_weil_representation",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "character-formula",

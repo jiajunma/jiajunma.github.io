@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supercuspidal Representation Attached to a Datum — Correspondence of Type Blueprint</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\oplus": "\u2295", "\\simeq": "\u2243"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">CorrespondenceType</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../epipelagic_theta/index.html">Epipelagic Theta</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../finite_field_weil/index.html">Finite Field Weil</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../supercuspidal_theta/index.html">Supercuspidal Theta</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/character-formula.html">character-formula</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/compact-induction.html">compact-induction</a></li>
+      
+        <li><a href="../keywords/covering-group.html">covering-group</a></li>
+      
+        <li><a href="../keywords/data-lift.html">data-lift</a></li>
+      
+        <li><a href="../keywords/depth-preservation.html">depth-preservation</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/direct-sum.html">direct-sum</a></li>
+      
+        <li><a href="../keywords/epipelagic.html">epipelagic</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/finite-field.html">finite-field</a></li>
+      
+        <li><a href="../keywords/finite-reductive-quotient.html">finite-reductive-quotient</a></li>
+      
+        <li><a href="../keywords/first-occurrence.html">first-occurrence</a></li>
+      
+        <li><a href="../keywords/general-linear.html">general-linear</a></li>
+      
+        <li><a href="../keywords/generalized-lattice-model.html">generalized-lattice-model</a></li>
+      
+        <li><a href="../keywords/good-factorization.html">good-factorization</a></li>
+      
+        <li><a href="../keywords/heisenberg-group.html">heisenberg-group</a></li>
+      
+        <li><a href="../keywords/hermitian-space.html">hermitian-space</a></li>
+      
+        <li><a href="../keywords/k-type.html">k-type</a></li>
+      
+        <li><a href="../keywords/lattice-function.html">lattice-function</a></li>
+      
+        <li><a href="../keywords/lattice-model.html">lattice-model</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
+      
+        <li><a href="../keywords/moment-map.html">moment-map</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/oscillator-representation.html">oscillator-representation</a></li>
+      
+        <li><a href="../keywords/p-adic-classical-groups.html">p-adic-classical-groups</a></li>
+      
+        <li><a href="../keywords/positive-depth.html">positive-depth</a></li>
+      
+        <li><a href="../keywords/rank-restriction.html">rank-restriction</a></li>
+      
+        <li><a href="../keywords/self-dual.html">self-dual</a></li>
+      
+        <li><a href="../keywords/semisimple-element.html">semisimple-element</a></li>
+      
+        <li><a href="../keywords/skew-hermitian.html">skew-hermitian</a></li>
+      
+        <li><a href="../keywords/stone-von-neumann.html">stone-von-neumann</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/symplectic.html">symplectic</a></li>
+      
+        <li><a href="../keywords/tensor-product.html">tensor-product</a></li>
+      
+        <li><a href="../keywords/theta-correspondence.html">theta-correspondence</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/type-i-dual-pair.html">type-i-dual-pair</a></li>
+      
+        <li><a href="../keywords/unitary.html">unitary</a></li>
+      
+        <li><a href="../keywords/weil-representation.html">weil-representation</a></li>
+      
+        <li><a href="../keywords/witt-tower.html">witt-tower</a></li>
+      
+        <li><a href="../keywords/yu-data.html">yu-data</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="definition_thmwrapper theorem-style-definition node-page" id="node-supercuspidal_theta-2e-attached_supercuspidal_representation">
+  <header class="definition_thmheading thm-heading">
+    <span class="definition_thmcaption thm-caption">Definition</span>
+    <span class="definition_thmtitle thm-title">Supercuspidal Representation Attached to a Datum</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-definition">definition</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-supercuspidal_theta-2e-attached_supercuspidal_representation">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="supercuspidal_theta_supercuspidal_datum.html">Supercuspidal Datum</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="definition_thmcontent thm-content body">
+    <h1>Supercuspidal Representation Attached to a Datum</h1>
+<p>Let \(\Sigma=(x,\Gamma,\phi,\rho)\) be a supercuspidal datum and choose a good factorization of \(\Gamma\). The construction defines compact subgroups
+\[
+K^i,\qquad K_{0+}^i,\qquad K_+^i
+\]
+from the Moy-Prasad groups of the Levi sequence \(G^i\). The character \(\phi\) extends to \(G_x^0K_+\), and the positive-depth factors produce a canonical irreducible representation \(\kappa\) of \(K=K^d\) whose restriction to \(K_+\) is \(\Gamma\)-isotypic.</p>
+<p>The \(K\)-type attached to \(\Sigma\) is
+\[
+\eta_\Sigma=\rho\otimes\kappa,
+\]
+where \(\rho\) is inflated from \(G_x^0/G_{x,0+}^0\). The representation attached to the datum is the compact induction
+\[
+\pi_\Sigma=\operatorname{c-Ind}_{K}^{G}\eta_\Sigma.
+\]
+Under the paper's large residual characteristic hypotheses, Yu's construction and Kim's exhaustion theorem identify these representations with the tame supercuspidal representations of \(G\).</p>
+    
+  </div>
+
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">yu-data</span><span class="tag">supercuspidal</span><span class="tag">compact-induction</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

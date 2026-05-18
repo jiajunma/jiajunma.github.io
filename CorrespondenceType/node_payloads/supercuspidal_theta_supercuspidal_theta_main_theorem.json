@@ -1,0 +1,32 @@
+{
+  "id": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+  "title": "Main Supercuspidal Theta Correspondence Theorem",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_theta_main_theorem.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Main Supercuspidal Theta Correspondence Theorem</h1>\n<p>Let \\(\\Sigma\\) be a supercuspidal datum for \\(G=U(V)\\), and equip it with the canonical splitting over its compact subgroup in the dual pair, giving a covering datum \\(\\widetilde\\Sigma\\). If\n\\[\n[\\Sigma']=\\#_{V,T'}([\\Sigma])\n\\]\nfor a target space \\(V'\\in T'\\), then the first-occurrence local theta lift satisfies\n\\[\n\\theta_{V,V'}(\\widetilde\\pi_{\\widetilde\\Sigma})\n=\n\\widetilde\\pi_{\\widetilde\\Sigma'}.\n\\]</p>\n<p>Conversely, if \\(\\widetilde\\pi\\) and its theta lift \\(\\widetilde\\pi'\\) are both supercuspidal, then \\(\\widetilde\\pi\\) is attached to some covering datum \\(\\widetilde\\Sigma\\), and \\(\\widetilde\\pi'\\) is attached to a covering datum whose underlying ordinary datum lies in\n\\[\n\\#_{V,T'}([\\Sigma]).\n\\]\nThus the first-occurrence theta correspondence between tame supercuspidal representations is completely described by the data-level map built from moment maps and finite-field theta lifts.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum",
+      "title": "Supercuspidal Datum for a Covering Group",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    },
+    {
+      "id": "supercuspidal_theta.first_occurrence_index",
+      "title": "First Occurrence Index",
+      "href": "supercuspidal_theta/supercuspidal_theta_first_occurrence_index.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

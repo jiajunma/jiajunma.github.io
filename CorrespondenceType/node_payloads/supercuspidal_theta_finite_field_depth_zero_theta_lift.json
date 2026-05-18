@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+  "title": "Depth Zero Theta Lift via Finite Fields",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_finite_field_depth_zero_theta_lift.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Depth Zero Theta Lift via Finite Fields</h1>\n<p>For a good lattice \\(L\\) representing a vertex \\(x\\), the finite reductive quotient of \\(G_x\\) decomposes into unitary groups attached to the residue spaces\n\\[\n\\ell=L/L^\\ast p_D,\\qquad \\ell^\\ast=L^\\ast/L.\n\\]\nThus a depth zero representation decomposes as \\(\\rho_\\ell\\otimes\\rho_{\\ell^\\ast}\\).</p>\n<p>For two vertices \\(x\\) and \\(x'\\), the depth zero \\(K\\)-type \\((x',\\rho')\\) is a theta lift of \\((x,\\rho)\\) if the finite-field representations satisfy the two finite oscillator correspondences\n\\[\n\\rho_{\\ell'^\\ast}\\in \\theta_{\\ell,\\ell'^\\ast}(\\rho_\\ell),\n\\qquad\n\\rho_{\\ell'}\\in \\theta_{\\ell^\\ast,\\ell'}(\\rho_{\\ell^\\ast}).\n\\]\nFor cuspidal \\(\\rho\\), the relevant finite-field theta lift is unique at first occurrence.</p>\n<p>For a depth zero supercuspidal datum \\(\\Sigma=(x,0,1,\\rho)\\), the data-level lift \\(\\#_{V,T'}(\\Sigma)\\) is obtained by taking these first-occurrence finite-field lifts in the target Witt tower and rebuilding the target depth-zero datum.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.depth_zero_k_type",
+      "title": "Depth Zero K Type",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_zero_k_type.html"
+    },
+    {
+      "id": "finite_field_weil.unitary_weil_representation",
+      "title": "Unitary Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_unitary_weil_representation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    }
+  ],
+  "lean_refs": []
+}

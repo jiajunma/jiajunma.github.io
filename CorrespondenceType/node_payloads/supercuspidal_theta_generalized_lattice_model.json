@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.generalized_lattice_model",
+  "title": "Generalized Lattice Model",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Generalized Lattice Model</h1>\n<p>Let \\(W\\) be a symplectic \\(F\\)-space and let \\(B\\) be a self-dual lattice function in \\(W\\). Set\n\\[\nb=B_0/B_{0+}.\n\\]\nThe symplectic form on \\(W\\) induces a finite-field symplectic form on \\(b\\), hence a finite Heisenberg group \\(H(b)\\) and an oscillator representation \\(S(b)\\).</p>\n<p>The generalized lattice model \\(S(B_0)\\) of the oscillator representation consists of locally constant compactly supported functions\n\\[\nf:W\\to S(b)\n\\]\nwith the covariance rule\n\\[\nf(a+w)=\\psi((1/2)\\langle w,a\\rangle_W)\\,\\omega_b(a)f(w)\n\\qquad a\\in B_0.\n\\]\nThis model gives a splitting \\(\\xi_B\\) of the metaplectic cover over the stabilizer of \\(B_0\\). Its restriction to the pro-unipotent subgroup is canonical. If \\(B=B_{x,x'}\\) is the tensor-product lattice function attached to \\(x\\in B(G)\\) and \\(x'\\in B(G')\\), then \\(\\xi_B\\) restricts to the splitting \\(\\xi_{x,x'}\\) used to compare \\(K\\)-types on the two sides of the dual pair.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum",
+      "title": "Supercuspidal Datum for a Covering Group",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.depth_preservation_building_sum",
+      "title": "Building Sum Formula for Depth Preservation",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_building_sum.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    }
+  ],
+  "lean_refs": []
+}

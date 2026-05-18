@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+  "title": "Single Block Supercuspidal Datum",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_single_block_supercuspidal_datum.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Single Block Supercuspidal Datum</h1>\n<p>Let \\(\\Sigma=(x,\\Gamma,\\phi,\\rho)\\) be a supercuspidal datum for \\(G=U(V)\\). Write\n\\[\nF^0[\\Gamma]=\\prod_{j\\in J}F_j\n\\]\nand decompose \\(V\\) according to the field factors. The datum is a single block of positive depth \\(r\\) if every nonzero component \\(\\Gamma_j\\) has the same negative valuation and \\(V\\) is the corresponding single summand.</p>\n<p>A datum of depth zero is a single block of zero depth when it is represented as\n\\[\n(x,\\Gamma,1,\\rho)\n\\]\nwith \\(\\Gamma\\) central of nonnegative depth. These are the two atomic pieces used in the theta-lift map for general supercuspidal data.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum",
+      "title": "Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "title": "Block Decomposition of a Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_space_v_gamma",
+      "title": "Positive Depth Space V Gamma",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_space_v_gamma.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    }
+  ],
+  "lean_refs": []
+}

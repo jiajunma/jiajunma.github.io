@@ -1,0 +1,28 @@
+{
+  "id": "supercuspidal_theta.direct_sum_supercuspidal_data",
+  "title": "Direct Sum of Supercuspidal Data",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_direct_sum_supercuspidal_data.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Direct Sum of Supercuspidal Data</h1>\n<p>Suppose \\(\\{\\Sigma_l:0\\le l\\le b\\}\\) is a collection of single-block supercuspidal data for hermitian spaces \\(V_l\\), with \\(\\Sigma_0\\) of depth zero and the positive depths strictly ordered\n\\[\nr_b&gt;\\ldots&gt;r_1&gt;0.\n\\]\nOn the orthogonal direct sum\n\\[\nV=\\bigoplus_{l=0}^{b}V_l,\n\\]\ndefine \\(x,\\Gamma,\\phi,\\rho\\) by direct sum or exterior tensor product on the corresponding factors. Then\n\\[\n\\Sigma=\\bigoplus_{l=0}^{b}\\Sigma_l\n\\]\nis a supercuspidal datum for \\(U(V)\\). This construction is inverse to the block decomposition at the level of equivalence classes.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "title": "Block Decomposition of a Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    }
+  ],
+  "lean_refs": []
+}

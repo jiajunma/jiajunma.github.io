@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.covering_supercuspidal_datum",
+  "title": "Supercuspidal Datum for a Covering Group",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Supercuspidal Datum for a Covering Group</h1>\n<p>Let \\(\\widetilde G\\to G\\) be a central \\(\\mathbb C^\\times\\)-covering group occurring in a type I dual pair. A supercuspidal datum for \\(\\widetilde G\\) is\n\\[\n\\widetilde\\Sigma=(x,\\Gamma,\\phi,\\rho,\\xi),\n\\]\nwhere \\((x,\\Gamma,\\phi,\\rho)\\) is a supercuspidal datum for \\(G\\) and\n\\[\n\\xi:K\\to \\widetilde K\n\\]\nis a splitting of the cover over the compact subgroup \\(K\\), agreeing on \\(K_{0+}\\) with the canonical pro-unipotent splitting coming from the generalized lattice model.</p>\n<p>The splitting identifies \\(\\widetilde K\\) with \\(K\\times\\mathbb C^\\times\\). The genuine \\(K\\)-type and genuine supercuspidal representation attached to the covering datum are\n\\[\n\\widetilde\\eta_{\\widetilde\\Sigma}=(\\eta_\\Sigma\\otimes\\operatorname{id}_{\\mathbb C^\\times}) ∘ \\widetilde\\xi^{-1},\n\\qquad\n\\widetilde\\pi_{\\widetilde\\Sigma}=\\operatorname{c-Ind}_{\\widetilde K}^{\\widetilde G}\\widetilde\\eta_{\\widetilde\\Sigma}.\n\\]</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum",
+      "title": "Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "title": "Equivalence of Covering Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum_equivalence.html"
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "title": "Main Supercuspidal Theta Correspondence Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_theta_main_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

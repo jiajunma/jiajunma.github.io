@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+  "title": "Single Positive Depth Theta Lift of Data",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Single Positive Depth Theta Lift of Data</h1>\n<p>Let \\(\\Sigma=(x,\\Gamma,\\phi,\\rho)\\) be a single positive-depth block of depth \\(r=2s\\) for \\(G=U(V)\\). The target hermitian space is the isometry class of \\(V_\\Gamma\\). Choose \\(w\\in V\\otimes_D V_\\Gamma\\) such that\n\\[\nM(w)=\\Gamma.\n\\]\nDefine the target lattice function by\n\\[\nL'_t=wL_{t+s},\n\\]\nand let \\(x'\\) be the corresponding building point. Set\n\\[\n\\Gamma'=M'(w).\n\\]\nConjugation by \\(w\\) gives an isomorphism between the relevant centralizers, and the target character and cuspidal finite quotient representation are the transported contragredients:\n\\[\n\\phi'=\\phi^\\ast ∘ \\alpha^{-1},\\qquad\n\\rho'=\\rho^\\ast ∘ \\alpha^{-1}.\n\\]\nThe resulting datum\n\\[\n\\Sigma'=(x',\\Gamma',\\phi',\\rho')\n\\]\nis well-defined up to equivalence, independent of the representative of \\([\\Sigma]\\) and of the choice of \\(w\\). Its equivalence class is denoted \\(\\#^+([\\Sigma])\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "title": "Single Block Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_space_v_gamma",
+      "title": "Positive Depth Space V Gamma",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_space_v_gamma.html"
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "title": "Positive Depth Moment Map Surjectivity",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_moment_map_surjectivity.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    }
+  ],
+  "lean_refs": []
+}

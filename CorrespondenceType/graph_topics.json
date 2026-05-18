@@ -1,6 +1,24 @@
 {
   "topics": [
     {
+      "id": "epipelagic_theta",
+      "title": "Epipelagic Theta",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "definition": 7,
+        "proposition": 1,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 9
+      },
+      "href": "epipelagic_theta/index.html",
+      "children": []
+    },
+    {
       "id": "finite_field_weil",
       "title": "Finite Field Weil",
       "depth": 1,
@@ -18,7 +36,36 @@
       },
       "href": "finite_field_weil/index.html",
       "children": []
+    },
+    {
+      "id": "supercuspidal_theta",
+      "title": "Supercuspidal Theta",
+      "depth": 1,
+      "parent": null,
+      "node_count": 21,
+      "direct_node_count": 21,
+      "kind_counts": {
+        "definition": 17,
+        "proposition": 2,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 21
+      },
+      "href": "supercuspidal_theta/index.html",
+      "children": []
     }
   ],
-  "edges": []
+  "edges": [
+    {
+      "from": "epipelagic_theta",
+      "to": "supercuspidal_theta",
+      "count": 2
+    },
+    {
+      "from": "finite_field_weil",
+      "to": "supercuspidal_theta",
+      "count": 1
+    }
+  ]
 }

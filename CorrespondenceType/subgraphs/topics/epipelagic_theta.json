@@ -1,0 +1,271 @@
+{
+  "topic": {
+    "id": "epipelagic_theta",
+    "title": "Epipelagic Theta",
+    "href": "epipelagic_theta/index.html",
+    "parent": null,
+    "node_count": 9,
+    "descendant_node_count": 9
+  },
+  "counts": {
+    "internal_nodes": 9,
+    "descendant_nodes": 9,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 9,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
+  },
+  "nodes": [
+    {
+      "id": "epipelagic_theta.epipelagic_datum",
+      "title": "Epipelagic Datum",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_datum.html",
+      "payload": "node_payloads/epipelagic_theta_epipelagic_datum.json"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_point",
+      "title": "Epipelagic Point",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_point.html",
+      "payload": "node_payloads/epipelagic_theta_epipelagic_point.json"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_rank_restriction.html",
+      "payload": "node_payloads/epipelagic_theta_epipelagic_rank_restriction.json"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "title": "Main Epipelagic Theta Correspondence Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_theorem.html",
+      "payload": "node_payloads/epipelagic_theta_epipelagic_theta_main_theorem.json"
+    },
+    {
+      "id": "epipelagic_theta.lattice_function",
+      "title": "Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_lattice_function.html",
+      "payload": "node_payloads/epipelagic_theta_lattice_function.json"
+    },
+    {
+      "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "title": "Moment Maps for a Classical Type I Dual Pair",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_moment_maps_classical_dual_pair.html",
+      "payload": "node_payloads/epipelagic_theta_moment_maps_classical_dual_pair.json"
+    },
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html",
+      "payload": "node_payloads/epipelagic_theta_residual_moment_map_condition.json"
+    },
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html",
+      "payload": "node_payloads/epipelagic_theta_self_dual_lattice_function.json"
+    },
+    {
+      "id": "epipelagic_theta.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html",
+      "payload": "node_payloads/epipelagic_theta_tensor_product_lattice_function.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "epipelagic_theta.epipelagic_point",
+      "to": "epipelagic_theta.epipelagic_datum",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_datum",
+      "to": "epipelagic_theta.epipelagic_rank_restriction",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.residual_moment_map_condition",
+      "to": "epipelagic_theta.epipelagic_rank_restriction",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_datum",
+      "to": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.residual_moment_map_condition",
+      "to": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_datum",
+      "to": "epipelagic_theta.residual_moment_map_condition",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "to": "epipelagic_theta.residual_moment_map_condition",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.tensor_product_lattice_function",
+      "to": "epipelagic_theta.residual_moment_map_condition",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.lattice_function",
+      "to": "epipelagic_theta.self_dual_lattice_function",
+      "kind": "uses"
+    },
+    {
+      "from": "epipelagic_theta.lattice_function",
+      "to": "epipelagic_theta.tensor_product_lattice_function",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "supercuspidal_theta",
+      "title": "Supercuspidal Theta",
+      "href": "supercuspidal_theta/index.html",
+      "role": "dependent",
+      "node_count": 21
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 1
+    },
+    {
+      "from": "epipelagic_theta.self_dual_lattice_function",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "building",
+      "title": "building",
+      "href": "keywords/building.html",
+      "count": 2
+    },
+    {
+      "id": "classical-group",
+      "title": "classical-group",
+      "href": "keywords/classical-group.html",
+      "count": 1
+    },
+    {
+      "id": "epipelagic",
+      "title": "epipelagic",
+      "href": "keywords/epipelagic.html",
+      "count": 5
+    },
+    {
+      "id": "lattice-function",
+      "title": "lattice-function",
+      "href": "keywords/lattice-function.html",
+      "count": 3
+    },
+    {
+      "id": "main-theorem",
+      "title": "main-theorem",
+      "href": "keywords/main-theorem.html",
+      "count": 1
+    },
+    {
+      "id": "moment-map",
+      "title": "moment-map",
+      "href": "keywords/moment-map.html",
+      "count": 2
+    },
+    {
+      "id": "moy-prasad",
+      "title": "moy-prasad",
+      "href": "keywords/moy-prasad.html",
+      "count": 2
+    },
+    {
+      "id": "oscillator-representation",
+      "title": "oscillator-representation",
+      "href": "keywords/oscillator-representation.html",
+      "count": 1
+    },
+    {
+      "id": "rank-restriction",
+      "title": "rank-restriction",
+      "href": "keywords/rank-restriction.html",
+      "count": 1
+    },
+    {
+      "id": "self-dual",
+      "title": "self-dual",
+      "href": "keywords/self-dual.html",
+      "count": 1
+    },
+    {
+      "id": "supercuspidal",
+      "title": "supercuspidal",
+      "href": "keywords/supercuspidal.html",
+      "count": 1
+    },
+    {
+      "id": "tensor-product",
+      "title": "tensor-product",
+      "href": "keywords/tensor-product.html",
+      "count": 1
+    },
+    {
+      "id": "theta-correspondence",
+      "title": "theta-correspondence",
+      "href": "keywords/theta-correspondence.html",
+      "count": 4
+    },
+    {
+      "id": "type",
+      "title": "type",
+      "href": "keywords/type.html",
+      "count": 1
+    },
+    {
+      "id": "type-i-dual-pair",
+      "title": "type-i-dual-pair",
+      "href": "keywords/type-i-dual-pair.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

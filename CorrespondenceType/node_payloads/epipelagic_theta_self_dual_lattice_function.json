@@ -1,0 +1,28 @@
+{
+  "id": "epipelagic_theta.self_dual_lattice_function",
+  "title": "Self-Dual Lattice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Self-Dual Lattice Function</h1>\n<p>Let \\(V\\) carry a nondegenerate sesquilinear form. For an \\(o_D\\)-lattice \\(L\\subseteq V\\), its dual is\n\\[\nL^\\vee=\\{v\\in V : \\langle v,L\\rangle_V\\subseteq \\mathbf p_D\\}.\n\\]</p>\n<p>For a lattice function \\(L\\), the dual lattice function is defined by\n\\[\n(L^\\vee)_s=(L_{(-s)+})^\\vee.\n\\]\nThe lattice function is self-dual when \\(L=L^\\vee\\). Under the Bruhat-Tits identification for classical groups, points in the building correspond to self-dual lattice functions.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.lattice_function",
+      "title": "Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    }
+  ],
+  "lean_refs": []
+}

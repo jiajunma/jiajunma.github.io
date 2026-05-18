@@ -1,0 +1,27 @@
+{
+  "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+  "title": "Main Epipelagic Theta Correspondence Theorem",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_theorem.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Main Epipelagic Theta Correspondence Theorem</h1>\n<p>For the non-exceptional type I dual pairs appearing in the rank list of the paper, let \\((x,\\lambda)\\) and \\((x',\\lambda')\\) be epipelagic data without the stabilizer characters. If the residual moment-map condition holds, then for every character \\(\\chi\\) of \\(S_\\lambda\\),\n\\[\n\\theta(\\pi_x(\\lambda,\\chi))=\\pi_{x'}(\\lambda',\\chi^\\ast ∘ \\alpha),\n\\]\nwhere \\(\\alpha:S_{\\lambda'}\\to S_\\lambda\\) is the stabilizer homomorphism determined by the geometry of the residual moment-map fiber and \\(\\chi^\\ast\\) is the contragredient character.</p>\n<p>Conversely, if two epipelagic representations correspond under theta, then the residual moment-map condition holds and the target character is \\(\\chi^\\ast ∘ \\alpha\\). In the exceptional case, the same formula holds only for the half of the characters satisfying the additional stabilizer-triviality condition.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.epipelagic_datum",
+      "title": "Epipelagic Datum",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_datum.html"
+    },
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+  "title": "Moment Maps for a Classical Type I Dual Pair",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_moment_maps_classical_dual_pair.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Moment Maps for a Classical Type I Dual Pair</h1>\n<p>Let \\((G,G')=(U(V),U(V'))\\) be a type I reductive dual pair and identify\n\\[\nW=V\\otimes_D V'\\simeq \\operatorname{Hom}_D(V,V').\n\\]\nFor \\(w\\in W\\), let \\(w^\\ast\\in \\operatorname{Hom}_D(V',V)\\) be the adjoint with respect to the two forms. The moment maps are\n\\[\nM:W\\to \\mathbf g,\\qquad M(w)=w^\\ast w,\n\\]\nand\n\\[\nM':W\\to \\mathbf g',\\qquad M'(w)=ww^\\ast.\n\\]\nThey are equivariant for the \\(G\\times G'\\)-action and connect oscillator-model orbits to Moy-Prasad data on both sides of the dual pair.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "title": "Positive Depth Moment Map Surjectivity",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_moment_map_surjectivity.html"
+    }
+  ],
+  "lean_refs": []
+}

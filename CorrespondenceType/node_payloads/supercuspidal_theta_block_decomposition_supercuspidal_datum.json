@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+  "title": "Block Decomposition of a Supercuspidal Datum",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_supercuspidal_datum.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Block Decomposition of a Supercuspidal Datum</h1>\n<p>Let \\(\\Sigma=(x,\\Gamma,\\phi,\\rho)\\) be a supercuspidal datum. Group the field factors of \\(F^0[\\Gamma]\\) by the positive numbers\n\\[\nr_b&gt;\\ldots&gt;r_1&gt;0\n\\]\nobtained from the negative valuations of the components of \\(\\Gamma\\), and put the nonnegative-depth and zero components into a separate block. This yields orthogonal decompositions\n\\[\nV=\\bigoplus_{l=0}^{b}V_l,\\qquad \\Gamma=\\bigoplus_{l=0}^{b}\\Gamma_l,\n\\]\nwith compatible decompositions of the centralizer, building point, character, and finite reductive quotient representation.</p>\n<p>The resulting data\n\\[\n\\Sigma_l=(x_l,\\Gamma_l,\\phi_l,\\rho_l)\n\\]\nare single blocks, with positive depths \\(r_l\\) for \\(l&gt;0\\) and a zero-depth block for \\(l=0\\). The notation\n\\[\n\\Sigma=\\bigoplus_{l=0}^{b}\\Sigma_l\n\\]\nis the block decomposition of \\(\\Sigma\\). It is unique up to the equivalence of data used in the paper.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "title": "Single Block Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.direct_sum_supercuspidal_data",
+      "title": "Direct Sum of Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_direct_sum_supercuspidal_data.html"
+    },
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    }
+  ],
+  "lean_refs": []
+}

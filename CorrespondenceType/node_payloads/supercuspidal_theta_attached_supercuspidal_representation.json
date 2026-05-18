@@ -1,0 +1,22 @@
+{
+  "id": "supercuspidal_theta.attached_supercuspidal_representation",
+  "title": "Supercuspidal Representation Attached to a Datum",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Supercuspidal Representation Attached to a Datum</h1>\n<p>Let \\(\\Sigma=(x,\\Gamma,\\phi,\\rho)\\) be a supercuspidal datum and choose a good factorization of \\(\\Gamma\\). The construction defines compact subgroups\n\\[\nK^i,\\qquad K_{0+}^i,\\qquad K_+^i\n\\]\nfrom the Moy-Prasad groups of the Levi sequence \\(G^i\\). The character \\(\\phi\\) extends to \\(G_x^0K_+\\), and the positive-depth factors produce a canonical irreducible representation \\(\\kappa\\) of \\(K=K^d\\) whose restriction to \\(K_+\\) is \\(\\Gamma\\)-isotypic.</p>\n<p>The \\(K\\)-type attached to \\(\\Sigma\\) is\n\\[\n\\eta_\\Sigma=\\rho\\otimes\\kappa,\n\\]\nwhere \\(\\rho\\) is inflated from \\(G_x^0/G_{x,0+}^0\\). The representation attached to the datum is the compact induction\n\\[\n\\pi_\\Sigma=\\operatorname{c-Ind}_{K}^{G}\\eta_\\Sigma.\n\\]\nUnder the paper's large residual characteristic hypotheses, Yu's construction and Kim's exhaustion theorem identify these representations with the tame supercuspidal representations of \\(G\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum",
+      "title": "Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

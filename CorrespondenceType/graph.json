@@ -1,6 +1,162 @@
 {
   "nodes": [
     {
+      "id": "epipelagic_theta.epipelagic_datum",
+      "title": "Epipelagic Datum",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "supercuspidal",
+        "type"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_point"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_rank_restriction",
+        "epipelagic_theta.epipelagic_theta_main_theorem",
+        "epipelagic_theta.residual_moment_map_condition"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_point",
+      "title": "Epipelagic Point",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "moy-prasad",
+        "building"
+      ],
+      "topic": "epipelagic_theta",
+      "used_by": [
+        "epipelagic_theta.epipelagic_datum"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_rank_restriction",
+      "title": "Rank Restrictions for Epipelagic Theta Lifts",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "rank-restriction",
+        "theta-correspondence"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_datum",
+        "epipelagic_theta.residual_moment_map_condition"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "title": "Main Epipelagic Theta Correspondence Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "theta-correspondence",
+        "main-theorem"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_datum",
+        "epipelagic_theta.residual_moment_map_condition"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.lattice_function",
+      "title": "Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "building",
+        "moy-prasad"
+      ],
+      "topic": "epipelagic_theta",
+      "used_by": [
+        "epipelagic_theta.self_dual_lattice_function",
+        "epipelagic_theta.tensor_product_lattice_function"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.moment_maps_classical_dual_pair",
+      "title": "Moment Maps for a Classical Type I Dual Pair",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "moment-map",
+        "theta-correspondence",
+        "type-i-dual-pair"
+      ],
+      "topic": "epipelagic_theta",
+      "used_by": [
+        "epipelagic_theta.residual_moment_map_condition",
+        "supercuspidal_theta.positive_depth_moment_map_surjectivity"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "moment-map",
+        "theta-correspondence"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_datum",
+        "epipelagic_theta.moment_maps_classical_dual_pair",
+        "epipelagic_theta.tensor_product_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_rank_restriction",
+        "epipelagic_theta.epipelagic_theta_main_theorem"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "self-dual",
+        "classical-group"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.lattice_function"
+      ],
+      "used_by": [
+        "supercuspidal_theta.generalized_lattice_model"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "tensor-product",
+        "oscillator-representation"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.residual_moment_map_condition"
+      ]
+    },
+    {
       "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
       "title": "Finite Heisenberg Central Character Criterion",
       "kind": "lemma",
@@ -261,11 +417,425 @@
       "used_by": [
         "finite_field_weil.unitary_direct_sum_tensor",
         "finite_field_weil.unitary_fixed_point_absolute_character",
-        "finite_field_weil.unitary_weil_character_formula"
+        "finite_field_weil.unitary_weil_character_formula",
+        "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.attached_supercuspidal_representation",
+      "title": "Supercuspidal Representation Attached to a Datum",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "yu-data",
+        "supercuspidal",
+        "compact-induction"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.supercuspidal_datum"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "title": "Block Decomposition of a Supercuspidal Datum",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.single_block_supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.direct_sum_supercuspidal_data",
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum",
+      "title": "Supercuspidal Datum for a Covering Group",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "covering-group",
+        "metaplectic-cover",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+        "supercuspidal_theta.supercuspidal_theta_main_theorem"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "title": "Equivalence of Covering Supercuspidal Data",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "covering-group",
+        "equivalence",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.supercuspidal_datum_equivalence"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.depth_preservation_building_sum",
+      "title": "Building Sum Formula for Depth Preservation",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "depth-preservation",
+        "generalized-lattice-model",
+        "theta-correspondence"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.generalized_lattice_model"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.depth_zero_k_type",
+      "title": "Depth Zero K Type",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "depth-zero",
+        "k-type",
+        "finite-reductive-quotient"
+      ],
+      "topic": "supercuspidal_theta",
+      "used_by": [
+        "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.direct_sum_supercuspidal_data",
+      "title": "Direct Sum of Supercuspidal Data",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "direct-sum",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+      "title": "Depth Zero Theta Lift via Finite Fields",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "depth-zero",
+        "theta-correspondence",
+        "finite-field"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "finite_field_weil.unitary_weil_representation",
+        "supercuspidal_theta.depth_zero_k_type"
+      ],
+      "used_by": [
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.first_occurrence_index",
+      "title": "First Occurrence Index",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "first-occurrence",
+        "theta-correspondence",
+        "witt-tower"
+      ],
+      "topic": "supercuspidal_theta",
+      "used_by": [
+        "supercuspidal_theta.supercuspidal_theta_main_theorem"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "generalized-lattice-model",
+        "oscillator-representation",
+        "metaplectic-cover"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "epipelagic_theta.self_dual_lattice_function"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.depth_preservation_building_sum",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.good_factorization",
+      "title": "Good Factorization of a Semisimple Element",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "yu-data",
+        "good-factorization",
+        "semisimple-element"
+      ],
+      "topic": "supercuspidal_theta",
+      "used_by": [
+        "supercuspidal_theta.supercuspidal_datum"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.k_type_datum_theta_lift",
+      "title": "Theta Lift of a K Type Datum",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "k-type",
+        "theta-correspondence",
+        "data-lift"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "k-type",
+        "oscillator-representation",
+        "main-theorem"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "title": "Positive Depth Moment Map Surjectivity",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "moment-map",
+        "lattice-model"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "epipelagic_theta.moment_maps_classical_dual_pair",
+        "supercuspidal_theta.positive_depth_space_v_gamma"
+      ],
+      "used_by": [
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_space_v_gamma",
+      "title": "Positive Depth Space V Gamma",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "hermitian-space",
+        "moment-map"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.single_block_supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "title": "Single Block Supercuspidal Datum",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+        "supercuspidal_theta.positive_depth_space_v_gamma",
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "theta-correspondence",
+        "data-lift"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+        "supercuspidal_theta.positive_depth_space_v_gamma",
+        "supercuspidal_theta.single_block_supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum",
+      "title": "Supercuspidal Datum",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "yu-data",
+        "supercuspidal",
+        "p-adic-classical-groups"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.good_factorization"
+      ],
+      "used_by": [
+        "supercuspidal_theta.attached_supercuspidal_representation",
+        "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.single_block_supercuspidal_datum",
+        "supercuspidal_theta.supercuspidal_datum_equivalence"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_datum_equivalence",
+      "title": "Equivalence of Supercuspidal Data",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "yu-data",
+        "equivalence",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "title": "Main Supercuspidal Theta Correspondence Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "theta-correspondence",
+        "supercuspidal",
+        "main-theorem"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.first_occurrence_index",
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "theta-correspondence",
+        "supercuspidal",
+        "data-lift"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+        "supercuspidal_theta.direct_sum_supercuspidal_data",
+        "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ],
+      "used_by": [
+        "supercuspidal_theta.k_type_datum_theta_lift",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
     }
   ],
   "edges": [
+    {
+      "from": "epipelagic_theta.epipelagic_datum",
+      "to": "epipelagic_theta.epipelagic_point"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_rank_restriction",
+      "to": "epipelagic_theta.epipelagic_datum"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_rank_restriction",
+      "to": "epipelagic_theta.residual_moment_map_condition"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.epipelagic_datum"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "to": "epipelagic_theta.residual_moment_map_condition"
+    },
+    {
+      "from": "epipelagic_theta.residual_moment_map_condition",
+      "to": "epipelagic_theta.epipelagic_datum"
+    },
+    {
+      "from": "epipelagic_theta.residual_moment_map_condition",
+      "to": "epipelagic_theta.moment_maps_classical_dual_pair"
+    },
+    {
+      "from": "epipelagic_theta.residual_moment_map_condition",
+      "to": "epipelagic_theta.tensor_product_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.self_dual_lattice_function",
+      "to": "epipelagic_theta.lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.tensor_product_lattice_function",
+      "to": "epipelagic_theta.lattice_function"
+    },
     {
       "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
       "to": "finite_field_weil.finite_heisenberg_central_character_criterion"
@@ -345,6 +915,126 @@
     {
       "from": "finite_field_weil.unitary_weil_representation",
       "to": "finite_field_weil.unitary_heisenberg_group"
+    },
+    {
+      "from": "supercuspidal_theta.attached_supercuspidal_representation",
+      "to": "supercuspidal_theta.supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "to": "supercuspidal_theta.single_block_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.covering_supercuspidal_datum",
+      "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.covering_supercuspidal_datum",
+      "to": "supercuspidal_theta.supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "to": "supercuspidal_theta.covering_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "to": "supercuspidal_theta.supercuspidal_datum_equivalence"
+    },
+    {
+      "from": "supercuspidal_theta.depth_preservation_building_sum",
+      "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.direct_sum_supercuspidal_data",
+      "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+      "to": "finite_field_weil.unitary_weil_representation"
+    },
+    {
+      "from": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+      "to": "supercuspidal_theta.depth_zero_k_type"
+    },
+    {
+      "from": "supercuspidal_theta.generalized_lattice_model",
+      "to": "epipelagic_theta.self_dual_lattice_function"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_datum_theta_lift",
+      "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "to": "epipelagic_theta.moment_maps_classical_dual_pair"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "to": "supercuspidal_theta.positive_depth_space_v_gamma"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_space_v_gamma",
+      "to": "supercuspidal_theta.single_block_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "to": "supercuspidal_theta.supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "to": "supercuspidal_theta.positive_depth_moment_map_surjectivity"
+    },
+    {
+      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "to": "supercuspidal_theta.positive_depth_space_v_gamma"
+    },
+    {
+      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "to": "supercuspidal_theta.single_block_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_datum",
+      "to": "supercuspidal_theta.good_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_datum_equivalence",
+      "to": "supercuspidal_theta.supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "to": "supercuspidal_theta.covering_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "to": "supercuspidal_theta.first_occurrence_index"
+    },
+    {
+      "from": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+    },
+    {
+      "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "to": "supercuspidal_theta.direct_sum_supercuspidal_data"
+    },
+    {
+      "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "to": "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
     }
   ]
 }
