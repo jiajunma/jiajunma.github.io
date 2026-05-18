@@ -1,0 +1,48 @@
+{
+  "id": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+  "title": "Converse Off-Diagonal Oscillator Factorization",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_converse_off_diagonal_oscillator_factorization.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Converse Off-Diagonal Oscillator Factorization</h1>\n<p>In the converse proof, before the full target \\(K'\\)-datum is fixed, the off-diagonal oscillator module satisfies\n\\[\n{}^\\boxminus\\omega\\simeq\n{}^\\boxminus\\kappa\\otimes S({}^\\boxminus b_K^\\perp)\n\\]\nas a module for the available block-diagonal stabilizer and off-diagonal Yu subgroup. Equivalently it is a direct sum of copies of \\({}^\\boxminus\\kappa\\). The block-diagonal action factors as\n\\[\n{}^\\boxplus\\omega_{S_K}={}^b\\omega_{S_K}\\otimes{}^a\\omega_{S_K},\n\\]\nand the total translated action factors as\n\\[\n\\omega_{S_K}={}^\\boxplus\\omega_{S_K}\\otimes{}^\\boxminus\\omega.\n\\]</p>",
+  "proof_html": "<p>The proof repeats Lemmas 8.4-8.6 with only the source \\(K\\)-side fixed. The off-diagonal map is injective and symplectic; its image has orthogonal complement \\({}^\\boxminus b_K^\\perp\\). The finite oscillator representation restricts to the tensor product of the Heisenberg-Weil representation on the image and the oscillator representation on the complement, giving the stated multiplicity. The same block-diagonal/off-diagonal calculation as Lemma 8.6 gives the factorization of the translated action.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.block_induction_setup",
+      "title": "Block Induction Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_induction_setup.html"
+    },
+    {
+      "id": "supercuspidal_theta.target_lattice_block_splitting",
+      "title": "Target Lattice Block Splitting",
+      "href": "supercuspidal_theta/supercuspidal_theta_target_lattice_block_splitting.html"
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "title": "Off-Diagonal Block Isomorphism",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_block_isomorphism.html"
+    },
+    {
+      "id": "supercuspidal_theta.block_oscillator_action_factorization",
+      "title": "Block Oscillator Action Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_action_factorization.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.exhaustion_proof_plan",
+      "title": "Proof Plan for Converse Exhaustion",
+      "href": "supercuspidal_theta/supercuspidal_theta_exhaustion_proof_plan.html"
+    },
+    {
+      "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "title": "Refined K-Type Occurrence Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_refined_k_type_occurrence_proposition.html"
+    }
+  ],
+  "lean_refs": []
+}

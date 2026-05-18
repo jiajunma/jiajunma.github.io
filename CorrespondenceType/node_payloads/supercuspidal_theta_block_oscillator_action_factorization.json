@@ -1,0 +1,48 @@
+{
+  "id": "supercuspidal_theta.block_oscillator_action_factorization",
+  "title": "Block Oscillator Action Factorization",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_action_factorization.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Block Oscillator Action Factorization</h1>\n<p>Under the residual decomposition\n\\[\nS(b)=S({}^\\boxplus b)\\otimes S({}^\\boxminus b),\n\\]\nthe translated orbit representation factors as\n\\[\n\\omega_w={}^\\boxplus\\omega_S\\otimes{}^\\boxminus\\omega\n\\]\nas a module for \\({}^\\boxplus S\\ltimes{}^\\boxminus J_M\\).</p>",
+  "proof_html": "<p>For \\(h\\in{}^\\boxplus S\\), the displacement \\(h^{-1}w-w\\) lies in the block-diagonal lattice quotient, so the generalized lattice-model formula acts only on \\(S({}^\\boxplus b)\\), while the off-diagonal factor is the pulled-back linear action. For \\(h\\in{}^\\boxminus J_M\\), the linear action on \\(S({}^\\boxplus b)\\) is trivial and the translation lies in \\({}^\\boxminus b\\), giving exactly \\({}^\\boxminus\\omega\\). These two cases generate the semidirect product.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.theta_block_decomposition_setup",
+      "title": "Theta Block Decomposition Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_block_decomposition_setup.html"
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "title": "Off-Diagonal Kappa-Oscillator Identification",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_kappa_oscillator_identification.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.block_oscillator_factorization",
+      "title": "Block Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "title": "Converse Off-Diagonal Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_converse_off_diagonal_oscillator_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "title": "Proof Plan for Orbit Intertwining",
+      "href": "supercuspidal_theta/supercuspidal_theta_orbit_intertwining_proof_plan.html"
+    }
+  ],
+  "lean_refs": []
+}

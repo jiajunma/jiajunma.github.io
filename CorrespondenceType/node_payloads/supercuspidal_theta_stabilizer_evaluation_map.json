@@ -1,0 +1,53 @@
+{
+  "id": "supercuspidal_theta.stabilizer_evaluation_map",
+  "title": "Stabilizer Evaluation Map Calculation",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_evaluation_map.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Stabilizer Evaluation Map Calculation</h1>\n<p>For the one-block stabilizer \\(S\\), evaluation at \\(1\\) gives an isomorphism\n\\[\n\\operatorname{Ind}_S^{S K_{M,+}}\\omega_w[\\chi_M|_{K_{M,+}}]\n\\simeq S(b)^{b_C}.\n\\]\nUnder \\(S(b)^{b_C}\\simeq S(b_0)\\), the translated \\(S K_{M,+}\\)-action is:</p>\n<ul>\n<li>elements in the positive-depth \\(\\Delta^j K_{M,+}\\)-factors act by the character \\(\\chi_M\\);</li>\n<li>elements of \\(G_{x,s}\\times G'_{x',s}\\) act by \\(\\chi_M\\) times the Heisenberg operator attached to their image in \\(b_0\\);</li>\n<li>\\(\\Delta^0\\) acts through the residual Weil representation on \\(b_0\\).</li>\n</ul>\n<p>Consequently,\n\\[\n\\operatorname{Ind}_S^{\\Delta^0K_{M,0+}}\\omega_w[\\chi_M|_{K_{M,+}}]\n\\simeq \\kappa_M|_{\\Delta^0K_{M,0+}}.\n\\]</p>",
+  "proof_html": "<p>Frobenius reciprocity reduces the evaluation map to the \\(\\chi_M\\)-isotypic component for \\(S\\cap K_{M,+}\\). Lemma 7.3 gives the action of each stabilizer factor. The \\(G_{x,s}\\times G'_{x',s}\\) factors generate the isotropic subspace \\(b_C\\), so the isotypic component is exactly \\(S(b)^{b_C}\\). Gérardin's mixed model identifies this invariant space with \\(S(b_0)\\), and Lemma 6.10 removes the determinant character on \\(\\Delta^0\\). Lemma 7.5 supplies the final one-dimensional Hom calculation against \\(\\kappa_M\\), giving the induced-module isomorphism.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.compact_normal_isotypic_induction",
+      "title": "Isotypic Components Commute with Compact Induction",
+      "href": "supercuspidal_theta/supercuspidal_theta_compact_normal_isotypic_induction.html"
+    },
+    {
+      "id": "supercuspidal_theta.stabilizer_orbit_action_formula",
+      "title": "Stabilizer Orbit Action Formula",
+      "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_orbit_action_formula.html"
+    },
+    {
+      "id": "supercuspidal_theta.graph_radical_quotient",
+      "title": "Graph Radical Quotient",
+      "href": "supercuspidal_theta/supercuspidal_theta_graph_radical_quotient.html"
+    },
+    {
+      "id": "supercuspidal_theta.triviality_of_bc_character",
+      "title": "Triviality of the bC Character",
+      "href": "supercuspidal_theta/supercuspidal_theta_triviality_of_bc_character.html"
+    },
+    {
+      "id": "supercuspidal_theta.kappa_factor_hom_triviality",
+      "title": "Kappa Factor Hom Triviality",
+      "href": "supercuspidal_theta/supercuspidal_theta_kappa_factor_hom_triviality.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "title": "One-Block Orbit K-Type Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_orbit_k_type_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.stabilizer_induced_module_calculation",
+      "title": "Stabilizer Induced Module Calculation",
+      "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_induced_module_calculation.html"
+    }
+  ],
+  "lean_refs": []
+}

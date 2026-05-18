@@ -9,35 +9,19 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Block Oscillator Factorization</h1>\n<p>For the block decomposition \\(W=\\boxplus W\\oplus\\boxminus W\\), the finite oscillator representation and the stabilizer action factor as\n\\[\n\\omega_w=\\omega_{\\boxplus S}\\otimes \\omega_{\\boxminus}.\n\\]\nThe off-diagonal factor \\(\\omega_{\\boxminus}\\) is isomorphic to the off-diagonal Heisenberg-Weil factor \\(\\kappa_{\\boxminus}\\).</p>",
-  "proof_html": "<p>The generalized lattice model decomposes according to the orthogonal direct sum of residual symplectic spaces. Lemma 8.4 identifies the off-diagonal Lie layer with the off-diagonal residual oscillator space, and the same phase computation as in the one-block case identifies the pulled-back oscillator action with the Heisenberg-Weil factor. The block-diagonal part is exactly the product of the top-block and lower-block lattice models.</p>",
+  "proof_html": "<p>This is the aggregate of Lemma 8.5 and Lemma 8.6. Lemma 8.5 identifies the off-diagonal oscillator action with the off-diagonal Yu \\(\\kappa\\)-factor. Lemma 8.6 factors the translated orbit representation into its block-diagonal and off-diagonal tensor factors.</p>",
   "deps": [
     {
-      "id": "supercuspidal_theta.off_diagonal_block_isomorphism",
-      "title": "Off-Diagonal Block Isomorphism",
-      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_block_isomorphism.html"
+      "id": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "title": "Off-Diagonal Kappa-Oscillator Identification",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_kappa_oscillator_identification.html"
     },
     {
-      "id": "supercuspidal_theta.generalized_lattice_model",
-      "title": "Generalized Lattice Model",
-      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+      "id": "supercuspidal_theta.block_oscillator_action_factorization",
+      "title": "Block Oscillator Action Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_action_factorization.html"
     }
   ],
-  "dependents": [
-    {
-      "id": "supercuspidal_theta.exhaustion_proof_plan",
-      "title": "Proof Plan for Converse Exhaustion",
-      "href": "supercuspidal_theta/supercuspidal_theta_exhaustion_proof_plan.html"
-    },
-    {
-      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-      "title": "Orbit Intertwining Proposition for the Main Theorem",
-      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
-    },
-    {
-      "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
-      "title": "Proof Plan for Orbit Intertwining",
-      "href": "supercuspidal_theta/supercuspidal_theta_orbit_intertwining_proof_plan.html"
-    }
-  ],
+  "dependents": [],
   "lean_refs": []
 }

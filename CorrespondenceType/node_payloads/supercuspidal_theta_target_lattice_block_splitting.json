@@ -1,0 +1,48 @@
+{
+  "id": "supercuspidal_theta.target_lattice_block_splitting",
+  "title": "Target Lattice Block Splitting",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_target_lattice_block_splitting.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Target Lattice Block Splitting</h1>\n<p>Let \\(L'\\) be the lattice function attached to the target point \\(x''\\), and set\n\\[\n{}^iL'_t=L'_t\\cap{}^iV'\\qquad i=b,a.\n\\]\nThen\n\\[\n{}^bL'_t={}^bw({}^bL_{t+s}),\n\\qquad\nL'={}^bL'\\oplus{}^aL',\n\\]\nand \\({}^aL'\\) is self-dual.</p>",
+  "proof_html": "<p>The first identity follows from the one-block lattice transfer lemma applied to the top block, together with the inclusion \\(w\\in B_{x,x'',s}\\) and duality in \\({}^bV'\\). For the direct-sum statement, decompose \\(v\\in L'_t\\) into its \\({}^bV'\\)- and \\({}^aV'\\)-components and use the dual lattice inequalities to place each component in the corresponding block lattice. Self-duality of \\(L'\\) and of \\({}^bL'\\) then forces self-duality of \\({}^aL'\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.target_top_block_nondegenerate_splitting",
+      "title": "Target Top Block Nondegenerate Splitting",
+      "href": "supercuspidal_theta/supercuspidal_theta_target_top_block_nondegenerate_splitting.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_block_lattice_transfer",
+      "title": "Single-Block Lattice Transfer",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_lattice_transfer.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "title": "Converse Off-Diagonal Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_converse_off_diagonal_oscillator_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.exhaustion_proof_plan",
+      "title": "Proof Plan for Converse Exhaustion",
+      "href": "supercuspidal_theta/supercuspidal_theta_exhaustion_proof_plan.html"
+    },
+    {
+      "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "title": "Refined K-Type Occurrence Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_refined_k_type_occurrence_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.target_block_splitting_lemma",
+      "title": "Target Block Splitting Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_target_block_splitting_lemma.html"
+    }
+  ],
+  "lean_refs": []
+}

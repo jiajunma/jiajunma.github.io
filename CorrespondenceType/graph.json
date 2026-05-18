@@ -853,10 +853,56 @@
       ],
       "used_by": [
         "supercuspidal_theta.block_decomposition_proposition",
+        "supercuspidal_theta.block_induction_setup",
         "supercuspidal_theta.direct_sum_proof",
         "supercuspidal_theta.direct_sum_supercuspidal_data",
-        "supercuspidal_theta.off_diagonal_block_isomorphism",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.block_induction_setup",
+      "title": "Block Induction Setup",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "induction",
+        "yu-data"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+        "supercuspidal_theta.yu_kappa_construction"
+      ],
+      "used_by": [
+        "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.occurrence_vector_choice",
+        "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+        "supercuspidal_theta.orbit_intertwining_proof_plan",
+        "supercuspidal_theta.theta_block_decomposition_setup"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.block_oscillator_action_factorization",
+      "title": "Block Oscillator Action Factorization",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "oscillator-representation",
+        "induction"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+        "supercuspidal_theta.theta_block_decomposition_setup"
+      ],
+      "used_by": [
+        "supercuspidal_theta.block_oscillator_factorization",
+        "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.orbit_intertwining_proof_plan"
       ]
     },
     {
@@ -871,13 +917,8 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.generalized_lattice_model",
-        "supercuspidal_theta.off_diagonal_block_isomorphism"
-      ],
-      "used_by": [
-        "supercuspidal_theta.exhaustion_proof_plan",
-        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-        "supercuspidal_theta.orbit_intertwining_proof_plan"
+        "supercuspidal_theta.block_oscillator_action_factorization",
+        "supercuspidal_theta.off_diagonal_kappa_oscillator_identification"
       ]
     },
     {
@@ -897,6 +938,43 @@
       ],
       "used_by": [
         "supercuspidal_theta.k_type_datum_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.compact_normal_isotypic_induction",
+      "title": "Isotypic Components Commute with Compact Induction",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "compact-induction",
+        "k-type",
+        "representation-theory"
+      ],
+      "topic": "supercuspidal_theta",
+      "used_by": [
+        "supercuspidal_theta.stabilizer_evaluation_map"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "title": "Converse Off-Diagonal Oscillator Factorization",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "converse",
+        "off-diagonal",
+        "oscillator-representation"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_induction_setup",
+        "supercuspidal_theta.block_oscillator_action_factorization",
+        "supercuspidal_theta.off_diagonal_block_isomorphism",
+        "supercuspidal_theta.target_lattice_block_splitting"
+      ],
+      "used_by": [
+        "supercuspidal_theta.exhaustion_proof_plan",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition"
       ]
     },
     {
@@ -1296,10 +1374,11 @@
       "plan_status": "selected",
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.block_oscillator_factorization",
+        "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
         "supercuspidal_theta.occurrence_vector_choice",
         "supercuspidal_theta.single_positive_depth_lift_well_defined",
-        "supercuspidal_theta.target_block_splitting_lemma"
+        "supercuspidal_theta.target_lattice_block_splitting",
+        "supercuspidal_theta.target_top_block_nondegenerate_splitting"
       ]
     },
     {
@@ -1389,7 +1468,6 @@
         "epipelagic_theta.self_dual_lattice_function"
       ],
       "used_by": [
-        "supercuspidal_theta.block_oscillator_factorization",
         "supercuspidal_theta.covering_supercuspidal_datum",
         "supercuspidal_theta.depth_preservation_building_sum",
         "supercuspidal_theta.depth_zero_pan_theorem",
@@ -1468,6 +1546,7 @@
       ],
       "used_by": [
         "supercuspidal_theta.graph_isometry_and_radical",
+        "supercuspidal_theta.stabilizer_evaluation_map",
         "supercuspidal_theta.triviality_of_bc_character"
       ]
     },
@@ -1502,15 +1581,38 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.block_oscillator_factorization",
+        "supercuspidal_theta.block_induction_setup",
+        "supercuspidal_theta.block_oscillator_action_factorization",
         "supercuspidal_theta.generalized_lattice_model",
-        "supercuspidal_theta.off_diagonal_block_isomorphism",
+        "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
         "supercuspidal_theta.one_block_orbit_k_type_proposition",
+        "supercuspidal_theta.theta_block_decomposition_setup",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
       ],
       "used_by": [
         "supercuspidal_theta.main_supercuspidal_proof_plan",
         "supercuspidal_theta.supercuspidal_theta_main_theorem"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.kappa_factor_hom_triviality",
+      "title": "Kappa Factor Hom Triviality",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "kappa",
+        "heisenberg-weil",
+        "positive-depth"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.maximal_isotropic_delta_subspace",
+        "supercuspidal_theta.triviality_of_bc_character",
+        "supercuspidal_theta.yu_kappa_construction"
+      ],
+      "used_by": [
+        "supercuspidal_theta.stabilizer_evaluation_map",
+        "supercuspidal_theta.stabilizer_induced_module_calculation"
       ]
     },
     {
@@ -1530,7 +1632,7 @@
         "supercuspidal_theta.single_block_stabilizer_structure"
       ],
       "used_by": [
-        "supercuspidal_theta.one_block_orbit_k_type_proposition"
+        "supercuspidal_theta.stabilizer_orbit_action_formula"
       ]
     },
     {
@@ -1607,7 +1709,7 @@
         "supercuspidal_theta.one_block_stabilizer_notation"
       ],
       "used_by": [
-        "supercuspidal_theta.stabilizer_induced_module_calculation"
+        "supercuspidal_theta.kappa_factor_hom_triviality"
       ]
     },
     {
@@ -1681,12 +1783,13 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.depth_preservation_building_sum",
-        "supercuspidal_theta.refined_k_type_occurrence_proposition"
+        "supercuspidal_theta.block_induction_setup",
+        "supercuspidal_theta.depth_preservation_building_sum"
       ],
       "used_by": [
         "supercuspidal_theta.exhaustion_proof_plan",
-        "supercuspidal_theta.target_block_splitting_lemma"
+        "supercuspidal_theta.refined_k_type_occurrence_proposition",
+        "supercuspidal_theta.target_top_block_nondegenerate_splitting"
       ]
     },
     {
@@ -1701,12 +1804,35 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.block_decomposition_supercuspidal_datum",
-        "supercuspidal_theta.single_positive_depth_theta_lift"
+        "supercuspidal_theta.single_positive_depth_theta_lift",
+        "supercuspidal_theta.theta_block_decomposition_setup"
       ],
       "used_by": [
+        "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+        "supercuspidal_theta.off_diagonal_kappa_oscillator_identification"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "title": "Off-Diagonal Kappa-Oscillator Identification",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "off-diagonal",
+        "kappa",
+        "oscillator-representation"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_induction_setup",
+        "supercuspidal_theta.off_diagonal_block_isomorphism",
+        "supercuspidal_theta.theta_block_decomposition_setup"
+      ],
+      "used_by": [
+        "supercuspidal_theta.block_oscillator_action_factorization",
         "supercuspidal_theta.block_oscillator_factorization",
-        "supercuspidal_theta.k_type_orbit_intertwining_proposition"
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.orbit_intertwining_proof_plan"
       ]
     },
     {
@@ -1721,15 +1847,12 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.key_oscillator_character_identity",
-        "supercuspidal_theta.single_block_stabilizer_structure",
         "supercuspidal_theta.single_positive_depth_theta_lift",
-        "supercuspidal_theta.triviality_of_bc_character"
+        "supercuspidal_theta.stabilizer_evaluation_map"
       ],
       "used_by": [
         "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-        "supercuspidal_theta.orbit_intertwining_proof_plan",
-        "supercuspidal_theta.stabilizer_induced_module_calculation"
+        "supercuspidal_theta.orbit_intertwining_proof_plan"
       ]
     },
     {
@@ -1788,8 +1911,11 @@
       "plan_status": "selected",
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.block_oscillator_factorization",
-        "supercuspidal_theta.one_block_orbit_k_type_proposition"
+        "supercuspidal_theta.block_induction_setup",
+        "supercuspidal_theta.block_oscillator_action_factorization",
+        "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+        "supercuspidal_theta.one_block_orbit_k_type_proposition",
+        "supercuspidal_theta.theta_block_decomposition_setup"
       ]
     },
     {
@@ -1942,13 +2068,16 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
         "supercuspidal_theta.depth_preservation_building_sum",
-        "supercuspidal_theta.k_type_datum_theta_lift"
+        "supercuspidal_theta.k_type_datum_theta_lift",
+        "supercuspidal_theta.occurrence_vector_choice",
+        "supercuspidal_theta.target_lattice_block_splitting",
+        "supercuspidal_theta.target_top_block_nondegenerate_splitting"
       ],
       "used_by": [
         "supercuspidal_theta.main_supercuspidal_proof_plan",
         "supercuspidal_theta.metaplectic_covering_data_exhaustion",
-        "supercuspidal_theta.occurrence_vector_choice",
         "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
     },
@@ -1986,8 +2115,8 @@
         "supercuspidal_theta.positive_depth_moment_map_surjectivity",
         "supercuspidal_theta.positive_depth_target_lattice_orbit",
         "supercuspidal_theta.single_positive_depth_theta_lift",
-        "supercuspidal_theta.target_block_splitting_lemma",
-        "supercuspidal_theta.target_good_factorization_transport"
+        "supercuspidal_theta.target_good_factorization_transport",
+        "supercuspidal_theta.target_lattice_block_splitting"
       ]
     },
     {
@@ -2007,7 +2136,7 @@
       ],
       "used_by": [
         "supercuspidal_theta.key_oscillator_character_identity",
-        "supercuspidal_theta.one_block_orbit_k_type_proposition"
+        "supercuspidal_theta.stabilizer_orbit_action_formula"
       ]
     },
     {
@@ -2080,6 +2209,29 @@
       ]
     },
     {
+      "id": "supercuspidal_theta.stabilizer_evaluation_map",
+      "title": "Stabilizer Evaluation Map Calculation",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "stabilizer",
+        "k-type",
+        "heisenberg-weil"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.compact_normal_isotypic_induction",
+        "supercuspidal_theta.graph_radical_quotient",
+        "supercuspidal_theta.kappa_factor_hom_triviality",
+        "supercuspidal_theta.stabilizer_orbit_action_formula",
+        "supercuspidal_theta.triviality_of_bc_character"
+      ],
+      "used_by": [
+        "supercuspidal_theta.one_block_orbit_k_type_proposition",
+        "supercuspidal_theta.stabilizer_induced_module_calculation"
+      ]
+    },
+    {
       "id": "supercuspidal_theta.stabilizer_induced_module_calculation",
       "title": "Stabilizer Induced Module Calculation",
       "kind": "lemma",
@@ -2091,8 +2243,27 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.maximal_isotropic_delta_subspace",
-        "supercuspidal_theta.one_block_orbit_k_type_proposition"
+        "supercuspidal_theta.kappa_factor_hom_triviality",
+        "supercuspidal_theta.stabilizer_evaluation_map"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.stabilizer_orbit_action_formula",
+      "title": "Stabilizer Orbit Action Formula",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "stabilizer",
+        "oscillator-representation",
+        "positive-depth"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.key_oscillator_character_identity",
+        "supercuspidal_theta.single_block_stabilizer_structure"
+      ],
+      "used_by": [
+        "supercuspidal_theta.stabilizer_evaluation_map"
       ]
     },
     {
@@ -2169,11 +2340,8 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.occurrence_vector_choice",
-        "supercuspidal_theta.single_block_lattice_transfer"
-      ],
-      "used_by": [
-        "supercuspidal_theta.exhaustion_proof_plan"
+        "supercuspidal_theta.target_lattice_block_splitting",
+        "supercuspidal_theta.target_top_block_nondegenerate_splitting"
       ]
     },
     {
@@ -2197,6 +2365,72 @@
       ]
     },
     {
+      "id": "supercuspidal_theta.target_lattice_block_splitting",
+      "title": "Target Lattice Block Splitting",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "converse",
+        "lattice-function",
+        "block-decomposition"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.single_block_lattice_transfer",
+        "supercuspidal_theta.target_top_block_nondegenerate_splitting"
+      ],
+      "used_by": [
+        "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+        "supercuspidal_theta.exhaustion_proof_plan",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition",
+        "supercuspidal_theta.target_block_splitting_lemma"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.target_top_block_nondegenerate_splitting",
+      "title": "Target Top Block Nondegenerate Splitting",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "converse",
+        "block-decomposition",
+        "hermitian-space"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.occurrence_vector_choice"
+      ],
+      "used_by": [
+        "supercuspidal_theta.exhaustion_proof_plan",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition",
+        "supercuspidal_theta.target_block_splitting_lemma",
+        "supercuspidal_theta.target_lattice_block_splitting"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.theta_block_decomposition_setup",
+      "title": "Theta Block Decomposition Setup",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "oscillator-representation",
+        "induction"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_induction_setup",
+        "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ],
+      "used_by": [
+        "supercuspidal_theta.block_oscillator_action_factorization",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.off_diagonal_block_isomorphism",
+        "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+        "supercuspidal_theta.orbit_intertwining_proof_plan"
+      ]
+    },
+    {
       "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
       "title": "Theta Lift Map on Supercuspidal Data",
       "kind": "definition",
@@ -2217,7 +2451,8 @@
         "supercuspidal_theta.blockwise_moment_map_vector",
         "supercuspidal_theta.k_type_datum_theta_lift",
         "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-        "supercuspidal_theta.supercuspidal_theta_main_theorem"
+        "supercuspidal_theta.supercuspidal_theta_main_theorem",
+        "supercuspidal_theta.theta_block_decomposition_setup"
       ]
     },
     {
@@ -2235,7 +2470,8 @@
         "supercuspidal_theta.graph_radical_quotient"
       ],
       "used_by": [
-        "supercuspidal_theta.one_block_orbit_k_type_proposition"
+        "supercuspidal_theta.kappa_factor_hom_triviality",
+        "supercuspidal_theta.stabilizer_evaluation_map"
       ]
     },
     {
@@ -2254,7 +2490,9 @@
         "supercuspidal_theta.yu_special_isomorphism"
       ],
       "used_by": [
-        "supercuspidal_theta.even_orthogonal_kim_exhaustion"
+        "supercuspidal_theta.block_induction_setup",
+        "supercuspidal_theta.even_orthogonal_kim_exhaustion",
+        "supercuspidal_theta.kappa_factor_hom_triviality"
       ]
     },
     {
@@ -2560,12 +2798,28 @@
       "to": "supercuspidal_theta.single_block_supercuspidal_datum"
     },
     {
-      "from": "supercuspidal_theta.block_oscillator_factorization",
-      "to": "supercuspidal_theta.generalized_lattice_model"
+      "from": "supercuspidal_theta.block_induction_setup",
+      "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.block_induction_setup",
+      "to": "supercuspidal_theta.yu_kappa_construction"
+    },
+    {
+      "from": "supercuspidal_theta.block_oscillator_action_factorization",
+      "to": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification"
+    },
+    {
+      "from": "supercuspidal_theta.block_oscillator_action_factorization",
+      "to": "supercuspidal_theta.theta_block_decomposition_setup"
     },
     {
       "from": "supercuspidal_theta.block_oscillator_factorization",
-      "to": "supercuspidal_theta.off_diagonal_block_isomorphism"
+      "to": "supercuspidal_theta.block_oscillator_action_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.block_oscillator_factorization",
+      "to": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification"
     },
     {
       "from": "supercuspidal_theta.blockwise_moment_map_vector",
@@ -2574,6 +2828,22 @@
     {
       "from": "supercuspidal_theta.blockwise_moment_map_vector",
       "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+    },
+    {
+      "from": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "to": "supercuspidal_theta.block_induction_setup"
+    },
+    {
+      "from": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "to": "supercuspidal_theta.block_oscillator_action_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "to": "supercuspidal_theta.off_diagonal_block_isomorphism"
+    },
+    {
+      "from": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "to": "supercuspidal_theta.target_lattice_block_splitting"
     },
     {
       "from": "supercuspidal_theta.covering_attached_representation",
@@ -2745,7 +3015,7 @@
     },
     {
       "from": "supercuspidal_theta.exhaustion_proof_plan",
-      "to": "supercuspidal_theta.block_oscillator_factorization"
+      "to": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization"
     },
     {
       "from": "supercuspidal_theta.exhaustion_proof_plan",
@@ -2757,7 +3027,11 @@
     },
     {
       "from": "supercuspidal_theta.exhaustion_proof_plan",
-      "to": "supercuspidal_theta.target_block_splitting_lemma"
+      "to": "supercuspidal_theta.target_lattice_block_splitting"
+    },
+    {
+      "from": "supercuspidal_theta.exhaustion_proof_plan",
+      "to": "supercuspidal_theta.target_top_block_nondegenerate_splitting"
     },
     {
       "from": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
@@ -2817,7 +3091,11 @@
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-      "to": "supercuspidal_theta.block_oscillator_factorization"
+      "to": "supercuspidal_theta.block_induction_setup"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "supercuspidal_theta.block_oscillator_action_factorization"
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
@@ -2825,7 +3103,7 @@
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-      "to": "supercuspidal_theta.off_diagonal_block_isomorphism"
+      "to": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification"
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
@@ -2833,7 +3111,23 @@
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "supercuspidal_theta.theta_block_decomposition_setup"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
       "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+    },
+    {
+      "from": "supercuspidal_theta.kappa_factor_hom_triviality",
+      "to": "supercuspidal_theta.maximal_isotropic_delta_subspace"
+    },
+    {
+      "from": "supercuspidal_theta.kappa_factor_hom_triviality",
+      "to": "supercuspidal_theta.triviality_of_bc_character"
+    },
+    {
+      "from": "supercuspidal_theta.kappa_factor_hom_triviality",
+      "to": "supercuspidal_theta.yu_kappa_construction"
     },
     {
       "from": "supercuspidal_theta.key_oscillator_character_identity",
@@ -2901,27 +3195,31 @@
     },
     {
       "from": "supercuspidal_theta.occurrence_vector_choice",
-      "to": "supercuspidal_theta.depth_preservation_building_sum"
+      "to": "supercuspidal_theta.block_induction_setup"
     },
     {
       "from": "supercuspidal_theta.occurrence_vector_choice",
-      "to": "supercuspidal_theta.refined_k_type_occurrence_proposition"
-    },
-    {
-      "from": "supercuspidal_theta.off_diagonal_block_isomorphism",
-      "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+      "to": "supercuspidal_theta.depth_preservation_building_sum"
     },
     {
       "from": "supercuspidal_theta.off_diagonal_block_isomorphism",
       "to": "supercuspidal_theta.single_positive_depth_theta_lift"
     },
     {
-      "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
-      "to": "supercuspidal_theta.key_oscillator_character_identity"
+      "from": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "to": "supercuspidal_theta.theta_block_decomposition_setup"
     },
     {
-      "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
-      "to": "supercuspidal_theta.single_block_stabilizer_structure"
+      "from": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "to": "supercuspidal_theta.block_induction_setup"
+    },
+    {
+      "from": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "to": "supercuspidal_theta.off_diagonal_block_isomorphism"
+    },
+    {
+      "from": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "to": "supercuspidal_theta.theta_block_decomposition_setup"
     },
     {
       "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
@@ -2929,7 +3227,7 @@
     },
     {
       "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
-      "to": "supercuspidal_theta.triviality_of_bc_character"
+      "to": "supercuspidal_theta.stabilizer_evaluation_map"
     },
     {
       "from": "supercuspidal_theta.one_block_section_6_setup",
@@ -2949,11 +3247,23 @@
     },
     {
       "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
-      "to": "supercuspidal_theta.block_oscillator_factorization"
+      "to": "supercuspidal_theta.block_induction_setup"
+    },
+    {
+      "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "to": "supercuspidal_theta.block_oscillator_action_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "to": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification"
     },
     {
       "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
       "to": "supercuspidal_theta.one_block_orbit_k_type_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "to": "supercuspidal_theta.theta_block_decomposition_setup"
     },
     {
       "from": "supercuspidal_theta.ordinary_kappa_multiplicity_space",
@@ -3013,11 +3323,27 @@
     },
     {
       "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "to": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
       "to": "supercuspidal_theta.depth_preservation_building_sum"
     },
     {
       "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
       "to": "supercuspidal_theta.k_type_datum_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "to": "supercuspidal_theta.occurrence_vector_choice"
+    },
+    {
+      "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "to": "supercuspidal_theta.target_lattice_block_splitting"
+    },
+    {
+      "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "to": "supercuspidal_theta.target_top_block_nondegenerate_splitting"
     },
     {
       "from": "supercuspidal_theta.single_block_lattice_transfer",
@@ -3072,12 +3398,40 @@
       "to": "supercuspidal_theta.target_good_factorization_transport"
     },
     {
-      "from": "supercuspidal_theta.stabilizer_induced_module_calculation",
-      "to": "supercuspidal_theta.maximal_isotropic_delta_subspace"
+      "from": "supercuspidal_theta.stabilizer_evaluation_map",
+      "to": "supercuspidal_theta.compact_normal_isotypic_induction"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_evaluation_map",
+      "to": "supercuspidal_theta.graph_radical_quotient"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_evaluation_map",
+      "to": "supercuspidal_theta.kappa_factor_hom_triviality"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_evaluation_map",
+      "to": "supercuspidal_theta.stabilizer_orbit_action_formula"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_evaluation_map",
+      "to": "supercuspidal_theta.triviality_of_bc_character"
     },
     {
       "from": "supercuspidal_theta.stabilizer_induced_module_calculation",
-      "to": "supercuspidal_theta.one_block_orbit_k_type_proposition"
+      "to": "supercuspidal_theta.kappa_factor_hom_triviality"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_induced_module_calculation",
+      "to": "supercuspidal_theta.stabilizer_evaluation_map"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_orbit_action_formula",
+      "to": "supercuspidal_theta.key_oscillator_character_identity"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_orbit_action_formula",
+      "to": "supercuspidal_theta.single_block_stabilizer_structure"
     },
     {
       "from": "supercuspidal_theta.supercuspidal_datum",
@@ -3113,11 +3467,11 @@
     },
     {
       "from": "supercuspidal_theta.target_block_splitting_lemma",
-      "to": "supercuspidal_theta.occurrence_vector_choice"
+      "to": "supercuspidal_theta.target_lattice_block_splitting"
     },
     {
       "from": "supercuspidal_theta.target_block_splitting_lemma",
-      "to": "supercuspidal_theta.single_block_lattice_transfer"
+      "to": "supercuspidal_theta.target_top_block_nondegenerate_splitting"
     },
     {
       "from": "supercuspidal_theta.target_good_factorization_transport",
@@ -3126,6 +3480,26 @@
     {
       "from": "supercuspidal_theta.target_good_factorization_transport",
       "to": "supercuspidal_theta.single_block_lattice_transfer"
+    },
+    {
+      "from": "supercuspidal_theta.target_lattice_block_splitting",
+      "to": "supercuspidal_theta.single_block_lattice_transfer"
+    },
+    {
+      "from": "supercuspidal_theta.target_lattice_block_splitting",
+      "to": "supercuspidal_theta.target_top_block_nondegenerate_splitting"
+    },
+    {
+      "from": "supercuspidal_theta.target_top_block_nondegenerate_splitting",
+      "to": "supercuspidal_theta.occurrence_vector_choice"
+    },
+    {
+      "from": "supercuspidal_theta.theta_block_decomposition_setup",
+      "to": "supercuspidal_theta.block_induction_setup"
+    },
+    {
+      "from": "supercuspidal_theta.theta_block_decomposition_setup",
+      "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
     },
     {
       "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",

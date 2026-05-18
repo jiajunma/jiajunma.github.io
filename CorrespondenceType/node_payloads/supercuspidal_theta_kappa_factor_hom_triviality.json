@@ -1,0 +1,43 @@
+{
+  "id": "supercuspidal_theta.kappa_factor_hom_triviality",
+  "title": "Kappa Factor Hom Triviality",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_kappa_factor_hom_triviality.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Kappa Factor Hom Triviality</h1>\n<p>For each positive-depth Yu layer in the one-block calculation, the \\(\\Delta^j\\)-image is maximal isotropic in the corresponding finite symplectic quotient, and\n\\[\n\\operatorname{Hom}_{Q_j}\n(\\omega_{\\Gamma_{j-1},M}\\otimes(1\\otimes\\chi_{\\Gamma_j,M}),\\chi_M)\n\\simeq \\chi_M\n\\]\nas a module for the preceding layer \\(P^{j-1}\\). Hence\n\\[\n\\dim\\operatorname{Hom}_{P^j}(\\kappa_M^j,\\chi_M)=1\n\\]\nfor all \\(j\\).</p>",
+  "proof_html": "<p>The image of \\(Q_j\\) in the finite Heisenberg quotient is the maximal isotropic subspace supplied by Lemma 6.9. The mixed model for the finite Heisenberg-Weil representation gives a one-dimensional Hom space against the corresponding character. The \\(\\Delta^0\\)-action contributes the determinant character of the isotropic subspace, but that determinant is trivial by Lemma 6.10. The lower layer \\(Q_{j-1}\\) acts through \\(\\chi_M\\). Induction on \\(j\\), starting from the depth-zero character, gives the one-dimensional statement for \\(\\kappa_M^j\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.maximal_isotropic_delta_subspace",
+      "title": "Maximal Isotropic Delta Subspace",
+      "href": "supercuspidal_theta/supercuspidal_theta_maximal_isotropic_delta_subspace.html"
+    },
+    {
+      "id": "supercuspidal_theta.yu_kappa_construction",
+      "title": "Yu Kappa Construction",
+      "href": "supercuspidal_theta/supercuspidal_theta_yu_kappa_construction.html"
+    },
+    {
+      "id": "supercuspidal_theta.triviality_of_bc_character",
+      "title": "Triviality of the bC Character",
+      "href": "supercuspidal_theta/supercuspidal_theta_triviality_of_bc_character.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.stabilizer_evaluation_map",
+      "title": "Stabilizer Evaluation Map Calculation",
+      "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_evaluation_map.html"
+    },
+    {
+      "id": "supercuspidal_theta.stabilizer_induced_module_calculation",
+      "title": "Stabilizer Induced Module Calculation",
+      "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_induced_module_calculation.html"
+    }
+  ],
+  "lean_refs": []
+}

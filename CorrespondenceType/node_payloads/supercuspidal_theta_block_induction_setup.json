@@ -1,0 +1,58 @@
+{
+  "id": "supercuspidal_theta.block_induction_setup",
+  "title": "Block Induction Setup",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_block_induction_setup.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Block Induction Setup</h1>\n<p>For a datum \\(\\Sigma\\) with positive-depth blocks, split off the highest-depth block:\n\\[\n\\Sigma={}^{b}\\Sigma\\oplus{}^{a}\\Sigma,\\qquad\nV={}^{b}V\\oplus{}^{a}V,\\qquad\n\\Gamma={}^{b}\\Gamma\\oplus{}^{a}\\Gamma.\n\\]\nLet \\(r\\) be the highest depth and \\(s=r/2\\). The compact subgroup and type decompose into block-diagonal and off-diagonal parts:\n\\[\nK=(^{b}K\\times{}^{a}K)\\,{}^{\\boxminus}J,\\qquad\nK_+=(^{b}K_+\\times{}^{a}K_+)\\,{}^{\\boxminus}J_+.\n\\]\nThe off-diagonal quotient\n\\[\n{}^{\\boxminus}W={}^\\boxminus J/{}^\\boxminus J_+\n\\]\nis a finite symplectic space, and Yu's construction factors the positive-depth representation as\n\\[\n\\kappa={}^\\boxplus\\kappa\\otimes{}^\\boxminus\\kappa,\\qquad\n\\eta={}^\\boxplus\\eta\\otimes{}^\\boxminus\\kappa.\n\\]</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "title": "Block Decomposition of a Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.yu_kappa_construction",
+      "title": "Yu Kappa Construction",
+      "href": "supercuspidal_theta/supercuspidal_theta_yu_kappa_construction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.converse_off_diagonal_oscillator_factorization",
+      "title": "Converse Off-Diagonal Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_converse_off_diagonal_oscillator_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.occurrence_vector_choice",
+      "title": "Occurrence Vector Choice",
+      "href": "supercuspidal_theta/supercuspidal_theta_occurrence_vector_choice.html"
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "title": "Off-Diagonal Kappa-Oscillator Identification",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_kappa_oscillator_identification.html"
+    },
+    {
+      "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "title": "Proof Plan for Orbit Intertwining",
+      "href": "supercuspidal_theta/supercuspidal_theta_orbit_intertwining_proof_plan.html"
+    },
+    {
+      "id": "supercuspidal_theta.theta_block_decomposition_setup",
+      "title": "Theta Block Decomposition Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_block_decomposition_setup.html"
+    }
+  ],
+  "lean_refs": []
+}

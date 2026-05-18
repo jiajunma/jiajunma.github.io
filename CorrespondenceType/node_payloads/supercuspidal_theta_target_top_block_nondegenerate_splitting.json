@@ -1,0 +1,43 @@
+{
+  "id": "supercuspidal_theta.target_top_block_nondegenerate_splitting",
+  "title": "Target Top Block Nondegenerate Splitting",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_target_top_block_nondegenerate_splitting.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Target Top Block Nondegenerate Splitting</h1>\n<p>Let \\(w\\) be the vector chosen in Lemma 9.2, and write \\(M(w)={}^bX+{}^aX\\) with \\({}^bX\\in{}^b\\Gamma+{}^b\\mathbf g_{x,s}\\). Define\n\\[\n{}^bV'=w({}^bV),\\qquad {}^aV'=({}^bV')^\\perp.\n\\]\nThen \\(w|_{{}^bV}:{}^bV\\to{}^bV'\\) is an isomorphism, \\({}^bV'\\) is nondegenerate, \\(V'={}^bV'\\oplus{}^aV'\\), and \\(w({}^aV)\\subset{}^aV'\\).</p>",
+  "proof_html": "<p>Every element of \\({}^b\\Gamma+{}^b\\mathbf g_{x,s}\\) is invertible on the top block, so \\(w^\\ast w={}^bX\\) makes \\(w|_{{}^bV}\\) injective and hence an isomorphism onto its image. The target form on \\(w({}^bV)\\) is computed by pairing through \\(w^\\ast w\\), hence is nondegenerate. For \\(v\\in{}^aV\\) and \\(u\\in{}^bV\\), the pairing \\(\\langle wu,wv\\rangle\\) is \\(\\langle{}^bXu,v\\rangle=0\\), so \\(w({}^aV)\\subset{}^aV'\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.occurrence_vector_choice",
+      "title": "Occurrence Vector Choice",
+      "href": "supercuspidal_theta/supercuspidal_theta_occurrence_vector_choice.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.exhaustion_proof_plan",
+      "title": "Proof Plan for Converse Exhaustion",
+      "href": "supercuspidal_theta/supercuspidal_theta_exhaustion_proof_plan.html"
+    },
+    {
+      "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "title": "Refined K-Type Occurrence Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_refined_k_type_occurrence_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.target_block_splitting_lemma",
+      "title": "Target Block Splitting Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_target_block_splitting_lemma.html"
+    },
+    {
+      "id": "supercuspidal_theta.target_lattice_block_splitting",
+      "title": "Target Lattice Block Splitting",
+      "href": "supercuspidal_theta/supercuspidal_theta_target_lattice_block_splitting.html"
+    }
+  ],
+  "lean_refs": []
+}

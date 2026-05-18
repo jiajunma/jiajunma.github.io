@@ -1,0 +1,53 @@
+{
+  "id": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+  "title": "Off-Diagonal Kappa-Oscillator Identification",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_kappa_oscillator_identification.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Off-Diagonal Kappa-Oscillator Identification</h1>\n<p>Let \\({}^\\boxminus\\omega\\) be the pullback of the finite oscillator representation on \\(S({}^\\boxminus b)\\) through the off-diagonal stabilizer morphism. Then, as a module for \\({}^\\boxplus S\\ltimes{}^\\boxminus J_M\\),\n\\[\n{}^\\boxminus\\kappa_M\\simeq{}^\\boxminus\\omega.\n\\]</p>",
+  "proof_html": "<p>For \\(h=(\\exp X,\\exp X')\\in{}^\\boxminus J_M\\), the lattice-model phase satisfies\n\\[\n\\frac12\\langle w,h^{-1}w-w\\rangle\n= B(X,\\Gamma)+B(X',\\Gamma')\n\\]\nafter passing to the quotient modulo the conductor. Lemma 8.4 identifies the off-diagonal Lie quotient with \\({}^\\boxminus b\\) as a finite symplectic space. Under that identification, the special morphism used in Yu's \\(\\kappa\\)-construction is the same morphism defining the pulled-back oscillator action.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "title": "Off-Diagonal Block Isomorphism",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_block_isomorphism.html"
+    },
+    {
+      "id": "supercuspidal_theta.block_induction_setup",
+      "title": "Block Induction Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_induction_setup.html"
+    },
+    {
+      "id": "supercuspidal_theta.theta_block_decomposition_setup",
+      "title": "Theta Block Decomposition Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_block_decomposition_setup.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.block_oscillator_action_factorization",
+      "title": "Block Oscillator Action Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_action_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.block_oscillator_factorization",
+      "title": "Block Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "title": "Proof Plan for Orbit Intertwining",
+      "href": "supercuspidal_theta/supercuspidal_theta_orbit_intertwining_proof_plan.html"
+    }
+  ],
+  "lean_refs": []
+}

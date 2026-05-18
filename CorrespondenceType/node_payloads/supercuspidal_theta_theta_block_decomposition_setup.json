@@ -1,0 +1,53 @@
+{
+  "id": "supercuspidal_theta.theta_block_decomposition_setup",
+  "title": "Theta Block Decomposition Setup",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_theta_block_decomposition_setup.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Theta Block Decomposition Setup</h1>\n<p>For the source and lifted target data, decompose the oscillator space as\n\\[\nW=V\\otimes_DV'\n= {}^\\boxplus W\\oplus{}^\\boxminus W\n=(^{b}W\\oplus{}^{a}W)\\oplus({}^{ba}W\\oplus{}^{ab}W).\n\\]\nThe residual finite symplectic quotient similarly decomposes as\n\\[\nb={}^\\boxplus b\\oplus{}^\\boxminus b.\n\\]\nThe lifted datum satisfies\n\\[\n{}^{b}\\Sigma'=\\#_C({}^{b}\\Sigma),\\qquad\n{}^{a}\\Sigma'=\\#_{{}^{a}V,{}^{a}T'}({}^{a}\\Sigma),\n\\]\nand the moment-map vector is block diagonal:\n\\[\nw={}^{b}w\\oplus{}^{a}w.\n\\]\nThe orbit stabilizer decomposes into a block-diagonal stabilizer and an off-diagonal Yu subgroup:\n\\[\nS={}^\\boxplus S\\,{}^\\boxminus J_M.\n\\]</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.block_induction_setup",
+      "title": "Block Induction Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_induction_setup.html"
+    },
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.block_oscillator_action_factorization",
+      "title": "Block Oscillator Action Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_action_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "title": "Off-Diagonal Block Isomorphism",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_block_isomorphism.html"
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
+      "title": "Off-Diagonal Kappa-Oscillator Identification",
+      "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_kappa_oscillator_identification.html"
+    },
+    {
+      "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "title": "Proof Plan for Orbit Intertwining",
+      "href": "supercuspidal_theta/supercuspidal_theta_orbit_intertwining_proof_plan.html"
+    }
+  ],
+  "lean_refs": []
+}

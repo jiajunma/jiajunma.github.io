@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.stabilizer_orbit_action_formula",
+  "title": "Stabilizer Orbit Action Formula",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_orbit_action_formula.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Stabilizer Orbit Action Formula</h1>\n<p>In the one positive-depth block setting, let \\(S=\\operatorname{Stab}_{K_M}(w+B_0)\\). On the residual oscillator model \\(S(b)\\), the translated orbit representation \\(\\omega_w\\) restricts to \\(S\\) by\n\\[\n\\omega_w(h)=\\chi_M(h)\\,\\omega_b(h)\\,\\omega_b(h^{-1}w-w)\n\\qquad h\\in S,\n\\]\nwhere \\(\\chi_M\\) is the product of the source and target Moy-Prasad characters.</p>",
+  "proof_html": "<p>Lemma 2.4 gives the lattice-model action on the translated coset \\(w+B_0\\). Lemma 6.7 describes the stabilizer \\(S\\), while Lemma 6.8 identifies the phase term with the product character \\(\\chi_M\\). Substituting these into the generalized lattice-model formula gives the displayed action.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_block_stabilizer_structure",
+      "title": "Stabilizer Structure in One Positive Depth Block",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_stabilizer_structure.html"
+    },
+    {
+      "id": "supercuspidal_theta.key_oscillator_character_identity",
+      "title": "Key Oscillator Character Identity",
+      "href": "supercuspidal_theta/supercuspidal_theta_key_oscillator_character_identity.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.stabilizer_evaluation_map",
+      "title": "Stabilizer Evaluation Map Calculation",
+      "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_evaluation_map.html"
+    }
+  ],
+  "lean_refs": []
+}
