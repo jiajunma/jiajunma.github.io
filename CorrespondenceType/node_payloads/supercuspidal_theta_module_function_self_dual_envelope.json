@@ -1,0 +1,28 @@
+{
+  "id": "supercuspidal_theta.module_function_self_dual_envelope",
+  "title": "Self-Dual Envelope of a Module Function",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_module_function_self_dual_envelope.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Self-Dual Envelope of a Module Function</h1>\n<p>Let \\(N\\) be an \\(o_D\\)-module function with jumps in \\((1/(2m))\\mathbb Z\\) and satisfying the required almost-self-dual pairing estimate. Then there exists a self-dual lattice function \\(L\\) with jumps in \\((1/(2m))\\mathbb Z\\) such that\n\\[\nN_t\\subseteq L_{t+1/(2m)}.\n\\]</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof fixes a good lattice \\(R\\) containing \\(N_0\\), defines \\(L\\) on a fundamental interval by combining \\(N\\) with \\(R^\\ast\\) on one side and \\(N^\\ast\\cap R\\) on the other, and checks self-duality from the construction. The pairing estimate gives the needed inclusion at the midpoint.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.lattice_fixed_vector_model",
+      "title": "Lattice Fixed Vector Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_lattice_fixed_vector_model.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "title": "Fixed Vector Descent Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_fixed_vector_descent_lemma.html"
+    }
+  ],
+  "lean_refs": []
+}

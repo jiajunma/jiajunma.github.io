@@ -1,0 +1,28 @@
+{
+  "id": "supercuspidal_theta.graph_isometry_and_radical",
+  "title": "Graph Isometry and Radical Quotient",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_graph_isometry_and_radical.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Graph Isometry and Radical Quotient</h1>\n<p>The map\n\\[\n(X,X')\\mapsto -wX+X'w\n\\]\nfrom source and target Lie algebra layers to \\(W\\) is an isometry for the symplectic forms defined by \\(\\Gamma\\) and \\(\\Gamma'\\). The graph of \\(d\\alpha\\) has radical given by the deepest centralizer layer, and after quotienting by this radical one obtains a nondegenerate finite symplectic space \\(b_0\\). In Case II the graph is already maximal isotropic and \\(b_0=0\\).</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The isometry is a trace computation using \\(w^\\ast w=\\Gamma\\) and \\(ww^\\ast=\\Gamma'\\). The radical is computed by rewriting the symplectic pairing as \\(B(X_2,[X_1,\\Gamma])\\), then applying goodness of the lowest noncentral factor. Exactness of the graph sequence and dimension counting identify \\(b_C\\), its orthogonal complement, and \\(b_0\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.dalpha_layer_properties",
+      "title": "Layer Properties of d Alpha",
+      "href": "supercuspidal_theta/supercuspidal_theta_dalpha_layer_properties.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.triviality_of_bc_character",
+      "title": "Triviality of the bC Character",
+      "href": "supercuspidal_theta/supercuspidal_theta_triviality_of_bc_character.html"
+    }
+  ],
+  "lean_refs": []
+}

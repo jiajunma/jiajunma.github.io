@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.block_decomposition_proposition",
+  "title": "Existence and Uniqueness of Block Decomposition",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_proposition.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Existence and Uniqueness of Block Decomposition</h1>\n<p>Every supercuspidal datum \\(\\Sigma=(x,\\Gamma,\\phi,\\rho)\\) decomposes as an orthogonal direct sum\n\\[\n\\Sigma=\\bigoplus_{l=0}^{b}\\Sigma_l\n\\]\nwhere \\(\\Sigma_0\\) is a depth-zero block and each \\(\\Sigma_l\\) for \\(l&gt;0\\) is a single positive-depth block. The positive depths are distinct and strictly ordered. The decomposition is unique up to the equivalence relation on supercuspidal data used in the paper.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "title": "Block Decomposition of a Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "title": "Single Block Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.direct_sum_proposition",
+      "title": "Direct Sums Reconstruct Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_direct_sum_proposition.html"
+    }
+  ],
+  "lean_refs": []
+}

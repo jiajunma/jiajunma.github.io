@@ -1,6 +1,56 @@
 {
   "nodes": [
     {
+      "id": "epipelagic_theta.building_map_uniqueness",
+      "title": "Uniqueness of Equivariant Building Maps",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "building",
+        "uniqueness"
+      ],
+      "topic": "epipelagic_theta"
+    },
+    {
+      "id": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "building",
+        "lattice-function",
+        "moy-prasad"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.self_dual_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+        "epipelagic_theta.tame_base_change_buildings"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_data_equivalence",
+      "title": "Equivalence of Epipelagic Data",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "equivalence",
+        "k-type"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_datum",
+        "epipelagic_theta.stabilizer_splitting"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.unrefined_minimal_k_type_correspondence"
+      ]
+    },
+    {
       "id": "epipelagic_theta.epipelagic_datum",
       "title": "Epipelagic Datum",
       "kind": "definition",
@@ -15,9 +65,30 @@
         "epipelagic_theta.epipelagic_point"
       ],
       "used_by": [
+        "epipelagic_theta.epipelagic_data_equivalence",
         "epipelagic_theta.epipelagic_rank_restriction",
         "epipelagic_theta.epipelagic_theta_main_theorem",
-        "epipelagic_theta.residual_moment_map_condition"
+        "epipelagic_theta.residual_moment_map_condition",
+        "epipelagic_theta.stabilizer_splitting"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_jump_set",
+      "title": "Jump Set of an Epipelagic Point",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "lattice-function",
+        "jumps"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_point",
+        "epipelagic_theta.tame_base_change_buildings"
+      ],
+      "used_by": [
+        "epipelagic_theta.residual_jump_parity"
       ]
     },
     {
@@ -32,7 +103,9 @@
       ],
       "topic": "epipelagic_theta",
       "used_by": [
-        "epipelagic_theta.epipelagic_datum"
+        "epipelagic_theta.epipelagic_datum",
+        "epipelagic_theta.epipelagic_jump_set",
+        "epipelagic_theta.kac_vinberg_epipelagic_grading"
       ]
     },
     {
@@ -49,6 +122,29 @@
       "uses": [
         "epipelagic_theta.epipelagic_datum",
         "epipelagic_theta.residual_moment_map_condition"
+      ],
+      "used_by": [
+        "epipelagic_theta.invariant_subspace_rank_lemma"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "title": "Proof Plan for the Main Epipelagic Theorem",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "proof-plan",
+        "main-theorem"
+      ],
+      "target": "epipelagic_theta.epipelagic_theta_main_theorem",
+      "plan_status": "selected",
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_data_equivalence",
+        "epipelagic_theta.residual_exact_sequence_splitting",
+        "epipelagic_theta.residual_fiber_stabilizer",
+        "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ]
     },
     {
@@ -68,6 +164,43 @@
       ]
     },
     {
+      "id": "epipelagic_theta.invariant_subspace_rank_lemma",
+      "title": "Invariant-Theory Rank Lemma",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "invariant-theory",
+        "rank-restriction",
+        "appendix"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_rank_restriction"
+      ],
+      "used_by": [
+        "epipelagic_theta.residual_fiber_stabilizer"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.kac_vinberg_epipelagic_grading",
+      "title": "Kac-Vinberg Grading at an Epipelagic Point",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "kac-vinberg",
+        "stable-vector"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_point",
+        "epipelagic_theta.tame_base_change_buildings"
+      ],
+      "used_by": [
+        "epipelagic_theta.stable_lift_regular_good"
+      ]
+    },
+    {
       "id": "epipelagic_theta.lattice_function",
       "title": "Lattice Function",
       "kind": "definition",
@@ -84,6 +217,71 @@
       ]
     },
     {
+      "id": "epipelagic_theta.lattice_model_section",
+      "title": "Lattice Model Section for Stabilizers",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "lattice-model",
+        "metaplectic-cover",
+        "splitting"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.self_dual_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.lattice_model_splitting_independence"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.lattice_model_splitting_independence",
+      "title": "Lattice Model Splitting Independence",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "lattice-model",
+        "metaplectic-cover"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.lattice_model_section"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.moment_map_lattice_compatibility",
+      "title": "Moment Maps and Lattice Functions",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "moment-map",
+        "lattice-function"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.moment_maps_classical_dual_pair",
+        "epipelagic_theta.tensor_product_lattice_function"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.moment_map_pairing_formulas",
+      "title": "Moment Map Pairing Formulas",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "moment-map",
+        "symplectic-form"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.moment_maps_classical_dual_pair"
+      ],
+      "used_by": [
+        "supercuspidal_theta.key_oscillator_character_identity"
+      ]
+    },
+    {
       "id": "epipelagic_theta.moment_maps_classical_dual_pair",
       "title": "Moment Maps for a Classical Type I Dual Pair",
       "kind": "definition",
@@ -95,8 +293,77 @@
       ],
       "topic": "epipelagic_theta",
       "used_by": [
+        "epipelagic_theta.moment_map_lattice_compatibility",
+        "epipelagic_theta.moment_map_pairing_formulas",
         "epipelagic_theta.residual_moment_map_condition",
         "supercuspidal_theta.positive_depth_moment_map_surjectivity"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "building",
+        "finite-reductive-quotient",
+        "lattice-function"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.classical_building_self_dual_lattice_functions"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.residual_exact_sequence_splitting",
+      "title": "Residual Exact Sequence Splitting",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "lattice-model",
+        "residual-vector-space",
+        "appendix"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.tensor_product_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_theta_main_proof_plan"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.residual_fiber_stabilizer",
+      "title": "Residual Moment Fiber and Stabilizer Homomorphism",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "stabilizer",
+        "residual-moment-map"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.invariant_subspace_rank_lemma",
+        "epipelagic_theta.residual_moment_map_condition"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_theta_main_proof_plan"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.residual_jump_parity",
+      "title": "Residual Jump Parity for Epipelagic Correspondence",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "lattice-function"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_jump_set",
+        "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ]
     },
     {
@@ -117,7 +384,9 @@
       ],
       "used_by": [
         "epipelagic_theta.epipelagic_rank_restriction",
-        "epipelagic_theta.epipelagic_theta_main_theorem"
+        "epipelagic_theta.epipelagic_theta_main_theorem",
+        "epipelagic_theta.residual_fiber_stabilizer",
+        "epipelagic_theta.unrefined_minimal_k_type_correspondence"
       ]
     },
     {
@@ -135,7 +404,61 @@
         "epipelagic_theta.lattice_function"
       ],
       "used_by": [
+        "epipelagic_theta.classical_building_self_dual_lattice_functions",
+        "epipelagic_theta.lattice_model_section",
         "supercuspidal_theta.generalized_lattice_model"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.stabilizer_splitting",
+      "title": "Stabilizer Splitting for Epipelagic Data",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "stabilizer",
+        "k-type"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_datum"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_data_equivalence"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.stable_lift_regular_good",
+      "title": "Stable Lift Is Regular Semisimple and Good",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "stable-vector",
+        "good-element"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.kac_vinberg_epipelagic_grading"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.tame_base_change_buildings",
+      "title": "Tame Base Change for Buildings via Norms",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "building",
+        "tame-base-change",
+        "lattice-function"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.classical_building_self_dual_lattice_functions"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_jump_set",
+        "epipelagic_theta.kac_vinberg_epipelagic_grading"
       ]
     },
     {
@@ -153,7 +476,29 @@
         "epipelagic_theta.lattice_function"
       ],
       "used_by": [
+        "epipelagic_theta.moment_map_lattice_compatibility",
+        "epipelagic_theta.residual_exact_sequence_splitting",
         "epipelagic_theta.residual_moment_map_condition"
+      ]
+    },
+    {
+      "id": "epipelagic_theta.unrefined_minimal_k_type_correspondence",
+      "title": "Unrefined Minimal K Type Correspondence",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "epipelagic",
+        "minimal-k-type",
+        "theta-correspondence"
+      ],
+      "topic": "epipelagic_theta",
+      "uses": [
+        "epipelagic_theta.epipelagic_data_equivalence",
+        "epipelagic_theta.residual_moment_map_condition"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_theta_main_proof_plan",
+        "epipelagic_theta.residual_jump_parity"
       ]
     },
     {
@@ -308,7 +653,8 @@
       "used_by": [
         "finite_field_weil.symplectic_direct_sum_tensor",
         "finite_field_weil.symplectic_fixed_point_absolute_character",
-        "finite_field_weil.unitary_weil_representation"
+        "finite_field_weil.unitary_weil_representation",
+        "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model"
       ]
     },
     {
@@ -434,6 +780,45 @@
       "topic": "supercuspidal_theta",
       "uses": [
         "supercuspidal_theta.supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.even_orthogonal_yu_extension",
+        "supercuspidal_theta.yu_kappa_construction"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.block_decomposition_proof",
+      "title": "Proof of Block Decomposition",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "proof-plan"
+      ],
+      "target": "supercuspidal_theta.block_decomposition_proposition",
+      "plan_status": "selected",
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.gl_good_factorization_existence",
+        "supercuspidal_theta.single_block_supercuspidal_datum"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.block_decomposition_proposition",
+      "title": "Existence and Uniqueness of Block Decomposition",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+        "supercuspidal_theta.single_block_supercuspidal_datum"
+      ],
+      "used_by": [
+        "supercuspidal_theta.direct_sum_proposition"
       ]
     },
     {
@@ -450,8 +835,50 @@
         "supercuspidal_theta.single_block_supercuspidal_datum"
       ],
       "used_by": [
+        "supercuspidal_theta.block_decomposition_proposition",
+        "supercuspidal_theta.direct_sum_proof",
         "supercuspidal_theta.direct_sum_supercuspidal_data",
+        "supercuspidal_theta.off_diagonal_block_isomorphism",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.block_oscillator_factorization",
+      "title": "Block Oscillator Factorization",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "oscillator-representation",
+        "induction"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.off_diagonal_block_isomorphism"
+      ],
+      "used_by": [
+        "supercuspidal_theta.exhaustion_proof_plan",
+        "supercuspidal_theta.orbit_intertwining_proof_plan"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.covering_data_exhaustion",
+      "title": "Exhaustion for Covering-Group Supercuspidal Data",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "covering-group",
+        "metaplectic-cover",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
+      ],
+      "used_by": [
+        "supercuspidal_theta.main_supercuspidal_proof_plan"
       ]
     },
     {
@@ -470,6 +897,7 @@
         "supercuspidal_theta.supercuspidal_datum"
       ],
       "used_by": [
+        "supercuspidal_theta.covering_data_exhaustion",
         "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
         "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
@@ -488,6 +916,28 @@
       "uses": [
         "supercuspidal_theta.covering_supercuspidal_datum",
         "supercuspidal_theta.supercuspidal_datum_equivalence"
+      ],
+      "used_by": [
+        "supercuspidal_theta.covering_data_exhaustion"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.dalpha_layer_properties",
+      "title": "Layer Properties of d Alpha",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "moy-prasad",
+        "stabilizer"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ],
+      "used_by": [
+        "supercuspidal_theta.graph_isometry_and_radical",
+        "supercuspidal_theta.maximal_isotropic_delta_subspace"
       ]
     },
     {
@@ -503,6 +953,43 @@
       "topic": "supercuspidal_theta",
       "uses": [
         "supercuspidal_theta.generalized_lattice_model"
+      ],
+      "used_by": [
+        "supercuspidal_theta.occurrence_vector_choice",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.depth_preservation_proof_plan",
+      "title": "Proof Plan for Depth Preservation",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "proof-plan",
+        "appendix",
+        "depth-preservation"
+      ],
+      "target": "supercuspidal_theta.depth_preservation_building_sum",
+      "plan_status": "selected",
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.fixed_vector_descent_lemma",
+        "supercuspidal_theta.lattice_fixed_vector_model"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.depth_zero_good_lattice_quotient",
+      "title": "Good Lattice Quotients at Depth Zero",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "depth-zero",
+        "good-lattice",
+        "finite-reductive-quotient"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.depth_zero_k_type"
       ]
     },
     {
@@ -517,7 +1004,56 @@
       ],
       "topic": "supercuspidal_theta",
       "used_by": [
+        "supercuspidal_theta.depth_zero_good_lattice_quotient",
         "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.depth_zero_pan_theorem",
+      "title": "Pan Theorem for Depth Zero Theta Lifts",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "depth-zero",
+        "theta-correspondence",
+        "pan-theorem"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+        "supercuspidal_theta.generalized_lattice_model"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.direct_sum_proof",
+      "title": "Proof of Direct Sum Construction",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "direct-sum",
+        "proof-plan"
+      ],
+      "target": "supercuspidal_theta.direct_sum_proposition",
+      "plan_status": "selected",
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.direct_sum_proposition",
+      "title": "Direct Sums Reconstruct Supercuspidal Data",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "direct-sum",
+        "block-decomposition",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_decomposition_proposition",
+        "supercuspidal_theta.direct_sum_supercuspidal_data"
       ]
     },
     {
@@ -535,7 +1071,45 @@
         "supercuspidal_theta.block_decomposition_supercuspidal_datum"
       ],
       "used_by": [
+        "supercuspidal_theta.direct_sum_proposition",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "title": "Yu-Kim-Hakim-Murnaghan Extension to Even Orthogonal Groups",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "even-orthogonal",
+        "yu-data",
+        "supercuspidal"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.attached_supercuspidal_representation",
+        "supercuspidal_theta.supercuspidal_datum",
+        "supercuspidal_theta.supercuspidal_datum_equivalence"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.exhaustion_proof_plan",
+      "title": "Proof Plan for Converse Exhaustion",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "proof-plan",
+        "converse",
+        "main-theorem"
+      ],
+      "target": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "plan_status": "selected",
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_oscillator_factorization",
+        "supercuspidal_theta.occurrence_vector_choice",
+        "supercuspidal_theta.single_positive_depth_lift_well_defined",
+        "supercuspidal_theta.target_block_splitting_lemma"
       ]
     },
     {
@@ -554,7 +1128,26 @@
         "supercuspidal_theta.depth_zero_k_type"
       ],
       "used_by": [
+        "supercuspidal_theta.depth_zero_pan_theorem",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model",
+      "title": "Finite-Field Heisenberg-Weil Mixed Model",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "finite-field",
+        "heisenberg-weil"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "finite_field_weil.symplectic_weil_representation"
+      ],
+      "used_by": [
+        "supercuspidal_theta.yu_special_isomorphism"
       ]
     },
     {
@@ -573,6 +1166,24 @@
       ]
     },
     {
+      "id": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "title": "Fixed Vector Descent Lemma",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "depth-preservation",
+        "generalized-lattice-model"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.module_function_self_dual_envelope"
+      ],
+      "used_by": [
+        "supercuspidal_theta.depth_preservation_proof_plan"
+      ]
+    },
+    {
       "id": "supercuspidal_theta.generalized_lattice_model",
       "title": "Generalized Lattice Model",
       "kind": "definition",
@@ -587,9 +1198,31 @@
         "epipelagic_theta.self_dual_lattice_function"
       ],
       "used_by": [
+        "supercuspidal_theta.block_oscillator_factorization",
         "supercuspidal_theta.covering_supercuspidal_datum",
         "supercuspidal_theta.depth_preservation_building_sum",
-        "supercuspidal_theta.k_type_orbit_intertwining_proposition"
+        "supercuspidal_theta.depth_zero_pan_theorem",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.lattice_fixed_vector_model"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.gl_good_factorization_existence",
+      "title": "Existence of GL-Good Factorization",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "good-factorization",
+        "howe-factorization",
+        "yu-data"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.good_factorization"
+      ],
+      "used_by": [
+        "supercuspidal_theta.block_decomposition_proof",
+        "supercuspidal_theta.target_good_factorization_transport"
       ]
     },
     {
@@ -604,7 +1237,27 @@
       ],
       "topic": "supercuspidal_theta",
       "used_by": [
-        "supercuspidal_theta.supercuspidal_datum"
+        "supercuspidal_theta.gl_good_factorization_existence",
+        "supercuspidal_theta.supercuspidal_datum",
+        "supercuspidal_theta.yu_special_isomorphism"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.graph_isometry_and_radical",
+      "title": "Graph Isometry and Radical Quotient",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "symplectic-space",
+        "heisenberg-weil"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.dalpha_layer_properties"
+      ],
+      "used_by": [
+        "supercuspidal_theta.triviality_of_bc_character"
       ]
     },
     {
@@ -620,6 +1273,9 @@
       "topic": "supercuspidal_theta",
       "uses": [
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ],
+      "used_by": [
+        "supercuspidal_theta.refined_k_type_occurrence_proposition"
       ]
     },
     {
@@ -636,6 +1292,181 @@
       "uses": [
         "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ],
+      "used_by": [
+        "supercuspidal_theta.main_supercuspidal_proof_plan"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.key_oscillator_character_identity",
+      "title": "Key Oscillator Character Identity",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "oscillator-representation",
+        "moment-map",
+        "positive-depth"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "epipelagic_theta.moment_map_pairing_formulas",
+        "supercuspidal_theta.single_block_stabilizer_structure"
+      ],
+      "used_by": [
+        "supercuspidal_theta.one_block_orbit_k_type_proposition"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.lattice_fixed_vector_model",
+      "title": "Lattice Fixed Vector Model",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "generalized-lattice-model",
+        "depth-preservation"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.generalized_lattice_model"
+      ],
+      "used_by": [
+        "supercuspidal_theta.depth_preservation_proof_plan",
+        "supercuspidal_theta.module_function_self_dual_envelope"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.main_supercuspidal_proof_plan",
+      "title": "Proof Plan for Main Supercuspidal Theorem",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "proof-plan",
+        "main-theorem",
+        "theta-correspondence"
+      ],
+      "target": "supercuspidal_theta.supercuspidal_theta_main_theorem",
+      "plan_status": "selected",
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.covering_data_exhaustion",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.maximal_isotropic_delta_subspace",
+      "title": "Maximal Isotropic Delta Subspace",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "heisenberg-weil",
+        "positive-depth",
+        "isotropic"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.dalpha_layer_properties"
+      ],
+      "used_by": [
+        "supercuspidal_theta.stabilizer_induced_module_calculation"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.module_function_self_dual_envelope",
+      "title": "Self-Dual Envelope of a Module Function",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "lattice-function",
+        "depth-preservation"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.lattice_fixed_vector_model"
+      ],
+      "used_by": [
+        "supercuspidal_theta.fixed_vector_descent_lemma"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.occurrence_vector_choice",
+      "title": "Occurrence Vector Choice",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "converse",
+        "moment-map",
+        "k-type"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.depth_preservation_building_sum",
+        "supercuspidal_theta.refined_k_type_occurrence_proposition"
+      ],
+      "used_by": [
+        "supercuspidal_theta.exhaustion_proof_plan",
+        "supercuspidal_theta.target_block_splitting_lemma"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "title": "Off-Diagonal Block Isomorphism",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "induction",
+        "oscillator-representation"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ],
+      "used_by": [
+        "supercuspidal_theta.block_oscillator_factorization"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "title": "One-Block Orbit K-Type Proposition",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "k-type",
+        "oscillator-representation"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.key_oscillator_character_identity",
+        "supercuspidal_theta.single_block_stabilizer_structure",
+        "supercuspidal_theta.single_positive_depth_theta_lift",
+        "supercuspidal_theta.triviality_of_bc_character"
+      ],
+      "used_by": [
+        "supercuspidal_theta.orbit_intertwining_proof_plan",
+        "supercuspidal_theta.stabilizer_induced_module_calculation"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "title": "Proof Plan for Orbit Intertwining",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "proof-plan",
+        "block-decomposition",
+        "main-theorem"
+      ],
+      "target": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "plan_status": "selected",
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.block_oscillator_factorization",
+        "supercuspidal_theta.one_block_orbit_k_type_proposition"
       ]
     },
     {
@@ -654,6 +1485,7 @@
         "supercuspidal_theta.positive_depth_space_v_gamma"
       ],
       "used_by": [
+        "supercuspidal_theta.positive_depth_target_space_uniqueness",
         "supercuspidal_theta.single_positive_depth_theta_lift"
       ]
     },
@@ -673,7 +1505,98 @@
       ],
       "used_by": [
         "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+        "supercuspidal_theta.positive_depth_target_space_uniqueness",
         "supercuspidal_theta.single_positive_depth_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_target_space_uniqueness",
+      "title": "Positive Depth Target Space Uniqueness",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "moment-map",
+        "hermitian-space"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+        "supercuspidal_theta.positive_depth_space_v_gamma"
+      ],
+      "used_by": [
+        "supercuspidal_theta.single_positive_depth_lift_well_defined"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "title": "Refined K-Type Occurrence Proposition",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "converse",
+        "k-type",
+        "theta-correspondence"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.depth_preservation_building_sum",
+        "supercuspidal_theta.k_type_datum_theta_lift"
+      ],
+      "used_by": [
+        "supercuspidal_theta.main_supercuspidal_proof_plan",
+        "supercuspidal_theta.occurrence_vector_choice"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.residue_characteristic_bound",
+      "title": "Residue Characteristic Bound for Kim Hypotheses",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "residue-characteristic",
+        "yu-data",
+        "kim-exhaustion"
+      ],
+      "topic": "supercuspidal_theta"
+    },
+    {
+      "id": "supercuspidal_theta.single_block_lattice_transfer",
+      "title": "Single-Block Lattice Transfer",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "lattice-function",
+        "moment-map"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ],
+      "used_by": [
+        "supercuspidal_theta.single_block_stabilizer_structure",
+        "supercuspidal_theta.target_block_splitting_lemma"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.single_block_stabilizer_structure",
+      "title": "Stabilizer Structure in One Positive Depth Block",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "stabilizer",
+        "oscillator-representation"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.single_block_lattice_transfer",
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ],
+      "used_by": [
+        "supercuspidal_theta.key_oscillator_character_identity",
+        "supercuspidal_theta.one_block_orbit_k_type_proposition"
       ]
     },
     {
@@ -690,9 +1613,30 @@
         "supercuspidal_theta.supercuspidal_datum"
       ],
       "used_by": [
+        "supercuspidal_theta.block_decomposition_proof",
+        "supercuspidal_theta.block_decomposition_proposition",
         "supercuspidal_theta.block_decomposition_supercuspidal_datum",
         "supercuspidal_theta.positive_depth_space_v_gamma",
         "supercuspidal_theta.single_positive_depth_theta_lift"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_lift_well_defined",
+      "title": "Well-Defined Single Positive Depth Lift",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "data-lift",
+        "well-definedness"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.positive_depth_target_space_uniqueness",
+        "supercuspidal_theta.single_positive_depth_theta_lift"
+      ],
+      "used_by": [
+        "supercuspidal_theta.exhaustion_proof_plan"
       ]
     },
     {
@@ -712,7 +1656,30 @@
         "supercuspidal_theta.single_block_supercuspidal_datum"
       ],
       "used_by": [
+        "supercuspidal_theta.dalpha_layer_properties",
+        "supercuspidal_theta.off_diagonal_block_isomorphism",
+        "supercuspidal_theta.one_block_orbit_k_type_proposition",
+        "supercuspidal_theta.single_block_lattice_transfer",
+        "supercuspidal_theta.single_block_stabilizer_structure",
+        "supercuspidal_theta.single_positive_depth_lift_well_defined",
+        "supercuspidal_theta.target_good_factorization_transport",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.stabilizer_induced_module_calculation",
+      "title": "Stabilizer Induced Module Calculation",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "k-type",
+        "heisenberg-weil",
+        "positive-depth"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.maximal_isotropic_delta_subspace",
+        "supercuspidal_theta.one_block_orbit_k_type_proposition"
       ]
     },
     {
@@ -732,6 +1699,7 @@
       "used_by": [
         "supercuspidal_theta.attached_supercuspidal_representation",
         "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.even_orthogonal_yu_extension",
         "supercuspidal_theta.single_block_supercuspidal_datum",
         "supercuspidal_theta.supercuspidal_datum_equivalence"
       ]
@@ -751,7 +1719,8 @@
         "supercuspidal_theta.supercuspidal_datum"
       ],
       "used_by": [
-        "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
+        "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+        "supercuspidal_theta.even_orthogonal_yu_extension"
       ]
     },
     {
@@ -769,6 +1738,41 @@
         "supercuspidal_theta.covering_supercuspidal_datum",
         "supercuspidal_theta.first_occurrence_index",
         "supercuspidal_theta.theta_lift_map_supercuspidal_data"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.target_block_splitting_lemma",
+      "title": "Target Block Splitting Lemma",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "converse",
+        "block-decomposition",
+        "lattice-function"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.occurrence_vector_choice",
+        "supercuspidal_theta.single_block_lattice_transfer"
+      ],
+      "used_by": [
+        "supercuspidal_theta.exhaustion_proof_plan"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.target_good_factorization_transport",
+      "title": "Transport of Good Factorization to the Target",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "positive-depth",
+        "good-factorization",
+        "data-lift"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.gl_good_factorization_existence",
+        "supercuspidal_theta.single_positive_depth_theta_lift"
       ]
     },
     {
@@ -793,14 +1797,87 @@
         "supercuspidal_theta.k_type_orbit_intertwining_proposition",
         "supercuspidal_theta.supercuspidal_theta_main_theorem"
       ]
+    },
+    {
+      "id": "supercuspidal_theta.triviality_of_bc_character",
+      "title": "Triviality of the bC Character",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "heisenberg-weil",
+        "determinant-character",
+        "positive-depth"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.graph_isometry_and_radical"
+      ],
+      "used_by": [
+        "supercuspidal_theta.one_block_orbit_k_type_proposition"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.yu_kappa_construction",
+      "title": "Yu Kappa Construction",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "yu-data",
+        "kappa"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.attached_supercuspidal_representation",
+        "supercuspidal_theta.yu_special_isomorphism"
+      ]
+    },
+    {
+      "id": "supercuspidal_theta.yu_special_isomorphism",
+      "title": "Yu Special Isomorphism",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "yu-data",
+        "heisenberg-weil"
+      ],
+      "topic": "supercuspidal_theta",
+      "uses": [
+        "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model",
+        "supercuspidal_theta.good_factorization"
+      ],
+      "used_by": [
+        "supercuspidal_theta.yu_kappa_construction"
+      ]
     }
   ],
   "edges": [
+    {
+      "from": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "to": "epipelagic_theta.self_dual_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_data_equivalence",
+      "to": "epipelagic_theta.epipelagic_datum"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_data_equivalence",
+      "to": "epipelagic_theta.stabilizer_splitting"
+    },
     {
       "from": "epipelagic_theta.epipelagic_datum",
       "to": "epipelagic_theta.epipelagic_point"
     },
     {
+      "from": "epipelagic_theta.epipelagic_jump_set",
+      "to": "epipelagic_theta.epipelagic_point"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_jump_set",
+      "to": "epipelagic_theta.tame_base_change_buildings"
+    },
+    {
       "from": "epipelagic_theta.epipelagic_rank_restriction",
       "to": "epipelagic_theta.epipelagic_datum"
     },
@@ -809,12 +1886,84 @@
       "to": "epipelagic_theta.residual_moment_map_condition"
     },
     {
+      "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "to": "epipelagic_theta.epipelagic_data_equivalence"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "to": "epipelagic_theta.residual_exact_sequence_splitting"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "to": "epipelagic_theta.residual_fiber_stabilizer"
+    },
+    {
+      "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "to": "epipelagic_theta.unrefined_minimal_k_type_correspondence"
+    },
+    {
       "from": "epipelagic_theta.epipelagic_theta_main_theorem",
       "to": "epipelagic_theta.epipelagic_datum"
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_theorem",
       "to": "epipelagic_theta.residual_moment_map_condition"
+    },
+    {
+      "from": "epipelagic_theta.invariant_subspace_rank_lemma",
+      "to": "epipelagic_theta.epipelagic_rank_restriction"
+    },
+    {
+      "from": "epipelagic_theta.kac_vinberg_epipelagic_grading",
+      "to": "epipelagic_theta.epipelagic_point"
+    },
+    {
+      "from": "epipelagic_theta.kac_vinberg_epipelagic_grading",
+      "to": "epipelagic_theta.tame_base_change_buildings"
+    },
+    {
+      "from": "epipelagic_theta.lattice_model_section",
+      "to": "epipelagic_theta.self_dual_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.lattice_model_splitting_independence",
+      "to": "epipelagic_theta.lattice_model_section"
+    },
+    {
+      "from": "epipelagic_theta.moment_map_lattice_compatibility",
+      "to": "epipelagic_theta.moment_maps_classical_dual_pair"
+    },
+    {
+      "from": "epipelagic_theta.moment_map_lattice_compatibility",
+      "to": "epipelagic_theta.tensor_product_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.moment_map_pairing_formulas",
+      "to": "epipelagic_theta.moment_maps_classical_dual_pair"
+    },
+    {
+      "from": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
+    },
+    {
+      "from": "epipelagic_theta.residual_exact_sequence_splitting",
+      "to": "epipelagic_theta.tensor_product_lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.residual_fiber_stabilizer",
+      "to": "epipelagic_theta.invariant_subspace_rank_lemma"
+    },
+    {
+      "from": "epipelagic_theta.residual_fiber_stabilizer",
+      "to": "epipelagic_theta.residual_moment_map_condition"
+    },
+    {
+      "from": "epipelagic_theta.residual_jump_parity",
+      "to": "epipelagic_theta.epipelagic_jump_set"
+    },
+    {
+      "from": "epipelagic_theta.residual_jump_parity",
+      "to": "epipelagic_theta.unrefined_minimal_k_type_correspondence"
     },
     {
       "from": "epipelagic_theta.residual_moment_map_condition",
@@ -833,8 +1982,28 @@
       "to": "epipelagic_theta.lattice_function"
     },
     {
+      "from": "epipelagic_theta.stabilizer_splitting",
+      "to": "epipelagic_theta.epipelagic_datum"
+    },
+    {
+      "from": "epipelagic_theta.stable_lift_regular_good",
+      "to": "epipelagic_theta.kac_vinberg_epipelagic_grading"
+    },
+    {
+      "from": "epipelagic_theta.tame_base_change_buildings",
+      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
+    },
+    {
       "from": "epipelagic_theta.tensor_product_lattice_function",
       "to": "epipelagic_theta.lattice_function"
+    },
+    {
+      "from": "epipelagic_theta.unrefined_minimal_k_type_correspondence",
+      "to": "epipelagic_theta.epipelagic_data_equivalence"
+    },
+    {
+      "from": "epipelagic_theta.unrefined_minimal_k_type_correspondence",
+      "to": "epipelagic_theta.residual_moment_map_condition"
     },
     {
       "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
@@ -921,8 +2090,40 @@
       "to": "supercuspidal_theta.supercuspidal_datum"
     },
     {
+      "from": "supercuspidal_theta.block_decomposition_proof",
+      "to": "supercuspidal_theta.gl_good_factorization_existence"
+    },
+    {
+      "from": "supercuspidal_theta.block_decomposition_proof",
+      "to": "supercuspidal_theta.single_block_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.block_decomposition_proposition",
+      "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.block_decomposition_proposition",
+      "to": "supercuspidal_theta.single_block_supercuspidal_datum"
+    },
+    {
       "from": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
       "to": "supercuspidal_theta.single_block_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.block_oscillator_factorization",
+      "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.block_oscillator_factorization",
+      "to": "supercuspidal_theta.off_diagonal_block_isomorphism"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_exhaustion",
+      "to": "supercuspidal_theta.covering_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.covering_data_exhaustion",
+      "to": "supercuspidal_theta.covering_supercuspidal_datum_equivalence"
     },
     {
       "from": "supercuspidal_theta.covering_supercuspidal_datum",
@@ -941,12 +2142,76 @@
       "to": "supercuspidal_theta.supercuspidal_datum_equivalence"
     },
     {
+      "from": "supercuspidal_theta.dalpha_layer_properties",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
+    },
+    {
       "from": "supercuspidal_theta.depth_preservation_building_sum",
       "to": "supercuspidal_theta.generalized_lattice_model"
     },
     {
+      "from": "supercuspidal_theta.depth_preservation_proof_plan",
+      "to": "supercuspidal_theta.fixed_vector_descent_lemma"
+    },
+    {
+      "from": "supercuspidal_theta.depth_preservation_proof_plan",
+      "to": "supercuspidal_theta.lattice_fixed_vector_model"
+    },
+    {
+      "from": "supercuspidal_theta.depth_zero_good_lattice_quotient",
+      "to": "supercuspidal_theta.depth_zero_k_type"
+    },
+    {
+      "from": "supercuspidal_theta.depth_zero_pan_theorem",
+      "to": "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.depth_zero_pan_theorem",
+      "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.direct_sum_proof",
+      "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.direct_sum_proposition",
+      "to": "supercuspidal_theta.block_decomposition_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.direct_sum_proposition",
+      "to": "supercuspidal_theta.direct_sum_supercuspidal_data"
+    },
+    {
       "from": "supercuspidal_theta.direct_sum_supercuspidal_data",
       "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "to": "supercuspidal_theta.attached_supercuspidal_representation"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "to": "supercuspidal_theta.supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.even_orthogonal_yu_extension",
+      "to": "supercuspidal_theta.supercuspidal_datum_equivalence"
+    },
+    {
+      "from": "supercuspidal_theta.exhaustion_proof_plan",
+      "to": "supercuspidal_theta.block_oscillator_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.exhaustion_proof_plan",
+      "to": "supercuspidal_theta.occurrence_vector_choice"
+    },
+    {
+      "from": "supercuspidal_theta.exhaustion_proof_plan",
+      "to": "supercuspidal_theta.single_positive_depth_lift_well_defined"
+    },
+    {
+      "from": "supercuspidal_theta.exhaustion_proof_plan",
+      "to": "supercuspidal_theta.target_block_splitting_lemma"
     },
     {
       "from": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
@@ -957,8 +2222,24 @@
       "to": "supercuspidal_theta.depth_zero_k_type"
     },
     {
+      "from": "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "to": "supercuspidal_theta.module_function_self_dual_envelope"
+    },
+    {
       "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "epipelagic_theta.self_dual_lattice_function"
+    },
+    {
+      "from": "supercuspidal_theta.gl_good_factorization_existence",
+      "to": "supercuspidal_theta.good_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.graph_isometry_and_radical",
+      "to": "supercuspidal_theta.dalpha_layer_properties"
     },
     {
       "from": "supercuspidal_theta.k_type_datum_theta_lift",
@@ -973,6 +2254,78 @@
       "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
     },
     {
+      "from": "supercuspidal_theta.key_oscillator_character_identity",
+      "to": "epipelagic_theta.moment_map_pairing_formulas"
+    },
+    {
+      "from": "supercuspidal_theta.key_oscillator_character_identity",
+      "to": "supercuspidal_theta.single_block_stabilizer_structure"
+    },
+    {
+      "from": "supercuspidal_theta.lattice_fixed_vector_model",
+      "to": "supercuspidal_theta.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.main_supercuspidal_proof_plan",
+      "to": "supercuspidal_theta.covering_data_exhaustion"
+    },
+    {
+      "from": "supercuspidal_theta.main_supercuspidal_proof_plan",
+      "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.main_supercuspidal_proof_plan",
+      "to": "supercuspidal_theta.refined_k_type_occurrence_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.maximal_isotropic_delta_subspace",
+      "to": "supercuspidal_theta.dalpha_layer_properties"
+    },
+    {
+      "from": "supercuspidal_theta.module_function_self_dual_envelope",
+      "to": "supercuspidal_theta.lattice_fixed_vector_model"
+    },
+    {
+      "from": "supercuspidal_theta.occurrence_vector_choice",
+      "to": "supercuspidal_theta.depth_preservation_building_sum"
+    },
+    {
+      "from": "supercuspidal_theta.occurrence_vector_choice",
+      "to": "supercuspidal_theta.refined_k_type_occurrence_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.off_diagonal_block_isomorphism",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "to": "supercuspidal_theta.key_oscillator_character_identity"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "to": "supercuspidal_theta.single_block_stabilizer_structure"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "to": "supercuspidal_theta.triviality_of_bc_character"
+    },
+    {
+      "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "to": "supercuspidal_theta.block_oscillator_factorization"
+    },
+    {
+      "from": "supercuspidal_theta.orbit_intertwining_proof_plan",
+      "to": "supercuspidal_theta.one_block_orbit_k_type_proposition"
+    },
+    {
       "from": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
       "to": "epipelagic_theta.moment_maps_classical_dual_pair"
     },
@@ -985,8 +2338,44 @@
       "to": "supercuspidal_theta.single_block_supercuspidal_datum"
     },
     {
+      "from": "supercuspidal_theta.positive_depth_target_space_uniqueness",
+      "to": "supercuspidal_theta.positive_depth_moment_map_surjectivity"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_target_space_uniqueness",
+      "to": "supercuspidal_theta.positive_depth_space_v_gamma"
+    },
+    {
+      "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "to": "supercuspidal_theta.depth_preservation_building_sum"
+    },
+    {
+      "from": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "to": "supercuspidal_theta.k_type_datum_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.single_block_lattice_transfer",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.single_block_stabilizer_structure",
+      "to": "supercuspidal_theta.single_block_lattice_transfer"
+    },
+    {
+      "from": "supercuspidal_theta.single_block_stabilizer_structure",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
+    },
+    {
       "from": "supercuspidal_theta.single_block_supercuspidal_datum",
       "to": "supercuspidal_theta.supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.single_positive_depth_lift_well_defined",
+      "to": "supercuspidal_theta.positive_depth_target_space_uniqueness"
+    },
+    {
+      "from": "supercuspidal_theta.single_positive_depth_lift_well_defined",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
     },
     {
       "from": "supercuspidal_theta.single_positive_depth_theta_lift",
@@ -999,6 +2388,14 @@
     {
       "from": "supercuspidal_theta.single_positive_depth_theta_lift",
       "to": "supercuspidal_theta.single_block_supercuspidal_datum"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_induced_module_calculation",
+      "to": "supercuspidal_theta.maximal_isotropic_delta_subspace"
+    },
+    {
+      "from": "supercuspidal_theta.stabilizer_induced_module_calculation",
+      "to": "supercuspidal_theta.one_block_orbit_k_type_proposition"
     },
     {
       "from": "supercuspidal_theta.supercuspidal_datum",
@@ -1021,6 +2418,22 @@
       "to": "supercuspidal_theta.theta_lift_map_supercuspidal_data"
     },
     {
+      "from": "supercuspidal_theta.target_block_splitting_lemma",
+      "to": "supercuspidal_theta.occurrence_vector_choice"
+    },
+    {
+      "from": "supercuspidal_theta.target_block_splitting_lemma",
+      "to": "supercuspidal_theta.single_block_lattice_transfer"
+    },
+    {
+      "from": "supercuspidal_theta.target_good_factorization_transport",
+      "to": "supercuspidal_theta.gl_good_factorization_existence"
+    },
+    {
+      "from": "supercuspidal_theta.target_good_factorization_transport",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift"
+    },
+    {
       "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
       "to": "supercuspidal_theta.block_decomposition_supercuspidal_datum"
     },
@@ -1035,6 +2448,26 @@
     {
       "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
       "to": "supercuspidal_theta.single_positive_depth_theta_lift"
+    },
+    {
+      "from": "supercuspidal_theta.triviality_of_bc_character",
+      "to": "supercuspidal_theta.graph_isometry_and_radical"
+    },
+    {
+      "from": "supercuspidal_theta.yu_kappa_construction",
+      "to": "supercuspidal_theta.attached_supercuspidal_representation"
+    },
+    {
+      "from": "supercuspidal_theta.yu_kappa_construction",
+      "to": "supercuspidal_theta.yu_special_isomorphism"
+    },
+    {
+      "from": "supercuspidal_theta.yu_special_isomorphism",
+      "to": "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model"
+    },
+    {
+      "from": "supercuspidal_theta.yu_special_isomorphism",
+      "to": "supercuspidal_theta.good_factorization"
     }
   ]
 }

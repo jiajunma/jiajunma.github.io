@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.single_positive_depth_lift_well_defined",
+  "title": "Well-Defined Single Positive Depth Lift",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_lift_well_defined.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Well-Defined Single Positive Depth Lift</h1>\n<p>The equivalence class \\(\\#^+([\\Sigma])\\) of the target single-block datum is independent of the representative \\(\\Sigma\\) and of the choice of \\(w\\) with \\(M(w)=\\Gamma\\).</p>",
+  "proof_html": "<p>Extraction</p>\n<p>For fixed \\(\\Sigma\\), the fiber \\(M^{-1}(\\Gamma)\\) is a single target-group orbit, so different \\(w\\)'s produce conjugate data. For an equivalent representative, the semisimple element changes by an integral centralizer term. Hensel's lemma solves \\(2c+c^2=\\Gamma^{-1}\\Delta\\) inside the appropriate integral algebra, replacing \\(w\\) by \\(w(1+c)\\) and showing the two target data are equivalent.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_target_space_uniqueness",
+      "title": "Positive Depth Target Space Uniqueness",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_target_space_uniqueness.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.exhaustion_proof_plan",
+      "title": "Proof Plan for Converse Exhaustion",
+      "href": "supercuspidal_theta/supercuspidal_theta_exhaustion_proof_plan.html"
+    }
+  ],
+  "lean_refs": []
+}

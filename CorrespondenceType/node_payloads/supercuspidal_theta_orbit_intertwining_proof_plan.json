@@ -1,0 +1,27 @@
+{
+  "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
+  "title": "Proof Plan for Orbit Intertwining",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_orbit_intertwining_proof_plan.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Proof Plan for Orbit Intertwining</h1>\n<ol>\n<li>Split the datum into the highest-depth block and the remaining direct sum.</li>\n<li>Decompose the oscillator residual space into block-diagonal and off-diagonal parts.</li>\n<li>Use Lemma 8.5 to identify the off-diagonal oscillator factor with the off-diagonal Heisenberg-Weil representation.</li>\n<li>Use Lemma 8.6 to factor the stabilizer representation.</li>\n<li>Apply Frobenius reciprocity to reduce the Hom space to the product of the top-block Hom space and the lower-block Hom space.</li>\n<li>Use Proposition 7.1 for the top block and the induction hypothesis for the lower blocks.</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "title": "One-Block Orbit K-Type Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_orbit_k_type_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.block_oscillator_factorization",
+      "title": "Block Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

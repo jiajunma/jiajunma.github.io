@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.single_block_lattice_transfer",
+  "title": "Single-Block Lattice Transfer",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_single_block_lattice_transfer.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Single-Block Lattice Transfer</h1>\n<p>Let \\(w\\in\\operatorname{Hom}_D(V,V')\\) satisfy \\(M(w)\\in\\Gamma+\\mathbf g_{x,r+}\\) for a single positive-depth block of depth \\(r=2s\\). Define\n\\[\nL'_t=wL_{t+s}.\n\\]\nThen \\(L'\\) is self-dual, its jumps are the jumps of \\(L\\) shifted by \\(-s\\), and it is the unique self-dual lattice function with \\(w\\in (L\\otimes L')_s\\).</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof computes dual lattices using \\(w^\\ast w=M(w)\\), the relation \\(\\Gamma L_{t+s}=L_{t-s}\\), and self-duality of \\(L\\). Uniqueness follows by comparing a candidate lattice function with \\(wL_{t+s}\\) and then dualizing the inclusion.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.single_block_stabilizer_structure",
+      "title": "Stabilizer Structure in One Positive Depth Block",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_stabilizer_structure.html"
+    },
+    {
+      "id": "supercuspidal_theta.target_block_splitting_lemma",
+      "title": "Target Block Splitting Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_target_block_splitting_lemma.html"
+    }
+  ],
+  "lean_refs": []
+}

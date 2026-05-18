@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+  "title": "Refined K-Type Occurrence Proposition",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_refined_k_type_occurrence_proposition.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Refined K-Type Occurrence Proposition</h1>\n<p>If a covering datum \\(\\widetilde D\\) for \\(G\\) has nonzero occurrence in the oscillator representation for \\(V'\\), then there exist a \\(K\\)-type datum \\(\\Sigma\\) equivalent to \\(\\widetilde D\\) and a target \\(K\\)-type datum \\(\\Sigma'\\) such that \\(\\Sigma'\\) is a theta lift of \\(\\Sigma\\), and the corresponding \\(K\\times K'\\)-type occurs in the generalized lattice model.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof is by induction on the number of positive-depth blocks. Appendix B gives a building-indexed sum formula, allowing one to choose \\(x''\\) and a vector \\(w\\) whose moment map matches the top-depth part of the source datum. Kim-Murnaghan conjugacy moves this moment value into block-diagonal form. Lemmas 9.3 and 9.4 split the target space and lattice function into top and lower blocks. The top block is adjusted by Proposition 5.10 to satisfy \\(M(bw)=b\\Gamma\\), while the lower block is handled by induction. Combining the two blocks gives the required lifted datum.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.k_type_datum_theta_lift",
+      "title": "Theta Lift of a K Type Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_datum_theta_lift.html"
+    },
+    {
+      "id": "supercuspidal_theta.depth_preservation_building_sum",
+      "title": "Building Sum Formula for Depth Preservation",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_building_sum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.main_supercuspidal_proof_plan",
+      "title": "Proof Plan for Main Supercuspidal Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_main_supercuspidal_proof_plan.html"
+    },
+    {
+      "id": "supercuspidal_theta.occurrence_vector_choice",
+      "title": "Occurrence Vector Choice",
+      "href": "supercuspidal_theta/supercuspidal_theta_occurrence_vector_choice.html"
+    }
+  ],
+  "lean_refs": []
+}

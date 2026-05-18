@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+  "title": "Classical Buildings as Self-Dual Lattice Functions",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_classical_building_self_dual_lattice_functions.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Classical Buildings as Self-Dual Lattice Functions</h1>\n<p>For a classical group \\(G=U(V)\\), the Bruhat-Tits building \\(B(G,k)\\) is naturally identified with the set of splittable self-dual lattice functions on \\(V\\). Under this identification, if \\(x\\) corresponds to \\(L\\), then the lattice-function filtrations agree with the Moy-Prasad filtrations:\n\\[\n\\mathbf g_{L,r}=\\mathbf g_{x,r},\\qquad\nG_{L,r}=G_{x,r}\\quad(r&gt;0),\\qquad\nG_L=G_x.\n\\]</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The theorem is cited as the culmination of Bruhat-Tits, Prasad-Yu, and Lemaire comparison results. The paper uses it as a translation device: building-theoretic conditions can be checked by explicit lattice-function calculations, and vice versa.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_reductive_quotient_of_self_dual_lattice.html"
+    },
+    {
+      "id": "epipelagic_theta.tame_base_change_buildings",
+      "title": "Tame Base Change for Buildings via Norms",
+      "href": "epipelagic_theta/epipelagic_theta_tame_base_change_buildings.html"
+    }
+  ],
+  "lean_refs": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.off_diagonal_block_isomorphism",
+  "title": "Off-Diagonal Block Isomorphism",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_off_diagonal_block_isomorphism.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Off-Diagonal Block Isomorphism</h1>\n<p>In the induction step separating the top positive-depth block from the remaining blocks, the map\n\\[\n(X,X')\\mapsto -wX+X'w\n\\]\nfrom off-diagonal Lie algebra layers to the off-diagonal residual oscillator space is an equivariant isomorphism.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>Writing everything in \\(2\\times2\\) block matrices, injectivity follows because the top block semisimple element is invertible at the leading depth while lower blocks have strictly smaller depth. Dimension equality is obtained by multiplication with the top-block \\(w\\), identifying source off-diagonal maps with the residual off-diagonal tensor spaces.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.block_decomposition_supercuspidal_datum",
+      "title": "Block Decomposition of a Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.block_oscillator_factorization",
+      "title": "Block Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html"
+    }
+  ],
+  "lean_refs": []
+}

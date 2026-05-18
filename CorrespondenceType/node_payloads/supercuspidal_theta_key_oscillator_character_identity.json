@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.key_oscillator_character_identity",
+  "title": "Key Oscillator Character Identity",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_key_oscillator_character_identity.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Key Oscillator Character Identity</h1>\n<p>For elements in the stabilizer factors \\(\\Delta^i\\) or in \\(G_{x,s}\\times G'_{x',s}\\), the phase in the lattice-model action satisfies\n\\[\n\\psi((1/2)\\langle w,h^{-1}w-w\\rangle_W)\n=\n\\Gamma(g)\\Gamma'(g')\n\\]\nwith the sign and inverse conventions of the paper.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>For \\(\\Delta^i\\), expand \\(g\\) and \\(g'\\) by the exponential map and use Lemma 6.7 to replace \\(h^{-1}w-w\\) by the \\(d\\alpha^\\perp\\) term. The commutator correction pairs trivially with \\(\\Gamma'\\) by centralizer properties. For depth \\(s\\) elements, the formula is exactly Lemma 2.4 rewritten through the two moment maps.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_block_stabilizer_structure",
+      "title": "Stabilizer Structure in One Positive Depth Block",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_stabilizer_structure.html"
+    },
+    {
+      "id": "epipelagic_theta.moment_map_pairing_formulas",
+      "title": "Moment Map Pairing Formulas",
+      "href": "epipelagic_theta/epipelagic_theta_moment_map_pairing_formulas.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "title": "One-Block Orbit K-Type Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_orbit_k_type_proposition.html"
+    }
+  ],
+  "lean_refs": []
+}

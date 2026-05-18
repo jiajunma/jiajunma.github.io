@@ -1,0 +1,32 @@
+{
+  "id": "supercuspidal_theta.main_supercuspidal_proof_plan",
+  "title": "Proof Plan for Main Supercuspidal Theorem",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_main_supercuspidal_proof_plan.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Proof Plan for Main Supercuspidal Theorem</h1>\n<ol>\n<li>Forward direction: construct \\(\\Sigma'=\\#_{V,T'}(\\Sigma)\\) and the vector \\(w\\) attached to the block construction.</li>\n<li>Proposition 8.1 gives multiplicity one for the product \\(K\\)-type in the oscillator model, so the theta lift contains the compactly induced representation attached to \\(\\Sigma'\\).</li>\n<li>First-occurrence and irreducibility identify the full theta lift with \\(\\widetilde\\pi_{\\widetilde\\Sigma'}\\).</li>\n<li>Converse direction: start with supercuspidal \\(\\widetilde\\pi\\) and supercuspidal theta lift \\(\\widetilde\\pi'\\).</li>\n<li>Use covering-data exhaustion to write \\(\\widetilde\\pi\\) by a covering datum.</li>\n<li>Apply Proposition 9.1 to produce equivalent source data and a target lifted \\(K\\)-type datum.</li>\n<li>Use supercuspidality of the target and Kim-Hakim-Murnaghan equivalence to identify the target representation with the datum produced by \\(\\#_{V,T'}\\).</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
+      "title": "Refined K-Type Occurrence Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_refined_k_type_occurrence_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_data_exhaustion",
+      "title": "Exhaustion for Covering-Group Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

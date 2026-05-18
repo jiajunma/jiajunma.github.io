@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.tame_base_change_buildings",
+  "title": "Tame Base Change for Buildings via Norms",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_tame_base_change_buildings.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Tame Base Change for Buildings via Norms</h1>\n<p>Let \\(E/k\\) be a tame splitting extension for the classical group \\(G\\). The canonical map\n\\[\nB(G,k)\\to B(G,E)^{\\operatorname{Gal}(E/k)}\n\\]\nis described explicitly on norms and lattice functions by tensoring the original norm with the valuation norm on \\(E\\), with case distinctions for \\(D=k\\), quadratic \\(D/k\\), and quaternionic \\(D\\).</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof compares the classical building with the fixed-point set of the corresponding general linear building after base change. On apartments the formula is direct, and uniqueness of the equivariant affine building map identifies it with the canonical Bruhat-Tits map.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "href": "epipelagic_theta/epipelagic_theta_classical_building_self_dual_lattice_functions.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_jump_set",
+      "title": "Jump Set of an Epipelagic Point",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_jump_set.html"
+    },
+    {
+      "id": "epipelagic_theta.kac_vinberg_epipelagic_grading",
+      "title": "Kac-Vinberg Grading at an Epipelagic Point",
+      "href": "epipelagic_theta/epipelagic_theta_kac_vinberg_epipelagic_grading.html"
+    }
+  ],
+  "lean_refs": []
+}

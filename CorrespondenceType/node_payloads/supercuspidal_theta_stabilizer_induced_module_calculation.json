@@ -1,0 +1,27 @@
+{
+  "id": "supercuspidal_theta.stabilizer_induced_module_calculation",
+  "title": "Stabilizer Induced Module Calculation",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_induced_module_calculation.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Stabilizer Induced Module Calculation</h1>\n<p>The evaluation map identifies the \\(K_{M,+}\\)-isotypic part of the induced stabilizer representation with \\(S(b)^{b_C}\\), and the induced module from \\(S K_{M,+}\\) to \\(\\Delta^0K_{M,0+}\\) is isomorphic to the product Heisenberg-Weil representation \\(\\kappa_M\\).</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof first shows that the desired isotypic subspace is exactly the \\(b_C\\)-invariant part of the finite oscillator representation. The mixed model of the Weil representation gives the action on the quotient \\(b_0\\), with the determinant character killed by Lemma 6.10. The remaining induction is computed factor by factor along Yu's construction: each \\(\\Delta^j\\) gives a maximal isotropic subspace, so its Hom space is one-dimensional, and induction over \\(j\\) proves the required multiplicity-one statement.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "title": "One-Block Orbit K-Type Proposition",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_orbit_k_type_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.maximal_isotropic_delta_subspace",
+      "title": "Maximal Isotropic Delta Subspace",
+      "href": "supercuspidal_theta/supercuspidal_theta_maximal_isotropic_delta_subspace.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

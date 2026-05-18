@@ -1,0 +1,27 @@
+{
+  "id": "supercuspidal_theta.yu_kappa_construction",
+  "title": "Yu Kappa Construction",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_yu_kappa_construction.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Yu Kappa Construction</h1>\n<p>Given a good factorization, one constructs representations \\(\\kappa^i\\) of the groups \\(K^i\\) inductively. Start with \\(\\kappa^0=\\phi\\). At step \\(i\\), pull back the finite Weil representation through the special isomorphism attached to \\((G^{i-1},G^i,\\Gamma_{i-1})\\), twist by the remaining central character, and descend the tensor product from \\(K^{i-1}\\ltimes J^i\\) to \\(K^i=K^{i-1}J^i\\).</p>\n<p>The final \\(\\kappa=\\kappa^d\\) is the positive-depth Heisenberg-Weil factor in the type \\(\\eta_\\Sigma=\\rho\\otimes\\kappa\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.yu_special_isomorphism",
+      "title": "Yu Special Isomorphism",
+      "href": "supercuspidal_theta/supercuspidal_theta_yu_special_isomorphism.html"
+    },
+    {
+      "id": "supercuspidal_theta.attached_supercuspidal_representation",
+      "title": "Supercuspidal Representation Attached to a Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_attached_supercuspidal_representation.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

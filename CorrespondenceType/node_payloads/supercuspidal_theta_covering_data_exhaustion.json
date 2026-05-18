@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.covering_data_exhaustion",
+  "title": "Exhaustion for Covering-Group Supercuspidal Data",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Exhaustion for Covering-Group Supercuspidal Data</h1>\n<p>The covering datum \\(\\widetilde\\Sigma\\) gives an irreducible genuine supercuspidal representation \\(\\widetilde\\pi_{\\widetilde\\Sigma}\\). Two such representations are isomorphic exactly when the covering data are equivalent. For the metaplectic cover in the relevant type I dual pairs, every genuine supercuspidal representation is obtained from such a datum under the paper's large-\\(p\\) hypotheses.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>Irreducibility follows by comparing intertwiners: the adjoint action of the cover factors through \\(G\\), and the chosen splitting turns the intertwining calculation into Yu's ordinary intertwining equality \\(I(\\eta_\\Sigma)=K\\). Equivalence is proved by reducing to Hakim-Murnaghan equivalence and then to depth-zero types after aligning the semisimple elements. The metaplectic exhaustion uses conservation relations to move to an odd orthogonal partner where ordinary Kim exhaustion applies, then returns through Proposition 9.1.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum",
+      "title": "Supercuspidal Datum for a Covering Group",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum_equivalence",
+      "title": "Equivalence of Covering Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum_equivalence.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.main_supercuspidal_proof_plan",
+      "title": "Proof Plan for Main Supercuspidal Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_main_supercuspidal_proof_plan.html"
+    }
+  ],
+  "lean_refs": []
+}

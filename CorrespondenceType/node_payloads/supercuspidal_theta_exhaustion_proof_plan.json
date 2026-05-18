@@ -1,0 +1,37 @@
+{
+  "id": "supercuspidal_theta.exhaustion_proof_plan",
+  "title": "Proof Plan for Converse Exhaustion",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_exhaustion_proof_plan.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Proof Plan for Converse Exhaustion</h1>\n<ol>\n<li>Use the depth-preservation building sum to choose \\(x''\\) and \\(w\\) supporting the given refined source \\(K\\)-type.</li>\n<li>Use the source character to force \\(M(w)\\) into the semisimple coset of the source datum.</li>\n<li>Use Kim-Murnaghan conjugacy to make the leading top-depth moment value block diagonal.</li>\n<li>Split \\(V'\\), \\(w\\), and the target lattice function into top and lower blocks.</li>\n<li>Perturb the top block by moment-map surjectivity so that \\(M(bw)=b\\Gamma\\).</li>\n<li>Apply the induction hypothesis to the lower block.</li>\n<li>Reassemble the target datum as the direct sum of the single positive-depth top lift and the inductively obtained lower lift.</li>\n<li>Compare splittings to show the new source datum is equivalent to the original covering datum.</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.occurrence_vector_choice",
+      "title": "Occurrence Vector Choice",
+      "href": "supercuspidal_theta/supercuspidal_theta_occurrence_vector_choice.html"
+    },
+    {
+      "id": "supercuspidal_theta.target_block_splitting_lemma",
+      "title": "Target Block Splitting Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_target_block_splitting_lemma.html"
+    },
+    {
+      "id": "supercuspidal_theta.block_oscillator_factorization",
+      "title": "Block Oscillator Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_lift_well_defined",
+      "title": "Well-Defined Single Positive Depth Lift",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_lift_well_defined.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

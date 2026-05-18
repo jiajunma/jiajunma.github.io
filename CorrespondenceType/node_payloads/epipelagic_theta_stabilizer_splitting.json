@@ -1,0 +1,28 @@
+{
+  "id": "epipelagic_theta.stabilizer_splitting",
+  "title": "Stabilizer Splitting for Epipelagic Data",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_stabilizer_splitting.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Stabilizer Splitting for Epipelagic Data</h1>\n<p>For epipelagic data \\((x,\\lambda)\\), the finite stabilizer quotient \\(S_{x,\\lambda}\\) splits inside the full stabilizer \\(H_{x,\\lambda}\\). Equivalently,\n\\[\nH_{x,\\lambda}=S_{x,\\lambda}G_{x,1/m}.\n\\]</p>\n<p>This splitting lets one add a stabilizer character \\(\\chi\\) to the stable functional \\(\\lambda\\), producing the epipelagic representation \\(\\pi_x(\\lambda,\\chi)\\).</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof uses the Reeder-Yu construction of epipelagic representations. The stabilizer of the stable functional acts through a finite reductive quotient, while the Moy-Prasad subgroup \\(G_{x,1/m}\\) contributes the character determined by \\(\\lambda\\). Stability forces the relevant stabilizer quotient to be finite and gives the required complement.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.epipelagic_datum",
+      "title": "Epipelagic Datum",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_data_equivalence",
+      "title": "Equivalence of Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_data_equivalence.html"
+    }
+  ],
+  "lean_refs": []
+}

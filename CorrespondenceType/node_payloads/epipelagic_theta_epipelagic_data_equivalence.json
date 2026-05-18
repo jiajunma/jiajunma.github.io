@@ -1,0 +1,38 @@
+{
+  "id": "epipelagic_theta.epipelagic_data_equivalence",
+  "title": "Equivalence of Epipelagic Data",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_epipelagic_data_equivalence.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Equivalence of Epipelagic Data</h1>\n<p>For classical groups appearing in type I dual pairs, two epipelagic representations\n\\[\n\\pi_x(\\lambda,\\chi),\\qquad \\pi_y(\\lambda',\\chi')\n\\]\nare isomorphic exactly when their data are conjugate in the expected sense: the building points and functionals are carried to one another by \\(G\\), and the stabilizer characters match under the induced stabilizer isomorphism.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof reduces isomorphism of compactly induced epipelagic representations to conjugacy of their unrefined minimal \\(K\\)-types. A lift of a stable functional is shown to be a good regular semisimple element, so its centralizer has building reduced to the relevant point. Kim-Murnaghan conjugacy of minimal \\(K\\)-types then forces the building points and stable functionals to match, and Proposition 2.2.1 compares the residual stabilizer characters.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.epipelagic_datum",
+      "title": "Epipelagic Datum",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_datum.html"
+    },
+    {
+      "id": "epipelagic_theta.stabilizer_splitting",
+      "title": "Stabilizer Splitting for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_stabilizer_splitting.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "title": "Proof Plan for the Main Epipelagic Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_proof_plan.html"
+    },
+    {
+      "id": "epipelagic_theta.unrefined_minimal_k_type_correspondence",
+      "title": "Unrefined Minimal K Type Correspondence",
+      "href": "epipelagic_theta/epipelagic_theta_unrefined_minimal_k_type_correspondence.html"
+    }
+  ],
+  "lean_refs": []
+}

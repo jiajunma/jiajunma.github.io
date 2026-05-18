@@ -249,10 +249,17 @@
       "title": "Supercuspidal Theta",
       "href": "supercuspidal_theta/index.html",
       "role": "dependent",
-      "node_count": 21
+      "node_count": 58
     }
   ],
   "boundary_edges": [
+    {
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 1
+    },
     {
       "from": "finite_field_weil.unitary_weil_representation",
       "to": "topic:supercuspidal_theta",

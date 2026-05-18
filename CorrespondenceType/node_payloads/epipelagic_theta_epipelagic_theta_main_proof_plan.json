@@ -1,0 +1,37 @@
+{
+  "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+  "title": "Proof Plan for the Main Epipelagic Theorem",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_proof_plan.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Proof Plan for the Main Epipelagic Theorem</h1>\n<ol>\n<li>Use Pan's minimal \\(K\\)-type input to show that any nonzero theta correspondence gives a residual vector satisfying the double moment-map condition.</li>\n<li>Use jump parity to restrict to the listed dual-pair ranks and residual lattice positions.</li>\n<li>Use the residual exact sequence splitting to identify the relevant lattice-model subspace with functions on the residual moment-map fiber.</li>\n<li>Use the residual fiber stabilizer lemma to decompose functions on \\(X_{\\lambda,\\lambda'}\\) into stabilizer characters.</li>\n<li>In the non-exceptional cases, the stabilizer graph gives the character formula \\(\\chi'\\!=\\chi^\\ast ∘ \\alpha\\).</li>\n<li>In the exceptional unitary case, retain only characters trivial on the additional stabilizer.</li>\n<li>For the converse, combine the necessary moment-map condition with epipelagic data equivalence and uniqueness of theta lift.</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "epipelagic_theta.residual_fiber_stabilizer",
+      "title": "Residual Moment Fiber and Stabilizer Homomorphism",
+      "href": "epipelagic_theta/epipelagic_theta_residual_fiber_stabilizer.html"
+    },
+    {
+      "id": "epipelagic_theta.residual_exact_sequence_splitting",
+      "title": "Residual Exact Sequence Splitting",
+      "href": "epipelagic_theta/epipelagic_theta_residual_exact_sequence_splitting.html"
+    },
+    {
+      "id": "epipelagic_theta.unrefined_minimal_k_type_correspondence",
+      "title": "Unrefined Minimal K Type Correspondence",
+      "href": "epipelagic_theta/epipelagic_theta_unrefined_minimal_k_type_correspondence.html"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_data_equivalence",
+      "title": "Equivalence of Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_data_equivalence.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

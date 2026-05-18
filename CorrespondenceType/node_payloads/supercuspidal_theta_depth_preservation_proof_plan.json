@@ -1,0 +1,27 @@
+{
+  "id": "supercuspidal_theta.depth_preservation_proof_plan",
+  "title": "Proof Plan for Depth Preservation",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_proof_plan.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Proof Plan for Depth Preservation</h1>\n<ol>\n<li>Express fixed-vector spaces in any oscillator model as support subspaces \\(S_L\\).</li>\n<li>Prove the one-step descent lemma: fixed vectors supported at level \\(j/(2m)\\) are contained in a sum of supports at level \\((j+1)/(2m)\\).</li>\n<li>Iterate the descent from \\(j&gt;k\\) down to \\(k\\) for \\(r=k/m\\).</li>\n<li>Sum over all target building points with denominator \\(2m\\), obtaining the formula for \\(S^{G_{x,r+}}\\).</li>\n<li>Apply an oscillator quotient map to a nonzero theta lift. A source vector fixed by \\(G_{x,r+}\\) maps into some target support \\(S_{B_{x,y,r/2}}\\), giving target depth at most source depth.</li>\n<li>Reverse the dual-pair roles to get equality of depths.</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.lattice_fixed_vector_model",
+      "title": "Lattice Fixed Vector Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_lattice_fixed_vector_model.html"
+    },
+    {
+      "id": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "title": "Fixed Vector Descent Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_fixed_vector_descent_lemma.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

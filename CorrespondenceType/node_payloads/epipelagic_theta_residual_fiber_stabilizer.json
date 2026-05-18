@@ -1,0 +1,33 @@
+{
+  "id": "epipelagic_theta.residual_fiber_stabilizer",
+  "title": "Residual Moment Fiber and Stabilizer Homomorphism",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_residual_fiber_stabilizer.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Residual Moment Fiber and Stabilizer Homomorphism</h1>\n<p>Let\n\\[\nX_{\\lambda,\\lambda'}=M^{-1}(\\lambda)\\ \\text{with}\\ M'=-\\lambda'\n\\]\ninside the residual quotient \\(X\\). Then \\(X_{\\lambda,\\lambda'}\\) is an \\(S_\\lambda\\)-orbit. There is a homomorphism\n\\[\n\\alpha:S_{\\lambda'}\\to S_\\lambda\n\\]\nwhose graph stabilizes a chosen point \\(\\bar w\\) in the fiber. Outside the exceptional ramified unitary equal-rank case, the \\(S_\\lambda\\)-action is free and the stabilizer is exactly this graph. In the exceptional case, a smaller stabilizer imposes the character-triviality condition.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>Appendix 2 transfers the calculation to the Kac-Vinberg finite-field model. When the moment-map value has full rank, Witt's theorem gives a single free orbit and uniqueness gives the stabilizer graph. In the exceptional rank-deficient unitary case, explicit matrix ranks show the orbit is still controlled by \\(S_\\lambda\\), but the stabilizer is nontrivial on the image of the residual operator.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    },
+    {
+      "id": "epipelagic_theta.invariant_subspace_rank_lemma",
+      "title": "Invariant-Theory Rank Lemma",
+      "href": "epipelagic_theta/epipelagic_theta_invariant_subspace_rank_lemma.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "title": "Proof Plan for the Main Epipelagic Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_proof_plan.html"
+    }
+  ],
+  "lean_refs": []
+}

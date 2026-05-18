@@ -1,0 +1,27 @@
+{
+  "id": "supercuspidal_theta.block_decomposition_proof",
+  "title": "Proof of Block Decomposition",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_block_decomposition_proof.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Proof of Block Decomposition</h1>\n<ol>\n<li>Decompose the algebra \\(F^0[\\Gamma]\\) into field factors \\(F_j\\).</li>\n<li>Group the factors by the negative valuations of the components \\(\\Gamma_j\\); collect nonnegative and zero components into block \\(0\\).</li>\n<li>Use the idempotents of the product algebra to define \\(V_l\\), \\(\\Gamma_l\\), and the orthogonal direct-sum decomposition of \\(V\\).</li>\n<li>The idempotents lie in \\(F^0[\\Gamma]\\), so the centralizer decomposes as a product of the block centralizers.</li>\n<li>The building point, character, and finite quotient representation decompose along this product.</li>\n<li>Each positive-depth block has one valuation and hence is single block; block \\(0\\) is depth zero.</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.gl_good_factorization_existence",
+      "title": "Existence of GL-Good Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_gl_good_factorization_existence.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "title": "Single Block Supercuspidal Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_supercuspidal_datum.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

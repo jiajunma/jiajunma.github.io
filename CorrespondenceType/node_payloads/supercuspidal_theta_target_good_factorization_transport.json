@@ -1,0 +1,27 @@
+{
+  "id": "supercuspidal_theta.target_good_factorization_transport",
+  "title": "Transport of Good Factorization to the Target",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_target_good_factorization_transport.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Transport of Good Factorization to the Target</h1>\n<p>If\n\\[\n\\Gamma=\\sum_i\\Gamma_i\n\\]\nis a GL-good factorization and \\(w\\) realizes \\(M(w)=\\Gamma\\), then\n\\[\n\\Gamma_i'=w\\Gamma_iw^{-1}\n\\]\nare elements of the target Lie algebra, and\n\\[\n\\Gamma'=M'(w)=\\sum_i\\Gamma_i'\n\\]\nis a GL-good factorization on the target side.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The adjoint relation and \\(w^\\ast w=\\Gamma\\) show \\((w\\Gamma_iw^{-1})^\\ast=-w\\Gamma_iw^{-1}\\), so each transported factor is in \\(\\mathbf g'\\). Since \\(w\\) is a \\(D\\)-linear isomorphism, root valuations and GL-goodness are preserved.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    },
+    {
+      "id": "supercuspidal_theta.gl_good_factorization_existence",
+      "title": "Existence of GL-Good Factorization",
+      "href": "supercuspidal_theta/supercuspidal_theta_gl_good_factorization_existence.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

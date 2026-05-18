@@ -1,0 +1,38 @@
+{
+  "id": "epipelagic_theta.unrefined_minimal_k_type_correspondence",
+  "title": "Unrefined Minimal K Type Correspondence",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_unrefined_minimal_k_type_correspondence.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Unrefined Minimal K Type Correspondence</h1>\n<p>If two epipelagic representations correspond under theta, then there exists a residual vector \\(\\bar w\\) in the quotient\n\\[\nB_{-1/(2m)}/B_{-1/(2m)+}\n\\]\nsuch that the source functional and target functional are obtained from \\(\\bar w\\) by the two residual moment maps, with the target sign convention of the paper.</p>",
+  "proof_html": "<p>Extraction</p>\n<p>The proof applies Pan's minimal \\(K\\)-type result to the oscillator representation, producing building points \\(y,y'\\) and a vector \\(w\\) whose moment maps give the unrefined minimal \\(K\\)-types of the two representations. Epipelagic data equivalence then conjugates \\(y,y'\\) back to \\(x,x'\\), leaving the residual moment-map condition.</p>",
+  "deps": [
+    {
+      "id": "epipelagic_theta.residual_moment_map_condition",
+      "title": "Residual Moment-Map Condition for Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
+    },
+    {
+      "id": "epipelagic_theta.epipelagic_data_equivalence",
+      "title": "Equivalence of Epipelagic Data",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_data_equivalence.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.epipelagic_theta_main_proof_plan",
+      "title": "Proof Plan for the Main Epipelagic Theorem",
+      "href": "epipelagic_theta/epipelagic_theta_epipelagic_theta_main_proof_plan.html"
+    },
+    {
+      "id": "epipelagic_theta.residual_jump_parity",
+      "title": "Residual Jump Parity for Epipelagic Correspondence",
+      "href": "epipelagic_theta/epipelagic_theta_residual_jump_parity.html"
+    }
+  ],
+  "lean_refs": []
+}
