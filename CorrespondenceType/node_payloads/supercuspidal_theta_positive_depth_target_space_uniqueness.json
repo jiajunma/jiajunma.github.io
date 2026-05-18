@@ -9,25 +9,19 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Positive Depth Target Space Uniqueness</h1>\n<p>For a single positive-depth block, the self-dual target lattice functions \\(L'\\) for which\n\\[\n(\\Gamma+\\mathbf g_{x,r+})\\cap M((L\\otimes L')_s)\n\\]\nis nonempty form one \\(G'\\)-orbit. The target hermitian spaces \\(V'\\) admitting such a vector are all isometric to \\(V_\\Gamma\\).</p>",
-  "proof_html": "<p>Moment-map surjectivity allows one to perturb \\(w\\) until \\(M(w)=\\Gamma\\). Then \\(w\\) is an isometry from \\(V_\\Gamma\\) to \\(V'\\). Witt's theorem compares two such choices and gives the single \\(G'\\)-orbit of target lattice functions.</p>",
+  "proof_html": "<p>This is the combination of Corollary 5.11 and Corollary 5.12. Corollary 5.12 identifies the only possible target hermitian space as \\(V_\\Gamma\\). Once the target space is fixed, Corollary 5.11 says that all target self-dual lattice functions satisfying the moment-map condition lie in one \\(G'\\)-orbit.</p>",
   "deps": [
     {
-      "id": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
-      "title": "Positive Depth Moment Map Surjectivity",
-      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_moment_map_surjectivity.html"
+      "id": "supercuspidal_theta.positive_depth_target_lattice_orbit",
+      "title": "Target Lattice Orbit for a Positive-Depth Block",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_target_lattice_orbit.html"
     },
     {
-      "id": "supercuspidal_theta.positive_depth_space_v_gamma",
-      "title": "Positive Depth Space V Gamma",
-      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_space_v_gamma.html"
+      "id": "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
+      "title": "Target Hermitian Space for a Positive-Depth Block",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_target_hermitian_space_uniqueness.html"
     }
   ],
-  "dependents": [
-    {
-      "id": "supercuspidal_theta.single_positive_depth_lift_well_defined",
-      "title": "Well-Defined Single Positive Depth Lift",
-      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_lift_well_defined.html"
-    }
-  ],
+  "dependents": [],
   "lean_refs": []
 }

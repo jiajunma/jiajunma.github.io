@@ -1,0 +1,33 @@
+{
+  "id": "supercuspidal_theta.blockwise_moment_map_vector",
+  "title": "Blockwise Moment-Map Vector for the General Data Lift",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_blockwise_moment_map_vector.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Blockwise Moment-Map Vector for the General Data Lift</h1>\n<p>Let\n\\[\n\\Sigma=\\bigoplus_{l=0}^{b}\\Sigma_l\n\\]\nbe the block decomposition of a supercuspidal datum, and let\n\\[\n\\Sigma'=\\#_{V,T'}(\\Sigma)=\\bigoplus_{l=0}^{b}\\Sigma_l'\n\\]\nbe the data-level theta lift. For each positive-depth block \\(l&gt;0\\), choose \\(w_l\\in V_l\\otimes_DV_l'\\) such that\n\\[\n\\Gamma_l=M(w_l),\\qquad \\Gamma_l'=M'(w_l).\n\\]\nThen the block-diagonal vector\n\\[\nw=\\bigoplus_{0&lt;l\\le b}w_l\\in V\\otimes_DV'\n\\]\nsatisfies\n\\[\n\\Gamma-M(w)\\in\\mathbf g_{x,0},\n\\qquad\n\\Gamma'-M'(w)\\in\\mathbf g'_{x',0}.\n\\]</p>",
+  "proof_html": "<p>The positive-depth blocks have mutually distinct depths and are orthogonal in the block decomposition. On the block \\(V_l\\otimes_DV_l'\\), the chosen vector \\(w_l\\) realizes the two single-block moment-map identities by construction. Off the positive-depth diagonal blocks, the vector \\(w\\) has no component. Therefore the positive-depth part of \\(M(w)\\) is exactly \\(\\bigoplus_{l&gt;0}\\Gamma_l\\), and the omitted zero-depth block contributes only modulo \\(\\mathbf g_{x,0}\\). The same argument on the target side gives the congruence modulo \\(\\mathbf g'_{x',0}\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "title": "Theta Lift Map on Supercuspidal Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_theta_lift_map_supercuspidal_data.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "title": "Single Positive Depth Theta Lift of Data",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.k_type_datum_theta_lift",
+      "title": "Theta Lift of a K Type Datum",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_datum_theta_lift.html"
+    }
+  ],
+  "lean_refs": []
+}

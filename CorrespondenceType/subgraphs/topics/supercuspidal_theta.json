@@ -4,20 +4,20 @@
     "title": "Supercuspidal Theta",
     "href": "supercuspidal_theta/index.html",
     "parent": null,
-    "node_count": 58,
-    "descendant_node_count": 58
+    "node_count": 61,
+    "descendant_node_count": 61
   },
   "counts": {
-    "internal_nodes": 58,
-    "descendant_nodes": 58,
+    "internal_nodes": 61,
+    "descendant_nodes": 61,
     "child_topics": 0,
-    "non_proof_plan_nodes": 52,
+    "non_proof_plan_nodes": 55,
     "proof_plan_nodes": 6,
     "selected_proof_plan_nodes": 6,
     "boundary_topics": 2,
     "proof_plan_attachments": 6,
-    "visible_nodes_without_proof_plans": 55,
-    "visible_nodes_with_selected_proof_plans": 61
+    "visible_nodes_without_proof_plans": 58,
+    "visible_nodes_with_selected_proof_plans": 64
   },
   "nodes": [
     {
@@ -61,6 +61,14 @@
       "status": "staged",
       "href": "supercuspidal_theta/supercuspidal_theta_block_oscillator_factorization.html",
       "payload": "node_payloads/supercuspidal_theta_block_oscillator_factorization.json"
+    },
+    {
+      "id": "supercuspidal_theta.blockwise_moment_map_vector",
+      "title": "Blockwise Moment-Map Vector for the General Data Lift",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_blockwise_moment_map_vector.html",
+      "payload": "node_payloads/supercuspidal_theta_blockwise_moment_map_vector.json"
     },
     {
       "id": "supercuspidal_theta.covering_data_exhaustion",
@@ -353,6 +361,22 @@
       "payload": "node_payloads/supercuspidal_theta_positive_depth_space_v_gamma.json"
     },
     {
+      "id": "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
+      "title": "Target Hermitian Space for a Positive-Depth Block",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_target_hermitian_space_uniqueness.html",
+      "payload": "node_payloads/supercuspidal_theta_positive_depth_target_hermitian_space_uniqueness.json"
+    },
+    {
+      "id": "supercuspidal_theta.positive_depth_target_lattice_orbit",
+      "title": "Target Lattice Orbit for a Positive-Depth Block",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_target_lattice_orbit.html",
+      "payload": "node_payloads/supercuspidal_theta_positive_depth_target_lattice_orbit.json"
+    },
+    {
       "id": "supercuspidal_theta.positive_depth_target_space_uniqueness",
       "title": "Positive Depth Target Space Uniqueness",
       "kind": "proposition",
@@ -539,6 +563,16 @@
       "kind": "uses"
     },
     {
+      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "to": "supercuspidal_theta.blockwise_moment_map_vector",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
+      "to": "supercuspidal_theta.blockwise_moment_map_vector",
+      "kind": "uses"
+    },
+    {
       "from": "supercuspidal_theta.covering_supercuspidal_datum",
       "to": "supercuspidal_theta.covering_data_exhaustion",
       "kind": "uses"
@@ -694,6 +728,11 @@
       "kind": "uses"
     },
     {
+      "from": "supercuspidal_theta.blockwise_moment_map_vector",
+      "to": "supercuspidal_theta.k_type_datum_theta_lift",
+      "kind": "uses"
+    },
+    {
       "from": "supercuspidal_theta.theta_lift_map_supercuspidal_data",
       "to": "supercuspidal_theta.k_type_datum_theta_lift",
       "kind": "uses"
@@ -814,17 +853,42 @@
       "kind": "uses"
     },
     {
+      "from": "supercuspidal_theta.single_block_lattice_transfer",
+      "to": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "kind": "uses"
+    },
+    {
       "from": "supercuspidal_theta.single_block_supercuspidal_datum",
       "to": "supercuspidal_theta.positive_depth_space_v_gamma",
       "kind": "uses"
     },
     {
       "from": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
-      "to": "supercuspidal_theta.positive_depth_target_space_uniqueness",
+      "to": "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
       "kind": "uses"
     },
     {
       "from": "supercuspidal_theta.positive_depth_space_v_gamma",
+      "to": "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
+      "to": "supercuspidal_theta.positive_depth_target_lattice_orbit",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.single_block_lattice_transfer",
+      "to": "supercuspidal_theta.positive_depth_target_lattice_orbit",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
+      "to": "supercuspidal_theta.positive_depth_target_space_uniqueness",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_target_lattice_orbit",
       "to": "supercuspidal_theta.positive_depth_target_space_uniqueness",
       "kind": "uses"
     },
@@ -839,7 +903,12 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "from": "supercuspidal_theta.positive_depth_space_v_gamma",
+      "to": "supercuspidal_theta.single_block_lattice_transfer",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.single_block_supercuspidal_datum",
       "to": "supercuspidal_theta.single_block_lattice_transfer",
       "kind": "uses"
     },
@@ -859,7 +928,12 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.positive_depth_target_space_uniqueness",
+      "from": "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
+      "to": "supercuspidal_theta.single_positive_depth_lift_well_defined",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.positive_depth_target_lattice_orbit",
       "to": "supercuspidal_theta.single_positive_depth_lift_well_defined",
       "kind": "uses"
     },
@@ -869,17 +943,27 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.positive_depth_moment_map_surjectivity",
-      "to": "supercuspidal_theta.single_positive_depth_theta_lift",
-      "kind": "uses"
-    },
-    {
       "from": "supercuspidal_theta.positive_depth_space_v_gamma",
       "to": "supercuspidal_theta.single_positive_depth_theta_lift",
       "kind": "uses"
     },
     {
+      "from": "supercuspidal_theta.positive_depth_target_hermitian_space_uniqueness",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.single_block_lattice_transfer",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "kind": "uses"
+    },
+    {
       "from": "supercuspidal_theta.single_block_supercuspidal_datum",
+      "to": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.target_good_factorization_transport",
       "to": "supercuspidal_theta.single_positive_depth_theta_lift",
       "kind": "uses"
     },
@@ -949,7 +1033,7 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "from": "supercuspidal_theta.single_block_lattice_transfer",
       "to": "supercuspidal_theta.target_good_factorization_transport",
       "kind": "uses"
     },
@@ -1063,7 +1147,7 @@
       "id": "block-decomposition",
       "title": "block-decomposition",
       "href": "keywords/block-decomposition.html",
-      "count": 10
+      "count": 11
     },
     {
       "id": "compact-induction",
@@ -1087,7 +1171,7 @@
       "id": "data-lift",
       "title": "data-lift",
       "href": "keywords/data-lift.html",
-      "count": 5
+      "count": 6
     },
     {
       "id": "depth-preservation",
@@ -1171,7 +1255,7 @@
       "id": "hermitian-space",
       "title": "hermitian-space",
       "href": "keywords/hermitian-space.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "howe-factorization",
@@ -1213,7 +1297,7 @@
       "id": "lattice-function",
       "title": "lattice-function",
       "href": "keywords/lattice-function.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "lattice-model",
@@ -1237,7 +1321,7 @@
       "id": "moment-map",
       "title": "moment-map",
       "href": "keywords/moment-map.html",
-      "count": 6
+      "count": 9
     },
     {
       "id": "moy-prasad",
@@ -1267,7 +1351,7 @@
       "id": "positive-depth",
       "title": "positive-depth",
       "href": "keywords/positive-depth.html",
-      "count": 15
+      "count": 17
     },
     {
       "id": "proof-plan",
