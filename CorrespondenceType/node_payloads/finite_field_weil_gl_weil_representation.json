@@ -1,0 +1,34 @@
+{
+  "id": "finite_field_weil.gl_weil_representation",
+  "title": "General Linear Weil Representation over a Finite Field",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_gl_weil_representation.html",
+  "body_html": "<h1>General Linear Weil Representation over a Finite Field</h1>\n<p>Let $G(V)$ be the subgroup of $\\operatorname{GL}(V \\times V^\\vee)$ consisting of pairs $(g,{}^\\vee g)$, where ${}^\\vee g$ is the contragredient transformation on $V^\\vee$. The group $G(V)$ acts on $H(V)$ by automorphisms and fixes the center pointwise.</p>\n<p>There is a unique representation class $W^V$ of $G(V)$, called the Weil representation of $G(V)$, such that for every irreducible representation $\\eta$ of $H(V)$ nontrivial on the center, $\\eta$ extends to a representation of the semidirect product $G(V)H(V)$ whose restriction to $G(V)$ lies in $W^V$, and the character of $W^V$ takes positive values.</p>\n<p>In the Schrödinger realization on $\\mathbf{C}[V]$, the action of $G(V) \\simeq \\operatorname{GL}(V)$ is\n$$\n(gF)(x)=F(g^{-1}x).\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.gl_heisenberg_group",
+      "title": "Heisenberg Group Attached to a Finite Vector Space",
+      "href": "finite_field_weil/finite_field_weil_gl_heisenberg_group.html"
+    },
+    {
+      "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "title": "Finite Heisenberg Stone-von Neumann Property",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_stone_von_neumann.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.gl_weil_character_fixed_points",
+      "title": "General Linear Weil Character Fixed-Point Formula",
+      "href": "finite_field_weil/finite_field_weil_gl_weil_character_fixed_points.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    }
+  ],
+  "lean_refs": []
+}

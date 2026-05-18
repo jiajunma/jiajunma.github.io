@@ -1,0 +1,23 @@
+{
+  "id": "finite_field_weil.symplectic_heisenberg_group",
+  "title": "Symplectic Heisenberg Group over a Finite Field",
+  "kind": "definition",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_symplectic_heisenberg_group.html",
+  "body_html": "<h1>Symplectic Heisenberg Group over a Finite Field</h1>\n<p>Let $k$ be a finite field of odd order, let $(E,j)$ be a finite-dimensional symplectic $k$-vector space, and put $i=j/2$. The Heisenberg group $H(E,j)$ is the set $E \\times k$ with group law\n$$\n(w,z)(w',z')=(w+w',z+z'+i(w,w')).\n$$\nIt is a central extension\n$$\n0 \\to k \\to H(E,j) \\to E \\to 0.\n$$</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    },
+    {
+      "id": "finite_field_weil.unitary_heisenberg_group",
+      "title": "Unitary Heisenberg Group over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_unitary_heisenberg_group.html"
+    }
+  ],
+  "lean_refs": []
+}

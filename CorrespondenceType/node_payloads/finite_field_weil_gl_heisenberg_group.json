@@ -1,0 +1,23 @@
+{
+  "id": "finite_field_weil.gl_heisenberg_group",
+  "title": "Heisenberg Group Attached to a Finite Vector Space",
+  "kind": "definition",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_gl_heisenberg_group.html",
+  "body_html": "<h1>Heisenberg Group Attached to a Finite Vector Space</h1>\n<p>Let $V$ be a finite-dimensional vector space over a finite field $k$, and let $V^\\vee$ be its dual. The Heisenberg group $H(V)$ is the set of triples $(x,y,z)$ with $x \\in V$, $y \\in V^\\vee$, and $z \\in k$, with multiplication\n$$\n(x,y,z)(x',y',z')\n=\n(x+x',y+y',z+z' + y(x')).\n$$\nEquivalently, $H(V)$ is the group of upper-triangular matrices\n$$\n\\begin{pmatrix}\n1 &amp; y &amp; z \\\\\n0 &amp; 1 &amp; x \\\\\n0 &amp; 0 &amp; 1\n\\end{pmatrix}.\n$$\nIt is a central extension\n$$\n0 \\to k \\to H(V) \\to V \\times V^\\vee \\to 0.\n$$</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "title": "Finite Heisenberg Stone-von Neumann Property",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_stone_von_neumann.html"
+    },
+    {
+      "id": "finite_field_weil.gl_weil_representation",
+      "title": "General Linear Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_gl_weil_representation.html"
+    }
+  ],
+  "lean_refs": []
+}

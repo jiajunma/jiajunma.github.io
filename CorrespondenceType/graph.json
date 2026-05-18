@@ -1,0 +1,350 @@
+{
+  "nodes": [
+    {
+      "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
+      "title": "Finite Heisenberg Central Character Criterion",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "heisenberg-group",
+        "stone-von-neumann"
+      ],
+      "topic": "finite_field_weil",
+      "used_by": [
+        "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.symplectic_weil_representation",
+        "finite_field_weil.unitary_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "title": "Finite Heisenberg Stone-von Neumann Property",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "heisenberg-group",
+        "stone-von-neumann"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_central_character_criterion",
+        "finite_field_weil.gl_heisenberg_group"
+      ],
+      "used_by": [
+        "finite_field_weil.gl_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.gl_heisenberg_group",
+      "title": "Heisenberg Group Attached to a Finite Vector Space",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "heisenberg-group",
+        "general-linear"
+      ],
+      "topic": "finite_field_weil",
+      "used_by": [
+        "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.gl_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.gl_weil_character_fixed_points",
+      "title": "General Linear Weil Character Fixed-Point Formula",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "character-formula",
+        "general-linear"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.gl_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.gl_weil_representation",
+      "title": "General Linear Weil Representation over a Finite Field",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "general-linear"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.gl_heisenberg_group"
+      ],
+      "used_by": [
+        "finite_field_weil.gl_weil_character_fixed_points",
+        "finite_field_weil.symplectic_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.symplectic_direct_sum_tensor",
+      "title": "Symplectic Weil Representation on Orthogonal Direct Sums",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "tensor-product",
+        "symplectic"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.symplectic_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.symplectic_fixed_point_absolute_character",
+      "title": "Absolute Value of the Symplectic Weil Character",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "character-formula",
+        "symplectic"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.symplectic_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.symplectic_heisenberg_group",
+      "title": "Symplectic Heisenberg Group over a Finite Field",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "heisenberg-group",
+        "symplectic"
+      ],
+      "topic": "finite_field_weil",
+      "used_by": [
+        "finite_field_weil.symplectic_weil_representation",
+        "finite_field_weil.unitary_heisenberg_group"
+      ]
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "symplectic"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_central_character_criterion",
+        "finite_field_weil.gl_weil_representation",
+        "finite_field_weil.symplectic_heisenberg_group"
+      ],
+      "used_by": [
+        "finite_field_weil.symplectic_direct_sum_tensor",
+        "finite_field_weil.symplectic_fixed_point_absolute_character",
+        "finite_field_weil.unitary_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.unitary_direct_sum_tensor",
+      "title": "Unitary Weil Representation on Orthogonal Direct Sums",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "tensor-product",
+        "unitary"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.unitary_weil_representation"
+      ],
+      "used_by": [
+        "finite_field_weil.unitary_weil_character_formula"
+      ]
+    },
+    {
+      "id": "finite_field_weil.unitary_fixed_point_absolute_character",
+      "title": "Absolute Value of the Unitary Weil Character",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "character-formula",
+        "unitary"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.unitary_weil_representation"
+      ],
+      "used_by": [
+        "finite_field_weil.unitary_weil_character_formula"
+      ]
+    },
+    {
+      "id": "finite_field_weil.unitary_heisenberg_group",
+      "title": "Unitary Heisenberg Group over a Finite Field",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "heisenberg-group",
+        "unitary"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.symplectic_heisenberg_group",
+        "finite_field_weil.unitary_space_finite_field"
+      ],
+      "used_by": [
+        "finite_field_weil.unitary_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.unitary_space_finite_field",
+      "title": "Finite-Field Unitary Space in Gérardin's Convention",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "unitary",
+        "skew-hermitian"
+      ],
+      "topic": "finite_field_weil",
+      "used_by": [
+        "finite_field_weil.unitary_heisenberg_group"
+      ]
+    },
+    {
+      "id": "finite_field_weil.unitary_weil_character_formula",
+      "title": "Unitary Weil Character Formula over a Finite Field",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "character-formula",
+        "unitary"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.unitary_direct_sum_tensor",
+        "finite_field_weil.unitary_fixed_point_absolute_character",
+        "finite_field_weil.unitary_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.unitary_weil_representation",
+      "title": "Unitary Weil Representation over a Finite Field",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "unitary"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_central_character_criterion",
+        "finite_field_weil.symplectic_weil_representation",
+        "finite_field_weil.unitary_heisenberg_group"
+      ],
+      "used_by": [
+        "finite_field_weil.unitary_direct_sum_tensor",
+        "finite_field_weil.unitary_fixed_point_absolute_character",
+        "finite_field_weil.unitary_weil_character_formula"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "to": "finite_field_weil.finite_heisenberg_central_character_criterion"
+    },
+    {
+      "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "to": "finite_field_weil.gl_heisenberg_group"
+    },
+    {
+      "from": "finite_field_weil.gl_weil_character_fixed_points",
+      "to": "finite_field_weil.gl_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.gl_weil_representation",
+      "to": "finite_field_weil.finite_heisenberg_stone_von_neumann"
+    },
+    {
+      "from": "finite_field_weil.gl_weil_representation",
+      "to": "finite_field_weil.gl_heisenberg_group"
+    },
+    {
+      "from": "finite_field_weil.symplectic_direct_sum_tensor",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.symplectic_fixed_point_absolute_character",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "finite_field_weil.finite_heisenberg_central_character_criterion"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "finite_field_weil.gl_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "finite_field_weil.symplectic_heisenberg_group"
+    },
+    {
+      "from": "finite_field_weil.unitary_direct_sum_tensor",
+      "to": "finite_field_weil.unitary_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.unitary_fixed_point_absolute_character",
+      "to": "finite_field_weil.unitary_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.unitary_heisenberg_group",
+      "to": "finite_field_weil.symplectic_heisenberg_group"
+    },
+    {
+      "from": "finite_field_weil.unitary_heisenberg_group",
+      "to": "finite_field_weil.unitary_space_finite_field"
+    },
+    {
+      "from": "finite_field_weil.unitary_weil_character_formula",
+      "to": "finite_field_weil.unitary_direct_sum_tensor"
+    },
+    {
+      "from": "finite_field_weil.unitary_weil_character_formula",
+      "to": "finite_field_weil.unitary_fixed_point_absolute_character"
+    },
+    {
+      "from": "finite_field_weil.unitary_weil_character_formula",
+      "to": "finite_field_weil.unitary_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.unitary_weil_representation",
+      "to": "finite_field_weil.finite_heisenberg_central_character_criterion"
+    },
+    {
+      "from": "finite_field_weil.unitary_weil_representation",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.unitary_weil_representation",
+      "to": "finite_field_weil.unitary_heisenberg_group"
+    }
+  ]
+}
