@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.one_block_stabilizer_notation",
+  "title": "One-Block Stabilizer Notation",
+  "kind": "definition",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_one_block_stabilizer_notation.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>One-Block Stabilizer Notation</h1>\n<p>Let \\(K_M=K\\times K'\\), with the corresponding positive-depth and pro-unipotent subgroups on both factors. Define\n\\[\nS=\\operatorname{Stab}_{K_M}(w+B_0).\n\\]\nFor each active index \\(i\\), define \\(S^i\\) and \\(S_C^i\\) by intersecting \\(S\\) with the corresponding Moy-Prasad product subgroups.</p>\n<p>The conjugation map \\(\\alpha:G_x^0\\to G'{}_{x'}^0\\) is extended on the pro-unipotent part by\n\\[\n\\alpha(g\\exp X)=wgw^{-1}\\exp(d\\alpha(X)).\n\\]\nThis extension need not be a group homomorphism. The diagonal sets are\n\\[\n\\Delta^0=\\{(g,\\alpha(g)):g\\in G_x^0\\},\n\\qquad\n\\Delta^i=\\{(g,\\alpha(g)):g\\in G^i_{x,s_{i-1}}\\}\n\\]\nwith corresponding plus-depth versions \\(\\Delta_C^i\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "supercuspidal_theta.one_block_section_6_setup",
+      "title": "One-Block Section 6 Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_section_6_setup.html"
+    },
+    {
+      "id": "supercuspidal_theta.dalpha_layer_properties",
+      "title": "Layer Properties of d Alpha",
+      "href": "supercuspidal_theta/supercuspidal_theta_dalpha_layer_properties.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.maximal_isotropic_delta_subspace",
+      "title": "Maximal Isotropic Delta Subspace",
+      "href": "supercuspidal_theta/supercuspidal_theta_maximal_isotropic_delta_subspace.html"
+    },
+    {
+      "id": "supercuspidal_theta.single_block_stabilizer_structure",
+      "title": "Stabilizer Structure in One Positive Depth Block",
+      "href": "supercuspidal_theta/supercuspidal_theta_single_block_stabilizer_structure.html"
+    }
+  ],
+  "lean_refs": []
+}

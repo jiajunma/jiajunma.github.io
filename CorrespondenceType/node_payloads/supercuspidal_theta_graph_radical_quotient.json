@@ -1,0 +1,43 @@
+{
+  "id": "supercuspidal_theta.graph_radical_quotient",
+  "title": "Graph Radical Quotient",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_graph_radical_quotient.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Graph Radical Quotient</h1>\n<p>Let \\(b=B_{0:0+}\\) be the finite symplectic quotient of the oscillator lattice, and let\n\\[\n\\overline\\iota:\\mathbf g_{x,s:s+}\\oplus\\mathbf g'_{x',s:s+}\\to b\n\\]\nbe the map induced by \\((X,X')\\mapsto -wX+X'w\\). Let \\(N(X)=(X,d\\alpha(X))\\) be the graph map. Then:</p>\n<ul>\n<li>\\(d\\alpha:r\\to r'\\) is an isomorphism of radicals.</li>\n<li>The sequence \\(0\\to r\\to\\mathbf g_{x,s:s+}\\oplus\\mathbf g'_{x',s:s+}\\to b\\) along \\(N\\) and \\(\\overline\\iota\\) is exact.</li>\n<li>The image \\(b_C=\\overline\\iota(r)=\\overline\\iota(r')\\) is isotropic and \\(b_C^\\perp=\\operatorname{Im}(\\overline\\iota)\\).</li>\n<li>In Case I, the quotient \\(b_0=b_C^\\perp/b_C\\) is a nondegenerate finite symplectic space identified with the two noncentral final layers. In Case II, \\(b_C=b_C^\\perp\\) and \\(b_0=0\\).</li>\n</ul>",
+  "proof_html": "<p>The radical isomorphism follows from the graded isomorphism \\(d\\alpha\\) of Lemma 6.2 and the radical computation of Lemma 6.4. Exactness is proved by writing\n\\[\n\\overline\\iota(X,d\\alpha(X))=-wX+d\\alpha(X)w,\n\\]\nand replacing \\(wXw^{-1}\\) by \\(d\\alpha(X)+d\\alpha^\\perp(X)\\); the \\(d\\alpha^\\perp\\) term is deeper for \\(X\\in r\\). Conversely, if \\(\\overline\\iota(X,X')=0\\), the isometry of Lemma 6.3 puts \\((X,X')\\) in \\(r\\oplus r'\\), and then injectivity on the target quotient forces \\(X'=d\\alpha(X)\\). The statements about \\(b_C^\\perp\\) and \\(b_0\\) follow by dimension counting and the two cases of Lemma 6.4.</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
+      "title": "Lie Layer to Oscillator Isometry",
+      "href": "supercuspidal_theta/supercuspidal_theta_lie_layer_to_oscillator_isometry.html"
+    },
+    {
+      "id": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+      "title": "Radical of the Gamma Symplectic Layer",
+      "href": "supercuspidal_theta/supercuspidal_theta_radical_of_gamma_symplectic_layer.html"
+    },
+    {
+      "id": "supercuspidal_theta.dalpha_layer_properties",
+      "title": "Layer Properties of d Alpha",
+      "href": "supercuspidal_theta/supercuspidal_theta_dalpha_layer_properties.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.graph_isometry_and_radical",
+      "title": "Graph Isometry and Radical Quotient",
+      "href": "supercuspidal_theta/supercuspidal_theta_graph_isometry_and_radical.html"
+    },
+    {
+      "id": "supercuspidal_theta.triviality_of_bc_character",
+      "title": "Triviality of the bC Character",
+      "href": "supercuspidal_theta/supercuspidal_theta_triviality_of_bc_character.html"
+    }
+  ],
+  "lean_refs": []
+}

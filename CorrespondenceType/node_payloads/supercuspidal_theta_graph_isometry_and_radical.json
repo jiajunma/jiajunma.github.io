@@ -9,20 +9,24 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Graph Isometry and Radical Quotient</h1>\n<p>The map\n\\[\n(X,X')\\mapsto -wX+X'w\n\\]\nfrom source and target Lie algebra layers to \\(W\\) is an isometry for the symplectic forms defined by \\(\\Gamma\\) and \\(\\Gamma'\\). The graph of \\(d\\alpha\\) has radical given by the deepest centralizer layer, and after quotienting by this radical one obtains a nondegenerate finite symplectic space \\(b_0\\). In Case II the graph is already maximal isotropic and \\(b_0=0\\).</p>",
-  "proof_html": "<p>The isometry is a trace computation using \\(w^\\ast w=\\Gamma\\) and \\(ww^\\ast=\\Gamma'\\). The radical is computed by rewriting the symplectic pairing as \\(B(X_2,[X_1,\\Gamma])\\), then applying goodness of the lowest noncentral factor. Exactness of the graph sequence and dimension counting identify \\(b_C\\), its orthogonal complement, and \\(b_0\\).</p>",
+  "proof_html": "<p>This is the aggregate of Lemma 6.3, Lemma 6.4, and Lemma 6.5. Lemma 6.3 gives the trace-form isometry. Lemma 6.4 computes the radicals using the good-element commutator. Lemma 6.5 applies exactness and dimension counting to identify \\(b_C\\), its orthogonal complement, and \\(b_0\\).</p>",
   "deps": [
     {
-      "id": "supercuspidal_theta.dalpha_layer_properties",
-      "title": "Layer Properties of d Alpha",
-      "href": "supercuspidal_theta/supercuspidal_theta_dalpha_layer_properties.html"
-    }
-  ],
-  "dependents": [
+      "id": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
+      "title": "Lie Layer to Oscillator Isometry",
+      "href": "supercuspidal_theta/supercuspidal_theta_lie_layer_to_oscillator_isometry.html"
+    },
     {
-      "id": "supercuspidal_theta.triviality_of_bc_character",
-      "title": "Triviality of the bC Character",
-      "href": "supercuspidal_theta/supercuspidal_theta_triviality_of_bc_character.html"
+      "id": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+      "title": "Radical of the Gamma Symplectic Layer",
+      "href": "supercuspidal_theta/supercuspidal_theta_radical_of_gamma_symplectic_layer.html"
+    },
+    {
+      "id": "supercuspidal_theta.graph_radical_quotient",
+      "title": "Graph Radical Quotient",
+      "href": "supercuspidal_theta/supercuspidal_theta_graph_radical_quotient.html"
     }
   ],
+  "dependents": [],
   "lean_refs": []
 }

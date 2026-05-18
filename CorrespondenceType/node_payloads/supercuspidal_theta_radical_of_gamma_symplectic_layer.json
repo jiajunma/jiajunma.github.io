@@ -1,0 +1,38 @@
+{
+  "id": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+  "title": "Radical of the Gamma Symplectic Layer",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "supercuspidal_theta/supercuspidal_theta_radical_of_gamma_symplectic_layer.html",
+  "primary_topic": "supercuspidal_theta",
+  "topics": [
+    "supercuspidal_theta"
+  ],
+  "body_html": "<h1>Radical of the Gamma Symplectic Layer</h1>\n<p>Let \\(r=\\operatorname{Rad}(\\langle,\\rangle_\\Gamma)\\) on the finite quotient \\(\\mathbf g_{x,s:s+}\\), and define \\(r'\\) analogously on the target side. In Case I, \\(r\\) is the deepest centralizer layer \\(\\mathbf g^d_{x,s:s+}\\), and \\(r'\\) is the corresponding target layer. In Case II, the induced form is zero, so \\(r=\\mathbf g_{x,s:s+}\\) and \\(r'=\\mathbf g'_{x',s:s+}\\).</p>",
+  "proof_html": "<p>For \\(X_1,X_2\\in\\mathbf g_{x,s}\\),\n\\[\n\\langle X_1,X_2\\rangle_\\Gamma=B(X_2,[X_1,\\Gamma]).\n\\]\nThus the radical consists of those \\(X_1\\) for which \\([X_1,\\Gamma]\\) lands in the next Moy-Prasad lattice. In Case I, the lowest noncentral good factor controls this commutator, and the good-element isomorphism identifies the radical with the final centralizer layer. In Case II, the last factor is central at this depth, so the commutator is already deeper and the whole quotient is radical. The target statement is the same after transporting the factorization by \\(w\\).</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.one_block_section_6_setup",
+      "title": "One-Block Section 6 Setup",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_section_6_setup.html"
+    },
+    {
+      "id": "supercuspidal_theta.dalpha_layer_properties",
+      "title": "Layer Properties of d Alpha",
+      "href": "supercuspidal_theta/supercuspidal_theta_dalpha_layer_properties.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "supercuspidal_theta.graph_isometry_and_radical",
+      "title": "Graph Isometry and Radical Quotient",
+      "href": "supercuspidal_theta/supercuspidal_theta_graph_isometry_and_radical.html"
+    },
+    {
+      "id": "supercuspidal_theta.graph_radical_quotient",
+      "title": "Graph Radical Quotient",
+      "href": "supercuspidal_theta/supercuspidal_theta_graph_radical_quotient.html"
+    }
+  ],
+  "lean_refs": []
+}

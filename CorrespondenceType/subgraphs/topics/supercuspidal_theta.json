@@ -4,20 +4,20 @@
     "title": "Supercuspidal Theta",
     "href": "supercuspidal_theta/index.html",
     "parent": null,
-    "node_count": 61,
-    "descendant_node_count": 61
+    "node_count": 66,
+    "descendant_node_count": 66
   },
   "counts": {
-    "internal_nodes": 61,
-    "descendant_nodes": 61,
+    "internal_nodes": 66,
+    "descendant_nodes": 66,
     "child_topics": 0,
-    "non_proof_plan_nodes": 55,
+    "non_proof_plan_nodes": 60,
     "proof_plan_nodes": 6,
     "selected_proof_plan_nodes": 6,
     "boundary_topics": 2,
     "proof_plan_attachments": 6,
-    "visible_nodes_without_proof_plans": 58,
-    "visible_nodes_with_selected_proof_plans": 64
+    "visible_nodes_without_proof_plans": 63,
+    "visible_nodes_with_selected_proof_plans": 69
   },
   "nodes": [
     {
@@ -253,6 +253,14 @@
       "payload": "node_payloads/supercuspidal_theta_graph_isometry_and_radical.json"
     },
     {
+      "id": "supercuspidal_theta.graph_radical_quotient",
+      "title": "Graph Radical Quotient",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_graph_radical_quotient.html",
+      "payload": "node_payloads/supercuspidal_theta_graph_radical_quotient.json"
+    },
+    {
       "id": "supercuspidal_theta.k_type_datum_theta_lift",
       "title": "Theta Lift of a K Type Datum",
       "kind": "definition",
@@ -283,6 +291,14 @@
       "status": "staged",
       "href": "supercuspidal_theta/supercuspidal_theta_lattice_fixed_vector_model.html",
       "payload": "node_payloads/supercuspidal_theta_lattice_fixed_vector_model.json"
+    },
+    {
+      "id": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
+      "title": "Lie Layer to Oscillator Isometry",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_lie_layer_to_oscillator_isometry.html",
+      "payload": "node_payloads/supercuspidal_theta_lie_layer_to_oscillator_isometry.json"
     },
     {
       "id": "supercuspidal_theta.main_supercuspidal_proof_plan",
@@ -335,6 +351,22 @@
       "payload": "node_payloads/supercuspidal_theta_one_block_orbit_k_type_proposition.json"
     },
     {
+      "id": "supercuspidal_theta.one_block_section_6_setup",
+      "title": "One-Block Section 6 Setup",
+      "kind": "definition",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_section_6_setup.html",
+      "payload": "node_payloads/supercuspidal_theta_one_block_section_6_setup.json"
+    },
+    {
+      "id": "supercuspidal_theta.one_block_stabilizer_notation",
+      "title": "One-Block Stabilizer Notation",
+      "kind": "definition",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_one_block_stabilizer_notation.html",
+      "payload": "node_payloads/supercuspidal_theta_one_block_stabilizer_notation.json"
+    },
+    {
       "id": "supercuspidal_theta.orbit_intertwining_proof_plan",
       "title": "Proof Plan for Orbit Intertwining",
       "kind": "proof-plan",
@@ -383,6 +415,14 @@
       "status": "staged",
       "href": "supercuspidal_theta/supercuspidal_theta_positive_depth_target_space_uniqueness.html",
       "payload": "node_payloads/supercuspidal_theta_positive_depth_target_space_uniqueness.json"
+    },
+    {
+      "id": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+      "title": "Radical of the Gamma Symplectic Layer",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "supercuspidal_theta/supercuspidal_theta_radical_of_gamma_symplectic_layer.html",
+      "payload": "node_payloads/supercuspidal_theta_radical_of_gamma_symplectic_layer.json"
     },
     {
       "id": "supercuspidal_theta.refined_k_type_occurrence_proposition",
@@ -603,7 +643,7 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "from": "supercuspidal_theta.one_block_section_6_setup",
       "to": "supercuspidal_theta.dalpha_layer_properties",
       "kind": "uses"
     },
@@ -723,8 +763,33 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.dalpha_layer_properties",
+      "from": "supercuspidal_theta.graph_radical_quotient",
       "to": "supercuspidal_theta.graph_isometry_and_radical",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
+      "to": "supercuspidal_theta.graph_isometry_and_radical",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+      "to": "supercuspidal_theta.graph_isometry_and_radical",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.dalpha_layer_properties",
+      "to": "supercuspidal_theta.graph_radical_quotient",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
+      "to": "supercuspidal_theta.graph_radical_quotient",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+      "to": "supercuspidal_theta.graph_radical_quotient",
       "kind": "uses"
     },
     {
@@ -763,6 +828,11 @@
       "kind": "uses"
     },
     {
+      "from": "supercuspidal_theta.dalpha_layer_properties",
+      "to": "supercuspidal_theta.key_oscillator_character_identity",
+      "kind": "uses"
+    },
+    {
       "from": "supercuspidal_theta.single_block_stabilizer_structure",
       "to": "supercuspidal_theta.key_oscillator_character_identity",
       "kind": "uses"
@@ -770,6 +840,11 @@
     {
       "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.lattice_fixed_vector_model",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_section_6_setup",
+      "to": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
       "kind": "uses"
     },
     {
@@ -789,6 +864,11 @@
     },
     {
       "from": "supercuspidal_theta.dalpha_layer_properties",
+      "to": "supercuspidal_theta.maximal_isotropic_delta_subspace",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_stabilizer_notation",
       "to": "supercuspidal_theta.maximal_isotropic_delta_subspace",
       "kind": "uses"
     },
@@ -835,6 +915,26 @@
     {
       "from": "supercuspidal_theta.triviality_of_bc_character",
       "to": "supercuspidal_theta.one_block_orbit_k_type_proposition",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "to": "supercuspidal_theta.one_block_section_6_setup",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.target_good_factorization_transport",
+      "to": "supercuspidal_theta.one_block_section_6_setup",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.dalpha_layer_properties",
+      "to": "supercuspidal_theta.one_block_stabilizer_notation",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_section_6_setup",
+      "to": "supercuspidal_theta.one_block_stabilizer_notation",
       "kind": "uses"
     },
     {
@@ -893,6 +993,16 @@
       "kind": "uses"
     },
     {
+      "from": "supercuspidal_theta.dalpha_layer_properties",
+      "to": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+      "kind": "uses"
+    },
+    {
+      "from": "supercuspidal_theta.one_block_section_6_setup",
+      "to": "supercuspidal_theta.radical_of_gamma_symplectic_layer",
+      "kind": "uses"
+    },
+    {
       "from": "supercuspidal_theta.depth_preservation_building_sum",
       "to": "supercuspidal_theta.refined_k_type_occurrence_proposition",
       "kind": "uses"
@@ -913,12 +1023,12 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.single_block_lattice_transfer",
+      "from": "supercuspidal_theta.dalpha_layer_properties",
       "to": "supercuspidal_theta.single_block_stabilizer_structure",
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.single_positive_depth_theta_lift",
+      "from": "supercuspidal_theta.one_block_stabilizer_notation",
       "to": "supercuspidal_theta.single_block_stabilizer_structure",
       "kind": "uses"
     },
@@ -1058,7 +1168,7 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.graph_isometry_and_radical",
+      "from": "supercuspidal_theta.graph_radical_quotient",
       "to": "supercuspidal_theta.triviality_of_bc_character",
       "kind": "uses"
     },
@@ -1246,6 +1356,12 @@
       "count": 1
     },
     {
+      "id": "graph",
+      "title": "graph",
+      "href": "keywords/graph.html",
+      "count": 1
+    },
+    {
       "id": "heisenberg-weil",
       "title": "heisenberg-weil",
       "href": "keywords/heisenberg-weil.html",
@@ -1330,10 +1446,22 @@
       "count": 1
     },
     {
+      "id": "notation",
+      "title": "notation",
+      "href": "keywords/notation.html",
+      "count": 2
+    },
+    {
+      "id": "one-block",
+      "title": "one-block",
+      "href": "keywords/one-block.html",
+      "count": 1
+    },
+    {
       "id": "oscillator-representation",
       "title": "oscillator-representation",
       "href": "keywords/oscillator-representation.html",
-      "count": 7
+      "count": 8
     },
     {
       "id": "p-adic-classical-groups",
@@ -1351,13 +1479,19 @@
       "id": "positive-depth",
       "title": "positive-depth",
       "href": "keywords/positive-depth.html",
-      "count": 17
+      "count": 21
     },
     {
       "id": "proof-plan",
       "title": "proof-plan",
       "href": "keywords/proof-plan.html",
       "count": 6
+    },
+    {
+      "id": "radical",
+      "title": "radical",
+      "href": "keywords/radical.html",
+      "count": 2
     },
     {
       "id": "residue-characteristic",
@@ -1375,7 +1509,7 @@
       "id": "stabilizer",
       "title": "stabilizer",
       "href": "keywords/stabilizer.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "supercuspidal",
@@ -1387,7 +1521,7 @@
       "id": "symplectic-space",
       "title": "symplectic-space",
       "href": "keywords/symplectic-space.html",
-      "count": 1
+      "count": 4
     },
     {
       "id": "theta-correspondence",
