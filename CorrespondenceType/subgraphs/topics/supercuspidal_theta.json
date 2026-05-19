@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 81,
     "proof_plan_nodes": 6,
     "selected_proof_plan_nodes": 6,
-    "boundary_topics": 2,
+    "boundary_topics": 3,
     "proof_plan_attachments": 6,
-    "visible_nodes_without_proof_plans": 84,
-    "visible_nodes_with_selected_proof_plans": 90
+    "visible_nodes_without_proof_plans": 85,
+    "visible_nodes_with_selected_proof_plans": 91
   },
   "nodes": [
     {
@@ -881,11 +881,6 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "supercuspidal_theta.covering_supercuspidal_datum",
-      "kind": "uses"
-    },
-    {
       "from": "supercuspidal_theta.supercuspidal_datum",
       "to": "supercuspidal_theta.covering_supercuspidal_datum",
       "kind": "uses"
@@ -916,16 +911,6 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "supercuspidal_theta.depth_preservation_building_sum",
-      "kind": "uses"
-    },
-    {
-      "from": "supercuspidal_theta.lattice_fixed_vector_model",
-      "to": "supercuspidal_theta.depth_preservation_building_sum",
-      "kind": "uses"
-    },
-    {
       "from": "supercuspidal_theta.module_function_self_dual_envelope",
       "to": "supercuspidal_theta.depth_preservation_building_sum",
       "kind": "uses"
@@ -936,22 +921,12 @@
       "kind": "proof_plan_uses"
     },
     {
-      "from": "supercuspidal_theta.lattice_fixed_vector_model",
-      "to": "supercuspidal_theta.depth_preservation_proof_plan",
-      "kind": "proof_plan_uses"
-    },
-    {
       "from": "supercuspidal_theta.depth_zero_k_type",
       "to": "supercuspidal_theta.depth_zero_good_lattice_quotient",
       "kind": "uses"
     },
     {
       "from": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
-      "to": "supercuspidal_theta.depth_zero_pan_theorem",
-      "kind": "uses"
-    },
-    {
-      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.depth_zero_pan_theorem",
       "kind": "uses"
     },
@@ -1061,11 +1036,6 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "supercuspidal_theta.fixed_vector_descent_lemma",
-      "kind": "uses"
-    },
-    {
       "from": "supercuspidal_theta.module_function_self_dual_envelope",
       "to": "supercuspidal_theta.fixed_vector_descent_lemma",
       "kind": "uses"
@@ -1126,11 +1096,6 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-      "kind": "uses"
-    },
-    {
       "from": "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
       "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
       "kind": "uses"
@@ -1171,18 +1136,8 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "supercuspidal_theta.key_oscillator_character_identity",
-      "kind": "uses"
-    },
-    {
       "from": "supercuspidal_theta.single_block_stabilizer_structure",
       "to": "supercuspidal_theta.key_oscillator_character_identity",
-      "kind": "uses"
-    },
-    {
-      "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "supercuspidal_theta.lattice_fixed_vector_model",
       "kind": "uses"
     },
     {
@@ -1233,11 +1188,6 @@
     {
       "from": "supercuspidal_theta.residue_characteristic_bound",
       "to": "supercuspidal_theta.metaplectic_covering_data_exhaustion",
-      "kind": "uses"
-    },
-    {
-      "from": "supercuspidal_theta.lattice_fixed_vector_model",
-      "to": "supercuspidal_theta.module_function_self_dual_envelope",
       "kind": "uses"
     },
     {
@@ -1536,11 +1486,6 @@
       "kind": "uses"
     },
     {
-      "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "supercuspidal_theta.stabilizer_orbit_action_formula",
-      "kind": "uses"
-    },
-    {
       "from": "supercuspidal_theta.key_oscillator_character_identity",
       "to": "supercuspidal_theta.stabilizer_orbit_action_formula",
       "kind": "uses"
@@ -1694,17 +1639,17 @@
       "title": "Finite Field Weil",
       "href": "finite_field_weil/index.html",
       "role": "dependency",
-      "node_count": 24
+      "node_count": 25
+    },
+    {
+      "id": "lattice_model",
+      "title": "Lattice Model",
+      "href": "lattice_model/index.html",
+      "role": "dependency",
+      "node_count": 14
     }
   ],
   "boundary_edges": [
-    {
-      "from": "topic:epipelagic_theta",
-      "to": "supercuspidal_theta.generalized_lattice_model",
-      "kind": "boundary_dependency",
-      "topic": "epipelagic_theta",
-      "count": 1
-    },
     {
       "from": "topic:epipelagic_theta",
       "to": "supercuspidal_theta.key_oscillator_character_identity",
@@ -1731,6 +1676,83 @@
       "to": "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model",
       "kind": "boundary_dependency",
       "topic": "finite_field_weil",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.covering_supercuspidal_datum",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.depth_preservation_building_sum",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 2
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.depth_zero_pan_theorem",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.generalized_lattice_model",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.key_oscillator_character_identity",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.lattice_fixed_vector_model",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.module_function_self_dual_envelope",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.stabilizer_orbit_action_formula",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "supercuspidal_theta.depth_preservation_proof_plan",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "lattice_model",
       "count": 1
     }
   ],

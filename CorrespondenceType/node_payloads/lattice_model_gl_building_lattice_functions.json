@@ -1,0 +1,38 @@
+{
+  "id": "lattice_model.gl_building_lattice_functions",
+  "title": "GL Building as Lattice Functions",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_gl_building_lattice_functions.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>GL Building as Lattice Functions</h1>\n<p>The extended building \\(B(\\operatorname{GL}(V))\\) is identified with the set\nof lattice functions on \\(V\\), equivalently with splittable \\(D\\)-norms, as a\n\\(\\operatorname{GL}(V)\\)-set. This identification is unique up to translation.</p>\n<p>If \\(x\\in B(\\operatorname{GL}(V))\\) corresponds to \\(L\\), then the\noperator-shift filtrations attached to \\(L\\) agree with the Moy-Prasad\nfiltrations at \\(x\\).</p>",
+  "proof_html": "<p>The source cites the standard Bruhat-Tits and Moy-Prasad identification. On an\napartment, a splittable norm is determined by a splitting basis, and the\nMoy-Prasad lattice conditions are exactly the operator-shift conditions defining\nthe lattice-function filtration.</p>",
+  "deps": [
+    {
+      "id": "lattice_model.d_norm",
+      "title": "D Norm",
+      "href": "lattice_model/lattice_model_d_norm.html"
+    },
+    {
+      "id": "lattice_model.lattice_function",
+      "title": "Lattice Function",
+      "href": "lattice_model/lattice_model_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "href": "epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html"
+    },
+    {
+      "id": "lattice_model.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "href": "lattice_model/lattice_model_classical_building_self_dual_lattice_functions.html"
+    }
+  ],
+  "lean_refs": []
+}

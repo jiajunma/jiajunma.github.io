@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 38,
     "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 1,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 1,
-    "visible_nodes_without_proof_plans": 40,
-    "visible_nodes_with_selected_proof_plans": 41
+    "visible_nodes_without_proof_plans": 41,
+    "visible_nodes_with_selected_proof_plans": 42
   },
   "nodes": [
     {
@@ -342,26 +342,6 @@
       "kind": "uses"
     },
     {
-      "from": "epipelagic_theta.apartment_splitting_basis",
-      "to": "epipelagic_theta.apartment_fractional_jump_decomposition",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.self_dual_lattice_function",
-      "to": "epipelagic_theta.apartment_splitting_basis",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.gl_building_lattice_functions",
-      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.self_dual_lattice_function",
-      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions",
-      "kind": "uses"
-    },
-    {
       "from": "epipelagic_theta.epipelagic_datum",
       "to": "epipelagic_theta.epipelagic_data_equivalence",
       "kind": "uses"
@@ -432,11 +412,6 @@
       "kind": "uses"
     },
     {
-      "from": "epipelagic_theta.tensor_product_lattice_function",
-      "to": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
-      "kind": "uses"
-    },
-    {
       "from": "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
       "to": "epipelagic_theta.epipelagic_theta_main_proof_plan",
       "kind": "proof_plan_uses"
@@ -507,16 +482,6 @@
       "kind": "uses"
     },
     {
-      "from": "epipelagic_theta.d_norm",
-      "to": "epipelagic_theta.gl_building_lattice_functions",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.lattice_function",
-      "to": "epipelagic_theta.gl_building_lattice_functions",
-      "kind": "uses"
-    },
-    {
       "from": "epipelagic_theta.matrix_calculation_gl_case",
       "to": "epipelagic_theta.invariant_subspace_rank_lemma",
       "kind": "uses"
@@ -539,16 +504,6 @@
     {
       "from": "epipelagic_theta.tame_base_change_buildings",
       "to": "epipelagic_theta.kac_vinberg_epipelagic_grading",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.d_norm",
-      "to": "epipelagic_theta.lattice_function",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.self_dual_lattice_function",
-      "to": "epipelagic_theta.lattice_model_section",
       "kind": "uses"
     },
     {
@@ -577,42 +532,12 @@
       "kind": "uses"
     },
     {
-      "from": "epipelagic_theta.tensor_product_lattice_function",
-      "to": "epipelagic_theta.moment_map_lattice_compatibility",
-      "kind": "uses"
-    },
-    {
       "from": "epipelagic_theta.moment_maps_classical_dual_pair",
       "to": "epipelagic_theta.moment_map_pairing_formulas",
       "kind": "uses"
     },
     {
-      "from": "epipelagic_theta.apartment_fractional_jump_decomposition",
-      "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.classical_building_self_dual_lattice_functions",
-      "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.apartment_fractional_jump_decomposition",
-      "to": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-      "to": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
-      "kind": "uses"
-    },
-    {
       "from": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
-      "to": "epipelagic_theta.residual_exact_sequence_splitting",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.tensor_product_lattice_function",
       "to": "epipelagic_theta.residual_exact_sequence_splitting",
       "kind": "uses"
     },
@@ -652,16 +577,6 @@
       "kind": "uses"
     },
     {
-      "from": "epipelagic_theta.tensor_product_lattice_function",
-      "to": "epipelagic_theta.residual_moment_map_condition",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.lattice_function",
-      "to": "epipelagic_theta.self_dual_lattice_function",
-      "kind": "uses"
-    },
-    {
       "from": "epipelagic_theta.epipelagic_datum",
       "to": "epipelagic_theta.stabilizer_splitting",
       "kind": "uses"
@@ -669,26 +584,6 @@
     {
       "from": "epipelagic_theta.kac_vinberg_epipelagic_grading",
       "to": "epipelagic_theta.stable_lift_regular_good",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.classical_building_self_dual_lattice_functions",
-      "to": "epipelagic_theta.tame_base_change_buildings",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.self_dual_lattice_function",
-      "to": "epipelagic_theta.tensor_dual_self_duality",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.tensor_product_lattice_function",
-      "to": "epipelagic_theta.tensor_dual_self_duality",
-      "kind": "uses"
-    },
-    {
-      "from": "epipelagic_theta.lattice_function",
-      "to": "epipelagic_theta.tensor_product_lattice_function",
       "kind": "uses"
     },
     {
@@ -704,6 +599,13 @@
   ],
   "boundary_topics": [
     {
+      "id": "lattice_model",
+      "title": "Lattice Model",
+      "href": "lattice_model/index.html",
+      "role": "dependency",
+      "node_count": 14
+    },
+    {
       "id": "supercuspidal_theta",
       "title": "Supercuspidal Theta",
       "href": "supercuspidal_theta/index.html",
@@ -713,6 +615,125 @@
   ],
   "boundary_edges": [
     {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.apartment_splitting_basis",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.d_norm",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.gl_building_lattice_functions",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.lattice_function",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.lattice_model_section",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.moment_map_lattice_compatibility",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 2
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.residual_exact_sequence_splitting",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.residual_moment_map_condition",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.self_dual_lattice_function",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.tame_base_change_buildings",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.tensor_dual_self_duality",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "epipelagic_theta.tensor_product_lattice_function",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
       "from": "epipelagic_theta.moment_map_pairing_formulas",
       "to": "topic:supercuspidal_theta",
       "kind": "boundary_dependent",
@@ -721,13 +742,6 @@
     },
     {
       "from": "epipelagic_theta.moment_maps_classical_dual_pair",
-      "to": "topic:supercuspidal_theta",
-      "kind": "boundary_dependent",
-      "topic": "supercuspidal_theta",
-      "count": 1
-    },
-    {
-      "from": "epipelagic_theta.self_dual_lattice_function",
       "to": "topic:supercuspidal_theta",
       "kind": "boundary_dependent",
       "topic": "supercuspidal_theta",

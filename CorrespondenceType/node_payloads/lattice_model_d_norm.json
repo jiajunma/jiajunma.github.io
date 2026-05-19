@@ -1,0 +1,32 @@
+{
+  "id": "lattice_model.d_norm",
+  "title": "D Norm",
+  "kind": "definition",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_d_norm.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>D Norm</h1>\n<p>Let \\(V\\) be a right \\(D\\)-vector space. A \\(D\\)-norm is a function on \\(V\\)\nwith values in the extended real line, allowing the value \\(\\infty\\), such that\n\\[\n\\ell(xd)=\\ell(x)+\\nu(d),\\qquad\n\\ell(x+y)\\ge \\min\\{\\ell(x),\\ell(y)\\},\n\\]\nand \\(\\ell(x)=\\infty\\) exactly when \\(x=0\\).</p>\n<p>The norm is splittable if some \\(D\\)-basis \\(\\{e_i\\}\\) satisfies\n\\[\n\\ell\\left(\\sum_i e_i d_i\\right)=\\inf_i(\\ell(e_i)+\\nu(d_i)).\n\\]\nIn the lattice-model sources, splittable \\(D\\)-norms are used interchangeably\nwith lattice functions by the rule \\(L_r=\\ell^{-1}([r,\\infty))\\).</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.d_norm",
+      "title": "D Norm",
+      "href": "epipelagic_theta/epipelagic_theta_d_norm.html"
+    },
+    {
+      "id": "lattice_model.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "href": "lattice_model/lattice_model_gl_building_lattice_functions.html"
+    },
+    {
+      "id": "lattice_model.lattice_function",
+      "title": "Lattice Function",
+      "href": "lattice_model/lattice_model_lattice_function.html"
+    }
+  ],
+  "lean_refs": []
+}

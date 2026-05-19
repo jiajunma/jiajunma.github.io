@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GL Building as Lattice Functions — Correspondence of Type Blueprint</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">CorrespondenceType</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../epipelagic_theta/index.html">Epipelagic Theta</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../finite_field_weil/index.html">Finite Field Weil</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../lattice_model/index.html">Lattice Model</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../supercuspidal_theta/index.html">Supercuspidal Theta</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/appendix.html">appendix</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/character-formula.html">character-formula</a></li>
+      
+        <li><a href="../keywords/character-theory.html">character-theory</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/compact-induction.html">compact-induction</a></li>
+      
+        <li><a href="../keywords/converse.html">converse</a></li>
+      
+        <li><a href="../keywords/covering-group.html">covering-group</a></li>
+      
+        <li><a href="../keywords/data-lift.html">data-lift</a></li>
+      
+        <li><a href="../keywords/decomposition.html">decomposition</a></li>
+      
+        <li><a href="../keywords/depth-preservation.html">depth-preservation</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/determinant-character.html">determinant-character</a></li>
+      
+        <li><a href="../keywords/direct-sum.html">direct-sum</a></li>
+      
+        <li><a href="../keywords/dual-lattice.html">dual-lattice</a></li>
+      
+        <li><a href="../keywords/epipelagic.html">epipelagic</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
+      
+        <li><a href="../keywords/finite-field.html">finite-field</a></li>
+      
+        <li><a href="../keywords/finite-quotient.html">finite-quotient</a></li>
+      
+        <li><a href="../keywords/finite-reductive-quotient.html">finite-reductive-quotient</a></li>
+      
+        <li><a href="../keywords/first-occurrence.html">first-occurrence</a></li>
+      
+        <li><a href="../keywords/follow-up-request.html">follow-up-request</a></li>
+      
+        <li><a href="../keywords/gaussian-sum.html">gaussian-sum</a></li>
+      
+        <li><a href="../keywords/general-linear.html">general-linear</a></li>
+      
+        <li><a href="../keywords/generalized-lattice-model.html">generalized-lattice-model</a></li>
+      
+        <li><a href="../keywords/good-element.html">good-element</a></li>
+      
+        <li><a href="../keywords/good-factorization.html">good-factorization</a></li>
+      
+        <li><a href="../keywords/good-lattice.html">good-lattice</a></li>
+      
+        <li><a href="../keywords/graph.html">graph</a></li>
+      
+        <li><a href="../keywords/heisenberg-group.html">heisenberg-group</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-space.html">hermitian-space</a></li>
+      
+        <li><a href="../keywords/howe-factorization.html">howe-factorization</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/invariant-theory.html">invariant-theory</a></li>
+      
+        <li><a href="../keywords/isotropic.html">isotropic</a></li>
+      
+        <li><a href="../keywords/jumps.html">jumps</a></li>
+      
+        <li><a href="../keywords/k-type.html">k-type</a></li>
+      
+        <li><a href="../keywords/kac-vinberg.html">kac-vinberg</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kim-exhaustion.html">kim-exhaustion</a></li>
+      
+        <li><a href="../keywords/lattice-function.html">lattice-function</a></li>
+      
+        <li><a href="../keywords/lattice-model.html">lattice-model</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
+        <li><a href="../keywords/maximal-torus.html">maximal-torus</a></li>
+      
+        <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
+      
+        <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
+      
+        <li><a href="../keywords/moment-map.html">moment-map</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
+      
+        <li><a href="../keywords/notation.html">notation</a></li>
+      
+        <li><a href="../keywords/off-diagonal.html">off-diagonal</a></li>
+      
+        <li><a href="../keywords/one-block.html">one-block</a></li>
+      
+        <li><a href="../keywords/oscillator-representation.html">oscillator-representation</a></li>
+      
+        <li><a href="../keywords/p-adic-classical-groups.html">p-adic-classical-groups</a></li>
+      
+        <li><a href="../keywords/p-adic-theta.html">p-adic-theta</a></li>
+      
+        <li><a href="../keywords/pan-theorem.html">pan-theorem</a></li>
+      
+        <li><a href="../keywords/parabolic-type.html">parabolic-type</a></li>
+      
+        <li><a href="../keywords/positive-depth.html">positive-depth</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/radical.html">radical</a></li>
+      
+        <li><a href="../keywords/rank-restriction.html">rank-restriction</a></li>
+      
+        <li><a href="../keywords/reductive-quotient.html">reductive-quotient</a></li>
+      
+        <li><a href="../keywords/representation-theory.html">representation-theory</a></li>
+      
+        <li><a href="../keywords/residual-moment-map.html">residual-moment-map</a></li>
+      
+        <li><a href="../keywords/residual-vector-space.html">residual-vector-space</a></li>
+      
+        <li><a href="../keywords/residue-characteristic.html">residue-characteristic</a></li>
+      
+        <li><a href="../keywords/self-dual.html">self-dual</a></li>
+      
+        <li><a href="../keywords/semisimple-element.html">semisimple-element</a></li>
+      
+        <li><a href="../keywords/signed-partition.html">signed-partition</a></li>
+      
+        <li><a href="../keywords/skew-hermitian.html">skew-hermitian</a></li>
+      
+        <li><a href="../keywords/splitting.html">splitting</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stable-vector.html">stable-vector</a></li>
+      
+        <li><a href="../keywords/stone-von-neumann.html">stone-von-neumann</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/symplectic.html">symplectic</a></li>
+      
+        <li><a href="../keywords/symplectic-annihilator.html">symplectic-annihilator</a></li>
+      
+        <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
+      
+        <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
+      
+        <li><a href="../keywords/tame-base-change.html">tame-base-change</a></li>
+      
+        <li><a href="../keywords/tensor-product.html">tensor-product</a></li>
+      
+        <li><a href="../keywords/theta-correspondence.html">theta-correspondence</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/type-i-dual-pair.html">type-i-dual-pair</a></li>
+      
+        <li><a href="../keywords/uniqueness.html">uniqueness</a></li>
+      
+        <li><a href="../keywords/unitary.html">unitary</a></li>
+      
+        <li><a href="../keywords/weil-representation.html">weil-representation</a></li>
+      
+        <li><a href="../keywords/well-definedness.html">well-definedness</a></li>
+      
+        <li><a href="../keywords/witt-tower.html">witt-tower</a></li>
+      
+        <li><a href="../keywords/yu-data.html">yu-data</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-lattice_model-2e-gl_building_lattice_functions">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">GL Building as Lattice Functions</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-lattice_model-2e-gl_building_lattice_functions">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="lattice_model_d_norm.html">D Norm</a></li>
+        
+        <li><a href="lattice_model_lattice_function.html">Lattice Function</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="theorem_thmcontent thm-content body">
+    <h1>GL Building as Lattice Functions</h1>
+<p>The extended building \(B(\operatorname{GL}(V))\) is identified with the set
+of lattice functions on \(V\), equivalently with splittable \(D\)-norms, as a
+\(\operatorname{GL}(V)\)-set. This identification is unique up to translation.</p>
+<p>If \(x\in B(\operatorname{GL}(V))\) corresponds to \(L\), then the
+operator-shift filtrations attached to \(L\) agree with the Moy-Prasad
+filtrations at \(x\).</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>The source cites the standard Bruhat-Tits and Moy-Prasad identification. On an
+apartment, a splittable norm is determined by a splitting basis, and the
+Moy-Prasad lattice conditions are exactly the operator-shift conditions defining
+the lattice-function filtration.</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="../epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html">GL Building as Lattice Functions</a></li>
+      
+      <li><a href="lattice_model_classical_building_self_dual_lattice_functions.html">Classical Buildings as Self-Dual Lattice Functions</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">building</span><span class="tag">lattice-function</span><span class="tag">moy-prasad</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

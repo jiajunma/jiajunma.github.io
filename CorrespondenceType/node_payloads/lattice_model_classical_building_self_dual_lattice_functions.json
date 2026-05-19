@@ -1,0 +1,43 @@
+{
+  "id": "lattice_model.classical_building_self_dual_lattice_functions",
+  "title": "Classical Buildings as Self-Dual Lattice Functions",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_classical_building_self_dual_lattice_functions.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Classical Buildings as Self-Dual Lattice Functions</h1>\n<p>For a classical group \\(G=U(V)\\), the Bruhat-Tits building \\(B(G,k)\\) is\nnaturally identified with the set of splittable self-dual lattice functions on\n\\(V\\). Under this identification, if \\(x\\) corresponds to \\(L\\), then the\nlattice-function filtrations agree with the Moy-Prasad filtrations.</p>",
+  "proof_html": "<p>The theorem is used as a translation device: building-theoretic conditions can\nbe checked by explicit lattice-function calculations, and lattice-function\nfiltrations can be read as Moy-Prasad filtrations.</p>",
+  "deps": [
+    {
+      "id": "lattice_model.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_self_dual_lattice_function.html"
+    },
+    {
+      "id": "lattice_model.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "href": "lattice_model/lattice_model_gl_building_lattice_functions.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "href": "epipelagic_theta/epipelagic_theta_classical_building_self_dual_lattice_functions.html"
+    },
+    {
+      "id": "epipelagic_theta.tame_base_change_buildings",
+      "title": "Tame Base Change for Buildings via Norms",
+      "href": "epipelagic_theta/epipelagic_theta_tame_base_change_buildings.html"
+    },
+    {
+      "id": "lattice_model.reductive_quotient_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_reductive_quotient_self_dual_lattice.html"
+    }
+  ],
+  "lean_refs": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "lattice_model.apartment_fractional_jump_decomposition",
+  "title": "Apartment Fractional Jump Decomposition",
+  "kind": "definition",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_apartment_fractional_jump_decomposition.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Apartment Fractional Jump Decomposition</h1>\n<p>Appendix 1 decomposes \\(V\\) by fractional jump classes. If \\(\\nu_D=1\\), then\n\\[\nV^{[r]}=\\bigoplus_{a_i=r\\;(\\operatorname{mod}\\mathbb Z)} e_iK.\n\\]\nIf \\(\\nu_D=1/2\\), then\n\\[\nV^{[r]}=\n\\bigoplus_{a_i=r} e_iK\n\\oplus\n\\bigoplus_{a_i+1/2=r} e_i\\pi_DK.\n\\]\nThe lattice \\(V^r=V^{[r]}\\cap L_r\\) satisfies\n\\[\nV^r/V^rp_K\\simeq L_r/L_{r+}.\n\\]\nThe decomposition pairs \\(V^{[r]}\\) with \\(V^{[-r]}\\), with special\nself-dual factors at \\(r=0\\) and \\(r=\\nu_D/2\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model.apartment_splitting_basis",
+      "title": "Apartment Splitting Basis",
+      "href": "lattice_model/lattice_model_apartment_splitting_basis.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "href": "epipelagic_theta/epipelagic_theta_apartment_fractional_jump_decomposition.html"
+    },
+    {
+      "id": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+      "title": "Apartment Splitting of the Residual Exact Sequence",
+      "href": "epipelagic_theta/epipelagic_theta_residual_exact_sequence_apartment_splitting.html"
+    },
+    {
+      "id": "lattice_model.reductive_quotient_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_reductive_quotient_self_dual_lattice.html"
+    }
+  ],
+  "lean_refs": []
+}

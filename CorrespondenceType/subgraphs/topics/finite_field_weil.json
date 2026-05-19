@@ -4,20 +4,20 @@
     "title": "Finite Field Weil",
     "href": "finite_field_weil/index.html",
     "parent": null,
-    "node_count": 24,
-    "descendant_node_count": 24
+    "node_count": 25,
+    "descendant_node_count": 25
   },
   "counts": {
-    "internal_nodes": 24,
-    "descendant_nodes": 24,
+    "internal_nodes": 25,
+    "descendant_nodes": 25,
     "child_topics": 0,
-    "non_proof_plan_nodes": 24,
+    "non_proof_plan_nodes": 25,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 26,
-    "visible_nodes_with_selected_proof_plans": 26
+    "visible_nodes_without_proof_plans": 28,
+    "visible_nodes_with_selected_proof_plans": 28
   },
   "nodes": [
     {
@@ -211,6 +211,14 @@
       "status": "admitted",
       "href": "finite_field_weil/finite_field_weil_unitary_weil_representation.html",
       "payload": "node_payloads/finite_field_weil_unitary_weil_representation.json"
+    },
+    {
+      "id": "lattice_model.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_generalized_lattice_model.html",
+      "payload": "node_payloads/lattice_model_generalized_lattice_model.json"
     }
   ],
   "edges": [
@@ -418,9 +426,26 @@
       "from": "finite_field_weil.unitary_heisenberg_group",
       "to": "finite_field_weil.unitary_weil_representation",
       "kind": "uses"
+    },
+    {
+      "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "to": "lattice_model.generalized_lattice_model",
+      "kind": "uses"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "lattice_model.generalized_lattice_model",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
+    {
+      "id": "lattice_model",
+      "title": "Lattice Model",
+      "href": "lattice_model/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 14
+    },
     {
       "id": "supercuspidal_theta",
       "title": "Supercuspidal Theta",
@@ -430,6 +455,34 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:lattice_model",
+      "to": "finite_field_weil.padic_lattice_model_bridge",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "finite_field_weil.request_padic_finite_quotient_reduction",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model",
+      "to": "lattice_model.generalized_lattice_model",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "lattice_model.generalized_lattice_model",
+      "to": "topic:lattice_model",
+      "kind": "boundary_dependent",
+      "topic": "lattice_model",
+      "count": 1
+    },
     {
       "from": "finite_field_weil.symplectic_weil_representation",
       "to": "topic:supercuspidal_theta",
@@ -443,6 +496,13 @@
       "kind": "boundary_dependent",
       "topic": "supercuspidal_theta",
       "count": 1
+    },
+    {
+      "from": "lattice_model.generalized_lattice_model",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 8
     }
   ],
   "keywords": [
@@ -489,6 +549,12 @@
       "count": 4
     },
     {
+      "id": "generalized-lattice-model",
+      "title": "generalized-lattice-model",
+      "href": "keywords/generalized-lattice-model.html",
+      "count": 1
+    },
+    {
       "id": "heisenberg-group",
       "title": "heisenberg-group",
       "href": "keywords/heisenberg-group.html",
@@ -505,6 +571,18 @@
       "title": "maximal-torus",
       "href": "keywords/maximal-torus.html",
       "count": 3
+    },
+    {
+      "id": "metaplectic-cover",
+      "title": "metaplectic-cover",
+      "href": "keywords/metaplectic-cover.html",
+      "count": 1
+    },
+    {
+      "id": "oscillator-representation",
+      "title": "oscillator-representation",
+      "href": "keywords/oscillator-representation.html",
+      "count": 1
     },
     {
       "id": "p-adic-theta",

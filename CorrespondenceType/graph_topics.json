@@ -26,11 +26,11 @@
       "title": "Finite Field Weil",
       "depth": 1,
       "parent": null,
-      "node_count": 24,
-      "direct_node_count": 24,
+      "node_count": 25,
+      "direct_node_count": 25,
       "kind_counts": {
         "concept": 1,
-        "definition": 5,
+        "definition": 6,
         "lemma": 1,
         "proposition": 9,
         "task": 1,
@@ -39,9 +39,28 @@
       "status_counts": {
         "admitted": 15,
         "needs_statement_review": 1,
-        "staged": 8
+        "staged": 9
       },
       "href": "finite_field_weil/index.html",
+      "children": []
+    },
+    {
+      "id": "lattice_model",
+      "title": "Lattice Model",
+      "depth": 1,
+      "parent": null,
+      "node_count": 14,
+      "direct_node_count": 14,
+      "kind_counts": {
+        "concept": 1,
+        "definition": 9,
+        "lemma": 2,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 14
+      },
+      "href": "lattice_model/index.html",
       "children": []
     },
     {
@@ -69,12 +88,32 @@
     {
       "from": "epipelagic_theta",
       "to": "supercuspidal_theta",
+      "count": 2
+    },
+    {
+      "from": "finite_field_weil",
+      "to": "lattice_model",
       "count": 3
     },
     {
       "from": "finite_field_weil",
       "to": "supercuspidal_theta",
-      "count": 2
+      "count": 10
+    },
+    {
+      "from": "lattice_model",
+      "to": "epipelagic_theta",
+      "count": 18
+    },
+    {
+      "from": "lattice_model",
+      "to": "finite_field_weil",
+      "count": 3
+    },
+    {
+      "from": "lattice_model",
+      "to": "supercuspidal_theta",
+      "count": 11
     }
   ]
 }

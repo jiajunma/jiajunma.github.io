@@ -31,11 +31,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.apartment_splitting_basis"
-      ],
-      "used_by": [
-        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-        "epipelagic_theta.residual_exact_sequence_apartment_splitting"
+        "lattice_model.apartment_fractional_jump_decomposition"
       ]
     },
     {
@@ -50,10 +46,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.self_dual_lattice_function"
-      ],
-      "used_by": [
-        "epipelagic_theta.apartment_fractional_jump_decomposition"
+        "lattice_model.apartment_splitting_basis"
       ]
     },
     {
@@ -79,12 +72,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.gl_building_lattice_functions",
-        "epipelagic_theta.self_dual_lattice_function"
-      ],
-      "used_by": [
-        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-        "epipelagic_theta.tame_base_change_buildings"
+        "lattice_model.classical_building_self_dual_lattice_functions"
       ]
     },
     {
@@ -98,9 +86,8 @@
         "norm"
       ],
       "topic": "epipelagic_theta",
-      "used_by": [
-        "epipelagic_theta.gl_building_lattice_functions",
-        "epipelagic_theta.lattice_function"
+      "uses": [
+        "lattice_model.d_norm"
       ]
     },
     {
@@ -220,7 +207,7 @@
       "uses": [
         "epipelagic_theta.epipelagic_rank_restriction",
         "epipelagic_theta.residual_moment_map_condition",
-        "epipelagic_theta.tensor_product_lattice_function"
+        "lattice_model.tensor_product_lattice_function"
       ],
       "used_by": [
         "epipelagic_theta.epipelagic_theta_main_proof_plan",
@@ -283,11 +270,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.d_norm",
-        "epipelagic_theta.lattice_function"
-      ],
-      "used_by": [
-        "epipelagic_theta.classical_building_self_dual_lattice_functions"
+        "lattice_model.gl_building_lattice_functions"
       ]
     },
     {
@@ -342,12 +325,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.d_norm"
-      ],
-      "used_by": [
-        "epipelagic_theta.gl_building_lattice_functions",
-        "epipelagic_theta.self_dual_lattice_function",
-        "epipelagic_theta.tensor_product_lattice_function"
+        "lattice_model.lattice_function"
       ]
     },
     {
@@ -362,7 +340,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.self_dual_lattice_function"
+        "lattice_model.self_dual_lattice_function"
       ],
       "used_by": [
         "epipelagic_theta.lattice_model_splitting_independence"
@@ -452,7 +430,7 @@
       "topic": "epipelagic_theta",
       "uses": [
         "epipelagic_theta.moment_maps_classical_dual_pair",
-        "epipelagic_theta.tensor_product_lattice_function"
+        "lattice_model.tensor_product_lattice_function"
       ]
     },
     {
@@ -505,11 +483,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.apartment_fractional_jump_decomposition",
-        "epipelagic_theta.classical_building_self_dual_lattice_functions"
-      ],
-      "used_by": [
-        "epipelagic_theta.residual_exact_sequence_apartment_splitting"
+        "lattice_model.reductive_quotient_self_dual_lattice"
       ]
     },
     {
@@ -524,8 +498,8 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.apartment_fractional_jump_decomposition",
-        "epipelagic_theta.reductive_quotient_of_self_dual_lattice"
+        "lattice_model.apartment_fractional_jump_decomposition",
+        "lattice_model.reductive_quotient_self_dual_lattice"
       ],
       "used_by": [
         "epipelagic_theta.residual_exact_sequence_splitting"
@@ -544,7 +518,7 @@
       "topic": "epipelagic_theta",
       "uses": [
         "epipelagic_theta.residual_exact_sequence_apartment_splitting",
-        "epipelagic_theta.tensor_product_lattice_function"
+        "lattice_model.tensor_product_lattice_function"
       ],
       "used_by": [
         "epipelagic_theta.epipelagic_theta_main_proof_plan",
@@ -602,7 +576,7 @@
       "uses": [
         "epipelagic_theta.epipelagic_datum",
         "epipelagic_theta.moment_maps_classical_dual_pair",
-        "epipelagic_theta.tensor_product_lattice_function"
+        "lattice_model.tensor_product_lattice_function"
       ],
       "used_by": [
         "epipelagic_theta.epipelagic_rank_restriction",
@@ -625,14 +599,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.lattice_function"
-      ],
-      "used_by": [
-        "epipelagic_theta.apartment_splitting_basis",
-        "epipelagic_theta.classical_building_self_dual_lattice_functions",
-        "epipelagic_theta.lattice_model_section",
-        "epipelagic_theta.tensor_dual_self_duality",
-        "supercuspidal_theta.generalized_lattice_model"
+        "lattice_model.self_dual_lattice_function"
       ]
     },
     {
@@ -683,7 +650,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.classical_building_self_dual_lattice_functions"
+        "lattice_model.classical_building_self_dual_lattice_functions"
       ],
       "used_by": [
         "epipelagic_theta.epipelagic_jump_set",
@@ -702,8 +669,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.self_dual_lattice_function",
-        "epipelagic_theta.tensor_product_lattice_function"
+        "lattice_model.tensor_product_self_duality"
       ]
     },
     {
@@ -718,14 +684,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "epipelagic_theta.lattice_function"
-      ],
-      "used_by": [
-        "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
-        "epipelagic_theta.moment_map_lattice_compatibility",
-        "epipelagic_theta.residual_exact_sequence_splitting",
-        "epipelagic_theta.residual_moment_map_condition",
-        "epipelagic_theta.tensor_dual_self_duality"
+        "lattice_model.tensor_product_lattice_function"
       ]
     },
     {
@@ -784,7 +743,8 @@
       ],
       "used_by": [
         "finite_field_weil.gl_weil_representation",
-        "finite_field_weil.padic_lattice_model_bridge"
+        "finite_field_weil.padic_lattice_model_bridge",
+        "lattice_model.generalized_lattice_model"
       ]
     },
     {
@@ -927,7 +887,8 @@
         "finite_field_weil.finite_heisenberg_stone_von_neumann",
         "finite_field_weil.symplectic_direct_sum_tensor",
         "finite_field_weil.symplectic_fixed_point_absolute_character",
-        "finite_field_weil.symplectic_weil_representation"
+        "finite_field_weil.symplectic_weil_representation",
+        "lattice_model.symplectic_annihilator_finite_quotient"
       ],
       "used_by": [
         "finite_field_weil.request_padic_finite_quotient_reduction"
@@ -969,7 +930,8 @@
       ],
       "topic": "finite_field_weil",
       "uses": [
-        "finite_field_weil.padic_lattice_model_bridge"
+        "finite_field_weil.padic_lattice_model_bridge",
+        "lattice_model.symplectic_annihilator_finite_quotient"
       ]
     },
     {
@@ -1096,6 +1058,7 @@
         "finite_field_weil.symplectic_weil_even_odd_components",
         "finite_field_weil.symplectic_weil_torus_character_formula",
         "finite_field_weil.unitary_weil_representation",
+        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model"
       ]
     },
@@ -1234,6 +1197,356 @@
         "finite_field_weil.unitary_fixed_point_absolute_character",
         "finite_field_weil.unitary_weil_character_formula",
         "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+      ]
+    },
+    {
+      "id": "lattice_model.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "lattice-function",
+        "finite-reductive-quotient"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.apartment_splitting_basis"
+      ],
+      "used_by": [
+        "epipelagic_theta.apartment_fractional_jump_decomposition",
+        "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+        "lattice_model.reductive_quotient_self_dual_lattice"
+      ]
+    },
+    {
+      "id": "lattice_model.apartment_splitting_basis",
+      "title": "Apartment Splitting Basis",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "apartment",
+        "lattice-function"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.self_dual_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.apartment_splitting_basis",
+        "lattice_model.apartment_fractional_jump_decomposition"
+      ]
+    },
+    {
+      "id": "lattice_model.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "building",
+        "lattice-function",
+        "moy-prasad"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.gl_building_lattice_functions",
+        "lattice_model.self_dual_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.classical_building_self_dual_lattice_functions",
+        "epipelagic_theta.tame_base_change_buildings",
+        "lattice_model.reductive_quotient_self_dual_lattice"
+      ]
+    },
+    {
+      "id": "lattice_model.d_norm",
+      "title": "D Norm",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "building",
+        "norm"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "used_by": [
+        "epipelagic_theta.d_norm",
+        "lattice_model.gl_building_lattice_functions",
+        "lattice_model.lattice_function"
+      ]
+    },
+    {
+      "id": "lattice_model.dual_lattice_conventions",
+      "title": "Dual Lattice Conventions",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "notation",
+        "dual-lattice",
+        "lattice-function",
+        "symplectic-annihilator"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.lattice_function"
+      ],
+      "used_by": [
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.symplectic_annihilator_finite_quotient"
+      ]
+    },
+    {
+      "id": "lattice_model.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "generalized-lattice-model",
+        "oscillator-representation",
+        "metaplectic-cover"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model",
+        "finite_field_weil"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.symplectic_weil_representation",
+        "lattice_model.symplectic_annihilator_finite_quotient"
+      ],
+      "used_by": [
+        "lattice_model.lattice_fixed_vector_model",
+        "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.depth_preservation_building_sum",
+        "supercuspidal_theta.depth_zero_pan_theorem",
+        "supercuspidal_theta.fixed_vector_descent_lemma",
+        "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.key_oscillator_character_identity",
+        "supercuspidal_theta.stabilizer_orbit_action_formula"
+      ]
+    },
+    {
+      "id": "lattice_model.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "building",
+        "lattice-function",
+        "moy-prasad"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.d_norm",
+        "lattice_model.lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.gl_building_lattice_functions",
+        "lattice_model.classical_building_self_dual_lattice_functions"
+      ]
+    },
+    {
+      "id": "lattice_model.lattice_fixed_vector_model",
+      "title": "Lattice Fixed Vector Model",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "appendix",
+        "generalized-lattice-model",
+        "depth-preservation"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.generalized_lattice_model"
+      ],
+      "used_by": [
+        "supercuspidal_theta.depth_preservation_building_sum",
+        "supercuspidal_theta.depth_preservation_proof_plan",
+        "supercuspidal_theta.lattice_fixed_vector_model",
+        "supercuspidal_theta.module_function_self_dual_envelope"
+      ]
+    },
+    {
+      "id": "lattice_model.lattice_function",
+      "title": "Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "building",
+        "moy-prasad"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.d_norm"
+      ],
+      "used_by": [
+        "epipelagic_theta.lattice_function",
+        "lattice_model.dual_lattice_conventions",
+        "lattice_model.gl_building_lattice_functions",
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.tensor_product_lattice_function"
+      ]
+    },
+    {
+      "id": "lattice_model.reductive_quotient_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "building",
+        "finite-reductive-quotient",
+        "lattice-function"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.apartment_fractional_jump_decomposition",
+        "lattice_model.classical_building_self_dual_lattice_functions"
+      ],
+      "used_by": [
+        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+        "epipelagic_theta.residual_exact_sequence_apartment_splitting"
+      ]
+    },
+    {
+      "id": "lattice_model.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "self-dual",
+        "classical-group"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.dual_lattice_conventions",
+        "lattice_model.lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.lattice_model_section",
+        "epipelagic_theta.self_dual_lattice_function",
+        "lattice_model.apartment_splitting_basis",
+        "lattice_model.classical_building_self_dual_lattice_functions",
+        "lattice_model.tensor_product_self_duality"
+      ]
+    },
+    {
+      "id": "lattice_model.symplectic_annihilator_finite_quotient",
+      "title": "Symplectic Annihilator Finite Quotient",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "symplectic-annihilator",
+        "finite-quotient",
+        "generalized-lattice-model"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.dual_lattice_conventions"
+      ],
+      "used_by": [
+        "finite_field_weil.padic_lattice_model_bridge",
+        "finite_field_weil.request_padic_finite_quotient_reduction",
+        "lattice_model.generalized_lattice_model"
+      ]
+    },
+    {
+      "id": "lattice_model.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "tensor-product",
+        "oscillator-representation"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
+        "epipelagic_theta.moment_map_lattice_compatibility",
+        "epipelagic_theta.residual_exact_sequence_splitting",
+        "epipelagic_theta.residual_moment_map_condition",
+        "epipelagic_theta.tensor_product_lattice_function",
+        "lattice_model.tensor_product_self_duality"
+      ]
+    },
+    {
+      "id": "lattice_model.tensor_product_self_duality",
+      "title": "Tensor Product Self-Duality",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "tensor-product",
+        "self-dual",
+        "lattice-function"
+      ],
+      "primary_topic": "lattice_model",
+      "topics": [
+        "lattice_model"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.tensor_product_lattice_function"
+      ],
+      "used_by": [
+        "epipelagic_theta.tensor_dual_self_duality"
       ]
     },
     {
@@ -1546,7 +1859,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.generalized_lattice_model",
+        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.supercuspidal_datum"
       ],
       "used_by": [
@@ -1611,9 +1924,9 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "lattice_model.generalized_lattice_model",
+        "lattice_model.lattice_fixed_vector_model",
         "supercuspidal_theta.fixed_vector_descent_lemma",
-        "supercuspidal_theta.generalized_lattice_model",
-        "supercuspidal_theta.lattice_fixed_vector_model",
         "supercuspidal_theta.module_function_self_dual_envelope"
       ],
       "used_by": [
@@ -1635,8 +1948,8 @@
       "plan_status": "selected",
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.fixed_vector_descent_lemma",
-        "supercuspidal_theta.lattice_fixed_vector_model"
+        "lattice_model.lattice_fixed_vector_model",
+        "supercuspidal_theta.fixed_vector_descent_lemma"
       ]
     },
     {
@@ -1682,8 +1995,8 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.finite_field_depth_zero_theta_lift",
-        "supercuspidal_theta.generalized_lattice_model"
+        "lattice_model.generalized_lattice_model",
+        "supercuspidal_theta.finite_field_depth_zero_theta_lift"
       ]
     },
     {
@@ -1901,7 +2214,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.generalized_lattice_model",
+        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.module_function_self_dual_envelope"
       ],
       "used_by": [
@@ -1921,17 +2234,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "epipelagic_theta.self_dual_lattice_function"
-      ],
-      "used_by": [
-        "supercuspidal_theta.covering_supercuspidal_datum",
-        "supercuspidal_theta.depth_preservation_building_sum",
-        "supercuspidal_theta.depth_zero_pan_theorem",
-        "supercuspidal_theta.fixed_vector_descent_lemma",
-        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-        "supercuspidal_theta.key_oscillator_character_identity",
-        "supercuspidal_theta.lattice_fixed_vector_model",
-        "supercuspidal_theta.stabilizer_orbit_action_formula"
+        "lattice_model.generalized_lattice_model"
       ]
     },
     {
@@ -2040,9 +2343,9 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.block_induction_setup",
         "supercuspidal_theta.block_oscillator_action_factorization",
-        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
         "supercuspidal_theta.one_block_orbit_k_type_proposition",
         "supercuspidal_theta.theta_block_decomposition_setup",
@@ -2087,8 +2390,8 @@
       "topic": "supercuspidal_theta",
       "uses": [
         "epipelagic_theta.moment_map_pairing_formulas",
+        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.dalpha_layer_properties",
-        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.single_block_stabilizer_structure"
       ],
       "used_by": [
@@ -2107,12 +2410,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.generalized_lattice_model"
-      ],
-      "used_by": [
-        "supercuspidal_theta.depth_preservation_building_sum",
-        "supercuspidal_theta.depth_preservation_proof_plan",
-        "supercuspidal_theta.module_function_self_dual_envelope"
+        "lattice_model.lattice_fixed_vector_model"
       ]
     },
     {
@@ -2205,7 +2503,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.lattice_fixed_vector_model"
+        "lattice_model.lattice_fixed_vector_model"
       ],
       "used_by": [
         "supercuspidal_theta.depth_preservation_building_sum",
@@ -2721,7 +3019,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "supercuspidal_theta.generalized_lattice_model",
+        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.key_oscillator_character_identity",
         "supercuspidal_theta.single_block_stabilizer_structure"
       ],
@@ -2986,19 +3284,19 @@
     },
     {
       "from": "epipelagic_theta.apartment_fractional_jump_decomposition",
-      "to": "epipelagic_theta.apartment_splitting_basis"
+      "to": "lattice_model.apartment_fractional_jump_decomposition"
     },
     {
       "from": "epipelagic_theta.apartment_splitting_basis",
-      "to": "epipelagic_theta.self_dual_lattice_function"
+      "to": "lattice_model.apartment_splitting_basis"
     },
     {
       "from": "epipelagic_theta.classical_building_self_dual_lattice_functions",
-      "to": "epipelagic_theta.gl_building_lattice_functions"
+      "to": "lattice_model.classical_building_self_dual_lattice_functions"
     },
     {
-      "from": "epipelagic_theta.classical_building_self_dual_lattice_functions",
-      "to": "epipelagic_theta.self_dual_lattice_function"
+      "from": "epipelagic_theta.d_norm",
+      "to": "lattice_model.d_norm"
     },
     {
       "from": "epipelagic_theta.epipelagic_data_equivalence",
@@ -3058,7 +3356,7 @@
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_hypotheses_c1_c4",
-      "to": "epipelagic_theta.tensor_product_lattice_function"
+      "to": "lattice_model.tensor_product_lattice_function"
     },
     {
       "from": "epipelagic_theta.epipelagic_theta_main_proof_plan",
@@ -3118,11 +3416,7 @@
     },
     {
       "from": "epipelagic_theta.gl_building_lattice_functions",
-      "to": "epipelagic_theta.d_norm"
-    },
-    {
-      "from": "epipelagic_theta.gl_building_lattice_functions",
-      "to": "epipelagic_theta.lattice_function"
+      "to": "lattice_model.gl_building_lattice_functions"
     },
     {
       "from": "epipelagic_theta.invariant_subspace_rank_lemma",
@@ -3146,11 +3440,11 @@
     },
     {
       "from": "epipelagic_theta.lattice_function",
-      "to": "epipelagic_theta.d_norm"
+      "to": "lattice_model.lattice_function"
     },
     {
       "from": "epipelagic_theta.lattice_model_section",
-      "to": "epipelagic_theta.self_dual_lattice_function"
+      "to": "lattice_model.self_dual_lattice_function"
     },
     {
       "from": "epipelagic_theta.lattice_model_splitting_independence",
@@ -3174,7 +3468,7 @@
     },
     {
       "from": "epipelagic_theta.moment_map_lattice_compatibility",
-      "to": "epipelagic_theta.tensor_product_lattice_function"
+      "to": "lattice_model.tensor_product_lattice_function"
     },
     {
       "from": "epipelagic_theta.moment_map_pairing_formulas",
@@ -3182,19 +3476,15 @@
     },
     {
       "from": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-      "to": "epipelagic_theta.apartment_fractional_jump_decomposition"
-    },
-    {
-      "from": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
+      "to": "lattice_model.reductive_quotient_self_dual_lattice"
     },
     {
       "from": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
-      "to": "epipelagic_theta.apartment_fractional_jump_decomposition"
+      "to": "lattice_model.apartment_fractional_jump_decomposition"
     },
     {
       "from": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
-      "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice"
+      "to": "lattice_model.reductive_quotient_self_dual_lattice"
     },
     {
       "from": "epipelagic_theta.residual_exact_sequence_splitting",
@@ -3202,7 +3492,7 @@
     },
     {
       "from": "epipelagic_theta.residual_exact_sequence_splitting",
-      "to": "epipelagic_theta.tensor_product_lattice_function"
+      "to": "lattice_model.tensor_product_lattice_function"
     },
     {
       "from": "epipelagic_theta.residual_fiber_stabilizer",
@@ -3234,11 +3524,11 @@
     },
     {
       "from": "epipelagic_theta.residual_moment_map_condition",
-      "to": "epipelagic_theta.tensor_product_lattice_function"
+      "to": "lattice_model.tensor_product_lattice_function"
     },
     {
       "from": "epipelagic_theta.self_dual_lattice_function",
-      "to": "epipelagic_theta.lattice_function"
+      "to": "lattice_model.self_dual_lattice_function"
     },
     {
       "from": "epipelagic_theta.stabilizer_splitting",
@@ -3250,19 +3540,15 @@
     },
     {
       "from": "epipelagic_theta.tame_base_change_buildings",
-      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
+      "to": "lattice_model.classical_building_self_dual_lattice_functions"
     },
     {
       "from": "epipelagic_theta.tensor_dual_self_duality",
-      "to": "epipelagic_theta.self_dual_lattice_function"
-    },
-    {
-      "from": "epipelagic_theta.tensor_dual_self_duality",
-      "to": "epipelagic_theta.tensor_product_lattice_function"
+      "to": "lattice_model.tensor_product_self_duality"
     },
     {
       "from": "epipelagic_theta.tensor_product_lattice_function",
-      "to": "epipelagic_theta.lattice_function"
+      "to": "lattice_model.tensor_product_lattice_function"
     },
     {
       "from": "epipelagic_theta.unrefined_minimal_k_type_correspondence",
@@ -3337,8 +3623,16 @@
       "to": "finite_field_weil.symplectic_weil_representation"
     },
     {
+      "from": "finite_field_weil.padic_lattice_model_bridge",
+      "to": "lattice_model.symplectic_annihilator_finite_quotient"
+    },
+    {
       "from": "finite_field_weil.request_padic_finite_quotient_reduction",
       "to": "finite_field_weil.padic_lattice_model_bridge"
+    },
+    {
+      "from": "finite_field_weil.request_padic_finite_quotient_reduction",
+      "to": "lattice_model.symplectic_annihilator_finite_quotient"
     },
     {
       "from": "finite_field_weil.symplectic_direct_sum_tensor",
@@ -3435,6 +3729,86 @@
     {
       "from": "finite_field_weil.unitary_weil_representation",
       "to": "finite_field_weil.unitary_heisenberg_group"
+    },
+    {
+      "from": "lattice_model.apartment_fractional_jump_decomposition",
+      "to": "lattice_model.apartment_splitting_basis"
+    },
+    {
+      "from": "lattice_model.apartment_splitting_basis",
+      "to": "lattice_model.self_dual_lattice_function"
+    },
+    {
+      "from": "lattice_model.classical_building_self_dual_lattice_functions",
+      "to": "lattice_model.gl_building_lattice_functions"
+    },
+    {
+      "from": "lattice_model.classical_building_self_dual_lattice_functions",
+      "to": "lattice_model.self_dual_lattice_function"
+    },
+    {
+      "from": "lattice_model.dual_lattice_conventions",
+      "to": "lattice_model.lattice_function"
+    },
+    {
+      "from": "lattice_model.generalized_lattice_model",
+      "to": "finite_field_weil.finite_heisenberg_stone_von_neumann"
+    },
+    {
+      "from": "lattice_model.generalized_lattice_model",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "lattice_model.generalized_lattice_model",
+      "to": "lattice_model.symplectic_annihilator_finite_quotient"
+    },
+    {
+      "from": "lattice_model.gl_building_lattice_functions",
+      "to": "lattice_model.d_norm"
+    },
+    {
+      "from": "lattice_model.gl_building_lattice_functions",
+      "to": "lattice_model.lattice_function"
+    },
+    {
+      "from": "lattice_model.lattice_fixed_vector_model",
+      "to": "lattice_model.generalized_lattice_model"
+    },
+    {
+      "from": "lattice_model.lattice_function",
+      "to": "lattice_model.d_norm"
+    },
+    {
+      "from": "lattice_model.reductive_quotient_self_dual_lattice",
+      "to": "lattice_model.apartment_fractional_jump_decomposition"
+    },
+    {
+      "from": "lattice_model.reductive_quotient_self_dual_lattice",
+      "to": "lattice_model.classical_building_self_dual_lattice_functions"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.dual_lattice_conventions"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.lattice_function"
+    },
+    {
+      "from": "lattice_model.symplectic_annihilator_finite_quotient",
+      "to": "lattice_model.dual_lattice_conventions"
+    },
+    {
+      "from": "lattice_model.tensor_product_lattice_function",
+      "to": "lattice_model.lattice_function"
+    },
+    {
+      "from": "lattice_model.tensor_product_self_duality",
+      "to": "lattice_model.self_dual_lattice_function"
+    },
+    {
+      "from": "lattice_model.tensor_product_self_duality",
+      "to": "lattice_model.tensor_product_lattice_function"
     },
     {
       "from": "supercuspidal_theta.attached_supercuspidal_representation",
@@ -3558,7 +3932,7 @@
     },
     {
       "from": "supercuspidal_theta.covering_supercuspidal_datum",
-      "to": "supercuspidal_theta.generalized_lattice_model"
+      "to": "lattice_model.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.covering_supercuspidal_datum",
@@ -3582,15 +3956,15 @@
     },
     {
       "from": "supercuspidal_theta.depth_preservation_building_sum",
+      "to": "lattice_model.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.depth_preservation_building_sum",
+      "to": "lattice_model.lattice_fixed_vector_model"
+    },
+    {
+      "from": "supercuspidal_theta.depth_preservation_building_sum",
       "to": "supercuspidal_theta.fixed_vector_descent_lemma"
-    },
-    {
-      "from": "supercuspidal_theta.depth_preservation_building_sum",
-      "to": "supercuspidal_theta.generalized_lattice_model"
-    },
-    {
-      "from": "supercuspidal_theta.depth_preservation_building_sum",
-      "to": "supercuspidal_theta.lattice_fixed_vector_model"
     },
     {
       "from": "supercuspidal_theta.depth_preservation_building_sum",
@@ -3598,11 +3972,11 @@
     },
     {
       "from": "supercuspidal_theta.depth_preservation_proof_plan",
-      "to": "supercuspidal_theta.fixed_vector_descent_lemma"
+      "to": "lattice_model.lattice_fixed_vector_model"
     },
     {
       "from": "supercuspidal_theta.depth_preservation_proof_plan",
-      "to": "supercuspidal_theta.lattice_fixed_vector_model"
+      "to": "supercuspidal_theta.fixed_vector_descent_lemma"
     },
     {
       "from": "supercuspidal_theta.depth_zero_good_lattice_quotient",
@@ -3610,11 +3984,11 @@
     },
     {
       "from": "supercuspidal_theta.depth_zero_pan_theorem",
-      "to": "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+      "to": "lattice_model.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.depth_zero_pan_theorem",
-      "to": "supercuspidal_theta.generalized_lattice_model"
+      "to": "supercuspidal_theta.finite_field_depth_zero_theta_lift"
     },
     {
       "from": "supercuspidal_theta.direct_sum_proof",
@@ -3710,7 +4084,7 @@
     },
     {
       "from": "supercuspidal_theta.fixed_vector_descent_lemma",
-      "to": "supercuspidal_theta.generalized_lattice_model"
+      "to": "lattice_model.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.fixed_vector_descent_lemma",
@@ -3718,7 +4092,7 @@
     },
     {
       "from": "supercuspidal_theta.generalized_lattice_model",
-      "to": "epipelagic_theta.self_dual_lattice_function"
+      "to": "lattice_model.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.gl_good_factorization_existence",
@@ -3758,15 +4132,15 @@
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "to": "lattice_model.generalized_lattice_model"
+    },
+    {
+      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
       "to": "supercuspidal_theta.block_induction_setup"
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
       "to": "supercuspidal_theta.block_oscillator_action_factorization"
-    },
-    {
-      "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-      "to": "supercuspidal_theta.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
@@ -3802,11 +4176,11 @@
     },
     {
       "from": "supercuspidal_theta.key_oscillator_character_identity",
-      "to": "supercuspidal_theta.dalpha_layer_properties"
+      "to": "lattice_model.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.key_oscillator_character_identity",
-      "to": "supercuspidal_theta.generalized_lattice_model"
+      "to": "supercuspidal_theta.dalpha_layer_properties"
     },
     {
       "from": "supercuspidal_theta.key_oscillator_character_identity",
@@ -3814,7 +4188,7 @@
     },
     {
       "from": "supercuspidal_theta.lattice_fixed_vector_model",
-      "to": "supercuspidal_theta.generalized_lattice_model"
+      "to": "lattice_model.lattice_fixed_vector_model"
     },
     {
       "from": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
@@ -3858,7 +4232,7 @@
     },
     {
       "from": "supercuspidal_theta.module_function_self_dual_envelope",
-      "to": "supercuspidal_theta.lattice_fixed_vector_model"
+      "to": "lattice_model.lattice_fixed_vector_model"
     },
     {
       "from": "supercuspidal_theta.negative_depth_character_extension",
@@ -4102,7 +4476,7 @@
     },
     {
       "from": "supercuspidal_theta.stabilizer_orbit_action_formula",
-      "to": "supercuspidal_theta.generalized_lattice_model"
+      "to": "lattice_model.generalized_lattice_model"
     },
     {
       "from": "supercuspidal_theta.stabilizer_orbit_action_formula",

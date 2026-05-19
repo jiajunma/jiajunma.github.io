@@ -1,0 +1,38 @@
+{
+  "id": "lattice_model.reductive_quotient_self_dual_lattice",
+  "title": "Reductive Quotient of a Self-Dual Lattice Function",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_reductive_quotient_self_dual_lattice.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Reductive Quotient of a Self-Dual Lattice Function</h1>\n<p>For a self-dual lattice function \\(L\\), the finite quotient\n\\[\nG_L/G_{L,0+}\n\\]\ndecomposes as a product of unitary factors at the self-dual jumps and general\nlinear factors paired across opposite jumps. In the notation of the source, this\nis the product involving \\(G_0\\), \\(G_{\\nu_D/2}\\), and\n\\(\\operatorname{GL}(L_r)\\) for positive jumps \\(r\\) below \\(\\nu_D/2\\).</p>",
+  "proof_html": "<p>The proof is standard in the source. The apartment fractional decomposition\nidentifies \\(V^r/V^rp_K\\) with \\(L_r/L_{r+}\\), pairs \\(r\\) with \\(-r\\), and\nthen reads off the unitary self-dual factors and paired general linear factors.</p>",
+  "deps": [
+    {
+      "id": "lattice_model.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "href": "lattice_model/lattice_model_classical_building_self_dual_lattice_functions.html"
+    },
+    {
+      "id": "lattice_model.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "href": "lattice_model/lattice_model_apartment_fractional_jump_decomposition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_reductive_quotient_of_self_dual_lattice.html"
+    },
+    {
+      "id": "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+      "title": "Apartment Splitting of the Residual Exact Sequence",
+      "href": "epipelagic_theta/epipelagic_theta_residual_exact_sequence_apartment_splitting.html"
+    }
+  ],
+  "lean_refs": []
+}

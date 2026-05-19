@@ -1,0 +1,474 @@
+{
+  "topic": {
+    "id": "lattice_model",
+    "title": "Lattice Model",
+    "href": "lattice_model/index.html",
+    "parent": null,
+    "node_count": 14,
+    "descendant_node_count": 14
+  },
+  "counts": {
+    "internal_nodes": 14,
+    "descendant_nodes": 14,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 14,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 3,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 18,
+    "visible_nodes_with_selected_proof_plans": 18
+  },
+  "nodes": [
+    {
+      "id": "lattice_model.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_apartment_fractional_jump_decomposition.html",
+      "payload": "node_payloads/lattice_model_apartment_fractional_jump_decomposition.json"
+    },
+    {
+      "id": "lattice_model.apartment_splitting_basis",
+      "title": "Apartment Splitting Basis",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_apartment_splitting_basis.html",
+      "payload": "node_payloads/lattice_model_apartment_splitting_basis.json"
+    },
+    {
+      "id": "lattice_model.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_classical_building_self_dual_lattice_functions.html",
+      "payload": "node_payloads/lattice_model_classical_building_self_dual_lattice_functions.json"
+    },
+    {
+      "id": "lattice_model.d_norm",
+      "title": "D Norm",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_d_norm.html",
+      "payload": "node_payloads/lattice_model_d_norm.json"
+    },
+    {
+      "id": "lattice_model.dual_lattice_conventions",
+      "title": "Dual Lattice Conventions",
+      "kind": "concept",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_dual_lattice_conventions.html",
+      "payload": "node_payloads/lattice_model_dual_lattice_conventions.json"
+    },
+    {
+      "id": "lattice_model.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_generalized_lattice_model.html",
+      "payload": "node_payloads/lattice_model_generalized_lattice_model.json"
+    },
+    {
+      "id": "lattice_model.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_gl_building_lattice_functions.html",
+      "payload": "node_payloads/lattice_model_gl_building_lattice_functions.json"
+    },
+    {
+      "id": "lattice_model.lattice_fixed_vector_model",
+      "title": "Lattice Fixed Vector Model",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_lattice_fixed_vector_model.html",
+      "payload": "node_payloads/lattice_model_lattice_fixed_vector_model.json"
+    },
+    {
+      "id": "lattice_model.lattice_function",
+      "title": "Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_lattice_function.html",
+      "payload": "node_payloads/lattice_model_lattice_function.json"
+    },
+    {
+      "id": "lattice_model.reductive_quotient_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_reductive_quotient_self_dual_lattice.html",
+      "payload": "node_payloads/lattice_model_reductive_quotient_self_dual_lattice.json"
+    },
+    {
+      "id": "lattice_model.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_self_dual_lattice_function.html",
+      "payload": "node_payloads/lattice_model_self_dual_lattice_function.json"
+    },
+    {
+      "id": "lattice_model.symplectic_annihilator_finite_quotient",
+      "title": "Symplectic Annihilator Finite Quotient",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_symplectic_annihilator_finite_quotient.html",
+      "payload": "node_payloads/lattice_model_symplectic_annihilator_finite_quotient.json"
+    },
+    {
+      "id": "lattice_model.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_tensor_product_lattice_function.html",
+      "payload": "node_payloads/lattice_model_tensor_product_lattice_function.json"
+    },
+    {
+      "id": "lattice_model.tensor_product_self_duality",
+      "title": "Tensor Product Self-Duality",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_tensor_product_self_duality.html",
+      "payload": "node_payloads/lattice_model_tensor_product_self_duality.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "lattice_model.apartment_splitting_basis",
+      "to": "lattice_model.apartment_fractional_jump_decomposition",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.apartment_splitting_basis",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.gl_building_lattice_functions",
+      "to": "lattice_model.classical_building_self_dual_lattice_functions",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.classical_building_self_dual_lattice_functions",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.lattice_function",
+      "to": "lattice_model.dual_lattice_conventions",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_annihilator_finite_quotient",
+      "to": "lattice_model.generalized_lattice_model",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.d_norm",
+      "to": "lattice_model.gl_building_lattice_functions",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.lattice_function",
+      "to": "lattice_model.gl_building_lattice_functions",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.generalized_lattice_model",
+      "to": "lattice_model.lattice_fixed_vector_model",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.d_norm",
+      "to": "lattice_model.lattice_function",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.apartment_fractional_jump_decomposition",
+      "to": "lattice_model.reductive_quotient_self_dual_lattice",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.classical_building_self_dual_lattice_functions",
+      "to": "lattice_model.reductive_quotient_self_dual_lattice",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.dual_lattice_conventions",
+      "to": "lattice_model.self_dual_lattice_function",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.lattice_function",
+      "to": "lattice_model.self_dual_lattice_function",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.dual_lattice_conventions",
+      "to": "lattice_model.symplectic_annihilator_finite_quotient",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.lattice_function",
+      "to": "lattice_model.tensor_product_lattice_function",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.tensor_product_self_duality",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.tensor_product_lattice_function",
+      "to": "lattice_model.tensor_product_self_duality",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "epipelagic_theta",
+      "title": "Epipelagic Theta",
+      "href": "epipelagic_theta/index.html",
+      "role": "dependent",
+      "node_count": 39
+    },
+    {
+      "id": "finite_field_weil",
+      "title": "Finite Field Weil",
+      "href": "finite_field_weil/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 25
+    },
+    {
+      "id": "supercuspidal_theta",
+      "title": "Supercuspidal Theta",
+      "href": "supercuspidal_theta/index.html",
+      "role": "dependent",
+      "node_count": 87
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:finite_field_weil",
+      "to": "lattice_model.generalized_lattice_model",
+      "kind": "boundary_dependency",
+      "topic": "finite_field_weil",
+      "count": 2
+    },
+    {
+      "from": "lattice_model.apartment_fractional_jump_decomposition",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 2
+    },
+    {
+      "from": "lattice_model.apartment_splitting_basis",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 1
+    },
+    {
+      "from": "lattice_model.classical_building_self_dual_lattice_functions",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 2
+    },
+    {
+      "from": "lattice_model.d_norm",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 1
+    },
+    {
+      "from": "lattice_model.gl_building_lattice_functions",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 1
+    },
+    {
+      "from": "lattice_model.lattice_function",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 1
+    },
+    {
+      "from": "lattice_model.reductive_quotient_self_dual_lattice",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 2
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 2
+    },
+    {
+      "from": "lattice_model.tensor_product_lattice_function",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 5
+    },
+    {
+      "from": "lattice_model.tensor_product_self_duality",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 1
+    },
+    {
+      "from": "lattice_model.symplectic_annihilator_finite_quotient",
+      "to": "topic:finite_field_weil",
+      "kind": "boundary_dependent",
+      "topic": "finite_field_weil",
+      "count": 2
+    },
+    {
+      "from": "lattice_model.generalized_lattice_model",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 8
+    },
+    {
+      "from": "lattice_model.lattice_fixed_vector_model",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 3
+    },
+    {
+      "from": "lattice_model.lattice_fixed_vector_model",
+      "to": "topic:supercuspidal_theta",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "supercuspidal_theta",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "apartment",
+      "title": "apartment",
+      "href": "keywords/apartment.html",
+      "count": 1
+    },
+    {
+      "id": "appendix",
+      "title": "appendix",
+      "href": "keywords/appendix.html",
+      "count": 3
+    },
+    {
+      "id": "building",
+      "title": "building",
+      "href": "keywords/building.html",
+      "count": 5
+    },
+    {
+      "id": "classical-group",
+      "title": "classical-group",
+      "href": "keywords/classical-group.html",
+      "count": 1
+    },
+    {
+      "id": "depth-preservation",
+      "title": "depth-preservation",
+      "href": "keywords/depth-preservation.html",
+      "count": 1
+    },
+    {
+      "id": "dual-lattice",
+      "title": "dual-lattice",
+      "href": "keywords/dual-lattice.html",
+      "count": 1
+    },
+    {
+      "id": "finite-quotient",
+      "title": "finite-quotient",
+      "href": "keywords/finite-quotient.html",
+      "count": 1
+    },
+    {
+      "id": "finite-reductive-quotient",
+      "title": "finite-reductive-quotient",
+      "href": "keywords/finite-reductive-quotient.html",
+      "count": 2
+    },
+    {
+      "id": "generalized-lattice-model",
+      "title": "generalized-lattice-model",
+      "href": "keywords/generalized-lattice-model.html",
+      "count": 3
+    },
+    {
+      "id": "lattice-function",
+      "title": "lattice-function",
+      "href": "keywords/lattice-function.html",
+      "count": 11
+    },
+    {
+      "id": "metaplectic-cover",
+      "title": "metaplectic-cover",
+      "href": "keywords/metaplectic-cover.html",
+      "count": 1
+    },
+    {
+      "id": "moy-prasad",
+      "title": "moy-prasad",
+      "href": "keywords/moy-prasad.html",
+      "count": 3
+    },
+    {
+      "id": "norm",
+      "title": "norm",
+      "href": "keywords/norm.html",
+      "count": 1
+    },
+    {
+      "id": "notation",
+      "title": "notation",
+      "href": "keywords/notation.html",
+      "count": 1
+    },
+    {
+      "id": "oscillator-representation",
+      "title": "oscillator-representation",
+      "href": "keywords/oscillator-representation.html",
+      "count": 2
+    },
+    {
+      "id": "self-dual",
+      "title": "self-dual",
+      "href": "keywords/self-dual.html",
+      "count": 2
+    },
+    {
+      "id": "symplectic-annihilator",
+      "title": "symplectic-annihilator",
+      "href": "keywords/symplectic-annihilator.html",
+      "count": 2
+    },
+    {
+      "id": "tensor-product",
+      "title": "tensor-product",
+      "href": "keywords/tensor-product.html",
+      "count": 2
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

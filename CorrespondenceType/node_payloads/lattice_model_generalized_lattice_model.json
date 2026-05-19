@@ -1,0 +1,79 @@
+{
+  "id": "lattice_model.generalized_lattice_model",
+  "title": "Generalized Lattice Model",
+  "kind": "definition",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_generalized_lattice_model.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model",
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Generalized Lattice Model</h1>\n<p>Let \\(W\\) be a symplectic \\(F\\)-space and let \\(B\\) be a self-dual lattice\nfunction in \\(W\\). Put \\(L=B_0\\) and let\n\\[\n\\ell_L=L/L^{\\perp_\\psi}\n\\]\nbe the finite symplectic quotient from\n<a class=\"node-ref\" data-node-id=\"lattice_model.symplectic_annihilator_finite_quotient\" href=\"lattice_model_symplectic_annihilator_finite_quotient.html\">Symplectic Annihilator Finite Quotient</a>. The finite\nHeisenberg group attached to \\(\\ell_L\\) has a unique irreducible representation\nwith the chosen nontrivial central character, and the finite symplectic group\nacts on it through the finite Weil representation.</p>\n<p>The generalized lattice model \\(S(B_0)\\) of the oscillator representation\nconsists of locally constant compactly supported functions\n\\[\nf:W\\to S(\\ell_L)\n\\]\nwith the covariance rule\n\\[\nf(a+w)=\\psi((1/2)\\langle w,a\\rangle_W)\\,\\omega_{\\ell_L}(a)f(w),\n\\qquad a\\in B_0.\n\\]\nThis model gives a splitting of the metaplectic cover over the stabilizer of\n\\(B_0\\). Its restriction to the pro-unipotent subgroup is canonical.</p>\n<p>For a dual pair and building points \\(x\\in B(G)\\), \\(x'\\in B(G')\\), the\ntensor-product lattice function \\(B_{x,x'}\\) supplies the lattice \\(B_0\\) used\nto compare \\(K\\)-types on both sides of theta correspondence.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model.symplectic_annihilator_finite_quotient",
+      "title": "Symplectic Annihilator Finite Quotient",
+      "href": "lattice_model/lattice_model_symplectic_annihilator_finite_quotient.html"
+    },
+    {
+      "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "title": "Finite Heisenberg Stone-von Neumann Property",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_stone_von_neumann.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model.lattice_fixed_vector_model",
+      "title": "Lattice Fixed Vector Model",
+      "href": "lattice_model/lattice_model_lattice_fixed_vector_model.html"
+    },
+    {
+      "id": "supercuspidal_theta.covering_supercuspidal_datum",
+      "title": "Supercuspidal Datum for a Covering Group",
+      "href": "supercuspidal_theta/supercuspidal_theta_covering_supercuspidal_datum.html"
+    },
+    {
+      "id": "supercuspidal_theta.depth_preservation_building_sum",
+      "title": "Building Sum Formula for Depth Preservation",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_building_sum.html"
+    },
+    {
+      "id": "supercuspidal_theta.depth_zero_pan_theorem",
+      "title": "Pan Theorem for Depth Zero Theta Lifts",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_zero_pan_theorem.html"
+    },
+    {
+      "id": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "title": "Fixed Vector Descent Lemma",
+      "href": "supercuspidal_theta/supercuspidal_theta_fixed_vector_descent_lemma.html"
+    },
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    },
+    {
+      "id": "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+      "title": "Orbit Intertwining Proposition for the Main Theorem",
+      "href": "supercuspidal_theta/supercuspidal_theta_k_type_orbit_intertwining_proposition.html"
+    },
+    {
+      "id": "supercuspidal_theta.key_oscillator_character_identity",
+      "title": "Key Oscillator Character Identity",
+      "href": "supercuspidal_theta/supercuspidal_theta_key_oscillator_character_identity.html"
+    },
+    {
+      "id": "supercuspidal_theta.stabilizer_orbit_action_formula",
+      "title": "Stabilizer Orbit Action Formula",
+      "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_orbit_action_formula.html"
+    }
+  ],
+  "lean_refs": []
+}

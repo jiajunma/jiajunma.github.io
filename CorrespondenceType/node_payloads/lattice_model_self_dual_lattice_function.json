@@ -1,0 +1,53 @@
+{
+  "id": "lattice_model.self_dual_lattice_function",
+  "title": "Self-Dual Lattice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_self_dual_lattice_function.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Self-Dual Lattice Function</h1>\n<p>Let \\(V\\) carry a nondegenerate sesquilinear form. In the Loke-Ma\nnormalization, the shifted dual of an \\(o_D\\)-lattice \\(L\\subseteq V\\) is\n\\[\nL^\\vee=\\{v\\in V:\\langle v,L\\rangle_V\\subseteq\\mathbf p_D\\}.\n\\]\nFor a lattice function \\(L\\), the dual lattice function is\n\\[\n(L^\\vee)_s=(L_{(-s)+})^\\vee.\n\\]\nThe lattice function is self-dual when \\(L=L^\\vee\\). Under the Bruhat-Tits\nidentification for classical groups, building points correspond to splittable\nself-dual lattice functions.</p>\n<p>The notation \\(L^\\vee\\) here is deliberately separated from the hermitian\n\\(o_D\\)-dual \\(L^\\#\\) and from the symplectic annihilator \\(L^{\\perp_\\psi}\\);\nsee <a class=\"node-ref\" data-node-id=\"lattice_model.dual_lattice_conventions\" href=\"lattice_model_dual_lattice_conventions.html\">Dual Lattice Conventions</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model.lattice_function",
+      "title": "Lattice Function",
+      "href": "lattice_model/lattice_model_lattice_function.html"
+    },
+    {
+      "id": "lattice_model.dual_lattice_conventions",
+      "title": "Dual Lattice Conventions",
+      "href": "lattice_model/lattice_model_dual_lattice_conventions.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "epipelagic_theta.lattice_model_section",
+      "title": "Lattice Model Section for Stabilizers",
+      "href": "epipelagic_theta/epipelagic_theta_lattice_model_section.html"
+    },
+    {
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html"
+    },
+    {
+      "id": "lattice_model.apartment_splitting_basis",
+      "title": "Apartment Splitting Basis",
+      "href": "lattice_model/lattice_model_apartment_splitting_basis.html"
+    },
+    {
+      "id": "lattice_model.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "href": "lattice_model/lattice_model_classical_building_self_dual_lattice_functions.html"
+    },
+    {
+      "id": "lattice_model.tensor_product_self_duality",
+      "title": "Tensor Product Self-Duality",
+      "href": "lattice_model/lattice_model_tensor_product_self_duality.html"
+    }
+  ],
+  "lean_refs": []
+}
