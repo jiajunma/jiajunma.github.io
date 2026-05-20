@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="440" viewBox="0 0 1100 440" role="img" aria-labelledby="title desc">
+  <title id="title">AlphaGo and proof-agent tree search analogy</title>
+  <desc id="desc">A clear comparison between AlphaGo game-tree search and proof-agent search, with parallel select, expand, evaluate, backup loops.</desc>
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5cad" />
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16803a" />
+    </marker>
+    <style>
+      .title { font: 700 24px system-ui, -apple-system, Segoe UI, sans-serif; fill: #0f2742; }
+      .sub { font: 600 15px system-ui, -apple-system, Segoe UI, sans-serif; fill: #526d82; }
+      .label { font: 700 15px system-ui, -apple-system, Segoe UI, sans-serif; fill: #0f2742; }
+      .small { font: 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #26384f; }
+      .tiny { font: 12px system-ui, -apple-system, Segoe UI, sans-serif; fill: #526d82; }
+      .panelA { fill: #f7fbff; stroke: #0b5cad; stroke-width: 2.2; rx: 14; }
+      .panelB { fill: #f4fbf5; stroke: #16803a; stroke-width: 2.2; rx: 14; }
+      .nodeA { fill: #eaf3ff; stroke: #0b5cad; stroke-width: 2; }
+      .nodeB { fill: #e8f7ec; stroke: #16803a; stroke-width: 2; }
+      .bad { fill: #fff1f1; stroke: #cc2222; stroke-width: 2; }
+      .edgeA { stroke: #0b5cad; stroke-width: 2.2; fill: none; marker-end: url(#arrowBlue); }
+      .edgeB { stroke: #16803a; stroke-width: 2.2; fill: none; marker-end: url(#arrowGreen); }
+      .thinA { stroke: #9ebee4; stroke-width: 2; fill: none; marker-end: url(#arrowBlue); }
+      .thinB { stroke: #9fd3ad; stroke-width: 2; fill: none; marker-end: url(#arrowGreen); }
+      .step { fill: white; stroke: #cbd5e1; stroke-width: 1.6; rx: 10; }
+    </style>
+  </defs>
+
+  <rect x="18" y="18" width="1064" height="404" fill="#ffffff" stroke="#d9e2ec" stroke-width="2" rx="18" />
+  <text class="title" x="52" y="58">Tree Search Pattern: AlphaGo and Proof Agents</text>
+  <text class="sub" x="52" y="83">Same control loop; different evaluator and terminal condition.</text>
+
+  <rect class="panelA" x="52" y="112" width="480" height="210" />
+  <text class="label" x="78" y="145">AlphaGo</text>
+  <text class="tiny" x="78" y="166">game state = board position</text>
+
+  <circle class="nodeA" cx="285" cy="154" r="24" />
+  <text class="tiny" x="268" y="159">board</text>
+  <circle class="nodeA" cx="190" cy="238" r="22" />
+  <text class="tiny" x="174" y="243">move</text>
+  <circle class="nodeA" cx="285" cy="238" r="22" />
+  <text class="tiny" x="269" y="243">move</text>
+  <circle class="nodeA" cx="380" cy="238" r="22" />
+  <text class="tiny" x="364" y="243">move</text>
+  <path class="thinA" d="M 270 174 L 207 220" />
+  <path class="edgeA" d="M 285 179 L 285 214" />
+  <path class="thinA" d="M 300 174 L 363 220" />
+  <rect class="step" x="78" y="268" width="380" height="34" />
+  <text class="small" x="96" y="290">policy suggests moves; value estimates win probability</text>
+
+  <rect class="panelB" x="568" y="112" width="480" height="210" />
+  <text class="label" x="594" y="145">Proof Agent</text>
+  <text class="tiny" x="594" y="166">proof state = goals, context, partial proof</text>
+
+  <circle class="nodeB" cx="800" cy="154" r="24" />
+  <text class="tiny" x="784" y="151">goal</text>
+  <text class="tiny" x="786" y="165">state</text>
+  <circle class="nodeB" cx="705" cy="238" r="22" />
+  <text class="tiny" x="692" y="243">tactic</text>
+  <circle class="nodeB" cx="800" cy="238" r="22" />
+  <text class="tiny" x="785" y="243">lemma</text>
+  <circle class="bad" cx="895" cy="238" r="22" />
+  <text class="tiny" x="882" y="243">dead</text>
+  <path class="thinB" d="M 785 174 L 722 220" />
+  <path class="edgeB" d="M 800 179 L 800 214" />
+  <path class="thinB" d="M 815 174 L 878 220" />
+  <rect class="step" x="594" y="268" width="380" height="34" />
+  <text class="small" x="612" y="290">LLM/retrieval suggests actions; Lean checks local progress</text>
+
+  <rect class="step" x="92" y="346" width="190" height="48" />
+  <text class="label" x="116" y="366">select + expand</text>
+  <text class="tiny" x="116" y="385">choose a promising branch</text>
+  <rect class="step" x="330" y="346" width="190" height="48" />
+  <text class="label" x="352" y="366">evaluate + backup</text>
+  <text class="tiny" x="352" y="385">score and update parents</text>
+  <path class="edgeA" d="M 282 370 L 328 370" />
+
+  <rect class="step" x="580" y="346" width="215" height="48" />
+  <text class="label" x="604" y="366">select + expand</text>
+  <text class="tiny" x="604" y="385">ask for tactics, lemmas, repairs</text>
+  <rect class="step" x="840" y="346" width="215" height="48" />
+  <text class="label" x="866" y="366">Lean + backup</text>
+  <text class="tiny" x="866" y="385">compile, expose goals, update tree</text>
+  <path class="edgeB" d="M 795 370 L 838 370" />
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-label="Proof search tree with Lean feedback">
+  <rect width="1200" height="640" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L7,4 z" fill="#0b5cad"/>
+    </marker>
+    <marker id="arrow-feedback" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L7,4 z" fill="#e07000"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial,sans-serif;fill:#102a43}
+      .head{font:700 21px Arial,sans-serif;fill:#102a43}
+      .head-light{font:700 21px Arial,sans-serif;fill:#ffffff}
+      .text{font:16px Arial,sans-serif;fill:#334e68}
+      .code{font:16px Menlo,Consolas,monospace;fill:#dbeafe}
+      .bad{font:16px Arial,sans-serif;fill:#8a1f1f}
+      .good{font:16px Arial,sans-serif;fill:#0f6b32}
+      .small{font:14px Arial,sans-serif;fill:#526d82}
+    </style>
+  </defs>
+
+  <text x="600" y="54" text-anchor="middle" class="title">A Failed Branch Is Useful Evidence</text>
+
+  <rect x="390" y="92" width="420" height="108" rx="16" fill="#f7fbff" stroke="#2f80ed" stroke-width="3"/>
+  <text x="600" y="126" text-anchor="middle" class="head">Goal</text>
+  <text x="600" y="154" text-anchor="middle" class="text">prove sum over Finset.range n</text>
+  <text x="600" y="178" text-anchor="middle" class="text">of 2*i + 1 equals n^2</text>
+
+  <rect x="90" y="300" width="285" height="120" rx="16" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+  <text x="232" y="338" text-anchor="middle" class="head-light">Candidate A</text>
+  <text x="130" y="374" class="code">exact Nat.sum_odd n</text>
+  <text x="130" y="400" class="bad">library retrieval misses</text>
+
+  <rect x="458" y="300" width="285" height="120" rx="16" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+  <text x="600" y="338" text-anchor="middle" class="head-light">Candidate B</text>
+  <text x="498" y="374" class="code">simp</text>
+  <text x="498" y="400" class="bad">indexing still hidden</text>
+
+  <rect x="825" y="300" width="285" height="120" rx="16" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+  <text x="968" y="338" text-anchor="middle" class="head-light">Candidate C</text>
+  <text x="865" y="374" class="code">induction n with</text>
+  <text x="865" y="400" class="good">right recursive shape</text>
+
+  <rect x="825" y="486" width="285" height="92" rx="16" fill="#e8f8e8" stroke="#219653" stroke-width="3"/>
+  <text x="968" y="522" text-anchor="middle" class="head">Repair branch</text>
+  <text x="968" y="550" text-anchor="middle" class="text">rewrite range_succ, then algebra</text>
+
+  <g stroke="#0b5cad" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M535 200 C440 238 330 246 245 292"/>
+    <path d="M600 200 V292"/>
+    <path d="M665 200 C760 238 870 246 955 292"/>
+    <path d="M968 420 V478"/>
+  </g>
+
+  <rect x="85" y="486" width="658" height="92" rx="16" fill="#fff4e6" stroke="#f2994a" stroke-width="3"/>
+  <text x="414" y="522" text-anchor="middle" class="head">Lean feedback + memory</text>
+  <text x="414" y="550" text-anchor="middle" class="text">record failed theorem names, exposed goals, and reusable induction states</text>
+
+  <g stroke="#e07000" stroke-width="3" fill="none" marker-end="url(#arrow-feedback)">
+    <path d="M232 420 C232 470 310 470 335 482"/>
+    <path d="M600 420 C600 462 535 462 510 482"/>
+    <path d="M743 532 H817"/>
+  </g>
+
+  <text x="600" y="615" text-anchor="middle" class="small">Search is retrieval plus Lean feedback: choose induction, fix Finset.range indexing, and repair the algebraic step.</text>
+</svg>
