@@ -1,32 +1,25 @@
 import Mathlib
 
 /-!
-# DSA5210 Session 3 Demo
+# DSA5210 Session 3 Lean Examples
 
-Complete classroom demo for:
+This file collects the runnable Lean examples discussed in the Session 3 notes
+and slides. It is intended as the student-facing companion file: every active
+declaration below should typecheck. Examples that are meant to fail in class
+are left in comments.
 
-* structures with data fields and proof fields;
-* the `Fin`/`HEq` example imported from the Session 2 appendix demos;
-* classes, instance search, notation, coercions, and inheritance;
-* inductive types and structural induction;
-* recursive functions, `termination_by`, and `decreasing_by`;
-* a Sharkovskii-style period-order running example.
-
-The file is meant to be run locally from the course root with:
+Run from the course root with:
 
 ```bash
-./scripts/lean-nus.sh nus-dsa/lean/Session03/Demo.lean
+./scripts/lean-nus.sh nus-dsa/lean/Session03/Examples.lean
 ```
-
-Expected failures from the slides are kept as comments so the whole file
-typechecks.
 -/
 
 namespace DSA5210
-namespace Session03
+namespace Session03Examples
 
 /-!
-## 1. Structures package data and proof fields
+## Structures, proof fields, and `Fin`
 -/
 
 structure Point2D where
@@ -34,17 +27,14 @@ structure Point2D where
   y : Int
   deriving Repr
 
-#check Point2D.mk
-#eval Point2D.mk 1 2
-
 def p : Point2D where
   x := 3
   y := -2
 
 def q : Point2D := ⟨1, 1⟩
 
-#print q
-#eval q
+#check Point2D.mk
+#eval Point2D.mk 1 2
 #eval p.x + p.y
 
 def Point2D.sumxy (p : Point2D) : Int :=
@@ -61,20 +51,10 @@ structure ClosedInterval where
   right : Nat
   valid : left ≤ right
 
-variable (n : Nat)
-
-def I1 : ClosedInterval where
-  left := 3
-  right := 5
-  valid := by decide
-
 def intervalFrom (n : Nat) : ClosedInterval where
   left := n
   right := n + 2
   valid := by simp only [le_add_iff_nonneg_right, zero_le]
-
-#check intervalFrom
-#check (intervalFrom n).valid
 
 example (I : ClosedInterval) :
     ∃ i, I.left ≤ i ∧ i ≤ I.right := by
@@ -83,34 +63,24 @@ example (I : ClosedInterval) :
   · simp only [Std.le_refl]
   · exact I.valid
 
-#check Fin
-#print Fin
-
 def secondOfFive : Fin 5 :=
   ⟨2, by decide⟩
 
+#check Fin
+#check (2 : Fin 5) = (2 : Nat)
+#eval (Finset.univ : Finset (Fin 5))
+#eval secondOfFive.val
+#check secondOfFive.isLt
+
 /-!
-Expected error if uncommented: `Fin 5` and `Fin 6` are different types.
+Expected failure if uncommented: `Fin 5` and `Fin 6` are different types.
 
 ```lean
 #check (2 : Fin 5) = (2 : Fin 6)
 ```
 -/
 
-#check (2 : Fin 5) = (2 : Nat)
-#eval (Finset.univ : Finset (Fin 5))
-#check (2 : Fin 5)
-#synth OfNat (Fin 5) 2
-#eval secondOfFive.val
-#check secondOfFive.isLt
-
 namespace HEqDemo
-
-/-!
-These examples integrate the old `Demo2.lean` fragment. They are kept in a
-small namespace because HEq belongs to the Session 2 dependent-type appendix,
-not to the main Session 3 story.
--/
 
 def finTypeAddComm (n : Nat) : Fin (1 + n) = Fin (n + 1) := by
   grind
@@ -134,16 +104,7 @@ theorem fin_heq_ext_iff {k l : Nat} (h : k = l) {i : Fin k} {j : Fin l} :
 end HEqDemo
 
 /-!
-## 2. Classes, notation, and instance search
--/
-
-/-!
-Expected error if uncommented: no addition interface between `Nat` and
-`String` has been registered yet.
-
-```lean
-#check 42 + "hi"
-```
+## Classes, notation, inheritance, and instance search
 -/
 
 #eval 42 + 2
@@ -152,17 +113,15 @@ Expected error if uncommented: no addition interface between `Nat` and
 #synth HAdd Nat Nat Nat
 
 /-!
-The following instance would make `Nat + String` return a `Nat`.
-Keep it commented so the classroom file has only one active `HAdd Nat String`
-instance.
+Expected failure if uncommented: Lean has no active `HAdd Nat String ?m`
+instance before we register one.
 
 ```lean
-instance haddNatString1 : HAdd Nat String Nat where
-  hAdd := fun a b => a + b.length
+#check 42 + "hi"
 ```
 -/
 
-instance haddNatString2 : HAdd Nat String String where
+instance haddNatString : HAdd Nat String String where
   hAdd := fun a b => toString a ++ b
 
 #synth HAdd Nat String String
@@ -198,13 +157,6 @@ example [Preorder α] {a b c : α}
 
 namespace DiamondDemo
 
-/-!
-This is a real diamond-shaped class hierarchy. `AsNat` and `AsBool` both
-extend `HasLabel`. If they are installed independently with different inherited
-`HasLabel` data, asking for only `[HasLabel Token]` leaves Lean to choose an
-available path by instance search.
--/
-
 class HasLabel (α : Type) where
   label : String
 
@@ -225,9 +177,6 @@ instance I1 : AsNat Token where
   label := "Nat path"
   n := 0
 
-#check (inferInstance : AsNat Token)
-#check (inferInstance : AsBool Token)
-
 def t1 : String :=
   letI : HasLabel Token := I1.toHasLabel
   (inferInstance : HasLabel Token).label
@@ -241,7 +190,7 @@ def t2 : String :=
 end DiamondDemo
 
 /-!
-## 3. Inductive types
+## Inductive types and induction
 -/
 
 inductive MyBool where
@@ -270,9 +219,33 @@ def rightOnly : MyTree Nat :=
 def t3 : MyTree Nat :=
   node 5 leftOnly rightOnly
 
+def depth : MyTree α → Nat
+  | nil => 0
+  | node _ l r => Nat.max (depth l) (depth r) + 1
+
+def size : MyTree α → Nat
+  | nil => 0
+  | node _ l r => 1 + size l + size r
+
+def mirror : MyTree α → MyTree α
+  | nil => nil
+  | node a l r => node a (mirror r) (mirror l)
+
 #eval t1
 #eval leftOnly
 #eval rightOnly
+#eval depth t3
+#eval size t3
+#eval mirror t3
+
+theorem size_mirror (t : MyTree α) :
+    size (mirror t) = size t := by
+  induction t with
+  | nil =>
+      rfl
+  | node a l r ihl ihr =>
+      simp [mirror, size, ihl, ihr]
+      omega
 
 end MyTree
 
@@ -309,14 +282,18 @@ def gt2 : GTree Nat :=
 def gt3 : GTree Nat :=
   node 0 [gt1, gt2]
 
+def size : GTree α → Nat
+  | node _ children => 1 + children.foldl (fun acc t => acc + size t) 0
+
+def depth : GTree α → Nat
+  | node _ children => 1 + children.foldl (fun acc t => Nat.max acc (depth t)) 0
+
 #eval gt1
 #eval gt2
+#eval size gt3
+#eval depth gt3
 
 end GTree
-
-/-!
-## 4. Natural-number induction
--/
 
 theorem add_one_eq_one_add (i : Nat) :
     i + 1 = 1 + i := by
@@ -329,8 +306,14 @@ theorem add_one_eq_one_add (i : Nat) :
         _ = 1 + (i + 1) := by rw [Nat.add_assoc]
 
 /-!
-## 5. Recursion from constructors
+## Recursion, `termination_by`, and `decreasing_by`
 -/
+
+def factorial : Nat → Nat
+  | 0 => 1
+  | n + 1 => (n + 1) * factorial n
+
+#eval factorial 5
 
 namespace Sharkovskii
 
@@ -362,11 +345,6 @@ decreasing_by
 #eval oddPart 40
 #eval twoAdic 40
 
-/-!
-Bad generated style from the notes. It typechecks, but the extra `fuel`
-argument hides the mathematical operation.
--/
-
 def stripTwosAux : Nat → Nat → Nat
   | 0, n => n
   | fuel + 1, n =>
@@ -382,61 +360,9 @@ def oddPartWithFuel (n : Nat) : Nat :=
 
 end Sharkovskii
 
-namespace MyTree
-
-def depth : MyTree α → Nat
-  | nil => 0
-  | node _ l r => Nat.max (depth l) (depth r) + 1
-
-def size : MyTree α → Nat
-  | nil => 0
-  | node _ l r => 1 + size l + size r
-
-def mirror : MyTree α → MyTree α
-  | nil => nil
-  | node a l r => node a (mirror r) (mirror l)
-
-#eval depth t3
-#eval size t3
-#eval mirror t3
-
-theorem size_mirror (t : MyTree α) :
-    size (mirror t) = size t := by
-  induction t with
-  | nil =>
-      rfl
-  | node a l r ihl ihr =>
-      simp [mirror, size, ihl, ihr]
-      omega
-
-end MyTree
-
-namespace GTree
-
-def size : GTree α → Nat
-  | node _ children => 1 + children.foldl (fun acc t => acc + size t) 0
-
-def depth : GTree α → Nat
-  | node _ children => 1 + children.foldl (fun acc t => Nat.max acc (depth t)) 0
-
-#eval size gt3
-#eval depth gt3
-
-end GTree
-
 /-!
-## 6. Termination
--/
-
-def factorial : Nat → Nat
-  | 0 => 1
-  | n + 1 => (n + 1) * factorial n
-
-#eval factorial 5
-
-/-!
-Expected failure if uncommented: the recursive call is made on exactly the
-same input in the successor branch.
+Expected failure if uncommented: the recursive call is made on exactly the same
+input in the successor branch.
 
 ```lean
 def bad : Nat → Nat
@@ -445,8 +371,17 @@ def bad : Nat → Nat
 ```
 -/
 
+def euclid : Nat → Nat → Nat
+  | a, 0 => a
+  | a, b + 1 => euclid (b + 1) (a % (b + 1))
+termination_by _ b => b
+decreasing_by
+  exact Nat.mod_lt a (Nat.succ_pos b)
+
+#eval euclid 30 12
+
 /-!
-## 7. Well-founded induction and general recursion
+## Well-founded induction
 -/
 
 #check Acc
@@ -471,15 +406,6 @@ example (P : Tree α → Prop)
   intro t
   exact (InvImage.wf Tree.numNodes wellFounded_lt).induction t step
 
-def euclid : Nat → Nat → Nat
-  | a, 0 => a
-  | a, b + 1 => euclid (b + 1) (a % (b + 1))
-termination_by _ b => b
-decreasing_by
-  exact Nat.mod_lt a (Nat.succ_pos b)
-
-#eval euclid 30 12
-
 #check Nat.strong_induction_on
 
 example (P : Nat → Prop)
@@ -489,7 +415,7 @@ example (P : Nat → Prop)
   exact Nat.strong_induction_on n step
 
 /-!
-## 8. Sharkovskii-style period order
+## Dynamics and Sharkovskii-style period order
 -/
 
 namespace Dynamics
@@ -507,22 +433,15 @@ noncomputable def exactPeriod {X : Type} (f : X → X) (x : X) : Nat :=
 def HasPointOfExactPeriod {X : Type} (f : X → X) (n : Nat) : Prop :=
   ∃ x : X, exactPeriod f x = n
 
-/-!
-Bad proposition-first definition from the slides. It is meaningful, but it
-does not first define the orbit as the mathematical object.
-
-```lean
 def ReturnsAfter {X : Type} (f : X → X) (n : Nat) (x : X) : Prop :=
   iterate f n x = x
 
 def IsPeriodicPoint {X : Type} (f : X → X) (n : Nat) (x : X) : Prop :=
   0 < n ∧ ReturnsAfter f n x
 
-def HasExactPeriod {X : Type} (f : X → X) (n : Nat) (x : X) : Prop :=
+def HasExactPeriodByReturnTime {X : Type} (f : X → X) (n : Nat) (x : X) : Prop :=
   IsPeriodicPoint f n x ∧
     ∀ m : Nat, 0 < m → m < n → ¬ ReturnsAfter f m x
-```
--/
 
 end Dynamics
 
@@ -539,7 +458,6 @@ infix:50 " ≼ₛ " => SharOrder
 
 #check SharOrder
 #check (3 ≼ₛ 5)
-
 #eval decide (3 ≼ₛ 5)
 #eval decide (5 ≼ₛ 6)
 #eval decide (6 ≼ₛ 5)
@@ -558,10 +476,6 @@ def SharkovskiiTheoremStatement
 
 end Sharkovskii
 
-/-!
-## 9. Order interfaces
--/
-
 #check PartialOrder
 #check le_antisymm
 
@@ -573,5 +487,5 @@ example [PartialOrder α] {a b : α}
 #check Nat.instPartialOrder
 #check LinearOrder
 
-end Session03
+end Session03Examples
 end DSA5210
