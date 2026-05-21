@@ -1,390 +1,98 @@
 {
   "roots": [
     {
-      "id": "algebraic_groups",
-      "title": "Algebraic Groups",
+      "id": "topic",
+      "title": "Topic",
       "depth": 1,
       "parent": null,
-      "node_count": 13,
-      "direct_node_count": 1,
+      "node_count": 118,
+      "direct_node_count": 118,
       "kind_counts": {
-        "concept": 13
+        "concept": 118
       },
       "status_counts": {
-        "admitted": 13
+        "admitted": 118
       },
-      "href": "algebraic_groups/index.html",
+      "href": "topic/index.html",
       "children": [
-        "algebraic_groups.bd_metaplectic",
-        "algebraic_groups.bruhat_tits",
-        "algebraic_groups.core",
-        "algebraic_groups.dual_groups",
-        "algebraic_groups.homogeneous_spherical",
-        "algebraic_groups.kottwitz",
-        "algebraic_groups.rational_forms",
-        "algebraic_groups.reductive_groups",
-        "algebraic_groups.root_coxeter",
-        "algebraic_groups.tits_buildings",
-        "algebraic_groups.tori_unipotent_actions"
+        "topic.bd_covers",
+        "topic.buildings_and_parahorics",
+        "topic.classical_and_exceptional_groups",
+        "topic.descent_and_forms",
+        "topic.foundational_inputs",
+        "topic.kottwitz_structures",
+        "topic.linear_algebraic_groups",
+        "topic.nilpotent_orbits",
+        "topic.reductive_structure",
+        "topic.root_data_and_duality"
       ]
-    },
-    {
-      "id": "automorphic_periods",
-      "title": "Automorphic Periods",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "automorphic_periods/index.html",
-      "children": []
-    },
-    {
-      "id": "foundations",
-      "title": "Foundations",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "foundations/index.html",
-      "children": []
-    },
-    {
-      "id": "function_field_shtukas",
-      "title": "Function Field Shtukas",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "function_field_shtukas/index.html",
-      "children": []
-    },
-    {
-      "id": "galois_motives_padic_hodge",
-      "title": "Galois Motives Padic Hodge",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "galois_motives_padic_hodge/index.html",
-      "children": []
-    },
-    {
-      "id": "geometric_langlands",
-      "title": "Geometric Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "geometric_langlands/index.html",
-      "children": []
-    },
-    {
-      "id": "global_langlands",
-      "title": "Global Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "global_langlands/index.html",
-      "children": []
-    },
-    {
-      "id": "l_functions_functoriality",
-      "title": "L Functions Functoriality",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "l_functions_functoriality/index.html",
-      "children": []
-    },
-    {
-      "id": "local_global_fields",
-      "title": "Local Global Fields",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "local_global_fields/index.html",
-      "children": []
-    },
-    {
-      "id": "local_langlands",
-      "title": "Local Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "local_langlands/index.html",
-      "children": []
-    },
-    {
-      "id": "padic_modp_langlands",
-      "title": "Padic Modp Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "padic_modp_langlands/index.html",
-      "children": []
-    },
-    {
-      "id": "representation_harmonic_analysis",
-      "title": "Representation Harmonic Analysis",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "representation_harmonic_analysis/index.html",
-      "children": []
-    },
-    {
-      "id": "shimura_arithmetic_geometry",
-      "title": "Shimura Arithmetic Geometry",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "shimura_arithmetic_geometry/index.html",
-      "children": []
-    },
-    {
-      "id": "topics",
-      "title": "Topics",
-      "depth": 1,
-      "parent": null,
-      "node_count": 27,
-      "direct_node_count": 27,
-      "kind_counts": {
-        "concept": 27
-      },
-      "status_counts": {
-        "admitted": 27
-      },
-      "href": "topics/index.html",
-      "children": [
-        "topics.algebraic_groups"
-      ]
-    },
-    {
-      "id": "trace_formulas",
-      "title": "Trace Formulas",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "trace_formulas/index.html",
-      "children": []
     }
   ],
   "topics": {
-    "algebraic_groups": {
-      "id": "algebraic_groups",
-      "title": "Algebraic Groups",
+    "topic": {
+      "id": "topic",
+      "title": "Topic",
       "depth": 1,
       "parent": null,
-      "node_count": 13,
-      "direct_node_count": 1,
+      "node_count": 118,
+      "direct_node_count": 118,
       "kind_counts": {
-        "concept": 13
+        "concept": 118
       },
       "status_counts": {
-        "admitted": 13
+        "admitted": 118
       },
-      "href": "algebraic_groups/index.html",
+      "href": "topic/index.html",
       "children": [
-        "algebraic_groups.bd_metaplectic",
-        "algebraic_groups.bruhat_tits",
-        "algebraic_groups.core",
-        "algebraic_groups.dual_groups",
-        "algebraic_groups.homogeneous_spherical",
-        "algebraic_groups.kottwitz",
-        "algebraic_groups.rational_forms",
-        "algebraic_groups.reductive_groups",
-        "algebraic_groups.root_coxeter",
-        "algebraic_groups.tits_buildings",
-        "algebraic_groups.tori_unipotent_actions"
+        "topic.bd_covers",
+        "topic.buildings_and_parahorics",
+        "topic.classical_and_exceptional_groups",
+        "topic.descent_and_forms",
+        "topic.foundational_inputs",
+        "topic.kottwitz_structures",
+        "topic.linear_algebraic_groups",
+        "topic.nilpotent_orbits",
+        "topic.reductive_structure",
+        "topic.root_data_and_duality"
       ]
     },
-    "algebraic_groups.bd_metaplectic": {
-      "id": "algebraic_groups.bd_metaplectic",
-      "title": "Algebraic Groups.Bd Metaplectic",
+    "topic.bd_covers": {
+      "id": "topic.bd_covers",
+      "title": "Topic.Bd Covers",
       "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "parent": "topic",
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "concept": 1
+        "concept": 6
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 6
       },
-      "href": "algebraic_groups/bd_metaplectic/index.html",
+      "href": "topic/bd_covers/index.html",
       "children": []
     },
-    "algebraic_groups.bruhat_tits": {
-      "id": "algebraic_groups.bruhat_tits",
-      "title": "Algebraic Groups.Bruhat Tits",
+    "topic.buildings_and_parahorics": {
+      "id": "topic.buildings_and_parahorics",
+      "title": "Topic.Buildings And Parahorics",
       "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "parent": "topic",
+      "node_count": 16,
+      "direct_node_count": 16,
       "kind_counts": {
-        "concept": 1
+        "concept": 16
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 16
       },
-      "href": "algebraic_groups/bruhat_tits/index.html",
+      "href": "topic/buildings_and_parahorics/index.html",
       "children": []
     },
-    "algebraic_groups.core": {
-      "id": "algebraic_groups.core",
-      "title": "Algebraic Groups.Core",
+    "topic.classical_and_exceptional_groups": {
+      "id": "topic.classical_and_exceptional_groups",
+      "title": "Topic.Classical And Exceptional Groups",
       "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "algebraic_groups/core/index.html",
-      "children": []
-    },
-    "algebraic_groups.dual_groups": {
-      "id": "algebraic_groups.dual_groups",
-      "title": "Algebraic Groups.Dual Groups",
-      "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "algebraic_groups/dual_groups/index.html",
-      "children": []
-    },
-    "algebraic_groups.homogeneous_spherical": {
-      "id": "algebraic_groups.homogeneous_spherical",
-      "title": "Algebraic Groups.Homogeneous Spherical",
-      "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "algebraic_groups/homogeneous_spherical/index.html",
-      "children": []
-    },
-    "algebraic_groups.kottwitz": {
-      "id": "algebraic_groups.kottwitz",
-      "title": "Algebraic Groups.Kottwitz",
-      "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "algebraic_groups/kottwitz/index.html",
-      "children": []
-    },
-    "algebraic_groups.rational_forms": {
-      "id": "algebraic_groups.rational_forms",
-      "title": "Algebraic Groups.Rational Forms",
-      "depth": 2,
-      "parent": "algebraic_groups",
+      "parent": "topic",
       "node_count": 2,
       "direct_node_count": 2,
       "kind_counts": {
@@ -393,313 +101,119 @@
       "status_counts": {
         "admitted": 2
       },
-      "href": "algebraic_groups/rational_forms/index.html",
+      "href": "topic/classical_and_exceptional_groups/index.html",
       "children": []
     },
-    "algebraic_groups.reductive_groups": {
-      "id": "algebraic_groups.reductive_groups",
-      "title": "Algebraic Groups.Reductive Groups",
+    "topic.descent_and_forms": {
+      "id": "topic.descent_and_forms",
+      "title": "Topic.Descent And Forms",
       "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "parent": "topic",
+      "node_count": 22,
+      "direct_node_count": 22,
       "kind_counts": {
-        "concept": 1
+        "concept": 22
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 22
       },
-      "href": "algebraic_groups/reductive_groups/index.html",
+      "href": "topic/descent_and_forms/index.html",
       "children": []
     },
-    "algebraic_groups.root_coxeter": {
-      "id": "algebraic_groups.root_coxeter",
-      "title": "Algebraic Groups.Root Coxeter",
+    "topic.foundational_inputs": {
+      "id": "topic.foundational_inputs",
+      "title": "Topic.Foundational Inputs",
       "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "parent": "topic",
+      "node_count": 8,
+      "direct_node_count": 8,
       "kind_counts": {
-        "concept": 1
+        "concept": 8
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 8
       },
-      "href": "algebraic_groups/root_coxeter/index.html",
+      "href": "topic/foundational_inputs/index.html",
       "children": []
     },
-    "algebraic_groups.tits_buildings": {
-      "id": "algebraic_groups.tits_buildings",
-      "title": "Algebraic Groups.Tits Buildings",
+    "topic.kottwitz_structures": {
+      "id": "topic.kottwitz_structures",
+      "title": "Topic.Kottwitz Structures",
       "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "parent": "topic",
+      "node_count": 9,
+      "direct_node_count": 9,
       "kind_counts": {
-        "concept": 1
+        "concept": 9
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 9
       },
-      "href": "algebraic_groups/tits_buildings/index.html",
+      "href": "topic/kottwitz_structures/index.html",
       "children": []
     },
-    "algebraic_groups.tori_unipotent_actions": {
-      "id": "algebraic_groups.tori_unipotent_actions",
-      "title": "Algebraic Groups.Tori Unipotent Actions",
+    "topic.linear_algebraic_groups": {
+      "id": "topic.linear_algebraic_groups",
+      "title": "Topic.Linear Algebraic Groups",
       "depth": 2,
-      "parent": "algebraic_groups",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "parent": "topic",
+      "node_count": 11,
+      "direct_node_count": 11,
       "kind_counts": {
-        "concept": 1
+        "concept": 11
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 11
       },
-      "href": "algebraic_groups/tori_unipotent_actions/index.html",
+      "href": "topic/linear_algebraic_groups/index.html",
       "children": []
     },
-    "automorphic_periods": {
-      "id": "automorphic_periods",
-      "title": "Automorphic Periods",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "automorphic_periods/index.html",
-      "children": []
-    },
-    "foundations": {
-      "id": "foundations",
-      "title": "Foundations",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "foundations/index.html",
-      "children": []
-    },
-    "function_field_shtukas": {
-      "id": "function_field_shtukas",
-      "title": "Function Field Shtukas",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "function_field_shtukas/index.html",
-      "children": []
-    },
-    "galois_motives_padic_hodge": {
-      "id": "galois_motives_padic_hodge",
-      "title": "Galois Motives Padic Hodge",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "galois_motives_padic_hodge/index.html",
-      "children": []
-    },
-    "geometric_langlands": {
-      "id": "geometric_langlands",
-      "title": "Geometric Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "geometric_langlands/index.html",
-      "children": []
-    },
-    "global_langlands": {
-      "id": "global_langlands",
-      "title": "Global Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "global_langlands/index.html",
-      "children": []
-    },
-    "l_functions_functoriality": {
-      "id": "l_functions_functoriality",
-      "title": "L Functions Functoriality",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "l_functions_functoriality/index.html",
-      "children": []
-    },
-    "local_global_fields": {
-      "id": "local_global_fields",
-      "title": "Local Global Fields",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "local_global_fields/index.html",
-      "children": []
-    },
-    "local_langlands": {
-      "id": "local_langlands",
-      "title": "Local Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "local_langlands/index.html",
-      "children": []
-    },
-    "padic_modp_langlands": {
-      "id": "padic_modp_langlands",
-      "title": "Padic Modp Langlands",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "padic_modp_langlands/index.html",
-      "children": []
-    },
-    "representation_harmonic_analysis": {
-      "id": "representation_harmonic_analysis",
-      "title": "Representation Harmonic Analysis",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "representation_harmonic_analysis/index.html",
-      "children": []
-    },
-    "shimura_arithmetic_geometry": {
-      "id": "shimura_arithmetic_geometry",
-      "title": "Shimura Arithmetic Geometry",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "concept": 1
-      },
-      "status_counts": {
-        "admitted": 1
-      },
-      "href": "shimura_arithmetic_geometry/index.html",
-      "children": []
-    },
-    "topics": {
-      "id": "topics",
-      "title": "Topics",
-      "depth": 1,
-      "parent": null,
-      "node_count": 27,
-      "direct_node_count": 27,
-      "kind_counts": {
-        "concept": 27
-      },
-      "status_counts": {
-        "admitted": 27
-      },
-      "href": "topics/index.html",
-      "children": [
-        "topics.algebraic_groups"
-      ]
-    },
-    "topics.algebraic_groups": {
-      "id": "topics.algebraic_groups",
-      "title": "Topics.Algebraic Groups",
+    "topic.nilpotent_orbits": {
+      "id": "topic.nilpotent_orbits",
+      "title": "Topic.Nilpotent Orbits",
       "depth": 2,
-      "parent": "topics",
-      "node_count": 12,
-      "direct_node_count": 12,
+      "parent": "topic",
+      "node_count": 10,
+      "direct_node_count": 10,
       "kind_counts": {
-        "concept": 12
+        "concept": 10
       },
       "status_counts": {
-        "admitted": 12
+        "admitted": 10
       },
-      "href": "topics/algebraic_groups/index.html",
+      "href": "topic/nilpotent_orbits/index.html",
       "children": []
     },
-    "trace_formulas": {
-      "id": "trace_formulas",
-      "title": "Trace Formulas",
-      "depth": 1,
-      "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
+    "topic.reductive_structure": {
+      "id": "topic.reductive_structure",
+      "title": "Topic.Reductive Structure",
+      "depth": 2,
+      "parent": "topic",
+      "node_count": 13,
+      "direct_node_count": 13,
       "kind_counts": {
-        "concept": 1
+        "concept": 13
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 13
       },
-      "href": "trace_formulas/index.html",
+      "href": "topic/reductive_structure/index.html",
+      "children": []
+    },
+    "topic.root_data_and_duality": {
+      "id": "topic.root_data_and_duality",
+      "title": "Topic.Root Data And Duality",
+      "depth": 2,
+      "parent": "topic",
+      "node_count": 21,
+      "direct_node_count": 21,
+      "kind_counts": {
+        "concept": 21
+      },
+      "status_counts": {
+        "admitted": 21
+      },
+      "href": "topic/root_data_and_duality/index.html",
       "children": []
     }
   }

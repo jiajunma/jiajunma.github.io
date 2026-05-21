@@ -1,0 +1,365 @@
+{
+  "topic": {
+    "id": "topic.linear_algebraic_groups",
+    "title": "Topic.Linear Algebraic Groups",
+    "href": "topic/linear_algebraic_groups/index.html",
+    "parent": "topic",
+    "node_count": 11,
+    "descendant_node_count": 11
+  },
+  "counts": {
+    "internal_nodes": 11,
+    "descendant_nodes": 11,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 11,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 13,
+    "visible_nodes_with_selected_proof_plans": 13
+  },
+  "nodes": [
+    {
+      "id": "topic.affine_algebraic_groups",
+      "title": "Affine Algebraic Groups",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_affine_algebraic_groups.html",
+      "payload": "node_payloads/topic_affine_algebraic_groups.json"
+    },
+    {
+      "id": "topic.automorphism_groups",
+      "title": "Automorphism Groups",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_automorphism_groups.html",
+      "payload": "node_payloads/topic_automorphism_groups.json"
+    },
+    {
+      "id": "topic.base_change",
+      "title": "Base Change",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_base_change.html",
+      "payload": "node_payloads/topic_base_change.json"
+    },
+    {
+      "id": "topic.basic_examples",
+      "title": "Basic Examples",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_basic_examples.html",
+      "payload": "node_payloads/topic_basic_examples.json"
+    },
+    {
+      "id": "topic.conjugacy_classes",
+      "title": "Conjugacy Classes",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_conjugacy_classes.html",
+      "payload": "node_payloads/topic_conjugacy_classes.json"
+    },
+    {
+      "id": "topic.connected_components",
+      "title": "Connected Components",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_connected_components.html",
+      "payload": "node_payloads/topic_connected_components.json"
+    },
+    {
+      "id": "topic.coordinate_rings_and_hopf_algebras",
+      "title": "Coordinate Rings and Hopf Algebras",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_coordinate_rings_and_hopf_algebras.html",
+      "payload": "node_payloads/topic_coordinate_rings_and_hopf_algebras.json"
+    },
+    {
+      "id": "topic.kernels_images_and_quotients",
+      "title": "Kernels, Images, and Quotients",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_kernels_images_and_quotients.html",
+      "payload": "node_payloads/topic_kernels_images_and_quotients.json"
+    },
+    {
+      "id": "topic.linear_algebraic_groups",
+      "title": "Linear Algebraic Groups",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_linear_algebraic_groups.html",
+      "payload": "node_payloads/topic_linear_algebraic_groups.json"
+    },
+    {
+      "id": "topic.morphisms_and_closed_subgroups",
+      "title": "Morphisms and Closed Subgroups",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_morphisms_and_closed_subgroups.html",
+      "payload": "node_payloads/topic_morphisms_and_closed_subgroups.json"
+    },
+    {
+      "id": "topic.smoothness_tangent_spaces_lie_algebras",
+      "title": "Smoothness, Tangent Spaces, and Lie Algebras",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topic/topic_smoothness_tangent_spaces_lie_algebras.html",
+      "payload": "node_payloads/topic_smoothness_tangent_spaces_lie_algebras.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "topic.coordinate_rings_and_hopf_algebras",
+      "to": "topic.affine_algebraic_groups",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.affine_algebraic_groups",
+      "to": "topic.automorphism_groups",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.morphisms_and_closed_subgroups",
+      "to": "topic.automorphism_groups",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.affine_algebraic_groups",
+      "to": "topic.base_change",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.linear_algebraic_groups",
+      "to": "topic.basic_examples",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.morphisms_and_closed_subgroups",
+      "to": "topic.basic_examples",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.automorphism_groups",
+      "to": "topic.conjugacy_classes",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.linear_algebraic_groups",
+      "to": "topic.conjugacy_classes",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.smoothness_tangent_spaces_lie_algebras",
+      "to": "topic.connected_components",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.morphisms_and_closed_subgroups",
+      "to": "topic.kernels_images_and_quotients",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.affine_algebraic_groups",
+      "to": "topic.linear_algebraic_groups",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.affine_algebraic_groups",
+      "to": "topic.morphisms_and_closed_subgroups",
+      "kind": "uses"
+    },
+    {
+      "from": "topic.affine_algebraic_groups",
+      "to": "topic.smoothness_tangent_spaces_lie_algebras",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "topic",
+      "title": "Topic",
+      "href": "topic/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 118
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:topic",
+      "to": "topic.base_change",
+      "kind": "boundary_dependency",
+      "topic": "topic",
+      "count": 1
+    },
+    {
+      "from": "topic:topic",
+      "to": "topic.coordinate_rings_and_hopf_algebras",
+      "kind": "boundary_dependency",
+      "topic": "topic",
+      "count": 3
+    },
+    {
+      "from": "topic:topic",
+      "to": "topic.smoothness_tangent_spaces_lie_algebras",
+      "kind": "boundary_dependency",
+      "topic": "topic",
+      "count": 1
+    },
+    {
+      "from": "topic.affine_algebraic_groups",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 3
+    },
+    {
+      "from": "topic.automorphism_groups",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 3
+    },
+    {
+      "from": "topic.base_change",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 1
+    },
+    {
+      "from": "topic.basic_examples",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 1
+    },
+    {
+      "from": "topic.conjugacy_classes",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 1
+    },
+    {
+      "from": "topic.connected_components",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 2
+    },
+    {
+      "from": "topic.linear_algebraic_groups",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 4
+    },
+    {
+      "from": "topic.smoothness_tangent_spaces_lie_algebras",
+      "to": "topic:topic",
+      "kind": "boundary_dependent",
+      "topic": "topic",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "affine-algebraic-groups",
+      "title": "affine-algebraic-groups",
+      "href": "keywords/affine-algebraic-groups.html",
+      "count": 1
+    },
+    {
+      "id": "automorphisms",
+      "title": "automorphisms",
+      "href": "keywords/automorphisms.html",
+      "count": 1
+    },
+    {
+      "id": "base-change",
+      "title": "base-change",
+      "href": "keywords/base-change.html",
+      "count": 1
+    },
+    {
+      "id": "closed-subgroups",
+      "title": "closed-subgroups",
+      "href": "keywords/closed-subgroups.html",
+      "count": 1
+    },
+    {
+      "id": "conjugacy",
+      "title": "conjugacy",
+      "href": "keywords/conjugacy.html",
+      "count": 1
+    },
+    {
+      "id": "connected-components",
+      "title": "connected-components",
+      "href": "keywords/connected-components.html",
+      "count": 1
+    },
+    {
+      "id": "coordinate-rings",
+      "title": "coordinate-rings",
+      "href": "keywords/coordinate-rings.html",
+      "count": 1
+    },
+    {
+      "id": "examples",
+      "title": "examples",
+      "href": "keywords/examples.html",
+      "count": 1
+    },
+    {
+      "id": "hopf-algebras",
+      "title": "hopf-algebras",
+      "href": "keywords/hopf-algebras.html",
+      "count": 1
+    },
+    {
+      "id": "kernels",
+      "title": "kernels",
+      "href": "keywords/kernels.html",
+      "count": 1
+    },
+    {
+      "id": "lie-algebras",
+      "title": "lie-algebras",
+      "href": "keywords/lie-algebras.html",
+      "count": 1
+    },
+    {
+      "id": "linear-algebraic-groups",
+      "title": "linear-algebraic-groups",
+      "href": "keywords/linear-algebraic-groups.html",
+      "count": 11
+    },
+    {
+      "id": "morphisms",
+      "title": "morphisms",
+      "href": "keywords/morphisms.html",
+      "count": 1
+    },
+    {
+      "id": "quotients",
+      "title": "quotients",
+      "href": "keywords/quotients.html",
+      "count": 1
+    },
+    {
+      "id": "smoothness",
+      "title": "smoothness",
+      "href": "keywords/smoothness.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}
