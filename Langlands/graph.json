@@ -1052,6 +1052,7 @@
       ],
       "used_by": [
         "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+        "linear_algebraic_groups.linear_algebraic_group_definition",
         "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
       ]
     },
@@ -1138,7 +1139,8 @@
         "descent_and_forms.galois_groups_and_descent_data",
         "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
         "foundational_inputs.local_fields",
-        "linear_algebraic_groups.base_change"
+        "linear_algebraic_groups.base_change",
+        "linear_algebraic_groups.linear_algebraic_group_definition"
       ]
     },
     {
@@ -1185,7 +1187,8 @@
       ],
       "used_by": [
         "bd_covers.central_extensions_of_algebraic_groups",
-        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
+        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+        "linear_algebraic_groups.linear_algebraic_group_definition"
       ]
     },
     {
@@ -1453,6 +1456,28 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "title": "Affine Finite Type Groups Have Faithful Finite-Dimensional Representations",
+      "kind": "theorem",
+      "status": "needs_statement_review",
+      "tags": [
+        "linear-algebraic-groups",
+        "faithful-representations",
+        "closed-subgroups",
+        "general-linear-group"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+        "linear_algebraic_groups.linear_algebraic_group_definition",
+        "linear_algebraic_groups.morphisms_and_closed_subgroups"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.automorphism_groups",
       "title": "Automorphism Groups",
       "kind": "topic",
@@ -1586,7 +1611,9 @@
         "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
-        "linear_algebraic_groups.affine_algebraic_groups"
+        "linear_algebraic_groups.affine_algebraic_groups",
+        "linear_algebraic_groups.affine_finite_type_faithful_representation",
+        "linear_algebraic_groups.linear_algebraic_group_definition"
       ]
     },
     {
@@ -1606,6 +1633,31 @@
       "topic": "linear_algebraic_groups",
       "uses": [
         "linear_algebraic_groups.morphisms_and_closed_subgroups"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "title": "Definition of Linear Algebraic Groups",
+      "kind": "definition",
+      "status": "needs_definition_review",
+      "tags": [
+        "linear-algebraic-groups",
+        "affine-group-schemes",
+        "definitions"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "foundational_inputs.affine_schemes",
+        "foundational_inputs.fields_and_field_extensions",
+        "foundational_inputs.hopf_algebras",
+        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
+      ],
+      "used_by": [
+        "linear_algebraic_groups.affine_finite_type_faithful_representation"
       ]
     },
     {
@@ -1652,6 +1704,7 @@
         "linear_algebraic_groups.affine_algebraic_groups"
       ],
       "used_by": [
+        "linear_algebraic_groups.affine_finite_type_faithful_representation",
         "linear_algebraic_groups.automorphism_groups",
         "linear_algebraic_groups.basic_examples",
         "linear_algebraic_groups.kernels_images_and_quotients"
@@ -3228,6 +3281,18 @@
       "to": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
     },
     {
+      "from": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "to": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
+    },
+    {
+      "from": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
+    },
+    {
+      "from": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "to": "linear_algebraic_groups.morphisms_and_closed_subgroups"
+    },
+    {
       "from": "linear_algebraic_groups.automorphism_groups",
       "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
@@ -3278,6 +3343,22 @@
     {
       "from": "linear_algebraic_groups.kernels_images_and_quotients",
       "to": "linear_algebraic_groups.morphisms_and_closed_subgroups"
+    },
+    {
+      "from": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "to": "foundational_inputs.affine_schemes"
+    },
+    {
+      "from": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "to": "foundational_inputs.fields_and_field_extensions"
+    },
+    {
+      "from": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "to": "foundational_inputs.hopf_algebras"
+    },
+    {
+      "from": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "to": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
     },
     {
       "from": "linear_algebraic_groups.linear_algebraic_groups",
