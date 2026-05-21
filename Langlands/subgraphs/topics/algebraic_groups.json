@@ -1,0 +1,776 @@
+{
+  "topic": {
+    "id": "algebraic_groups",
+    "title": "Algebraic Groups",
+    "href": "algebraic_groups/index.html",
+    "parent": null,
+    "node_count": 1,
+    "descendant_node_count": 13
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "descendant_nodes": 13,
+    "child_topics": 11,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 3,
+    "visible_nodes_with_selected_proof_plans": 3
+  },
+  "nodes": [
+    {
+      "id": "topics.algebraic_groups",
+      "title": "Algebraic Groups and Homogeneous Spaces",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topics/topics_algebraic_groups.html",
+      "payload": "node_payloads/topics_algebraic_groups.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "topics",
+      "title": "Topics",
+      "href": "topics/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 27
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:topics",
+      "to": "topics.algebraic_groups",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 3
+    },
+    {
+      "from": "topics.algebraic_groups",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 6
+    }
+  ],
+  "keywords": [
+    {
+      "id": "algebraic-groups",
+      "title": "algebraic-groups",
+      "href": "keywords/algebraic-groups.html",
+      "count": 1
+    },
+    {
+      "id": "homogeneous-spaces",
+      "title": "homogeneous-spaces",
+      "href": "keywords/homogeneous-spaces.html",
+      "count": 1
+    },
+    {
+      "id": "relative-langlands",
+      "title": "relative-langlands",
+      "href": "keywords/relative-langlands.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [
+    "algebraic_groups.bd_metaplectic",
+    "algebraic_groups.bruhat_tits",
+    "algebraic_groups.core",
+    "algebraic_groups.dual_groups",
+    "algebraic_groups.homogeneous_spherical",
+    "algebraic_groups.kottwitz",
+    "algebraic_groups.rational_forms",
+    "algebraic_groups.reductive_groups",
+    "algebraic_groups.root_coxeter",
+    "algebraic_groups.tits_buildings",
+    "algebraic_groups.tori_unipotent_actions"
+  ],
+  "child_topic_nodes": [
+    {
+      "id": "algebraic_groups.bd_metaplectic",
+      "title": "Algebraic Groups.Bd Metaplectic",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/bd_metaplectic/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.bruhat_tits",
+      "title": "Algebraic Groups.Bruhat Tits",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/bruhat_tits/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.core",
+      "title": "Algebraic Groups.Core",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/core/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.dual_groups",
+      "title": "Algebraic Groups.Dual Groups",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/dual_groups/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.homogeneous_spherical",
+      "title": "Algebraic Groups.Homogeneous Spherical",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/homogeneous_spherical/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.kottwitz",
+      "title": "Algebraic Groups.Kottwitz",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/kottwitz/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.rational_forms",
+      "title": "Algebraic Groups.Rational Forms",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "concept": 2
+      },
+      "status_counts": {
+        "admitted": 2
+      },
+      "href": "algebraic_groups/rational_forms/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.reductive_groups",
+      "title": "Algebraic Groups.Reductive Groups",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/reductive_groups/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.root_coxeter",
+      "title": "Algebraic Groups.Root Coxeter",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/root_coxeter/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.tits_buildings",
+      "title": "Algebraic Groups.Tits Buildings",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/tits_buildings/index.html",
+      "children": []
+    },
+    {
+      "id": "algebraic_groups.tori_unipotent_actions",
+      "title": "Algebraic Groups.Tori Unipotent Actions",
+      "depth": 2,
+      "parent": "algebraic_groups",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "concept": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_groups/tori_unipotent_actions/index.html",
+      "children": []
+    }
+  ],
+  "child_topic_edges": [
+    {
+      "from": "topic:algebraic_groups.bruhat_tits",
+      "to": "topic:algebraic_groups.bd_metaplectic",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.bruhat_tits",
+      "to": "topic:algebraic_groups.kottwitz",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.core",
+      "to": "topic:algebraic_groups.reductive_groups",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.core",
+      "to": "topic:algebraic_groups.tori_unipotent_actions",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.dual_groups",
+      "to": "topic:algebraic_groups.bd_metaplectic",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.kottwitz",
+      "to": "topic:algebraic_groups.rational_forms",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.rational_forms",
+      "to": "topic:algebraic_groups.bruhat_tits",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.rational_forms",
+      "to": "topic:algebraic_groups.dual_groups",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.rational_forms",
+      "to": "topic:algebraic_groups.kottwitz",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.rational_forms",
+      "to": "topic:algebraic_groups.tits_buildings",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.reductive_groups",
+      "to": "topic:algebraic_groups.bd_metaplectic",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.reductive_groups",
+      "to": "topic:algebraic_groups.homogeneous_spherical",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.reductive_groups",
+      "to": "topic:algebraic_groups.rational_forms",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.reductive_groups",
+      "to": "topic:algebraic_groups.root_coxeter",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.reductive_groups",
+      "to": "topic:algebraic_groups.tits_buildings",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:algebraic_groups.bd_metaplectic",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:algebraic_groups.bruhat_tits",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:algebraic_groups.dual_groups",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:algebraic_groups.homogeneous_spherical",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:algebraic_groups.kottwitz",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:algebraic_groups.rational_forms",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:algebraic_groups.tits_buildings",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.tits_buildings",
+      "to": "topic:algebraic_groups.bruhat_tits",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.tori_unipotent_actions",
+      "to": "topic:algebraic_groups.homogeneous_spherical",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.tori_unipotent_actions",
+      "to": "topic:algebraic_groups.reductive_groups",
+      "kind": "topic_dependency",
+      "count": 1
+    }
+  ],
+  "child_boundary_topics": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "href": "foundations/index.html",
+      "role": "dependency",
+      "node_count": 1
+    },
+    {
+      "id": "local_global_fields",
+      "title": "Local Global Fields",
+      "href": "local_global_fields/index.html",
+      "role": "dependency",
+      "node_count": 1
+    },
+    {
+      "id": "topics",
+      "title": "Topics",
+      "href": "topics/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 27
+    },
+    {
+      "id": "topics.algebraic_groups",
+      "title": "Topics.Algebraic Groups",
+      "href": "topics/algebraic_groups/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 12
+    }
+  ],
+  "child_boundary_edges": [
+    {
+      "from": "topic:foundations",
+      "to": "topic:algebraic_groups.core",
+      "kind": "boundary_dependency",
+      "topic": "foundations",
+      "count": 1
+    },
+    {
+      "from": "topic:foundations",
+      "to": "topic:algebraic_groups.root_coxeter",
+      "kind": "boundary_dependency",
+      "topic": "foundations",
+      "count": 1
+    },
+    {
+      "from": "topic:local_global_fields",
+      "to": "topic:algebraic_groups.bd_metaplectic",
+      "kind": "boundary_dependency",
+      "topic": "local_global_fields",
+      "count": 1
+    },
+    {
+      "from": "topic:local_global_fields",
+      "to": "topic:algebraic_groups.bruhat_tits",
+      "kind": "boundary_dependency",
+      "topic": "local_global_fields",
+      "count": 1
+    },
+    {
+      "from": "topic:local_global_fields",
+      "to": "topic:algebraic_groups.dual_groups",
+      "kind": "boundary_dependency",
+      "topic": "local_global_fields",
+      "count": 1
+    },
+    {
+      "from": "topic:local_global_fields",
+      "to": "topic:algebraic_groups.kottwitz",
+      "kind": "boundary_dependency",
+      "topic": "local_global_fields",
+      "count": 1
+    },
+    {
+      "from": "topic:local_global_fields",
+      "to": "topic:algebraic_groups.rational_forms",
+      "kind": "boundary_dependency",
+      "topic": "local_global_fields",
+      "count": 1
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.bd_metaplectic",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 5
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.bruhat_tits",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 4
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.core",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 2
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.dual_groups",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 3
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.homogeneous_spherical",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 3
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.kottwitz",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 4
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.rational_forms",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 5
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.reductive_groups",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 2
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.root_coxeter",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 2
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.tits_buildings",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 3
+    },
+    {
+      "from": "topic:topics",
+      "to": "topic:algebraic_groups.tori_unipotent_actions",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 1
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.bd_metaplectic",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 4
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.bruhat_tits",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 3
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.dual_groups",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 2
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.homogeneous_spherical",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 3
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.kottwitz",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 3
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.rational_forms",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 4
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.reductive_groups",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 2
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.root_coxeter",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 1
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.tits_buildings",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 3
+    },
+    {
+      "from": "topic:topics.algebraic_groups",
+      "to": "topic:algebraic_groups.tori_unipotent_actions",
+      "kind": "boundary_dependency",
+      "topic": "topics.algebraic_groups",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.bruhat_tits",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 2
+    },
+    {
+      "from": "topic:algebraic_groups.core",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 2
+    },
+    {
+      "from": "topic:algebraic_groups.dual_groups",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.kottwitz",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.rational_forms",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 5
+    },
+    {
+      "from": "topic:algebraic_groups.reductive_groups",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 5
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 7
+    },
+    {
+      "from": "topic:algebraic_groups.tits_buildings",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.tori_unipotent_actions",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 2
+    },
+    {
+      "from": "topic:algebraic_groups.bruhat_tits",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 2
+    },
+    {
+      "from": "topic:algebraic_groups.core",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 2
+    },
+    {
+      "from": "topic:algebraic_groups.dual_groups",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.kottwitz",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.rational_forms",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 5
+    },
+    {
+      "from": "topic:algebraic_groups.reductive_groups",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 5
+    },
+    {
+      "from": "topic:algebraic_groups.root_coxeter",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 7
+    },
+    {
+      "from": "topic:algebraic_groups.tits_buildings",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_groups.tori_unipotent_actions",
+      "to": "topic:topics.algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "topics.algebraic_groups",
+      "count": 2
+    }
+  ]
+}

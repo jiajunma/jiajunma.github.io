@@ -1,0 +1,1015 @@
+{
+  "nodes": [
+    {
+      "id": "topics.algebraic_groups",
+      "title": "Algebraic Groups and Homogeneous Spaces",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "algebraic-groups",
+        "homogeneous-spaces",
+        "relative-langlands"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "algebraic_groups"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.foundations",
+        "topics.langlands_mathematics_database",
+        "topics.local_global_fields"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.core",
+        "topics.automorphic_periods",
+        "topics.geometric_langlands",
+        "topics.local_langlands",
+        "topics.representation_harmonic_analysis",
+        "topics.shimura_arithmetic_geometry"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.bd_metaplectic",
+      "title": "Brylinski-Deligne and Metaplectic Covers",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "brylinski-deligne",
+        "metaplectic-covers",
+        "central-extensions"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.bd_metaplectic"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.bruhat_tits",
+        "topics.algebraic_groups.dual_groups",
+        "topics.algebraic_groups.reductive_groups",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.local_global_fields"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.bruhat_tits",
+      "title": "Bruhat-Tits Theory",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "bruhat-tits",
+        "affine-buildings",
+        "parahoric-groups"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.bruhat_tits"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.rational_forms",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.algebraic_groups.tits_buildings",
+        "topics.local_global_fields"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.bd_metaplectic",
+        "topics.algebraic_groups.kottwitz"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.core",
+      "title": "Core Algebraic Group Theory",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "algebraic-groups",
+        "core"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.core"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups",
+        "topics.foundations"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.reductive_groups",
+        "topics.algebraic_groups.tori_unipotent_actions"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.dual_groups",
+      "title": "Dual Groups and L-Groups",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "dual-groups",
+        "l-groups"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.dual_groups"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.rational_forms",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.local_global_fields"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.bd_metaplectic"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.homogeneous_spherical",
+      "title": "Homogeneous and Spherical Spaces",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "homogeneous-spaces",
+        "spherical-varieties",
+        "relative-langlands"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.homogeneous_spherical"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.reductive_groups",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.algebraic_groups.tori_unipotent_actions"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.kottwitz",
+      "title": "Kottwitz Structures",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "kottwitz",
+        "b-g",
+        "isocrystals"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.kottwitz"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.bruhat_tits",
+        "topics.algebraic_groups.rational_forms",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.local_global_fields"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.refined_inner_twists"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.rational_forms",
+      "title": "Rational Forms and Inner Forms",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "rational-forms",
+        "inner-forms",
+        "galois-cohomology"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.rational_forms"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.reductive_groups",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.local_global_fields"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.bruhat_tits",
+        "topics.algebraic_groups.dual_groups",
+        "topics.algebraic_groups.kottwitz",
+        "topics.algebraic_groups.refined_inner_twists",
+        "topics.algebraic_groups.tits_buildings"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.reductive_groups",
+      "title": "Reductive Groups",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "reductive-groups",
+        "semisimple-groups"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.reductive_groups"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.core",
+        "topics.algebraic_groups.tori_unipotent_actions"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.bd_metaplectic",
+        "topics.algebraic_groups.homogeneous_spherical",
+        "topics.algebraic_groups.rational_forms",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.algebraic_groups.tits_buildings"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.refined_inner_twists",
+      "title": "Refined Inner Twists and Kaletha Framework",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "inner-forms",
+        "rigid-inner-twists",
+        "kaletha"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.rational_forms"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.kottwitz",
+        "topics.algebraic_groups.rational_forms"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.root_coxeter",
+      "title": "Root-Theoretic and Coxeter Combinatorics",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "root-systems",
+        "coxeter-groups",
+        "dynkin-diagrams"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.root_coxeter"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.reductive_groups",
+        "topics.foundations"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.bd_metaplectic",
+        "topics.algebraic_groups.bruhat_tits",
+        "topics.algebraic_groups.dual_groups",
+        "topics.algebraic_groups.homogeneous_spherical",
+        "topics.algebraic_groups.kottwitz",
+        "topics.algebraic_groups.rational_forms",
+        "topics.algebraic_groups.tits_buildings"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.tits_buildings",
+      "title": "Tits Systems and Buildings",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "buildings",
+        "tits-systems",
+        "bn-pairs"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.tits_buildings"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.rational_forms",
+        "topics.algebraic_groups.reductive_groups",
+        "topics.algebraic_groups.root_coxeter"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.bruhat_tits"
+      ]
+    },
+    {
+      "id": "topics.algebraic_groups.tori_unipotent_actions",
+      "title": "Tori, Unipotent Groups, and Actions",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "tori",
+        "unipotent-groups",
+        "group-actions"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "topics.algebraic_groups",
+        "algebraic_groups.tori_unipotent_actions"
+      ],
+      "topic": "algebraic_groups",
+      "uses": [
+        "topics.algebraic_groups.core"
+      ],
+      "used_by": [
+        "topics.algebraic_groups.homogeneous_spherical",
+        "topics.algebraic_groups.reductive_groups"
+      ]
+    },
+    {
+      "id": "topics.automorphic_periods",
+      "title": "Automorphic Forms, Automorphic Representations, and Periods",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "automorphic-forms",
+        "automorphic-representations",
+        "periods"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "automorphic_periods"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.algebraic_groups",
+        "topics.langlands_mathematics_database",
+        "topics.local_global_fields",
+        "topics.representation_harmonic_analysis"
+      ],
+      "used_by": [
+        "topics.global_langlands",
+        "topics.l_functions_functoriality",
+        "topics.shimura_arithmetic_geometry"
+      ]
+    },
+    {
+      "id": "topics.foundations",
+      "title": "Foundations",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "foundations"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "foundations"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.langlands_mathematics_database"
+      ],
+      "used_by": [
+        "topics.algebraic_groups",
+        "topics.algebraic_groups.core",
+        "topics.algebraic_groups.root_coxeter",
+        "topics.galois_motives_padic_hodge",
+        "topics.geometric_langlands",
+        "topics.local_global_fields"
+      ]
+    },
+    {
+      "id": "topics.function_field_shtukas",
+      "title": "Function Field Langlands and Shtukas",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "function-fields",
+        "shtukas"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "function_field_shtukas"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.global_langlands",
+        "topics.langlands_mathematics_database",
+        "topics.local_global_fields"
+      ]
+    },
+    {
+      "id": "topics.galois_motives_padic_hodge",
+      "title": "Galois Representations, Motives, and p-adic Hodge Theory",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "galois-representations",
+        "motives",
+        "p-adic-hodge-theory"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "galois_motives_padic_hodge"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.foundations",
+        "topics.langlands_mathematics_database",
+        "topics.local_global_fields"
+      ],
+      "used_by": [
+        "topics.padic_modp_langlands",
+        "topics.shimura_arithmetic_geometry"
+      ]
+    },
+    {
+      "id": "topics.geometric_langlands",
+      "title": "Geometric Langlands and Geometric Relative Langlands",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "geometric-langlands",
+        "relative-langlands"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "geometric_langlands"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.algebraic_groups",
+        "topics.foundations",
+        "topics.langlands_mathematics_database"
+      ]
+    },
+    {
+      "id": "topics.global_langlands",
+      "title": "Global Langlands and Global Relative Langlands",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "global-langlands",
+        "relative-langlands"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "global_langlands"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.automorphic_periods",
+        "topics.l_functions_functoriality",
+        "topics.langlands_mathematics_database",
+        "topics.local_langlands",
+        "topics.trace_formulas"
+      ],
+      "used_by": [
+        "topics.function_field_shtukas"
+      ]
+    },
+    {
+      "id": "topics.l_functions_functoriality",
+      "title": "L-Functions, Functoriality, and Relative Functoriality",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "l-functions",
+        "functoriality"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "l_functions_functoriality"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.automorphic_periods",
+        "topics.langlands_mathematics_database",
+        "topics.local_langlands"
+      ],
+      "used_by": [
+        "topics.global_langlands"
+      ]
+    },
+    {
+      "id": "topics.langlands_mathematics_database",
+      "title": "Langlands Mathematics Database",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "project-outline",
+        "langlands"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics"
+      ],
+      "topic": "topics",
+      "used_by": [
+        "topics.algebraic_groups",
+        "topics.automorphic_periods",
+        "topics.foundations",
+        "topics.function_field_shtukas",
+        "topics.galois_motives_padic_hodge",
+        "topics.geometric_langlands",
+        "topics.global_langlands",
+        "topics.l_functions_functoriality",
+        "topics.local_global_fields",
+        "topics.local_langlands",
+        "topics.padic_modp_langlands",
+        "topics.representation_harmonic_analysis",
+        "topics.shimura_arithmetic_geometry",
+        "topics.trace_formulas"
+      ]
+    },
+    {
+      "id": "topics.local_global_fields",
+      "title": "Local and Global Fields",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "fields",
+        "local-fields",
+        "global-fields"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "local_global_fields"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.foundations",
+        "topics.langlands_mathematics_database"
+      ],
+      "used_by": [
+        "topics.algebraic_groups",
+        "topics.algebraic_groups.bd_metaplectic",
+        "topics.algebraic_groups.bruhat_tits",
+        "topics.algebraic_groups.dual_groups",
+        "topics.algebraic_groups.kottwitz",
+        "topics.algebraic_groups.rational_forms",
+        "topics.automorphic_periods",
+        "topics.function_field_shtukas",
+        "topics.galois_motives_padic_hodge",
+        "topics.local_langlands",
+        "topics.representation_harmonic_analysis"
+      ]
+    },
+    {
+      "id": "topics.local_langlands",
+      "title": "Local Langlands and Local Relative Langlands",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "local-langlands",
+        "relative-langlands"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "local_langlands"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.algebraic_groups",
+        "topics.langlands_mathematics_database",
+        "topics.local_global_fields",
+        "topics.representation_harmonic_analysis"
+      ],
+      "used_by": [
+        "topics.global_langlands",
+        "topics.l_functions_functoriality",
+        "topics.padic_modp_langlands"
+      ]
+    },
+    {
+      "id": "topics.padic_modp_langlands",
+      "title": "p-adic and mod p Langlands",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "p-adic-langlands",
+        "mod-p-langlands"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "padic_modp_langlands"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.galois_motives_padic_hodge",
+        "topics.langlands_mathematics_database",
+        "topics.local_langlands"
+      ]
+    },
+    {
+      "id": "topics.representation_harmonic_analysis",
+      "title": "Representation Theory and Harmonic Analysis",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "representation-theory",
+        "harmonic-analysis"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "representation_harmonic_analysis"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.algebraic_groups",
+        "topics.langlands_mathematics_database",
+        "topics.local_global_fields"
+      ],
+      "used_by": [
+        "topics.automorphic_periods",
+        "topics.local_langlands",
+        "topics.trace_formulas"
+      ]
+    },
+    {
+      "id": "topics.shimura_arithmetic_geometry",
+      "title": "Shimura Varieties and Arithmetic Geometry",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "shimura-varieties",
+        "arithmetic-geometry"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "shimura_arithmetic_geometry"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.algebraic_groups",
+        "topics.automorphic_periods",
+        "topics.galois_motives_padic_hodge",
+        "topics.langlands_mathematics_database"
+      ]
+    },
+    {
+      "id": "topics.trace_formulas",
+      "title": "Trace Formulas and Relative Trace Formulas",
+      "kind": "concept",
+      "status": "admitted",
+      "tags": [
+        "trace-formula",
+        "relative-trace-formula"
+      ],
+      "primary_topic": "topics",
+      "topics": [
+        "topics",
+        "trace_formulas"
+      ],
+      "topic": "topics",
+      "uses": [
+        "topics.langlands_mathematics_database",
+        "topics.representation_harmonic_analysis"
+      ],
+      "used_by": [
+        "topics.global_langlands"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "topics.algebraic_groups",
+      "to": "topics.foundations"
+    },
+    {
+      "from": "topics.algebraic_groups",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.algebraic_groups",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.algebraic_groups.bd_metaplectic",
+      "to": "topics.algebraic_groups.bruhat_tits"
+    },
+    {
+      "from": "topics.algebraic_groups.bd_metaplectic",
+      "to": "topics.algebraic_groups.dual_groups"
+    },
+    {
+      "from": "topics.algebraic_groups.bd_metaplectic",
+      "to": "topics.algebraic_groups.reductive_groups"
+    },
+    {
+      "from": "topics.algebraic_groups.bd_metaplectic",
+      "to": "topics.algebraic_groups.root_coxeter"
+    },
+    {
+      "from": "topics.algebraic_groups.bd_metaplectic",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.algebraic_groups.bruhat_tits",
+      "to": "topics.algebraic_groups.rational_forms"
+    },
+    {
+      "from": "topics.algebraic_groups.bruhat_tits",
+      "to": "topics.algebraic_groups.root_coxeter"
+    },
+    {
+      "from": "topics.algebraic_groups.bruhat_tits",
+      "to": "topics.algebraic_groups.tits_buildings"
+    },
+    {
+      "from": "topics.algebraic_groups.bruhat_tits",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.algebraic_groups.core",
+      "to": "topics.algebraic_groups"
+    },
+    {
+      "from": "topics.algebraic_groups.core",
+      "to": "topics.foundations"
+    },
+    {
+      "from": "topics.algebraic_groups.dual_groups",
+      "to": "topics.algebraic_groups.rational_forms"
+    },
+    {
+      "from": "topics.algebraic_groups.dual_groups",
+      "to": "topics.algebraic_groups.root_coxeter"
+    },
+    {
+      "from": "topics.algebraic_groups.dual_groups",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.algebraic_groups.homogeneous_spherical",
+      "to": "topics.algebraic_groups.reductive_groups"
+    },
+    {
+      "from": "topics.algebraic_groups.homogeneous_spherical",
+      "to": "topics.algebraic_groups.root_coxeter"
+    },
+    {
+      "from": "topics.algebraic_groups.homogeneous_spherical",
+      "to": "topics.algebraic_groups.tori_unipotent_actions"
+    },
+    {
+      "from": "topics.algebraic_groups.kottwitz",
+      "to": "topics.algebraic_groups.bruhat_tits"
+    },
+    {
+      "from": "topics.algebraic_groups.kottwitz",
+      "to": "topics.algebraic_groups.rational_forms"
+    },
+    {
+      "from": "topics.algebraic_groups.kottwitz",
+      "to": "topics.algebraic_groups.root_coxeter"
+    },
+    {
+      "from": "topics.algebraic_groups.kottwitz",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.algebraic_groups.rational_forms",
+      "to": "topics.algebraic_groups.reductive_groups"
+    },
+    {
+      "from": "topics.algebraic_groups.rational_forms",
+      "to": "topics.algebraic_groups.root_coxeter"
+    },
+    {
+      "from": "topics.algebraic_groups.rational_forms",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.algebraic_groups.reductive_groups",
+      "to": "topics.algebraic_groups.core"
+    },
+    {
+      "from": "topics.algebraic_groups.reductive_groups",
+      "to": "topics.algebraic_groups.tori_unipotent_actions"
+    },
+    {
+      "from": "topics.algebraic_groups.refined_inner_twists",
+      "to": "topics.algebraic_groups.kottwitz"
+    },
+    {
+      "from": "topics.algebraic_groups.refined_inner_twists",
+      "to": "topics.algebraic_groups.rational_forms"
+    },
+    {
+      "from": "topics.algebraic_groups.root_coxeter",
+      "to": "topics.algebraic_groups.reductive_groups"
+    },
+    {
+      "from": "topics.algebraic_groups.root_coxeter",
+      "to": "topics.foundations"
+    },
+    {
+      "from": "topics.algebraic_groups.tits_buildings",
+      "to": "topics.algebraic_groups.rational_forms"
+    },
+    {
+      "from": "topics.algebraic_groups.tits_buildings",
+      "to": "topics.algebraic_groups.reductive_groups"
+    },
+    {
+      "from": "topics.algebraic_groups.tits_buildings",
+      "to": "topics.algebraic_groups.root_coxeter"
+    },
+    {
+      "from": "topics.algebraic_groups.tori_unipotent_actions",
+      "to": "topics.algebraic_groups.core"
+    },
+    {
+      "from": "topics.automorphic_periods",
+      "to": "topics.algebraic_groups"
+    },
+    {
+      "from": "topics.automorphic_periods",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.automorphic_periods",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.automorphic_periods",
+      "to": "topics.representation_harmonic_analysis"
+    },
+    {
+      "from": "topics.foundations",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.function_field_shtukas",
+      "to": "topics.global_langlands"
+    },
+    {
+      "from": "topics.function_field_shtukas",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.function_field_shtukas",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.galois_motives_padic_hodge",
+      "to": "topics.foundations"
+    },
+    {
+      "from": "topics.galois_motives_padic_hodge",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.galois_motives_padic_hodge",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.geometric_langlands",
+      "to": "topics.algebraic_groups"
+    },
+    {
+      "from": "topics.geometric_langlands",
+      "to": "topics.foundations"
+    },
+    {
+      "from": "topics.geometric_langlands",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.global_langlands",
+      "to": "topics.automorphic_periods"
+    },
+    {
+      "from": "topics.global_langlands",
+      "to": "topics.l_functions_functoriality"
+    },
+    {
+      "from": "topics.global_langlands",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.global_langlands",
+      "to": "topics.local_langlands"
+    },
+    {
+      "from": "topics.global_langlands",
+      "to": "topics.trace_formulas"
+    },
+    {
+      "from": "topics.l_functions_functoriality",
+      "to": "topics.automorphic_periods"
+    },
+    {
+      "from": "topics.l_functions_functoriality",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.l_functions_functoriality",
+      "to": "topics.local_langlands"
+    },
+    {
+      "from": "topics.local_global_fields",
+      "to": "topics.foundations"
+    },
+    {
+      "from": "topics.local_global_fields",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.local_langlands",
+      "to": "topics.algebraic_groups"
+    },
+    {
+      "from": "topics.local_langlands",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.local_langlands",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.local_langlands",
+      "to": "topics.representation_harmonic_analysis"
+    },
+    {
+      "from": "topics.padic_modp_langlands",
+      "to": "topics.galois_motives_padic_hodge"
+    },
+    {
+      "from": "topics.padic_modp_langlands",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.padic_modp_langlands",
+      "to": "topics.local_langlands"
+    },
+    {
+      "from": "topics.representation_harmonic_analysis",
+      "to": "topics.algebraic_groups"
+    },
+    {
+      "from": "topics.representation_harmonic_analysis",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.representation_harmonic_analysis",
+      "to": "topics.local_global_fields"
+    },
+    {
+      "from": "topics.shimura_arithmetic_geometry",
+      "to": "topics.algebraic_groups"
+    },
+    {
+      "from": "topics.shimura_arithmetic_geometry",
+      "to": "topics.automorphic_periods"
+    },
+    {
+      "from": "topics.shimura_arithmetic_geometry",
+      "to": "topics.galois_motives_padic_hodge"
+    },
+    {
+      "from": "topics.shimura_arithmetic_geometry",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.trace_formulas",
+      "to": "topics.langlands_mathematics_database"
+    },
+    {
+      "from": "topics.trace_formulas",
+      "to": "topics.representation_harmonic_analysis"
+    }
+  ]
+}

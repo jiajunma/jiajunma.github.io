@@ -1,0 +1,78 @@
+{
+  "topic": {
+    "id": "trace_formulas",
+    "title": "Trace Formulas",
+    "href": "trace_formulas/index.html",
+    "parent": null,
+    "node_count": 1,
+    "descendant_node_count": 1
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "descendant_nodes": 1,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 3,
+    "visible_nodes_with_selected_proof_plans": 3
+  },
+  "nodes": [
+    {
+      "id": "topics.trace_formulas",
+      "title": "Trace Formulas and Relative Trace Formulas",
+      "kind": "concept",
+      "status": "admitted",
+      "href": "topics/topics_trace_formulas.html",
+      "payload": "node_payloads/topics_trace_formulas.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "topics",
+      "title": "Topics",
+      "href": "topics/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 27
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:topics",
+      "to": "topics.trace_formulas",
+      "kind": "boundary_dependency",
+      "topic": "topics",
+      "count": 2
+    },
+    {
+      "from": "topics.trace_formulas",
+      "to": "topic:topics",
+      "kind": "boundary_dependent",
+      "topic": "topics",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "relative-trace-formula",
+      "title": "relative-trace-formula",
+      "href": "keywords/relative-trace-formula.html",
+      "count": 1
+    },
+    {
+      "id": "trace-formula",
+      "title": "trace-formula",
+      "href": "keywords/trace-formula.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}
