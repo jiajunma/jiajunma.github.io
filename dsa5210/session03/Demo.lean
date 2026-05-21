@@ -6,7 +6,6 @@ import Mathlib
 Complete classroom demo for:
 
 * structures with data fields and proof fields;
-* the `Fin`/`HEq` example imported from the Session 2 appendix demos;
 * classes, instance search, notation, coercions, and inheritance;
 * inductive types and structural induction;
 * recursive functions, `termination_by`, and `decreasing_by`;
@@ -103,35 +102,6 @@ Expected error if uncommented: `Fin 5` and `Fin 6` are different types.
 #synth OfNat (Fin 5) 2
 #eval secondOfFive.val
 #check secondOfFive.isLt
-
-namespace HEqDemo
-
-/-!
-These examples integrate the old `Demo2.lean` fragment. They are kept in a
-small namespace because HEq belongs to the Session 2 dependent-type appendix,
-not to the main Session 3 story.
--/
-
-def finTypeAddComm (n : Nat) : Fin (1 + n) = Fin (n + 1) := by
-  grind
-
-example (n : Nat) : HEq (0 : Fin (n + 1)) (0 : Fin (1 + n)) := by
-  grind
-
-theorem fin_heq_ext_iff {k l : Nat} (h : k = l) {i : Fin k} {j : Fin l} :
-    i ≍ j ↔ (i : Nat) = (j : Nat) := by
-  subst h
-  constructor
-  · intro h
-    have := eq_of_heq h
-    rw [this]
-  · intro h
-    have := Fin.eq_of_val_eq h
-    exact heq_of_eq this
-
-#print fin_heq_ext_iff
-
-end HEqDemo
 
 /-!
 ## 2. Classes, notation, and instance search
