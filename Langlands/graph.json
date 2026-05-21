@@ -1,179 +1,1064 @@
 {
   "nodes": [
     {
-      "id": "topic.adjoint_action",
-      "title": "Adjoint Action",
-      "kind": "concept",
+      "id": "bd_covers.brylinski_deligne_k2_extensions",
+      "title": "Brylinski-Deligne K2-Extensions",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
-        "adjoint-action",
-        "nilpotent-orbits"
+        "brylinski-deligne",
+        "k2",
+        "bd-covers"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "bd_covers",
       "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
+        "bd_covers"
       ],
-      "topic": "topic",
+      "topic": "bd_covers",
       "uses": [
-        "topic.lie_algebras_of_reductive_groups",
-        "topic.reductive_groups"
+        "bd_covers.central_extensions_of_algebraic_groups",
+        "foundational_inputs.algebraic_k_theory_and_k2",
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.root_data"
       ],
       "used_by": [
-        "topic.nilpotent_cone"
+        "bd_covers.dual_groups_for_covers",
+        "bd_covers.local_and_global_metaplectic_covers"
       ]
     },
     {
-      "id": "topic.admissible_sets",
-      "title": "Admissible Sets",
-      "kind": "concept",
+      "id": "bd_covers.central_extensions_of_algebraic_groups",
+      "title": "Central Extensions of Algebraic Groups",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
-        "admissible-sets",
-        "kottwitz-structures"
+        "central-extensions",
+        "bd-covers"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "bd_covers",
       "topics": [
-        "topic",
-        "topic.kottwitz_structures"
+        "bd_covers"
       ],
-      "topic": "topic",
+      "topic": "bd_covers",
       "uses": [
-        "topic.affine_weyl_groups",
-        "topic.b_of_g"
-      ]
-    },
-    {
-      "id": "topic.affine_algebraic_groups",
-      "title": "Affine Algebraic Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "affine-algebraic-groups",
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.coordinate_rings_and_hopf_algebras"
+        "foundational_inputs.hopf_algebras",
+        "linear_algebraic_groups.affine_algebraic_groups"
       ],
       "used_by": [
-        "topic.automorphism_groups",
-        "topic.base_change",
-        "topic.central_extensions_of_algebraic_groups",
-        "topic.forms_of_algebraic_groups",
-        "topic.linear_algebraic_groups",
-        "topic.morphisms_and_closed_subgroups",
-        "topic.smooth_affine_group_schemes_over_valuation_rings",
-        "topic.smoothness_tangent_spaces_lie_algebras"
+        "bd_covers.brylinski_deligne_k2_extensions"
       ]
     },
     {
-      "id": "topic.affine_root_systems",
+      "id": "bd_covers.dual_groups_for_covers",
+      "title": "Dual Groups for Covers",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "dual-groups",
+        "covers",
+        "bd-covers"
+      ],
+      "primary_topic": "bd_covers",
+      "topics": [
+        "bd_covers"
+      ],
+      "topic": "bd_covers",
+      "uses": [
+        "bd_covers.brylinski_deligne_k2_extensions",
+        "root_data_and_duality.dual_root_data",
+        "root_data_and_duality.langlands_dual_groups"
+      ],
+      "used_by": [
+        "bd_covers.l_groups_for_covers"
+      ]
+    },
+    {
+      "id": "bd_covers.l_groups_for_covers",
+      "title": "L-Groups for Covers",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "l-groups",
+        "covers",
+        "bd-covers"
+      ],
+      "primary_topic": "bd_covers",
+      "topics": [
+        "bd_covers"
+      ],
+      "topic": "bd_covers",
+      "uses": [
+        "bd_covers.dual_groups_for_covers",
+        "root_data_and_duality.l_groups"
+      ]
+    },
+    {
+      "id": "bd_covers.local_and_global_metaplectic_covers",
+      "title": "Local and Global Metaplectic Covers",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "metaplectic-covers",
+        "bd-covers"
+      ],
+      "primary_topic": "bd_covers",
+      "topics": [
+        "bd_covers"
+      ],
+      "topic": "bd_covers",
+      "uses": [
+        "bd_covers.brylinski_deligne_k2_extensions",
+        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+        "foundational_inputs.local_fields"
+      ],
+      "used_by": [
+        "bd_covers.splittings_over_integral_and_parahoric_subgroups"
+      ]
+    },
+    {
+      "id": "bd_covers.splittings_over_integral_and_parahoric_subgroups",
+      "title": "Splittings over Integral and Parahoric Subgroups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "splittings",
+        "parahoric-subgroups",
+        "bd-covers"
+      ],
+      "primary_topic": "bd_covers",
+      "topics": [
+        "bd_covers"
+      ],
+      "topic": "bd_covers",
+      "uses": [
+        "bd_covers.local_and_global_metaplectic_covers",
+        "buildings_and_parahorics.parahoric_subgroups"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.affine_root_systems",
       "title": "Affine Root Systems",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "affine-root-systems",
         "buildings-and-parahorics"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "buildings_and_parahorics",
       "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
+        "buildings_and_parahorics"
       ],
-      "topic": "topic",
+      "topic": "buildings_and_parahorics",
       "uses": [
-        "topic.root_systems",
-        "topic.valued_root_data"
+        "buildings_and_parahorics.valued_root_data",
+        "root_data_and_duality.root_systems"
       ],
       "used_by": [
-        "topic.affine_weyl_groups"
+        "buildings_and_parahorics.affine_weyl_groups"
       ]
     },
     {
-      "id": "topic.affine_schemes",
+      "id": "buildings_and_parahorics.affine_weyl_groups",
+      "title": "Affine Weyl Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "affine-weyl-groups",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.affine_root_systems",
+        "root_data_and_duality.coxeter_systems_and_bruhat_order"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.bruhat_tits_apartments",
+        "kottwitz_structures.admissible_sets"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.bn_pairs_and_tits_systems",
+      "title": "BN-Pairs and Tits Systems",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "bn-pairs",
+        "tits-systems",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.coxeter_complexes",
+        "reductive_structure.parabolic_subgroups"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.bruhat_tits_buildings",
+        "buildings_and_parahorics.spherical_buildings"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.bruhat_tits_apartments",
+      "title": "Bruhat-Tits Apartments",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "bruhat-tits",
+        "apartments",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.affine_weyl_groups",
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "buildings_and_parahorics.valued_root_data",
+        "foundational_inputs.local_fields"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.bruhat_tits_buildings"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.bruhat_tits_buildings",
+      "title": "Bruhat-Tits Buildings",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "bruhat-tits-buildings",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.bn_pairs_and_tits_systems",
+        "buildings_and_parahorics.bruhat_tits_apartments"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.facets_in_bruhat_tits_buildings"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.coxeter_complexes",
+      "title": "Coxeter Complexes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "coxeter-complexes",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "root_data_and_duality.coxeter_systems_and_bruhat_order"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.bn_pairs_and_tits_systems"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.facets_in_bruhat_tits_buildings",
+      "title": "Facets in Bruhat-Tits Buildings",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "facets",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.bruhat_tits_buildings"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.parahoric_subgroups"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.moy_prasad_filtrations",
+      "title": "Moy-Prasad Filtrations",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "moy-prasad-filtrations",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.parahoric_subgroups",
+        "nilpotent_orbits.lie_algebras_of_reductive_groups"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.parahoric_group_schemes",
+      "title": "Parahoric Group Schemes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "parahoric-group-schemes",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.parahoric_subgroups",
+        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.parahoric_subgroups",
+      "title": "Parahoric Subgroups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "parahoric-subgroups",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.facets_in_bruhat_tits_buildings",
+        "buildings_and_parahorics.reductive_groups_over_local_fields"
+      ],
+      "used_by": [
+        "bd_covers.splittings_over_integral_and_parahoric_subgroups",
+        "buildings_and_parahorics.moy_prasad_filtrations",
+        "buildings_and_parahorics.parahoric_group_schemes"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "title": "Reductive Groups over Local Fields",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "local-fields",
+        "reductive-groups",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "foundational_inputs.local_fields",
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.galois_action_on_root_data"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.bruhat_tits_apartments",
+        "buildings_and_parahorics.parahoric_subgroups",
+        "buildings_and_parahorics.valued_root_data",
+        "kottwitz_structures.sigma_conjugacy_classes"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes",
+      "title": "Reductive Quotients of Parahoric Group Schemes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "reductive-quotients",
+        "parahoric-group-schemes",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.parahoric_group_schemes"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+      "title": "Smooth Affine Group Schemes over Valuation Rings",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "group-schemes",
+        "valuation-rings",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "foundational_inputs.local_fields",
+        "linear_algebraic_groups.affine_algebraic_groups",
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.parahoric_group_schemes"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.spherical_buildings",
+      "title": "Spherical Buildings",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "spherical-buildings",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.bn_pairs_and_tits_systems"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.tits_buildings"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.tits_buildings",
+      "title": "Tits Buildings",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "tits-buildings",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.spherical_buildings",
+        "reductive_structure.parabolic_subgroups",
+        "reductive_structure.reductive_groups"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.valued_root_data",
+      "title": "Valued Root Data",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "valued-root-data",
+        "buildings-and-parahorics"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "foundational_inputs.local_fields",
+        "root_data_and_duality.galois_action_on_root_data",
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.affine_root_systems",
+        "buildings_and_parahorics.bruhat_tits_apartments"
+      ]
+    },
+    {
+      "id": "classical_and_exceptional_groups.classical_groups",
+      "title": "Classical Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "classical-groups",
+        "classical-and-exceptional-groups"
+      ],
+      "primary_topic": "classical_and_exceptional_groups",
+      "topics": [
+        "classical_and_exceptional_groups"
+      ],
+      "topic": "classical_and_exceptional_groups",
+      "uses": [
+        "linear_algebraic_groups.basic_examples",
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.root_data"
+      ]
+    },
+    {
+      "id": "classical_and_exceptional_groups.exceptional_groups",
+      "title": "Exceptional Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "exceptional-groups",
+        "classical-and-exceptional-groups"
+      ],
+      "primary_topic": "classical_and_exceptional_groups",
+      "topics": [
+        "classical_and_exceptional_groups"
+      ],
+      "topic": "classical_and_exceptional_groups",
+      "uses": [
+        "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.root_systems"
+      ]
+    },
+    {
+      "id": "descent_and_forms.cocycles_and_twisting",
+      "title": "Cocycles and Twisting",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "twisting",
+        "cocycles",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.nonabelian_h1",
+        "descent_and_forms.torsors",
+        "linear_algebraic_groups.automorphism_groups"
+      ],
+      "used_by": [
+        "descent_and_forms.forms_of_algebraic_groups",
+        "descent_and_forms.pure_inner_twists"
+      ]
+    },
+    {
+      "id": "descent_and_forms.extended_groups_for_real_forms",
+      "title": "Extended Groups for Real Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "extended-groups",
+        "real-forms",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.inner_forms",
+        "descent_and_forms.real_forms",
+        "linear_algebraic_groups.automorphism_groups"
+      ],
+      "used_by": [
+        "descent_and_forms.strong_real_forms"
+      ]
+    },
+    {
+      "id": "descent_and_forms.forms_of_algebraic_groups",
+      "title": "Forms of Algebraic Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "forms",
+        "algebraic-groups",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.cocycles_and_twisting",
+        "descent_and_forms.forms_of_algebraic_objects",
+        "linear_algebraic_groups.affine_algebraic_groups",
+        "linear_algebraic_groups.base_change"
+      ],
+      "used_by": [
+        "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+        "descent_and_forms.rational_forms_of_reductive_groups"
+      ]
+    },
+    {
+      "id": "descent_and_forms.forms_of_algebraic_objects",
+      "title": "Forms of Algebraic Objects",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "forms",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_groups_and_descent_data",
+        "linear_algebraic_groups.automorphism_groups"
+      ],
+      "used_by": [
+        "descent_and_forms.forms_of_algebraic_groups"
+      ]
+    },
+    {
+      "id": "descent_and_forms.galois_cohomology",
+      "title": "Galois Cohomology",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "galois-cohomology",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_groups_and_descent_data"
+      ],
+      "used_by": [
+        "descent_and_forms.nonabelian_h1",
+        "descent_and_forms.rational_forms_of_reductive_groups",
+        "descent_and_forms.rigid_inner_twists",
+        "descent_and_forms.twisted_conjugacy_classes",
+        "nilpotent_orbits.rational_nilpotent_orbits"
+      ]
+    },
+    {
+      "id": "descent_and_forms.galois_groups_and_descent_data",
+      "title": "Galois Groups and Descent Data",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "galois-descent",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "foundational_inputs.fields_and_field_extensions"
+      ],
+      "used_by": [
+        "descent_and_forms.forms_of_algebraic_objects",
+        "descent_and_forms.galois_cohomology"
+      ]
+    },
+    {
+      "id": "descent_and_forms.inner_forms",
+      "title": "Inner Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "inner-forms",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.rational_forms_of_reductive_groups"
+      ],
+      "used_by": [
+        "descent_and_forms.extended_groups_for_real_forms",
+        "descent_and_forms.pure_inner_twists",
+        "descent_and_forms.real_forms",
+        "descent_and_forms.rigid_inner_forms",
+        "descent_and_forms.strong_inner_forms"
+      ]
+    },
+    {
+      "id": "descent_and_forms.kaletha_refined_inner_forms",
+      "title": "Kaletha Refined Inner Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "kaletha",
+        "inner-forms",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.rigid_inner_forms",
+        "kottwitz_structures.b_of_g",
+        "kottwitz_structures.kottwitz_map_on_b_of_g"
+      ]
+    },
+    {
+      "id": "descent_and_forms.nonabelian_h1",
+      "title": "Nonabelian H1",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "nonabelian-h1",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_cohomology"
+      ],
+      "used_by": [
+        "descent_and_forms.cocycles_and_twisting",
+        "descent_and_forms.pure_inner_twists",
+        "descent_and_forms.torsors"
+      ]
+    },
+    {
+      "id": "descent_and_forms.outer_forms",
+      "title": "Outer Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "outer-forms",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.rational_forms_of_reductive_groups"
+      ]
+    },
+    {
+      "id": "descent_and_forms.pure_inner_twists",
+      "title": "Pure Inner Twists",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "pure-inner-twists",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.cocycles_and_twisting",
+        "descent_and_forms.inner_forms",
+        "descent_and_forms.nonabelian_h1"
+      ],
+      "used_by": [
+        "descent_and_forms.rigid_inner_twists"
+      ]
+    },
+    {
+      "id": "descent_and_forms.quasi_split_forms",
+      "title": "Quasi-Split Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "quasi-split-forms",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.rational_forms_of_reductive_groups"
+      ]
+    },
+    {
+      "id": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "title": "Rational Forms of Linear Algebraic Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "rational-forms",
+        "linear-algebraic-groups",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.forms_of_algebraic_groups",
+        "linear_algebraic_groups.linear_algebraic_groups"
+      ]
+    },
+    {
+      "id": "descent_and_forms.rational_forms_of_reductive_groups",
+      "title": "Rational Forms of Reductive Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "rational-forms",
+        "reductive-groups",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.forms_of_algebraic_groups",
+        "descent_and_forms.galois_cohomology",
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "descent_and_forms.inner_forms",
+        "descent_and_forms.outer_forms",
+        "descent_and_forms.quasi_split_forms",
+        "descent_and_forms.real_forms",
+        "nilpotent_orbits.rational_nilpotent_orbits",
+        "root_data_and_duality.galois_action_on_root_data"
+      ]
+    },
+    {
+      "id": "descent_and_forms.real_forms",
+      "title": "Real Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "real-forms",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.inner_forms",
+        "descent_and_forms.rational_forms_of_reductive_groups"
+      ],
+      "used_by": [
+        "descent_and_forms.extended_groups_for_real_forms",
+        "descent_and_forms.strong_real_forms",
+        "descent_and_forms.vogan_diagrams"
+      ]
+    },
+    {
+      "id": "descent_and_forms.rigid_inner_forms",
+      "title": "Rigid Inner Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "rigid-inner-forms",
+        "kaletha",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.inner_forms",
+        "descent_and_forms.rigid_inner_twists"
+      ],
+      "used_by": [
+        "descent_and_forms.kaletha_refined_inner_forms"
+      ]
+    },
+    {
+      "id": "descent_and_forms.rigid_inner_twists",
+      "title": "Rigid Inner Twists",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "rigid-inner-twists",
+        "kaletha",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_cohomology",
+        "descent_and_forms.pure_inner_twists",
+        "kottwitz_structures.algebraic_fundamental_group",
+        "kottwitz_structures.kottwitz_homomorphism"
+      ],
+      "used_by": [
+        "descent_and_forms.rigid_inner_forms"
+      ]
+    },
+    {
+      "id": "descent_and_forms.strong_inner_forms",
+      "title": "Strong Inner Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "strong-inner-forms",
+        "abv",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.inner_forms",
+        "descent_and_forms.strong_real_forms"
+      ]
+    },
+    {
+      "id": "descent_and_forms.strong_real_forms",
+      "title": "Strong Real Forms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "strong-real-forms",
+        "abv",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.extended_groups_for_real_forms",
+        "descent_and_forms.real_forms"
+      ],
+      "used_by": [
+        "descent_and_forms.strong_inner_forms"
+      ]
+    },
+    {
+      "id": "descent_and_forms.torsors",
+      "title": "Torsors",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "torsors",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.nonabelian_h1"
+      ],
+      "used_by": [
+        "descent_and_forms.cocycles_and_twisting"
+      ]
+    },
+    {
+      "id": "descent_and_forms.twisted_conjugacy_classes",
+      "title": "Twisted Conjugacy Classes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "twisted-conjugacy",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_cohomology",
+        "linear_algebraic_groups.conjugacy_classes"
+      ]
+    },
+    {
+      "id": "descent_and_forms.vogan_diagrams",
+      "title": "Vogan Diagrams",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "vogan-diagrams",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.real_forms",
+        "root_data_and_duality.galois_action_on_root_data",
+        "root_data_and_duality.root_data"
+      ]
+    },
+    {
+      "id": "foundational_inputs.affine_schemes",
       "title": "Affine Schemes",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "external-background",
         "affine-schemes",
         "foundational-inputs"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "foundational_inputs",
       "topics": [
-        "topic",
-        "topic.foundational_inputs"
+        "foundational_inputs"
       ],
-      "topic": "topic",
+      "topic": "foundational_inputs",
       "uses": [
-        "topic.commutative_algebra"
+        "foundational_inputs.commutative_algebra"
       ],
       "used_by": [
-        "topic.coordinate_rings_and_hopf_algebras",
-        "topic.smoothness_tangent_spaces_lie_algebras"
+        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
       ]
     },
     {
-      "id": "topic.affine_weyl_groups",
-      "title": "Affine Weyl Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "affine-weyl-groups",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_root_systems",
-        "topic.coxeter_systems_and_bruhat_order"
-      ],
-      "used_by": [
-        "topic.admissible_sets",
-        "topic.bruhat_tits_apartments"
-      ]
-    },
-    {
-      "id": "topic.algebraic_fundamental_group",
-      "title": "Algebraic Fundamental Group",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "algebraic-fundamental-group",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.fundamental_group_of_root_datum",
-        "topic.reductive_groups",
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.b_of_g",
-        "topic.kottwitz_homomorphism",
-        "topic.kottwitz_map_on_b_of_g",
-        "topic.rigid_inner_twists"
-      ]
-    },
-    {
-      "id": "topic.algebraic_k_theory_and_k2",
+      "id": "foundational_inputs.algebraic_k_theory_and_k2",
       "title": "Algebraic K-Theory and K2",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "external-background",
@@ -181,735 +1066,933 @@
         "k2",
         "foundational-inputs"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "foundational_inputs",
       "topics": [
-        "topic",
-        "topic.foundational_inputs"
+        "foundational_inputs"
       ],
-      "topic": "topic",
+      "topic": "foundational_inputs",
       "uses": [
-        "topic.commutative_algebra"
+        "foundational_inputs.commutative_algebra"
       ],
       "used_by": [
-        "topic.brylinski_deligne_k2_extensions"
+        "bd_covers.brylinski_deligne_k2_extensions"
       ]
     },
     {
-      "id": "topic.algebraic_tori",
-      "title": "Algebraic Tori",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "tori",
-        "reductive-structure"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.reductive_structure"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.linear_algebraic_groups"
-      ],
-      "used_by": [
-        "topic.borel_subgroups",
-        "topic.character_and_cocharacter_lattices",
-        "topic.maximal_tori",
-        "topic.reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.automorphism_groups",
-      "title": "Automorphism Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "automorphisms",
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups",
-        "topic.morphisms_and_closed_subgroups"
-      ],
-      "used_by": [
-        "topic.cocycles_and_twisting",
-        "topic.conjugacy_classes",
-        "topic.extended_groups_for_real_forms",
-        "topic.forms_of_algebraic_objects"
-      ]
-    },
-    {
-      "id": "topic.automorphisms_of_root_data",
-      "title": "Automorphisms of Root Data",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "root-data-automorphisms",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.based_root_data",
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.galois_action_on_root_data"
-      ]
-    },
-    {
-      "id": "topic.b_of_g",
-      "title": "B(G)",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "b-g",
-        "kottwitz",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.algebraic_fundamental_group",
-        "topic.kottwitz_homomorphism",
-        "topic.sigma_conjugacy_classes"
-      ],
-      "used_by": [
-        "topic.admissible_sets",
-        "topic.isocrystals_with_g_structure",
-        "topic.kaletha_refined_inner_forms",
-        "topic.kottwitz_map_on_b_of_g",
-        "topic.newton_map"
-      ]
-    },
-    {
-      "id": "topic.bala_carter_classification",
-      "title": "Bala-Carter Classification",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "bala-carter",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.levi_subgroups_and_unipotent_radicals",
-        "topic.nilpotent_orbits",
-        "topic.parabolic_subgroups",
-        "topic.weighted_dynkin_diagrams"
-      ]
-    },
-    {
-      "id": "topic.base_change",
-      "title": "Base Change",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "base-change",
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups",
-        "topic.fields_and_field_extensions"
-      ],
-      "used_by": [
-        "topic.forms_of_algebraic_groups"
-      ]
-    },
-    {
-      "id": "topic.based_root_data",
-      "title": "Based Root Data",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "based-root-data",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.automorphisms_of_root_data",
-        "topic.classification_of_split_reductive_groups",
-        "topic.pinnings"
-      ]
-    },
-    {
-      "id": "topic.basic_combinatorics",
+      "id": "foundational_inputs.basic_combinatorics",
       "title": "Basic Combinatorics",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "external-background",
         "combinatorics",
         "foundational-inputs"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "foundational_inputs",
       "topics": [
-        "topic",
-        "topic.foundational_inputs"
+        "foundational_inputs"
       ],
-      "topic": "topic",
+      "topic": "foundational_inputs",
       "used_by": [
-        "topic.coxeter_systems_and_bruhat_order"
+        "root_data_and_duality.coxeter_systems_and_bruhat_order"
       ]
     },
     {
-      "id": "topic.basic_examples",
-      "title": "Basic Examples",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "examples",
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.linear_algebraic_groups",
-        "topic.morphisms_and_closed_subgroups"
-      ],
-      "used_by": [
-        "topic.classical_groups"
-      ]
-    },
-    {
-      "id": "topic.basic_sigma_conjugacy_classes",
-      "title": "Basic Sigma-Conjugacy Classes",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "basic-elements",
-        "sigma-conjugacy",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.kottwitz_map_on_b_of_g",
-        "topic.newton_map"
-      ]
-    },
-    {
-      "id": "topic.bn_pairs_and_tits_systems",
-      "title": "BN-Pairs and Tits Systems",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "bn-pairs",
-        "tits-systems",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.coxeter_complexes",
-        "topic.parabolic_subgroups"
-      ],
-      "used_by": [
-        "topic.bruhat_tits_buildings",
-        "topic.spherical_buildings"
-      ]
-    },
-    {
-      "id": "topic.borel_subgroups",
-      "title": "Borel Subgroups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "borel-subgroups",
-        "reductive-structure"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.reductive_structure"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.algebraic_tori",
-        "topic.connected_components",
-        "topic.solvable_groups"
-      ],
-      "used_by": [
-        "topic.parabolic_subgroups"
-      ]
-    },
-    {
-      "id": "topic.bruhat_tits_apartments",
-      "title": "Bruhat-Tits Apartments",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "bruhat-tits",
-        "apartments",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_weyl_groups",
-        "topic.local_fields",
-        "topic.reductive_groups_over_local_fields",
-        "topic.valued_root_data"
-      ],
-      "used_by": [
-        "topic.bruhat_tits_buildings"
-      ]
-    },
-    {
-      "id": "topic.bruhat_tits_buildings",
-      "title": "Bruhat-Tits Buildings",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "bruhat-tits-buildings",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.bn_pairs_and_tits_systems",
-        "topic.bruhat_tits_apartments"
-      ],
-      "used_by": [
-        "topic.facets_in_bruhat_tits_buildings"
-      ]
-    },
-    {
-      "id": "topic.brylinski_deligne_k2_extensions",
-      "title": "Brylinski-Deligne K2-Extensions",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "brylinski-deligne",
-        "k2",
-        "bd-covers"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.bd_covers"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.algebraic_k_theory_and_k2",
-        "topic.central_extensions_of_algebraic_groups",
-        "topic.reductive_groups",
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.dual_groups_for_covers",
-        "topic.local_and_global_metaplectic_covers"
-      ]
-    },
-    {
-      "id": "topic.cartan_matrices_and_dynkin_diagrams",
-      "title": "Cartan Matrices and Dynkin Diagrams",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "cartan-matrices",
-        "dynkin-diagrams",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.root_systems"
-      ],
-      "used_by": [
-        "topic.exceptional_groups"
-      ]
-    },
-    {
-      "id": "topic.centers_and_dual_centers",
-      "title": "Centers and Dual Centers",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "centers",
-        "duality",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.dual_root_data",
-        "topic.fundamental_group_of_root_datum"
-      ]
-    },
-    {
-      "id": "topic.central_extensions_of_algebraic_groups",
-      "title": "Central Extensions of Algebraic Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "central-extensions",
-        "bd-covers"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.bd_covers"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups",
-        "topic.hopf_algebras"
-      ],
-      "used_by": [
-        "topic.brylinski_deligne_k2_extensions"
-      ]
-    },
-    {
-      "id": "topic.central_isogenies",
-      "title": "Central Isogenies",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "central-isogenies",
-        "reductive-structure"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.reductive_structure"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.reductive_groups"
-      ],
-      "used_by": [
-        "topic.central_isogenies_and_duality",
-        "topic.derived_group_center_adjoint_sc_cover"
-      ]
-    },
-    {
-      "id": "topic.central_isogenies_and_duality",
-      "title": "Central Isogenies and Duality",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "central-isogenies",
-        "duality",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.central_isogenies",
-        "topic.root_data"
-      ]
-    },
-    {
-      "id": "topic.character_and_cocharacter_lattices",
-      "title": "Character and Cocharacter Lattices",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "characters",
-        "cocharacters",
-        "reductive-structure"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.reductive_structure"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.algebraic_tori"
-      ],
-      "used_by": [
-        "topic.diagonalizable_groups",
-        "topic.root_data"
-      ]
-    },
-    {
-      "id": "topic.classical_groups",
-      "title": "Classical Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "classical-groups",
-        "classical-and-exceptional-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.classical_and_exceptional_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.basic_examples",
-        "topic.classification_of_split_reductive_groups",
-        "topic.reductive_groups",
-        "topic.root_data"
-      ]
-    },
-    {
-      "id": "topic.classification_of_split_reductive_groups",
-      "title": "Classification of Split Reductive Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "classification",
-        "split-reductive-groups",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.based_root_data",
-        "topic.pinnings",
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.classical_groups",
-        "topic.dual_reductive_groups",
-        "topic.exceptional_groups"
-      ]
-    },
-    {
-      "id": "topic.cocycles_and_twisting",
-      "title": "Cocycles and Twisting",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "twisting",
-        "cocycles",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.automorphism_groups",
-        "topic.nonabelian_h1",
-        "topic.torsors"
-      ],
-      "used_by": [
-        "topic.forms_of_algebraic_groups",
-        "topic.pure_inner_twists"
-      ]
-    },
-    {
-      "id": "topic.commutative_algebra",
+      "id": "foundational_inputs.commutative_algebra",
       "title": "Commutative Algebra",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "external-background",
         "commutative-algebra",
         "foundational-inputs"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "foundational_inputs",
       "topics": [
-        "topic",
-        "topic.foundational_inputs"
+        "foundational_inputs"
       ],
-      "topic": "topic",
+      "topic": "foundational_inputs",
       "used_by": [
-        "topic.affine_schemes",
-        "topic.algebraic_k_theory_and_k2",
-        "topic.coordinate_rings_and_hopf_algebras",
-        "topic.hopf_algebras"
+        "foundational_inputs.affine_schemes",
+        "foundational_inputs.algebraic_k_theory_and_k2",
+        "foundational_inputs.hopf_algebras",
+        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
       ]
     },
     {
-      "id": "topic.conjugacy_classes",
+      "id": "foundational_inputs.fields_and_field_extensions",
+      "title": "Fields and Field Extensions",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "fields",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "used_by": [
+        "descent_and_forms.galois_groups_and_descent_data",
+        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+        "foundational_inputs.local_fields",
+        "linear_algebraic_groups.base_change"
+      ]
+    },
+    {
+      "id": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+      "title": "Global Fields, Adeles, and Reciprocity Symbols",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "global-fields",
+        "adeles",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.fields_and_field_extensions",
+        "foundational_inputs.local_fields"
+      ],
+      "used_by": [
+        "bd_covers.local_and_global_metaplectic_covers"
+      ]
+    },
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "hopf-algebras",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.commutative_algebra"
+      ],
+      "used_by": [
+        "bd_covers.central_extensions_of_algebraic_groups",
+        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
+      ]
+    },
+    {
+      "id": "foundational_inputs.local_fields",
+      "title": "Local Fields",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "local-fields",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.fields_and_field_extensions"
+      ],
+      "used_by": [
+        "bd_covers.local_and_global_metaplectic_covers",
+        "buildings_and_parahorics.bruhat_tits_apartments",
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+        "buildings_and_parahorics.valued_root_data",
+        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+        "kottwitz_structures.kottwitz_homomorphism",
+        "kottwitz_structures.sigma_conjugacy_classes"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.admissible_sets",
+      "title": "Admissible Sets",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "admissible-sets",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "buildings_and_parahorics.affine_weyl_groups",
+        "kottwitz_structures.b_of_g"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.algebraic_fundamental_group",
+      "title": "Algebraic Fundamental Group",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "algebraic-fundamental-group",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.fundamental_group_of_root_datum",
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "descent_and_forms.rigid_inner_twists",
+        "kottwitz_structures.b_of_g",
+        "kottwitz_structures.kottwitz_homomorphism",
+        "kottwitz_structures.kottwitz_map_on_b_of_g"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.b_of_g",
+      "title": "B(G)",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "b-g",
+        "kottwitz",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "kottwitz_structures.algebraic_fundamental_group",
+        "kottwitz_structures.kottwitz_homomorphism",
+        "kottwitz_structures.sigma_conjugacy_classes"
+      ],
+      "used_by": [
+        "descent_and_forms.kaletha_refined_inner_forms",
+        "kottwitz_structures.admissible_sets",
+        "kottwitz_structures.isocrystals_with_g_structure",
+        "kottwitz_structures.kottwitz_map_on_b_of_g",
+        "kottwitz_structures.newton_map"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.basic_sigma_conjugacy_classes",
+      "title": "Basic Sigma-Conjugacy Classes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "basic-elements",
+        "sigma-conjugacy",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "kottwitz_structures.kottwitz_map_on_b_of_g",
+        "kottwitz_structures.newton_map"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.isocrystals_with_g_structure",
+      "title": "Isocrystals with G-Structure",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "isocrystals",
+        "g-structure",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "kottwitz_structures.b_of_g",
+        "kottwitz_structures.sigma_conjugacy_classes"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.kottwitz_homomorphism",
+      "title": "Kottwitz Homomorphism",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "kottwitz-map",
+        "kottwitz-homomorphism",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "foundational_inputs.local_fields",
+        "kottwitz_structures.algebraic_fundamental_group",
+        "root_data_and_duality.galois_action_on_root_data"
+      ],
+      "used_by": [
+        "descent_and_forms.rigid_inner_twists",
+        "kottwitz_structures.b_of_g"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.kottwitz_map_on_b_of_g",
+      "title": "Kottwitz Map on B(G)",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "kottwitz-map",
+        "b-g",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "kottwitz_structures.algebraic_fundamental_group",
+        "kottwitz_structures.b_of_g"
+      ],
+      "used_by": [
+        "descent_and_forms.kaletha_refined_inner_forms",
+        "kottwitz_structures.basic_sigma_conjugacy_classes"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.newton_map",
+      "title": "Newton Map",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "newton-map",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "kottwitz_structures.b_of_g",
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "kottwitz_structures.basic_sigma_conjugacy_classes"
+      ]
+    },
+    {
+      "id": "kottwitz_structures.sigma_conjugacy_classes",
+      "title": "Sigma-Conjugacy Classes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "sigma-conjugacy",
+        "kottwitz-structures"
+      ],
+      "primary_topic": "kottwitz_structures",
+      "topics": [
+        "kottwitz_structures"
+      ],
+      "topic": "kottwitz_structures",
+      "uses": [
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "foundational_inputs.local_fields"
+      ],
+      "used_by": [
+        "kottwitz_structures.b_of_g",
+        "kottwitz_structures.isocrystals_with_g_structure"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.affine_algebraic_groups",
+      "title": "Affine Algebraic Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "affine-algebraic-groups",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
+      ],
+      "used_by": [
+        "bd_covers.central_extensions_of_algebraic_groups",
+        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+        "descent_and_forms.forms_of_algebraic_groups",
+        "linear_algebraic_groups.automorphism_groups",
+        "linear_algebraic_groups.base_change",
+        "linear_algebraic_groups.linear_algebraic_groups",
+        "linear_algebraic_groups.morphisms_and_closed_subgroups",
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.automorphism_groups",
+      "title": "Automorphism Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "automorphisms",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.affine_algebraic_groups",
+        "linear_algebraic_groups.morphisms_and_closed_subgroups"
+      ],
+      "used_by": [
+        "descent_and_forms.cocycles_and_twisting",
+        "descent_and_forms.extended_groups_for_real_forms",
+        "descent_and_forms.forms_of_algebraic_objects",
+        "linear_algebraic_groups.conjugacy_classes"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.base_change",
+      "title": "Base Change",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "base-change",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "foundational_inputs.fields_and_field_extensions",
+        "linear_algebraic_groups.affine_algebraic_groups"
+      ],
+      "used_by": [
+        "descent_and_forms.forms_of_algebraic_groups"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.basic_examples",
+      "title": "Basic Examples",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "examples",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.linear_algebraic_groups",
+        "linear_algebraic_groups.morphisms_and_closed_subgroups"
+      ],
+      "used_by": [
+        "classical_and_exceptional_groups.classical_groups"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.conjugacy_classes",
       "title": "Conjugacy Classes",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "conjugacy",
         "linear-algebraic-groups"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "linear_algebraic_groups",
       "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
+        "linear_algebraic_groups"
       ],
-      "topic": "topic",
+      "topic": "linear_algebraic_groups",
       "uses": [
-        "topic.automorphism_groups",
-        "topic.linear_algebraic_groups"
+        "linear_algebraic_groups.automorphism_groups",
+        "linear_algebraic_groups.linear_algebraic_groups"
       ],
       "used_by": [
-        "topic.twisted_conjugacy_classes"
+        "descent_and_forms.twisted_conjugacy_classes"
       ]
     },
     {
-      "id": "topic.connected_components",
+      "id": "linear_algebraic_groups.connected_components",
       "title": "Connected Components",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "connected-components",
         "linear-algebraic-groups"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "linear_algebraic_groups",
       "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
+        "linear_algebraic_groups"
       ],
-      "topic": "topic",
+      "topic": "linear_algebraic_groups",
       "uses": [
-        "topic.smoothness_tangent_spaces_lie_algebras"
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
       ],
       "used_by": [
-        "topic.borel_subgroups",
-        "topic.solvable_groups"
+        "reductive_structure.borel_subgroups",
+        "reductive_structure.solvable_groups"
       ]
     },
     {
-      "id": "topic.coordinate_rings_and_hopf_algebras",
+      "id": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
       "title": "Coordinate Rings and Hopf Algebras",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "coordinate-rings",
         "hopf-algebras",
         "linear-algebraic-groups"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "linear_algebraic_groups",
       "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
+        "linear_algebraic_groups"
       ],
-      "topic": "topic",
+      "topic": "linear_algebraic_groups",
       "uses": [
-        "topic.affine_schemes",
-        "topic.commutative_algebra",
-        "topic.hopf_algebras"
+        "foundational_inputs.affine_schemes",
+        "foundational_inputs.commutative_algebra",
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
-        "topic.affine_algebraic_groups"
+        "linear_algebraic_groups.affine_algebraic_groups"
       ]
     },
     {
-      "id": "topic.coxeter_complexes",
-      "title": "Coxeter Complexes",
-      "kind": "concept",
+      "id": "linear_algebraic_groups.kernels_images_and_quotients",
+      "title": "Kernels, Images, and Quotients",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
-        "coxeter-complexes",
-        "buildings-and-parahorics"
+        "kernels",
+        "quotients",
+        "linear-algebraic-groups"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "linear_algebraic_groups",
       "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
+        "linear_algebraic_groups"
       ],
-      "topic": "topic",
+      "topic": "linear_algebraic_groups",
       "uses": [
-        "topic.coxeter_systems_and_bruhat_order"
-      ],
-      "used_by": [
-        "topic.bn_pairs_and_tits_systems"
+        "linear_algebraic_groups.morphisms_and_closed_subgroups"
       ]
     },
     {
-      "id": "topic.coxeter_systems_and_bruhat_order",
-      "title": "Coxeter Systems and Bruhat Order",
-      "kind": "concept",
+      "id": "linear_algebraic_groups.linear_algebraic_groups",
+      "title": "Linear Algebraic Groups",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
-        "coxeter-groups",
-        "bruhat-order",
-        "root-data-and-duality"
+        "linear-algebraic-groups"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "linear_algebraic_groups",
       "topics": [
-        "topic",
-        "topic.root_data_and_duality"
+        "linear_algebraic_groups"
       ],
-      "topic": "topic",
+      "topic": "linear_algebraic_groups",
       "uses": [
-        "topic.basic_combinatorics",
-        "topic.weyl_groups"
+        "linear_algebraic_groups.affine_algebraic_groups"
       ],
       "used_by": [
-        "topic.affine_weyl_groups",
-        "topic.coxeter_complexes"
+        "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+        "linear_algebraic_groups.basic_examples",
+        "linear_algebraic_groups.conjugacy_classes",
+        "reductive_structure.algebraic_tori",
+        "reductive_structure.diagonalizable_groups",
+        "reductive_structure.unipotent_groups"
       ]
     },
     {
-      "id": "topic.derived_group_center_adjoint_sc_cover",
+      "id": "linear_algebraic_groups.morphisms_and_closed_subgroups",
+      "title": "Morphisms and Closed Subgroups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "morphisms",
+        "closed-subgroups",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.affine_algebraic_groups"
+      ],
+      "used_by": [
+        "linear_algebraic_groups.automorphism_groups",
+        "linear_algebraic_groups.basic_examples",
+        "linear_algebraic_groups.kernels_images_and_quotients"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "title": "Smoothness, Tangent Spaces, and Lie Algebras",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "smoothness",
+        "lie-algebras",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "foundational_inputs.affine_schemes",
+        "linear_algebraic_groups.affine_algebraic_groups"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+        "linear_algebraic_groups.connected_components",
+        "nilpotent_orbits.lie_algebras_of_reductive_groups"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.adjoint_action",
+      "title": "Adjoint Action",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "adjoint-action",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.lie_algebras_of_reductive_groups",
+        "reductive_structure.reductive_groups"
+      ],
+      "used_by": [
+        "nilpotent_orbits.nilpotent_cone"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.bala_carter_classification",
+      "title": "Bala-Carter Classification",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "bala-carter",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.nilpotent_orbits",
+        "nilpotent_orbits.weighted_dynkin_diagrams",
+        "reductive_structure.levi_subgroups_and_unipotent_radicals",
+        "reductive_structure.parabolic_subgroups"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.jacobson_morozov_theorem",
+      "title": "Jacobson-Morozov Theorem",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "jacobson-morozov",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.sl2_triples"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.lie_algebras_of_reductive_groups",
+      "title": "Lie Algebras of Reductive Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "lie-algebras",
+        "reductive-groups",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+        "reductive_structure.reductive_groups"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.moy_prasad_filtrations",
+        "nilpotent_orbits.adjoint_action",
+        "nilpotent_orbits.nilpotent_elements"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.nilpotent_cone",
+      "title": "Nilpotent Cone",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "nilpotent-cone",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.adjoint_action",
+        "nilpotent_orbits.nilpotent_elements"
+      ],
+      "used_by": [
+        "nilpotent_orbits.nilpotent_orbits"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.nilpotent_elements",
+      "title": "Nilpotent Elements",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "nilpotent-elements",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.lie_algebras_of_reductive_groups"
+      ],
+      "used_by": [
+        "nilpotent_orbits.nilpotent_cone",
+        "nilpotent_orbits.sl2_triples"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.nilpotent_orbits",
+      "title": "Nilpotent Orbits",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.nilpotent_cone"
+      ],
+      "used_by": [
+        "nilpotent_orbits.bala_carter_classification",
+        "nilpotent_orbits.rational_nilpotent_orbits",
+        "nilpotent_orbits.weighted_dynkin_diagrams"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.rational_nilpotent_orbits",
+      "title": "Rational Nilpotent Orbits",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "rational-nilpotent-orbits",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "descent_and_forms.galois_cohomology",
+        "descent_and_forms.rational_forms_of_reductive_groups",
+        "nilpotent_orbits.nilpotent_orbits"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.sl2_triples",
+      "title": "SL2-Triples",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "sl2-triples",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.nilpotent_elements"
+      ],
+      "used_by": [
+        "nilpotent_orbits.jacobson_morozov_theorem"
+      ]
+    },
+    {
+      "id": "nilpotent_orbits.weighted_dynkin_diagrams",
+      "title": "Weighted Dynkin Diagrams",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "weighted-dynkin-diagrams",
+        "nilpotent-orbits"
+      ],
+      "primary_topic": "nilpotent_orbits",
+      "topics": [
+        "nilpotent_orbits"
+      ],
+      "topic": "nilpotent_orbits",
+      "uses": [
+        "nilpotent_orbits.nilpotent_orbits",
+        "root_data_and_duality.root_systems"
+      ],
+      "used_by": [
+        "nilpotent_orbits.bala_carter_classification"
+      ]
+    },
+    {
+      "id": "reductive_structure.algebraic_tori",
+      "title": "Algebraic Tori",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "tori",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "linear_algebraic_groups.linear_algebraic_groups"
+      ],
+      "used_by": [
+        "reductive_structure.borel_subgroups",
+        "reductive_structure.character_and_cocharacter_lattices",
+        "reductive_structure.maximal_tori",
+        "reductive_structure.reductive_groups"
+      ]
+    },
+    {
+      "id": "reductive_structure.borel_subgroups",
+      "title": "Borel Subgroups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "borel-subgroups",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "linear_algebraic_groups.connected_components",
+        "reductive_structure.algebraic_tori",
+        "reductive_structure.solvable_groups"
+      ],
+      "used_by": [
+        "reductive_structure.parabolic_subgroups"
+      ]
+    },
+    {
+      "id": "reductive_structure.central_isogenies",
+      "title": "Central Isogenies",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "central-isogenies",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.reductive_groups"
+      ],
+      "used_by": [
+        "reductive_structure.derived_group_center_adjoint_sc_cover",
+        "root_data_and_duality.central_isogenies_and_duality"
+      ]
+    },
+    {
+      "id": "reductive_structure.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "characters",
+        "cocharacters",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.algebraic_tori"
+      ],
+      "used_by": [
+        "reductive_structure.diagonalizable_groups",
+        "root_data_and_duality.root_data"
+      ]
+    },
+    {
+      "id": "reductive_structure.derived_group_center_adjoint_sc_cover",
       "title": "Derived Group, Center, Adjoint Group, and Simply Connected Cover",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "derived-group",
@@ -918,1463 +2001,649 @@
         "simply-connected-cover",
         "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.reductive_structure"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.central_isogenies",
-        "topic.reductive_groups"
+        "reductive_structure.central_isogenies",
+        "reductive_structure.reductive_groups"
       ]
     },
     {
-      "id": "topic.diagonalizable_groups",
+      "id": "reductive_structure.diagonalizable_groups",
       "title": "Diagonalizable Groups",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "diagonalizable-groups",
         "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.reductive_structure"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.character_and_cocharacter_lattices",
-        "topic.linear_algebraic_groups"
+        "linear_algebraic_groups.linear_algebraic_groups",
+        "reductive_structure.character_and_cocharacter_lattices"
       ]
     },
     {
-      "id": "topic.dual_groups_for_covers",
-      "title": "Dual Groups for Covers",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "dual-groups",
-        "covers",
-        "bd-covers"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.bd_covers"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.brylinski_deligne_k2_extensions",
-        "topic.dual_root_data",
-        "topic.langlands_dual_groups"
-      ],
-      "used_by": [
-        "topic.l_groups_for_covers"
-      ]
-    },
-    {
-      "id": "topic.dual_reductive_groups",
-      "title": "Dual Reductive Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "dual-groups",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.classification_of_split_reductive_groups",
-        "topic.dual_root_data"
-      ],
-      "used_by": [
-        "topic.l_morphisms",
-        "topic.pinned_dual_groups"
-      ]
-    },
-    {
-      "id": "topic.dual_root_data",
-      "title": "Dual Root Data",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "dual-root-data",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.centers_and_dual_centers",
-        "topic.dual_groups_for_covers",
-        "topic.dual_reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.dual_root_systems",
-      "title": "Dual Root Systems",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "dual-root-systems",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.root_systems"
-      ]
-    },
-    {
-      "id": "topic.exceptional_groups",
-      "title": "Exceptional Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "exceptional-groups",
-        "classical-and-exceptional-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.classical_and_exceptional_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.cartan_matrices_and_dynkin_diagrams",
-        "topic.classification_of_split_reductive_groups",
-        "topic.root_systems"
-      ]
-    },
-    {
-      "id": "topic.extended_groups_for_real_forms",
-      "title": "Extended Groups for Real Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "extended-groups",
-        "real-forms",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.automorphism_groups",
-        "topic.inner_forms",
-        "topic.real_forms"
-      ],
-      "used_by": [
-        "topic.strong_real_forms"
-      ]
-    },
-    {
-      "id": "topic.facets_in_bruhat_tits_buildings",
-      "title": "Facets in Bruhat-Tits Buildings",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "facets",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.bruhat_tits_buildings"
-      ],
-      "used_by": [
-        "topic.parahoric_subgroups"
-      ]
-    },
-    {
-      "id": "topic.fields_and_field_extensions",
-      "title": "Fields and Field Extensions",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "fields",
-        "foundational-inputs"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.foundational_inputs"
-      ],
-      "topic": "topic",
-      "used_by": [
-        "topic.base_change",
-        "topic.galois_groups_and_descent_data",
-        "topic.global_fields_adeles_and_reciprocity_symbols",
-        "topic.local_fields"
-      ]
-    },
-    {
-      "id": "topic.forms_of_algebraic_groups",
-      "title": "Forms of Algebraic Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "forms",
-        "algebraic-groups",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups",
-        "topic.base_change",
-        "topic.cocycles_and_twisting",
-        "topic.forms_of_algebraic_objects"
-      ],
-      "used_by": [
-        "topic.rational_forms_of_linear_algebraic_groups",
-        "topic.rational_forms_of_reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.forms_of_algebraic_objects",
-      "title": "Forms of Algebraic Objects",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "forms",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.automorphism_groups",
-        "topic.galois_groups_and_descent_data"
-      ],
-      "used_by": [
-        "topic.forms_of_algebraic_groups"
-      ]
-    },
-    {
-      "id": "topic.fundamental_group_of_root_datum",
-      "title": "Fundamental Group of a Root Datum",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "fundamental-group",
-        "root-datum",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.algebraic_fundamental_group",
-        "topic.centers_and_dual_centers"
-      ]
-    },
-    {
-      "id": "topic.galois_action_on_root_data",
-      "title": "Galois Action on Root Data",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "galois-action",
-        "root-data",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.automorphisms_of_root_data",
-        "topic.rational_forms_of_reductive_groups"
-      ],
-      "used_by": [
-        "topic.kottwitz_homomorphism",
-        "topic.l_groups",
-        "topic.reductive_groups_over_local_fields",
-        "topic.valued_root_data",
-        "topic.vogan_diagrams"
-      ]
-    },
-    {
-      "id": "topic.galois_cohomology",
-      "title": "Galois Cohomology",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "galois-cohomology",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.galois_groups_and_descent_data"
-      ],
-      "used_by": [
-        "topic.nonabelian_h1",
-        "topic.rational_forms_of_reductive_groups",
-        "topic.rational_nilpotent_orbits",
-        "topic.rigid_inner_twists",
-        "topic.twisted_conjugacy_classes"
-      ]
-    },
-    {
-      "id": "topic.galois_groups_and_descent_data",
-      "title": "Galois Groups and Descent Data",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "galois-descent",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.fields_and_field_extensions"
-      ],
-      "used_by": [
-        "topic.forms_of_algebraic_objects",
-        "topic.galois_cohomology"
-      ]
-    },
-    {
-      "id": "topic.global_fields_adeles_and_reciprocity_symbols",
-      "title": "Global Fields, Adeles, and Reciprocity Symbols",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "global-fields",
-        "adeles",
-        "foundational-inputs"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.foundational_inputs"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.fields_and_field_extensions",
-        "topic.local_fields"
-      ],
-      "used_by": [
-        "topic.local_and_global_metaplectic_covers"
-      ]
-    },
-    {
-      "id": "topic.hopf_algebras",
-      "title": "Hopf Algebras",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "hopf-algebras",
-        "foundational-inputs"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.foundational_inputs"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.commutative_algebra"
-      ],
-      "used_by": [
-        "topic.central_extensions_of_algebraic_groups",
-        "topic.coordinate_rings_and_hopf_algebras"
-      ]
-    },
-    {
-      "id": "topic.inner_forms",
-      "title": "Inner Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "inner-forms",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.rational_forms_of_reductive_groups"
-      ],
-      "used_by": [
-        "topic.extended_groups_for_real_forms",
-        "topic.pure_inner_twists",
-        "topic.real_forms",
-        "topic.rigid_inner_forms",
-        "topic.strong_inner_forms"
-      ]
-    },
-    {
-      "id": "topic.isocrystals_with_g_structure",
-      "title": "Isocrystals with G-Structure",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "isocrystals",
-        "g-structure",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.b_of_g",
-        "topic.sigma_conjugacy_classes"
-      ]
-    },
-    {
-      "id": "topic.jacobson_morozov_theorem",
-      "title": "Jacobson-Morozov Theorem",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "jacobson-morozov",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.sl2_triples"
-      ]
-    },
-    {
-      "id": "topic.kaletha_refined_inner_forms",
-      "title": "Kaletha Refined Inner Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "kaletha",
-        "inner-forms",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.b_of_g",
-        "topic.kottwitz_map_on_b_of_g",
-        "topic.rigid_inner_forms"
-      ]
-    },
-    {
-      "id": "topic.kernels_images_and_quotients",
-      "title": "Kernels, Images, and Quotients",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "kernels",
-        "quotients",
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.morphisms_and_closed_subgroups"
-      ]
-    },
-    {
-      "id": "topic.kottwitz_homomorphism",
-      "title": "Kottwitz Homomorphism",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "kottwitz-map",
-        "kottwitz-homomorphism",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.algebraic_fundamental_group",
-        "topic.galois_action_on_root_data",
-        "topic.local_fields"
-      ],
-      "used_by": [
-        "topic.b_of_g",
-        "topic.rigid_inner_twists"
-      ]
-    },
-    {
-      "id": "topic.kottwitz_map_on_b_of_g",
-      "title": "Kottwitz Map on B(G)",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "kottwitz-map",
-        "b-g",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.algebraic_fundamental_group",
-        "topic.b_of_g"
-      ],
-      "used_by": [
-        "topic.basic_sigma_conjugacy_classes",
-        "topic.kaletha_refined_inner_forms"
-      ]
-    },
-    {
-      "id": "topic.l_groups",
-      "title": "L-Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "l-groups",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.galois_action_on_root_data",
-        "topic.langlands_dual_groups"
-      ],
-      "used_by": [
-        "topic.l_groups_for_covers",
-        "topic.l_morphisms"
-      ]
-    },
-    {
-      "id": "topic.l_groups_for_covers",
-      "title": "L-Groups for Covers",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "l-groups",
-        "covers",
-        "bd-covers"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.bd_covers"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.dual_groups_for_covers",
-        "topic.l_groups"
-      ]
-    },
-    {
-      "id": "topic.l_morphisms",
-      "title": "L-Morphisms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "l-morphisms",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.dual_reductive_groups",
-        "topic.l_groups"
-      ]
-    },
-    {
-      "id": "topic.langlands_dual_groups",
-      "title": "Langlands Dual Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "langlands-dual-groups",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.pinned_dual_groups"
-      ],
-      "used_by": [
-        "topic.dual_groups_for_covers",
-        "topic.l_groups"
-      ]
-    },
-    {
-      "id": "topic.levi_subgroups_and_unipotent_radicals",
+      "id": "reductive_structure.levi_subgroups_and_unipotent_radicals",
       "title": "Levi Subgroups and Unipotent Radicals",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "levi-subgroups",
         "unipotent-radicals",
         "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.reductive_structure"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.parabolic_subgroups",
-        "topic.unipotent_groups"
+        "reductive_structure.parabolic_subgroups",
+        "reductive_structure.unipotent_groups"
       ],
       "used_by": [
-        "topic.bala_carter_classification",
-        "topic.reductive_groups"
+        "nilpotent_orbits.bala_carter_classification",
+        "reductive_structure.reductive_groups"
       ]
     },
     {
-      "id": "topic.lie_algebras_of_reductive_groups",
-      "title": "Lie Algebras of Reductive Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "lie-algebras",
-        "reductive-groups",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.reductive_groups",
-        "topic.smoothness_tangent_spaces_lie_algebras"
-      ],
-      "used_by": [
-        "topic.adjoint_action",
-        "topic.moy_prasad_filtrations",
-        "topic.nilpotent_elements"
-      ]
-    },
-    {
-      "id": "topic.linear_algebraic_groups",
-      "title": "Linear Algebraic Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups"
-      ],
-      "used_by": [
-        "topic.algebraic_tori",
-        "topic.basic_examples",
-        "topic.conjugacy_classes",
-        "topic.diagonalizable_groups",
-        "topic.rational_forms_of_linear_algebraic_groups",
-        "topic.unipotent_groups"
-      ]
-    },
-    {
-      "id": "topic.local_and_global_metaplectic_covers",
-      "title": "Local and Global Metaplectic Covers",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "metaplectic-covers",
-        "bd-covers"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.bd_covers"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.brylinski_deligne_k2_extensions",
-        "topic.global_fields_adeles_and_reciprocity_symbols",
-        "topic.local_fields"
-      ],
-      "used_by": [
-        "topic.splittings_over_integral_and_parahoric_subgroups"
-      ]
-    },
-    {
-      "id": "topic.local_fields",
-      "title": "Local Fields",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "local-fields",
-        "foundational-inputs"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.foundational_inputs"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.fields_and_field_extensions"
-      ],
-      "used_by": [
-        "topic.bruhat_tits_apartments",
-        "topic.global_fields_adeles_and_reciprocity_symbols",
-        "topic.kottwitz_homomorphism",
-        "topic.local_and_global_metaplectic_covers",
-        "topic.reductive_groups_over_local_fields",
-        "topic.sigma_conjugacy_classes",
-        "topic.smooth_affine_group_schemes_over_valuation_rings",
-        "topic.valued_root_data"
-      ]
-    },
-    {
-      "id": "topic.maximal_tori",
+      "id": "reductive_structure.maximal_tori",
       "title": "Maximal Tori",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "maximal-tori",
         "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.reductive_structure"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.algebraic_tori",
-        "topic.reductive_groups"
+        "reductive_structure.algebraic_tori",
+        "reductive_structure.reductive_groups"
       ],
       "used_by": [
-        "topic.roots_coroots_and_root_subgroups"
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
       ]
     },
     {
-      "id": "topic.morphisms_and_closed_subgroups",
-      "title": "Morphisms and Closed Subgroups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "morphisms",
-        "closed-subgroups",
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups"
-      ],
-      "used_by": [
-        "topic.automorphism_groups",
-        "topic.basic_examples",
-        "topic.kernels_images_and_quotients"
-      ]
-    },
-    {
-      "id": "topic.moy_prasad_filtrations",
-      "title": "Moy-Prasad Filtrations",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "moy-prasad-filtrations",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.lie_algebras_of_reductive_groups",
-        "topic.parahoric_subgroups"
-      ]
-    },
-    {
-      "id": "topic.newton_map",
-      "title": "Newton Map",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "newton-map",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.b_of_g",
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.basic_sigma_conjugacy_classes"
-      ]
-    },
-    {
-      "id": "topic.nilpotent_cone",
-      "title": "Nilpotent Cone",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "nilpotent-cone",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.adjoint_action",
-        "topic.nilpotent_elements"
-      ],
-      "used_by": [
-        "topic.nilpotent_orbits"
-      ]
-    },
-    {
-      "id": "topic.nilpotent_elements",
-      "title": "Nilpotent Elements",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "nilpotent-elements",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.lie_algebras_of_reductive_groups"
-      ],
-      "used_by": [
-        "topic.nilpotent_cone",
-        "topic.sl2_triples"
-      ]
-    },
-    {
-      "id": "topic.nilpotent_orbits",
-      "title": "Nilpotent Orbits",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.nilpotent_cone"
-      ],
-      "used_by": [
-        "topic.bala_carter_classification",
-        "topic.rational_nilpotent_orbits",
-        "topic.weighted_dynkin_diagrams"
-      ]
-    },
-    {
-      "id": "topic.nonabelian_h1",
-      "title": "Nonabelian H1",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "nonabelian-h1",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.galois_cohomology"
-      ],
-      "used_by": [
-        "topic.cocycles_and_twisting",
-        "topic.pure_inner_twists",
-        "topic.torsors"
-      ]
-    },
-    {
-      "id": "topic.outer_forms",
-      "title": "Outer Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "outer-forms",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.rational_forms_of_reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.parabolic_subgroups",
+      "id": "reductive_structure.parabolic_subgroups",
       "title": "Parabolic Subgroups",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "parabolic-subgroups",
         "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.reductive_structure"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.borel_subgroups"
+        "reductive_structure.borel_subgroups"
       ],
       "used_by": [
-        "topic.bala_carter_classification",
-        "topic.bn_pairs_and_tits_systems",
-        "topic.levi_subgroups_and_unipotent_radicals",
-        "topic.tits_buildings"
+        "buildings_and_parahorics.bn_pairs_and_tits_systems",
+        "buildings_and_parahorics.tits_buildings",
+        "nilpotent_orbits.bala_carter_classification",
+        "reductive_structure.levi_subgroups_and_unipotent_radicals"
       ]
     },
     {
-      "id": "topic.parahoric_group_schemes",
-      "title": "Parahoric Group Schemes",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "parahoric-group-schemes",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.parahoric_subgroups",
-        "topic.smooth_affine_group_schemes_over_valuation_rings"
-      ],
-      "used_by": [
-        "topic.reductive_quotients_of_parahoric_group_schemes"
-      ]
-    },
-    {
-      "id": "topic.parahoric_subgroups",
-      "title": "Parahoric Subgroups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "parahoric-subgroups",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.facets_in_bruhat_tits_buildings",
-        "topic.reductive_groups_over_local_fields"
-      ],
-      "used_by": [
-        "topic.moy_prasad_filtrations",
-        "topic.parahoric_group_schemes",
-        "topic.splittings_over_integral_and_parahoric_subgroups"
-      ]
-    },
-    {
-      "id": "topic.pinned_dual_groups",
-      "title": "Pinned Dual Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "pinned-dual-groups",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.dual_reductive_groups",
-        "topic.pinnings"
-      ],
-      "used_by": [
-        "topic.langlands_dual_groups"
-      ]
-    },
-    {
-      "id": "topic.pinnings",
-      "title": "Pinnings",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "pinnings",
-        "root-data-and-duality"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.root_data_and_duality"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.based_root_data",
-        "topic.roots_coroots_and_root_subgroups"
-      ],
-      "used_by": [
-        "topic.classification_of_split_reductive_groups",
-        "topic.pinned_dual_groups"
-      ]
-    },
-    {
-      "id": "topic.pure_inner_twists",
-      "title": "Pure Inner Twists",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "pure-inner-twists",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.cocycles_and_twisting",
-        "topic.inner_forms",
-        "topic.nonabelian_h1"
-      ],
-      "used_by": [
-        "topic.rigid_inner_twists"
-      ]
-    },
-    {
-      "id": "topic.quasi_split_forms",
-      "title": "Quasi-Split Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "quasi-split-forms",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.rational_forms_of_reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.rational_forms_of_linear_algebraic_groups",
-      "title": "Rational Forms of Linear Algebraic Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "rational-forms",
-        "linear-algebraic-groups",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.forms_of_algebraic_groups",
-        "topic.linear_algebraic_groups"
-      ]
-    },
-    {
-      "id": "topic.rational_forms_of_reductive_groups",
-      "title": "Rational Forms of Reductive Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "rational-forms",
-        "reductive-groups",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.forms_of_algebraic_groups",
-        "topic.galois_cohomology",
-        "topic.reductive_groups",
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.galois_action_on_root_data",
-        "topic.inner_forms",
-        "topic.outer_forms",
-        "topic.quasi_split_forms",
-        "topic.rational_nilpotent_orbits",
-        "topic.real_forms"
-      ]
-    },
-    {
-      "id": "topic.rational_nilpotent_orbits",
-      "title": "Rational Nilpotent Orbits",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "rational-nilpotent-orbits",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.galois_cohomology",
-        "topic.nilpotent_orbits",
-        "topic.rational_forms_of_reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.real_forms",
-      "title": "Real Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "real-forms",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.inner_forms",
-        "topic.rational_forms_of_reductive_groups"
-      ],
-      "used_by": [
-        "topic.extended_groups_for_real_forms",
-        "topic.strong_real_forms",
-        "topic.vogan_diagrams"
-      ]
-    },
-    {
-      "id": "topic.reductive_groups",
+      "id": "reductive_structure.reductive_groups",
       "title": "Reductive Groups",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "reductive-groups",
         "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.reductive_structure"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.algebraic_tori",
-        "topic.levi_subgroups_and_unipotent_radicals",
-        "topic.solvable_groups",
-        "topic.unipotent_groups"
+        "reductive_structure.algebraic_tori",
+        "reductive_structure.levi_subgroups_and_unipotent_radicals",
+        "reductive_structure.solvable_groups",
+        "reductive_structure.unipotent_groups"
       ],
       "used_by": [
-        "topic.adjoint_action",
-        "topic.algebraic_fundamental_group",
-        "topic.brylinski_deligne_k2_extensions",
-        "topic.central_isogenies",
-        "topic.classical_groups",
-        "topic.derived_group_center_adjoint_sc_cover",
-        "topic.lie_algebras_of_reductive_groups",
-        "topic.maximal_tori",
-        "topic.rational_forms_of_reductive_groups",
-        "topic.reductive_groups_over_local_fields",
-        "topic.roots_coroots_and_root_subgroups",
-        "topic.semisimple_groups",
-        "topic.tits_buildings"
+        "bd_covers.brylinski_deligne_k2_extensions",
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "buildings_and_parahorics.tits_buildings",
+        "classical_and_exceptional_groups.classical_groups",
+        "descent_and_forms.rational_forms_of_reductive_groups",
+        "kottwitz_structures.algebraic_fundamental_group",
+        "nilpotent_orbits.adjoint_action",
+        "nilpotent_orbits.lie_algebras_of_reductive_groups",
+        "reductive_structure.central_isogenies",
+        "reductive_structure.derived_group_center_adjoint_sc_cover",
+        "reductive_structure.maximal_tori",
+        "reductive_structure.semisimple_groups",
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
       ]
     },
     {
-      "id": "topic.reductive_groups_over_local_fields",
-      "title": "Reductive Groups over Local Fields",
-      "kind": "concept",
+      "id": "reductive_structure.semisimple_groups",
+      "title": "Semisimple Groups",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
-        "local-fields",
-        "reductive-groups",
-        "buildings-and-parahorics"
+        "semisimple-groups",
+        "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.galois_action_on_root_data",
-        "topic.local_fields",
-        "topic.reductive_groups"
+        "reductive_structure.reductive_groups"
+      ]
+    },
+    {
+      "id": "reductive_structure.solvable_groups",
+      "title": "Solvable Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "solvable-groups",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "linear_algebraic_groups.connected_components",
+        "reductive_structure.unipotent_groups"
       ],
       "used_by": [
-        "topic.bruhat_tits_apartments",
-        "topic.parahoric_subgroups",
-        "topic.sigma_conjugacy_classes",
-        "topic.valued_root_data"
+        "reductive_structure.borel_subgroups",
+        "reductive_structure.reductive_groups"
       ]
     },
     {
-      "id": "topic.reductive_quotients_of_parahoric_group_schemes",
-      "title": "Reductive Quotients of Parahoric Group Schemes",
-      "kind": "concept",
+      "id": "reductive_structure.unipotent_groups",
+      "title": "Unipotent Groups",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
-        "reductive-quotients",
-        "parahoric-group-schemes",
-        "buildings-and-parahorics"
+        "unipotent-groups",
+        "reductive-structure"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "reductive_structure",
       "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
+        "reductive_structure"
       ],
-      "topic": "topic",
+      "topic": "reductive_structure",
       "uses": [
-        "topic.parahoric_group_schemes"
-      ]
-    },
-    {
-      "id": "topic.rigid_inner_forms",
-      "title": "Rigid Inner Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "rigid-inner-forms",
-        "kaletha",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.inner_forms",
-        "topic.rigid_inner_twists"
+        "linear_algebraic_groups.linear_algebraic_groups"
       ],
       "used_by": [
-        "topic.kaletha_refined_inner_forms"
+        "reductive_structure.levi_subgroups_and_unipotent_radicals",
+        "reductive_structure.reductive_groups",
+        "reductive_structure.solvable_groups"
       ]
     },
     {
-      "id": "topic.rigid_inner_twists",
-      "title": "Rigid Inner Twists",
-      "kind": "concept",
+      "id": "root_data_and_duality.automorphisms_of_root_data",
+      "title": "Automorphisms of Root Data",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
-        "rigid-inner-twists",
-        "kaletha",
-        "descent-and-forms"
+        "root-data-automorphisms",
+        "root-data-and-duality"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "root_data_and_duality",
       "topics": [
-        "topic",
-        "topic.descent_and_forms"
+        "root_data_and_duality"
       ],
-      "topic": "topic",
+      "topic": "root_data_and_duality",
       "uses": [
-        "topic.algebraic_fundamental_group",
-        "topic.galois_cohomology",
-        "topic.kottwitz_homomorphism",
-        "topic.pure_inner_twists"
+        "root_data_and_duality.based_root_data",
+        "root_data_and_duality.root_data"
       ],
       "used_by": [
-        "topic.rigid_inner_forms"
+        "root_data_and_duality.galois_action_on_root_data"
       ]
     },
     {
-      "id": "topic.root_data",
+      "id": "root_data_and_duality.based_root_data",
+      "title": "Based Root Data",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "based-root-data",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "root_data_and_duality.automorphisms_of_root_data",
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.pinnings"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
+      "title": "Cartan Matrices and Dynkin Diagrams",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "cartan-matrices",
+        "dynkin-diagrams",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.root_systems"
+      ],
+      "used_by": [
+        "classical_and_exceptional_groups.exceptional_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.centers_and_dual_centers",
+      "title": "Centers and Dual Centers",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "centers",
+        "duality",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.dual_root_data",
+        "root_data_and_duality.fundamental_group_of_root_datum"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.central_isogenies_and_duality",
+      "title": "Central Isogenies and Duality",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "central-isogenies",
+        "duality",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "reductive_structure.central_isogenies",
+        "root_data_and_duality.root_data"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.classification_of_split_reductive_groups",
+      "title": "Classification of Split Reductive Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "classification",
+        "split-reductive-groups",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.based_root_data",
+        "root_data_and_duality.pinnings",
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "classical_and_exceptional_groups.classical_groups",
+        "classical_and_exceptional_groups.exceptional_groups",
+        "root_data_and_duality.dual_reductive_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.coxeter_systems_and_bruhat_order",
+      "title": "Coxeter Systems and Bruhat Order",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "coxeter-groups",
+        "bruhat-order",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "foundational_inputs.basic_combinatorics",
+        "root_data_and_duality.weyl_groups"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.affine_weyl_groups",
+        "buildings_and_parahorics.coxeter_complexes"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.dual_reductive_groups",
+      "title": "Dual Reductive Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "dual-groups",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.dual_root_data"
+      ],
+      "used_by": [
+        "root_data_and_duality.l_morphisms",
+        "root_data_and_duality.pinned_dual_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.dual_root_data",
+      "title": "Dual Root Data",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "dual-root-data",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "bd_covers.dual_groups_for_covers",
+        "root_data_and_duality.centers_and_dual_centers",
+        "root_data_and_duality.dual_reductive_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.dual_root_systems",
+      "title": "Dual Root Systems",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "dual-root-systems",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.root_systems"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.fundamental_group_of_root_datum",
+      "title": "Fundamental Group of a Root Datum",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "fundamental-group",
+        "root-datum",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.root_data"
+      ],
+      "used_by": [
+        "kottwitz_structures.algebraic_fundamental_group",
+        "root_data_and_duality.centers_and_dual_centers"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.galois_action_on_root_data",
+      "title": "Galois Action on Root Data",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "galois-action",
+        "root-data",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "descent_and_forms.rational_forms_of_reductive_groups",
+        "root_data_and_duality.automorphisms_of_root_data"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "buildings_and_parahorics.valued_root_data",
+        "descent_and_forms.vogan_diagrams",
+        "kottwitz_structures.kottwitz_homomorphism",
+        "root_data_and_duality.l_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.l_groups",
+      "title": "L-Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "l-groups",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.galois_action_on_root_data",
+        "root_data_and_duality.langlands_dual_groups"
+      ],
+      "used_by": [
+        "bd_covers.l_groups_for_covers",
+        "root_data_and_duality.l_morphisms"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.l_morphisms",
+      "title": "L-Morphisms",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "l-morphisms",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.dual_reductive_groups",
+        "root_data_and_duality.l_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.langlands_dual_groups",
+      "title": "Langlands Dual Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "langlands-dual-groups",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.pinned_dual_groups"
+      ],
+      "used_by": [
+        "bd_covers.dual_groups_for_covers",
+        "root_data_and_duality.l_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.pinned_dual_groups",
+      "title": "Pinned Dual Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "pinned-dual-groups",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.dual_reductive_groups",
+        "root_data_and_duality.pinnings"
+      ],
+      "used_by": [
+        "root_data_and_duality.langlands_dual_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.pinnings",
+      "title": "Pinnings",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "pinnings",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.based_root_data",
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
+      ],
+      "used_by": [
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.pinned_dual_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.root_data",
       "title": "Root Data",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "root-data",
         "root-data-and-duality"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "root_data_and_duality",
       "topics": [
-        "topic",
-        "topic.root_data_and_duality"
+        "root_data_and_duality"
       ],
-      "topic": "topic",
+      "topic": "root_data_and_duality",
       "uses": [
-        "topic.character_and_cocharacter_lattices",
-        "topic.roots_coroots_and_root_subgroups"
+        "reductive_structure.character_and_cocharacter_lattices",
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
       ],
       "used_by": [
-        "topic.algebraic_fundamental_group",
-        "topic.automorphisms_of_root_data",
-        "topic.based_root_data",
-        "topic.brylinski_deligne_k2_extensions",
-        "topic.central_isogenies_and_duality",
-        "topic.classical_groups",
-        "topic.classification_of_split_reductive_groups",
-        "topic.dual_root_data",
-        "topic.fundamental_group_of_root_datum",
-        "topic.newton_map",
-        "topic.rational_forms_of_reductive_groups",
-        "topic.valued_root_data",
-        "topic.vogan_diagrams"
+        "bd_covers.brylinski_deligne_k2_extensions",
+        "buildings_and_parahorics.valued_root_data",
+        "classical_and_exceptional_groups.classical_groups",
+        "descent_and_forms.rational_forms_of_reductive_groups",
+        "descent_and_forms.vogan_diagrams",
+        "kottwitz_structures.algebraic_fundamental_group",
+        "kottwitz_structures.newton_map",
+        "root_data_and_duality.automorphisms_of_root_data",
+        "root_data_and_duality.based_root_data",
+        "root_data_and_duality.central_isogenies_and_duality",
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.dual_root_data",
+        "root_data_and_duality.fundamental_group_of_root_datum"
       ]
     },
     {
-      "id": "topic.root_systems",
+      "id": "root_data_and_duality.root_systems",
       "title": "Root Systems",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "root-systems",
         "root-data-and-duality"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "root_data_and_duality",
       "topics": [
-        "topic",
-        "topic.root_data_and_duality"
+        "root_data_and_duality"
       ],
-      "topic": "topic",
+      "topic": "root_data_and_duality",
       "uses": [
-        "topic.roots_coroots_and_root_subgroups",
-        "topic.weyl_groups"
+        "root_data_and_duality.roots_coroots_and_root_subgroups",
+        "root_data_and_duality.weyl_groups"
       ],
       "used_by": [
-        "topic.affine_root_systems",
-        "topic.cartan_matrices_and_dynkin_diagrams",
-        "topic.dual_root_systems",
-        "topic.exceptional_groups",
-        "topic.weighted_dynkin_diagrams"
+        "buildings_and_parahorics.affine_root_systems",
+        "classical_and_exceptional_groups.exceptional_groups",
+        "nilpotent_orbits.weighted_dynkin_diagrams",
+        "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
+        "root_data_and_duality.dual_root_systems"
       ]
     },
     {
-      "id": "topic.roots_coroots_and_root_subgroups",
+      "id": "root_data_and_duality.roots_coroots_and_root_subgroups",
       "title": "Roots, Coroots, and Root Subgroups",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "roots",
@@ -2382,1348 +2651,961 @@
         "root-subgroups",
         "root-data-and-duality"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "root_data_and_duality",
       "topics": [
-        "topic",
-        "topic.root_data_and_duality"
+        "root_data_and_duality"
       ],
-      "topic": "topic",
+      "topic": "root_data_and_duality",
       "uses": [
-        "topic.maximal_tori",
-        "topic.reductive_groups"
+        "reductive_structure.maximal_tori",
+        "reductive_structure.reductive_groups"
       ],
       "used_by": [
-        "topic.pinnings",
-        "topic.root_data",
-        "topic.root_systems",
-        "topic.weyl_groups"
+        "root_data_and_duality.pinnings",
+        "root_data_and_duality.root_data",
+        "root_data_and_duality.root_systems",
+        "root_data_and_duality.weyl_groups"
       ]
     },
     {
-      "id": "topic.semisimple_groups",
-      "title": "Semisimple Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "semisimple-groups",
-        "reductive-structure"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.reductive_structure"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.sigma_conjugacy_classes",
-      "title": "Sigma-Conjugacy Classes",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "sigma-conjugacy",
-        "kottwitz-structures"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.kottwitz_structures"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.local_fields",
-        "topic.reductive_groups_over_local_fields"
-      ],
-      "used_by": [
-        "topic.b_of_g",
-        "topic.isocrystals_with_g_structure"
-      ]
-    },
-    {
-      "id": "topic.sl2_triples",
-      "title": "SL2-Triples",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "sl2-triples",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.nilpotent_elements"
-      ],
-      "used_by": [
-        "topic.jacobson_morozov_theorem"
-      ]
-    },
-    {
-      "id": "topic.smooth_affine_group_schemes_over_valuation_rings",
-      "title": "Smooth Affine Group Schemes over Valuation Rings",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "group-schemes",
-        "valuation-rings",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups",
-        "topic.local_fields",
-        "topic.smoothness_tangent_spaces_lie_algebras"
-      ],
-      "used_by": [
-        "topic.parahoric_group_schemes"
-      ]
-    },
-    {
-      "id": "topic.smoothness_tangent_spaces_lie_algebras",
-      "title": "Smoothness, Tangent Spaces, and Lie Algebras",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "smoothness",
-        "lie-algebras",
-        "linear-algebraic-groups"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.linear_algebraic_groups"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.affine_algebraic_groups",
-        "topic.affine_schemes"
-      ],
-      "used_by": [
-        "topic.connected_components",
-        "topic.lie_algebras_of_reductive_groups",
-        "topic.smooth_affine_group_schemes_over_valuation_rings"
-      ]
-    },
-    {
-      "id": "topic.solvable_groups",
-      "title": "Solvable Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "solvable-groups",
-        "reductive-structure"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.reductive_structure"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.connected_components",
-        "topic.unipotent_groups"
-      ],
-      "used_by": [
-        "topic.borel_subgroups",
-        "topic.reductive_groups"
-      ]
-    },
-    {
-      "id": "topic.spherical_buildings",
-      "title": "Spherical Buildings",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "spherical-buildings",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.bn_pairs_and_tits_systems"
-      ],
-      "used_by": [
-        "topic.tits_buildings"
-      ]
-    },
-    {
-      "id": "topic.splittings_over_integral_and_parahoric_subgroups",
-      "title": "Splittings over Integral and Parahoric Subgroups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "splittings",
-        "parahoric-subgroups",
-        "bd-covers"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.bd_covers"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.local_and_global_metaplectic_covers",
-        "topic.parahoric_subgroups"
-      ]
-    },
-    {
-      "id": "topic.strong_inner_forms",
-      "title": "Strong Inner Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "strong-inner-forms",
-        "abv",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.inner_forms",
-        "topic.strong_real_forms"
-      ]
-    },
-    {
-      "id": "topic.strong_real_forms",
-      "title": "Strong Real Forms",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "strong-real-forms",
-        "abv",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.extended_groups_for_real_forms",
-        "topic.real_forms"
-      ],
-      "used_by": [
-        "topic.strong_inner_forms"
-      ]
-    },
-    {
-      "id": "topic.tits_buildings",
-      "title": "Tits Buildings",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "tits-buildings",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.parabolic_subgroups",
-        "topic.reductive_groups",
-        "topic.spherical_buildings"
-      ]
-    },
-    {
-      "id": "topic.torsors",
-      "title": "Torsors",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "torsors",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.nonabelian_h1"
-      ],
-      "used_by": [
-        "topic.cocycles_and_twisting"
-      ]
-    },
-    {
-      "id": "topic.twisted_conjugacy_classes",
-      "title": "Twisted Conjugacy Classes",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "twisted-conjugacy",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.conjugacy_classes",
-        "topic.galois_cohomology"
-      ]
-    },
-    {
-      "id": "topic.unipotent_groups",
-      "title": "Unipotent Groups",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "unipotent-groups",
-        "reductive-structure"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.reductive_structure"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.linear_algebraic_groups"
-      ],
-      "used_by": [
-        "topic.levi_subgroups_and_unipotent_radicals",
-        "topic.reductive_groups",
-        "topic.solvable_groups"
-      ]
-    },
-    {
-      "id": "topic.valued_root_data",
-      "title": "Valued Root Data",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "valued-root-data",
-        "buildings-and-parahorics"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.buildings_and_parahorics"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.galois_action_on_root_data",
-        "topic.local_fields",
-        "topic.reductive_groups_over_local_fields",
-        "topic.root_data"
-      ],
-      "used_by": [
-        "topic.affine_root_systems",
-        "topic.bruhat_tits_apartments"
-      ]
-    },
-    {
-      "id": "topic.vogan_diagrams",
-      "title": "Vogan Diagrams",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "vogan-diagrams",
-        "descent-and-forms"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.descent_and_forms"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.galois_action_on_root_data",
-        "topic.real_forms",
-        "topic.root_data"
-      ]
-    },
-    {
-      "id": "topic.weighted_dynkin_diagrams",
-      "title": "Weighted Dynkin Diagrams",
-      "kind": "concept",
-      "status": "admitted",
-      "tags": [
-        "weighted-dynkin-diagrams",
-        "nilpotent-orbits"
-      ],
-      "primary_topic": "topic",
-      "topics": [
-        "topic",
-        "topic.nilpotent_orbits"
-      ],
-      "topic": "topic",
-      "uses": [
-        "topic.nilpotent_orbits",
-        "topic.root_systems"
-      ],
-      "used_by": [
-        "topic.bala_carter_classification"
-      ]
-    },
-    {
-      "id": "topic.weyl_groups",
+      "id": "root_data_and_duality.weyl_groups",
       "title": "Weyl Groups",
-      "kind": "concept",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "weyl-groups",
         "root-data-and-duality"
       ],
-      "primary_topic": "topic",
+      "primary_topic": "root_data_and_duality",
       "topics": [
-        "topic",
-        "topic.root_data_and_duality"
+        "root_data_and_duality"
       ],
-      "topic": "topic",
+      "topic": "root_data_and_duality",
       "uses": [
-        "topic.roots_coroots_and_root_subgroups"
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
       ],
       "used_by": [
-        "topic.coxeter_systems_and_bruhat_order",
-        "topic.root_systems"
+        "root_data_and_duality.coxeter_systems_and_bruhat_order",
+        "root_data_and_duality.root_systems"
       ]
     }
   ],
   "edges": [
     {
-      "from": "topic.adjoint_action",
-      "to": "topic.lie_algebras_of_reductive_groups"
+      "from": "bd_covers.brylinski_deligne_k2_extensions",
+      "to": "bd_covers.central_extensions_of_algebraic_groups"
     },
     {
-      "from": "topic.adjoint_action",
-      "to": "topic.reductive_groups"
+      "from": "bd_covers.brylinski_deligne_k2_extensions",
+      "to": "foundational_inputs.algebraic_k_theory_and_k2"
     },
     {
-      "from": "topic.admissible_sets",
-      "to": "topic.affine_weyl_groups"
+      "from": "bd_covers.brylinski_deligne_k2_extensions",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.admissible_sets",
-      "to": "topic.b_of_g"
+      "from": "bd_covers.brylinski_deligne_k2_extensions",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.affine_algebraic_groups",
-      "to": "topic.coordinate_rings_and_hopf_algebras"
+      "from": "bd_covers.central_extensions_of_algebraic_groups",
+      "to": "foundational_inputs.hopf_algebras"
     },
     {
-      "from": "topic.affine_root_systems",
-      "to": "topic.root_systems"
+      "from": "bd_covers.central_extensions_of_algebraic_groups",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.affine_root_systems",
-      "to": "topic.valued_root_data"
+      "from": "bd_covers.dual_groups_for_covers",
+      "to": "bd_covers.brylinski_deligne_k2_extensions"
     },
     {
-      "from": "topic.affine_schemes",
-      "to": "topic.commutative_algebra"
+      "from": "bd_covers.dual_groups_for_covers",
+      "to": "root_data_and_duality.dual_root_data"
     },
     {
-      "from": "topic.affine_weyl_groups",
-      "to": "topic.affine_root_systems"
+      "from": "bd_covers.dual_groups_for_covers",
+      "to": "root_data_and_duality.langlands_dual_groups"
     },
     {
-      "from": "topic.affine_weyl_groups",
-      "to": "topic.coxeter_systems_and_bruhat_order"
+      "from": "bd_covers.l_groups_for_covers",
+      "to": "bd_covers.dual_groups_for_covers"
     },
     {
-      "from": "topic.algebraic_fundamental_group",
-      "to": "topic.fundamental_group_of_root_datum"
+      "from": "bd_covers.l_groups_for_covers",
+      "to": "root_data_and_duality.l_groups"
     },
     {
-      "from": "topic.algebraic_fundamental_group",
-      "to": "topic.reductive_groups"
+      "from": "bd_covers.local_and_global_metaplectic_covers",
+      "to": "bd_covers.brylinski_deligne_k2_extensions"
     },
     {
-      "from": "topic.algebraic_fundamental_group",
-      "to": "topic.root_data"
+      "from": "bd_covers.local_and_global_metaplectic_covers",
+      "to": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols"
     },
     {
-      "from": "topic.algebraic_k_theory_and_k2",
-      "to": "topic.commutative_algebra"
+      "from": "bd_covers.local_and_global_metaplectic_covers",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.algebraic_tori",
-      "to": "topic.linear_algebraic_groups"
+      "from": "bd_covers.splittings_over_integral_and_parahoric_subgroups",
+      "to": "bd_covers.local_and_global_metaplectic_covers"
     },
     {
-      "from": "topic.automorphism_groups",
-      "to": "topic.affine_algebraic_groups"
+      "from": "bd_covers.splittings_over_integral_and_parahoric_subgroups",
+      "to": "buildings_and_parahorics.parahoric_subgroups"
     },
     {
-      "from": "topic.automorphism_groups",
-      "to": "topic.morphisms_and_closed_subgroups"
+      "from": "buildings_and_parahorics.affine_root_systems",
+      "to": "buildings_and_parahorics.valued_root_data"
     },
     {
-      "from": "topic.automorphisms_of_root_data",
-      "to": "topic.based_root_data"
+      "from": "buildings_and_parahorics.affine_root_systems",
+      "to": "root_data_and_duality.root_systems"
     },
     {
-      "from": "topic.automorphisms_of_root_data",
-      "to": "topic.root_data"
+      "from": "buildings_and_parahorics.affine_weyl_groups",
+      "to": "buildings_and_parahorics.affine_root_systems"
     },
     {
-      "from": "topic.b_of_g",
-      "to": "topic.algebraic_fundamental_group"
+      "from": "buildings_and_parahorics.affine_weyl_groups",
+      "to": "root_data_and_duality.coxeter_systems_and_bruhat_order"
     },
     {
-      "from": "topic.b_of_g",
-      "to": "topic.kottwitz_homomorphism"
+      "from": "buildings_and_parahorics.bn_pairs_and_tits_systems",
+      "to": "buildings_and_parahorics.coxeter_complexes"
     },
     {
-      "from": "topic.b_of_g",
-      "to": "topic.sigma_conjugacy_classes"
+      "from": "buildings_and_parahorics.bn_pairs_and_tits_systems",
+      "to": "reductive_structure.parabolic_subgroups"
     },
     {
-      "from": "topic.bala_carter_classification",
-      "to": "topic.levi_subgroups_and_unipotent_radicals"
+      "from": "buildings_and_parahorics.bruhat_tits_apartments",
+      "to": "buildings_and_parahorics.affine_weyl_groups"
     },
     {
-      "from": "topic.bala_carter_classification",
-      "to": "topic.nilpotent_orbits"
+      "from": "buildings_and_parahorics.bruhat_tits_apartments",
+      "to": "buildings_and_parahorics.reductive_groups_over_local_fields"
     },
     {
-      "from": "topic.bala_carter_classification",
-      "to": "topic.parabolic_subgroups"
+      "from": "buildings_and_parahorics.bruhat_tits_apartments",
+      "to": "buildings_and_parahorics.valued_root_data"
     },
     {
-      "from": "topic.bala_carter_classification",
-      "to": "topic.weighted_dynkin_diagrams"
+      "from": "buildings_and_parahorics.bruhat_tits_apartments",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.base_change",
-      "to": "topic.affine_algebraic_groups"
+      "from": "buildings_and_parahorics.bruhat_tits_buildings",
+      "to": "buildings_and_parahorics.bn_pairs_and_tits_systems"
     },
     {
-      "from": "topic.base_change",
-      "to": "topic.fields_and_field_extensions"
+      "from": "buildings_and_parahorics.bruhat_tits_buildings",
+      "to": "buildings_and_parahorics.bruhat_tits_apartments"
     },
     {
-      "from": "topic.based_root_data",
-      "to": "topic.root_data"
+      "from": "buildings_and_parahorics.coxeter_complexes",
+      "to": "root_data_and_duality.coxeter_systems_and_bruhat_order"
     },
     {
-      "from": "topic.basic_examples",
-      "to": "topic.linear_algebraic_groups"
+      "from": "buildings_and_parahorics.facets_in_bruhat_tits_buildings",
+      "to": "buildings_and_parahorics.bruhat_tits_buildings"
     },
     {
-      "from": "topic.basic_examples",
-      "to": "topic.morphisms_and_closed_subgroups"
+      "from": "buildings_and_parahorics.moy_prasad_filtrations",
+      "to": "buildings_and_parahorics.parahoric_subgroups"
     },
     {
-      "from": "topic.basic_sigma_conjugacy_classes",
-      "to": "topic.kottwitz_map_on_b_of_g"
+      "from": "buildings_and_parahorics.moy_prasad_filtrations",
+      "to": "nilpotent_orbits.lie_algebras_of_reductive_groups"
     },
     {
-      "from": "topic.basic_sigma_conjugacy_classes",
-      "to": "topic.newton_map"
+      "from": "buildings_and_parahorics.parahoric_group_schemes",
+      "to": "buildings_and_parahorics.parahoric_subgroups"
     },
     {
-      "from": "topic.bn_pairs_and_tits_systems",
-      "to": "topic.coxeter_complexes"
+      "from": "buildings_and_parahorics.parahoric_group_schemes",
+      "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
     },
     {
-      "from": "topic.bn_pairs_and_tits_systems",
-      "to": "topic.parabolic_subgroups"
+      "from": "buildings_and_parahorics.parahoric_subgroups",
+      "to": "buildings_and_parahorics.facets_in_bruhat_tits_buildings"
     },
     {
-      "from": "topic.borel_subgroups",
-      "to": "topic.algebraic_tori"
+      "from": "buildings_and_parahorics.parahoric_subgroups",
+      "to": "buildings_and_parahorics.reductive_groups_over_local_fields"
     },
     {
-      "from": "topic.borel_subgroups",
-      "to": "topic.connected_components"
+      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.borel_subgroups",
-      "to": "topic.solvable_groups"
+      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.bruhat_tits_apartments",
-      "to": "topic.affine_weyl_groups"
+      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "to": "root_data_and_duality.galois_action_on_root_data"
     },
     {
-      "from": "topic.bruhat_tits_apartments",
-      "to": "topic.local_fields"
+      "from": "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes",
+      "to": "buildings_and_parahorics.parahoric_group_schemes"
     },
     {
-      "from": "topic.bruhat_tits_apartments",
-      "to": "topic.reductive_groups_over_local_fields"
+      "from": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.bruhat_tits_apartments",
-      "to": "topic.valued_root_data"
+      "from": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.bruhat_tits_buildings",
-      "to": "topic.bn_pairs_and_tits_systems"
+      "from": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+      "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
     },
     {
-      "from": "topic.bruhat_tits_buildings",
-      "to": "topic.bruhat_tits_apartments"
+      "from": "buildings_and_parahorics.spherical_buildings",
+      "to": "buildings_and_parahorics.bn_pairs_and_tits_systems"
     },
     {
-      "from": "topic.brylinski_deligne_k2_extensions",
-      "to": "topic.algebraic_k_theory_and_k2"
+      "from": "buildings_and_parahorics.tits_buildings",
+      "to": "buildings_and_parahorics.spherical_buildings"
     },
     {
-      "from": "topic.brylinski_deligne_k2_extensions",
-      "to": "topic.central_extensions_of_algebraic_groups"
+      "from": "buildings_and_parahorics.tits_buildings",
+      "to": "reductive_structure.parabolic_subgroups"
     },
     {
-      "from": "topic.brylinski_deligne_k2_extensions",
-      "to": "topic.reductive_groups"
+      "from": "buildings_and_parahorics.tits_buildings",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.brylinski_deligne_k2_extensions",
-      "to": "topic.root_data"
+      "from": "buildings_and_parahorics.valued_root_data",
+      "to": "buildings_and_parahorics.reductive_groups_over_local_fields"
     },
     {
-      "from": "topic.cartan_matrices_and_dynkin_diagrams",
-      "to": "topic.root_systems"
+      "from": "buildings_and_parahorics.valued_root_data",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.centers_and_dual_centers",
-      "to": "topic.dual_root_data"
+      "from": "buildings_and_parahorics.valued_root_data",
+      "to": "root_data_and_duality.galois_action_on_root_data"
     },
     {
-      "from": "topic.centers_and_dual_centers",
-      "to": "topic.fundamental_group_of_root_datum"
+      "from": "buildings_and_parahorics.valued_root_data",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.central_extensions_of_algebraic_groups",
-      "to": "topic.affine_algebraic_groups"
+      "from": "classical_and_exceptional_groups.classical_groups",
+      "to": "linear_algebraic_groups.basic_examples"
     },
     {
-      "from": "topic.central_extensions_of_algebraic_groups",
-      "to": "topic.hopf_algebras"
+      "from": "classical_and_exceptional_groups.classical_groups",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.central_isogenies",
-      "to": "topic.reductive_groups"
+      "from": "classical_and_exceptional_groups.classical_groups",
+      "to": "root_data_and_duality.classification_of_split_reductive_groups"
     },
     {
-      "from": "topic.central_isogenies_and_duality",
-      "to": "topic.central_isogenies"
+      "from": "classical_and_exceptional_groups.classical_groups",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.central_isogenies_and_duality",
-      "to": "topic.root_data"
+      "from": "classical_and_exceptional_groups.exceptional_groups",
+      "to": "root_data_and_duality.cartan_matrices_and_dynkin_diagrams"
     },
     {
-      "from": "topic.character_and_cocharacter_lattices",
-      "to": "topic.algebraic_tori"
+      "from": "classical_and_exceptional_groups.exceptional_groups",
+      "to": "root_data_and_duality.classification_of_split_reductive_groups"
     },
     {
-      "from": "topic.classical_groups",
-      "to": "topic.basic_examples"
+      "from": "classical_and_exceptional_groups.exceptional_groups",
+      "to": "root_data_and_duality.root_systems"
     },
     {
-      "from": "topic.classical_groups",
-      "to": "topic.classification_of_split_reductive_groups"
+      "from": "descent_and_forms.cocycles_and_twisting",
+      "to": "descent_and_forms.nonabelian_h1"
     },
     {
-      "from": "topic.classical_groups",
-      "to": "topic.reductive_groups"
+      "from": "descent_and_forms.cocycles_and_twisting",
+      "to": "descent_and_forms.torsors"
     },
     {
-      "from": "topic.classical_groups",
-      "to": "topic.root_data"
+      "from": "descent_and_forms.cocycles_and_twisting",
+      "to": "linear_algebraic_groups.automorphism_groups"
     },
     {
-      "from": "topic.classification_of_split_reductive_groups",
-      "to": "topic.based_root_data"
+      "from": "descent_and_forms.extended_groups_for_real_forms",
+      "to": "descent_and_forms.inner_forms"
     },
     {
-      "from": "topic.classification_of_split_reductive_groups",
-      "to": "topic.pinnings"
+      "from": "descent_and_forms.extended_groups_for_real_forms",
+      "to": "descent_and_forms.real_forms"
     },
     {
-      "from": "topic.classification_of_split_reductive_groups",
-      "to": "topic.root_data"
+      "from": "descent_and_forms.extended_groups_for_real_forms",
+      "to": "linear_algebraic_groups.automorphism_groups"
     },
     {
-      "from": "topic.cocycles_and_twisting",
-      "to": "topic.automorphism_groups"
+      "from": "descent_and_forms.forms_of_algebraic_groups",
+      "to": "descent_and_forms.cocycles_and_twisting"
     },
     {
-      "from": "topic.cocycles_and_twisting",
-      "to": "topic.nonabelian_h1"
+      "from": "descent_and_forms.forms_of_algebraic_groups",
+      "to": "descent_and_forms.forms_of_algebraic_objects"
     },
     {
-      "from": "topic.cocycles_and_twisting",
-      "to": "topic.torsors"
+      "from": "descent_and_forms.forms_of_algebraic_groups",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.conjugacy_classes",
-      "to": "topic.automorphism_groups"
+      "from": "descent_and_forms.forms_of_algebraic_groups",
+      "to": "linear_algebraic_groups.base_change"
     },
     {
-      "from": "topic.conjugacy_classes",
-      "to": "topic.linear_algebraic_groups"
+      "from": "descent_and_forms.forms_of_algebraic_objects",
+      "to": "descent_and_forms.galois_groups_and_descent_data"
     },
     {
-      "from": "topic.connected_components",
-      "to": "topic.smoothness_tangent_spaces_lie_algebras"
+      "from": "descent_and_forms.forms_of_algebraic_objects",
+      "to": "linear_algebraic_groups.automorphism_groups"
     },
     {
-      "from": "topic.coordinate_rings_and_hopf_algebras",
-      "to": "topic.affine_schemes"
+      "from": "descent_and_forms.galois_cohomology",
+      "to": "descent_and_forms.galois_groups_and_descent_data"
     },
     {
-      "from": "topic.coordinate_rings_and_hopf_algebras",
-      "to": "topic.commutative_algebra"
+      "from": "descent_and_forms.galois_groups_and_descent_data",
+      "to": "foundational_inputs.fields_and_field_extensions"
     },
     {
-      "from": "topic.coordinate_rings_and_hopf_algebras",
-      "to": "topic.hopf_algebras"
+      "from": "descent_and_forms.inner_forms",
+      "to": "descent_and_forms.rational_forms_of_reductive_groups"
     },
     {
-      "from": "topic.coxeter_complexes",
-      "to": "topic.coxeter_systems_and_bruhat_order"
+      "from": "descent_and_forms.kaletha_refined_inner_forms",
+      "to": "descent_and_forms.rigid_inner_forms"
     },
     {
-      "from": "topic.coxeter_systems_and_bruhat_order",
-      "to": "topic.basic_combinatorics"
+      "from": "descent_and_forms.kaletha_refined_inner_forms",
+      "to": "kottwitz_structures.b_of_g"
     },
     {
-      "from": "topic.coxeter_systems_and_bruhat_order",
-      "to": "topic.weyl_groups"
+      "from": "descent_and_forms.kaletha_refined_inner_forms",
+      "to": "kottwitz_structures.kottwitz_map_on_b_of_g"
     },
     {
-      "from": "topic.derived_group_center_adjoint_sc_cover",
-      "to": "topic.central_isogenies"
+      "from": "descent_and_forms.nonabelian_h1",
+      "to": "descent_and_forms.galois_cohomology"
     },
     {
-      "from": "topic.derived_group_center_adjoint_sc_cover",
-      "to": "topic.reductive_groups"
+      "from": "descent_and_forms.outer_forms",
+      "to": "descent_and_forms.rational_forms_of_reductive_groups"
     },
     {
-      "from": "topic.diagonalizable_groups",
-      "to": "topic.character_and_cocharacter_lattices"
+      "from": "descent_and_forms.pure_inner_twists",
+      "to": "descent_and_forms.cocycles_and_twisting"
     },
     {
-      "from": "topic.diagonalizable_groups",
-      "to": "topic.linear_algebraic_groups"
+      "from": "descent_and_forms.pure_inner_twists",
+      "to": "descent_and_forms.inner_forms"
     },
     {
-      "from": "topic.dual_groups_for_covers",
-      "to": "topic.brylinski_deligne_k2_extensions"
+      "from": "descent_and_forms.pure_inner_twists",
+      "to": "descent_and_forms.nonabelian_h1"
     },
     {
-      "from": "topic.dual_groups_for_covers",
-      "to": "topic.dual_root_data"
+      "from": "descent_and_forms.quasi_split_forms",
+      "to": "descent_and_forms.rational_forms_of_reductive_groups"
     },
     {
-      "from": "topic.dual_groups_for_covers",
-      "to": "topic.langlands_dual_groups"
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "descent_and_forms.forms_of_algebraic_groups"
     },
     {
-      "from": "topic.dual_reductive_groups",
-      "to": "topic.classification_of_split_reductive_groups"
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "linear_algebraic_groups.linear_algebraic_groups"
     },
     {
-      "from": "topic.dual_reductive_groups",
-      "to": "topic.dual_root_data"
+      "from": "descent_and_forms.rational_forms_of_reductive_groups",
+      "to": "descent_and_forms.forms_of_algebraic_groups"
     },
     {
-      "from": "topic.dual_root_data",
-      "to": "topic.root_data"
+      "from": "descent_and_forms.rational_forms_of_reductive_groups",
+      "to": "descent_and_forms.galois_cohomology"
     },
     {
-      "from": "topic.dual_root_systems",
-      "to": "topic.root_systems"
+      "from": "descent_and_forms.rational_forms_of_reductive_groups",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.exceptional_groups",
-      "to": "topic.cartan_matrices_and_dynkin_diagrams"
+      "from": "descent_and_forms.rational_forms_of_reductive_groups",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.exceptional_groups",
-      "to": "topic.classification_of_split_reductive_groups"
+      "from": "descent_and_forms.real_forms",
+      "to": "descent_and_forms.inner_forms"
     },
     {
-      "from": "topic.exceptional_groups",
-      "to": "topic.root_systems"
+      "from": "descent_and_forms.real_forms",
+      "to": "descent_and_forms.rational_forms_of_reductive_groups"
     },
     {
-      "from": "topic.extended_groups_for_real_forms",
-      "to": "topic.automorphism_groups"
+      "from": "descent_and_forms.rigid_inner_forms",
+      "to": "descent_and_forms.inner_forms"
     },
     {
-      "from": "topic.extended_groups_for_real_forms",
-      "to": "topic.inner_forms"
+      "from": "descent_and_forms.rigid_inner_forms",
+      "to": "descent_and_forms.rigid_inner_twists"
     },
     {
-      "from": "topic.extended_groups_for_real_forms",
-      "to": "topic.real_forms"
+      "from": "descent_and_forms.rigid_inner_twists",
+      "to": "descent_and_forms.galois_cohomology"
     },
     {
-      "from": "topic.facets_in_bruhat_tits_buildings",
-      "to": "topic.bruhat_tits_buildings"
+      "from": "descent_and_forms.rigid_inner_twists",
+      "to": "descent_and_forms.pure_inner_twists"
     },
     {
-      "from": "topic.forms_of_algebraic_groups",
-      "to": "topic.affine_algebraic_groups"
+      "from": "descent_and_forms.rigid_inner_twists",
+      "to": "kottwitz_structures.algebraic_fundamental_group"
     },
     {
-      "from": "topic.forms_of_algebraic_groups",
-      "to": "topic.base_change"
+      "from": "descent_and_forms.rigid_inner_twists",
+      "to": "kottwitz_structures.kottwitz_homomorphism"
     },
     {
-      "from": "topic.forms_of_algebraic_groups",
-      "to": "topic.cocycles_and_twisting"
+      "from": "descent_and_forms.strong_inner_forms",
+      "to": "descent_and_forms.inner_forms"
     },
     {
-      "from": "topic.forms_of_algebraic_groups",
-      "to": "topic.forms_of_algebraic_objects"
+      "from": "descent_and_forms.strong_inner_forms",
+      "to": "descent_and_forms.strong_real_forms"
     },
     {
-      "from": "topic.forms_of_algebraic_objects",
-      "to": "topic.automorphism_groups"
+      "from": "descent_and_forms.strong_real_forms",
+      "to": "descent_and_forms.extended_groups_for_real_forms"
     },
     {
-      "from": "topic.forms_of_algebraic_objects",
-      "to": "topic.galois_groups_and_descent_data"
+      "from": "descent_and_forms.strong_real_forms",
+      "to": "descent_and_forms.real_forms"
     },
     {
-      "from": "topic.fundamental_group_of_root_datum",
-      "to": "topic.root_data"
+      "from": "descent_and_forms.torsors",
+      "to": "descent_and_forms.nonabelian_h1"
     },
     {
-      "from": "topic.galois_action_on_root_data",
-      "to": "topic.automorphisms_of_root_data"
+      "from": "descent_and_forms.twisted_conjugacy_classes",
+      "to": "descent_and_forms.galois_cohomology"
     },
     {
-      "from": "topic.galois_action_on_root_data",
-      "to": "topic.rational_forms_of_reductive_groups"
+      "from": "descent_and_forms.twisted_conjugacy_classes",
+      "to": "linear_algebraic_groups.conjugacy_classes"
     },
     {
-      "from": "topic.galois_cohomology",
-      "to": "topic.galois_groups_and_descent_data"
+      "from": "descent_and_forms.vogan_diagrams",
+      "to": "descent_and_forms.real_forms"
     },
     {
-      "from": "topic.galois_groups_and_descent_data",
-      "to": "topic.fields_and_field_extensions"
+      "from": "descent_and_forms.vogan_diagrams",
+      "to": "root_data_and_duality.galois_action_on_root_data"
     },
     {
-      "from": "topic.global_fields_adeles_and_reciprocity_symbols",
-      "to": "topic.fields_and_field_extensions"
+      "from": "descent_and_forms.vogan_diagrams",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.global_fields_adeles_and_reciprocity_symbols",
-      "to": "topic.local_fields"
+      "from": "foundational_inputs.affine_schemes",
+      "to": "foundational_inputs.commutative_algebra"
     },
     {
-      "from": "topic.hopf_algebras",
-      "to": "topic.commutative_algebra"
+      "from": "foundational_inputs.algebraic_k_theory_and_k2",
+      "to": "foundational_inputs.commutative_algebra"
     },
     {
-      "from": "topic.inner_forms",
-      "to": "topic.rational_forms_of_reductive_groups"
+      "from": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+      "to": "foundational_inputs.fields_and_field_extensions"
     },
     {
-      "from": "topic.isocrystals_with_g_structure",
-      "to": "topic.b_of_g"
+      "from": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.isocrystals_with_g_structure",
-      "to": "topic.sigma_conjugacy_classes"
+      "from": "foundational_inputs.hopf_algebras",
+      "to": "foundational_inputs.commutative_algebra"
     },
     {
-      "from": "topic.jacobson_morozov_theorem",
-      "to": "topic.sl2_triples"
+      "from": "foundational_inputs.local_fields",
+      "to": "foundational_inputs.fields_and_field_extensions"
     },
     {
-      "from": "topic.kaletha_refined_inner_forms",
-      "to": "topic.b_of_g"
+      "from": "kottwitz_structures.admissible_sets",
+      "to": "buildings_and_parahorics.affine_weyl_groups"
     },
     {
-      "from": "topic.kaletha_refined_inner_forms",
-      "to": "topic.kottwitz_map_on_b_of_g"
+      "from": "kottwitz_structures.admissible_sets",
+      "to": "kottwitz_structures.b_of_g"
     },
     {
-      "from": "topic.kaletha_refined_inner_forms",
-      "to": "topic.rigid_inner_forms"
+      "from": "kottwitz_structures.algebraic_fundamental_group",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.kernels_images_and_quotients",
-      "to": "topic.morphisms_and_closed_subgroups"
+      "from": "kottwitz_structures.algebraic_fundamental_group",
+      "to": "root_data_and_duality.fundamental_group_of_root_datum"
     },
     {
-      "from": "topic.kottwitz_homomorphism",
-      "to": "topic.algebraic_fundamental_group"
+      "from": "kottwitz_structures.algebraic_fundamental_group",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.kottwitz_homomorphism",
-      "to": "topic.galois_action_on_root_data"
+      "from": "kottwitz_structures.b_of_g",
+      "to": "kottwitz_structures.algebraic_fundamental_group"
     },
     {
-      "from": "topic.kottwitz_homomorphism",
-      "to": "topic.local_fields"
+      "from": "kottwitz_structures.b_of_g",
+      "to": "kottwitz_structures.kottwitz_homomorphism"
     },
     {
-      "from": "topic.kottwitz_map_on_b_of_g",
-      "to": "topic.algebraic_fundamental_group"
+      "from": "kottwitz_structures.b_of_g",
+      "to": "kottwitz_structures.sigma_conjugacy_classes"
     },
     {
-      "from": "topic.kottwitz_map_on_b_of_g",
-      "to": "topic.b_of_g"
+      "from": "kottwitz_structures.basic_sigma_conjugacy_classes",
+      "to": "kottwitz_structures.kottwitz_map_on_b_of_g"
     },
     {
-      "from": "topic.l_groups",
-      "to": "topic.galois_action_on_root_data"
+      "from": "kottwitz_structures.basic_sigma_conjugacy_classes",
+      "to": "kottwitz_structures.newton_map"
     },
     {
-      "from": "topic.l_groups",
-      "to": "topic.langlands_dual_groups"
+      "from": "kottwitz_structures.isocrystals_with_g_structure",
+      "to": "kottwitz_structures.b_of_g"
     },
     {
-      "from": "topic.l_groups_for_covers",
-      "to": "topic.dual_groups_for_covers"
+      "from": "kottwitz_structures.isocrystals_with_g_structure",
+      "to": "kottwitz_structures.sigma_conjugacy_classes"
     },
     {
-      "from": "topic.l_groups_for_covers",
-      "to": "topic.l_groups"
+      "from": "kottwitz_structures.kottwitz_homomorphism",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.l_morphisms",
-      "to": "topic.dual_reductive_groups"
+      "from": "kottwitz_structures.kottwitz_homomorphism",
+      "to": "kottwitz_structures.algebraic_fundamental_group"
     },
     {
-      "from": "topic.l_morphisms",
-      "to": "topic.l_groups"
+      "from": "kottwitz_structures.kottwitz_homomorphism",
+      "to": "root_data_and_duality.galois_action_on_root_data"
     },
     {
-      "from": "topic.langlands_dual_groups",
-      "to": "topic.pinned_dual_groups"
+      "from": "kottwitz_structures.kottwitz_map_on_b_of_g",
+      "to": "kottwitz_structures.algebraic_fundamental_group"
     },
     {
-      "from": "topic.levi_subgroups_and_unipotent_radicals",
-      "to": "topic.parabolic_subgroups"
+      "from": "kottwitz_structures.kottwitz_map_on_b_of_g",
+      "to": "kottwitz_structures.b_of_g"
     },
     {
-      "from": "topic.levi_subgroups_and_unipotent_radicals",
-      "to": "topic.unipotent_groups"
+      "from": "kottwitz_structures.newton_map",
+      "to": "kottwitz_structures.b_of_g"
     },
     {
-      "from": "topic.lie_algebras_of_reductive_groups",
-      "to": "topic.reductive_groups"
+      "from": "kottwitz_structures.newton_map",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.lie_algebras_of_reductive_groups",
-      "to": "topic.smoothness_tangent_spaces_lie_algebras"
+      "from": "kottwitz_structures.sigma_conjugacy_classes",
+      "to": "buildings_and_parahorics.reductive_groups_over_local_fields"
     },
     {
-      "from": "topic.linear_algebraic_groups",
-      "to": "topic.affine_algebraic_groups"
+      "from": "kottwitz_structures.sigma_conjugacy_classes",
+      "to": "foundational_inputs.local_fields"
     },
     {
-      "from": "topic.local_and_global_metaplectic_covers",
-      "to": "topic.brylinski_deligne_k2_extensions"
+      "from": "linear_algebraic_groups.affine_algebraic_groups",
+      "to": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
     },
     {
-      "from": "topic.local_and_global_metaplectic_covers",
-      "to": "topic.global_fields_adeles_and_reciprocity_symbols"
+      "from": "linear_algebraic_groups.automorphism_groups",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.local_and_global_metaplectic_covers",
-      "to": "topic.local_fields"
+      "from": "linear_algebraic_groups.automorphism_groups",
+      "to": "linear_algebraic_groups.morphisms_and_closed_subgroups"
     },
     {
-      "from": "topic.local_fields",
-      "to": "topic.fields_and_field_extensions"
+      "from": "linear_algebraic_groups.base_change",
+      "to": "foundational_inputs.fields_and_field_extensions"
     },
     {
-      "from": "topic.maximal_tori",
-      "to": "topic.algebraic_tori"
+      "from": "linear_algebraic_groups.base_change",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.maximal_tori",
-      "to": "topic.reductive_groups"
+      "from": "linear_algebraic_groups.basic_examples",
+      "to": "linear_algebraic_groups.linear_algebraic_groups"
     },
     {
-      "from": "topic.morphisms_and_closed_subgroups",
-      "to": "topic.affine_algebraic_groups"
+      "from": "linear_algebraic_groups.basic_examples",
+      "to": "linear_algebraic_groups.morphisms_and_closed_subgroups"
     },
     {
-      "from": "topic.moy_prasad_filtrations",
-      "to": "topic.lie_algebras_of_reductive_groups"
+      "from": "linear_algebraic_groups.conjugacy_classes",
+      "to": "linear_algebraic_groups.automorphism_groups"
     },
     {
-      "from": "topic.moy_prasad_filtrations",
-      "to": "topic.parahoric_subgroups"
+      "from": "linear_algebraic_groups.conjugacy_classes",
+      "to": "linear_algebraic_groups.linear_algebraic_groups"
     },
     {
-      "from": "topic.newton_map",
-      "to": "topic.b_of_g"
+      "from": "linear_algebraic_groups.connected_components",
+      "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
     },
     {
-      "from": "topic.newton_map",
-      "to": "topic.root_data"
+      "from": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+      "to": "foundational_inputs.affine_schemes"
     },
     {
-      "from": "topic.nilpotent_cone",
-      "to": "topic.adjoint_action"
+      "from": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+      "to": "foundational_inputs.commutative_algebra"
     },
     {
-      "from": "topic.nilpotent_cone",
-      "to": "topic.nilpotent_elements"
+      "from": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+      "to": "foundational_inputs.hopf_algebras"
     },
     {
-      "from": "topic.nilpotent_elements",
-      "to": "topic.lie_algebras_of_reductive_groups"
+      "from": "linear_algebraic_groups.kernels_images_and_quotients",
+      "to": "linear_algebraic_groups.morphisms_and_closed_subgroups"
     },
     {
-      "from": "topic.nilpotent_orbits",
-      "to": "topic.nilpotent_cone"
+      "from": "linear_algebraic_groups.linear_algebraic_groups",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.nonabelian_h1",
-      "to": "topic.galois_cohomology"
+      "from": "linear_algebraic_groups.morphisms_and_closed_subgroups",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.outer_forms",
-      "to": "topic.rational_forms_of_reductive_groups"
+      "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "to": "foundational_inputs.affine_schemes"
     },
     {
-      "from": "topic.parabolic_subgroups",
-      "to": "topic.borel_subgroups"
+      "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "to": "linear_algebraic_groups.affine_algebraic_groups"
     },
     {
-      "from": "topic.parahoric_group_schemes",
-      "to": "topic.parahoric_subgroups"
+      "from": "nilpotent_orbits.adjoint_action",
+      "to": "nilpotent_orbits.lie_algebras_of_reductive_groups"
     },
     {
-      "from": "topic.parahoric_group_schemes",
-      "to": "topic.smooth_affine_group_schemes_over_valuation_rings"
+      "from": "nilpotent_orbits.adjoint_action",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.parahoric_subgroups",
-      "to": "topic.facets_in_bruhat_tits_buildings"
+      "from": "nilpotent_orbits.bala_carter_classification",
+      "to": "nilpotent_orbits.nilpotent_orbits"
     },
     {
-      "from": "topic.parahoric_subgroups",
-      "to": "topic.reductive_groups_over_local_fields"
+      "from": "nilpotent_orbits.bala_carter_classification",
+      "to": "nilpotent_orbits.weighted_dynkin_diagrams"
     },
     {
-      "from": "topic.pinned_dual_groups",
-      "to": "topic.dual_reductive_groups"
+      "from": "nilpotent_orbits.bala_carter_classification",
+      "to": "reductive_structure.levi_subgroups_and_unipotent_radicals"
     },
     {
-      "from": "topic.pinned_dual_groups",
-      "to": "topic.pinnings"
+      "from": "nilpotent_orbits.bala_carter_classification",
+      "to": "reductive_structure.parabolic_subgroups"
     },
     {
-      "from": "topic.pinnings",
-      "to": "topic.based_root_data"
+      "from": "nilpotent_orbits.jacobson_morozov_theorem",
+      "to": "nilpotent_orbits.sl2_triples"
     },
     {
-      "from": "topic.pinnings",
-      "to": "topic.roots_coroots_and_root_subgroups"
+      "from": "nilpotent_orbits.lie_algebras_of_reductive_groups",
+      "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
     },
     {
-      "from": "topic.pure_inner_twists",
-      "to": "topic.cocycles_and_twisting"
+      "from": "nilpotent_orbits.lie_algebras_of_reductive_groups",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.pure_inner_twists",
-      "to": "topic.inner_forms"
+      "from": "nilpotent_orbits.nilpotent_cone",
+      "to": "nilpotent_orbits.adjoint_action"
     },
     {
-      "from": "topic.pure_inner_twists",
-      "to": "topic.nonabelian_h1"
+      "from": "nilpotent_orbits.nilpotent_cone",
+      "to": "nilpotent_orbits.nilpotent_elements"
     },
     {
-      "from": "topic.quasi_split_forms",
-      "to": "topic.rational_forms_of_reductive_groups"
+      "from": "nilpotent_orbits.nilpotent_elements",
+      "to": "nilpotent_orbits.lie_algebras_of_reductive_groups"
     },
     {
-      "from": "topic.rational_forms_of_linear_algebraic_groups",
-      "to": "topic.forms_of_algebraic_groups"
+      "from": "nilpotent_orbits.nilpotent_orbits",
+      "to": "nilpotent_orbits.nilpotent_cone"
     },
     {
-      "from": "topic.rational_forms_of_linear_algebraic_groups",
-      "to": "topic.linear_algebraic_groups"
+      "from": "nilpotent_orbits.rational_nilpotent_orbits",
+      "to": "descent_and_forms.galois_cohomology"
     },
     {
-      "from": "topic.rational_forms_of_reductive_groups",
-      "to": "topic.forms_of_algebraic_groups"
+      "from": "nilpotent_orbits.rational_nilpotent_orbits",
+      "to": "descent_and_forms.rational_forms_of_reductive_groups"
     },
     {
-      "from": "topic.rational_forms_of_reductive_groups",
-      "to": "topic.galois_cohomology"
+      "from": "nilpotent_orbits.rational_nilpotent_orbits",
+      "to": "nilpotent_orbits.nilpotent_orbits"
     },
     {
-      "from": "topic.rational_forms_of_reductive_groups",
-      "to": "topic.reductive_groups"
+      "from": "nilpotent_orbits.sl2_triples",
+      "to": "nilpotent_orbits.nilpotent_elements"
     },
     {
-      "from": "topic.rational_forms_of_reductive_groups",
-      "to": "topic.root_data"
+      "from": "nilpotent_orbits.weighted_dynkin_diagrams",
+      "to": "nilpotent_orbits.nilpotent_orbits"
     },
     {
-      "from": "topic.rational_nilpotent_orbits",
-      "to": "topic.galois_cohomology"
+      "from": "nilpotent_orbits.weighted_dynkin_diagrams",
+      "to": "root_data_and_duality.root_systems"
     },
     {
-      "from": "topic.rational_nilpotent_orbits",
-      "to": "topic.nilpotent_orbits"
+      "from": "reductive_structure.algebraic_tori",
+      "to": "linear_algebraic_groups.linear_algebraic_groups"
     },
     {
-      "from": "topic.rational_nilpotent_orbits",
-      "to": "topic.rational_forms_of_reductive_groups"
+      "from": "reductive_structure.borel_subgroups",
+      "to": "linear_algebraic_groups.connected_components"
     },
     {
-      "from": "topic.real_forms",
-      "to": "topic.inner_forms"
+      "from": "reductive_structure.borel_subgroups",
+      "to": "reductive_structure.algebraic_tori"
     },
     {
-      "from": "topic.real_forms",
-      "to": "topic.rational_forms_of_reductive_groups"
+      "from": "reductive_structure.borel_subgroups",
+      "to": "reductive_structure.solvable_groups"
     },
     {
-      "from": "topic.reductive_groups",
-      "to": "topic.algebraic_tori"
+      "from": "reductive_structure.central_isogenies",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.reductive_groups",
-      "to": "topic.levi_subgroups_and_unipotent_radicals"
+      "from": "reductive_structure.character_and_cocharacter_lattices",
+      "to": "reductive_structure.algebraic_tori"
     },
     {
-      "from": "topic.reductive_groups",
-      "to": "topic.solvable_groups"
+      "from": "reductive_structure.derived_group_center_adjoint_sc_cover",
+      "to": "reductive_structure.central_isogenies"
     },
     {
-      "from": "topic.reductive_groups",
-      "to": "topic.unipotent_groups"
+      "from": "reductive_structure.derived_group_center_adjoint_sc_cover",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.reductive_groups_over_local_fields",
-      "to": "topic.galois_action_on_root_data"
+      "from": "reductive_structure.diagonalizable_groups",
+      "to": "linear_algebraic_groups.linear_algebraic_groups"
     },
     {
-      "from": "topic.reductive_groups_over_local_fields",
-      "to": "topic.local_fields"
+      "from": "reductive_structure.diagonalizable_groups",
+      "to": "reductive_structure.character_and_cocharacter_lattices"
     },
     {
-      "from": "topic.reductive_groups_over_local_fields",
-      "to": "topic.reductive_groups"
+      "from": "reductive_structure.levi_subgroups_and_unipotent_radicals",
+      "to": "reductive_structure.parabolic_subgroups"
     },
     {
-      "from": "topic.reductive_quotients_of_parahoric_group_schemes",
-      "to": "topic.parahoric_group_schemes"
+      "from": "reductive_structure.levi_subgroups_and_unipotent_radicals",
+      "to": "reductive_structure.unipotent_groups"
     },
     {
-      "from": "topic.rigid_inner_forms",
-      "to": "topic.inner_forms"
+      "from": "reductive_structure.maximal_tori",
+      "to": "reductive_structure.algebraic_tori"
     },
     {
-      "from": "topic.rigid_inner_forms",
-      "to": "topic.rigid_inner_twists"
+      "from": "reductive_structure.maximal_tori",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.rigid_inner_twists",
-      "to": "topic.algebraic_fundamental_group"
+      "from": "reductive_structure.parabolic_subgroups",
+      "to": "reductive_structure.borel_subgroups"
     },
     {
-      "from": "topic.rigid_inner_twists",
-      "to": "topic.galois_cohomology"
+      "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.algebraic_tori"
     },
     {
-      "from": "topic.rigid_inner_twists",
-      "to": "topic.kottwitz_homomorphism"
+      "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.levi_subgroups_and_unipotent_radicals"
     },
     {
-      "from": "topic.rigid_inner_twists",
-      "to": "topic.pure_inner_twists"
+      "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.solvable_groups"
     },
     {
-      "from": "topic.root_data",
-      "to": "topic.character_and_cocharacter_lattices"
+      "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.unipotent_groups"
     },
     {
-      "from": "topic.root_data",
-      "to": "topic.roots_coroots_and_root_subgroups"
+      "from": "reductive_structure.semisimple_groups",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.root_systems",
-      "to": "topic.roots_coroots_and_root_subgroups"
+      "from": "reductive_structure.solvable_groups",
+      "to": "linear_algebraic_groups.connected_components"
     },
     {
-      "from": "topic.root_systems",
-      "to": "topic.weyl_groups"
+      "from": "reductive_structure.solvable_groups",
+      "to": "reductive_structure.unipotent_groups"
     },
     {
-      "from": "topic.roots_coroots_and_root_subgroups",
-      "to": "topic.maximal_tori"
+      "from": "reductive_structure.unipotent_groups",
+      "to": "linear_algebraic_groups.linear_algebraic_groups"
     },
     {
-      "from": "topic.roots_coroots_and_root_subgroups",
-      "to": "topic.reductive_groups"
+      "from": "root_data_and_duality.automorphisms_of_root_data",
+      "to": "root_data_and_duality.based_root_data"
     },
     {
-      "from": "topic.semisimple_groups",
-      "to": "topic.reductive_groups"
+      "from": "root_data_and_duality.automorphisms_of_root_data",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.sigma_conjugacy_classes",
-      "to": "topic.local_fields"
+      "from": "root_data_and_duality.based_root_data",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.sigma_conjugacy_classes",
-      "to": "topic.reductive_groups_over_local_fields"
+      "from": "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
+      "to": "root_data_and_duality.root_systems"
     },
     {
-      "from": "topic.sl2_triples",
-      "to": "topic.nilpotent_elements"
+      "from": "root_data_and_duality.centers_and_dual_centers",
+      "to": "root_data_and_duality.dual_root_data"
     },
     {
-      "from": "topic.smooth_affine_group_schemes_over_valuation_rings",
-      "to": "topic.affine_algebraic_groups"
+      "from": "root_data_and_duality.centers_and_dual_centers",
+      "to": "root_data_and_duality.fundamental_group_of_root_datum"
     },
     {
-      "from": "topic.smooth_affine_group_schemes_over_valuation_rings",
-      "to": "topic.local_fields"
+      "from": "root_data_and_duality.central_isogenies_and_duality",
+      "to": "reductive_structure.central_isogenies"
     },
     {
-      "from": "topic.smooth_affine_group_schemes_over_valuation_rings",
-      "to": "topic.smoothness_tangent_spaces_lie_algebras"
+      "from": "root_data_and_duality.central_isogenies_and_duality",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.smoothness_tangent_spaces_lie_algebras",
-      "to": "topic.affine_algebraic_groups"
+      "from": "root_data_and_duality.classification_of_split_reductive_groups",
+      "to": "root_data_and_duality.based_root_data"
     },
     {
-      "from": "topic.smoothness_tangent_spaces_lie_algebras",
-      "to": "topic.affine_schemes"
+      "from": "root_data_and_duality.classification_of_split_reductive_groups",
+      "to": "root_data_and_duality.pinnings"
     },
     {
-      "from": "topic.solvable_groups",
-      "to": "topic.connected_components"
+      "from": "root_data_and_duality.classification_of_split_reductive_groups",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.solvable_groups",
-      "to": "topic.unipotent_groups"
+      "from": "root_data_and_duality.coxeter_systems_and_bruhat_order",
+      "to": "foundational_inputs.basic_combinatorics"
     },
     {
-      "from": "topic.spherical_buildings",
-      "to": "topic.bn_pairs_and_tits_systems"
+      "from": "root_data_and_duality.coxeter_systems_and_bruhat_order",
+      "to": "root_data_and_duality.weyl_groups"
     },
     {
-      "from": "topic.splittings_over_integral_and_parahoric_subgroups",
-      "to": "topic.local_and_global_metaplectic_covers"
+      "from": "root_data_and_duality.dual_reductive_groups",
+      "to": "root_data_and_duality.classification_of_split_reductive_groups"
     },
     {
-      "from": "topic.splittings_over_integral_and_parahoric_subgroups",
-      "to": "topic.parahoric_subgroups"
+      "from": "root_data_and_duality.dual_reductive_groups",
+      "to": "root_data_and_duality.dual_root_data"
     },
     {
-      "from": "topic.strong_inner_forms",
-      "to": "topic.inner_forms"
+      "from": "root_data_and_duality.dual_root_data",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.strong_inner_forms",
-      "to": "topic.strong_real_forms"
+      "from": "root_data_and_duality.dual_root_systems",
+      "to": "root_data_and_duality.root_systems"
     },
     {
-      "from": "topic.strong_real_forms",
-      "to": "topic.extended_groups_for_real_forms"
+      "from": "root_data_and_duality.fundamental_group_of_root_datum",
+      "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "topic.strong_real_forms",
-      "to": "topic.real_forms"
+      "from": "root_data_and_duality.galois_action_on_root_data",
+      "to": "descent_and_forms.rational_forms_of_reductive_groups"
     },
     {
-      "from": "topic.tits_buildings",
-      "to": "topic.parabolic_subgroups"
+      "from": "root_data_and_duality.galois_action_on_root_data",
+      "to": "root_data_and_duality.automorphisms_of_root_data"
     },
     {
-      "from": "topic.tits_buildings",
-      "to": "topic.reductive_groups"
+      "from": "root_data_and_duality.l_groups",
+      "to": "root_data_and_duality.galois_action_on_root_data"
     },
     {
-      "from": "topic.tits_buildings",
-      "to": "topic.spherical_buildings"
+      "from": "root_data_and_duality.l_groups",
+      "to": "root_data_and_duality.langlands_dual_groups"
     },
     {
-      "from": "topic.torsors",
-      "to": "topic.nonabelian_h1"
+      "from": "root_data_and_duality.l_morphisms",
+      "to": "root_data_and_duality.dual_reductive_groups"
     },
     {
-      "from": "topic.twisted_conjugacy_classes",
-      "to": "topic.conjugacy_classes"
+      "from": "root_data_and_duality.l_morphisms",
+      "to": "root_data_and_duality.l_groups"
     },
     {
-      "from": "topic.twisted_conjugacy_classes",
-      "to": "topic.galois_cohomology"
+      "from": "root_data_and_duality.langlands_dual_groups",
+      "to": "root_data_and_duality.pinned_dual_groups"
     },
     {
-      "from": "topic.unipotent_groups",
-      "to": "topic.linear_algebraic_groups"
+      "from": "root_data_and_duality.pinned_dual_groups",
+      "to": "root_data_and_duality.dual_reductive_groups"
     },
     {
-      "from": "topic.valued_root_data",
-      "to": "topic.galois_action_on_root_data"
+      "from": "root_data_and_duality.pinned_dual_groups",
+      "to": "root_data_and_duality.pinnings"
     },
     {
-      "from": "topic.valued_root_data",
-      "to": "topic.local_fields"
+      "from": "root_data_and_duality.pinnings",
+      "to": "root_data_and_duality.based_root_data"
     },
     {
-      "from": "topic.valued_root_data",
-      "to": "topic.reductive_groups_over_local_fields"
+      "from": "root_data_and_duality.pinnings",
+      "to": "root_data_and_duality.roots_coroots_and_root_subgroups"
     },
     {
-      "from": "topic.valued_root_data",
-      "to": "topic.root_data"
+      "from": "root_data_and_duality.root_data",
+      "to": "reductive_structure.character_and_cocharacter_lattices"
     },
     {
-      "from": "topic.vogan_diagrams",
-      "to": "topic.galois_action_on_root_data"
+      "from": "root_data_and_duality.root_data",
+      "to": "root_data_and_duality.roots_coroots_and_root_subgroups"
     },
     {
-      "from": "topic.vogan_diagrams",
-      "to": "topic.real_forms"
+      "from": "root_data_and_duality.root_systems",
+      "to": "root_data_and_duality.roots_coroots_and_root_subgroups"
     },
     {
-      "from": "topic.vogan_diagrams",
-      "to": "topic.root_data"
+      "from": "root_data_and_duality.root_systems",
+      "to": "root_data_and_duality.weyl_groups"
     },
     {
-      "from": "topic.weighted_dynkin_diagrams",
-      "to": "topic.nilpotent_orbits"
+      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
+      "to": "reductive_structure.maximal_tori"
     },
     {
-      "from": "topic.weighted_dynkin_diagrams",
-      "to": "topic.root_systems"
+      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
+      "to": "reductive_structure.reductive_groups"
     },
     {
-      "from": "topic.weyl_groups",
-      "to": "topic.roots_coroots_and_root_subgroups"
+      "from": "root_data_and_duality.weyl_groups",
+      "to": "root_data_and_duality.roots_coroots_and_root_subgroups"
     }
   ]
 }
