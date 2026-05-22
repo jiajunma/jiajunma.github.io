@@ -1,0 +1,14 @@
+import{_ as d}from"./slidev/CodeBlockWrapper.vue_vue_type_script_setup_true_lang-DIlyiJwV.js";import{o as u,b as f,w as n,g as s,d as i,m as t,ad as e,v as c,x as m,T as r}from"./modules/vue-CYPSLl1z.js";import{I as g}from"./slidev/default-BAssR1G4.js";import{u as h,f as k}from"./slidev/context-B63O6Jpy.js";import"./modules/unplugin-icons-BSwR7J6l.js";import"./index-Ct_r8S36.js";import"./modules/shiki-BBGaksAH.js";const v={class:"two-col"},z={__name:"session04.md__slidev_49",setup(b){const{$clicksContext:o,$frontmatter:p}=h();return o.setup(),(L,a)=>{const l=d;return u(),f(g,c(m(r(k)(r(p),48))),{default:n(()=>[a[6]||(a[6]=s("h1",null,"LeanSearch As Downstream Infrastructure",-1)),s("div",v,[s("div",null,[a[1]||(a[1]=s("p",null,"Herald-style data feeds a search service:",-1)),i(l,t({},{title:"",ranges:[]}),{default:n(()=>[...a[0]||(a[0]=[s("pre",{class:"shiki shiki-themes vitesse-dark vitesse-light slidev-code",style:{"--shiki-dark":"#dbd7caee","--shiki-light":"#393a34","--shiki-dark-bg":"#121212","--shiki-light-bg":"#ffffff"}},[s("code",{class:"language-text"},[s("span",{class:"line"},[s("span",null,"NL query")]),e(`
+`),s("span",{class:"line"},[s("span",null,"  -> embedding model trained")]),e(`
+`),s("span",{class:"line"},[s("span",null,"     on (informal, formal) pairs")]),e(`
+`),s("span",{class:"line"},[s("span",null,"  -> nearest-neighbor over")]),e(`
+`),s("span",{class:"line"},[s("span",null,"     informalized Mathlib")]),e(`
+`),s("span",{class:"line"},[s("span",null,"  -> formal declarations")])])],-1)])]),_:1},16),a[2]||(a[2]=s("p",null,"LeanSearch is the deployed form of this. It already appeared as Aria’s grounding step earlier.",-1))]),s("div",null,[a[4]||(a[4]=s("div",{class:"box-green"}," The FL → NL chain: ",-1)),i(l,t({},{title:"",ranges:[]}),{default:n(()=>[...a[3]||(a[3]=[s("pre",{class:"shiki shiki-themes vitesse-dark vitesse-light slidev-code",style:{"--shiki-dark":"#dbd7caee","--shiki-light":"#393a34","--shiki-dark-bg":"#121212","--shiki-light-bg":"#ffffff"}},[s("code",{class:"language-text"},[s("span",{class:"line"},[s("span",null,"Herald")]),e(`
+`),s("span",{class:"line"},[s("span",null,"  dataset + translator")]),e(`
+`),s("span",{class:"line"},[s("span")]),e(`
+`),s("span",{class:"line"},[s("span",null,"LeanSearch")]),e(`
+`),s("span",{class:"line"},[s("span",null,"  informalized Mathlib as a service")]),e(`
+`),s("span",{class:"line"},[s("span")]),e(`
+`),s("span",{class:"line"},[s("span",null,"Aria / Rethinking")]),e(`
+`),s("span",{class:"line"},[s("span",null,"  LeanSearch-style retrieval")]),e(`
+`),s("span",{class:"line"},[s("span",null,"  inside NL → FL pipelines")])])],-1)])]),_:1},16),a[5]||(a[5]=s("div",{class:"box-orange"}," FL → NL is not the symmetric counterpart of NL → FL. It is upstream infrastructure: without informalized Mathlib at scale, retrieval and grounding cannot happen. ",-1))])])]),_:1},16)}}};export{z as default};
