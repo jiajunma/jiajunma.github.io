@@ -29,11 +29,28 @@
       "display_name": "Langlands.AlgebraicGeometry.isAlgebraicGroup_pullback",
       "qualified_name": "Langlands.AlgebraicGeometry.isAlgebraicGroup_pullback",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "kind": "def",
+      "signature": "noncomputable def isAlgebraicGroup_pullback\n    {M S T : Scheme} [M.Over S] (f : T ⟶ S)\n    [IsAlgebraicGroup M S] :\n    IsAlgebraicGroup (Limits.pullback (M ↘ S) f) T",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L85",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L1",
       "status": "resolved",
       "reason": null
     }

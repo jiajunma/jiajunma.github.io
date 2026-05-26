@@ -34,52 +34,92 @@
       "display_name": "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg",
       "qualified_name": null,
       "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
       "repository_title": null,
       "revision": null,
       "short_revision": null,
       "source_url": null,
+      "doc_url": null,
       "has_sorry": false,
       "status": "unresolved",
-      "reason": "not found in configured Lean repository"
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.MuN",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.hopfSpecGrpObj",
+        "Langlands.AlgebraicGeometry.Examples.muN"
+      ]
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.muN",
       "display_name": "Langlands.AlgebraicGeometry.Examples.muN",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.muN",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.MuN",
+      "kind": "def",
+      "signature": "noncomputable def muN : Over (Scheme.Spec.obj (op R))",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/MuN.lean#L67",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
       "display_name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.MuN",
+      "kind": "instance",
+      "signature": "noncomputable instance muN.instGrpObj :\n    GrpObj (muN R n)",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/MuN.lean#L72",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.MuN",
       "display_name": "Langlands.AlgebraicGeometry.Examples.MuN",
       "qualified_name": null,
       "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
       "repository_title": null,
       "revision": null,
       "short_revision": null,
       "source_url": null,
+      "doc_url": null,
       "has_sorry": false,
       "status": "unresolved",
-      "reason": "not found in configured Lean repository"
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.MuN",
+        "Langlands.AlgebraicGeometry.Examples.muN",
+        "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Examples.MuN",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Examples.MuN",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/MuN.lean#L1",
+      "status": "resolved",
+      "reason": null
     }
   ]
 }

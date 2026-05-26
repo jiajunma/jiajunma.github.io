@@ -40,104 +40,160 @@
       "display_name": "Polynomial.gaComul",
       "qualified_name": "Polynomial.gaComul",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "kind": "def",
+      "signature": "noncomputable def gaComul :\n    Polynomial R →ₐ[R] TensorProduct R (Polynomial R) (Polynomial R)",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L59",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Polynomial.gaCounit",
       "display_name": "Polynomial.gaCounit",
       "qualified_name": "Polynomial.gaCounit",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "kind": "def",
+      "signature": "noncomputable def gaCounit : R[X] →ₐ[R] R",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L67",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Polynomial.gaAntipode",
       "display_name": "Polynomial.gaAntipode",
       "qualified_name": "Polynomial.gaAntipode",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "kind": "def",
+      "signature": "noncomputable def gaAntipode : R[X] →ₐ[R] R[X]",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L72",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Polynomial.instBialgebra",
       "display_name": "Polynomial.instBialgebra",
       "qualified_name": "Polynomial.instBialgebra",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "kind": "instance",
+      "signature": "noncomputable instance instBialgebra : Bialgebra R R[X]",
+      "docstring": "The bialgebra structure on `R[X]` with primitive `X`.",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L87",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Polynomial.instHopfAlgebra",
       "display_name": "Polynomial.instHopfAlgebra",
       "qualified_name": "Polynomial.instHopfAlgebra",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "kind": "instance",
+      "signature": "noncomputable instance instHopfAlgebra : HopfAlgebra R R[X]",
+      "docstring": "The Hopf algebra structure on `R[X]` with antipode `X ↦ -X`.",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L129",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.additiveGroup",
       "display_name": "Langlands.AlgebraicGeometry.Examples.additiveGroup",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.additiveGroup",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "kind": "def",
+      "signature": "noncomputable def additiveGroup :\n    Over (Scheme.Spec.obj (op R))",
+      "docstring": "The additive group scheme `G_{a,R} = Spec R[X]` over `Spec R`.",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L173",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj",
       "display_name": "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "kind": "instance",
+      "signature": "noncomputable instance additiveGroup.instGrpObj :\n    GrpObj (additiveGroup R)",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L179",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.Ga",
       "display_name": "Langlands.AlgebraicGeometry.Examples.Ga",
       "qualified_name": null,
       "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
       "repository_title": null,
       "revision": null,
       "short_revision": null,
       "source_url": null,
+      "doc_url": null,
       "has_sorry": false,
       "status": "unresolved",
-      "reason": "not found in configured Lean repository"
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.Ga",
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.GLV",
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.GLn"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Examples.Ga",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L1",
+      "status": "resolved",
+      "reason": null
     }
   ]
 }

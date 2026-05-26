@@ -24,24 +24,46 @@
       "display_name": "Langlands.AlgebraicGeometry.schemeOverSelf",
       "qualified_name": "Langlands.AlgebraicGeometry.schemeOverSelf",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "kind": "instance",
+      "signature": "instance schemeOverSelf (S : Scheme) : S.Over S",
+      "docstring": "Every scheme `S` is canonically over itself via the identity morphism.",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L36",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.trivialGrpObj",
       "display_name": "Langlands.AlgebraicGeometry.trivialGrpObj",
       "qualified_name": "Langlands.AlgebraicGeometry.trivialGrpObj",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "kind": "instance",
+      "signature": "noncomputable instance trivialGrpObj (S : Scheme) :\n    GrpObj (Scheme.asOver S S)",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L40",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L1",
       "status": "resolved",
       "reason": null
     }

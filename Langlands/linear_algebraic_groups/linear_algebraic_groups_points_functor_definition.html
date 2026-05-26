@@ -483,33 +483,47 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L50"><code>Langlands.AlgebraicGeometry.points</code></a>
           
           
+          
           <span class="lean-source-meta">
             LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Points
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev points (k : Type u) [Field k]
+    (G : Scheme.{u}) [G.Over (Spec (CommRingCat.of k))]
+    [GrpObj (Scheme.asOver G (Spec (CommRingCat.of k)))]
+    (R : Type u) [CommRing R] [Algebra k R] : Type u</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L37"><code>Langlands.AlgebraicGeometry.specOver</code></a>
           
           
+          
           <span class="lean-source-meta">
             LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Points
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def specOver (k R : Type u) [Field k] [CommRing R] [Algebra k R] :
+    Over (Spec (CommRingCat.of k))</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>LanglandsLean.AlgebraicGeometry.Points</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L1"><code>LanglandsLean.AlgebraicGeometry.Points</code></a>
+      </p>
       
     </div>
   </div>

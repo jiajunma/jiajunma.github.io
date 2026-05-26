@@ -35,24 +35,46 @@
       "display_name": "Langlands.AlgebraicGeometry.FaithfulLinearRepresentation",
       "qualified_name": "Langlands.AlgebraicGeometry.FaithfulLinearRepresentation",
       "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "kind": "structure",
+      "signature": "structure FaithfulLinearRepresentation\n    {k : Type u} [Field k] (G : Scheme.{u})\n    [G.Over (Spec (.of k))]\n    [IsAlgebraicGroup G (Spec (.of k))] where",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L71",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
       "display_name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
       "qualified_name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
       "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "kind": "structure",
+      "signature": "structure GeneralLinearGroupSchemeModel (k : Type u) [Field k] (V : Type v)\n    [AddCommGroup V] [Module k V] [FiniteDimensional k V] where",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L50",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "display_name": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L1",
       "status": "resolved",
       "reason": null
     }

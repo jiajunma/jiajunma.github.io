@@ -30,37 +30,64 @@
       "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg",
       "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "kind": "def",
+      "signature": "noncomputable def convAlg {B : Type*} [CommSemiring B] [Algebra R B]\n    (f g : A →ₐ[R] B) : A →ₐ[R] B",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L98",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_toLinearMap",
       "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_toLinearMap",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_toLinearMap",
       "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "kind": "theorem",
+      "signature": "theorem convAlg_toLinearMap {B : Type*} [CommSemiring B] [Algebra R B]\n    (f g : A →ₐ[R] B) :\n    (convAlg f g).toLinearMap = convLinear f g",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L105",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_apply",
       "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_apply",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_apply",
       "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "kind": "theorem",
+      "signature": "theorem convAlg_apply {B : Type*} [CommSemiring B] [Algebra R B]\n    (f g : A →ₐ[R] B) (a : A) : convAlg f g a = convLinear f g a",
+      "docstring": "Pointwise: `convAlg f g a = convLinear f g a`.",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L114",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "display_name": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L1",
       "status": "resolved",
       "reason": null
     }

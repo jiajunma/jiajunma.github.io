@@ -50,24 +50,46 @@
       "display_name": "Langlands.AlgebraicGeometry.algSpec",
       "qualified_name": "Langlands.AlgebraicGeometry.algSpec",
       "module": "LanglandsLean.AlgebraicGeometry.HopfSpec",
+      "kind": "def",
+      "signature": "noncomputable def algSpec (R : CommRingCat) :\n    (CommAlgCat R)ᵒᵖ ⥤ Over (Scheme.Spec.obj (op R))",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpec.lean#L66",
+      "doc_url": null,
       "has_sorry": true,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.hopfSpec",
       "display_name": "Langlands.AlgebraicGeometry.hopfSpec",
       "qualified_name": "Langlands.AlgebraicGeometry.hopfSpec",
       "module": "LanglandsLean.AlgebraicGeometry.HopfSpec",
+      "kind": "def",
+      "signature": "noncomputable def hopfSpec (R : CommRingCat) :\n    Grp ((CommAlgCat R)ᵒᵖ) ⥤ Grp (Over (Scheme.Spec.obj (op R)))",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpec.lean#L90",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.HopfSpec",
+      "display_name": "LanglandsLean.AlgebraicGeometry.HopfSpec",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpec.lean#L1",
       "status": "resolved",
       "reason": null
     }

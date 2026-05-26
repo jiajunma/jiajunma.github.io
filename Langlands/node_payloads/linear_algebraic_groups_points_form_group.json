@@ -24,11 +24,28 @@
       "display_name": "Langlands.AlgebraicGeometry.points.instGroup",
       "qualified_name": "Langlands.AlgebraicGeometry.points.instGroup",
       "module": "LanglandsLean.AlgebraicGeometry.Points",
+      "kind": "instance",
+      "signature": "noncomputable instance points.instGroup (k : Type u) [Field k]\n    (G : Scheme.{u}) [G.Over (Spec (CommRingCat.of k))]\n    [GrpObj (Scheme.asOver G (Spec (CommRingCat.of k)))]\n    (R : Type u) [CommRing R] [Algebra k R] :\n    Group (points k G R)",
+      "docstring": "The `R`-points of `G` form a group, via Mathlib's `Hom.group`.",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L59",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Points",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Points",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L1",
       "status": "resolved",
       "reason": null
     }

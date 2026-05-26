@@ -40,65 +40,106 @@
       "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.universalMatrix",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.universalMatrix",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "kind": "def",
+      "signature": "noncomputable def GLn.universalMatrix :\n    Matrix (Fin n) (Fin n) (MvPolynomial (Fin n × Fin n) R)",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L75",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.GLn.det",
       "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.det",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.det",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "kind": "def",
+      "signature": "noncomputable def GLn.det : MvPolynomial (Fin n × Fin n) R",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L81",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
       "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "kind": "def",
+      "signature": "noncomputable def GLn.coordRing : Type u",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L86",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.GLn.over",
       "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.over",
       "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.over",
       "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "kind": "def",
+      "signature": "noncomputable def GLn.over (R : CommRingCat.{u}) (n : ℕ) :\n    Over (Scheme.Spec.obj (op R))",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L99",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.GLnSch",
       "display_name": "Langlands.AlgebraicGeometry.Examples.GLnSch",
       "qualified_name": null,
       "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
       "repository_title": null,
       "revision": null,
       "short_revision": null,
       "source_url": null,
+      "doc_url": null,
       "has_sorry": false,
       "status": "unresolved",
-      "reason": "not found in configured Lean repository"
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.GLn",
+        "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
+        "Langlands.AlgebraicGeometry.Examples.GLn.det"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L1",
+      "status": "resolved",
+      "reason": null
     }
   ]
 }

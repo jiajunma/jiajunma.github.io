@@ -485,9 +485,11 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">class</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L64"><code>Langlands.AlgebraicGeometry.IsAffineGroupScheme</code></a>
+          
           
           
           <span class="lean-source-meta">
@@ -495,11 +497,22 @@
           </span>
           
           
+          
+          <pre class="lean-signature"><code>class IsAffineGroupScheme (G S : Scheme) [G.Over S]
+    extends GrpObj (Scheme.asOver G S), IsAffineHom (G ↘ S)
+/-- `G` is an (affine) algebraic group over `S`: an affine group scheme that
+is locally of finite type. Following Milne / SGA 3, no smoothness assumed;
+smoothness is added separately as `[Smooth (G ↘ S)]` where needed.
+This is the Level-1 sugar aggregator over the Mathlib stack
+`GrpObj (Scheme.asOver G S)` + `IsAffineHom (G ↘ S)` +
+`LocallyOfFiniteType (G ↘ S)`. -/</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L1"><code>LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup</code></a>
+      </p>
       
     </div>
   </div>

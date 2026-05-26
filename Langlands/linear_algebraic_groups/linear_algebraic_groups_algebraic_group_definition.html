@@ -483,9 +483,11 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">class</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L74"><code>Langlands.AlgebraicGeometry.IsAlgebraicGroup</code></a>
+          
           
           
           <span class="lean-source-meta">
@@ -493,11 +495,19 @@
           </span>
           
           
+          
+          <pre class="lean-signature"><code>class IsAlgebraicGroup (G S : Scheme) [G.Over S]
+    extends IsAffineGroupScheme G S, LocallyOfFiniteType (G ↘ S)
+/-- Reverse synthesis: an `IsAffineGroupScheme G S` instance is built from a
+`GrpObj` on `Scheme.asOver G S` together with an `IsAffineHom` on
+`G ↘ S`. -/</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L1"><code>LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup</code></a>
+      </p>
       
     </div>
   </div>

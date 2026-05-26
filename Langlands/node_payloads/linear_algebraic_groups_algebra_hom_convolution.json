@@ -40,24 +40,46 @@
       "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convLinear",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convLinear",
       "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "kind": "def",
+      "signature": "noncomputable def convLinear (f g : A →ₐ[R] B) : A →ₗ[R] B",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L49",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.HopfConvolution.convLinear_apply",
       "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convLinear_apply",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convLinear_apply",
       "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "kind": "theorem",
+      "signature": "theorem convLinear_apply (f g : A →ₐ[R] B) (a : A) :\n    convLinear f g a =\n      LinearMap.mul' R B\n        (TensorProduct.map f.toLinearMap g.toLinearMap (CoalgebraStruct.comul a))",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L54",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "display_name": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L1",
       "status": "resolved",
       "reason": null
     }

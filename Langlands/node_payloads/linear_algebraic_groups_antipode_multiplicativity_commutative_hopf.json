@@ -29,37 +29,64 @@
       "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_mul_of_commutative",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_mul_of_commutative",
       "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "theorem",
+      "signature": "theorem antipode_mul_of_commutative (a b : A) :\n    HopfAlgebraStruct.antipode (R",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L273",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.HopfAntipode.convMul_mul_convCompAntipode",
       "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.convMul_mul_convCompAntipode",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.convMul_mul_convCompAntipode",
       "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "lemma",
+      "signature": "lemma convMul_mul_convCompAntipode :\n    WithConv.toConv (LinearMap.mul' R A) *\n      WithConv.toConv (HopfAlgebraStruct.antipode (R",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L131",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul",
       "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul",
       "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "lemma",
+      "signature": "lemma convCompAntipode_mul_convMul :\n    WithConv.toConv (HopfAlgebraStruct.antipode (R",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L160",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "display_name": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L1",
       "status": "resolved",
       "reason": null
     }

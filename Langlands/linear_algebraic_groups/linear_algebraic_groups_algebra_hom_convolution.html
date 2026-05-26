@@ -487,33 +487,46 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L49"><code>Langlands.AlgebraicGeometry.HopfConvolution.convLinear</code></a>
           
           
+          
           <span class="lean-source-meta">
             LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfConvolution
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def convLinear (f g : A →ₐ[R] B) : A →ₗ[R] B</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L54"><code>Langlands.AlgebraicGeometry.HopfConvolution.convLinear_apply</code></a>
           
           
+          
           <span class="lean-source-meta">
             LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfConvolution
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem convLinear_apply (f g : A →ₐ[R] B) (a : A) :
+    convLinear f g a =
+      LinearMap.mul&#39; R B
+        (TensorProduct.map f.toLinearMap g.toLinearMap (CoalgebraStruct.comul a))</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>LanglandsLean.AlgebraicGeometry.HopfConvolution</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L1"><code>LanglandsLean.AlgebraicGeometry.HopfConvolution</code></a>
+      </p>
       
     </div>
   </div>

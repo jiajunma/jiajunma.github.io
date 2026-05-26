@@ -483,9 +483,11 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L59"><code>Langlands.AlgebraicGeometry.points.instGroup</code></a>
+          
           
           
           <span class="lean-source-meta">
@@ -493,11 +495,19 @@
           </span>
           
           
+          <p class="lean-docstring">The `R`-points of `G` form a group, via Mathlib&#39;s `Hom.group`.</p>
+          <pre class="lean-signature"><code>noncomputable instance points.instGroup (k : Type u) [Field k]
+    (G : Scheme.{u}) [G.Over (Spec (CommRingCat.of k))]
+    [GrpObj (Scheme.asOver G (Spec (CommRingCat.of k)))]
+    (R : Type u) [CommRing R] [Algebra k R] :
+    Group (points k G R)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>LanglandsLean.AlgebraicGeometry.Points</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L1"><code>LanglandsLean.AlgebraicGeometry.Points</code></a>
+      </p>
       
     </div>
   </div>

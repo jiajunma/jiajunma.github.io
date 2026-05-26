@@ -483,45 +483,63 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L98"><code>Langlands.AlgebraicGeometry.HopfConvolution.convAlg</code></a>
           
           
+          
           <span class="lean-source-meta">
             LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfConvolution
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def convAlg {B : Type*} [CommSemiring B] [Algebra R B]
+    (f g : A →ₐ[R] B) : A →ₐ[R] B</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L105"><code>Langlands.AlgebraicGeometry.HopfConvolution.convAlg_toLinearMap</code></a>
           
           
+          
           <span class="lean-source-meta">
             LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfConvolution
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem convAlg_toLinearMap {B : Type*} [CommSemiring B] [Algebra R B]
+    (f g : A →ₐ[R] B) :
+    (convAlg f g).toLinearMap = convLinear f g</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L114"><code>Langlands.AlgebraicGeometry.HopfConvolution.convAlg_apply</code></a>
           
           
+          
           <span class="lean-source-meta">
             LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfConvolution
           </span>
           
           
+          <p class="lean-docstring">Pointwise: `convAlg f g a = convLinear f g a`.</p>
+          <pre class="lean-signature"><code>theorem convAlg_apply {B : Type*} [CommSemiring B] [Algebra R B]
+    (f g : A →ₐ[R] B) (a : A) : convAlg f g a = convLinear f g a</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>LanglandsLean.AlgebraicGeometry.HopfConvolution</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L1"><code>LanglandsLean.AlgebraicGeometry.HopfConvolution</code></a>
+      </p>
       
     </div>
   </div>

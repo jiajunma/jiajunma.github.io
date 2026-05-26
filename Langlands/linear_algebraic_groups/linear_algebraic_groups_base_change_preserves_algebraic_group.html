@@ -485,9 +485,11 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L85"><code>Langlands.AlgebraicGeometry.isAlgebraicGroup_pullback</code></a>
+          
           
           
           <span class="lean-source-meta">
@@ -495,11 +497,18 @@
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def isAlgebraicGroup_pullback
+    {M S T : Scheme} [M.Over S] (f : T ⟶ S)
+    [IsAlgebraicGroup M S] :
+    IsAlgebraicGroup (Limits.pullback (M ↘ S) f) T</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>LanglandsLean.AlgebraicGeometry.Examples.Trivial</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L1"><code>LanglandsLean.AlgebraicGeometry.Examples.Trivial</code></a>
+      </p>
       
     </div>
   </div>
