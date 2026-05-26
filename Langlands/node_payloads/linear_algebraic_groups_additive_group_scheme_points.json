@@ -1,0 +1,27 @@
+{
+  "id": "linear_algebraic_groups.additive_group_scheme_points",
+  "title": "Points of 𝔾_a Are the Additive Group of R",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_additive_group_scheme_points.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Points of \\(\\mathbb{G}_a\\) Are the Additive Group of \\(R\\)</h1>\n<p>Let \\(k\\) be a field and \\(R\\) a commutative \\(k\\)-algebra. There is a\nnatural isomorphism of abelian groups</p>\n<p>\\[\n\\mathbb{G}_{a,\\operatorname{Spec} k}(R) \\;\\cong\\; (R, +).\n\\]</p>",
+  "proof_html": "<p>The\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.points_functor_definition\" href=\"linear_algebraic_groups_points_functor_definition.html\">\\(R\\)-points of \\(\\mathbb{G}_a\\) over \\(\\operatorname{Spec} k\\)</a>\nare morphisms \\(\\operatorname{Spec} R \\to \\mathbb{G}_{a, \\operatorname{Spec} k}\\)\nover \\(\\operatorname{Spec} k\\). By the affine-scheme equivalence and the\nconstruction \\(\\mathbb{G}_{a, \\operatorname{Spec} k} = \\operatorname{Spec} k[T]\\),\nsuch morphisms are in bijection with \\(k\\)-algebra homomorphisms\n\\(k[T] \\to R\\). By the universal property of the polynomial ring, these\nare in bijection with elements of \\(R\\) (the image of \\(T\\)):</p>\n<p>\\[\n\\mathbb{G}_a(R) \\;\\cong\\; \\operatorname{Hom}_{k\\text{-Alg}}(k[T], R) \\;\\cong\\; R.\n\\]</p>\n<p>To verify that the bijection is a group isomorphism, evaluate the\nmultiplication \\(\\mathbb{G}_a(R) \\times \\mathbb{G}_a(R) \\to \\mathbb{G}_a(R)\\)\non pairs \\((r, s) \\in R \\times R\\). This multiplication is induced by\nthe comultiplication \\(\\Delta(T) = T \\otimes 1 + 1 \\otimes T\\) of the\ncoordinate Hopf algebra: the image of \\(T\\) under the composed algebra\nhom \\(k[T] \\to k[T] \\otimes_k k[T] \\to R\\) (first map \\(\\Delta\\), second\nmap sending the first factor to \\(r\\) and the second to \\(s\\)) is \\(r + s\\). The\nidentity element corresponds to \\(\\varepsilon(T) = 0 \\in R\\), and\ninversion to \\(S(T) = -T \\in R\\). All three coincide with the additive\ngroup structure on \\(R\\).<br />\n\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.additive_group_scheme",
+      "title": "Additive Group Scheme 𝔾_a",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_additive_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.points_functor_definition",
+      "title": "Functor of Points of a Group Scheme",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_points_functor_definition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

@@ -49,7 +49,6 @@
     nodePayloadUrls: new Map(),
     nodePayloadCache: new Map(),
     expandedTopic: null,
-    currentTopicLayer: null,
     currentTopicSubgraph: null,
     proofPlanMode: null,
   };
@@ -87,11 +86,21 @@
     return "box";
   }
 
-  function statusColor(status) {
-    if (status === "formalized" || status === "proved") return "green";
-    if (status === "admitted") return "blue";
-    if (["staged", "needs_statement_review", "needs_definition_review", "needs_proof_review", "blocked"].includes(status)) return "#FFAA33";
-    return null;
+  function statusDisplay(status) {
+    if (status === "formalized" || status === "proved") {
+      return { color: "#2e7d32", fillcolor: "#c8e6c9", filled: true };
+    }
+    if (status === "admitted") {
+      return { color: "#1f6feb", fillcolor: "#d6e4ff", filled: true };
+    }
+    return { color: null, fillcolor: null, filled: false };
+  }
+
+  function nodeStyleAttr(node, statusFilled) {
+    const tokens = [];
+    if (statusFilled) tokens.push("filled");
+    if (node.kind === "proof-plan") tokens.push("dashed");
+    return tokens.length ? tokens.join(",") : null;
   }
 
   function dotAttributes(attrs) {
@@ -154,30 +163,36 @@
     if (data.topic) {
       lines.push(`\t${dotQuote(topicGraphId(data.topic.id))} [${dotAttributes({
         color: "blue",
-        label: `${data.topic.title}
-expanded`,
+        label: data.topic.title,
         penwidth: "2.4",
         shape: "box",
         URL: `#${topicGraphId(data.topic.id)}`,
       })}];`);
     }
+    (data.child_topic_nodes || []).forEach((topic) => {
+      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
+        label: topic.title,
+        shape: "box",
+        URL: `#${topicGraphId(topic.id)}`,
+      })}];`);
+    });
     (data.boundary_topics || []).forEach((topic) => {
-      const label = `${topic.title}
-${topic.role.replace(/_/g, " ")}`;
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
         color: "#777777",
-        label,
+        label: topic.title,
         shape: "box",
         style: "dashed",
         URL: `#${topicGraphId(topic.id)}`,
       })}];`);
     });
     visibleNodes.forEach((node) => {
+      const display = statusDisplay(node.status);
       lines.push(`\t${dotQuote(node.id)} [${dotAttributes({
-        color: statusColor(node.status),
+        color: display.color,
+        fillcolor: display.fillcolor,
         label: node.title,
         shape: shapeForKind(node.kind),
-        style: node.kind === "proof-plan" ? "dashed" : null,
+        style: nodeStyleAttr(node, display.filled),
         URL: `#${node.id}`,
       })}];`);
     });
@@ -192,44 +207,6 @@ ${topic.role.replace(/_/g, " ")}`;
         label: "has plan",
         style: "dotted",
       })}];`);
-    });
-    lines.push("}");
-    return lines.join("\n");
-  }
-
-  function topicLayerToDot(data) {
-    const lines = [
-      'strict digraph "" {',
-      "\tgraph [bgcolor=transparent];",
-      '\tnode [label="\\N", penwidth=1.8, shape=box];',
-      "\tedge [arrowhead=vee];",
-    ];
-    (data.child_topic_nodes || []).forEach((topic) => {
-      const label = topic.title;
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
-        label,
-        shape: "box",
-        URL: `#${topicGraphId(topic.id)}`,
-      })}];`);
-    });
-    (data.child_boundary_topics || []).forEach((topic) => {
-      const label = `${topic.title}
-${topic.role.replace(/_/g, " ")}`;
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
-        color: "#777777",
-        label,
-        shape: "box",
-        style: "dashed",
-        URL: `#${topicGraphId(topic.id)}`,
-      })}];`);
-    });
-    (data.child_topic_edges || []).forEach((edge) => {
-      lines.push(`\t${dotQuote(edge.from)} -> ${dotQuote(edge.to)} [${dotAttributes({
-        style: "dashed",
-      })}];`);
-    });
-    (data.child_boundary_edges || []).forEach((edge) => {
-      lines.push(`\t${dotQuote(edge.from)} -> ${dotQuote(edge.to)} [${dotAttributes(boundaryEdgeDisplayAttributes(edge))}];`);
     });
     lines.push("}");
     return lines.join("\n");
@@ -318,8 +295,15 @@ ${topic.role.replace(/_/g, " ")}`;
   }
 
   function exceedsTopicExpansionLimits(data) {
-    const internalNodes = data.counts?.internal_nodes ?? (data.nodes || []).length;
-    return internalNodes > graphLimit("maxExpandNodes")
+    // Count what the renderer will actually draw: flat page nodes plus
+    // child-topic boxes. `counts.internal_nodes` is the pre-fold tally
+    // (every node tagged into this topic, including those hidden behind
+    // a folded child box) — using it here causes pages Python has
+    // already folded under the cap to be wrongly rejected by the gate.
+    const renderedNodes =
+      (data.nodes || []).length +
+      (data.child_topic_nodes || []).length;
+    return renderedNodes > graphLimit("maxExpandNodes")
       || visibleSubgraphNodeCount(data) > graphLimit("maxVisibleNodes");
   }
 
@@ -341,7 +325,7 @@ ${topic.role.replace(/_/g, " ")}`;
     const isFallback = mode === "topic-fallback";
     if (overviewButton) overviewButton.hidden = isOverview;
     if (parentButton) {
-      const topic = graphState.currentTopicLayer?.topic || graphState.currentTopicSubgraph?.topic || null;
+      const topic = graphState.currentTopicSubgraph?.topic || null;
       parentButton.hidden = isOverview || !topic?.parent;
     }
     if (resetButton) resetButton.hidden = isFallback;
@@ -428,7 +412,6 @@ ${topic.role.replace(/_/g, " ")}`;
   function renderExpandedTopic(subgraph) {
     const graphElement = document.getElementById("graph");
     if (!graphElement || !subgraph?.topic) return;
-    graphState.currentTopicLayer = null;
     graphState.currentTopicSubgraph = subgraph;
     graphState.expandedTopic = subgraph.topic.id;
     graphElement.dataset.expandedTopic = subgraph.topic.id;
@@ -445,20 +428,6 @@ ${topic.role.replace(/_/g, " ")}`;
     updateGraphBreadcrumbs(subgraph.topic);
     updateProofPlanControls(true);
     renderDot(topicSubgraphToDot(subgraph));
-  }
-
-  function renderTopicLayer(subgraph) {
-    const graphElement = document.getElementById("graph");
-    if (!graphElement || !subgraph?.topic) return;
-    graphState.currentTopicLayer = subgraph;
-    graphState.currentTopicSubgraph = null;
-    graphState.expandedTopic = subgraph.topic.id;
-    graphElement.dataset.expandedTopic = subgraph.topic.id;
-    graphElement.dataset.graphMode = "topic-layer";
-    updateGraphNavigationControls("topic-layer");
-    updateGraphBreadcrumbs(subgraph.topic);
-    updateProofPlanControls(false);
-    renderDot(topicLayerToDot(subgraph));
   }
 
   function setProofPlanMode(mode) {
@@ -651,11 +620,7 @@ ${topic.role.replace(/_/g, " ")}`;
         return;
       }
       const subgraph = await fetchTopicSubgraph(topicId);
-      if ((subgraph.child_topic_nodes || []).length) {
-        renderTopicLayer(subgraph);
-      } else {
-        renderExpandedTopic(subgraph);
-      }
+      renderExpandedTopic(subgraph);
     } catch (error) {
       hideGraphFallback();
       graphElement.textContent = error.message;
@@ -666,7 +631,6 @@ ${topic.role.replace(/_/g, " ")}`;
     const graphElement = document.getElementById("graph");
     if (!graphElement || !graphState.topicOverview) return;
     graphState.expandedTopic = null;
-    graphState.currentTopicLayer = null;
     graphState.currentTopicSubgraph = null;
     graphElement.dataset.graphMode = "topic-overview";
     delete graphElement.dataset.expandedTopic;
@@ -677,7 +641,7 @@ ${topic.role.replace(/_/g, " ")}`;
   }
 
   async function goToParentTopic() {
-    const topic = graphState.currentTopicLayer?.topic || graphState.currentTopicSubgraph?.topic || null;
+    const topic = graphState.currentTopicSubgraph?.topic || null;
     if (!topic?.parent) {
       await goToTopicOverview();
       return;

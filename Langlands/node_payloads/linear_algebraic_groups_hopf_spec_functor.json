@@ -1,0 +1,75 @@
+{
+  "id": "linear_algebraic_groups.hopf_spec_functor",
+  "title": "Spec Functor on Hopf Algebras",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_functor.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Spec Functor on Hopf Algebras</h1>\n<p>Let \\(R\\) be a commutative ring. The classical Spec functor</p>\n<p>\\[\n\\operatorname{Spec} : \\mathsf{CommRingCat}^{\\mathrm{op}} \\to \\mathsf{Scheme}\n\\]</p>\n<p>restricts to a functor on commutative \\(R\\)-algebras</p>\n<p>\\[\n\\operatorname{algSpec}_R : (\\mathsf{CommAlgCat}\\,R)^{\\mathrm{op}} \\to \\mathsf{Over}(\\operatorname{Spec} R),\n\\]</p>\n<p>sending a commutative \\(R\\)-algebra \\(A\\) to the affine scheme\n\\(\\operatorname{Spec} A\\), regarded as a scheme over \\(\\operatorname{Spec}\nR\\) via the structure morphism \\(\\operatorname{Spec}(R \\to A)\\). The\nfunctor is the composition of the equivalence\n\\(\\mathsf{CommAlgCat}\\,R \\simeq R\\,/\\,\\mathsf{CommRingCat}\\) with the\nopposite of the equivalence \\(\\mathsf{Over}(\\operatorname{Spec} R) \\simeq\n(\\operatorname{Spec} R\\,/\\,\\mathsf{Scheme})^{\\mathrm{op}}\\) and\npost-composition with \\(\\operatorname{Spec}\\) on the under category.</p>\n<p>Group objects in \\((\\mathsf{CommAlgCat}\\,R)^{\\mathrm{op}}\\) are the same\nas commutative Hopf \\(R\\)-algebras. Lifting \\(\\operatorname{algSpec}_R\\)\nto group objects yields the <strong>Spec functor on Hopf algebras</strong>:</p>\n<p>\\[\n\\operatorname{hopfSpec}_R : \\mathsf{Grp}((\\mathsf{CommAlgCat}\\,R)^{\\mathrm{op}})\n  \\longrightarrow \\mathsf{Grp}(\\mathsf{Over}(\\operatorname{Spec} R)).\n\\]</p>\n<h2>Construction via Yoneda</h2>\n<p>The naive approach \\((\\operatorname{algSpec}_R).\\operatorname{mapGrp}\\)\nrequires \\(\\operatorname{algSpec}_R\\) to be a monoidal functor, which in\nturn requires monoidal-category instances on the intermediate\ncategories \\((R\\,/\\,\\mathsf{CommRingCat})^{\\mathrm{op}}\\) and\n\\(\\mathsf{Over}(\\operatorname{op} R)\\) that are not in Mathlib master.</p>\n<p>We adopt instead the <strong>Yoneda construction</strong>:</p>\n<ul>\n<li>\n<p><strong>Object level</strong>: for each commutative \\(R\\)-Hopf algebra \\(A\\),\n  [[node:linear_algebraic_groups.hopf_spec_grpobj_via_yoneda|the group\n  object structure on \\(\\operatorname{Spec} A\\)]] is produced by\n  \\(\\operatorname{GrpObj.ofRepresentableBy}\\) applied to the\n  group-valued points presheaf\n  \\(T \\mapsto \\operatorname{Hom}_{R\\text{-Alg}}(A, \\Gamma(T, \\mathcal{O}_T))\\).\n  Set\n  \\(\\operatorname{hopfSpec}_R(A) := \\bigl(\\operatorname{algSpec}_R(A),\\, \\text{this }\\operatorname{GrpObj}\\bigr)\\).</p>\n</li>\n<li>\n<p><strong>Morphism level</strong>: a morphism of Hopf algebras \\(f : A \\to A'\\) is in\n  particular an algebra hom; \\(\\operatorname{algSpec}_R(f) : \\operatorname{Spec} A' \\to \\operatorname{Spec} A\\)\n  is a morphism in \\(\\mathsf{Over}(\\operatorname{Spec} R)\\). Because both\n  \\(\\operatorname{GrpObj}\\) structures are defined by Yoneda from the\n  convolution group structure on algebra homs, and post-composition by\n  \\(f\\) is a group hom on the convolution side (since \\(f\\) preserves\n  the comultiplication, counit, and antipode), the induced morphism is\n  a group object morphism.</p>\n</li>\n<li>\n<p><strong>Functoriality</strong>: identity and composition follow from\n  \\(\\operatorname{algSpec}_R\\) being a functor, plus the Yoneda\n  determination of the group-object morphism.</p>\n</li>\n</ul>\n<p>In the project's Lean development, the object-level construction lives\nin\n[[node:linear_algebraic_groups.hopf_spec_grpobj_via_yoneda|the dedicated\nnode]]; functoriality is established on top of it. The combined\npackage \\(\\operatorname{hopfSpec}_R\\) is what replaces the\n\\(\\texttt{sorry}\\) placeholder in\n\\(\\texttt{lean/LanglandsLean/AlgebraicGeometry/HopfSpec.lean}\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.hopf_spec_grpobj_via_yoneda",
+      "title": "Group Object Structure on Spec A via Yoneda",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_grpobj_via_yoneda.html"
+    },
+    {
+      "id": "foundational_inputs.affine_schemes",
+      "title": "Affine Schemes",
+      "href": "foundational_inputs/foundational_inputs_affine_schemes.html"
+    },
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "foundational_inputs/foundational_inputs_hopf_algebras.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.hopf_spec_essential_image_affine",
+      "title": "Essential Image of Spec Is Affine Group Schemes",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_essential_image_affine.html"
+    },
+    {
+      "id": "linear_algebraic_groups.hopf_spec_fully_faithful",
+      "title": "Spec Functor on Hopf Algebras Is Fully Faithful",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_fully_faithful.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.algSpec",
+      "display_name": "Langlands.AlgebraicGeometry.algSpec",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.hopfSpec",
+      "display_name": "Langlands.AlgebraicGeometry.hopfSpec",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

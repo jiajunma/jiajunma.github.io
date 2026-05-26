@@ -1,0 +1,78 @@
+{
+  "id": "linear_algebraic_groups.hopf_spec_grpobj_via_yoneda",
+  "title": "Group Object Structure on Spec A via Yoneda",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_grpobj_via_yoneda.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Group Object Structure on \\(\\operatorname{Spec} A\\) via Yoneda</h1>\n<p>Let \\(R\\) be a commutative ring and \\(A\\) a commutative \\(R\\)-Hopf\nalgebra. Then the affine scheme \\(\\operatorname{Spec} A\\), viewed as an\nobject of \\(\\mathsf{Over}(\\operatorname{Spec} R)\\) via the structure\nmorphism \\(\\operatorname{Spec}(R \\to A)\\), carries a canonical group\nobject structure. Equivalently, \\(\\operatorname{Spec} A\\) is an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\nover \\(\\operatorname{Spec} R\\).</p>",
+  "proof_html": "<p>We use the Yoneda lemma to bypass the explicit construction of\nmultiplication, identity, and inverse morphisms.</p>\n<p><em>Setup.</em> The category \\(\\mathsf{Over}(\\operatorname{Spec} R)\\) is\nCartesian monoidal (binary products are pullbacks over \\(\\operatorname{Spec} R\\),\nterminal object is \\(\\operatorname{Spec} R\\) itself). This is\n\\(\\texttt{Over.cartesianMonoidalCategory}\\) in Mathlib; it is the\nambient structure needed for the notion of group object in\n\\(\\mathsf{Over}(\\operatorname{Spec} R)\\).</p>\n<p>Step 1 — <em>the group-valued presheaf, defined for all \\(T\\).</em> For any\nobject \\(T \\in \\mathsf{Over}(\\operatorname{Spec} R)\\) (not necessarily\naffine), the global-sections ring \\(\\Gamma(T, \\mathcal{O}_T)\\) is a\ncommutative \\(R\\)-algebra via the structure morphism\n\\(T \\to \\operatorname{Spec} R\\). By\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.algebra_homs_form_group_under_convolution\" href=\"linear_algebraic_groups_algebra_homs_form_group_under_convolution.html\">the convolution group structure</a>,\nthe set\n\\(\\operatorname{Hom}_{R\\text{-Alg}}\\bigl(A,\\, \\Gamma(T, \\mathcal{O}_T)\\bigr)\\)\nis a group. The assignment</p>\n<p>\\[\nF : (\\mathsf{Over}(\\operatorname{Spec} R))^{\\mathrm{op}} \\longrightarrow \\mathsf{Grp},\n\\qquad\nF(T) = \\operatorname{Hom}_{R\\text{-Alg}}\\bigl(A,\\, \\Gamma(T, \\mathcal{O}_T)\\bigr)\n\\]</p>\n<p>is functorial in \\(T\\): a morphism \\(g : T' \\to T\\) gives\n\\(g^\\sharp : \\Gamma(T, \\mathcal{O}_T) \\to \\Gamma(T', \\mathcal{O}_{T'})\\)\nas a ring hom, and post-composing an algebra hom\n\\(\\varphi : A \\to \\Gamma(T, \\mathcal{O}_T)\\) with \\(g^\\sharp\\) preserves\nconvolution (the convolution product depends only on \\(\\Delta_A\\) and\non the target's multiplication, both of which are preserved by ring\nhoms).</p>\n<p>Step 2 — <em>representability.</em> By\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.spec_representability_via_global_sections\" href=\"linear_algebraic_groups_spec_representability_via_global_sections.html\">the \\(\\operatorname{Spec} \\dashv \\Gamma\\) adjunction</a>,\nthere is a natural bijection of sets</p>\n<p>\\[\n\\operatorname{Hom}_{\\mathsf{Over}(\\operatorname{Spec} R)}(T,\\, \\operatorname{Spec} A)\n\\;\\;\\simeq\\;\\;\n\\operatorname{Hom}_{R\\text{-Alg}}\\bigl(A,\\, \\Gamma(T, \\mathcal{O}_T)\\bigr)\n\\;=\\; F(T).\n\\]</p>\n<p>Hence the underlying set-valued functor \\(F \\circ \\operatorname{forget}\\)\nis the Yoneda presheaf representable by \\(\\operatorname{Spec} A\\).</p>\n<p>Step 3 — <em>Yoneda yields the group object structure.</em> Applying\n\\(\\operatorname{GrpObj.ofRepresentableBy}\\) (Mathlib's\n\\(\\texttt{CategoryTheory.Monoidal.Cartesian.Grp\\_}\\)) to the\ngroup-valued presheaf \\(F\\) and the representability witness from\nStep 2 produces a canonical \\(\\operatorname{GrpObj}\\) structure on\n\\(\\operatorname{Spec} A\\) in \\(\\mathsf{Over}(\\operatorname{Spec} R)\\).\nThe multiplication, identity, and inverse morphisms of this group\nobject are uniquely determined (by Yoneda) by the group structure on\nthe points functor.<br />\n\\(\\square\\)</p>\n<p><strong>Remark.</strong> This construction bypasses the explicit dualization of the\nHopf comultiplication, counit, and antipode into scheme morphisms via\nthe isomorphism \\(\\operatorname{Spec}(A \\otimes_R A) \\cong \\operatorname{Spec} A \\times_{\\operatorname{Spec} R} \\operatorname{Spec} A\\)\nand the verification of six group object axioms. The proof obligations\nshift from \"verify six scheme-level axioms\" to \"verify the convolution\ngroup structure on algebra homs and its naturality\", which is shorter\nand reuses\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.algebra_homs_form_group_under_convolution\" href=\"linear_algebraic_groups_algebra_homs_form_group_under_convolution.html\">the dedicated theorem</a>.</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.algebra_homs_form_group_under_convolution",
+      "title": "Algebra Homomorphisms Form a Group Under Convolution",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebra_homs_form_group_under_convolution.html"
+    },
+    {
+      "id": "linear_algebraic_groups.spec_representability_via_global_sections",
+      "title": "Hom Into Spec via Global Sections (Spec ⊣ Γ Adjunction)",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_spec_representability_via_global_sections.html"
+    },
+    {
+      "id": "linear_algebraic_groups.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_group_scheme_definition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.hopf_spec_functor",
+      "title": "Spec Functor on Hopf Algebras",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_functor.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.pointsPresheaf",
+      "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.pointsPresheaf",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.hopfSpecGrpObj",
+      "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.hopfSpecGrpObj",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specObjOver",
+      "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specObjOver",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

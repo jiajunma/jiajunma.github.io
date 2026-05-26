@@ -1,0 +1,85 @@
+{
+  "id": "linear_algebraic_groups.roots_of_unity_group_scheme",
+  "title": "Roots of Unity Group Scheme μ_n",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_roots_of_unity_group_scheme.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Roots of Unity Group Scheme \\(\\mu_n\\)</h1>\n<p>Let \\(n\\) be a non-negative integer and \\(S\\) a scheme. The\n<strong>\\(n\\)-th roots of unity group scheme over \\(S\\)</strong>, denoted\n\\(\\mu_{n,S}\\), is defined as the kernel of the \\(n\\)-th power map on\n\\(\\mathbb{G}_m\\):</p>\n<p>\\[\n\\mu_{n,S} \\;=\\; \\ker\\bigl(\\mathbb{G}_{m,S} \\to \\mathbb{G}_{m,S}\\bigr) \\quad (\\text{the } n\\text{-th power map})\n       \\;=\\; S \\,\\times_{\\operatorname{Spec} \\mathbb{Z}}\\, \\operatorname{Spec}\\bigl(\\mathbb{Z}[T]/(T^n - 1)\\bigr).\n\\]</p>\n<p>Its coordinate Hopf algebra is the quotient \\(\\mathbb{Z}[T]/(T^n - 1)\\),\nwhich is canonically isomorphic to the <strong>additive group algebra of the\ncyclic group of order \\(n\\)</strong>:</p>\n<p>\\[\n\\mathbb{Z}[T]/(T^n - 1) \\;\\cong\\; \\mathbb{Z}[\\mathbb{Z}/n]\n  \\qquad (T^k \\mapsto \\mathrm{single}\\, k\\, 1).\n\\]</p>\n<p>The Hopf structure, transported via this isomorphism, gives the\n<strong>group-like Hopf structure</strong> on basis elements:</p>\n<p>\\[\n\\Delta(\\mathrm{single}\\, k\\, 1) = \\mathrm{single}\\, k\\, 1 \\otimes \\mathrm{single}\\, k\\, 1, \\qquad\n\\varepsilon(\\mathrm{single}\\, k\\, 1) = 1, \\qquad\nS(\\mathrm{single}\\, k\\, 1) = \\mathrm{single}\\, (-k)\\, 1.\n\\]</p>\n<p>For \\(n &gt; 0\\), \\(\\mu_n\\) is finite (of order \\(n\\)) and is an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(S\\). For \\(n = 0\\), the convention \\(\\mathbb{Z}/0 = \\mathbb{Z}\\)\nyields \\(\\mu_0 = \\mathbb{G}_m\\) (the no-constraint case).</p>\n<p>In characteristic coprime to \\(n\\), \\(\\mu_n\\) is étale (a finite étale\ngroup scheme of order \\(n\\)). In characteristic \\(p \\mid n\\), \\(\\mu_n\\)\nacquires infinitesimal pieces (e.g., \\(\\mu_p\\) over \\(\\mathbb{F}_p\\) is\nthe non-étale \"Frobenius kernel\"), but it is <strong>always</strong> an algebraic\ngroup in the modern Milne / SGA 3 convention.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.multiplicative_group_scheme",
+      "title": "Multiplicative Group Scheme 𝔾_m",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_multiplicative_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.muN",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.muN",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.MuN",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.MuN",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "linear_algebraic_groups.antipode_multiplicativity_commutative_hopf",
+  "title": "Antipode of a Commutative Hopf Algebra Is Multiplicative",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_antipode_multiplicativity_commutative_hopf.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Antipode of a Commutative Hopf Algebra Is Multiplicative</h1>\n<p>Let \\(R\\) be a commutative ring and \\(A\\) a <strong>commutative</strong> \\(R\\)-Hopf\nalgebra with antipode \\(S : A \\to A\\), comultiplication\n\\(\\Delta : A \\to A \\otimes_R A\\), counit \\(\\varepsilon : A \\to R\\), unit\n\\(\\eta : R \\to A\\), and multiplication \\(\\mu : A \\otimes_R A \\to A\\).\nFor all \\(a, b \\in A\\),</p>\n<p>\\[\nS(a \\cdot b) \\;=\\; S(a) \\cdot S(b).\n\\]</p>\n<p>In particular, \\(S\\) is an \\(R\\)-algebra homomorphism \\(A \\to A\\) (it is\n\\(R\\)-linear by construction, sends \\(1\\) to \\(1\\) by\n\\(S(1) = 1\\), and is multiplicative by the above).</p>\n<h2>Strategy</h2>\n<p>The proof proceeds in three steps. We work in the convolution algebra\n\\(\\operatorname{Hom}_R(A \\otimes A, A)\\), with multiplication</p>\n<p>\\[\n(f * g)(x) \\;=\\; \\mu_A \\circ (f \\otimes g) \\circ \\Delta_{A \\otimes A}(x)\n\\]</p>\n<p>and identity \\(1 = \\eta_A \\circ \\varepsilon_{A \\otimes A}\\). Here\n\\(\\Delta_{A \\otimes A}\\) is the tensor-product comultiplication,\nsatisfying \\(\\Delta_{A \\otimes A}(a \\otimes b) = \\sum (a_{(1)} \\otimes\nb_{(1)}) \\otimes (a_{(2)} \\otimes b_{(2)})\\) in Sweedler notation.</p>\n<p>We show:</p>\n<ul>\n<li><strong>Step 1.</strong> \\(S \\circ \\mu\\) is a <em>two-sided</em> convolution inverse of\n  \\(\\mu\\) (does not use commutativity of \\(A\\)).</li>\n<li><strong>Step 2.</strong> \\(\\mu \\circ (S \\otimes S)\\) is a <em>right</em> convolution\n  inverse of \\(\\mu\\) (uses commutativity of \\(A\\)).</li>\n<li><strong>Step 3.</strong> Apply the uniqueness \"left inverse equals right inverse\"\n  in any monoid, then evaluate at \\(a \\otimes b\\).</li>\n</ul>",
+  "proof_html": "<h3>Step 1. \\(S \\circ \\mu\\) is a two-sided convolution inverse of \\(\\mu\\)</h3>\n<p>By <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.multiplication_is_coalgebra_hom\" href=\"linear_algebraic_groups_multiplication_is_coalgebra_hom.html\">the bialgebra axioms</a>,\n\\(\\mu : A \\otimes A \\to A\\) is an \\(R\\)-coalgebra homomorphism.\nPre-composition by a coalgebra hom \\(h : C \\to D\\) intertwines\nconvolution products on the source and target sides: for any\n\\(f, g \\in \\operatorname{End}_R(D)\\),</p>\n<p>\\[\n(f \\circ h) * (g \\circ h) \\;=\\; (f * g) \\circ h\n  \\qquad \\text{(as elements of } \\operatorname{Hom}_R(C, D)\\text{).}\n\\]</p>\n<p>Taking \\(C = A \\otimes A\\), \\(D = A\\), and \\(h = \\mu\\), with\n\\((f, g) = (\\operatorname{id}_A, S)\\) gives</p>\n<p>\\[\n\\mu * (S \\circ \\mu)\n  \\;=\\; (\\operatorname{id}_A \\circ \\mu) * (S \\circ \\mu)\n  \\;=\\; (\\operatorname{id}_A * S) \\circ \\mu\n  \\;=\\; (\\eta_A \\circ \\varepsilon_A) \\circ \\mu\n  \\;=\\; \\eta_A \\circ \\varepsilon_{A \\otimes A},\n\\]</p>\n<p>where the third equality is the antipode axiom\n\\(\\operatorname{id}_A * S = 1_{\\operatorname{End}_R(A)} = \\eta_A \\circ \\varepsilon_A\\),\nand the last equality is the counit axiom of\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.multiplication_is_coalgebra_hom\" href=\"linear_algebraic_groups_multiplication_is_coalgebra_hom.html\">\\(\\mu\\) being a coalgebra hom</a>\n(\\(\\varepsilon_A \\circ \\mu = \\varepsilon_{A \\otimes A}\\)). The right-hand\nside is exactly the convolution identity in\n\\(\\operatorname{Hom}_R(A \\otimes A, A)\\). Hence \\(\\mu * (S \\circ \\mu) = 1\\).</p>\n<p>Symmetrically, taking \\((f, g) = (S, \\operatorname{id}_A)\\) and using\n\\(S * \\operatorname{id}_A = 1_{\\operatorname{End}_R(A)}\\) gives\n\\((S \\circ \\mu) * \\mu = 1\\).</p>\n<p>So \\(S \\circ \\mu\\) is both a left and a right convolution inverse of\n\\(\\mu\\) in \\(\\operatorname{Hom}_R(A \\otimes A, A)\\).</p>\n<h3>Step 2. \\(\\mu \\circ (S \\otimes S)\\) is a right convolution inverse of \\(\\mu\\) (uses commutativity of \\(A\\))</h3>\n<p>Compute \\(\\mu * (\\mu \\circ (S \\otimes S))\\) directly on \\(a \\otimes b\\),\nusing the Sweedler expansion\n\\(\\Delta_{A \\otimes A}(a \\otimes b) =\n\\sum (a_{(1)} \\otimes b_{(1)}) \\otimes (a_{(2)} \\otimes b_{(2)})\\):</p>\n<p>\\[\n\\begin{aligned}\n\\bigl(\\mu * (\\mu \\circ (S \\otimes S))\\bigr)(a \\otimes b)\n  &amp;= \\mu_A \\circ \\bigl(\\mu \\otimes (\\mu \\circ (S \\otimes S))\\bigr)\n      \\circ \\Delta_{A \\otimes A}(a \\otimes b) \\\\\n  &amp;= \\sum \\mu(a_{(1)} \\otimes b_{(1)}) \\cdot\n      (\\mu \\circ (S \\otimes S))(a_{(2)} \\otimes b_{(2)}) \\\\\n  &amp;= \\sum (a_{(1)} \\cdot b_{(1)}) \\cdot (S(a_{(2)}) \\cdot S(b_{(2)})) \\\\\n  &amp;= \\sum a_{(1)} \\cdot b_{(1)} \\cdot S(a_{(2)}) \\cdot S(b_{(2)}).\n\\end{aligned}\n\\]</p>\n<p>Now the <strong>commutativity of \\(A\\)</strong> lets us rearrange the four-factor\nproduct to bring each \\(b_{(j)}\\) past the corresponding \\(S(a_{(j)})\\):</p>\n<p>\\[\na_{(1)} \\cdot b_{(1)} \\cdot S(a_{(2)}) \\cdot S(b_{(2)})\n  \\;=\\;\na_{(1)} \\cdot S(a_{(2)}) \\cdot b_{(1)} \\cdot S(b_{(2)}).\n\\]</p>\n<p>Summing and applying the antipode axiom to each tensor factor\n(\\(\\sum a_{(1)} \\cdot S(a_{(2)}) = \\eta_A(\\varepsilon(a))\\)):</p>\n<p>\\[\n\\begin{aligned}\n\\sum a_{(1)} \\cdot S(a_{(2)}) \\cdot b_{(1)} \\cdot S(b_{(2)})\n  &amp;= \\Bigl(\\sum a_{(1)} S(a_{(2)})\\Bigr) \\cdot\n     \\Bigl(\\sum b_{(1)} S(b_{(2)})\\Bigr) \\\\\n  &amp;= \\eta_A(\\varepsilon(a)) \\cdot \\eta_A(\\varepsilon(b)) \\\\\n  &amp;= \\eta_A(\\varepsilon(a) \\cdot \\varepsilon(b))\n       \\qquad \\text{(}\\eta_A\\text{ is an algebra hom)} \\\\\n  &amp;= \\eta_A\\bigl(\\varepsilon_{A \\otimes A}(a \\otimes b)\\bigr)\n       \\qquad \\text{(}\\varepsilon_{A \\otimes A} = m_R \\circ\n                      (\\varepsilon \\otimes \\varepsilon)\\text{)} \\\\\n  &amp;= 1(a \\otimes b).\n\\end{aligned}\n\\]</p>\n<p>(The bilinearity argument that lets us split the four-factor product\ninto a product of two sums uses that each factor lies in the\ncommutative target \\(A\\), so we can freely reorder.)</p>\n<p>Hence \\(\\mu * (\\mu \\circ (S \\otimes S)) = 1\\) in\n\\(\\operatorname{Hom}_R(A \\otimes A, A)\\), i.e., \\(\\mu \\circ (S \\otimes S)\\)\nis a right convolution inverse of \\(\\mu\\).</p>\n<h3>Step 3. Conclusion: left-inverse equals right-inverse</h3>\n<p>In any monoid \\(M\\) (here the multiplicative monoid of the convolution\nalgebra), if an element \\(x \\in M\\) has a left inverse \\(L\\) (so\n\\(L \\cdot x = 1\\)) and a right inverse \\(R\\) (so \\(x \\cdot R = 1\\)),\nthen \\(L = R\\):</p>\n<p>\\[\nL \\;=\\; L \\cdot 1 \\;=\\; L \\cdot (x \\cdot R) \\;=\\; (L \\cdot x) \\cdot R\n  \\;=\\; 1 \\cdot R \\;=\\; R.\n\\]</p>\n<p>Applied to \\(x = \\mu\\), \\(L = S \\circ \\mu\\) (Step 1, left-inverse part),\nand \\(R = \\mu \\circ (S \\otimes S)\\) (Step 2):</p>\n<p>\\[\nS \\circ \\mu \\;=\\; \\mu \\circ (S \\otimes S)\n  \\qquad \\text{(in } \\operatorname{Hom}_R(A \\otimes A, A) \\text{).}\n\\]</p>\n<p>Evaluating both sides at \\(a \\otimes b\\):</p>\n<p>\\[\nS(a \\cdot b)\n  \\;=\\; (S \\circ \\mu)(a \\otimes b)\n  \\;=\\; (\\mu \\circ (S \\otimes S))(a \\otimes b)\n  \\;=\\; \\mu(S(a) \\otimes S(b))\n  \\;=\\; S(a) \\cdot S(b).\n\\]</p>\n<p>\\(\\square\\)</p>\n<h2>Mathlib formalization</h2>\n<p>The Lean formalization in <code>LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean</code>\nships everything except the final assembly:</p>\n<ul>\n<li><code>mulCoalgHom : A ⊗[R] A →ₗc[R] A</code> — \\(\\mu\\) packaged as a coalgebra\n  hom, both axioms proved (see\n  <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.multiplication_is_coalgebra_hom\" href=\"linear_algebraic_groups_multiplication_is_coalgebra_hom.html\">the dedicated lemma</a>).</li>\n<li><code>convMul_mul_convCompAntipode</code> — Step 1, right-inverse direction,\n  proved via Mathlib's <code>LinearMap.convMul_comp_coalgHom_distrib</code>\n  applied to <code>mulCoalgHom</code>.</li>\n<li><code>convCompAntipode_mul_convMul</code> — Step 1, left-inverse direction,\n  same lemma with the WithConv factors swapped.</li>\n<li><strong>Open</strong>: the right-inverse equation \\(\\mu * (\\mu \\circ (S \\otimes S)) = 1\\)\n  (Step 2). The \"slick\" path would post-compose the antipode axiom\n  \\(\\operatorname{id}_{A \\otimes A} * S_{A \\otimes A} = 1\\) in\n  \\(\\operatorname{End}_R(A \\otimes A)\\) with the algebra hom\n  \\(\\mu = \\texttt{Algebra.TensorProduct.lmul' } R\\), via Mathlib's\n  <code>LinearMap.algHom_comp_convMul_distrib</code>. This hits a known\n  <code>AddCommMonoid</code> diamond between <code>TensorProduct.instModule</code> and\n  <code>Algebra.toModule</code> on <code>A ⊗[R] A</code> from the\n  <code>HopfAlgebra R (A ⊗[R] A)</code> instance. The direct Sweedler proof in\n  Step 2 above avoids the diamond entirely but requires explicit\n  representations of <code>Δ a</code> and <code>Δ b</code> and Sweedler-style bookkeeping\n  (Mathlib's <code>Coalgebra.Repr</code> API).</li>\n</ul>\n<p>Once Step 2 is in scope, Step 3 is one application of\n<code>left_inv_eq_right_inv</code> plus evaluation at <code>a ⊗ₜ b</code>.</p>\n<h2>Remark: the non-commutative case</h2>\n<p>For general (non-commutative) \\(A\\), the same Step 1 still works (gives\n\\(S \\circ \\mu\\) as the two-sided convolution inverse of \\(\\mu\\)). The\nanalog of Step 2 is that \\(\\mu \\circ (S \\otimes S) \\circ \\tau\\) (with\n\\(\\tau\\) the tensor-swap) is a right inverse of \\(\\mu\\). The\ncommutativity of \\(A\\) is exactly what lets us drop the swap\n\\(\\tau\\) and conclude \\(S(ab) = S(a) S(b)\\) instead of\n\\(S(b) S(a)\\). See\n[[node:linear_algebraic_groups.antipode_anti_multiplicativity|the\ngeneral anti-multiplicativity statement]].</p>",
+  "deps": [
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "foundational_inputs/foundational_inputs_hopf_algebras.html"
+    },
+    {
+      "id": "linear_algebraic_groups.multiplication_is_coalgebra_hom",
+      "title": "Multiplication of a Commutative Bialgebra Is a Coalgebra Hom",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_multiplication_is_coalgebra_hom.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_mul_of_commutative",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_mul_of_commutative",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.convMul_mul_convCompAntipode",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.convMul_mul_convCompAntipode",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

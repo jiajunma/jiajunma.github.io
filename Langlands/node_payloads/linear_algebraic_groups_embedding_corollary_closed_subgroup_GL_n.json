@@ -1,0 +1,22 @@
+{
+  "id": "linear_algebraic_groups.embedding_corollary_closed_subgroup_GL_n",
+  "title": "Algebraic Groups Are Closed Subgroups of GL_n",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_corollary_closed_subgroup_GL_n.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Algebraic Groups Are Closed Subgroups of GL_n</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(\\operatorname{Spec} k\\). There exist a positive integer \\(n\\) and\na closed immersion of group schemes</p>\n<p>\\[\nG \\;\\hookrightarrow\\; \\operatorname{GL}_n\n\\]</p>\n<p>over \\(\\operatorname{Spec} k\\).</p>",
+  "proof_html": "<p>Apply <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">the embedding theorem</a>\nto obtain a faithful finite-dimensional representation\n\\((W, \\rho)\\) of \\(G\\). Choose a basis of \\(W\\); the choice induces a\ngroup scheme isomorphism \\(\\operatorname{GL}(W) \\simeq \\operatorname{GL}_n\\)\nwhere \\(n = \\dim_k W\\). Composing \\(\\rho\\) with this isomorphism gives\nthe required closed immersion.<br />\n\\(\\square\\)</p>\n<p>This corollary is the historically classical form of the theorem\n(Borel, <em>Linear Algebraic Groups</em>, §1.10) and motivates the term\n<em>linear algebraic group</em> as a synonym for <em>algebraic group over a\nfield</em>.</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

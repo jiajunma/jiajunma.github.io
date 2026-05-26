@@ -1,0 +1,82 @@
+{
+  "id": "linear_algebraic_groups.algebraic_group_definition",
+  "title": "Algebraic Group over a Base",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_definition.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Algebraic Group over a Base</h1>\n<p>Let \\(S\\) be a scheme. An <strong>algebraic group over \\(S\\)</strong> is an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\n\\(G\\) over \\(S\\) whose structure morphism \\(G \\to S\\) is locally of finite\ntype.</p>\n<p>Following the modern convention (Milne, <em>Algebraic Groups</em>; SGA 3), we do\n<strong>not</strong> require \\(G\\) to be smooth over \\(S\\). Smoothness is a separate\nhypothesis added where the theory needs it (for example, to identify the\nidentity component or to make a Lie-algebra argument work). Important\nnon-smooth examples include \\(\\mu_n\\) and \\(\\alpha_p\\) over a field of\ncharacteristic \\(p\\).</p>\n<p>In the project's Lean development this is the typeclass aggregator\n\\(\\texttt{IsAlgebraicGroup}\\,G\\,S\\), which extends\n\\(\\texttt{IsAffineGroupScheme}\\,G\\,S\\) and\n\\(\\texttt{LocallyOfFiniteType}\\,(G \\downarrow S)\\). When the base \\(S\\) is\nthe spectrum of a field, the term <em>linear algebraic group</em> is also used\n(Milne / Borel / Humphreys / Springer).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_group_scheme_definition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.additive_group_scheme",
+      "title": "Additive Group Scheme 𝔾_a",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_additive_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html"
+    },
+    {
+      "id": "linear_algebraic_groups.base_change_preserves_algebraic_group",
+      "title": "Base Change Preserves Algebraic Group Structure",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_base_change_preserves_algebraic_group.html"
+    },
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    },
+    {
+      "id": "linear_algebraic_groups.faithful_linear_representation_definition",
+      "title": "Faithful Linear Representation",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_faithful_linear_representation_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.general_linear_group_scheme",
+      "title": "General Linear Group Scheme GL_n",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_general_linear_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.multiplicative_group_scheme",
+      "title": "Multiplicative Group Scheme 𝔾_m",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_multiplicative_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.roots_of_unity_group_scheme",
+      "title": "Roots of Unity Group Scheme μ_n",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_roots_of_unity_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.trivial_group_scheme",
+      "title": "Trivial Group Scheme over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_trivial_group_scheme.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+      "display_name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

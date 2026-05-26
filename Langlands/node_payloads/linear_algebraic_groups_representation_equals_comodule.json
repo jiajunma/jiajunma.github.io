@@ -1,0 +1,38 @@
+{
+  "id": "linear_algebraic_groups.representation_equals_comodule",
+  "title": "G-Representations Are A-Comodules",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_representation_equals_comodule.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>G-Representations Are A-Comodules</h1>\n<p>Let \\(k\\) be a field, \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\nover \\(\\operatorname{Spec} k\\) with\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.coordinate_hopf_algebra_of_group_scheme\" href=\"linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html\">coordinate Hopf algebra</a>\n\\(A = \\mathcal{O}(G)\\), and \\(V\\) a \\(k\\)-vector space. The following\ndata are naturally equivalent:</p>\n<ol>\n<li>an <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.comodule_definition\" href=\"linear_algebraic_groups_comodule_definition.html\">$A$-comodule</a>\n   structure on \\(V\\) (a coaction\n   \\(\\rho : V \\to V \\otimes_k A\\) satisfying coassociativity and counit);</li>\n<li>a natural action of the functor of points\n   \\(<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.points_functor_definition\" href=\"linear_algebraic_groups_points_functor_definition.html\">G(-)</a>\\) on\n   the functor \\(R \\mapsto V \\otimes_k R\\) — that is, for each\n   \\(k\\)-algebra \\(R\\) a group homomorphism\n   \\(G(R) \\to \\operatorname{GL}_R(V \\otimes_k R)\\), natural in \\(R\\);</li>\n<li>when \\(V\\) is finite-dimensional, a morphism of group schemes\n   \\(\\rho^\\sharp : G \\to \\operatorname{GL}(V)\\) over \\(\\operatorname{Spec} k\\).</li>\n</ol>\n<p><em>Proof sketch.</em><br />\nFrom a coaction \\(\\rho : V \\to V \\otimes_k A\\) and a \\(k\\)-algebra map\n\\(g : A \\to R\\), define the endomorphism\n\\(\\rho_g : V \\otimes_k R \\to V \\otimes_k R\\) by</p>\n<p>\\[\n\\rho_g(v \\otimes r) = \\sum_{(v)} v_{(0)} \\otimes g(v_{(1)})\\, r\n\\]</p>\n<p>(using sumless Sweedler notation for \\(\\rho(v) = \\sum v_{(0)} \\otimes\nv_{(1)}\\)). Counit makes \\(\\rho_g\\) become the identity when \\(g\\) is\nthe unit of \\(G(R)\\); coassociativity makes \\(\\rho_{gh}\\) equal\n\\(\\rho_g \\circ \\rho_h\\). Hence \\(\\rho\\) induces a group homomorphism\n\\(G(R) \\to \\operatorname{GL}_R(V \\otimes_k R)\\), natural in \\(R\\).</p>\n<p>Conversely, from a natural family of group homomorphisms one recovers\nthe coaction by evaluating at the universal \\(R\\)-point\n\\(\\operatorname{id}_A : A \\to A\\) in \\(G(A)\\).</p>\n<p>When \\(V\\) is finite-dimensional, the functor of points\n\\(R \\mapsto \\operatorname{GL}_R(V \\otimes_k R)\\) is represented by an\naffine group scheme \\(\\operatorname{GL}(V)\\), and a natural\ntransformation \\(G(-) \\to \\operatorname{GL}(V)(-)\\) of group-valued\nfunctors corresponds by Yoneda to a morphism of group schemes\n\\(G \\to \\operatorname{GL}(V)\\).<br />\n\\(\\square\\)</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.comodule_definition",
+      "title": "Comodule over a Coalgebra",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_comodule_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.points_functor_definition",
+      "title": "Functor of Points of a Group Scheme",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_points_functor_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

@@ -1,0 +1,143 @@
+{
+  "id": "linear_algebraic_groups.additive_group_scheme",
+  "title": "Additive Group Scheme 𝔾_a",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_additive_group_scheme.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Additive Group Scheme \\(\\mathbb{G}_a\\)</h1>\n<p>Let \\(S\\) be a scheme. The <strong>additive group scheme over \\(S\\)</strong>, denoted\n\\(\\mathbb{G}_{a,S}\\), is defined by base change from the integers:</p>\n<p>\\[\n\\mathbb{G}_{a,S} \\;=\\; S \\,\\times_{\\operatorname{Spec} \\mathbb{Z}}\\, \\operatorname{Spec} \\mathbb{Z}[T].\n\\]</p>\n<p>Its coordinate Hopf algebra over the base is the polynomial ring in one\nvariable \\(T\\), with the <strong>additive Hopf structure</strong>:</p>\n<p>\\[\n\\Delta(T) = T \\otimes 1 + 1 \\otimes T, \\qquad\n\\varepsilon(T) = 0, \\qquad\nS(T) = -T.\n\\]</p>\n<p>The structure morphism \\(\\mathbb{G}_{a,S} \\to S\\) is the first projection\nof the fiber product; it is affine (Spec of a polynomial ring is affine\nrelative to the base) and locally of finite type (a polynomial ring in\none variable is finitely generated).</p>\n<p>Hence \\(\\mathbb{G}_{a,S}\\) is an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(S\\) (or, in characteristic \\(0\\), a smooth one-dimensional\nalgebraic group). Its functor of points is identified by\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.additive_group_scheme_points\" href=\"linear_algebraic_groups_additive_group_scheme_points.html\">the additive points formula</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.basic_examples",
+      "title": "Basic Examples",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_basic_examples.html"
+    },
+    {
+      "id": "linear_algebraic_groups.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.additive_group_scheme_points",
+      "title": "Points of 𝔾_a Are the Additive Group of R",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_additive_group_scheme_points.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Polynomial.gaComul",
+      "display_name": "Polynomial.gaComul",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Polynomial.gaCounit",
+      "display_name": "Polynomial.gaCounit",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Polynomial.gaAntipode",
+      "display_name": "Polynomial.gaAntipode",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Polynomial.instBialgebra",
+      "display_name": "Polynomial.instBialgebra",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Polynomial.instHopfAlgebra",
+      "display_name": "Polynomial.instHopfAlgebra",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.additiveGroup",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.additiveGroup",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.Ga",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.Ga",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

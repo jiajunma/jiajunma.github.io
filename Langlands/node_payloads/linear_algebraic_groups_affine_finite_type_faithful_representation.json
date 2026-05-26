@@ -1,32 +1,56 @@
 {
   "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
-  "title": "Affine Finite Type Groups Have Faithful Finite-Dimensional Representations",
+  "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
   "kind": "theorem",
-  "status": "needs_statement_review",
+  "status": "admitted",
   "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html",
   "primary_topic": "linear_algebraic_groups",
   "topics": [
     "linear_algebraic_groups"
   ],
-  "body_html": "<h1>Affine Finite Type Groups Have Faithful Finite-Dimensional Representations</h1>\n<h2>Statement</h2>\n<p>Let $k$ be a field and let $G$ be an affine group scheme of finite type over $k$.\nThen there exists a finite-dimensional $k$-vector space $V$ and a faithful\nrepresentation</p>\n<p>$$\n\\rho:G\\to \\operatorname{GL}(V)\n$$</p>\n<p>such that $\\rho$ is a closed immersion of group schemes.</p>\n<p>Equivalently, every linear algebraic group over $k$ is isomorphic to a closed subgroup\nscheme of $\\operatorname{GL}(V)$ for some finite-dimensional $k$-vector space $V$.</p>\n<p>If $\\operatorname{dim}_k V=n$, this can be written as a closed subgroup scheme</p>\n<p>$$\nG\\to \\operatorname{GL}_n\n$$</p>\n<p>as a closed immersion.</p>\n<h2>Idea</h2>\n<p>The phrase affine finite type means exactly enough to produce a finite-dimensional\nfaithful representation.</p>\n<p>Affineness gives a coordinate ring:</p>\n<p>$$\nG=\\operatorname{Spec} A,\\qquad A=k[G].\n$$</p>\n<p>Finite type says that $A$ is a finitely generated $k$-algebra. The group structure says\nthat $A$ is a Hopf algebra, with comultiplication</p>\n<p>$$\n\\Delta:A\\to A\\otimes_k A.\n$$</p>\n<p>The comultiplication encodes translation of functions on $G$. If</p>\n<p>$$\n\\Delta(f)=\\sum_i f_i\\otimes a_i,\n$$</p>\n<p>then the right translates of $f$ lie in the finite-dimensional span of the finitely\nmany $f_i$.</p>\n<p>Thus the regular representation of $G$ on $k[G]$ is locally finite: every regular\nfunction lies in a finite-dimensional $G$-stable subspace.</p>",
-  "proof_html": "<p>Sketch</p>\n<p>Choose algebra generators</p>\n<p>$$\nf_1,\\ldots,f_r\\in A\n$$</p>\n<p>for the finitely generated $k$-algebra $A$.</p>\n<p>For each generator $f_j$, local finiteness gives a finite-dimensional\n$G$-stable subspace</p>\n<p>$$\nV_j\\subseteq A\n$$</p>\n<p>containing $f_j$.</p>\n<p>Let</p>\n<p>$$\nV=V_1+\\ldots+V_r.\n$$</p>\n<p>Then $V$ is finite-dimensional, $G$-stable, and the elements of $V$ generate $A$ as a\n$k$-algebra.</p>\n<p>The action of $G$ on $V$ gives a representation</p>\n<p>$$\n\\rho:G\\to \\operatorname{GL}(V).\n$$</p>\n<p>Because the matrix coefficients coming from this representation generate the whole\ncoordinate ring $A=k[G]$, the induced map on coordinate rings</p>\n<p>$$\nk[\\operatorname{GL}(V)]\\to k[G]\n$$</p>\n<p>is surjective. For affine schemes, surjectivity on coordinate rings is equivalent to\nbeing a closed immersion. Therefore $\\rho$ realizes $G$ as a closed subgroup scheme of\n$\\operatorname{GL}(V)$.</p>\n<h2>Corollary</h2>\n<p>Every linear algebraic group over $k$ is a closed subgroup scheme of some general\nlinear group:</p>\n<p>$$\nG\\subseteq \\operatorname{GL}(V)\n$$</p>\n<p>for a finite-dimensional $k$-vector space $V$.</p>\n<p>After choosing a basis of $V$, this becomes</p>\n<p>$$\nG\\subseteq \\operatorname{GL}_n.\n$$</p>\n<p>This is the reason the modern intrinsic definition</p>\n<p>$$\n\\text{linear algebraic group}\n=\n\\text{affine finite type group scheme over } k\n$$</p>\n<p>matches the classical extrinsic definition as a closed subgroup of a matrix group.</p>\n<h2>Conceptual Summary</h2>\n<ul>\n<li>Affineness lets us use the coordinate Hopf algebra $k[G]$.</li>\n<li>Finite type gives finitely many algebra generators.</li>\n<li>The Hopf algebra comultiplication makes the regular representation locally finite.</li>\n<li>The generators sit inside a finite-dimensional stable subspace.</li>\n<li>That stable subspace gives a finite-dimensional representation.</li>\n<li>Since the corresponding matrix coefficients generate $k[G]$, the representation is\n  faithful and gives a closed immersion into $\\operatorname{GL}(V)$.</li>\n</ul>\n<h2>Related Nodes</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.linear_algebraic_group_definition\" href=\"linear_algebraic_groups_linear_algebraic_group_definition.html\">Definition of Linear Algebraic Groups</a></li>\n<li><a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.coordinate_rings_and_hopf_algebras\" href=\"linear_algebraic_groups_coordinate_rings_and_hopf_algebras.html\">Coordinate Rings and Hopf Algebras</a></li>\n<li><a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.morphisms_and_closed_subgroups\" href=\"linear_algebraic_groups_morphisms_and_closed_subgroups.html\">Morphisms and Closed Subgroups</a></li>\n</ul>",
+  "body_html": "<h1>Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(\\operatorname{Spec} k\\). Then \\(G\\) admits a\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.faithful_linear_representation_definition\" href=\"linear_algebraic_groups_faithful_linear_representation_definition.html\">faithful finite-dimensional representation</a>.\nEquivalently, \\(G\\) is isomorphic, as a group scheme over\n\\(\\operatorname{Spec} k\\), to a closed subgroup scheme of some\n\\(\\operatorname{GL}_n\\).</p>\n<p>This is the signature theorem of affine algebraic groups (Springer\n§2.3.7, Borel §1.10, Waterhouse §3.4, Milne §4.9). In this project the\nstatement is recorded as the proposition\n\\(\\texttt{HasFaithfulLinearRepresentation}\\,k\\,G\\). The proof is the\nsubject of Phase B (Hopf algebra correspondence + finite-generation\nlemma for comodules + regular representation argument); see\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">the embedding theorem</a>.</p>",
+  "proof_html": "<p>(Statement form here; proof in\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">the embedding theorem</a>.)</p>\n<p>The proof proceeds as follows:</p>\n<ol>\n<li>Apply the\n   <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.hopf_spec_essential_image_affine\" href=\"linear_algebraic_groups_hopf_spec_essential_image_affine.html\">Hopf algebra correspondence</a>\n   to identify \\(G\\) with \\(\\operatorname{Spec} A\\) for a finitely\n   generated commutative Hopf \\(k\\)-algebra \\(A\\).</li>\n<li>Apply\n   <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.finite_dim_subcomodule_lemma\" href=\"linear_algebraic_groups_finite_dim_subcomodule_lemma.html\">finite generation of comodules</a>\n   to find a finite-dimensional \\(G\\)-stable subspace\n   \\(W \\subseteq A\\) containing a \\(k\\)-algebra generating set of \\(A\\).</li>\n<li>The coaction of \\(A\\) on \\(W\\) defines a representation\n   \\(\\rho : G \\to \\operatorname{GL}(W)\\); the corresponding ring\n   homomorphism is surjective because \\(W\\) generates \\(A\\), so\n   \\(\\rho\\) is a closed immersion.\n\\(\\square\\)</li>\n</ol>",
   "deps": [
     {
-      "id": "linear_algebraic_groups.linear_algebraic_group_definition",
-      "title": "Definition of Linear Algebraic Groups",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html"
+      "id": "linear_algebraic_groups.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_definition.html"
     },
     {
-      "id": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
-      "title": "Coordinate Rings and Hopf Algebras",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_rings_and_hopf_algebras.html"
+      "id": "linear_algebraic_groups.faithful_linear_representation_definition",
+      "title": "Faithful Linear Representation",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_faithful_linear_representation_definition.html"
     },
     {
-      "id": "linear_algebraic_groups.morphisms_and_closed_subgroups",
-      "title": "Morphisms and Closed Subgroups",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_morphisms_and_closed_subgroups.html"
+      "id": "linear_algebraic_groups.hopf_spec_essential_image_affine",
+      "title": "Essential Image of Spec Is Affine Group Schemes",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_essential_image_affine.html"
+    },
+    {
+      "id": "linear_algebraic_groups.finite_dim_subcomodule_lemma",
+      "title": "Finite-Dimensional Subspace in a Sub-Comodule",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_finite_dim_subcomodule_lemma.html"
+    },
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
     }
   ],
   "dependents": [],
-  "lean_refs": []
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
+      "display_name": "Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
 }

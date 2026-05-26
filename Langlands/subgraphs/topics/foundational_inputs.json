@@ -9,8 +9,10 @@
   },
   "counts": {
     "internal_nodes": 8,
+    "inlined_nodes": 0,
     "descendant_nodes": 8,
     "child_topics": 0,
+    "inlined_child_topics": 0,
     "non_proof_plan_nodes": 8,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
@@ -151,7 +153,7 @@
       "title": "Linear Algebraic Groups",
       "href": "linear_algebraic_groups/index.html",
       "role": "dependent",
-      "node_count": 13
+      "node_count": 46
     },
     {
       "id": "root_data_and_duality",
@@ -216,14 +218,14 @@
       "to": "topic:linear_algebraic_groups",
       "kind": "boundary_dependent",
       "topic": "linear_algebraic_groups",
-      "count": 3
+      "count": 6
     },
     {
       "from": "foundational_inputs.commutative_algebra",
       "to": "topic:linear_algebraic_groups",
       "kind": "boundary_dependent",
       "topic": "linear_algebraic_groups",
-      "count": 1
+      "count": 2
     },
     {
       "from": "foundational_inputs.fields_and_field_extensions",
@@ -237,7 +239,7 @@
       "to": "topic:linear_algebraic_groups",
       "kind": "boundary_dependent",
       "topic": "linear_algebraic_groups",
-      "count": 2
+      "count": 9
     },
     {
       "from": "foundational_inputs.basic_combinatorics",
@@ -324,7 +326,5 @@
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "child_topic_edges": [],
-  "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "inlined_child_topics": []
 }

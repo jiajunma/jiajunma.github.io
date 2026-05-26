@@ -1,0 +1,73 @@
+{
+  "id": "linear_algebraic_groups.spec_representability_via_global_sections",
+  "title": "Hom Into Spec via Global Sections (Spec ⊣ Γ Adjunction)",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_spec_representability_via_global_sections.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Hom Into Spec via Global Sections (\\(\\operatorname{Spec} \\dashv \\Gamma\\) Adjunction)</h1>\n<p>Let \\(R\\) be a commutative ring and \\(A\\) a commutative \\(R\\)-algebra.\nFor any scheme \\(T\\) over \\(\\operatorname{Spec} R\\) (not necessarily\naffine), there is a natural bijection of sets</p>\n<p>\\[\n\\operatorname{Hom}_{\\mathsf{Sch}/\\operatorname{Spec} R}(T,\\, \\operatorname{Spec} A)\n\\;\\;\\simeq\\;\\;\n\\operatorname{Hom}_{R\\text{-Alg}}\\bigl(A,\\, \\Gamma(T, \\mathcal{O}_T)\\bigr),\n\\]</p>\n<p>where the right-hand side gives \\(\\Gamma(T, \\mathcal{O}_T)\\) its\ncanonical \\(R\\)-algebra structure via the structure morphism\n\\(T \\to \\operatorname{Spec} R\\). The bijection is natural in \\(T\\).</p>",
+  "proof_html": "<p>This is the global-sections-versus-Spec adjunction, restricted to\nmorphisms living over \\(\\operatorname{Spec} R\\). Concretely, given\n\\(f : T \\to \\operatorname{Spec} A\\) over \\(\\operatorname{Spec} R\\), the\npullback on global sections gives\n\\(f^\\sharp : A = \\Gamma(\\operatorname{Spec} A, \\mathcal{O}) \\to \\Gamma(T, \\mathcal{O}_T)\\)\nas an \\(R\\)-algebra hom. Conversely, given an \\(R\\)-algebra hom\n\\(\\varphi : A \\to \\Gamma(T, \\mathcal{O}_T)\\), the universal property of\n\\(\\operatorname{Spec}\\) on the affine target gives a unique scheme\nmorphism \\(T \\to \\operatorname{Spec} A\\) whose induced map on global\nsections is \\(\\varphi\\); compatibility over \\(\\operatorname{Spec} R\\)\nfollows automatically because \\(\\varphi\\) is \\(R\\)-linear.</p>\n<p>Naturality in \\(T\\) is immediate: a morphism \\(g : T' \\to T\\) sends an\n\\(R\\)-algebra hom \\(A \\to \\Gamma(T, \\mathcal{O}_T)\\) to its composition\nwith \\(g^\\sharp : \\Gamma(T, \\mathcal{O}_T) \\to \\Gamma(T', \\mathcal{O}_{T'})\\),\nmatching the precomposition on the scheme-morphism side.<br />\n\\(\\square\\)</p>\n<p><strong>Mathlib state.</strong> This is <code>Spec ⊣ Γ</code> (<code>AlgebraicGeometry.ΓSpec.adjunction</code>\nor <code>Spec.adjunction</code> depending on the formulation). The \"over\n<code>Spec R</code>\" version follows by passing to the slice category. Both are\nin Mathlib master.</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+      "title": "Coordinate Rings and Hopf Algebras",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_rings_and_hopf_algebras.html"
+    },
+    {
+      "id": "foundational_inputs.affine_schemes",
+      "title": "Affine Schemes",
+      "href": "foundational_inputs/foundational_inputs_affine_schemes.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.hopf_spec_grpobj_via_yoneda",
+      "title": "Group Object Structure on Spec A via Yoneda",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_grpobj_via_yoneda.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specRepresentability",
+      "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specRepresentability",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.homOverToAlgHom",
+      "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.homOverToAlgHom",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomToHomOver",
+      "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomToHomOver",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

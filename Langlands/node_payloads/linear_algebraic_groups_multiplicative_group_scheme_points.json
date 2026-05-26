@@ -1,0 +1,27 @@
+{
+  "id": "linear_algebraic_groups.multiplicative_group_scheme_points",
+  "title": "Points of 𝔾_m Are the Units of R",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_multiplicative_group_scheme_points.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Points of \\(\\mathbb{G}_m\\) Are the Units of \\(R\\)</h1>\n<p>Let \\(k\\) be a field and \\(R\\) a commutative \\(k\\)-algebra. There is a\nnatural isomorphism of abelian groups</p>\n<p>\\[\n\\mathbb{G}_{m,\\operatorname{Spec} k}(R) \\;\\cong\\; R^\\times,\n\\]</p>\n<p>where \\(R^\\times\\) denotes the group of multiplicative units of \\(R\\).</p>",
+  "proof_html": "<p>The\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.points_functor_definition\" href=\"linear_algebraic_groups_points_functor_definition.html\">\\(R\\)-points of \\(\\mathbb{G}_m\\) over \\(\\operatorname{Spec} k\\)</a>\nare \\(k\\)-algebra homomorphisms \\(k[T, T^{-1}] \\to R\\). Such a\nhomomorphism is determined by the image of \\(T\\), which must be a unit\n(since \\(T \\cdot T^{-1} = 1\\) forces the image of \\(T^{-1}\\) to be the\ninverse of the image of \\(T\\)). Conversely, any unit \\(u \\in R^\\times\\)\ngives such a homomorphism by sending \\(T \\mapsto u\\) and\n\\(T^{-1} \\mapsto u^{-1}\\). Hence</p>\n<p>\\[\n\\mathbb{G}_m(R) \\;\\cong\\; \\operatorname{Hom}_{k\\text{-Alg}}(k[T, T^{-1}], R) \\;\\cong\\; R^\\times.\n\\]</p>\n<p>To verify the bijection is a group isomorphism, evaluate the\nmultiplication on pairs \\((u, v) \\in R^\\times \\times R^\\times\\). The\ncomultiplication \\(\\Delta(T) = T \\otimes T\\) sends \\(T\\) in the composed\nhom to \\(uv\\), recovering the multiplication of \\(R^\\times\\). The\nidentity corresponds to \\(\\varepsilon(T) = 1\\), and the inverse to\n\\(S(T) = T^{-1}\\). All three match the multiplicative group structure on\n\\(R^\\times\\).<br />\n\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.multiplicative_group_scheme",
+      "title": "Multiplicative Group Scheme 𝔾_m",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_multiplicative_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.points_functor_definition",
+      "title": "Functor of Points of a Group Scheme",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_points_functor_definition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

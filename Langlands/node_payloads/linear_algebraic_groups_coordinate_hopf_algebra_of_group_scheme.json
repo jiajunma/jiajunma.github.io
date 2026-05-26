@@ -1,0 +1,68 @@
+{
+  "id": "linear_algebraic_groups.coordinate_hopf_algebra_of_group_scheme",
+  "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Coordinate Hopf Algebra of an Affine Group Scheme</h1>\n<p>Let \\(R\\) be a commutative ring and let \\(G\\) be an\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\nover \\(\\operatorname{Spec} R\\), with structure morphism \\(\\pi : G \\to\n\\operatorname{Spec} R\\). Since \\(\\pi\\) is affine, the direct image\n\\(\\pi_* \\mathcal{O}_G\\) is a quasi-coherent sheaf of \\(R\\)-algebras on\n\\(\\operatorname{Spec} R\\), corresponding to the \\(R\\)-algebra of global\nsections</p>\n<p>\\[\n\\mathcal{O}(G) \\;=\\; \\Gamma(G,\\, \\mathcal{O}_G).\n\\]</p>\n<p>The group object structure on \\(G\\) — multiplication \\(m : G \\times_R G \\to\nG\\), identity \\(e : \\operatorname{Spec} R \\to G\\), and inverse \\(i : G \\to\nG\\) — pulls back to \\(R\\)-algebra morphisms</p>\n<p>\\[\n\\Delta : \\mathcal{O}(G) \\to \\mathcal{O}(G) \\otimes_R \\mathcal{O}(G), \\qquad\n\\varepsilon : \\mathcal{O}(G) \\to R, \\qquad\nS : \\mathcal{O}(G) \\to \\mathcal{O}(G),\n\\]</p>\n<p>called <strong>comultiplication</strong>, <strong>counit</strong>, and <strong>antipode</strong> respectively.\nThese maps make \\(\\mathcal{O}(G)\\) into a commutative Hopf algebra over\n\\(R\\); the Hopf algebra axioms (coassociativity, counit, and antipode\nidentities) are dual to the group object axioms (associativity, unit,\nand inverse) on \\(G\\).</p>\n<p>The assignment \\(G \\mapsto \\mathcal{O}(G)\\) is contravariantly\nfunctorial: a morphism of affine group schemes \\(G \\to G'\\) over\n\\(\\operatorname{Spec} R\\) induces a morphism of Hopf \\(R\\)-algebras\n\\(\\mathcal{O}(G') \\to \\mathcal{O}(G)\\) in the opposite direction.</p>\n<p>In the project's Lean development, the existence of\n\\(\\mathcal{O}(G)\\) is recorded via the global-sections functor\n\\(\\Gamma\\); the Hopf structure side is handled by\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.hopf_spec_functor\" href=\"linear_algebraic_groups_hopf_spec_functor.html\">the Spec functor on Hopf algebras</a>,\nwhich is the inverse functor.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_group_scheme_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.coordinate_rings_and_hopf_algebras",
+      "title": "Coordinate Rings and Hopf Algebras",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_coordinate_rings_and_hopf_algebras.html"
+    },
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "foundational_inputs/foundational_inputs_hopf_algebras.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.additive_group_scheme",
+      "title": "Additive Group Scheme 𝔾_a",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_additive_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.general_linear_group_scheme",
+      "title": "General Linear Group Scheme GL_n",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_general_linear_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.hopf_spec_functor",
+      "title": "Spec Functor on Hopf Algebras",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_hopf_spec_functor.html"
+    },
+    {
+      "id": "linear_algebraic_groups.multiplicative_group_scheme",
+      "title": "Multiplicative Group Scheme 𝔾_m",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_multiplicative_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.regular_representation_example",
+      "title": "Regular Representation as a Comodule",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_regular_representation_example.html"
+    },
+    {
+      "id": "linear_algebraic_groups.representation_equals_comodule",
+      "title": "G-Representations Are A-Comodules",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_representation_equals_comodule.html"
+    },
+    {
+      "id": "linear_algebraic_groups.roots_of_unity_group_scheme",
+      "title": "Roots of Unity Group Scheme μ_n",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_roots_of_unity_group_scheme.html"
+    }
+  ],
+  "lean_refs": []
+}
