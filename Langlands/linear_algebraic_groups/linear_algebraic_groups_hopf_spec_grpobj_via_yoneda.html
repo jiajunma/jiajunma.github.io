@@ -507,7 +507,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L486"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.hopfSpecGrpObj</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L495"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.hopfSpecGrpObj</code></a>
           
           
           
@@ -534,6 +534,132 @@
           
           
           <pre class="lean-signature"><code>noncomputable def specObjOver : Over (Scheme.Spec.obj (op R))</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L175"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomCompAntipode_postcomp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma algHomCompAntipode_postcomp {B B&#39; : Type u} [CommRing B] [Algebra R B]
+    [CommRing B&#39;] [Algebra R B&#39;] (h : B →ₐ[R] B&#39;) (f : A →ₐ[R] B) :
+    h.comp (Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode f) =
+      Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode (h.comp f)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L116"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.convAlg_postcomp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma convAlg_postcomp {B B&#39; : Type u} [CommRing B] [Algebra R B]
+    [CommRing B&#39;] [Algebra R B&#39;] (h : B →ₐ[R] B&#39;) (f₁ f₂ : A →ₐ[R] B) :
+    h.comp (Langlands.AlgebraicGeometry.HopfConvolution.convAlg f₁ f₂) =
+      Langlands.AlgebraicGeometry.HopfConvolution.convAlg
+        (h.comp f₁) (h.comp f₂)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L163"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.convOneAlg_postcomp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma convOneAlg_postcomp {B B&#39; : Type u} [CommRing B] [Algebra R B]
+    [CommRing B&#39;] [Algebra R B&#39;] (h : B →ₐ[R] B&#39;) :
+    h.comp (Langlands.AlgebraicGeometry.AlgHomGroup.convOneAlg
+        (R</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L82"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.gammaAlgHom</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def gammaAlgHom {T T&#39; : Over (Scheme.Spec.obj (op R))}
+    (g : T&#39; ⟶ T) :
+    letI</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L55"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.gammaAlgebra</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def gammaAlgebra (T : Over (Scheme.Spec.obj (op R))) :
+    Algebra R (Γ(T.left, ⊤))</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L49"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.overGammaMap</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def overGammaMap (T : Over (Scheme.Spec.obj (op R))) :
+    R ⟶ CommRingCat.of (Γ(T.left, ⊤))</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L61"><code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.pointsObj</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def pointsObj (T : Over (Scheme.Spec.obj (op R))) : GrpCat.{u}</code></pre>
         </li>
         
       </ul>

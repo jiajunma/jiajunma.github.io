@@ -523,10 +523,181 @@
     Grp ((CommAlgCat R)ᵒᵖ) ⥤ Grp (Over (Scheme.Spec.obj (op R)))</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L192"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.algHomToHomOverGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def algHomToHomOverGrp (T : Over (Scheme.Spec.obj (op R)))
+    (g : op ((gammaOver R).obj (op T)) ⟶ A) : T ⟶ algSpec R |&gt;.obj A</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L44"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.algSpec</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def algSpec :
+    (CommAlgCat R)ᵒᵖ ⥤ Over (Scheme.Spec.obj (op R))</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L148"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.algSpec_obj_hom_eq</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          <p class="lean-docstring">The Spec/Γ-adjunction structure morphism of `algSpec.obj A`.</p>
+          <pre class="lean-signature"><code>private lemma algSpec_obj_hom_eq :
+    (algSpec R |&gt;.obj A).hom =
+      Scheme.Spec.map (op (CommRingCat.ofHom (algebraMap R A.unop)))</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L57"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.gammaOver</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def gammaOver : (Over (Scheme.Spec.obj (op R)))ᵒᵖ ⥤ CommAlgCat R where</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L155"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.homOverGrpToAlgHom</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def homOverGrpToAlgHom (T : Over (Scheme.Spec.obj (op R)))
+    (f : T ⟶ algSpec R |&gt;.obj A) : op ((gammaOver R).obj (op T)) ⟶ A</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L346"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.hopfSpec</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def hopfSpec :
+    Grp ((CommAlgCat R)ᵒᵖ) ⥤ Grp (Over (Scheme.Spec.obj (op R))) where</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L303"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.hopfSpecGrpObjFromGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def hopfSpecGrpObjFromGrp (A : Grp ((CommAlgCat R)ᵒᵖ)) :
+    GrpObj ((algSpec R).obj A.X)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L109"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.pointsPresheafGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def pointsPresheafGrp (A : Grp ((CommAlgCat R)ᵒᵖ)) :
+    (Over (Scheme.Spec.obj (op R)))ᵒᵖ ⥤ GrpCat.{u}</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L312"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.pointsPresheafGrpMap</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def pointsPresheafGrpMap {A A&#39; : Grp ((CommAlgCat R)ᵒᵖ)}
+    (f : A ⟶ A&#39;) : pointsPresheafGrp R A ⟶ pointsPresheafGrp R A&#39; where</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L242"><code>Langlands.AlgebraicGeometry.HopfSpecFunctor.pointsRepresentabilityGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfSpecFunctor
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def pointsRepresentabilityGrp (A : Grp ((CommAlgCat R)ᵒᵖ)) :
+    (pointsPresheafGrp R A ⋙ forget GrpCat).RepresentableBy
+      ((algSpec R).obj A.X) where</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpec.lean#L1"><code>LanglandsLean.AlgebraicGeometry.HopfSpec</code></a>
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpec.lean#L1"><code>LanglandsLean.AlgebraicGeometry.HopfSpec</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfSpecFunctor.lean#L1"><code>LanglandsLean.AlgebraicGeometry.HopfSpecFunctor</code></a>
       </p>
       
     </div>

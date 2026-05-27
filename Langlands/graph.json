@@ -1650,7 +1650,20 @@
         "linear_algebraic_groups"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.AlgHomGroup.instGroup"
+        "Langlands.AlgebraicGeometry.AlgHomGroup.instGroup",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.alghom_eq_via_toConv",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.alghom_inv_mul_cancel",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.alghom_mul_assoc",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.alghom_mul_one",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.alghom_one_mul",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.convAlg_toConv",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.convOneAlg",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.convOneAlg_apply",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.convOneAlg_toLinearMap",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.inv_def",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.mul_def",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.one_def",
+        "Langlands.AlgebraicGeometry.AlgHomGroup.toConv_convOneAlg"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -2218,7 +2231,17 @@
       ],
       "lean_declarations": [
         "Langlands.AlgebraicGeometry.algSpec",
-        "Langlands.AlgebraicGeometry.hopfSpec"
+        "Langlands.AlgebraicGeometry.hopfSpec",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.algHomToHomOverGrp",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.algSpec",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.algSpec_obj_hom_eq",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.gammaOver",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.homOverGrpToAlgHom",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.hopfSpec",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.hopfSpecGrpObjFromGrp",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.pointsPresheafGrp",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.pointsPresheafGrpMap",
+        "Langlands.AlgebraicGeometry.HopfSpecFunctor.pointsRepresentabilityGrp"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -2250,7 +2273,14 @@
       "lean_declarations": [
         "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.pointsPresheaf",
         "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.hopfSpecGrpObj",
-        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specObjOver"
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specObjOver",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomCompAntipode_postcomp",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.convAlg_postcomp",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.convOneAlg_postcomp",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.gammaAlgHom",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.gammaAlgebra",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.overGammaMap",
+        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.pointsObj"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [

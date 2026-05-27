@@ -501,6 +501,224 @@
           <pre class="lean-signature"><code>noncomputable instance instGroup : Group (A →ₐ[R] B) where</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L100"><code>Langlands.AlgebraicGeometry.AlgHomGroup.alghom_eq_via_toConv</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>private lemma alghom_eq_via_toConv {f g : A →ₐ[R] B}
+    (h : toConv f.toLinearMap = toConv g.toLinearMap) : f = g</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L120"><code>Langlands.AlgebraicGeometry.AlgHomGroup.alghom_inv_mul_cancel</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>private lemma alghom_inv_mul_cancel (f : A →ₐ[R] B) :
+    convAlg (algHomCompAntipode f) f = convOneAlg</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L107"><code>Langlands.AlgebraicGeometry.AlgHomGroup.alghom_mul_assoc</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>private lemma alghom_mul_assoc (f g h : A →ₐ[R] B) :
+    convAlg (convAlg f g) h = convAlg f (convAlg g h)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L116"><code>Langlands.AlgebraicGeometry.AlgHomGroup.alghom_mul_one</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>private lemma alghom_mul_one (f : A →ₐ[R] B) : convAlg f convOneAlg = f</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L112"><code>Langlands.AlgebraicGeometry.AlgHomGroup.alghom_one_mul</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>private lemma alghom_one_mul (f : A →ₐ[R] B) : convAlg convOneAlg f = f</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L68"><code>Langlands.AlgebraicGeometry.AlgHomGroup.convAlg_toConv</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma convAlg_toConv (f g : A →ₐ[R] B) :
+    toConv (convAlg f g).toLinearMap =
+      toConv f.toLinearMap * toConv g.toLinearMap</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L41"><code>Langlands.AlgebraicGeometry.AlgHomGroup.convOneAlg</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def convOneAlg : A →ₐ[R] B</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L45"><code>Langlands.AlgebraicGeometry.AlgHomGroup.convOneAlg_apply</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma convOneAlg_apply (a : A) :
+    (convOneAlg (R</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L53"><code>Langlands.AlgebraicGeometry.AlgHomGroup.convOneAlg_toLinearMap</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma convOneAlg_toLinearMap :
+    (convOneAlg : A →ₐ[R] B).toLinearMap =
+      ((1 : WithConv (A →ₗ[R] B)).ofConv)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L96"><code>Langlands.AlgebraicGeometry.AlgHomGroup.inv_def</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma inv_def (f : A →ₐ[R] B) : f⁻¹ = algHomCompAntipode f</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L90"><code>Langlands.AlgebraicGeometry.AlgHomGroup.mul_def</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma mul_def (f g : A →ₐ[R] B) : f * g = convAlg f g</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L93"><code>Langlands.AlgebraicGeometry.AlgHomGroup.one_def</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma one_def : (1 : A →ₐ[R] B) = convOneAlg</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L60"><code>Langlands.AlgebraicGeometry.AlgHomGroup.toConv_convOneAlg</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.AlgHomGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>lemma toConv_convOneAlg :
+    toConv (convOneAlg : A →ₐ[R] B).toLinearMap =
+      (1 : WithConv (A →ₗ[R] B))</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
