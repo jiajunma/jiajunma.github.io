@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-label="Lean feedback loop for proof agents">
+  <rect width="1100" height="620" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L7,4 z" fill="#0b5cad"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial,sans-serif;fill:#102a43}
+      .label{font:700 22px Arial,sans-serif;fill:#102a43}
+      .label-light{font:700 22px Arial,sans-serif;fill:#ffffff}
+      .text{font:17px Arial,sans-serif;fill:#334e68}
+      .code{font:17px Menlo,Consolas,monospace;fill:#dbeafe}
+      .small{font:15px Arial,sans-serif;fill:#526d82}
+    </style>
+  </defs>
+  <text x="550" y="52" text-anchor="middle" class="title">Lean Feedback Is the Agent's Teacher</text>
+
+  <circle cx="550" cy="310" r="96" fill="#e6f0ff" stroke="#2f80ed" stroke-width="4"/>
+  <text x="550" y="298" text-anchor="middle" class="label">Controller</text>
+  <text x="550" y="329" text-anchor="middle" class="text">choose next attempt</text>
+
+  <rect x="74" y="112" width="235" height="116" rx="14" fill="#0f172a" stroke="#334155" stroke-width="4"/>
+  <text x="192" y="148" text-anchor="middle" class="label-light">Candidate</text>
+  <text x="104" y="185" class="code">rw [wrong_lemma]</text>
+  <text x="104" y="212" class="code">exact h</text>
+
+  <rect x="792" y="112" width="235" height="116" rx="14" fill="#fff4e6" stroke="#f2994a" stroke-width="4"/>
+  <text x="910" y="148" text-anchor="middle" class="label">Lean</text>
+  <text x="910" y="184" text-anchor="middle" class="text">type checker</text>
+  <text x="910" y="212" text-anchor="middle" class="text">proof state engine</text>
+
+  <rect x="792" y="392" width="235" height="116" rx="14" fill="#f8f8ff" stroke="#6c63ff" stroke-width="4"/>
+  <text x="910" y="428" text-anchor="middle" class="label">Feedback</text>
+  <text x="910" y="464" text-anchor="middle" class="text">error message</text>
+  <text x="910" y="492" text-anchor="middle" class="text">unsolved goals</text>
+
+  <rect x="74" y="392" width="235" height="116" rx="14" fill="#e8f8e8" stroke="#219653" stroke-width="4"/>
+  <text x="192" y="428" text-anchor="middle" class="label">Repair</text>
+  <text x="192" y="464" text-anchor="middle" class="text">retrieve, rewrite</text>
+  <text x="192" y="492" text-anchor="middle" class="text">or create lemma</text>
+
+  <g stroke="#0b5cad" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M492 246 C440 190 390 160 309 170"/>
+    <path d="M309 170 C456 88 650 88 792 170"/>
+    <path d="M910 228 V382"/>
+    <path d="M792 450 C708 460 644 428 596 374"/>
+    <path d="M504 374 C430 450 362 450 309 450"/>
+    <path d="M192 392 V236"/>
+  </g>
+
+  <text x="550" y="570" text-anchor="middle" class="small">A failed Lean attempt is not wasted. It becomes structured information for the next search step.</text>
+</svg>

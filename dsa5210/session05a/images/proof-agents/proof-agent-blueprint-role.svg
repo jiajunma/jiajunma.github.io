@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560" role="img" aria-labelledby="title desc">
+  <title id="title">Blueprint as project memory for proof agents</title>
+  <desc id="desc">Diagram showing how a Lean blueprint connects informal exposition, Lean declarations, dependency graph, and proof-agent scheduling.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#2459a6"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1f2937" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1400" height="560" fill="#f7fbff"/>
+
+  <text x="700" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#102a43">Blueprint layer: shared project memory</text>
+  <text x="700" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#526d82">It links the human proof plan, Lean declarations, dependency graph, and agent task queue.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="132" width="285" height="288" rx="14" fill="#ffffff" stroke="#9fbce8" stroke-width="2"/>
+    <text x="202" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">Informal exposition</text>
+    <text x="92" y="214" font-family="Menlo, Consolas, monospace" font-size="17" fill="#334155">\begin{theorem}</text>
+    <text x="92" y="244" font-family="Menlo, Consolas, monospace" font-size="17" fill="#334155">  \label{thm:main}</text>
+    <text x="92" y="274" font-family="Menlo, Consolas, monospace" font-size="17" fill="#334155">  \lean{Main.thm}</text>
+    <text x="92" y="304" font-family="Menlo, Consolas, monospace" font-size="17" fill="#334155">  \uses{lem:a, lem:b}</text>
+    <text x="92" y="334" font-family="Menlo, Consolas, monospace" font-size="17" fill="#334155">\end{theorem}</text>
+    <rect x="92" y="365" width="218" height="30" rx="15" fill="#e8f8e8" stroke="#41a55a"/>
+    <text x="201" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#1d6b34">human-readable intent</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="395" y="132" width="285" height="288" rx="14" fill="#ffffff" stroke="#9fd3c7" stroke-width="2"/>
+    <text x="537" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0f766e">Lean project</text>
+    <rect x="425" y="196" width="225" height="154" rx="8" fill="#0f172a"/>
+    <text x="445" y="226" font-family="Menlo, Consolas, monospace" font-size="17" fill="#dbeafe">theorem Main.thm :</text>
+    <text x="445" y="258" font-family="Menlo, Consolas, monospace" font-size="17" fill="#dbeafe">  target := by</text>
+    <text x="445" y="290" font-family="Menlo, Consolas, monospace" font-size="17" fill="#dbeafe">  -- proof state</text>
+    <text x="445" y="322" font-family="Menlo, Consolas, monospace" font-size="17" fill="#dbeafe">  ...</text>
+    <rect x="425" y="365" width="225" height="30" rx="15" fill="#e0f2fe" stroke="#38bdf8"/>
+    <text x="537" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#075985">machine-checkable target</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="730" y="132" width="285" height="288" rx="14" fill="#ffffff" stroke="#fac985" stroke-width="2"/>
+    <text x="872" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#b45309">Dependency graph</text>
+    <circle cx="872" cy="218" r="31" fill="#1cac78" stroke="#0f6f4d" stroke-width="2"/>
+    <text x="872" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">main</text>
+    <circle cx="805" cy="305" r="29" fill="#a3d6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="805" y="311" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">lem:a</text>
+    <circle cx="940" cy="305" r="29" fill="#ffaa33" stroke="#b45309" stroke-width="2"/>
+    <text x="940" y="311" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">lem:b</text>
+    <path d="M822 282 L856 245" stroke="#2459a6" stroke-width="2.4" marker-end="url(#arrow)" fill="none"/>
+    <path d="M922 282 L888 245" stroke="#2459a6" stroke-width="2.4" marker-end="url(#arrow)" fill="none"/>
+    <rect x="760" y="365" width="225" height="30" rx="15" fill="#fff4e6" stroke="#f59e0b"/>
+    <text x="872" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#92400e">progress and prerequisites</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1065" y="132" width="285" height="288" rx="14" fill="#ffffff" stroke="#d8b4fe" stroke-width="2"/>
+    <text x="1207" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7e22ce">Proof agent</text>
+    <rect x="1095" y="202" width="225" height="38" rx="8" fill="#f5f3ff" stroke="#a78bfa"/>
+    <text x="1207" y="227" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#4c1d95">choose next node</text>
+    <rect x="1095" y="258" width="225" height="38" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="1207" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">retrieve dependencies</text>
+    <rect x="1095" y="314" width="225" height="38" rx="8" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="1207" y="339" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#991b1b">repair from Lean errors</text>
+    <rect x="1095" y="365" width="225" height="30" rx="15" fill="#f3e8ff" stroke="#a855f7"/>
+    <text x="1207" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#6b21a8">task queue and evidence</text>
+  </g>
+
+  <path d="M348 276 L392 276" stroke="#2459a6" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+  <path d="M683 276 L727 276" stroke="#2459a6" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+  <path d="M1018 276 L1062 276" stroke="#2459a6" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+
+  <rect x="238" y="460" width="925" height="52" rx="12" fill="#eaf4ff" stroke="#7aa7e8"/>
+  <text x="700" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#174a7c">The agent should read the blueprint before it starts proving, and update evidence after every checked attempt.</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="Proof agent pipeline from problem to checked proof">
+  <rect width="1200" height="560" fill="#f7fbff"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L7,4 z" fill="#0b5cad"/>
+    </marker>
+    <marker id="arrow-feedback" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L7,4 z" fill="#e07000"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L7,4 z" fill="#219653"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial,sans-serif;fill:#102a43}
+      .box-title{font:700 20px Arial,sans-serif;fill:#102a43}
+      .box-title-light{font:700 20px Arial,sans-serif;fill:#ffffff}
+      .box-text{font:16px Arial,sans-serif;fill:#334e68}
+      .note{font:18px Arial,sans-serif;fill:#334e68}
+      .code{font:15px Menlo,Consolas,monospace;fill:#e0f2fe}
+    </style>
+  </defs>
+  <text x="600" y="54" text-anchor="middle" class="title">LLM Proof Agent Pipeline</text>
+
+  <g>
+    <rect x="44" y="116" width="160" height="104" rx="12" fill="#ffffff" stroke="#2f80ed" stroke-width="3"/>
+    <text x="124" y="153" text-anchor="middle" class="box-title">Problem</text>
+    <text x="124" y="183" text-anchor="middle" class="box-text">human intent</text>
+  </g>
+  <g>
+    <rect x="254" y="116" width="160" height="104" rx="12" fill="#e8f8e8" stroke="#219653" stroke-width="3"/>
+    <text x="334" y="153" text-anchor="middle" class="box-title">Plan</text>
+    <text x="334" y="183" text-anchor="middle" class="box-text">strategy, lemmas</text>
+  </g>
+  <g>
+    <rect x="464" y="116" width="160" height="104" rx="12" fill="#fff4e6" stroke="#f2994a" stroke-width="3"/>
+    <text x="544" y="153" text-anchor="middle" class="box-title">Formalize</text>
+    <text x="544" y="183" text-anchor="middle" class="box-text">Lean statement</text>
+  </g>
+  <g>
+    <rect x="674" y="116" width="160" height="104" rx="12" fill="#f8f8ff" stroke="#6c63ff" stroke-width="3"/>
+    <text x="754" y="153" text-anchor="middle" class="box-title">Retrieve</text>
+    <text x="754" y="183" text-anchor="middle" class="box-text">definitions, facts</text>
+  </g>
+  <g>
+    <rect x="884" y="116" width="160" height="104" rx="12" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+    <text x="964" y="153" text-anchor="middle" class="box-title-light">Lean</text>
+    <text x="964" y="183" text-anchor="middle" class="code">check proof</text>
+  </g>
+
+  <g stroke="#0b5cad" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M204 168 H246"/>
+    <path d="M414 168 H456"/>
+    <path d="M624 168 H666"/>
+    <path d="M834 168 H876"/>
+  </g>
+
+  <rect x="342" y="314" width="510" height="112" rx="14" fill="#ffffff" stroke="#0b5cad" stroke-width="3"/>
+  <text x="597" y="352" text-anchor="middle" class="box-title">Feedback Loop</text>
+  <text x="597" y="384" text-anchor="middle" class="box-text">errors, proof states, failed branches, useful partial proofs</text>
+  <text x="597" y="412" text-anchor="middle" class="box-text">repair, retrieve again, create lemma, or backtrack</text>
+
+  <path d="M964 220 V284 C964 330 904 370 858 370" stroke="#0b5cad" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <g stroke="#e07000" stroke-width="3" fill="none" marker-end="url(#arrow-feedback)">
+    <path d="M420 314 C390 286 352 260 334 222"/>
+    <path d="M650 314 C672 278 720 254 754 222"/>
+  </g>
+
+  <rect x="940" y="314" width="204" height="112" rx="14" fill="#e8f8e8" stroke="#219653" stroke-width="3"/>
+  <text x="1042" y="352" text-anchor="middle" class="box-title">Accepted</text>
+  <text x="1042" y="384" text-anchor="middle" class="box-text">machine-checked</text>
+  <text x="1042" y="412" text-anchor="middle" class="box-text">proof artifact</text>
+  <path d="M964 220 C1034 246 1042 276 1042 306" stroke="#219653" stroke-width="3" fill="none" marker-end="url(#arrow-ok)"/>
+
+  <text x="600" y="502" text-anchor="middle" class="note">The LLM proposes. Retrieval supplies memory. Lean checks. Search and repair make the loop persistent.</text>
+</svg>
