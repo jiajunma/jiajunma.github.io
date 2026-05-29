@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="Design axes for comparing proof agent systems">
+  <rect width="1200" height="620" fill="#f7fbff"/>
+  <defs>
+    <style>
+      .title{font:700 34px Arial,sans-serif;fill:#102a43}
+      .axis{font:700 22px Arial,sans-serif;fill:#102a43}
+      .text{font:17px Arial,sans-serif;fill:#334e68}
+      .tag{font:700 15px Arial,sans-serif;fill:#ffffff}
+    </style>
+  </defs>
+  <text x="600" y="54" text-anchor="middle" class="title">Where Proof Agent Systems Differ</text>
+
+  <g transform="translate(70 105)">
+    <rect width="1060" height="76" rx="12" fill="#ffffff" stroke="#2f80ed" stroke-width="3"/>
+    <text x="28" y="31" class="axis">1. Where is the intelligence?</text>
+    <text x="28" y="58" class="text">trained model | agent loop | retrieval | Lean tooling | human workflow</text>
+    <rect x="800" y="18" width="88" height="34" rx="17" fill="#2f80ed"/><text x="844" y="40" text-anchor="middle" class="tag">DeepSeek</text>
+    <rect x="898" y="18" width="70" height="34" rx="17" fill="#219653"/><text x="933" y="40" text-anchor="middle" class="tag">Seed</text>
+    <rect x="978" y="18" width="62" height="34" rx="17" fill="#6c63ff"/><text x="1009" y="40" text-anchor="middle" class="tag">AXLE</text>
+  </g>
+
+  <g transform="translate(70 205)">
+    <rect width="1060" height="76" rx="12" fill="#ffffff" stroke="#219653" stroke-width="3"/>
+    <text x="28" y="31" class="axis">2. What unit is generated?</text>
+    <text x="28" y="58" class="text">paragraph | formal statement | tactic | lemma | subgoal | whole proof | repo edit</text>
+    <rect x="806" y="18" width="96" height="34" rx="17" fill="#219653"/><text x="854" y="40" text-anchor="middle" class="tag">Lean-STaR</text>
+    <rect x="912" y="18" width="92" height="34" rx="17" fill="#2f80ed"/><text x="958" y="40" text-anchor="middle" class="tag">Prover</text>
+  </g>
+
+  <g transform="translate(70 305)">
+    <rect width="1060" height="76" rx="12" fill="#ffffff" stroke="#f2994a" stroke-width="3"/>
+    <text x="28" y="31" class="axis">3. How is feedback used?</text>
+    <text x="28" y="58" class="text">human rating | Lean error | proof state | verified lemma | RL reward | memory</text>
+    <rect x="806" y="18" width="94" height="34" rx="17" fill="#f2994a"/><text x="853" y="40" text-anchor="middle" class="tag">V1.5</text>
+    <rect x="910" y="18" width="116" height="34" rx="17" fill="#6c63ff"/><text x="968" y="40" text-anchor="middle" class="tag">Seed 1.5</text>
+  </g>
+
+  <g transform="translate(70 405)">
+    <rect width="1060" height="76" rx="12" fill="#ffffff" stroke="#6c63ff" stroke-width="3"/>
+    <text x="28" y="31" class="axis">4. What search is used?</text>
+    <text x="28" y="58" class="text">Best-of-N | backtracking | tree search | graph search | reflection | deep/broad scaling</text>
+    <rect x="790" y="18" width="78" height="34" rx="17" fill="#6c63ff"/><text x="829" y="40" text-anchor="middle" class="tag">COPRA</text>
+    <rect x="878" y="18" width="96" height="34" rx="17" fill="#2f80ed"/><text x="926" y="40" text-anchor="middle" class="tag">Aristotle</text>
+  </g>
+
+  <g transform="translate(70 505)">
+    <rect width="1060" height="76" rx="12" fill="#ffffff" stroke="#0f766e" stroke-width="3"/>
+    <text x="28" y="31" class="axis">5. What domain is served?</text>
+    <text x="28" y="58" class="text">tutoring | Lean benchmark | IMO/Putnam | research conjecture | scientific verification | proof engineering</text>
+    <rect x="780" y="18" width="92" height="34" rx="17" fill="#0f766e"/><text x="826" y="40" text-anchor="middle" class="tag">Axiom</text>
+    <rect x="882" y="18" width="96" height="34" rx="17" fill="#334155"/><text x="930" y="40" text-anchor="middle" class="tag">Leanstral</text>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="Classroom demo trace for sum of first n odd numbers">
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L7,4 z" fill="#0b5cad"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial,sans-serif;fill:#102a43}
+      .head{font:700 20px Arial,sans-serif;fill:#102a43}
+      .head-light{font:700 20px Arial,sans-serif;fill:#ffffff}
+      .text{font:16px Arial,sans-serif;fill:#334e68}
+      .code{font:16px Menlo,Consolas,monospace;fill:#dbeafe}
+      .bad{font:16px Menlo,Consolas,monospace;fill:#fecaca}
+      .good{font:16px Menlo,Consolas,monospace;fill:#86efac}
+    </style>
+  </defs>
+  <text x="600" y="54" text-anchor="middle" class="title">Running Example: First n Odd Numbers</text>
+
+  <rect x="54" y="108" width="250" height="128" rx="14" fill="#f7fbff" stroke="#2f80ed" stroke-width="3"/>
+  <text x="179" y="145" text-anchor="middle" class="head">Natural statement</text>
+  <text x="179" y="174" text-anchor="middle" class="text">For every n, the sum</text>
+  <text x="179" y="198" text-anchor="middle" class="text">of first n odd numbers</text>
+  <text x="179" y="222" text-anchor="middle" class="text">is n^2.</text>
+
+  <rect x="364" y="108" width="250" height="128" rx="14" fill="#e8f8e8" stroke="#219653" stroke-width="3"/>
+  <text x="489" y="145" text-anchor="middle" class="head">Proof plan</text>
+  <text x="489" y="174" text-anchor="middle" class="text">induction on n</text>
+  <text x="489" y="198" text-anchor="middle" class="text">step adds 2n + 1</text>
+  <text x="489" y="222" text-anchor="middle" class="text">then repair algebra</text>
+
+  <rect x="674" y="100" width="470" height="148" rx="14" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+  <text x="909" y="137" text-anchor="middle" class="head-light">Lean target</text>
+  <text x="704" y="169" class="code">example (n : Nat) :</text>
+  <text x="704" y="196" class="code">  (Finset.range n).sum</text>
+  <text x="704" y="223" class="code">    (fun i =&gt; 2*i + 1) = n^2 := by</text>
+
+  <g stroke="#0b5cad" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M304 172 H356"/>
+    <path d="M614 172 H666"/>
+  </g>
+
+  <rect x="92" y="332" width="310" height="160" rx="14" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+  <text x="247" y="368" text-anchor="middle" class="head-light">Broken attempt</text>
+  <text x="122" y="405" class="bad">  exact Nat.sum_odd n</text>
+  <text x="122" y="433" class="code">-- retrieved theorem?</text>
+  <text x="122" y="461" class="code">-- wrong name or shape</text>
+
+  <rect x="462" y="332" width="300" height="160" rx="14" fill="#fff4e6" stroke="#f2994a" stroke-width="3"/>
+  <text x="612" y="368" text-anchor="middle" class="head">Lean feedback</text>
+  <text x="612" y="405" text-anchor="middle" class="text">unknown constant</text>
+  <text x="612" y="433" text-anchor="middle" class="text">or type mismatch</text>
+  <text x="612" y="461" text-anchor="middle" class="text">goal uses Finset.range</text>
+
+  <rect x="822" y="332" width="300" height="160" rx="14" fill="#e8f8e8" stroke="#219653" stroke-width="3"/>
+  <text x="972" y="368" text-anchor="middle" class="head">Repair plan</text>
+  <text x="972" y="405" text-anchor="middle" class="text">induction n</text>
+  <text x="972" y="433" text-anchor="middle" class="text">Finset.sum_range_succ</text>
+  <text x="972" y="461" text-anchor="middle" class="text">ring/nlinarith branch</text>
+
+  <g stroke="#0b5cad" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M402 412 H454"/>
+    <path d="M762 412 H814"/>
+  </g>
+
+  <rect x="200" y="542" width="800" height="70" rx="14" fill="#f7fbff" stroke="#2f80ed" stroke-width="3"/>
+  <text x="600" y="572" text-anchor="middle" class="text">One example connects induction, Finset.range indexing, library retrieval,</text>
+  <text x="600" y="596" text-anchor="middle" class="text">Lean feedback, and algebra repair/search.</text>
+</svg>
