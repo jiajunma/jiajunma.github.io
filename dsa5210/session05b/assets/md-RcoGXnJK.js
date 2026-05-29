@@ -1,0 +1,17 @@
+import{_ as r}from"./slidev/CodeBlockWrapper.vue_vue_type_script_setup_true_lang-D5P2vNPT.js";import{o as c,b as d,w as l,g as e,d as p,m as u,D as n,v as m,x as f,z as i}from"./modules/vue-CnHgG7HT.js";import{I as g}from"./slidev/default-DLcbewft.js";import{u as h,f as v}from"./slidev/context-BZxAtxhE.js";import"./modules/unplugin-icons-BlPU76cY.js";import"./index-CRfOPVpS.js";import"./modules/shiki-Czlm1gp1.js";const _={class:"two-col"},k={class:"code-compact"},O={__name:"session05B.md__slidev_59",setup(w){const{$clicksContext:t,$frontmatter:a}=h();return t.setup(),(y,s)=>{const o=r;return c(),d(g,m(f(i(v)(i(a),58))),{default:l(()=>[s[2]||(s[2]=e("h1",null,"The Reviewer Prompt: One Dimension, Audited to the End",-1)),e("div",_,[e("div",null,[e("div",k,[p(o,u({},{title:"",ranges:[]}),{default:l(()=>[...s[0]||(s[0]=[e("pre",{class:"shiki shiki-themes vitesse-dark vitesse-light slidev-code",style:{"--shiki-dark":"#dbd7caee","--shiki-light":"#393a34","--shiki-dark-bg":"#121212","--shiki-light-bg":"#ffffff"}},[e("code",{class:"language-text"},[e("span",{class:"line"},[e("span",null,"system (every reviewer):")]),n(`
+`),e("span",{class:"line"},[e("span",null,"  independent mathematical reviewer")]),n(`
+`),e("span",{class:"line"},[e("span",null,"  return a JSON object only")]),n(`
+`),e("span",{class:"line"},[e("span",null,"  check only the assigned dimension")]),n(`
+`),e("span",{class:"line"},[e("span",null,"  pessimistic: incomplete detail = inconclusive")]),n(`
+`),e("span",{class:"line"},[e("span")]),n(`
+`),e("span",{class:"line"},[e("span",null,"user (_dimension_review_prompt):")]),n(`
+`),e("span",{class:"line"},[e("span",null,'  "Check exactly one dimension and ignore')]),n(`
+`),e("span",{class:"line"},[e("span",null,'   the others."')]),n(`
+`),e("span",{class:"line"},[e("span",null,'  "Review ... beginning to end. If you find')]),n(`
+`),e("span",{class:"line"},[e("span",null,"   an error, record it and continue auditing")]),n(`
+`),e("span",{class:"line"},[e("span",null,'   the remaining steps."')]),n(`
+`),e("span",{class:"line"},[e("span",null,"  verdict: correct only if NO error")]),n(`
+`),e("span",{class:"line"},[e("span",null,"         · incorrect if >=1 error")]),n(`
+`),e("span",{class:"line"},[e("span",null,"         · inconclusive if too little detail")]),n(`
+`),e("span",{class:"line"},[e("span",null,"  + reviewer_id / dimension / focus / focus_rule")]),n(`
+`),e("span",{class:"line"},[e("span",null,"  + claim / proof / context")])])],-1)])]),_:1},16)])]),s[1]||(s[1]=e("div",null,[e("ul",{class:"tight-list"},[e("li",null,[e("strong",null,"One dimension, ignore the rest."),n(" A per-dimension "),e("code",null,"focus_rule"),n(' turns "computation" into a closed checklist, not a vibe.')]),e("li",null,[e("strong",null,"Audit to the end."),n(' "Record it and continue" ⇒ one repair turn sees every defect at once, not one per round.')]),e("li",null,[e("strong",null,"Pessimism stated, then enforced."),n(' "Correct only if no error at all" — '),e("code",null,"_dimension_review_failed"),n(" + the aggregator make it binding.")]),e("li",null,[e("strong",null,"Independence is real."),n(" Each reviewer is its own call with its own "),e("code",null,"reviewer_id"),n(", never shown the others' verdicts.")]),e("li",null,[e("strong",null,"Identity injected per call."),n(),e("code",null,"reviewer_id / focus / dimension"),n(" formatted in ⇒ a self-describing record.")])])],-1))])]),_:1},16)}}};export{O as default};
