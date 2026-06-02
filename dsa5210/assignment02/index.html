@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2: Formalizing a Proof with a Lean Proving Agent</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+           line-height:1.6; color:#172033; background:#f3f6fb; }
+    .page { max-width:880px; margin:0 auto; padding:40px 20px 64px; }
+    .panel { background:#fff; border:1px solid #d8e2ef; border-radius:14px; padding:42px;
+             box-shadow:0 16px 40px rgba(19,45,80,0.10); }
+    .back { display:inline-block; margin-bottom:18px; color:#0b63b6; text-decoration:none; font-weight:600; }
+    .back:hover { text-decoration:underline; }
+    h1 { margin:0 0 18px; color:#003366; font-size:clamp(2rem,4vw,2.6rem); line-height:1.12; }
+    h2 { margin-top:34px; color:#003366; font-size:1.32rem; }
+    p { margin:0 0 16px; }
+    a { color:#0b63b6; }
+    ul, ol { padding-left:1.45rem; } li { margin:7px 0; }
+    code { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; background:#edf3fb;
+           border:1px solid #d9e6f5; border-radius:5px; padding:0.12rem 0.34rem; font-size:0.94em; }
+    table { width:100%; border-collapse:collapse; margin:8px 0 20px; }
+    th, td { padding:10px 12px; border-bottom:1px solid #e1e8f2; text-align:left; }
+    th { background:#f5f8fc; color:#003366; }
+    strong { color:#10243f; }
+    hr { border:0; border-top:1px solid #e1e8f2; margin:26px 0; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="panel">
+      <a class="back" href="../">&larr; DSA5210 home</a>
+      <h1>Assignment 2: Formalizing a Proof with a Lean Proving Agent</h1>
+<p><strong>Course:</strong> DSA5210 AI for Mathematics<br><strong>Canvas course:</strong> 93088<br><strong>Canvas assignment:</strong> 253513<br><strong>Weight:</strong> 20%<br><strong>Points:</strong> 100<br><strong>Due:</strong> Friday, 12 June 2026, 23:59 Singapore time<br><strong>Submission:</strong> online file upload, restricted to <code>.lean</code>, <code>.md</code>, <code>.pdf</code>, and <code>.zip</code><br><strong>Status on Canvas:</strong> draft (unpublished — being finalized)</p>
+<h2>Task</h2>
+<p>Use an agentic coding assistant — such as Claude, Codex, opencode, or openclaw — to
+obtain, set up, and drive a <strong>Lean proving agent</strong> that formalizes a mathematical
+theorem in <strong>Lean 4 with Mathlib</strong>, iterating until the <strong>Lean kernel</strong> accepts the
+proof with <strong>no <code>sorry</code></strong> and no errors.</p>
+<p>You <strong>drive the agent with natural-language prompts</strong>; the agent sets up the Lean
+project, writes the Lean code, and checks it against the kernel. You do not need to
+write the proof tactics by hand.</p>
+<p><strong>Recommended:</strong> formalize the theorem you proved in <strong>Assignment 1</strong> (your
+<code>blueprint.md</code>). You already have a complete, human-readable natural-language proof;
+Assignment 2 turns that same proof into a machine-checked Lean proof. You may instead
+choose another precise theorem if you prefer, subject to the same standard below.</p>
+<h2>Lean proving agents</h2>
+<p>Suitable Lean agent systems include <strong>numina-lean-agent</strong> and <strong>Archon</strong>. Both launch a
+coding agent (Claude Code) in a loop that writes Lean and verifies it with the Lean
+kernel through <code>lean-lsp-mcp</code>. These harnesses are <strong>agent-agnostic</strong>: because they
+drive a coding assistant, they are easy to repoint at another agent (Codex, opencode,
+…). You may use any Lean proving agent you can install and run; part of the task is
+using a coding assistant to figure out the setup.</p>
+<p>Worked examples from class (Euler&#39;s partition theorem, formalized two ways, with
+in-browser Lean links):</p>
+<ul>
+<li><a href="https://jiajunma.github.io/dsa5210/numina/">https://jiajunma.github.io/dsa5210/numina/</a> (Numina) ·
+<a href="https://jiajunma.github.io/dsa5210/rethlas-archon/">https://jiajunma.github.io/dsa5210/rethlas-archon/</a> (Archon)</li>
+<li><a href="https://jiajunma.github.io/dsa5210/euler-lean/">https://jiajunma.github.io/dsa5210/euler-lean/</a> (the Lean proofs + live editor)</li>
+</ul>
+<h2>What &quot;done&quot; means</h2>
+<ul>
+<li>A Lean 4 file (or a small <code>lake</code> project) that <strong>compiles against Mathlib with no
+errors and no <code>sorry</code></strong>.</li>
+<li>The formal <strong>statement faithfully matches your theorem</strong>. State it honestly: a
+machine-checked proof of a weakened or trivially-true restatement earns little
+credit.</li>
+<li><code>#print axioms &lt;your_theorem&gt;</code> shows only the standard axioms (some subset of
+<code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code>) — in particular <strong>no <code>sorryAx</code></strong> and no
+custom <code>axiom</code>.</li>
+<li><em>Optional bonus:</em> keep the definitions <strong>computable</strong> (definitions reduce under
+<code>#eval</code>), and note if you obtain a choice-free proof (<code>#print axioms</code> =
+<code>[propext, Quot.sound]</code>).</li>
+</ul>
+<h2>Required submission files</h2>
+<ul>
+<li><code>Formalization.lean</code> — your Lean formalization (sorry-free, compiles against
+Mathlib). If you used a multi-file <code>lake</code> project, submit a <code>.zip</code> of the project (or
+the main files).</li>
+<li><code>report.pdf</code> (about 2–4 pages) containing:<ul>
+<li>the theorem, stated both <strong>informally</strong> and as the <strong>Lean <code>theorem</code></strong>;</li>
+<li>which Lean agent/system you used and <strong>how you drove it — include the actual
+natural-language prompts you gave</strong>;</li>
+<li>a short account of the run: how many rounds/iterations, what the agent did, and
+where you had to steer, constrain, or repair it;</li>
+<li>the final <strong><code>#print axioms</code></strong> output for your main theorem;</li>
+<li>a brief reflection: what the agent formalized well, what was hard, and what you
+learned about autoformalization.</li>
+</ul>
+</li>
+<li><em>Optional:</em> the agent&#39;s config / prompt files, or a shareable link to your proof
+(e.g. a <code>live.lean-lang.org</code> link).</li>
+</ul>
+<h2>Expected workflow</h2>
+<ol>
+<li>Choose your theorem — recommended: your Assignment 1 result. Write a clean,
+self-contained statement (all definitions and hypotheses included).</li>
+<li>Use a coding assistant to obtain, inspect, and set up a Lean proving agent: a Lean 4<ul>
+<li>Mathlib project and the agent&#39;s loop.</li>
+</ul>
+</li>
+<li>Seed the Lean <strong>statement</strong> (with <code>sorry</code>) and drive the agent to fill in the proof.
+Verify after each step with the Lean kernel (<code>lean_diagnostic_messages</code> /
+<code>lake env lean</code>), not by eye.</li>
+<li>Iterate until the file is sorry-free and error-free; then check <code>#print axioms</code>.</li>
+<li>Write the report.</li>
+</ol>
+<h2>Scope and honesty</h2>
+<ul>
+<li>A faithful formalization of a <strong>nontrivial but realistic</strong> theorem. It is fine if the
+theorem you formalize is smaller than your full Assignment 1 proof — fully
+formalizing even one clean lemma or a self-contained theorem is substantial work.</li>
+<li><strong>Do not pad with <code>sorry</code></strong> or hidden <code>axiom</code>s; the kernel check and <code>#print axioms</code>
+are how this is verified.</li>
+<li>The Lean statement must genuinely express your theorem. If in doubt about whether a
+statement is faithful, explain your choice in the report.</li>
+</ul>
+<h2>Grading (100 points)</h2>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Faithful, nontrivial <strong>formal statement</strong> of the theorem</td>
+<td>25</td>
+</tr>
+<tr>
+<td><strong>Sorry-free, kernel-checked</strong> proof; clean <code>#print axioms</code></td>
+<td>40</td>
+</tr>
+<tr>
+<td>Effective, well-documented use of a <strong>Lean agent</strong> (prompts + run account)</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Report clarity and reflection</td>
+<td>15</td>
+</tr>
+<tr>
+<td><em>Bonus:</em> computable / choice-free formalization</td>
+<td>up to +5</td>
+</tr>
+</tbody></table>
+<p>Submit exactly your Lean file(s) and <code>report.pdf</code> (plus any optional config/links).</p>
+
+    </div>
+  </div>
+</body>
+</html>
