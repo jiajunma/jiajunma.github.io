@@ -1,37 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 2: Formalizing a Proof with a Lean Proving Agent</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-           line-height:1.6; color:#172033; background:#f3f6fb; }
-    .page { max-width:880px; margin:0 auto; padding:40px 20px 64px; }
-    .panel { background:#fff; border:1px solid #d8e2ef; border-radius:14px; padding:42px;
-             box-shadow:0 16px 40px rgba(19,45,80,0.10); }
-    .back { display:inline-block; margin-bottom:18px; color:#0b63b6; text-decoration:none; font-weight:600; }
-    .back:hover { text-decoration:underline; }
-    h1 { margin:0 0 18px; color:#003366; font-size:clamp(2rem,4vw,2.6rem); line-height:1.12; }
-    h2 { margin-top:34px; color:#003366; font-size:1.32rem; }
-    p { margin:0 0 16px; }
-    a { color:#0b63b6; }
-    ul, ol { padding-left:1.45rem; } li { margin:7px 0; }
-    code { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; background:#edf3fb;
-           border:1px solid #d9e6f5; border-radius:5px; padding:0.12rem 0.34rem; font-size:0.94em; }
-    table { width:100%; border-collapse:collapse; margin:8px 0 20px; }
-    th, td { padding:10px 12px; border-bottom:1px solid #e1e8f2; text-align:left; }
-    th { background:#f5f8fc; color:#003366; }
-    strong { color:#10243f; }
-    hr { border:0; border-top:1px solid #e1e8f2; margin:26px 0; }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <div class="panel">
-      <a class="back" href="../">&larr; DSA5210 home</a>
-      <h1>Assignment 2: Formalizing a Proof with a Lean Proving Agent</h1>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment 2: Formalizing a Proof with a Lean Proving Agent</title>
+<style>
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+         line-height:1.6; color:#172033; background:#f3f6fb; }
+  .page { max-width:880px; margin:0 auto; padding:40px 20px 64px; }
+  .panel { background:#fff; border:1px solid #d8e2ef; border-radius:14px; padding:42px;
+           box-shadow:0 16px 40px rgba(19,45,80,0.10); }
+  .back { display:inline-block; margin-bottom:18px; color:#0b63b6; text-decoration:none; font-weight:600; }
+  .back:hover { text-decoration:underline; }
+  h1 { margin:0 0 18px; color:#003366; font-size:clamp(2rem,4vw,2.6rem); line-height:1.12; }
+  h2 { margin-top:34px; color:#003366; font-size:1.32rem; }
+  p { margin:0 0 16px; } a { color:#0b63b6; }
+  ul, ol { padding-left:1.45rem; } li { margin:7px 0; }
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; background:#edf3fb;
+         border:1px solid #d9e6f5; border-radius:5px; padding:0.12rem 0.34rem; font-size:0.94em; }
+  strong { color:#10243f; } hr { border:0; border-top:1px solid #e1e8f2; margin:26px 0; }
+</style></head>
+<body><div class="page"><div class="panel">
+  <a class="back" href="../">&larr; DSA5210 home</a>
+  <h1>Assignment 2: Formalizing a Proof with a Lean Proving Agent</h1>
 <p><strong>Course:</strong> DSA5210 AI for Mathematics<br><strong>Canvas course:</strong> 93088<br><strong>Canvas assignment:</strong> 253513<br><strong>Weight:</strong> 20%<br><strong>Points:</strong> 100<br><strong>Due:</strong> Friday, 12 June 2026, 23:59 Singapore time<br><strong>Submission:</strong> online file upload, restricted to <code>.lean</code>, <code>.md</code>, <code>.pdf</code>, and <code>.zip</code><br><strong>Status on Canvas:</strong> draft (unpublished — being finalized)</p>
 <h2>Task</h2>
 <p>Use an agentic coding assistant — such as Claude, Codex, opencode, or openclaw — to
@@ -116,38 +106,6 @@ are how this is verified.</li>
 <li>The Lean statement must genuinely express your theorem. If in doubt about whether a
 statement is faithful, explain your choice in the report.</li>
 </ul>
-<h2>Grading (100 points)</h2>
-<table>
-<thead>
-<tr>
-<th>Criterion</th>
-<th>Points</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Faithful, nontrivial <strong>formal statement</strong> of the theorem</td>
-<td>25</td>
-</tr>
-<tr>
-<td><strong>Sorry-free, kernel-checked</strong> proof; clean <code>#print axioms</code></td>
-<td>40</td>
-</tr>
-<tr>
-<td>Effective, well-documented use of a <strong>Lean agent</strong> (prompts + run account)</td>
-<td>20</td>
-</tr>
-<tr>
-<td>Report clarity and reflection</td>
-<td>15</td>
-</tr>
-<tr>
-<td><em>Bonus:</em> computable / choice-free formalization</td>
-<td>up to +5</td>
-</tr>
-</tbody></table>
 <p>Submit exactly your Lean file(s) and <code>report.pdf</code> (plus any optional config/links).</p>
 
-    </div>
-  </div>
-</body>
-</html>
+</div></div></body></html>

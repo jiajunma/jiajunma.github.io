@@ -94,14 +94,4 @@ in-browser Lean links):
 - The Lean statement must genuinely express your theorem. If in doubt about whether a
   statement is faithful, explain your choice in the report.
 
-## Grading (100 points)
-
-| Criterion | Points |
-|---|---|
-| Faithful, nontrivial **formal statement** of the theorem | 25 |
-| **Sorry-free, kernel-checked** proof; clean `#print axioms` | 40 |
-| Effective, well-documented use of a **Lean agent** (prompts + run account) | 20 |
-| Report clarity and reflection | 15 |
-| *Bonus:* computable / choice-free formalization | up to +5 |
-
 Submit exactly your Lean file(s) and `report.pdf` (plus any optional config/links).
