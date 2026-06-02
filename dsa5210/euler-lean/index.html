@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Euler's Partition Theorem — Lean proofs (Numina & Archon)</title>
+<style>
+  :root { --accent:#1a5276; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:#1a1a1a;
+         background:#f7f9fc; line-height:1.5; }
+  .wrap { max-width:820px; margin:0 auto; padding:2.5rem 1.5rem; }
+  h1 { color:var(--accent); font-size:1.6rem; margin:0 0 .3rem; }
+  p.lead { color:#444; margin:.2rem 0 1.6rem; }
+  ul { list-style:none; padding:0; }
+  li { background:#fff; border:1px solid #d8e2f0; border-radius:10px; padding:1rem 1.1rem;
+       margin-bottom:1rem; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  .t { font-weight:600; color:var(--accent); }
+  .m { color:#555; font-size:.9rem; margin:.15rem 0 .7rem; }
+  code { background:#eef3fa; padding:.05rem .3rem; border-radius:4px; font-size:.85em; }
+  .btn { display:inline-block; text-decoration:none; font-size:.9rem; padding:.4rem .8rem;
+         border-radius:7px; margin-right:.5rem; }
+  .live { background:var(--accent); color:#fff; }
+  .dl { background:#eef3fa; color:var(--accent); border:1px solid #d8e2f0; }
+  .note { color:#666; font-size:.82rem; margin-top:1.4rem; border-top:1px solid #e2e8f0; padding-top:1rem; }
+</style></head>
+<body><div class="wrap">
+  <h1>Euler's Partition Theorem — Lean proofs</h1>
+  <p class="lead">The number of partitions of <i>n</i> into distinct parts equals the number into odd parts,
+  formalized in Lean 4 by two prover harnesses from the same blueprint. Each opens in the
+  in-browser Lean editor; the kernel re-checks it live.</p>
+  <ul>
+    <li>
+      <div class="t">Numina — euler_partition (Mathlib-idiomatic)</div>
+      <div class="m">397 lines · <code>#print axioms</code> → <code>{propext, Classical.choice, Quot.sound}</code></div>
+      <a class="btn live" href="live-numina-euler.html">▶ Open in live Lean</a>
+      <a class="btn dl" href="numina-euler.lean" download>⬇ Download .lean</a>
+    </li>
+    <li>
+      <div class="t">Numina — euler_equiv (no Classical.choice)</div>
+      <div class="m">762 lines · <code>#print axioms</code> → <code>{propext, Quot.sound}</code></div>
+      <a class="btn live" href="live-numina-euler-choicefree.html">▶ Open in live Lean</a>
+      <a class="btn dl" href="numina-euler-choicefree.lean" download>⬇ Download .lean</a>
+    </li>
+    <li>
+      <div class="t">Archon — euler_partition (Mathlib-idiomatic)</div>
+      <div class="m">377 lines · <code>#print axioms</code> → <code>{propext, Classical.choice, Quot.sound}</code></div>
+      <a class="btn live" href="live-archon-euler.html">▶ Open in live Lean</a>
+      <a class="btn dl" href="archon-euler.lean" download>⬇ Download .lean</a>
+    </li>
+  </ul>
+  <p class="note">Written against Mathlib v4.30. The live editor uses its own (latest) Mathlib,
+  so a lemma name may have shifted; the proofs and <code>#print axioms</code> results above are
+  from the pinned build. Source files are the exact, full proofs (download for the byte-perfect copy).</p>
+</div></body></html>
