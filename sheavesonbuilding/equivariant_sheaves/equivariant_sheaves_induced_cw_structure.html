@@ -162,6 +162,8 @@
       
         <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
       
+        <li><a href="../keywords/cellular-embedding.html">cellular-embedding</a></li>
+      
         <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
       
         <li><a href="../keywords/chain-complex.html">chain-complex</a></li>
@@ -434,6 +436,12 @@
         
         <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
         
+        <li><a href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#39; → G ×^P X&#39; is a cellular embedding (poset form)</a></li>
+        
+        <li><a href="equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space (Prop 2.8(h))</a></li>
+        
+        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space (lem:Stab_gx)</a></li>
+        
         <li><a href="equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
         
       </ul>
@@ -448,219 +456,14 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L203"><code>SheafOnBuilding.InducedSpace.iota_injective</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem iota_injective : Function.Injective (iota d)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L663"><code>SheafOnBuilding.InducedSpace.iota_le_iff</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem iota_le_iff (E F : X&#39;) : iota d E ≤ iota d F ↔ E ≤ F</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L292"><code>SheafOnBuilding.InducedSpace.iota_smul_of_mem_G&#39;</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem iota_smul_of_mem_G&#39; {n : G} (hn : n ∈ d.G&#39;) (E : X&#39;) :
-    n • iota d E = iota d (n • E)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L262"><code>SheafOnBuilding.InducedSpace.exists_eq_smul_iota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem exists_eq_smul_iota (q : InducedSpace d) :
-    ∃ (g : G) (E : X&#39;), q = g • iota d E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L274"><code>SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem smul_iota_eq_smul_iota_iff (g₁ g₂ : G) (E F : X&#39;) :
-    g₁ • iota d E = g₂ • iota d F ↔
-      ∃ n ∈ d.G&#39;, n • E = F ∧ g₁⁻¹ * g₂ * n ∈ d.P E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L699"><code>SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem smul_iota_le_smul_iota_iff (g₁ g₂ : G) (E F : X&#39;) :
-    g₁ • iota d E ≤ g₂ • iota d F ↔
-      ∃ n ∈ d.G&#39;, n • E ≤ F ∧ g₁⁻¹ * g₂ * n ∈ d.P E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L709"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def Subcomplex.ofIota : SheafOnBuilding.Subcomplex (InducedSpace d) where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">instance</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L770"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>instance isQuasiFundDomain_subcomplexOfIota :
-    SheafOnBuilding.IsQuasiFundDomain (G</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L738"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem G&#39;_le_subcomplexOfIota_stabilizer :
-    d.G&#39; ≤ (Subcomplex.ofIota d).stabilizer</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L320"><code>SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem mem_stabilizer_iota_iff (E : X&#39;) (m : G) :
-    m • iota d E = iota d E ↔
-      ∃ n ∈ d.G&#39;, n • E = E ∧ ∃ p ∈ d.P E, m = n * p</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L343"><code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem P_le_stabilizer_iota (E : X&#39;) :
-    d.P E ≤ MulAction.stabilizer G (iota d E)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L352"><code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem fix_G&#39;_le_stabilizer_iota (E : X&#39;) {n : G}
-    (hn_G&#39; : n ∈ d.G&#39;) (hn_fix : n • E = E) :
-    n • iota d E = iota d E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ d98a9c3, SheafOnBuilding.Induction
           </span>
           
           
@@ -671,7 +474,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -690,40 +493,29 @@
 </ul>
 <p>Set $[\![X]\!] := \{gE : g \in G,\ E \in [\![X']\!]\}$.</p>
 <h2>Key intermediate lemmas</h2>
-<h3>Cell-intersection lemma (full proof)</h3>
-<blockquote>
-<p><strong>Lemma (Cell intersection / QFD orbit lemma).</strong> If
-$gE \cap hF \ne \emptyset$ for $E, F \in [\![X']\!]$, then there
-exists $n \in G'$ with $n \cdot E = F$ and $g^{-1}hn \in P_E$;
-moreover $gE = hF$ as cells in $X$.</p>
-</blockquote>
-    
-    <details class="proof-details">
-      <summary>Proof</summary>
-      <div class="proof-body">
-        <p>Pick $x \in E$, $y \in F$ in the relative interiors of
-their respective cells with $g \cdot x = h \cdot y$ in $X$. By
-the equivalence-relation definition of $X = G \times^P X'$,
-$\exists n \in G'$ with $n \cdot x = y$ and $g^{-1}hn \in P_x$.</p>
-<p><strong>Step 1</strong> ($n \cdot E = F$): $n \cdot x$ in the relative interior
-of $n \cdot E$ and equals $y$ in the relative interior of $F$, so
-$n \cdot E = F$.</p>
-<p><strong>Step 2</strong> ($g^{-1}hn \in P_E$): $P$ constant on relative interiors
-of cells; $P_x = P_E$, so $g^{-1}hn \in P_E$.</p>
-<p><strong>Step 3</strong> ($gE = hF$): the $G$-action on cells of $X$ sends the
-cell containing $g \cdot x$ (which is $gE$) to the cell containing
-$h \cdot y$ (which is $hF$), and these coincide since $g \cdot x =
-h \cdot y$. $\square$</p>
-<h3>Other lemmas (used in proof of the main proposition)</h3>
+<p>The proof of the main proposition rests on three combinatorial
+building blocks, each treated as its own node:</p>
 <ul>
-<li><strong>Orbit bijection.</strong> $G' \backslash [\![X']\!] \to G \backslash [\![X]\!]$ is
-  a bijection (proved in part (h) of the main proof below).</li>
-<li><strong>Local finiteness.</strong> $\{F \in [\![X]\!] : E \preceq F\}$ is finite for
-  every $E$ (by closure-finiteness of $X'$ + $G$-translates preserve
-  incidence — see part (c)).</li>
-<li><strong>Hausdorffness.</strong> $X$ is Hausdorff (proved in part (a) of the
-  main proof: $\sim$ is a closed relation).</li>
+<li><strong>Cell equality on $X$</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (5)):
+  $g_1 \cdot \iota E = g_2 \cdot \iota F$ iff $\exists n \in G'$ with
+  $n \cdot E = F$ and $g_1^{-1} g_2 n \in P_E$. This is the
+  cell-intersection / QFD orbit lemma in the induction context.</li>
+<li><strong>Face relation on $X$</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (6)):
+  the analogous statement with $\preceq$.  Together with clauses
+  (1)–(4) this equips $X$ with a $G$-cell-complex structure at the
+  face-poset level.</li>
+<li><strong>Stabiliser formula</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space (lem:Stab_gx)</a>, Sheaf7
+  <code>lem:Stab_gx</code>): $\Fix_G(\iota E) = \Fix_{G'}(E) \cdot P_E$ and
+  $P_E \subseteq \Fix_G(\iota E)$; the second inclusion makes the
+  face relation on $X$ well-defined after descent through $\sim$.</li>
 </ul>
+<p>Additionally the topology-level ingredients (Hausdorffness, closure
+finiteness with characteristic maps, weak topology, regularity) are
+proved directly in the topological setup below and are outside the
+poset-only formalisation.</p>
 <h2>The proposition</h2>
 <blockquote>
 <p><strong>Proposition (Sheaf7 Prop 2.8).</strong> There is a unique regular CW structure
@@ -732,7 +524,11 @@ cellular embedding inducing a homeomorphism onto its image, and the
 $G$-action is cellular. Moreover, $X'$ is a quasi-fundamental domain of
 the $G$-space $X$.</p>
 </blockquote>
-<h2>Proof (full, 9 parts)</h2>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>(full, 9 parts)</p>
 <h3>(a) $X$ is Hausdorff.</h3>
 <p>It suffices to show that the equivalence relation $\sim$ on $G \times X'$
 is closed. Fix $(g, x), (h, y) \in G \times X'$ with $(g, x) \not\sim (h, y)$.
@@ -772,53 +568,40 @@ open in $G$).</p>
 $g \cdot \iota(\overline E \setminus E)$ (regularity of $X'$ +
 injectivity of $\iota$).</p>
 <h3>(f) $\iota$ is a cellular embedding.</h3>
-<p>$\iota(E) = 1 \cdot E$ is a cell of $X$ by construction; face relations
-preserved; injectivity from Def of induced space.</p>
+<p>Combinatorial content:
+<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clauses (1)–(3).
+Topological content (that $\iota$ is also a topological embedding
+onto its image) follows from (a) + (e).</p>
 <h3>(g) $G$-action cellular.</h3>
 <p>$g \cdot (g' E) = (gg') E$, so $G$ permutes cells. Each cell-wise map
 is a homeomorphism (group action).</p>
 <h3>(h) $X'$ is a QFD.</h3>
-<p>Orbit map $G \backslash [\![X]\!] \xleftarrow\sim \Fix_G(X') \backslash [\![X']\!]$
-is a bijection: every $gE \in [\![X]\!]$ is in the $G$-orbit of
-$E = 1 \cdot E$; and $E, E' \in [\![X']\!]$ same $G$-orbit iff
-$\exists n \in G'$ with $E' = n \cdot E$ (and the additional $g^{-1} n \in P_E$
-condition is satisfied with $g = n$). $G'$-orbits match
-$\Fix_G(X')$-orbits via (P2).</p>
+<p>Proved as <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space (Prop 2.8(h))</a> with the
+sharp subgroup $G'$ (not the setwise stabiliser of $\iota(X')$).</p>
 <h3>(i) Uniqueness.</h3>
 <p>Any CW structure with $\iota$ cellular + $G$ cellular forces the cell
 set to be $\{gE\}$. So the structure is unique. $\square$</p>
 <h2>Lean formalization</h2>
 <p>The topological content of Prop 2.8 (Hausdorffness, weak topology,
-regularity, characteristic maps) is outside the abstract cell-poset
-formalisation.  Clauses <strong>(f)</strong> — $\iota$ is a cellular embedding —
-and <strong>(h)</strong> — $X'$ is a QFD — are formalised at the poset level.</p>
-<p>Injectivity of $\iota$ is <code>iota_injective</code> (uses (P2)); the order
-form is <code>iota_le_iff</code> (uses (P2) for the reverse direction).  The
-$G'$-equivariance $n \cdot \iota E = \iota(n \cdot E)$ for $n \in G'$
-is <code>iota_smul_of_mem_G'</code>.  The image of $\iota$ as a face-closed
-subcomplex is <code>Subcomplex.ofIota</code>, and</p>
-<p><code>lean
-instance isQuasiFundDomain_subcomplexOfIota :
-    IsQuasiFundDomain d.G' (Subcomplex.ofIota d)</code></p>
-<p>realises the QFD statement (h) with the sharp subgroup $G' = d.G'$
-(not the setwise stabiliser).  <code>G'_le_subcomplexOfIota_stabilizer</code>
-records the auxiliary inclusion $d.G' \le \mathrm{Stab}(\iota(X'))$.</p>
-<p>The stabiliser formula from <code>lem:Stab_gx</code> with $g = 1$ is
-<code>mem_stabilizer_iota_iff</code>; the two half-inclusions are
-<code>P_le_stabilizer_iota</code> and <code>fix_G'_le_stabilizer_iota</code>.</p>
-<p>The cell-equality characterisation</p>
-<p>$$
-g_1 \cdot \iota E = g_2 \cdot \iota F \iff \exists n \in G',\ n \cdot E = F
-\wedge g_1^{-1} g_2 n \in P_E
-$$</p>
-<p>is <code>smul_iota_eq_smul_iota_iff</code>; the face-relation analogue with
-$\preceq$ replacing $=$ is <code>smul_iota_le_smul_iota_iff</code>.  The face
-relation on <code>InducedSpace</code> is descended via <code>leRep_left_descends</code> /
-<code>leRep_right_descends</code> (which use (P0)); the corresponding
-<code>PartialOrder</code>, <code>AbstractCellComplex</code>, and <code>GCellComplex</code> instances
-on <code>InducedSpace d</code> are all in place.</p>
-<p>The dimension function on the induced space is <code>InducedSpace.dim</code>.
-Every element is of the form $g \cdot \iota E$ (<code>exists_eq_smul_iota</code>).</p>
+regularity, characteristic maps for (a)–(e), (i)) is outside the
+abstract poset-level formalisation.  The two poset-level clauses are
+split off:</p>
+<ul>
+<li>Clauses (f) + (g) — the combinatorial embedding + $G$-cellularity —
+  are the content of
+  <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>, which
+  discharges all six <code>iota_*</code> / <code>smul_iota_*</code> lemmas.</li>
+<li>Clause (h) — the QFD structure — is
+  <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space (Prop 2.8(h))</a>, which produces
+  <code>Subcomplex.ofIota</code>, <code>isQuasiFundDomain_subcomplexOfIota</code>, and
+  <code>G'_le_subcomplexOfIota_stabilizer</code>.</li>
+</ul>
+<p>Only the <em>packaging</em> remains here: the <code>PartialOrder</code>,
+<code>AbstractCellComplex</code>, and <code>GCellComplex</code> instances on
+<code>InducedSpace d</code> are all in place, and dimension is available as
+<code>InducedSpace.dim : InducedSpace d → ℕ</code> (this is the only Lean
+declaration whose home is this node rather than one of the
+extractees).</p>
       </div>
     </details>
     

@@ -16,17 +16,17 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 7,
-    "visible_nodes_with_selected_proof_plans": 7
+    "visible_nodes_without_proof_plans": 8,
+    "visible_nodes_with_selected_proof_plans": 8
   },
   "nodes": [
     {
       "id": "abstract_cell_complex.abstract_cell_complex",
       "title": "Abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html",
       "payload": "node_payloads/abstract_cell_complex_abstract_cell_complex.json"
     },
@@ -34,7 +34,7 @@
       "id": "abstract_cell_complex.g_cell_complex",
       "title": "Cellular G-action on an abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "abstract_cell_complex/abstract_cell_complex_g_cell_complex.html",
       "payload": "node_payloads/abstract_cell_complex_g_cell_complex.json"
     },
@@ -42,7 +42,7 @@
       "id": "abstract_cell_complex.is_locally_finite",
       "title": "Locally finite abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "abstract_cell_complex/abstract_cell_complex_is_locally_finite.html",
       "payload": "node_payloads/abstract_cell_complex_is_locally_finite.json"
     },
@@ -50,7 +50,7 @@
       "id": "abstract_cell_complex.star_topology",
       "title": "Alexandrov star topology on the face poset",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "abstract_cell_complex/abstract_cell_complex_star_topology.html",
       "payload": "node_payloads/abstract_cell_complex_star_topology.json"
     },
@@ -58,7 +58,7 @@
       "id": "abstract_cell_complex.subcomplex",
       "title": "Subcomplex of an abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "abstract_cell_complex/abstract_cell_complex_subcomplex.html",
       "payload": "node_payloads/abstract_cell_complex_subcomplex.json"
     }
@@ -92,6 +92,13 @@
       "href": "cellular_categories/index.html",
       "role": "dependency",
       "node_count": 8
+    },
+    {
+      "id": "equivariant_sheaves",
+      "title": "Equivariant Sheaves",
+      "href": "equivariant_sheaves/index.html",
+      "role": "dependent",
+      "node_count": 13
     }
   ],
   "boundary_edges": [
@@ -101,6 +108,13 @@
       "kind": "boundary_dependency",
       "topic": "cellular_categories",
       "count": 1
+    },
+    {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "topic:equivariant_sheaves",
+      "kind": "boundary_dependent",
+      "topic": "equivariant_sheaves",
+      "count": 2
     }
   ],
   "keywords": [

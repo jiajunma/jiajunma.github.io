@@ -4,22 +4,22 @@
     "title": "Equivariant Sheaves",
     "href": "equivariant_sheaves/index.html",
     "parent": null,
-    "node_count": 10,
-    "descendant_node_count": 10
+    "node_count": 13,
+    "descendant_node_count": 13
   },
   "counts": {
-    "internal_nodes": 10,
+    "internal_nodes": 13,
     "inlined_nodes": 0,
-    "descendant_nodes": 10,
+    "descendant_nodes": 13,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 10,
+    "non_proof_plan_nodes": 13,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 16,
-    "visible_nodes_with_selected_proof_plans": 16
+    "visible_nodes_without_proof_plans": 20,
+    "visible_nodes_with_selected_proof_plans": 20
   },
   "nodes": [
     {
@@ -37,6 +37,14 @@
       "status": "staged",
       "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html",
       "payload": "node_payloads/equivariant_sheaves_induced_cw_structure.json"
+    },
+    {
+      "id": "equivariant_sheaves.induced_qfd_property",
+      "title": "X' is a quasi-fundamental domain of the induced space (Prop 2.8(h))",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_induced_qfd_property.html",
+      "payload": "node_payloads/equivariant_sheaves_induced_qfd_property.json"
     },
     {
       "id": "equivariant_sheaves.induction_GxP_X",
@@ -71,6 +79,14 @@
       "payload": "node_payloads/equivariant_sheaves_invariants_coinvariants.json"
     },
     {
+      "id": "equivariant_sheaves.iota_cellular_embedding",
+      "title": "ι : X' → G ×^P X' is a cellular embedding (poset form)",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_iota_cellular_embedding.html",
+      "payload": "node_payloads/equivariant_sheaves_iota_cellular_embedding.json"
+    },
+    {
       "id": "equivariant_sheaves.qfd_orbit_lemma",
       "title": "QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E",
       "kind": "lemma",
@@ -101,6 +117,14 @@
       "status": "staged",
       "href": "equivariant_sheaves/equivariant_sheaves_section4_equivalence.html",
       "payload": "node_payloads/equivariant_sheaves_section4_equivalence.json"
+    },
+    {
+      "id": "equivariant_sheaves.stabilizer_formula_iota",
+      "title": "Stabiliser formula on the induced space (lem:Stab_gx)",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_stabilizer_formula_iota.html",
+      "payload": "node_payloads/equivariant_sheaves_stabilizer_formula_iota.json"
     }
   ],
   "edges": [
@@ -110,13 +134,48 @@
       "kind": "uses"
     },
     {
+      "from": "equivariant_sheaves.induced_qfd_property",
+      "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
       "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.iota_cellular_embedding",
       "to": "equivariant_sheaves.induced_cw_structure",
       "kind": "uses"
     },
     {
       "from": "equivariant_sheaves.quasi_fundamental_domain",
       "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.stabilizer_formula_iota",
+      "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_qfd_property",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.iota_cellular_embedding",
+      "to": "equivariant_sheaves.induced_qfd_property",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.induced_qfd_property",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.stabilizer_formula_iota",
+      "to": "equivariant_sheaves.induced_qfd_property",
       "kind": "uses"
     },
     {
@@ -145,6 +204,11 @@
       "kind": "uses"
     },
     {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.iota_cellular_embedding",
+      "kind": "uses"
+    },
+    {
       "from": "equivariant_sheaves.quasi_fundamental_domain",
       "to": "equivariant_sheaves.qfd_orbit_lemma",
       "kind": "uses"
@@ -168,9 +232,21 @@
       "from": "equivariant_sheaves.reduction_to_qfd",
       "to": "equivariant_sheaves.section4_equivalence",
       "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.stabilizer_formula_iota",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
+    {
+      "id": "abstract_cell_complex",
+      "title": "Abstract Cell Complex",
+      "href": "abstract_cell_complex/index.html",
+      "role": "dependency",
+      "node_count": 5
+    },
     {
       "id": "applications",
       "title": "Applications",
@@ -208,6 +284,20 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:abstract_cell_complex",
+      "to": "equivariant_sheaves.iota_cellular_embedding",
+      "kind": "boundary_dependency",
+      "topic": "abstract_cell_complex",
+      "count": 1
+    },
+    {
+      "from": "topic:abstract_cell_complex",
+      "to": "equivariant_sheaves.stabilizer_formula_iota",
+      "kind": "boundary_dependency",
+      "topic": "abstract_cell_complex",
+      "count": 1
+    },
     {
       "from": "topic:building",
       "to": "equivariant_sheaves.induction_universal_property",
@@ -336,6 +426,12 @@
       "count": 1
     },
     {
+      "id": "cellular-embedding",
+      "title": "cellular-embedding",
+      "href": "keywords/cellular-embedding.html",
+      "count": 1
+    },
+    {
       "id": "coinvariants",
       "title": "coinvariants",
       "href": "keywords/coinvariants.html",
@@ -381,7 +477,7 @@
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
-      "count": 4
+      "count": 7
     },
     {
       "id": "invariants",
@@ -399,7 +495,7 @@
       "id": "qfd",
       "title": "qfd",
       "href": "keywords/qfd.html",
-      "count": 4
+      "count": 5
     },
     {
       "id": "reconstruction",
@@ -411,6 +507,18 @@
       "id": "reduction",
       "title": "reduction",
       "href": "keywords/reduction.html",
+      "count": 1
+    },
+    {
+      "id": "stabilizer",
+      "title": "stabilizer",
+      "href": "keywords/stabilizer.html",
+      "count": 1
+    },
+    {
+      "id": "subcomplex",
+      "title": "subcomplex",
+      "href": "keywords/subcomplex.html",
       "count": 1
     },
     {

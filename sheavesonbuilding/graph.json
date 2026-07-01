@@ -4,7 +4,7 @@
       "id": "abstract_cell_complex.abstract_cell_complex",
       "title": "Abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "cell-complex",
         "dimension"
@@ -31,7 +31,7 @@
       "id": "abstract_cell_complex.g_cell_complex",
       "title": "Cellular G-action on an abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "g-action",
         "cellular-action"
@@ -46,13 +46,17 @@
       "topic": "abstract_cell_complex",
       "uses": [
         "abstract_cell_complex.abstract_cell_complex"
+      ],
+      "used_by": [
+        "equivariant_sheaves.iota_cellular_embedding",
+        "equivariant_sheaves.stabilizer_formula_iota"
       ]
     },
     {
       "id": "abstract_cell_complex.is_locally_finite",
       "title": "Locally finite abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "cell-complex",
         "local-finiteness"
@@ -73,7 +77,7 @@
       "id": "abstract_cell_complex.star_topology",
       "title": "Alexandrov star topology on the face poset",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "alexandrov",
         "star"
@@ -84,6 +88,7 @@
       ],
       "lean_declarations": [
         "SheafOnBuilding.AbstractCellComplex.star",
+        "SheafOnBuilding.AbstractCellComplex.mem_star",
         "SheafOnBuilding.AbstractCellComplex.self_mem_star",
         "SheafOnBuilding.AbstractCellComplex.isOpen_star"
       ],
@@ -96,7 +101,7 @@
       "id": "abstract_cell_complex.subcomplex",
       "title": "Subcomplex of an abstract cell complex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "subcomplex"
       ],
@@ -2168,24 +2173,15 @@
         "equivariant_sheaves"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.InducedSpace.iota_injective",
-        "SheafOnBuilding.InducedSpace.iota_le_iff",
-        "SheafOnBuilding.InducedSpace.iota_smul_of_mem_G'",
-        "SheafOnBuilding.InducedSpace.exists_eq_smul_iota",
-        "SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff",
-        "SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff",
-        "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
-        "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota",
-        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
-        "SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff",
-        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
-        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota",
         "SheafOnBuilding.InducedSpace.dim"
       ],
       "topic": "equivariant_sheaves",
       "uses": [
+        "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_GxP_X",
-        "equivariant_sheaves.quasi_fundamental_domain"
+        "equivariant_sheaves.iota_cellular_embedding",
+        "equivariant_sheaves.quasi_fundamental_domain",
+        "equivariant_sheaves.stabilizer_formula_iota"
       ],
       "used_by": [
         "building.A1_axiom_in_component",
@@ -2194,6 +2190,36 @@
         "building.connected_components",
         "building.connected_components.plan.classification",
         "equivariant_sheaves.induction_universal_property"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.induced_qfd_property",
+      "title": "X' is a quasi-fundamental domain of the induced space (Prop 2.8(h))",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "induction",
+        "qfd",
+        "subcomplex"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.iota_cellular_embedding",
+        "equivariant_sheaves.quasi_fundamental_domain",
+        "equivariant_sheaves.stabilizer_formula_iota"
+      ],
+      "used_by": [
+        "equivariant_sheaves.induced_cw_structure"
       ]
     },
     {
@@ -2229,9 +2255,12 @@
         "building.connected_components",
         "building.generalized_building_bs",
         "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_data_reverse",
         "equivariant_sheaves.induction_universal_property",
-        "equivariant_sheaves.section4_equivalence"
+        "equivariant_sheaves.iota_cellular_embedding",
+        "equivariant_sheaves.section4_equivalence",
+        "equivariant_sheaves.stabilizer_formula_iota"
       ]
     },
     {
@@ -2312,6 +2341,37 @@
       ]
     },
     {
+      "id": "equivariant_sheaves.iota_cellular_embedding",
+      "title": "ι : X' → G ×^P X' is a cellular embedding (poset form)",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "induction",
+        "cellular-embedding"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.InducedSpace.iota_injective",
+        "SheafOnBuilding.InducedSpace.iota_le_iff",
+        "SheafOnBuilding.InducedSpace.iota_smul_of_mem_G'",
+        "SheafOnBuilding.InducedSpace.exists_eq_smul_iota",
+        "SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff",
+        "SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "abstract_cell_complex.g_cell_complex",
+        "equivariant_sheaves.induction_GxP_X"
+      ],
+      "used_by": [
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_qfd_property"
+      ]
+    },
+    {
       "id": "equivariant_sheaves.qfd_orbit_lemma",
       "title": "QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E",
       "kind": "lemma",
@@ -2365,6 +2425,7 @@
         "building.apartments_in_bsigma",
         "coefficient_systems.cartesian_local_maps",
         "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_data_reverse",
         "equivariant_sheaves.qfd_orbit_lemma",
         "equivariant_sheaves.reduction_to_qfd"
@@ -2415,6 +2476,34 @@
       ],
       "used_by": [
         "equivariant_sheaves.heisenberg_weil_equivalence"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.stabilizer_formula_iota",
+      "title": "Stabiliser formula on the induced space (lem:Stab_gx)",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "induction",
+        "stabilizer"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff",
+        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
+        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "abstract_cell_complex.g_cell_complex",
+        "equivariant_sheaves.induction_GxP_X"
+      ],
+      "used_by": [
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_qfd_property"
       ]
     },
     {
@@ -3763,12 +3852,40 @@
       "to": "equivariant_sheaves.heisenberg_weil_equivalence"
     },
     {
+      "from": "equivariant_sheaves.induced_qfd_property",
+      "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
       "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
+      "from": "equivariant_sheaves.iota_cellular_embedding",
       "to": "equivariant_sheaves.induced_cw_structure"
     },
     {
       "from": "equivariant_sheaves.quasi_fundamental_domain",
       "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
+      "from": "equivariant_sheaves.stabilizer_formula_iota",
+      "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_qfd_property"
+    },
+    {
+      "from": "equivariant_sheaves.iota_cellular_embedding",
+      "to": "equivariant_sheaves.induced_qfd_property"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.induced_qfd_property"
+    },
+    {
+      "from": "equivariant_sheaves.stabilizer_formula_iota",
+      "to": "equivariant_sheaves.induced_qfd_property"
     },
     {
       "from": "cellular_categories.cw_complex_setting",
@@ -3811,6 +3928,14 @@
       "to": "equivariant_sheaves.invariants_coinvariants"
     },
     {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "equivariant_sheaves.iota_cellular_embedding"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.iota_cellular_embedding"
+    },
+    {
       "from": "equivariant_sheaves.quasi_fundamental_domain",
       "to": "equivariant_sheaves.qfd_orbit_lemma"
     },
@@ -3837,6 +3962,14 @@
     {
       "from": "equivariant_sheaves.reduction_to_qfd",
       "to": "equivariant_sheaves.section4_equivalence"
+    },
+    {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "equivariant_sheaves.stabilizer_formula_iota"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.stabilizer_formula_iota"
     },
     {
       "from": "cellular_categories.equivariant_sheaves",

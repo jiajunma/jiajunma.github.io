@@ -8,8 +8,8 @@
   "topics": [
     "equivariant_sheaves"
   ],
-  "body_html": "<h1>Induced space $G \\times^P X'$ along a cosheaf $P$</h1>\n<p>Let $G' \\le G$ act cellularly on $X'$, and let $P$ be a cosheaf on $X'$ of\nsubgroups of $G$, $x \\mapsto P_x$, satisfying:</p>\n<ul>\n<li><strong>(P1)</strong> $n P_x n^{-1} = P_{n \\cdot x}$ for $n \\in G'$;</li>\n<li><strong>(P2)</strong> $P_x \\cap G' \\subseteq \\Fix_{G'}(x)$.</li>\n</ul>\n<p>(P1) implies that $\\Fix_{G'}(x)$ normalizes $P_x$.</p>\n<p><strong>Definition.</strong> The <strong>induced space</strong>\n$$X := G \\times^P X' \\;:=\\; (G \\times X') / \\sim$$\nwhere\n$$(g,x) \\sim (h,y) \\iff \\exists n \\in G' \\text{ with } n \\cdot x = y \\text{ and } g^{-1}hn \\in P_x.$$</p>\n<p>The $G$-action is $g \\cdot [(h,y)] = [(gh,y)]$ and $X$ carries the\nquotient topology.</p>\n<h2>Properties</h2>\n<ul>\n<li>Taking $P_x = \\{e\\}$ for all $x$ recovers the standard induced set\n  $\\mathrm{ind}_{G'}^G(X')$.</li>\n<li>The construction depends on $P$ only up to the family $\\Fix_{G'}(E) P_E$.</li>\n<li>The map $\\iota : X' \\to X,\\ x \\mapsto [(1,x)]$ is injective.</li>\n</ul>\n<p>After identifying $X'$ with $\\iota(X')$, $X$ inherits a regular CW structure\nin which the $G$-action is cellular and $X'$ is a QFD for it (see\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a>).</p>\n<h2>Stabiliser formula (Sheaf7 <code>lem:Stab_gx</code>)</h2>\n<blockquote>\n<p><strong>Lemma.</strong> For $g \\in G$ and $x \\in X'$:\n$$\\Fix_G(g \\cdot x) = {}^g\\bigl(\\Fix_{G'}(x) \\cdot P_x\\bigr), \\qquad\n&gt;   P_E \\subseteq \\Fix_G(E) \\quad\\text{for every cell } E.$$\nIn particular $\\hat K_x := \\Fix_G(x) = \\Fix_{G'}(x) \\cdot P_x$ (for\n$x \\in X' \\subseteq X$ via $\\iota$).</p>\n</blockquote>",
-  "proof_html": "<p>By $G$-equivariance ($\\Fix_G(g \\cdot x) = g \\Fix_G(x) g^{-1}$),\nsuffices to treat $g = 1$.</p>\n<p><strong>($\\supseteq$).</strong> Take $\\hat g = u \\cdot p$ with $u \\in \\Fix_{G'}(x)$,\n$p \\in P_x$. We show $[(up, x)]_\\sim = [(1, x)]_\\sim$. Apply the\n$\\sim$-relation definition with $n := u \\in G'$: $n \\cdot x = u \\cdot x = x$\n(since $u \\in \\Fix_{G'}(x)$), and $(up)^{-1} \\cdot 1 \\cdot n = p^{-1} u^{-1} u\n= p^{-1} \\in P_x$. Hence $\\hat g$ fixes $x$ in $X$.</p>\n<p><strong>($\\subseteq$).</strong> Take $\\hat g \\in \\Fix_G(x)$. Then $\\exists n \\in G'$\nwith $n \\cdot x = x$ (so $n \\in \\Fix_{G'}(x)$) and $\\hat g^{-1} n \\in P_x$,\ni.e.\\ $\\hat g \\in n P_x^{-1} = n \\cdot P_x$. By (P1), $\\Fix_{G'}(x)$\nnormalises $P_x$, so $n P_x = P_x n \\subseteq \\Fix_{G'}(x) \\cdot P_x$.</p>\n<p><strong>Second statement</strong> ($P_E \\subseteq \\Fix_G(E)$): for $p \\in P_E$\nand $x \\in E$ relative interior, $P_E \\subseteq P_x$ ($P$ cosheaf\n$\\Rightarrow P_E = P_x$ on the open cell), so $p \\in P_x \\subseteq\n\\Fix_G(x)$ by the first statement. Since this holds for every\n$x \\in E$ rel int and $\\Fix_G(E) = \\bigcap_{x \\in E} \\Fix_G(x)$,\n$p \\in \\Fix_G(E)$. $\\square$</p>\n<h2>Lean formalization</h2>\n<p>The data $(G', P)$ with axioms (P1), (P2) — and additionally (P0)\ncosheaf monotonicity $E \\preceq F \\Rightarrow P_F \\le P_E$, which is\npart of \"$P$ is a cosheaf\" in the paper's phrasing — is packaged as</p>\n<p><code>lean\nstructure InductionDatum (X' : Type*) [PartialOrder X'] [AbstractCellComplex X']\n    [MulAction G X'] [GCellComplex G X'] where\n  G' : Subgroup G\n  P  : X' → Subgroup G\n  P0 : ∀ {E F : X'}, E ≤ F → P F ≤ P E\n  P1 : ∀ (n : G), n ∈ G' → ∀ (E : X'),\n    P (n • E) = (P E).map (MulEquiv.toMonoidHom (MulAut.conj n))\n  P2 : ∀ (E : X') (m : G), m ∈ P E → m ∈ G' → m • E = E</code></p>\n<p>The equivalence relation is</p>\n<p><code>lean\ndef InductionRel (X' : Type*) [...]\n    (G' : Subgroup G) (P : X' → Subgroup G) :\n    (G × X') → (G × X') → Prop :=\n  fun ⟨g, E⟩ ⟨h, F⟩ =&gt; ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ P E</code></p>\n<p><code>InductionRel.refl</code>, <code>InductionRel.symm</code>, <code>InductionRel.trans</code> verify\nthe equivalence-relation axioms; <code>refl</code> needs only unit-membership of\nsubgroups; <code>symm</code> and <code>trans</code> both use (P1) to translate\n$P_{n \\cdot E}$ back to $P_E$.  The <code>Setoid</code> packaging is\n<code>InductionRel.setoid</code>; the induced space is</p>\n<p><code>lean\ndef InducedSpace (d : InductionDatum X') : Type _ :=\n  Quotient (InductionRel.setoid d)</code></p>\n<p>The canonical embedding is <code>InducedSpace.iota</code>, sending $E \\mapsto\n[(1, E)]$.  The $G$-action on <code>InducedSpace</code> is by left translation\non the first factor.</p>\n<p>(P0) does not enter the equivalence-relation axioms; it is needed for\nthe face relation on the induced space\n(<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a>).  (P2) is used\nfor the injectivity of $\\iota$.</p>",
+  "body_html": "<h1>Induced space $G \\times^P X'$ along a cosheaf $P$</h1>\n<p>Let $G' \\le G$ act cellularly on $X'$, and let $P$ be a cosheaf on $X'$ of\nsubgroups of $G$, $x \\mapsto P_x$, satisfying:</p>\n<ul>\n<li><strong>(P1)</strong> $n P_x n^{-1} = P_{n \\cdot x}$ for $n \\in G'$;</li>\n<li><strong>(P2)</strong> $P_x \\cap G' \\subseteq \\Fix_{G'}(x)$.</li>\n</ul>\n<p>(P1) implies that $\\Fix_{G'}(x)$ normalizes $P_x$.</p>\n<p><strong>Definition.</strong> The <strong>induced space</strong>\n$$X := G \\times^P X' \\;:=\\; (G \\times X') / \\sim$$\nwhere\n$$(g,x) \\sim (h,y) \\iff \\exists n \\in G' \\text{ with } n \\cdot x = y \\text{ and } g^{-1}hn \\in P_x.$$</p>\n<p>The $G$-action is $g \\cdot [(h,y)] = [(gh,y)]$ and $X$ carries the\nquotient topology.</p>\n<h2>Properties</h2>\n<ul>\n<li>Taking $P_x = \\{e\\}$ for all $x$ recovers the standard induced set\n  $\\mathrm{ind}_{G'}^G(X')$.</li>\n<li>The construction depends on $P$ only up to the family $\\Fix_{G'}(E) P_E$.</li>\n<li>The map $\\iota : X' \\to X,\\ x \\mapsto [(1,x)]$ is injective.</li>\n</ul>\n<p>After identifying $X'$ with $\\iota(X')$, $X$ inherits a regular CW structure\nin which the $G$-action is cellular and $X'$ is a QFD for it (see\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a>).</p>\n<h2>Stabiliser formula</h2>\n<p>The stabiliser of a cell $\\iota(E) \\in X$ in $G$ factors as\n$\\Fix_{G'}(E) \\cdot P_E$; this is the content of Sheaf7's\n<code>lem:Stab_gx</code> and is treated as its own node\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.stabilizer_formula_iota\" href=\"equivariant_sheaves_stabilizer_formula_iota.html\">Stabiliser formula on the induced space (lem:Stab_gx)</a>.  In particular\n$P_E \\subseteq \\Fix_G(E)$ for every cell $E$, which is what makes the\nface relation on $X$ well-defined after the quotient by $\\sim$.</p>\n<h2>Lean formalization</h2>\n<p>The data $(G', P)$ with axioms (P1), (P2) — and additionally (P0)\ncosheaf monotonicity $E \\preceq F \\Rightarrow P_F \\le P_E$, which is\npart of \"$P$ is a cosheaf\" in the paper's phrasing — is packaged as</p>\n<p><code>lean\nstructure InductionDatum (X' : Type*) [PartialOrder X'] [AbstractCellComplex X']\n    [MulAction G X'] [GCellComplex G X'] where\n  G' : Subgroup G\n  P  : X' → Subgroup G\n  P0 : ∀ {E F : X'}, E ≤ F → P F ≤ P E\n  P1 : ∀ (n : G), n ∈ G' → ∀ (E : X'),\n    P (n • E) = (P E).map (MulEquiv.toMonoidHom (MulAut.conj n))\n  P2 : ∀ (E : X') (m : G), m ∈ P E → m ∈ G' → m • E = E</code></p>\n<p>The equivalence relation is</p>\n<p><code>lean\ndef InductionRel (X' : Type*) [...]\n    (G' : Subgroup G) (P : X' → Subgroup G) :\n    (G × X') → (G × X') → Prop :=\n  fun ⟨g, E⟩ ⟨h, F⟩ =&gt; ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ P E</code></p>\n<p><code>InductionRel.refl</code>, <code>InductionRel.symm</code>, <code>InductionRel.trans</code> verify\nthe equivalence-relation axioms; <code>refl</code> needs only unit-membership of\nsubgroups; <code>symm</code> and <code>trans</code> both use (P1) to translate\n$P_{n \\cdot E}$ back to $P_E$.  The <code>Setoid</code> packaging is\n<code>InductionRel.setoid</code>; the induced space is</p>\n<p><code>lean\ndef InducedSpace (d : InductionDatum X') : Type _ :=\n  Quotient (InductionRel.setoid d)</code></p>\n<p>The canonical embedding is <code>InducedSpace.iota</code>, sending $E \\mapsto\n[(1, E)]$.  The $G$-action on <code>InducedSpace</code> is by left translation\non the first factor.</p>\n<p>(P0) does not enter the equivalence-relation axioms; it is needed for\nthe face relation on the induced space\n(<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a>).  (P2) is used\nfor the injectivity of $\\iota$.</p>",
+  "proof_html": null,
   "deps": [
     {
       "id": "cellular_categories.sheaf_of_subgroups",
@@ -44,6 +44,11 @@
       "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html"
     },
     {
+      "id": "equivariant_sheaves.induced_qfd_property",
+      "title": "X' is a quasi-fundamental domain of the induced space (Prop 2.8(h))",
+      "href": "equivariant_sheaves/equivariant_sheaves_induced_qfd_property.html"
+    },
+    {
       "id": "equivariant_sheaves.induction_data_reverse",
       "title": "Recovering the induction data from a quasi-fundamental domain",
       "href": "equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html"
@@ -54,9 +59,19 @@
       "href": "equivariant_sheaves/equivariant_sheaves_induction_universal_property.html"
     },
     {
+      "id": "equivariant_sheaves.iota_cellular_embedding",
+      "title": "ι : X' → G ×^P X' is a cellular embedding (poset form)",
+      "href": "equivariant_sheaves/equivariant_sheaves_iota_cellular_embedding.html"
+    },
+    {
       "id": "equivariant_sheaves.section4_equivalence",
       "title": "Cosh_G(X,1_Q) ≃ Cosh_{G'}(X',1_{Q'}) under induced structure (Prop 4.1)",
       "href": "equivariant_sheaves/equivariant_sheaves_section4_equivalence.html"
+    },
+    {
+      "id": "equivariant_sheaves.stabilizer_formula_iota",
+      "title": "Stabiliser formula on the induced space (lem:Stab_gx)",
+      "href": "equivariant_sheaves/equivariant_sheaves_stabilizer_formula_iota.html"
     }
   ],
   "lean_refs": [
@@ -69,9 +84,9 @@
       "signature": "structure InductionDatum (X' : Type*) [PartialOrder X'] [AbstractCellComplex X']\n    [MulAction G X'] [GCellComplex G X'] where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L57",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L57",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -87,9 +102,9 @@
       "signature": "def InductionRel (X' : Type*) [PartialOrder X'] [AbstractCellComplex X']\n    [MulAction G X'] [GCellComplex G X']\n    (G' : Subgroup G) (P : X' → Subgroup G) :\n    (G × X') → (G × X') → Prop",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L75",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L75",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -105,9 +120,9 @@
       "signature": "theorem refl (G' : Subgroup G) (P : X' → Subgroup G) (gE : G × X') :\n    InductionRel X' G' P gE gE",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L101",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L101",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -123,9 +138,9 @@
       "signature": "theorem symm (d : InductionDatum X') {gE hF : G × X'}\n    (hyp : InductionRel X' d.G' d.P gE hF) :\n    InductionRel X' d.G' d.P hF gE",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L111",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L111",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -141,9 +156,9 @@
       "signature": "theorem trans (d : InductionDatum X') {gE hF kK : G × X'}\n    (h12 : InductionRel X' d.G' d.P gE hF)\n    (h23 : InductionRel X' d.G' d.P hF kK) :\n    InductionRel X' d.G' d.P gE kK",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L137",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L137",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -159,9 +174,9 @@
       "signature": "def setoid (d : InductionDatum (G",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L171",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L171",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -177,9 +192,9 @@
       "signature": "def InducedSpace {X' : Type*} [PartialOrder X'] [AbstractCellComplex X']\n    [MulAction G X'] [GCellComplex G X']\n    (d : InductionDatum (G",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L181",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L181",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -195,9 +210,9 @@
       "signature": "def iota (E : X') : InducedSpace d",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L194",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L194",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -210,9 +225,9 @@
       "name": "SheafOnBuilding.Induction",
       "display_name": "SheafOnBuilding.Induction",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "a00fb82716a26aaaba1e479404069bb77c59b193",
-      "short_revision": "a00fb82",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/Induction.lean#L1",
+      "revision": "d98a9c3670407c3182bc6b9131b58f987f9d331b",
+      "short_revision": "d98a9c3",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L1",
       "status": "resolved",
       "reason": null
     }
