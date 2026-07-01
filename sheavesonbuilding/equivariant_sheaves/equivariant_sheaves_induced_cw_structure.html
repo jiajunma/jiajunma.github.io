@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CW structure and QFD property on G ×^P X&#39; (Prop 2.8) — Sheaves on Buildings — Knowledge Base</title>
+  <title>CW structure and QFD property on G ×^P X&#39; — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -411,7 +411,7 @@
 <article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induced_cw_structure">
   <header class="proposition_thmheading thm-heading">
     <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">CW structure and QFD property on G ×^P X&#39; (Prop 2.8)</span>
+    <span class="proposition_thmtitle thm-title">CW structure and QFD property on G ×^P X&#39;</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-proposition">proposition</span>
@@ -438,9 +438,9 @@
         
         <li><a href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#39; → G ×^P X&#39; is a cellular embedding (poset form)</a></li>
         
-        <li><a href="equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space (Prop 2.8(h))</a></li>
+        <li><a href="equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space</a></li>
         
-        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space (lem:Stab_gx)</a></li>
+        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space</a></li>
         
         <li><a href="equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
         
@@ -458,12 +458,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ d98a9c3, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 0cfe08a, SheafOnBuilding.Induction
           </span>
           
           
@@ -474,7 +474,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d98a9c3670407c3182bc6b9131b58f987f9d331b/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -507,8 +507,8 @@ building blocks, each treated as its own node:</p>
   (1)–(4) this equips $X$ with a $G$-cell-complex structure at the
   face-poset level.</li>
 <li><strong>Stabiliser formula</strong>
-  (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space (lem:Stab_gx)</a>, Sheaf7
-  <code>lem:Stab_gx</code>): $\Fix_G(\iota E) = \Fix_{G'}(E) \cdot P_E$ and
+  (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space</a>):
+  $\Fix_G(\iota E) = \Fix_{G'}(E) \cdot P_E$ and
   $P_E \subseteq \Fix_G(\iota E)$; the second inclusion makes the
   face relation on $X$ well-defined after descent through $\sim$.</li>
 </ul>
@@ -518,7 +518,7 @@ proved directly in the topological setup below and are outside the
 poset-only formalisation.</p>
 <h2>The proposition</h2>
 <blockquote>
-<p><strong>Proposition (Sheaf7 Prop 2.8).</strong> There is a unique regular CW structure
+<p><strong>Proposition.</strong> There is a unique regular CW structure
 on $X = G \times^P X'$ for which $\iota : X' \hookrightarrow X$ is a
 cellular embedding inducing a homeomorphism onto its image, and the
 $G$-action is cellular. Moreover, $X'$ is a quasi-fundamental domain of
@@ -576,14 +576,14 @@ onto its image) follows from (a) + (e).</p>
 <p>$g \cdot (g' E) = (gg') E$, so $G$ permutes cells. Each cell-wise map
 is a homeomorphism (group action).</p>
 <h3>(h) $X'$ is a QFD.</h3>
-<p>Proved as <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space (Prop 2.8(h))</a> with the
+<p>Proved as <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space</a> with the
 sharp subgroup $G'$ (not the setwise stabiliser of $\iota(X')$).</p>
 <h3>(i) Uniqueness.</h3>
 <p>Any CW structure with $\iota$ cellular + $G$ cellular forces the cell
 set to be $\{gE\}$. So the structure is unique. $\square$</p>
 <h2>Lean formalization</h2>
-<p>The topological content of Prop 2.8 (Hausdorffness, weak topology,
-regularity, characteristic maps for (a)–(e), (i)) is outside the
+<p>The topological content (Hausdorffness, weak topology, regularity,
+characteristic maps for clauses (a)–(e), (i)) is outside the
 abstract poset-level formalisation.  The two poset-level clauses are
 split off:</p>
 <ul>
@@ -592,7 +592,7 @@ split off:</p>
   <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>, which
   discharges all six <code>iota_*</code> / <code>smul_iota_*</code> lemmas.</li>
 <li>Clause (h) — the QFD structure — is
-  <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space (Prop 2.8(h))</a>, which produces
+  <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space</a>, which produces
   <code>Subcomplex.ofIota</code>, <code>isQuasiFundDomain_subcomplexOfIota</code>, and
   <code>G'_le_subcomplexOfIota_stabilizer</code>.</li>
 </ul>
