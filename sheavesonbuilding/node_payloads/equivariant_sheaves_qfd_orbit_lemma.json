@@ -24,6 +24,11 @@
       "href": "depth_zero_reduction/depth_zero_reduction_M_K_orbit_bijection.html"
     },
     {
+      "id": "equivariant_sheaves.induction_data_reverse",
+      "title": "Reverse-direction induction: reconstructing X as G ×^P S from a QFD",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html"
+    },
+    {
       "id": "equivariant_sheaves.reduction_to_qfd",
       "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
       "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html"
@@ -39,9 +44,27 @@
       "signature": "theorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain (G",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
-      "short_revision": "e66a219",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L134",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/QuasiFundDomain.lean#L134",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul",
+      "display_name": "SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul",
+      "qualified_name": "SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul",
+      "module": "SheafOnBuilding.QuasiFundDomain",
+      "kind": "theorem",
+      "signature": "theorem stabilizer_smul (n : G) (E : X) :\n    MulAction.stabilizer G (n • E) =\n      (MulAction.stabilizer G E).map (MulEquiv.toMonoidHom (MulAut.conj n))",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/QuasiFundDomain.lean#L119",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -57,9 +80,9 @@
       "signature": "theorem orbit_eq_iff ⦃E F : X⦄ (hE : E ∈ S) (hF : F ∈ S) (g h : G) :\n    g • E = h • F ↔\n      ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ d.P E",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
-      "short_revision": "e66a219",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L258",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/QuasiFundDomain.lean#L258",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -72,9 +95,9 @@
       "name": "SheafOnBuilding.QuasiFundDomain",
       "display_name": "SheafOnBuilding.QuasiFundDomain",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
-      "short_revision": "e66a219",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L1",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/QuasiFundDomain.lean#L1",
       "status": "resolved",
       "reason": null
     }

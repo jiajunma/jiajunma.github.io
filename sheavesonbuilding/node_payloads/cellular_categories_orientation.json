@@ -1,0 +1,89 @@
+{
+  "id": "cellular_categories.orientation",
+  "title": "Orientation and incidence numbers on a cell complex",
+  "kind": "definition",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_orientation.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>Orientation and incidence numbers</h1>\n<p>For a locally finite regular CW complex $X$ we fix a family of\n<strong>incidence numbers</strong></p>\n<p>$$[E : F] \\in \\mathbb{Z}, \\qquad E, F \\in [\\![X]\\!],$$</p>\n<p>supported on codim-1 face pairs and satisfying</p>\n<ul>\n<li>$[E : F] = 0$ whenever $E \\not\\preceq F$;</li>\n<li>$[E : F] = 0$ whenever $\\dim F \\neq \\dim E + 1$;</li>\n<li>the <strong>chain-complex axiom</strong> $\\partial^2 = 0$: for any pair $D, F$ with\n  $\\dim F = \\dim D + 2$,</li>\n</ul>\n<p>$$\\sum_{E \\in [\\![X]\\!]} [D : E] \\cdot [E : F] = 0.$$</p>\n<p>Such a family is called an <strong>orientation</strong> of $X$.</p>\n<h2>Regularity</h2>\n<p>An orientation is <strong>regular</strong> if $[E : F] \\in \\{+1, -1\\}$ whenever\n$E \\preceq F$ and $\\dim F = \\dim E + 1$.  Combinatorially this matches\nthe topological condition that each attaching map is an embedding onto\nits image; every regular CW complex admits a regular orientation.</p>\n<h2>$G$-equivariance</h2>\n<p>When a group $G$ acts cellularly on $X$, an orientation is\n<strong>$G$-equivariant</strong> when</p>\n<p>$$[g \\cdot E : g \\cdot F] = [E : F], \\qquad g \\in G, \\ E, F \\in [\\![X]\\!].$$</p>\n<p>Equivariance is the appropriate condition for connected acting groups\n(no sign character); disconnected acting groups may act through a sign\ncharacter on $\\mathbb{Z}$, but the paper's setting is connected.</p>\n<h2>Downstream use</h2>\n<p>The orientation feeds into the boundary of the cellular chain complex\nof a cosheaf: see [[node:representations.chain_complex_C_dot]].</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.cw_complex_setting",
+      "title": "Locally finite regular CW complex with cellular G-action",
+      "href": "cellular_categories/cellular_categories_cw_complex_setting.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.Orientation",
+      "display_name": "SheafOnBuilding.Orientation",
+      "qualified_name": "SheafOnBuilding.Orientation",
+      "module": "SheafOnBuilding.Orientation",
+      "kind": "class",
+      "signature": "class Orientation (X : Type*) [PartialOrder X] [AbstractCellComplex X]\n    [IsLocallyFinite X] where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Orientation.lean#L52",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.IsRegular",
+      "display_name": "SheafOnBuilding.IsRegular",
+      "qualified_name": "SheafOnBuilding.IsRegular",
+      "module": "SheafOnBuilding.Orientation",
+      "kind": "class",
+      "signature": "class IsRegular (X : Type*) [PartialOrder X] [AbstractCellComplex X]\n    [IsLocallyFinite X] [Orientation X] : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Orientation.lean#L79",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.IsGEquivariantOrientation",
+      "display_name": "SheafOnBuilding.IsGEquivariantOrientation",
+      "qualified_name": "SheafOnBuilding.IsGEquivariantOrientation",
+      "module": "SheafOnBuilding.Orientation",
+      "kind": "class",
+      "signature": "class IsGEquivariantOrientation (G : Type*) [Group G] (X : Type*)\n    [PartialOrder X] [AbstractCellComplex X] [IsLocallyFinite X]\n    [MulAction G X] [GCellComplex G X]\n    [Orientation X] : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Orientation.lean#L95",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.Orientation",
+      "display_name": "SheafOnBuilding.Orientation",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Orientation.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

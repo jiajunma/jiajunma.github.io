@@ -1004,6 +1004,7 @@
       "used_by": [
         "cellular_categories.category_jXk",
         "cellular_categories.equivariant_sheaves",
+        "cellular_categories.orientation",
         "cellular_categories.quotient_category_jXGk",
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.quasi_fundamental_domain",
@@ -1062,6 +1063,30 @@
       "uses": [
         "cellular_categories.equivariant_sheaves",
         "cellular_categories.quotient_category_jXGk"
+      ]
+    },
+    {
+      "id": "cellular_categories.orientation",
+      "title": "Orientation and incidence numbers on a cell complex",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "orientation",
+        "incidence-numbers",
+        "chain-complex"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.Orientation",
+        "SheafOnBuilding.IsRegular",
+        "SheafOnBuilding.IsGEquivariantOrientation"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.cw_complex_setting"
       ]
     },
     {
@@ -2037,11 +2062,17 @@
       "lean_declarations": [
         "SheafOnBuilding.InducedSpace.iota_injective",
         "SheafOnBuilding.InducedSpace.iota_le_iff",
+        "SheafOnBuilding.InducedSpace.iota_smul_of_mem_G'",
+        "SheafOnBuilding.InducedSpace.exists_eq_smul_iota",
+        "SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff",
+        "SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff",
         "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
         "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota",
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
         "SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff",
-        "SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff",
-        "SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff"
+        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
+        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota",
+        "SheafOnBuilding.InducedSpace.dim"
       ],
       "topic": "equivariant_sheaves",
       "uses": [
@@ -2073,6 +2104,9 @@
       "lean_declarations": [
         "SheafOnBuilding.InductionDatum",
         "SheafOnBuilding.InductionRel",
+        "SheafOnBuilding.InductionRel.refl",
+        "SheafOnBuilding.InductionRel.symm",
+        "SheafOnBuilding.InductionRel.trans",
         "SheafOnBuilding.InductionRel.setoid",
         "SheafOnBuilding.InducedSpace",
         "SheafOnBuilding.InducedSpace.iota"
@@ -2087,8 +2121,46 @@
         "building.connected_components",
         "building.generalized_building_bs",
         "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induction_data_reverse",
         "equivariant_sheaves.induction_universal_property",
         "equivariant_sheaves.section4_equivalence"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.induction_data_reverse",
+      "title": "Reverse-direction induction: reconstructing X as G ×^P S from a QFD",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "induction",
+        "qfd",
+        "lean-formalisation"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.IsQuasiFundDomain.natMap",
+        "SheafOnBuilding.IsQuasiFundDomain.natMap_surjective",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.P2",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.product_le_stabilizer",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.rel",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.setoid",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.Quotient'",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.toX",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.toX_injective",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.toX_surjective",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.equivX",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.smul_le_smul_of_rel"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.qfd_orbit_lemma",
+        "equivariant_sheaves.quasi_fundamental_domain"
       ]
     },
     {
@@ -2146,6 +2218,7 @@
       ],
       "lean_declarations": [
         "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul",
         "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff"
       ],
       "topic": "equivariant_sheaves",
@@ -2154,6 +2227,7 @@
       ],
       "used_by": [
         "depth_zero_reduction.M_K_orbit_bijection",
+        "equivariant_sheaves.induction_data_reverse",
         "equivariant_sheaves.reduction_to_qfd"
       ]
     },
@@ -2183,6 +2257,7 @@
         "building.apartments_in_bsigma",
         "coefficient_systems.cartesian_local_maps",
         "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induction_data_reverse",
         "equivariant_sheaves.qfd_orbit_lemma",
         "equivariant_sheaves.reduction_to_qfd"
       ]
@@ -2414,6 +2489,24 @@
       "primary_topic": "representations",
       "topics": [
         "representations"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.weightedRestriction",
+        "SheafOnBuilding.boundaryFromCell",
+        "SheafOnBuilding.boundary_sq_at",
+        "SheafOnBuilding.boundary_sq_at_all_dim",
+        "SheafOnBuilding.boundaryFromCell_comp_zero",
+        "SheafOnBuilding.dimCells",
+        "SheafOnBuilding.Cn",
+        "SheafOnBuilding.Cn.d",
+        "SheafOnBuilding.Cn.d_comp_d",
+        "SheafOnBuilding.chainComplex",
+        "SheafOnBuilding.chainComplexFunctor",
+        "SheafOnBuilding.cellularHomologyFunctor",
+        "SheafOnBuilding.cnMap",
+        "SheafOnBuilding.cnMap_naturality_d",
+        "SheafOnBuilding.weightedRestriction_smul",
+        "SheafOnBuilding.Cn.smulMorphism"
       ],
       "topic": "representations",
       "uses": [
@@ -3070,6 +3163,10 @@
       "to": "cellular_categories.equivariant_via_functors"
     },
     {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.orientation"
+    },
+    {
       "from": "cellular_categories.category_jXk",
       "to": "cellular_categories.quotient_category_jXGk"
     },
@@ -3552,6 +3649,18 @@
     {
       "from": "cellular_categories.sheaf_of_subgroups",
       "to": "equivariant_sheaves.induction_GxP_X"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_data_reverse"
+    },
+    {
+      "from": "equivariant_sheaves.qfd_orbit_lemma",
+      "to": "equivariant_sheaves.induction_data_reverse"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.induction_data_reverse"
     },
     {
       "from": "building.generalized_building_bs",

@@ -4,22 +4,22 @@
     "title": "Cellular Categories",
     "href": "cellular_categories/index.html",
     "parent": null,
-    "node_count": 7,
-    "descendant_node_count": 7
+    "node_count": 8,
+    "descendant_node_count": 8
   },
   "counts": {
-    "internal_nodes": 7,
+    "internal_nodes": 8,
     "inlined_nodes": 0,
-    "descendant_nodes": 7,
+    "descendant_nodes": 8,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 7,
+    "non_proof_plan_nodes": 8,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 13,
-    "visible_nodes_with_selected_proof_plans": 13
+    "visible_nodes_without_proof_plans": 14,
+    "visible_nodes_with_selected_proof_plans": 14
   },
   "nodes": [
     {
@@ -53,6 +53,14 @@
       "status": "staged",
       "href": "cellular_categories/cellular_categories_equivariant_via_functors.html",
       "payload": "node_payloads/cellular_categories_equivariant_via_functors.json"
+    },
+    {
+      "id": "cellular_categories.orientation",
+      "title": "Orientation and incidence numbers on a cell complex",
+      "kind": "definition",
+      "status": "staged",
+      "href": "cellular_categories/cellular_categories_orientation.html",
+      "payload": "node_payloads/cellular_categories_orientation.json"
     },
     {
       "id": "cellular_categories.quotient_category_jXGk",
@@ -106,6 +114,11 @@
       "kind": "uses"
     },
     {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.orientation",
+      "kind": "uses"
+    },
+    {
       "from": "cellular_categories.category_jXk",
       "to": "cellular_categories.quotient_category_jXGk",
       "kind": "uses"
@@ -153,7 +166,7 @@
       "title": "Equivariant Sheaves",
       "href": "equivariant_sheaves/index.html",
       "role": "dependent",
-      "node_count": 9
+      "node_count": 10
     },
     {
       "id": "representations",
@@ -263,6 +276,12 @@
       "count": 2
     },
     {
+      "id": "chain-complex",
+      "title": "chain-complex",
+      "href": "keywords/chain-complex.html",
+      "count": 1
+    },
+    {
       "id": "character",
       "title": "character",
       "href": "keywords/character.html",
@@ -317,9 +336,21 @@
       "count": 1
     },
     {
+      "id": "incidence-numbers",
+      "title": "incidence-numbers",
+      "href": "keywords/incidence-numbers.html",
+      "count": 1
+    },
+    {
       "id": "moy-prasad",
       "title": "moy-prasad",
       "href": "keywords/moy-prasad.html",
+      "count": 1
+    },
+    {
+      "id": "orientation",
+      "title": "orientation",
+      "href": "keywords/orientation.html",
       "count": 1
     },
     {

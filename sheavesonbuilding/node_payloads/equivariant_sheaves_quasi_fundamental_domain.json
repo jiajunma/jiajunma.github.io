@@ -39,6 +39,11 @@
       "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html"
     },
     {
+      "id": "equivariant_sheaves.induction_data_reverse",
+      "title": "Reverse-direction induction: reconstructing X as G ×^P S from a QFD",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html"
+    },
+    {
       "id": "equivariant_sheaves.qfd_orbit_lemma",
       "title": "QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E",
       "href": "equivariant_sheaves/equivariant_sheaves_qfd_orbit_lemma.html"
@@ -59,9 +64,9 @@
       "signature": "class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}\n    [PartialOrder X] [AbstractCellComplex X]\n    [MulAction G X] [GCellComplex G X]\n    (G' : Subgroup G) (S : Subcomplex X) : Prop where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
-      "short_revision": "e66a219",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L76",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/QuasiFundDomain.lean#L76",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -77,9 +82,9 @@
       "signature": "def stabilizer (S : Subcomplex X) : Subgroup G where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
-      "short_revision": "e66a219",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L44",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/QuasiFundDomain.lean#L44",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -92,9 +97,9 @@
       "name": "SheafOnBuilding.QuasiFundDomain",
       "display_name": "SheafOnBuilding.QuasiFundDomain",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
-      "short_revision": "e66a219",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L1",
+      "revision": "05a59cc0c89d591ced9ea451693c32015d082eaa",
+      "short_revision": "05a59cc",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/QuasiFundDomain.lean#L1",
       "status": "resolved",
       "reason": null
     }

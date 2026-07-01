@@ -250,6 +250,8 @@
       
         <li><a href="../keywords/idempotents.html">idempotents</a></li>
       
+        <li><a href="../keywords/incidence-numbers.html">incidence-numbers</a></li>
+      
         <li><a href="../keywords/inclusions.html">inclusions</a></li>
       
         <li><a href="../keywords/induced-space.html">induced-space</a></li>
@@ -276,6 +278,8 @@
       
         <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
       
+        <li><a href="../keywords/lean-formalisation.html">lean-formalisation</a></li>
+      
         <li><a href="../keywords/local-maps.html">local-maps</a></li>
       
         <li><a href="../keywords/localization.html">localization</a></li>
@@ -299,6 +303,8 @@
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
         <li><a href="../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../keywords/orientation.html">orientation</a></li>
       
         <li><a href="../keywords/parahoric.html">parahoric</a></li>
       
@@ -426,12 +432,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L203"><code>SheafOnBuilding.InducedSpace.iota_injective</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L203"><code>SheafOnBuilding.InducedSpace.iota_injective</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e66a219, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
           </span>
           
           
@@ -442,12 +448,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L663"><code>SheafOnBuilding.InducedSpace.iota_le_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L663"><code>SheafOnBuilding.InducedSpace.iota_le_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e66a219, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
           </span>
           
           
@@ -456,65 +462,48 @@
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L709"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e66a219, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def Subcomplex.ofIota : SheafOnBuilding.Subcomplex (InducedSpace d) where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">instance</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L770"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L292"><code>SheafOnBuilding.InducedSpace.iota_smul_of_mem_G&#39;</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e66a219, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
           </span>
           
           
           
-          <pre class="lean-signature"><code>instance isQuasiFundDomain_subcomplexOfIota :
-    SheafOnBuilding.IsQuasiFundDomain (G</code></pre>
+          <pre class="lean-signature"><code>theorem iota_smul_of_mem_G&#39; {n : G} (hn : n ∈ d.G&#39;) (E : X&#39;) :
+    n • iota d E = iota d (n • E)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L320"><code>SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L262"><code>SheafOnBuilding.InducedSpace.exists_eq_smul_iota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e66a219, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem mem_stabilizer_iota_iff (E : X&#39;) (m : G) :
-    m • iota d E = iota d E ↔
-      ∃ n ∈ d.G&#39;, n • E = E ∧ ∃ p ∈ d.P E, m = n * p</code></pre>
+          <pre class="lean-signature"><code>theorem exists_eq_smul_iota (q : InducedSpace d) :
+    ∃ (g : G) (E : X&#39;), q = g • iota d E</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L274"><code>SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L274"><code>SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e66a219, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
           </span>
           
           
@@ -527,12 +516,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L699"><code>SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L699"><code>SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e66a219, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
           </span>
           
           
@@ -542,10 +531,129 @@
       ∃ n ∈ d.G&#39;, n • E ≤ F ∧ g₁⁻¹ * g₂ * n ∈ d.P E</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L709"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def Subcomplex.ofIota : SheafOnBuilding.Subcomplex (InducedSpace d) where</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L770"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>instance isQuasiFundDomain_subcomplexOfIota :
+    SheafOnBuilding.IsQuasiFundDomain (G</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L738"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem G&#39;_le_subcomplexOfIota_stabilizer :
+    d.G&#39; ≤ (Subcomplex.ofIota d).stabilizer</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L320"><code>SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem mem_stabilizer_iota_iff (E : X&#39;) (m : G) :
+    m • iota d E = iota d E ↔
+      ∃ n ∈ d.G&#39;, n • E = E ∧ ∃ p ∈ d.P E, m = n * p</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L343"><code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem P_le_stabilizer_iota (E : X&#39;) :
+    d.P E ≤ MulAction.stabilizer G (iota d E)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L352"><code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem fix_G&#39;_le_stabilizer_iota (E : X&#39;) {n : G}
+    (hn_G&#39; : n ∈ d.G&#39;) (hn_fix : n • E = E) :
+    n • iota d E = iota d E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def dim : InducedSpace d → ℕ</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>

@@ -4,22 +4,22 @@
     "title": "Equivariant Sheaves",
     "href": "equivariant_sheaves/index.html",
     "parent": null,
-    "node_count": 9,
-    "descendant_node_count": 9
+    "node_count": 10,
+    "descendant_node_count": 10
   },
   "counts": {
-    "internal_nodes": 9,
+    "internal_nodes": 10,
     "inlined_nodes": 0,
-    "descendant_nodes": 9,
+    "descendant_nodes": 10,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 9,
+    "non_proof_plan_nodes": 10,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 15,
-    "visible_nodes_with_selected_proof_plans": 15
+    "visible_nodes_without_proof_plans": 16,
+    "visible_nodes_with_selected_proof_plans": 16
   },
   "nodes": [
     {
@@ -45,6 +45,14 @@
       "status": "staged",
       "href": "equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html",
       "payload": "node_payloads/equivariant_sheaves_induction_GxP_X.json"
+    },
+    {
+      "id": "equivariant_sheaves.induction_data_reverse",
+      "title": "Reverse-direction induction: reconstructing X as G ×^P S from a QFD",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html",
+      "payload": "node_payloads/equivariant_sheaves_induction_data_reverse.json"
     },
     {
       "id": "equivariant_sheaves.induction_universal_property",
@@ -112,6 +120,21 @@
       "kind": "uses"
     },
     {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_data_reverse",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.qfd_orbit_lemma",
+      "to": "equivariant_sheaves.induction_data_reverse",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.induction_data_reverse",
+      "kind": "uses"
+    },
+    {
       "from": "equivariant_sheaves.induced_cw_structure",
       "to": "equivariant_sheaves.induction_universal_property",
       "kind": "uses"
@@ -167,7 +190,7 @@
       "title": "Cellular Categories",
       "href": "cellular_categories/index.html",
       "role": "dependency",
-      "node_count": 7
+      "node_count": 8
     },
     {
       "id": "coefficient_systems",
@@ -358,12 +381,18 @@
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "invariants",
       "title": "invariants",
       "href": "keywords/invariants.html",
+      "count": 1
+    },
+    {
+      "id": "lean-formalisation",
+      "title": "lean-formalisation",
+      "href": "keywords/lean-formalisation.html",
       "count": 1
     },
     {
@@ -376,7 +405,7 @@
       "id": "qfd",
       "title": "qfd",
       "href": "keywords/qfd.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "reduction",
