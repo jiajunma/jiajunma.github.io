@@ -1,0 +1,53 @@
+{
+  "id": "abstract_cell_complex.is_locally_finite",
+  "title": "IsLocallyFinite — finite faces and finite cofaces",
+  "kind": "definition",
+  "status": "staged",
+  "href": "abstract_cell_complex/abstract_cell_complex_is_locally_finite.html",
+  "primary_topic": "abstract_cell_complex",
+  "topics": [
+    "abstract_cell_complex"
+  ],
+  "body_html": "<h1><code>IsLocallyFinite</code></h1>\n<p>A <code>Prop</code> mixin, independent of the\n<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.abstract_cell_complex\" href=\"abstract_cell_complex_abstract_cell_complex.html\">AbstractCellComplex — dimension function on a face poset</a> data, asserting\nthat each cell has only finitely many faces <em>and</em> lies in only finitely\nmany cells' closures:</p>\n<h2>Signature</h2>\n<p><code>lean\nclass IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where\n  finite_faces   : ∀ E : X, Set.Finite {F : X | F ≤ E}\n  finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}</code></p>\n<ul>\n<li><code>finite_faces</code>: the down-set at each cell $E$ is finite (closure of\n  $E$ meets finitely many cells).</li>\n<li><code>finite_cofaces</code>: the up-set at each cell $E$ is finite ($E$ lies in\n  the closure of finitely many cells).</li>\n</ul>\n<h2>Why both</h2>\n<p>Both conditions together formalise \"each point has a neighbourhood\nmeeting only finitely many cells\" for a regular CW complex.  In the\nabstract poset setting, the two are independent — neither implies the\nother without further structure — but for a regular CW complex the\ngeometric \"locally finite\" assumption delivers both at once.  Bundling\nthem in a single <code>Prop</code> class matches the CW-intuition and keeps\ndownstream lemmas single-parameter.</p>\n<h2>Design choice: <code>Prop</code> mixin, not part of <code>AbstractCellComplex</code></h2>\n<p>Finiteness is split out because the abstract poset / dimension\nstructure is meaningful without it (and many lemmas — e.g. the\nstar-topology basis, <code>iota</code> order-embedding — do not need finiteness).\nDownstream files pick up the finiteness typeclass only when the sum\n<code>∑_E V_E</code> or a <code>Finset</code> argument is unavoidable.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "abstract_cell_complex.abstract_cell_complex",
+      "title": "AbstractCellComplex — dimension function on a face poset",
+      "href": "abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.IsLocallyFinite",
+      "display_name": "SheafOnBuilding.IsLocallyFinite",
+      "qualified_name": "SheafOnBuilding.IsLocallyFinite",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "class",
+      "signature": "class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "b594c1d86b58c2aa7146a4f8f7490709ead7c0a7",
+      "short_revision": "b594c1d",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L82",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.GCellComplex",
+      "display_name": "SheafOnBuilding.GCellComplex",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "b594c1d86b58c2aa7146a4f8f7490709ead7c0a7",
+      "short_revision": "b594c1d",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -32,6 +32,10 @@
       </button>
       <ul id="topic-list" class="topic-list nav-list">
         <li class="topic-leaf">
+          <a href="../abstract_cell_complex/index.html">Abstract Cell Complex</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../applications/index.html">Applications</a>
         </li>
       
@@ -120,6 +124,8 @@
       
         <li><a href="../keywords/alcove.html">alcove</a></li>
       
+        <li><a href="../keywords/alexandrov.html">alexandrov</a></li>
+      
         <li><a href="../keywords/apartment.html">apartment</a></li>
       
         <li><a href="../keywords/apartment-intersection.html">apartment-intersection</a></li>
@@ -202,6 +208,8 @@
       
         <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
       
+        <li><a href="../keywords/dimension.html">dimension</a></li>
+      
         <li><a href="../keywords/dual.html">dual</a></li>
       
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
@@ -229,6 +237,8 @@
         <li><a href="../keywords/functor-category.html">functor-category</a></li>
       
         <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/g-action.html">g-action</a></li>
       
         <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
       
@@ -288,6 +298,8 @@
       
         <li><a href="../keywords/localization.html">localization</a></li>
       
+        <li><a href="../keywords/locally-finite.html">locally-finite</a></li>
+      
         <li><a href="../keywords/main.html">main</a></li>
       
         <li><a href="../keywords/main-input.html">main-input</a></li>
@@ -303,6 +315,8 @@
         <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
       
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/open-basis.html">open-basis</a></li>
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
@@ -350,7 +364,11 @@
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
       
+        <li><a href="../keywords/star-topology.html">star-topology</a></li>
+      
         <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subcomplex.html">subcomplex</a></li>
       
         <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
       
@@ -437,11 +455,22 @@ cells. The face relation $E \preceq F$ holds when $E \subseteq \overline{F}$.</p
 structure can force them to agree.</p>
 <h2>Lean formalisation</h2>
 <p>The Lean library distils this topological setup down to a purely
-combinatorial (poset + dimension) abstraction — see
-<a class="node-ref" data-node-id="cellular_categories.abstract_cell_complex" href="cellular_categories_abstract_cell_complex.html">Abstract cell complex: combinatorial (poset) formalisation</a> for the four
-typeclass layers (<code>AbstractCellComplex</code>, <code>IsLocallyFinite</code>,
-<code>GCellComplex</code>, <code>Subcomplex</code>) that every downstream Lean definition
-in §§2–4 is stated against.</p>
+combinatorial (poset + dimension) abstraction living under the
+dedicated topic <strong><a href="topic:abstract_cell_complex">Abstract cell complex —
+combinatorial (poset) formalisation</a></strong>.
+The main pieces are:</p>
+<ul>
+<li><a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a> — the class
+  itself (dimension function + monotonicity axioms);</li>
+<li><a class="node-ref" data-node-id="abstract_cell_complex.is_locally_finite" href="../abstract_cell_complex/abstract_cell_complex_is_locally_finite.html">IsLocallyFinite — finite faces and finite cofaces</a> — the finite-face
+  and finite-coface Prop mixin;</li>
+<li><a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">GCellComplex — cellular G-action compatibility</a> — the cellular
+  $G$-action Prop class;</li>
+<li><a class="node-ref" data-node-id="abstract_cell_complex.subcomplex" href="../abstract_cell_complex/abstract_cell_complex_subcomplex.html">Subcomplex — face-closed subset of cells</a> — face-closed subsets;</li>
+<li><a class="node-ref" data-node-id="abstract_cell_complex.star_topology" href="../abstract_cell_complex/abstract_cell_complex_star_topology.html">Alexandrov star topology on the face poset</a> — the Alexandrov star
+  topology underpinning sheaves/cosheaves.</li>
+</ul>
+<p>Every downstream Lean definition in §§2–4 is stated against these.</p>
     
   </div>
 
@@ -452,7 +481,7 @@ in §§2–4 is stated against.</p>
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="cellular_categories_abstract_cell_complex.html">Abstract cell complex: combinatorial (poset) formalisation</a></li>
+      <li><a href="../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a></li>
       
       <li><a href="cellular_categories_category_jXk.html">The cell categories ]X[ and [X]</a></li>
       

@@ -1,0 +1,178 @@
+{
+  "topic": {
+    "id": "abstract_cell_complex",
+    "title": "Abstract Cell Complex",
+    "href": "abstract_cell_complex/index.html",
+    "parent": null,
+    "node_count": 5,
+    "descendant_node_count": 5
+  },
+  "counts": {
+    "internal_nodes": 5,
+    "inlined_nodes": 0,
+    "descendant_nodes": 5,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 5,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
+  },
+  "nodes": [
+    {
+      "id": "abstract_cell_complex.abstract_cell_complex",
+      "title": "AbstractCellComplex — dimension function on a face poset",
+      "kind": "definition",
+      "status": "staged",
+      "href": "abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html",
+      "payload": "node_payloads/abstract_cell_complex_abstract_cell_complex.json"
+    },
+    {
+      "id": "abstract_cell_complex.g_cell_complex",
+      "title": "GCellComplex — cellular G-action compatibility",
+      "kind": "definition",
+      "status": "staged",
+      "href": "abstract_cell_complex/abstract_cell_complex_g_cell_complex.html",
+      "payload": "node_payloads/abstract_cell_complex_g_cell_complex.json"
+    },
+    {
+      "id": "abstract_cell_complex.is_locally_finite",
+      "title": "IsLocallyFinite — finite faces and finite cofaces",
+      "kind": "definition",
+      "status": "staged",
+      "href": "abstract_cell_complex/abstract_cell_complex_is_locally_finite.html",
+      "payload": "node_payloads/abstract_cell_complex_is_locally_finite.json"
+    },
+    {
+      "id": "abstract_cell_complex.star_topology",
+      "title": "Alexandrov star topology on the face poset",
+      "kind": "definition",
+      "status": "staged",
+      "href": "abstract_cell_complex/abstract_cell_complex_star_topology.html",
+      "payload": "node_payloads/abstract_cell_complex_star_topology.json"
+    },
+    {
+      "id": "abstract_cell_complex.subcomplex",
+      "title": "Subcomplex — face-closed subset of cells",
+      "kind": "definition",
+      "status": "staged",
+      "href": "abstract_cell_complex/abstract_cell_complex_subcomplex.html",
+      "payload": "node_payloads/abstract_cell_complex_subcomplex.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.g_cell_complex",
+      "kind": "uses"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.is_locally_finite",
+      "kind": "uses"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.star_topology",
+      "kind": "uses"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.subcomplex",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "cellular_categories",
+      "title": "Cellular Categories",
+      "href": "cellular_categories/index.html",
+      "role": "dependency",
+      "node_count": 8
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:cellular_categories",
+      "to": "abstract_cell_complex.abstract_cell_complex",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "alexandrov",
+      "title": "alexandrov",
+      "href": "keywords/alexandrov.html",
+      "count": 1
+    },
+    {
+      "id": "cell-complex",
+      "title": "cell-complex",
+      "href": "keywords/cell-complex.html",
+      "count": 1
+    },
+    {
+      "id": "cellular-action",
+      "title": "cellular-action",
+      "href": "keywords/cellular-action.html",
+      "count": 1
+    },
+    {
+      "id": "cw-complex",
+      "title": "cw-complex",
+      "href": "keywords/cw-complex.html",
+      "count": 2
+    },
+    {
+      "id": "dimension",
+      "title": "dimension",
+      "href": "keywords/dimension.html",
+      "count": 1
+    },
+    {
+      "id": "g-action",
+      "title": "g-action",
+      "href": "keywords/g-action.html",
+      "count": 1
+    },
+    {
+      "id": "lean-abstraction",
+      "title": "lean-abstraction",
+      "href": "keywords/lean-abstraction.html",
+      "count": 4
+    },
+    {
+      "id": "locally-finite",
+      "title": "locally-finite",
+      "href": "keywords/locally-finite.html",
+      "count": 1
+    },
+    {
+      "id": "open-basis",
+      "title": "open-basis",
+      "href": "keywords/open-basis.html",
+      "count": 1
+    },
+    {
+      "id": "star-topology",
+      "title": "star-topology",
+      "href": "keywords/star-topology.html",
+      "count": 1
+    },
+    {
+      "id": "subcomplex",
+      "title": "subcomplex",
+      "href": "keywords/subcomplex.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

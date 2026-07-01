@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abstract cell complex: combinatorial (poset) formalisation — Sheaves on Buildings — Knowledge Base</title>
+  <title>Alexandrov star topology on the face poset — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -31,6 +31,10 @@
         <span class="toggle-icon" aria-hidden="true">▾</span> Topics
       </button>
       <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf topic-active">
+          <a href="../abstract_cell_complex/index.html">Abstract Cell Complex</a>
+        </li>
+      
         <li class="topic-leaf">
           <a href="../applications/index.html">Applications</a>
         </li>
@@ -39,7 +43,7 @@
           <a href="../building/index.html">Building</a>
         </li>
       
-        <li class="topic-leaf topic-active">
+        <li class="topic-leaf">
           <a href="../cellular_categories/index.html">Cellular Categories</a>
         </li>
       
@@ -119,6 +123,8 @@
         <li><a href="../keywords/afmo.html">afmo</a></li>
       
         <li><a href="../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../keywords/alexandrov.html">alexandrov</a></li>
       
         <li><a href="../keywords/apartment.html">apartment</a></li>
       
@@ -202,6 +208,8 @@
       
         <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
       
+        <li><a href="../keywords/dimension.html">dimension</a></li>
+      
         <li><a href="../keywords/dual.html">dual</a></li>
       
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
@@ -229,6 +237,8 @@
         <li><a href="../keywords/functor-category.html">functor-category</a></li>
       
         <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/g-action.html">g-action</a></li>
       
         <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
       
@@ -288,6 +298,8 @@
       
         <li><a href="../keywords/localization.html">localization</a></li>
       
+        <li><a href="../keywords/locally-finite.html">locally-finite</a></li>
+      
         <li><a href="../keywords/main.html">main</a></li>
       
         <li><a href="../keywords/main-input.html">main-input</a></li>
@@ -303,6 +315,8 @@
         <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
       
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/open-basis.html">open-basis</a></li>
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
@@ -350,7 +364,11 @@
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
       
+        <li><a href="../keywords/star-topology.html">star-topology</a></li>
+      
         <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subcomplex.html">subcomplex</a></li>
       
         <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
       
@@ -392,17 +410,17 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-cellular_categories-2e-abstract_cell_complex">
+<article class="definition_thmwrapper theorem-style-definition node-page" id="node-abstract_cell_complex-2e-star_topology">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Abstract cell complex: combinatorial (poset) formalisation</span>
+    <span class="definition_thmtitle thm-title">Alexandrov star topology on the face poset</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-definition">definition</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-cellular_categories-2e-abstract_cell_complex">#</a>
+      <a class="permalink" href="#node-abstract_cell_complex-2e-star_topology">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -418,7 +436,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="cellular_categories_cw_complex_setting.html">Locally finite regular CW complex with cellular G-action</a></li>
+        <li><a href="abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a></li>
         
       </ul>
     </div>
@@ -432,74 +450,57 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L97"><code>SheafOnBuilding.AbstractCellComplex.star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 628c5d5, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
           </span>
           
           
           
-          <pre class="lean-signature"><code>class AbstractCellComplex (X : Type*) [PartialOrder X] where</code></pre>
+          <pre class="lean-signature"><code>def star (E : X) : Set X</code></pre>
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L101"><code>SheafOnBuilding.AbstractCellComplex.self_mem_star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 628c5d5, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
           </span>
           
           
           
-          <pre class="lean-signature"><code>class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where</code></pre>
+          <pre class="lean-signature"><code>theorem self_mem_star (E : X) : E ∈ star E</code></pre>
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 628c5d5, SheafOnBuilding.GCellComplex
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>class GCellComplex (G : Type*) [Group G] (X : Type*)
-    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">structure</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L157"><code>SheafOnBuilding.Subcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L124"><code>SheafOnBuilding.AbstractCellComplex.isOpen_star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 628c5d5, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
           </span>
           
           
-          
-          <pre class="lean-signature"><code>structure Subcomplex (X : Type*) [PartialOrder X] where</code></pre>
+          <p class="lean-docstring">Each `star E` is open in the star topology.</p>
+          <pre class="lean-signature"><code>theorem isOpen_star (E : X) : IsOpen (star E)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -507,119 +508,44 @@
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1>Abstract cell complex</h1>
-<p>The paper's §2.1 setup — a locally finite regular CW complex with a
-cellular $G$-action, see <a class="node-ref" data-node-id="cellular_categories.cw_complex_setting" href="cellular_categories_cw_complex_setting.html">Locally finite regular CW complex with cellular G-action</a>
-— is topological.  The Lean formalisation extracts the purely
-<strong>combinatorial</strong> content that §§2–4 actually use: <strong>the face poset plus a
-dimension function</strong>.  This "abstract cell complex" is what all
-downstream Lean definitions (sheaves, cosheaves, QFD, induction,
-orientation, chain complex) are built on.</p>
-<h2>Debundled API</h2>
-<p>The Lean library <strong>debundles</strong> the setup into four independent
-typeclass layers, applied one at a time as needed:</p>
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Kind</th>
-<th>Carries</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>AbstractCellComplex X</code></td>
-<td>data class</td>
-<td>dimension function <code>dim : X → ℕ</code> and its monotonicity axioms</td>
-</tr>
-<tr>
-<td><code>IsLocallyFinite X</code></td>
-<td><code>Prop</code> mixin</td>
-<td>each cell has finitely many faces <em>and</em> finitely many cofaces</td>
-</tr>
-<tr>
-<td><code>GCellComplex G X</code></td>
-<td><code>Prop</code> class</td>
-<td>the requirement that a <code>MulAction G X</code> is <em>cellular</em></td>
-</tr>
-<tr>
-<td><code>Subcomplex X</code></td>
-<td><code>structure</code></td>
-<td>a face-closed subset of the cells</td>
-</tr>
-</tbody>
-</table>
-<p>A <em>"$G$-cellular complex of locally finite type"</em> is spelled out as</p>
+    <h1>Alexandrov star topology</h1>
+<p>For each cell $E$, the <strong>open star</strong></p>
+<p>$$\mathrm{star}(E) := \{F \in [\![X]\!] : E \le F\}$$</p>
+<p>is the up-set at $E$ in the face poset.  The Alexandrov topology on
+$[\![X]\!]$ takes a set to be <em>open</em> iff it is up-closed under the face
+relation — equivalently, iff it is a union of stars.</p>
+<h2>Signatures</h2>
+<p>The star and its membership rewrite:</p>
+<p>```lean
+def AbstractCellComplex.star (E : X) : Set X := {F | E ≤ F}</p>
+<p>@[simp] theorem mem_star {E F : X} : F ∈ star E ↔ E ≤ F := Iff.rfl</p>
+<p>theorem self_mem_star (E : X) : E ∈ star E := le_refl E
+```</p>
+<p>The topological-space instance is <code>scoped</code>, i.e. only active inside
+<code>open AbstractCellComplex</code>, so it does not silently clash with any
+other topology one might place on <code>X</code>:</p>
 <p><code>lean
-(X : Type*) [PartialOrder X] [AbstractCellComplex X] [IsLocallyFinite X]
-[MulAction G X] [GCellComplex G X]</code></p>
-<p>with no layer bundling any of the others.</p>
-<h2><code>AbstractCellComplex</code></h2>
-<p>Add to <code>[PartialOrder X]</code>:</p>
+scoped instance : TopologicalSpace X where
+  IsOpen U := ∀ ⦃E : X⦄, E ∈ U → star E ⊆ U
+  isOpen_univ  := ...
+  isOpen_inter := ...
+  isOpen_sUnion := ...</code></p>
+<p>Each <code>star E</code> is open in this topology:</p>
+<p><code>lean
+theorem isOpen_star (E : X) : IsOpen (star E) :=
+  fun _ hE _ hF =&gt; le_trans hE hF</code></p>
+<h2>Why star topology</h2>
+<p>The Alexandrov star topology is the "right" topology for making
+sheaves/cosheaves on a cell complex behave like sheaves/cosheaves on a
+space:</p>
 <ul>
-<li>a <strong>dimension function</strong> <code>dim : X → ℕ</code>;</li>
-<li><strong>strict monotonicity</strong>: a <em>proper</em> face has strictly smaller dimension;</li>
-<li><strong>face existence</strong>: every cell of positive dimension has a face of
-  dimension one less (without this axiom one could have a "2-cell"
-  attached directly to a vertex with no edges in between, which is
-  not the face poset of any regular CW complex).</li>
+<li>stars form an <strong>open basis</strong>;</li>
+<li>$\mathrm{star}(E)$ is the <strong>smallest open</strong> containing $E$;</li>
+<li>the value of a sheaf on $\mathrm{star}(E)$ is exactly its stalk at
+  $E$ — the <em>Alexandrov-star sheaf condition</em>.</li>
 </ul>
-<p>Formally:</p>
-<p>$$
-\mathrm{dim}_{-\!\mathrm{lt}}\!: E \le F \wedge E \ne F \Rightarrow
-   \mathrm{dim}\,E &lt; \mathrm{dim}\,F.
-$$</p>
-<p>$$
-\exists\,\mathrm{face}_{-\!\mathrm{dim}_{-\!\mathrm{pred}}}\!:
-   0 &lt; \mathrm{dim}\,F \Rightarrow
-   \exists\,E,\ E &lt; F \wedge \mathrm{dim}\,E + 1 = \mathrm{dim}\,F.
-$$</p>
-<h2><code>IsLocallyFinite</code></h2>
-<p>A <code>Prop</code> mixin, independent of <code>AbstractCellComplex</code>:</p>
-<ul>
-<li>$\{F : F \le E\}$ is finite for every $E$ (finitely many faces);</li>
-<li>$\{F : E \le F\}$ is finite for every $E$ (finitely many cofaces).</li>
-</ul>
-<p>Both together formalise "each point has a neighbourhood meeting only
-finitely many cells" for a regular CW complex.  In the abstract poset
-setting the two are independent, but for a regular CW complex the
-geometric "locally finite" assumption delivers both at once, so we
-bundle them in one <code>Prop</code> class.</p>
-<h2><code>GCellComplex</code></h2>
-<p>A <code>Prop</code> class asserting that a <code>MulAction G X</code> is <strong>cellular</strong>:</p>
-<ul>
-<li>$G$ preserves the face relation: $E \le F \Rightarrow g \cdot E \le g \cdot F$;</li>
-<li>$G$ preserves dimension: $\mathrm{dim}(g \cdot E) = \mathrm{dim}\,E$.</li>
-</ul>
-<p>The cell complex data and the <code>MulAction</code> are <em>not</em> bundled into this
-class: both are separate typeclass inputs.  <code>GCellComplex G X</code> is
-purely the compatibility requirement on top.</p>
-<h2><code>Subcomplex</code></h2>
-<p>A <strong>cellular subcomplex</strong> is a face-closed subset of the cells.
-Modelled after mathlib's <code>Subgroup</code> / <code>Submonoid</code> idiom: it holds a
-<code>carrier : Set X</code> field and is <code>SetLike</code>, so the usual <code>E ∈ S</code>
-notation is available.</p>
-<h2>Relationship to the paper</h2>
-<p>Every §2.1 topological ingredient is either:</p>
-<ul>
-<li><strong>retained</strong> in the Lean abstraction (face relation, dimension,
-  locally-finite bound, cellular action, subcomplex);</li>
-<li><strong>abstracted away</strong> because it is not used combinatorially
-  (topology on $|X|$, open/closed cells, attaching maps).</li>
-</ul>
-<p>Downstream:</p>
-<ul>
-<li>Sheaves and cosheaves (<a class="node-ref" data-node-id="cellular_categories.sheaves_cosheaves" href="cellular_categories_sheaves_cosheaves.html">Sheaves and cosheaves on X as functor categories</a>)
-  are functors on the face poset.</li>
-<li>G-equivariant (co)sheaves (<a class="node-ref" data-node-id="cellular_categories.equivariant_sheaves" href="cellular_categories_equivariant_sheaves.html">G-equivariant sheaves and cosheaves</a>)
-  are extra structure on such functors.</li>
-<li>QFD and induction (<a class="node-ref" data-node-id="equivariant_sheaves.quasi_fundamental_domain" href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a>,
-  [[node:equivariant_sheaves.induction_GxP_X]]) are stated at this
-  cell-poset level throughout.</li>
-<li>The <code>∂² = 0</code> cellular chain complex
-  ([[node:representations.chain_complex_C_dot]]) uses only
-  <code>AbstractCellComplex</code> + <code>IsLocallyFinite</code> + <code>Orientation</code>.</li>
-</ul>
+<p>See <a class="node-ref" data-node-id="cellular_categories.sheaves_cosheaves" href="../cellular_categories/cellular_categories_sheaves_cosheaves.html">Sheaves and cosheaves on X as functor categories</a> for how this
+underpins the definition of <code>Sheaf</code> and <code>Cosheaf</code> on $[\![X]\!]$.</p>
     
   </div>
 
@@ -631,7 +557,7 @@ notation is available.</p>
 
   
   <footer class="tags">
-    <span class="tag">cw-complex</span><span class="tag">cell-complex</span><span class="tag">lean-abstraction</span>
+    <span class="tag">alexandrov</span><span class="tag">star-topology</span><span class="tag">open-basis</span>
   </footer>
   
 </article>

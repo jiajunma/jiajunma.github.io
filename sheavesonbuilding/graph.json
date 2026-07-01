@@ -1,6 +1,126 @@
 {
   "nodes": [
     {
+      "id": "abstract_cell_complex.abstract_cell_complex",
+      "title": "AbstractCellComplex — dimension function on a face poset",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "cw-complex",
+        "cell-complex",
+        "dimension",
+        "lean-abstraction"
+      ],
+      "primary_topic": "abstract_cell_complex",
+      "topics": [
+        "abstract_cell_complex"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.AbstractCellComplex"
+      ],
+      "topic": "abstract_cell_complex",
+      "uses": [
+        "cellular_categories.cw_complex_setting"
+      ],
+      "used_by": [
+        "abstract_cell_complex.g_cell_complex",
+        "abstract_cell_complex.is_locally_finite",
+        "abstract_cell_complex.star_topology",
+        "abstract_cell_complex.subcomplex"
+      ]
+    },
+    {
+      "id": "abstract_cell_complex.g_cell_complex",
+      "title": "GCellComplex — cellular G-action compatibility",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "g-action",
+        "cellular-action",
+        "lean-abstraction"
+      ],
+      "primary_topic": "abstract_cell_complex",
+      "topics": [
+        "abstract_cell_complex"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.GCellComplex",
+        "SheafOnBuilding.Fix"
+      ],
+      "topic": "abstract_cell_complex",
+      "uses": [
+        "abstract_cell_complex.abstract_cell_complex"
+      ]
+    },
+    {
+      "id": "abstract_cell_complex.is_locally_finite",
+      "title": "IsLocallyFinite — finite faces and finite cofaces",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "cw-complex",
+        "locally-finite",
+        "lean-abstraction"
+      ],
+      "primary_topic": "abstract_cell_complex",
+      "topics": [
+        "abstract_cell_complex"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.IsLocallyFinite"
+      ],
+      "topic": "abstract_cell_complex",
+      "uses": [
+        "abstract_cell_complex.abstract_cell_complex"
+      ]
+    },
+    {
+      "id": "abstract_cell_complex.star_topology",
+      "title": "Alexandrov star topology on the face poset",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "alexandrov",
+        "star-topology",
+        "open-basis"
+      ],
+      "primary_topic": "abstract_cell_complex",
+      "topics": [
+        "abstract_cell_complex"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.AbstractCellComplex.star",
+        "SheafOnBuilding.AbstractCellComplex.self_mem_star",
+        "SheafOnBuilding.AbstractCellComplex.isOpen_star"
+      ],
+      "topic": "abstract_cell_complex",
+      "uses": [
+        "abstract_cell_complex.abstract_cell_complex"
+      ]
+    },
+    {
+      "id": "abstract_cell_complex.subcomplex",
+      "title": "Subcomplex — face-closed subset of cells",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "subcomplex",
+        "lean-abstraction"
+      ],
+      "primary_topic": "abstract_cell_complex",
+      "topics": [
+        "abstract_cell_complex"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.Subcomplex",
+        "SheafOnBuilding.Subcomplex.face_closed"
+      ],
+      "topic": "abstract_cell_complex",
+      "uses": [
+        "abstract_cell_complex.abstract_cell_complex"
+      ]
+    },
+    {
       "id": "applications.classical_K1_K2_K3",
       "title": "Hypotheses (K1)–(K3) for classical groups",
       "kind": "lemma",
@@ -960,31 +1080,6 @@
       ]
     },
     {
-      "id": "cellular_categories.abstract_cell_complex",
-      "title": "Abstract cell complex: combinatorial (poset) formalisation",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "cw-complex",
-        "cell-complex",
-        "lean-abstraction"
-      ],
-      "primary_topic": "cellular_categories",
-      "topics": [
-        "cellular_categories"
-      ],
-      "lean_declarations": [
-        "SheafOnBuilding.AbstractCellComplex",
-        "SheafOnBuilding.IsLocallyFinite",
-        "SheafOnBuilding.GCellComplex",
-        "SheafOnBuilding.Subcomplex"
-      ],
-      "topic": "cellular_categories",
-      "uses": [
-        "cellular_categories.cw_complex_setting"
-      ]
-    },
-    {
       "id": "cellular_categories.category_jXk",
       "title": "The cell categories ]X[ and [X]",
       "kind": "definition",
@@ -1021,7 +1116,7 @@
       ],
       "topic": "cellular_categories",
       "used_by": [
-        "cellular_categories.abstract_cell_complex",
+        "abstract_cell_complex.abstract_cell_complex",
         "cellular_categories.category_jXk",
         "cellular_categories.equivariant_sheaves",
         "cellular_categories.orientation",
@@ -2639,6 +2734,26 @@
   ],
   "edges": [
     {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "abstract_cell_complex.abstract_cell_complex"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.g_cell_complex"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.is_locally_finite"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.star_topology"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "abstract_cell_complex.subcomplex"
+    },
+    {
       "from": "applications.classical_K_F_definition",
       "to": "applications.classical_K1_K2_K3"
     },
@@ -3161,10 +3276,6 @@
     {
       "from": "building.generalized_building_bs",
       "to": "building.geodesics_in_component"
-    },
-    {
-      "from": "cellular_categories.cw_complex_setting",
-      "to": "cellular_categories.abstract_cell_complex"
     },
     {
       "from": "cellular_categories.cw_complex_setting",
