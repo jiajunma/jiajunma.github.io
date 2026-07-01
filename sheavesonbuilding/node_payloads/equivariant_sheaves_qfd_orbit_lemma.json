@@ -9,7 +9,7 @@
     "equivariant_sheaves"
   ],
   "body_html": "<h1>QFD orbit lemma</h1>\n<p>Let $X' \\subseteq X$ be a QFD for $G$ with stabilizing subgroup $G'$.</p>\n<blockquote>\n<p><strong>Lemma.</strong> The action map $G \\times [\\![X']\\!] \\to [\\![X]\\!]$,\n$(g,E) \\mapsto gE$ is surjective. For $E,F \\in [\\![X']\\!]$ and\n$g,h \\in G$, the equality $gE = hF$ holds if and only if there exists\n$n \\in G'$ with $nE = F$ and $g^{-1}hn \\in \\Fix_G(E)$.</p>\n</blockquote>",
-  "proof_html": "<p>Surjectivity is immediate from the QFD bijection\n$G' \\backslash [\\![X']\\!] \\cong G \\backslash [\\![X]\\!]$. For the second\nclause: if $gE = hF$ then $E$ and $F$ lie in the same $G$-orbit; by the QFD\nbijection, some $n \\in G'$ satisfies $nE = F$, and\n$gE = hF = hnE$ forces $g^{-1}hn \\in \\Stab_G(E) = \\Fix_G(E)$. The converse\nis immediate. $\\square$</p>\n<p>This lemma is the technical backbone for reducing $G$-equivariant data on\n$X$ to $G'$-equivariant data on $X'$; see\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)</a>.</p>\n<h2>Variant with a subgroup factorization</h2>\n<p>If $\\{P_E\\}_{E \\in [\\![X']\\!]}$ is a family of subgroups with $nP_En^{-1} =\nP_{nE}$ and $\\Fix_{G'}(E) P_E = \\Fix_G(E)$, then $gE = hF$ iff there is\n$n \\in G'$ with $nE = F$ and $g^{-1}hn \\in P_E$. This refined form is the\ninput to the induction construction\n[[node:equivariant_sheaves.induction_GxP_X]].</p>\n<h2>Lean formalization</h2>\n<p>The plain form is <code>IsQuasiFundDomain.orbit_eq_iff</code>:</p>\n<p><code>lean\ntheorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S]\n    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :\n    g • E = h • F ↔\n      ∃ n ∈ G',\n        n • E = F ∧ (g⁻¹ * h * n) ∈ MulAction.stabilizer G E</code></p>\n<p>The <code>(→)</code> direction is the <code>orbit_iff</code> clause of <code>IsQuasiFundDomain</code>\nre-expressed with $\\Fix_G(E)$ read as <code>MulAction.stabilizer G E</code>; the\n<code>(←)</code> direction is a direct group-action calculation with no QFD\nhypothesis.</p>\n<p>The refined form with an explicit family\n$\\{P_E\\}$ requires an [[induction datum|node:equivariant_sheaves.induction_data_reverse]]\n<code>InductionData G' S</code> and appears as\n<code>InductionData.orbit_eq_iff</code>: the forward direction reuses\n<code>orbit_eq_iff</code> and absorbs the $\\Fix_G$ residue via the $\\mathrm{P4}$\nfactorisation; the backward direction uses <code>P3</code> and $G$-equivariance.</p>\n<p>Equivariance of $\\Fix_G$ under $G$-conjugation, needed above, is\n<code>MulAction.stabilizer_smul_eq_stabilizer_map_conj</code> from Mathlib; a\nproject-local specialisation is exposed as\n<code>IsQuasiFundDomain.stabilizer_smul</code>.</p>",
+  "proof_html": "<p>Surjectivity is immediate from the QFD bijection\n$G' \\backslash [\\![X']\\!] \\cong G \\backslash [\\![X]\\!]$. For the second\nclause: if $gE = hF$ then $E$ and $F$ lie in the same $G$-orbit; by the QFD\nbijection, some $n \\in G'$ satisfies $nE = F$, and\n$gE = hF = hnE$ forces $g^{-1}hn \\in \\Stab_G(E) = \\Fix_G(E)$. The converse\nis immediate. $\\square$</p>\n<p>This lemma is the technical backbone for reducing $G$-equivariant data on\n$X$ to $G'$-equivariant data on $X'$; see\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a>.</p>\n<h2>Variant with a subgroup factorization</h2>\n<p>If $\\{P_E\\}_{E \\in [\\![X']\\!]}$ is a family of subgroups with $nP_En^{-1} =\nP_{nE}$ and $\\Fix_{G'}(E) P_E = \\Fix_G(E)$, then $gE = hF$ iff there is\n$n \\in G'$ with $nE = F$ and $g^{-1}hn \\in P_E$. This refined form is the\ninput to the induction construction\n[[node:equivariant_sheaves.induction_GxP_X]].</p>\n<h2>Lean formalization</h2>\n<p>The plain form is <code>IsQuasiFundDomain.orbit_eq_iff</code>:</p>\n<p><code>lean\ntheorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S]\n    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :\n    g • E = h • F ↔\n      ∃ n ∈ G',\n        n • E = F ∧ (g⁻¹ * h * n) ∈ MulAction.stabilizer G E</code></p>\n<p>The <code>(→)</code> direction is the <code>orbit_iff</code> clause of <code>IsQuasiFundDomain</code>\nre-expressed with $\\Fix_G(E)$ read as <code>MulAction.stabilizer G E</code>; the\n<code>(←)</code> direction is a direct group-action calculation with no QFD\nhypothesis.</p>\n<p>The refined form with an explicit family\n$\\{P_E\\}$ requires an [[induction datum|node:equivariant_sheaves.induction_data_reverse]]\n<code>InductionData G' S</code> and appears as\n<code>InductionData.orbit_eq_iff</code>: the forward direction reuses\n<code>orbit_eq_iff</code> and absorbs the $\\Fix_G$ residue via the $\\mathrm{P4}$\nfactorisation; the backward direction uses <code>P3</code> and $G$-equivariance.</p>\n<p>Equivariance of $\\Fix_G$ under $G$-conjugation, needed above, is\n<code>MulAction.stabilizer_smul_eq_stabilizer_map_conj</code> from Mathlib; a\nproject-local specialisation is exposed as\n<code>IsQuasiFundDomain.stabilizer_smul</code>.</p>",
   "deps": [
     {
       "id": "equivariant_sheaves.quasi_fundamental_domain",
@@ -30,7 +30,7 @@
     },
     {
       "id": "equivariant_sheaves.reduction_to_qfd",
-      "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
+      "title": "Reduction of G-equivariant cosheaves to a QFD",
       "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html"
     }
   ],
@@ -44,9 +44,9 @@
       "signature": "theorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain (G",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b",
-      "short_revision": "0cfe08a",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b/SheafOnBuilding/QuasiFundDomain.lean#L134",
+      "revision": "567425131a7a884b8be08ed075ff591efc15ef60",
+      "short_revision": "5674251",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/567425131a7a884b8be08ed075ff591efc15ef60/SheafOnBuilding/QuasiFundDomain.lean#L134",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -62,9 +62,9 @@
       "signature": "theorem stabilizer_smul (n : G) (E : X) :\n    MulAction.stabilizer G (n • E) =\n      (MulAction.stabilizer G E).map (MulEquiv.toMonoidHom (MulAut.conj n))",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b",
-      "short_revision": "0cfe08a",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b/SheafOnBuilding/QuasiFundDomain.lean#L119",
+      "revision": "567425131a7a884b8be08ed075ff591efc15ef60",
+      "short_revision": "5674251",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/567425131a7a884b8be08ed075ff591efc15ef60/SheafOnBuilding/QuasiFundDomain.lean#L119",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -80,9 +80,9 @@
       "signature": "theorem orbit_eq_iff ⦃E F : X⦄ (hE : E ∈ S) (hF : F ∈ S) (g h : G) :\n    g • E = h • F ↔\n      ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ d.P E",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b",
-      "short_revision": "0cfe08a",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b/SheafOnBuilding/QuasiFundDomain.lean#L258",
+      "revision": "567425131a7a884b8be08ed075ff591efc15ef60",
+      "short_revision": "5674251",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/567425131a7a884b8be08ed075ff591efc15ef60/SheafOnBuilding/QuasiFundDomain.lean#L258",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -95,9 +95,9 @@
       "name": "SheafOnBuilding.QuasiFundDomain",
       "display_name": "SheafOnBuilding.QuasiFundDomain",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b",
-      "short_revision": "0cfe08a",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/0cfe08a6c00aa5d7014699e040b8ae742ebf2b3b/SheafOnBuilding/QuasiFundDomain.lean#L1",
+      "revision": "567425131a7a884b8be08ed075ff591efc15ef60",
+      "short_revision": "5674251",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/567425131a7a884b8be08ed075ff591efc15ef60/SheafOnBuilding/QuasiFundDomain.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -1,6 +1,6 @@
 {
   "id": "equivariant_sheaves.section4_equivalence",
-  "title": "Cosh_G(X,1_Q) ≃ Cosh_{G'}(X',1_{Q'}) under induced structure (Prop 4.1)",
+  "title": "Cosh_G(X,1_Q) ≃ Cosh_{G'}(X',1_{Q'}) under induced structure",
   "kind": "proposition",
   "status": "staged",
   "href": "equivariant_sheaves/equivariant_sheaves_section4_equivalence.html",
@@ -8,12 +8,12 @@
   "topics": [
     "equivariant_sheaves"
   ],
-  "body_html": "<h1>$\\Cosh_G(X, \\mathbf 1_Q) \\simeq \\Cosh_{G'}(X', \\mathbf 1_{Q'})$</h1>\n<p>Setting: $X = G \\times^P X'$ where $P$ is a cosheaf of subgroups of $G$ on\n$X'$, $P'_E := G' \\cap P_E$, and additionally:</p>\n<ul>\n<li>a $G'$-equivariant sheaf $Q'$ of subgroups of $G'$ on $X'$ with\n  $Q'_E \\trianglelefteq P'_E$;</li>\n<li>a $G'$-equivariant cosheaf $J$ of subgroups of $G$ on $X'$ with\n  $J_E \\trianglelefteq P_E$;</li>\n<li>$P'_E / Q'_E \\;\\xrightarrow{\\sim}\\; P_E / Q_E$ for $Q_E := Q'_E J_E$.</li>\n</ul>\n<p>Then $\\{Q_E\\}$ extends uniquely to a family on all of $X$ with\n$g Q_E g^{-1} = Q_{gE}$.</p>\n<p>Let $\\mathbf 1_Q := \\{\\mathbf 1_{Q_E}\\}$, $\\mathbf 1_{Q'} := \\{\\mathbf 1_{Q'_E}\\}$\nbe the trivial-character families. Write $\\Cosh_G(X, R, \\mathbf 1_Q)$ for the\ncosheaves on which each $Q_E$ acts trivially.</p>\n<blockquote>\n<p><strong>Proposition (Sheaf7 Prop 4.1).</strong> $\\Cosh_G(X, R, \\mathbf 1_Q) \\simeq\n  \\Cosh_{G'}(X', R, \\mathbf 1_{Q'})$.</p>\n</blockquote>",
-  "proof_html": "<p>Use the QFD equivalence\n$[X']_{[X/G]} \\to [X/G]$ (see <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)</a>)\nto view any $\\mathscr{V} \\in \\Cosh_G(X,R,\\mathbf 1_Q)$ as a functor on $X'$;\nrestrict $\\mathscr{V}$ along $[X'/G'] \\subseteq [X']_{[X/G]}$ to get\n$\\mathscr{V}' \\in \\Cosh_{G'}(X', R, \\mathbf 1_{Q'})$, using $Q'_E \\subseteq Q_E$.\nConversely, given $\\mathscr{W} \\in \\Cosh_{G'}(X', R, \\mathbf 1_{Q'})$, use\n$P_E = P'_E J_E$ (and $\\Fix_G(E) = \\Fix_{G'}(E) J_E$) to equip\n$\\mathscr{V}_E := \\mathscr{W}_E$ with the trivial $J_E$-action and apply\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)</a> (with $K = J$). The two\nconstructions are quasi-inverse. $\\square$</p>",
+  "body_html": "<h1>$\\Cosh_G(X, \\mathbf 1_Q) \\simeq \\Cosh_{G'}(X', \\mathbf 1_{Q'})$</h1>\n<p>Setting: $X = G \\times^P X'$ where $P$ is a cosheaf of subgroups of $G$ on\n$X'$, $P'_E := G' \\cap P_E$, and additionally:</p>\n<ul>\n<li>a $G'$-equivariant sheaf $Q'$ of subgroups of $G'$ on $X'$ with\n  $Q'_E \\trianglelefteq P'_E$;</li>\n<li>a $G'$-equivariant cosheaf $J$ of subgroups of $G$ on $X'$ with\n  $J_E \\trianglelefteq P_E$;</li>\n<li>$P'_E / Q'_E \\;\\xrightarrow{\\sim}\\; P_E / Q_E$ for $Q_E := Q'_E J_E$.</li>\n</ul>\n<p>Then $\\{Q_E\\}$ extends uniquely to a family on all of $X$ with\n$g Q_E g^{-1} = Q_{gE}$.</p>\n<p>Let $\\mathbf 1_Q := \\{\\mathbf 1_{Q_E}\\}$, $\\mathbf 1_{Q'} := \\{\\mathbf 1_{Q'_E}\\}$\nbe the trivial-character families. Write $\\Cosh_G(X, R, \\mathbf 1_Q)$ for the\ncosheaves on which each $Q_E$ acts trivially.</p>\n<blockquote>\n<p><strong>Proposition.</strong> $\\Cosh_G(X, R, \\mathbf 1_Q) \\simeq\n  \\Cosh_{G'}(X', R, \\mathbf 1_{Q'})$.</p>\n</blockquote>",
+  "proof_html": "<p>Use the QFD equivalence\n$[X']_{[X/G]} \\to [X/G]$ (see <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a>)\nto view any $\\mathscr{V} \\in \\Cosh_G(X,R,\\mathbf 1_Q)$ as a functor on $X'$;\nrestrict $\\mathscr{V}$ along $[X'/G'] \\subseteq [X']_{[X/G]}$ to get\n$\\mathscr{V}' \\in \\Cosh_{G'}(X', R, \\mathbf 1_{Q'})$, using $Q'_E \\subseteq Q_E$.\nConversely, given $\\mathscr{W} \\in \\Cosh_{G'}(X', R, \\mathbf 1_{Q'})$, use\n$P_E = P'_E J_E$ (and $\\Fix_G(E) = \\Fix_{G'}(E) J_E$) to equip\n$\\mathscr{V}_E := \\mathscr{W}_E$ with the trivial $J_E$-action and apply\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a> (with $K = J$). The two\nconstructions are quasi-inverse. $\\square$</p>",
   "deps": [
     {
       "id": "equivariant_sheaves.reduction_to_qfd",
-      "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
+      "title": "Reduction of G-equivariant cosheaves to a QFD",
       "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html"
     },
     {
@@ -25,7 +25,7 @@
   "dependents": [
     {
       "id": "equivariant_sheaves.heisenberg_weil_equivalence",
-      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)",
+      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ})",
       "href": "equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html"
     }
   ],
