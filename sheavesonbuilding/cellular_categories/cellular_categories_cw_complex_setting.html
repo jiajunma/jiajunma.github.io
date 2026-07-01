@@ -152,6 +152,8 @@
       
         <li><a href="../keywords/category-theory.html">category-theory</a></li>
       
+        <li><a href="../keywords/cell-complex.html">cell-complex</a></li>
+      
         <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
       
         <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
@@ -278,6 +280,8 @@
       
         <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
       
+        <li><a href="../keywords/lean-abstraction.html">lean-abstraction</a></li>
+      
         <li><a href="../keywords/lean-formalisation.html">lean-formalisation</a></li>
       
         <li><a href="../keywords/local-maps.html">local-maps</a></li>
@@ -401,92 +405,11 @@
       <a class="permalink" href="#node-cellular_categories-2e-cw_complex_setting">#</a>
       
       
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
-      
     </div>
   </header>
 
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.GCellComplex
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>class AbstractCellComplex (X : Type*) [PartialOrder X] where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.GCellComplex
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.GCellComplex
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>class GCellComplex (G : Type*) [Group G] (X : Type*)
-    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">structure</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/GCellComplex.lean#L157"><code>SheafOnBuilding.Subcomplex</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 05a59cc, SheafOnBuilding.GCellComplex
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>structure Subcomplex (X : Type*) [PartialOrder X] where</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/05a59cc0c89d591ced9ea451693c32015d082eaa/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="topic_thmcontent thm-content body">
@@ -512,6 +435,13 @@ cells. The face relation $E \preceq F$ holds when $E \subseteq \overline{F}$.</p
 </ul>
 <p>For a cell $E$, $\Fix_G(E)$ and $\Stab_G(E)$ may differ; refining the CW
 structure can force them to agree.</p>
+<h2>Lean formalisation</h2>
+<p>The Lean library distils this topological setup down to a purely
+combinatorial (poset + dimension) abstraction — see
+<a class="node-ref" data-node-id="cellular_categories.abstract_cell_complex" href="cellular_categories_abstract_cell_complex.html">Abstract cell complex: combinatorial (poset) formalisation</a> for the four
+typeclass layers (<code>AbstractCellComplex</code>, <code>IsLocallyFinite</code>,
+<code>GCellComplex</code>, <code>Subcomplex</code>) that every downstream Lean definition
+in §§2–4 is stated against.</p>
     
   </div>
 
@@ -521,6 +451,8 @@ structure can force them to agree.</p>
   <section class="deps deps-used-by">
     <h2>Used by</h2>
     <ul>
+      
+      <li><a href="cellular_categories_abstract_cell_complex.html">Abstract cell complex: combinatorial (poset) formalisation</a></li>
       
       <li><a href="cellular_categories_category_jXk.html">The cell categories ]X[ and [X]</a></li>
       

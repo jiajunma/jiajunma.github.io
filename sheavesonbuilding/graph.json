@@ -960,6 +960,31 @@
       ]
     },
     {
+      "id": "cellular_categories.abstract_cell_complex",
+      "title": "Abstract cell complex: combinatorial (poset) formalisation",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "cw-complex",
+        "cell-complex",
+        "lean-abstraction"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.AbstractCellComplex",
+        "SheafOnBuilding.IsLocallyFinite",
+        "SheafOnBuilding.GCellComplex",
+        "SheafOnBuilding.Subcomplex"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.cw_complex_setting"
+      ]
+    },
+    {
       "id": "cellular_categories.category_jXk",
       "title": "The cell categories ]X[ and [X]",
       "kind": "definition",
@@ -994,14 +1019,9 @@
       "topics": [
         "cellular_categories"
       ],
-      "lean_declarations": [
-        "SheafOnBuilding.AbstractCellComplex",
-        "SheafOnBuilding.IsLocallyFinite",
-        "SheafOnBuilding.GCellComplex",
-        "SheafOnBuilding.Subcomplex"
-      ],
       "topic": "cellular_categories",
       "used_by": [
+        "cellular_categories.abstract_cell_complex",
         "cellular_categories.category_jXk",
         "cellular_categories.equivariant_sheaves",
         "cellular_categories.orientation",
@@ -3141,6 +3161,10 @@
     {
       "from": "building.generalized_building_bs",
       "to": "building.geodesics_in_component"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.abstract_cell_complex"
     },
     {
       "from": "cellular_categories.cw_complex_setting",

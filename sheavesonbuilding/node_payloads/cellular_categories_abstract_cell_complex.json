@@ -1,0 +1,107 @@
+{
+  "id": "cellular_categories.abstract_cell_complex",
+  "title": "Abstract cell complex: combinatorial (poset) formalisation",
+  "kind": "definition",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_abstract_cell_complex.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>Abstract cell complex</h1>\n<p>The paper's §2.1 setup — a locally finite regular CW complex with a\ncellular $G$-action, see <a class=\"node-ref\" data-node-id=\"cellular_categories.cw_complex_setting\" href=\"cellular_categories_cw_complex_setting.html\">Locally finite regular CW complex with cellular G-action</a>\n— is topological.  The Lean formalisation extracts the purely\n<strong>combinatorial</strong> content that §§2–4 actually use: <strong>the face poset plus a\ndimension function</strong>.  This \"abstract cell complex\" is what all\ndownstream Lean definitions (sheaves, cosheaves, QFD, induction,\norientation, chain complex) are built on.</p>\n<h2>Debundled API</h2>\n<p>The Lean library <strong>debundles</strong> the setup into four independent\ntypeclass layers, applied one at a time as needed:</p>\n<table>\n<thead>\n<tr>\n<th>Layer</th>\n<th>Kind</th>\n<th>Carries</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>AbstractCellComplex X</code></td>\n<td>data class</td>\n<td>dimension function <code>dim : X → ℕ</code> and its monotonicity axioms</td>\n</tr>\n<tr>\n<td><code>IsLocallyFinite X</code></td>\n<td><code>Prop</code> mixin</td>\n<td>each cell has finitely many faces <em>and</em> finitely many cofaces</td>\n</tr>\n<tr>\n<td><code>GCellComplex G X</code></td>\n<td><code>Prop</code> class</td>\n<td>the requirement that a <code>MulAction G X</code> is <em>cellular</em></td>\n</tr>\n<tr>\n<td><code>Subcomplex X</code></td>\n<td><code>structure</code></td>\n<td>a face-closed subset of the cells</td>\n</tr>\n</tbody>\n</table>\n<p>A <em>\"$G$-cellular complex of locally finite type\"</em> is spelled out as</p>\n<p><code>lean\n(X : Type*) [PartialOrder X] [AbstractCellComplex X] [IsLocallyFinite X]\n[MulAction G X] [GCellComplex G X]</code></p>\n<p>with no layer bundling any of the others.</p>\n<h2><code>AbstractCellComplex</code></h2>\n<p>Add to <code>[PartialOrder X]</code>:</p>\n<ul>\n<li>a <strong>dimension function</strong> <code>dim : X → ℕ</code>;</li>\n<li><strong>strict monotonicity</strong>: a <em>proper</em> face has strictly smaller dimension;</li>\n<li><strong>face existence</strong>: every cell of positive dimension has a face of\n  dimension one less (without this axiom one could have a \"2-cell\"\n  attached directly to a vertex with no edges in between, which is\n  not the face poset of any regular CW complex).</li>\n</ul>\n<p>Formally:</p>\n<p>$$\n\\mathrm{dim}_{-\\!\\mathrm{lt}}\\!: E \\le F \\wedge E \\ne F \\Rightarrow\n   \\mathrm{dim}\\,E &lt; \\mathrm{dim}\\,F.\n$$</p>\n<p>$$\n\\exists\\,\\mathrm{face}_{-\\!\\mathrm{dim}_{-\\!\\mathrm{pred}}}\\!:\n   0 &lt; \\mathrm{dim}\\,F \\Rightarrow\n   \\exists\\,E,\\ E &lt; F \\wedge \\mathrm{dim}\\,E + 1 = \\mathrm{dim}\\,F.\n$$</p>\n<h2><code>IsLocallyFinite</code></h2>\n<p>A <code>Prop</code> mixin, independent of <code>AbstractCellComplex</code>:</p>\n<ul>\n<li>$\\{F : F \\le E\\}$ is finite for every $E$ (finitely many faces);</li>\n<li>$\\{F : E \\le F\\}$ is finite for every $E$ (finitely many cofaces).</li>\n</ul>\n<p>Both together formalise \"each point has a neighbourhood meeting only\nfinitely many cells\" for a regular CW complex.  In the abstract poset\nsetting the two are independent, but for a regular CW complex the\ngeometric \"locally finite\" assumption delivers both at once, so we\nbundle them in one <code>Prop</code> class.</p>\n<h2><code>GCellComplex</code></h2>\n<p>A <code>Prop</code> class asserting that a <code>MulAction G X</code> is <strong>cellular</strong>:</p>\n<ul>\n<li>$G$ preserves the face relation: $E \\le F \\Rightarrow g \\cdot E \\le g \\cdot F$;</li>\n<li>$G$ preserves dimension: $\\mathrm{dim}(g \\cdot E) = \\mathrm{dim}\\,E$.</li>\n</ul>\n<p>The cell complex data and the <code>MulAction</code> are <em>not</em> bundled into this\nclass: both are separate typeclass inputs.  <code>GCellComplex G X</code> is\npurely the compatibility requirement on top.</p>\n<h2><code>Subcomplex</code></h2>\n<p>A <strong>cellular subcomplex</strong> is a face-closed subset of the cells.\nModelled after mathlib's <code>Subgroup</code> / <code>Submonoid</code> idiom: it holds a\n<code>carrier : Set X</code> field and is <code>SetLike</code>, so the usual <code>E ∈ S</code>\nnotation is available.</p>\n<h2>Relationship to the paper</h2>\n<p>Every §2.1 topological ingredient is either:</p>\n<ul>\n<li><strong>retained</strong> in the Lean abstraction (face relation, dimension,\n  locally-finite bound, cellular action, subcomplex);</li>\n<li><strong>abstracted away</strong> because it is not used combinatorially\n  (topology on $|X|$, open/closed cells, attaching maps).</li>\n</ul>\n<p>Downstream:</p>\n<ul>\n<li>Sheaves and cosheaves (<a class=\"node-ref\" data-node-id=\"cellular_categories.sheaves_cosheaves\" href=\"cellular_categories_sheaves_cosheaves.html\">Sheaves and cosheaves on X as functor categories</a>)\n  are functors on the face poset.</li>\n<li>G-equivariant (co)sheaves (<a class=\"node-ref\" data-node-id=\"cellular_categories.equivariant_sheaves\" href=\"cellular_categories_equivariant_sheaves.html\">G-equivariant sheaves and cosheaves</a>)\n  are extra structure on such functors.</li>\n<li>QFD and induction (<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.quasi_fundamental_domain\" href=\"../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html\">Quasi-fundamental domain</a>,\n  [[node:equivariant_sheaves.induction_GxP_X]]) are stated at this\n  cell-poset level throughout.</li>\n<li>The <code>∂² = 0</code> cellular chain complex\n  ([[node:representations.chain_complex_C_dot]]) uses only\n  <code>AbstractCellComplex</code> + <code>IsLocallyFinite</code> + <code>Orientation</code>.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.cw_complex_setting",
+      "title": "Locally finite regular CW complex with cellular G-action",
+      "href": "cellular_categories/cellular_categories_cw_complex_setting.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.AbstractCellComplex",
+      "display_name": "SheafOnBuilding.AbstractCellComplex",
+      "qualified_name": "SheafOnBuilding.AbstractCellComplex",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "class",
+      "signature": "class AbstractCellComplex (X : Type*) [PartialOrder X] where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "628c5d5d71529003c655c8f94b33667f1b2a3359",
+      "short_revision": "628c5d5",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L58",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.IsLocallyFinite",
+      "display_name": "SheafOnBuilding.IsLocallyFinite",
+      "qualified_name": "SheafOnBuilding.IsLocallyFinite",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "class",
+      "signature": "class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "628c5d5d71529003c655c8f94b33667f1b2a3359",
+      "short_revision": "628c5d5",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L82",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GCellComplex",
+      "display_name": "SheafOnBuilding.GCellComplex",
+      "qualified_name": "SheafOnBuilding.GCellComplex",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "class",
+      "signature": "class GCellComplex (G : Type*) [Group G] (X : Type*)\n    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "628c5d5d71529003c655c8f94b33667f1b2a3359",
+      "short_revision": "628c5d5",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L139",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.Subcomplex",
+      "display_name": "SheafOnBuilding.Subcomplex",
+      "qualified_name": "SheafOnBuilding.Subcomplex",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "structure",
+      "signature": "structure Subcomplex (X : Type*) [PartialOrder X] where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "628c5d5d71529003c655c8f94b33667f1b2a3359",
+      "short_revision": "628c5d5",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L157",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.GCellComplex",
+      "display_name": "SheafOnBuilding.GCellComplex",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "628c5d5d71529003c655c8f94b33667f1b2a3359",
+      "short_revision": "628c5d5",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/628c5d5d71529003c655c8f94b33667f1b2a3359/SheafOnBuilding/GCellComplex.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

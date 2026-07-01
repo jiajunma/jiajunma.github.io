@@ -4,24 +4,32 @@
     "title": "Cellular Categories",
     "href": "cellular_categories/index.html",
     "parent": null,
-    "node_count": 8,
-    "descendant_node_count": 8
+    "node_count": 9,
+    "descendant_node_count": 9
   },
   "counts": {
-    "internal_nodes": 8,
+    "internal_nodes": 9,
     "inlined_nodes": 0,
-    "descendant_nodes": 8,
+    "descendant_nodes": 9,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 8,
+    "non_proof_plan_nodes": 9,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 14,
-    "visible_nodes_with_selected_proof_plans": 14
+    "visible_nodes_without_proof_plans": 15,
+    "visible_nodes_with_selected_proof_plans": 15
   },
   "nodes": [
+    {
+      "id": "cellular_categories.abstract_cell_complex",
+      "title": "Abstract cell complex: combinatorial (poset) formalisation",
+      "kind": "definition",
+      "status": "staged",
+      "href": "cellular_categories/cellular_categories_abstract_cell_complex.html",
+      "payload": "node_payloads/cellular_categories_abstract_cell_complex.json"
+    },
     {
       "id": "cellular_categories.category_jXk",
       "title": "The cell categories ]X[ and [X]",
@@ -88,6 +96,11 @@
     }
   ],
   "edges": [
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.abstract_cell_complex",
+      "kind": "uses"
+    },
     {
       "from": "cellular_categories.cw_complex_setting",
       "to": "cellular_categories.category_jXk",
@@ -270,6 +283,12 @@
       "count": 1
     },
     {
+      "id": "cell-complex",
+      "title": "cell-complex",
+      "href": "keywords/cell-complex.html",
+      "count": 1
+    },
+    {
       "id": "cellular-action",
       "title": "cellular-action",
       "href": "keywords/cellular-action.html",
@@ -303,7 +322,7 @@
       "id": "cw-complex",
       "title": "cw-complex",
       "href": "keywords/cw-complex.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "equivalence",
@@ -339,6 +358,12 @@
       "id": "incidence-numbers",
       "title": "incidence-numbers",
       "href": "keywords/incidence-numbers.html",
+      "count": 1
+    },
+    {
+      "id": "lean-abstraction",
+      "title": "lean-abstraction",
+      "href": "keywords/lean-abstraction.html",
       "count": 1
     },
     {
