@@ -1,0 +1,34 @@
+{
+  "id": "applications.qfd_from_alcove",
+  "title": "Quasi-fundamental domain from a closed alcove (App B)",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "applications/applications_qfd_from_alcove.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Quasi-fundamental domain from a closed alcove</h1>\n<p>Setting (following [Kaletha–Prasad]): Let $G$ be reductive over a $p$-adic\nfield $F$, $F^{\\mathrm{ur}}$ its unramified closure, $G^1(F) := G^1(F^{\\mathrm{ur}}) \\cap G(F)$\n(kernel of all unramified characters), $G^0(F)$ the kernel of the Kottwitz\nmap. Let $T \\subseteq G$ be a maximal $F$-split torus, $N := N(G, T)$,\n$N^0 := N \\cap G^0(F)$, $A = X_*(T) \\otimes \\mathbb{R}$ the apartment of\nthe extended building, $A' = A / A(Z_G)$ the apartment of the reduced\nbuilding.</p>\n<p>Let $\\mathcal{C}'$ be an alcove in $A'$, $\\mathcal{C} := \\mathrm{pr}^{-1}(\\mathcal{C}')\n\\subseteq A$. Let $N_{\\mathcal{C}'}$ stabilize $\\mathcal{C}'$ in $N$,\n$N^0_{\\mathcal{C}'} = N_{\\mathcal{C}'} \\cap G(k)^0$.</p>\n<blockquote>\n<p><strong>Claim.</strong> $\\mathcal{C}$ is a quasi-fundamental domain of the $N$-action\non $A$, with stabilizing subgroup $N_{\\mathcal{C}'}$.</p>\n</blockquote>",
+  "proof_html": "<p>$N_{\\mathcal{C}'} / N^0_{\\mathcal{C}'} \\cong \\Omega$ (the\nKottwitz/abelian quotient). With $W = N / T(k)^0$ and $W^{\\mathrm{aff}} =\nN^0 / T(k)^0$, $W = \\Omega \\ltimes W^{\\mathrm{aff}}$.</p>\n<p>Suppose $x, y \\in \\mathcal{C}$ with $nx = y$, $n \\in N$. Write $n = ab$\nwith $a \\in \\Omega$, $b \\in W^{\\mathrm{aff}}$. Then $bx = a^{-1}y$. Since\n$\\mathcal{C}'$ is a fundamental domain for $W^{\\mathrm{aff}}$ on $A'$,\n$\\mathrm{pr}(bx) = \\mathrm{pr}(x)$ forces $bx = x$ on the reduced part, and\n$b$ fixes the $V(A_G)$ part, so $bx = x$ and $y = ax$ is in the\n$\\Omega$-orbit of $x$. $\\square$</p>\n<h2>Freeness on the free part of $\\Omega$</h2>\n<p>Decompose $\\Omega = \\Omega_{\\mathrm{free}} \\times \\Omega_{\\mathrm{tor}}$ with\n$\\Omega_{\\mathrm{free}}$ free abelian.</p>\n<blockquote>\n<p><strong>Lemma.</strong> $\\Omega_{\\mathrm{free}}$ acts freely on $\\mathcal{C}$.</p>\n</blockquote>\n<p><strong>Proof.</strong> Any $n \\in N_\\Omega$ fixing a point of the extended building lies\nin $N_\\Omega \\cap G^1(k)$, i.e. the torsion part. $\\square$</p>\n<p>This is the geometric foundation for the unramified-character /\n$\\hat K_{x_0}$ cocycle construction in [[node:depth_zero_reduction.E2_construction]].</p>",
+  "deps": [
+    {
+      "id": "equivariant_sheaves.quasi_fundamental_domain",
+      "title": "Quasi-fundamental domain",
+      "href": "equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.compatible_system_from_alcove",
+      "title": "Construction of the compatible cosheaf 𝒦 from pointwise {κ_E} via an alcove (§12.2)",
+      "href": "applications/applications_compatible_system_from_alcove.html"
+    },
+    {
+      "id": "applications.unramified_characters_cosheaf",
+      "title": "Unramified characters bijection X^ur(G) ↔ Cosh_G(B(G); 1_Fix) (App B.1)",
+      "href": "applications/applications_unramified_characters_cosheaf.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

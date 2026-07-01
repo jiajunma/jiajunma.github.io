@@ -1,0 +1,59 @@
+{
+  "id": "coefficient_systems.coeff_phi",
+  "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_coeff_phi.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>$G$-equivariant coefficient systems $\\Coeff_G(\\BSigma, \\Phi)$</h1>\n<p>Following Schneider–Stuhler, $\\mathscr{V} \\in \\Coeff_G(\\BSigma)$ is the\ndata:</p>\n<blockquote>\n<p><strong>(EC1)</strong> for each facet $\\mathcal{F}$ of $\\BSigma$, an $R$-module\n$\\mathscr{V}_\\mathcal{F}$;</p>\n<p><strong>(EC2)</strong> for $\\mathcal{E} \\subseteq \\overline{\\mathcal{F}}$, a restriction\n$r^\\mathcal{F}_\\mathcal{E} : \\mathscr{V}_\\mathcal{F} \\to \\mathscr{V}_\\mathcal{E}$\nwith $r^\\mathcal{F}_\\mathcal{F} = \\id$ and\n$r^\\mathcal{F'}_\\mathcal{E} \\circ r^\\mathcal{F}_\\mathcal{F'} = r^\\mathcal{F'}_\\mathcal{E}$\nfor $\\mathcal{E} \\subseteq \\overline{\\mathcal{F}} \\subseteq \\overline{\\mathcal{F'}}$;</p>\n<p><strong>(EC3)</strong> for $g \\in G$, $\\mathcal{F}$, an isomorphism\n$g_\\mathcal{F} : \\mathscr{V}_\\mathcal{F} \\to \\mathscr{V}_{g\\mathcal{F}}$\nwith $g_{h\\mathcal{F}} \\circ h_\\mathcal{F} = (gh)_\\mathcal{F}$,\n$e_\\mathcal{F} = \\id$, and the standard equivariance square\n$r^{g\\mathcal{F}}<em>{g\\mathcal{E}} \\circ g</em>\\mathcal{F} =\ng_\\mathcal{E} \\circ r^\\mathcal{F}_\\mathcal{E}$.</p>\n</blockquote>\n<p>These (EC1)–(EC3) together make each $\\mathscr{V}_\\mathcal{F}$ into a\n$\\hat K_\\mathcal{F}$-representation.</p>\n<p><strong>$\\Phi$-isotypic refinement.</strong> $\\Coeff_G(\\BSigma, \\Phi) \\subseteq\n\\Coeff_G(\\BSigma)$ is the full subcategory satisfying</p>\n<blockquote>\n<p><strong>(EC4)</strong> for each facet $\\mathcal{F}$, the $\\hat K_\\mathcal{F}$-representation\n$\\mathscr{V}_\\mathcal{F}$ is $\\phi_\\mathcal{F}$-isotypic when restricted to\n$K_{\\mathcal{F},+}$.</p>\n</blockquote>\n<p>A $G$-equivariant coefficient system is the same as a functor\n$\\mathscr{V} : [\\BSigma / G] \\to R\\text{-mod}$ (following [Dat, §3.1]); the\ncategory $\\Coeff_G(\\BSigma, \\Phi)$ is therefore\n$\\underline{\\mathrm{Fun}}([\\BSigma/G], R\\text{-mod})$ restricted by (EC4).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    },
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    },
+    {
+      "id": "cellular_categories.quotient_category_jXGk",
+      "title": "The quotient categories ]X/G[ and [X/G]",
+      "href": "cellular_categories/cellular_categories_quotient_category_jXGk.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.A_over_K_equivalence",
+      "title": "Equivalence [A/𝒦] ≃ [B(Σ)/G] (RES theorem)",
+      "href": "coefficient_systems/coefficient_systems_A_over_K_equivalence.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.loc_phi_capital",
+      "title": "Loc_Φ: Rep_Φ(G) → Coeff_G(B(Σ), Φ) and H_0 adjunction",
+      "href": "coefficient_systems/coefficient_systems_loc_phi_capital.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

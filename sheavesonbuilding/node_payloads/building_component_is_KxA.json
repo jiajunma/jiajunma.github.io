@@ -1,0 +1,64 @@
+{
+  "id": "building.component_is_KxA",
+  "title": "Main theorem: each connected component of B(Σ) equals K_x · A",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "building/building_component_is_KxA.html",
+  "primary_topic": "building",
+  "topics": [
+    "building"
+  ],
+  "body_html": "<h1>Main theorem: $C_0 = K_x \\cdot A$</h1>\n<p>This node delivers Step C.3.4 (the <strong>main statement</strong>) of\n<a class=\"node-ref\" data-node-id=\"building.connected_components.plan.classification\" href=\"connected_components/plan/building_connected_components_plan_classification.html\">Plan: identify each connected component of B(Σ) as K_x · A</a>. It\nidentifies the previously vague \"$\\BSigma_x = K_x \\cdot A$\"\n(<a class=\"node-ref\" data-node-id=\"building.bs_subset_x\" href=\"building_bs_subset_x.html\">The K_x-orbit subset B(Σ)_x := K_x · A</a>) with <strong>exactly the connected component</strong>\nof $\\BSigma$ containing $A$, aligning the geometric picture with the\nalgebraic $\\pi_0(\\BSigma) = G/J$\n(<a class=\"node-ref\" data-node-id=\"building.connected_components\" href=\"building_connected_components.html\">π₀(X) ≅ G/J for X = G ×^P X&#x27; (with applications to B(Σ))</a>).</p>\n<h2>Statement</h2>\n<p>Let $\\BSigma = G \\times^K A$ as usual, $x \\in A$ a fixed point, and\n$C_0 \\subseteq \\BSigma$ the connected component containing $A$.</p>\n<blockquote>\n<p><strong>Theorem.</strong> $C_0 \\;=\\; K_x \\cdot A \\;=\\; \\hat K_x \\cdot A$.</p>\n</blockquote>",
+  "proof_html": "<p>The proof assembles three pieces:</p>\n<p><strong>(P1) Geometric content of $\\hat K_x \\cdot A$</strong>\n(<a class=\"node-ref\" data-node-id=\"building.apartments_in_bsigma\" href=\"building_apartments_in_bsigma.html\">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a> Cor. C.3.1'):\n$$\\hat K_x \\cdot A \\;=\\; \\bigcup_{A' \\in \\mathrm{Apt}_x} A' \\;=\\; \\text{union of all apartments of $\\BSigma$ through $x$}.$$</p>\n<p><strong>(P2) $K_x A = \\hat K_x A$</strong> (<a class=\"node-ref\" data-node-id=\"building.bs_subset_x\" href=\"building_bs_subset_x.html\">The K_x-orbit subset B(Σ)_x := K_x · A</a>,\nC.3.3 proven there).</p>\n<p><strong>(P3) Union of apartments through $x$ equals $C_0$</strong>\n(the substantive geometric step, conditional on\n[[node:building.A1_axiom_in_component]] component-global form):</p>\n<p>$$C_0 \\;=\\; \\bigcup_{A' \\in \\mathrm{Apt}_x} A'.$$</p>\n<h3>Proof of (P3)</h3>\n<p><strong>Inclusion $\\supseteq$</strong>. Each apartment $A' \\in \\mathrm{Apt}_x$ is\nconnected and contains $x \\in A \\subseteq C_0$. So $A' \\subseteq C_0$\n(connected set meeting $C_0$ is contained in $C_0$). Hence the union\nis contained in $C_0$.</p>\n<p><strong>Inclusion $\\subseteq$</strong>. Take $y \\in C_0$. Let $\\mathcal F$ be the\ncell of $\\BSigma$ containing $y$ in its relative interior. By\ncomponent-global (A1) [[node:building.A1_axiom_in_component]] applied\nto the cells $\\mathcal F_x$ (containing $x$) and $\\mathcal F$ (both in\n$C_0$), there exists $g \\in G$ with $\\mathcal F_x, \\mathcal F \\subseteq gA$.\nThen $gA$ is an apartment containing both $x$ and $y$, so\n$gA \\in \\mathrm{Apt}_x$ and $y \\in gA \\subseteq \\bigcup_{A' \\in \\mathrm{Apt}_x} A'$.</p>\n<h3>Assembling</h3>\n<p>By (P3): $C_0 = \\bigcup_{A' \\in \\mathrm{Apt}_x} A'$.</p>\n<p>By (P1): $\\bigcup_{A' \\in \\mathrm{Apt}_x} A' = \\hat K_x \\cdot A$.</p>\n<p>By (P2): $\\hat K_x \\cdot A = K_x \\cdot A$.</p>\n<p>Hence $C_0 = K_x \\cdot A = \\hat K_x \\cdot A$. $\\square$</p>\n<h2>Hypothesis usage</h2>\n<table>\n<thead>\n<tr>\n<th>Step</th>\n<th>Uses</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(P1)</td>\n<td>(K1)(K2) only</td>\n</tr>\n<tr>\n<td>(P2)</td>\n<td>Sheaf7 <code>lem:Stab_gx</code>; (K1)(K2) only</td>\n</tr>\n<tr>\n<td>(P3)</td>\n<td>Component-global (A1) — Iwahori-type decomposition (typically needs (K3) and case-specific verification)</td>\n</tr>\n</tbody>\n</table>\n<p>So the theorem holds for any generalized building $\\BSigma$ where (A1)\nholds inside each connected component, which is automatic for the\nparahoric case and verifiable for the applications in Sheaf7 §10.</p>\n<h2>Reduction lemma: $J\\cdot A = K_x\\cdot A$ as an iff</h2>\n<blockquote>\n<p><strong>Lemma.</strong> $J\\cdot A = K_x\\cdot A$ as subsets of $\\BSigma$ iff for\nevery $j\\in J$ and every $a\\in A$ there exist $k\\in K_x$, $a'\\in A$,\n$n\\in N$ such that $j\\cdot a = k\\cdot a'$ in $\\BSigma$, equivalently\n$k^{-1}j\\in K_a\\cdot N$.</p>\n</blockquote>\n<p><strong>Proof.</strong> The inclusion $K_x\\cdot A\\subseteq J\\cdot A$ is automatic\nsince $K_x\\subseteq J$. The reverse $J\\cdot A\\subseteq K_x\\cdot A$ is,\nby definition, that every $j\\cdot a\\in\\BSigma$ (with $j\\in J$, $a\\in A$)\nlies in $K_x\\cdot A$, i.e.\\ $j\\cdot a = k\\cdot a'$ for some $k\\in K_x$,\n$a'\\in A$.</p>\n<p>For the equivalence reformulation: $j\\cdot a = k\\cdot a'$ in $\\BSigma$\nunpacks (via the $\\sim$-relation defining $\\BSigma$) to the existence\nof $n\\in N$ with $n\\cdot a = a'$ and $j^{-1}k\\cdot n\\in K_a$, i.e.\\\n$k^{-1}j\\in n\\cdot K_a^{-1} = n\\cdot K_a\\subseteq K_a\\cdot N$ (using\n$N$ normalises $K_a$ via $N$-equivariance of $K$ + $K_a$ being a\ngroup). $\\square$</p>\n<p>This reformulation makes explicit the role of the (A1)-in-component\naxiom: under (A1), the $J$-action can be implemented by a $K_x$-element\n+ apartment translation.</p>\n<h2>Corollaries (Tasks C.4–C.6)</h2>\n<h3>C.4 — Reconciliation with $\\pi_0 = G/J$</h3>\n<blockquote>\n<p><strong>Corollary (Stabiliser).</strong> $\\Stab_G(C_0) = J = \\langle G', K_x \\rangle\n = \\langle K_x, N \\rangle$.</p>\n</blockquote>\n<p><strong>Proof.</strong> Since $C_0 = K_x A$, $\\Stab_G(C_0) \\supseteq K_x$\n(obvious) and $\\Stab_G(C_0) \\supseteq G'$ (since $\\mathcal B(G') = G' \\cdot A\n\\subseteq C_0$ is connected through $A$, so $g \\cdot C_0$ for $g \\in G'$\ncontains $g \\cdot A \\subseteq \\mathcal B(G') \\subseteq C_0$, so\n$g \\cdot C_0 = C_0$). So $J \\subseteq \\Stab_G(C_0)$.</p>\n<p>Conversely, $|\\pi_0(\\BSigma)| = [G : \\Stab_G(C_0)]$ (by the $G$-orbit\nstructure on components) and $|\\pi_0(\\BSigma)| = [G : J]$ (by\n<a class=\"node-ref\" data-node-id=\"building.connected_components\" href=\"building_connected_components.html\">π₀(X) ≅ G/J for X = G ×^P X&#x27; (with applications to B(Σ))</a>). So $\\Stab_G(C_0) = J$.\n$\\square$</p>\n<h3>C.5 — Other connected components</h3>\n<blockquote>\n<p><strong>Corollary.</strong> Every connected component of $\\BSigma$ is of the form\n$K_y \\cdot A_y$ for some point $y$ and apartment $A_y$ through $y$.</p>\n</blockquote>\n<p><strong>Proof.</strong> $G$ acts transitively on $\\pi_0(\\BSigma) = G/J$. So any\ncomponent is $g \\cdot C_0 = g \\cdot K_x \\cdot A = (g K_x g^{-1}) \\cdot (gA)\n= K_{gx} \\cdot (gA)$ using $G$-equivariance of $K$ (extended cosheaf).\nSet $y := gx$, $A_y := gA$. $\\square$</p>\n<h3>C.6 — Relation to $\\mathcal B(G')$</h3>\n<blockquote>\n<p><strong>Corollary.</strong> Each connected component of $\\BSigma$ contains a\n$G$-translate of $\\mathcal B(G')$ as a sub-building. So $\\BSigma$ is\na disjoint union of \"$K$-puffed-up\" translates of $\\mathcal B(G')$,\nindexed by $G/J$.</p>\n</blockquote>\n<p><strong>Proof.</strong> $\\mathcal B(G') = G' \\cdot A \\subseteq J \\cdot A = K_x A = C_0$.\nFor other components, apply $G$-translation. $\\square$</p>\n<p>The \"puffing\" content: $C_0 \\setminus \\mathcal B(G') \\;=\\; (K_x \\setminus G'_x) \\cdot A$\nmodulo overlap — points obtained from apartments $kA$ with $k \\in K_x$\nnot in $G'$. These extra apartments are present because $K_x$ may\nstrictly contain $G'_x$ (as compact open subgroups of $G \\supsetneq G'$).</p>\n<h2>Three equivalent descriptions of $C_0$</h2>\n<table>\n<thead>\n<tr>\n<th>Description</th>\n<th>Used for</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>$C_0 = K_x \\cdot A$</td>\n<td>Geometric (apartments + $K$-structure)</td>\n</tr>\n<tr>\n<td>$C_0 = J \\cdot A$</td>\n<td>Algebraic ($G$-coset structure, links to $\\pi_0$)</td>\n</tr>\n<tr>\n<td>$C_0 = K_x \\cdot \\mathcal B(M)$</td>\n<td>Levi-theoretic (task C.7, application to specific Levi $M$)</td>\n</tr>\n</tbody>\n</table>\n<p>All three coincide; the choice is one of convenience.</p>\n<h2>See also</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"building.connected_components.plan.classification\" href=\"connected_components/plan/building_connected_components_plan_classification.html\">Plan: identify each connected component of B(Σ) as K_x · A</a> — the\n  overall plan.</li>\n<li><a class=\"node-ref\" data-node-id=\"building.apartments_in_bsigma\" href=\"building_apartments_in_bsigma.html\">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a> — apt definition,\n  parametrization through $x$, Cor C.3.1'.</li>\n<li><a class=\"node-ref\" data-node-id=\"building.bs_subset_x\" href=\"building_bs_subset_x.html\">The K_x-orbit subset B(Σ)_x := K_x · A</a> — Sheaf7 <code>lem:BSx</code>, now with proof.</li>\n<li>[[node:building.A1_axiom_in_component]] — the (A1) axiom, the\n  substantive conditional.</li>\n<li><a class=\"node-ref\" data-node-id=\"building.connected_components\" href=\"building_connected_components.html\">π₀(X) ≅ G/J for X = G ×^P X&#x27; (with applications to B(Σ))</a> — the algebraic $\\pi_0 = G/J$.</li>\n<li><a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_unit_iso_assembly\" href=\"../coefficient_systems/coefficient_systems_cartesian_unit_iso_assembly.html\">Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity</a> —\n  downstream user (task #9 follows up).</li>\n</ul>",
+  "deps": [
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "href": "building/building_generalized_building_bs.html"
+    },
+    {
+      "id": "building.apartments_in_bsigma",
+      "title": "Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x",
+      "href": "building/building_apartments_in_bsigma.html"
+    },
+    {
+      "id": "building.A1_axiom_in_component",
+      "title": "Bruhat–Tits axiom (A1) inside each connected component of B(Σ)",
+      "href": "building/building_A1_axiom_in_component.html"
+    },
+    {
+      "id": "building.bs_subset_x",
+      "title": "The K_x-orbit subset B(Σ)_x := K_x · A",
+      "href": "building/building_bs_subset_x.html"
+    },
+    {
+      "id": "building.connected_components",
+      "title": "π₀(X) ≅ G/J for X = G ×^P X' (with applications to B(Σ))",
+      "href": "building/building_connected_components.html"
+    },
+    {
+      "id": "building.K_cosheaf",
+      "title": "K-cosheaf on the apartment with K-condition",
+      "href": "building/building_K_cosheaf.html"
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "href": "building/building_K3_hypothesis.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "building.Levi_M_in_BSx",
+      "title": "The Levi M in B(Σ)_x = K_x · B(M)",
+      "href": "building/building_Levi_M_in_BSx.html"
+    },
+    {
+      "id": "building.geodesics_in_component",
+      "title": "Geodesic uniqueness and CAT(0) structure on a connected component of B(Σ)",
+      "href": "building/building_geodesics_in_component.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,235 @@
+{
+  "topic": {
+    "id": "representations",
+    "title": "Representations",
+    "href": "representations/index.html",
+    "parent": null,
+    "node_count": 5,
+    "descendant_node_count": 5
+  },
+  "counts": {
+    "internal_nodes": 5,
+    "inlined_nodes": 0,
+    "descendant_nodes": 5,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 5,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 3,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
+  },
+  "nodes": [
+    {
+      "id": "representations.chain_complex_C_dot",
+      "title": "Schneider–Stuhler chain complex C_•(V) of a cosheaf",
+      "kind": "definition",
+      "status": "staged",
+      "href": "representations/representations_chain_complex_C_dot.html",
+      "payload": "node_payloads/representations_chain_complex_C_dot.json"
+    },
+    {
+      "id": "representations.h0_C_dot_adjoint",
+      "title": "H₀ ∘ C_• ⊣ Loc_φ adjunction (§3 Prop)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "representations/representations_h0_C_dot_adjoint.html",
+      "payload": "node_payloads/representations_h0_C_dot_adjoint.json"
+    },
+    {
+      "id": "representations.loc_phi_functor",
+      "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+      "kind": "definition",
+      "status": "staged",
+      "href": "representations/representations_loc_phi_functor.html",
+      "payload": "node_payloads/representations_loc_phi_functor.json"
+    },
+    {
+      "id": "representations.localization_equivalence",
+      "title": "Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "representations/representations_localization_equivalence.html",
+      "payload": "node_payloads/representations_localization_equivalence.json"
+    },
+    {
+      "id": "representations.rep_phi",
+      "title": "The subcategory Rep_φ(G)",
+      "kind": "definition",
+      "status": "staged",
+      "href": "representations/representations_rep_phi.html",
+      "payload": "node_payloads/representations_rep_phi.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "representations.chain_complex_C_dot",
+      "to": "representations.h0_C_dot_adjoint",
+      "kind": "uses"
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "representations.h0_C_dot_adjoint",
+      "kind": "uses"
+    },
+    {
+      "from": "representations.rep_phi",
+      "to": "representations.h0_C_dot_adjoint",
+      "kind": "uses"
+    },
+    {
+      "from": "representations.rep_phi",
+      "to": "representations.loc_phi_functor",
+      "kind": "uses"
+    },
+    {
+      "from": "representations.h0_C_dot_adjoint",
+      "to": "representations.localization_equivalence",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "cellular_categories",
+      "title": "Cellular Categories",
+      "href": "cellular_categories/index.html",
+      "role": "dependency",
+      "node_count": 7
+    },
+    {
+      "id": "coefficient_systems",
+      "title": "Coefficient Systems",
+      "href": "coefficient_systems/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 21
+    },
+    {
+      "id": "depth_zero_reduction",
+      "title": "Depth Zero Reduction",
+      "href": "depth_zero_reduction/index.html",
+      "role": "dependent",
+      "node_count": 12
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:cellular_categories",
+      "to": "representations.chain_complex_C_dot",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "topic:cellular_categories",
+      "to": "representations.loc_phi_functor",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 2
+    },
+    {
+      "from": "topic:cellular_categories",
+      "to": "representations.rep_phi",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 2
+    },
+    {
+      "from": "topic:coefficient_systems",
+      "to": "representations.localization_equivalence",
+      "kind": "boundary_dependency",
+      "topic": "coefficient_systems",
+      "count": 2
+    },
+    {
+      "from": "representations.chain_complex_C_dot",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_dependent",
+      "topic": "coefficient_systems",
+      "count": 2
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_dependent",
+      "topic": "coefficient_systems",
+      "count": 3
+    },
+    {
+      "from": "representations.rep_phi",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_dependent",
+      "topic": "coefficient_systems",
+      "count": 2
+    },
+    {
+      "from": "representations.localization_equivalence",
+      "to": "topic:depth_zero_reduction",
+      "kind": "boundary_dependent",
+      "topic": "depth_zero_reduction",
+      "count": 1
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "coefficient_systems",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "adjunction",
+      "title": "adjunction",
+      "href": "keywords/adjunction.html",
+      "count": 1
+    },
+    {
+      "id": "chain-complex",
+      "title": "chain-complex",
+      "href": "keywords/chain-complex.html",
+      "count": 1
+    },
+    {
+      "id": "equivalence",
+      "title": "equivalence",
+      "href": "keywords/equivalence.html",
+      "count": 1
+    },
+    {
+      "id": "functor",
+      "title": "functor",
+      "href": "keywords/functor.html",
+      "count": 1
+    },
+    {
+      "id": "isotypic",
+      "title": "isotypic",
+      "href": "keywords/isotypic.html",
+      "count": 1
+    },
+    {
+      "id": "localization",
+      "title": "localization",
+      "href": "keywords/localization.html",
+      "count": 2
+    },
+    {
+      "id": "representation",
+      "title": "representation",
+      "href": "keywords/representation.html",
+      "count": 1
+    },
+    {
+      "id": "schneider-stuhler",
+      "title": "schneider-stuhler",
+      "href": "keywords/schneider-stuhler.html",
+      "count": 2
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

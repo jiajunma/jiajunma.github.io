@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global β-extension existence (compatible κ-family on B(G_β)) — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf topic-active">
+          <a href="../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../keywords/category.html">category</a></li>
+      
+        <li><a href="../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../keywords/external.html">external</a></li>
+      
+        <li><a href="../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../keywords/main.html">main</a></li>
+      
+        <li><a href="../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../keywords/res.html">res</a></li>
+      
+        <li><a href="../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-applications-2e-compatible_beta_extension_family">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Global β-extension existence (compatible κ-family on B(G_β))</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-applications-2e-compatible_beta_extension_family">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="../references/references_skodlerack_ye_compatible_beta.html">Skodlerack–Ye: compatible families of β-extensions (Thm 5.21)</a></li>
+        
+        <li><a href="../references/references_yu_construction.html">Yu&#39;s tame supercuspidal construction</a></li>
+        
+        <li><a href="applications_tame_K_F_construction.html">Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Global β-extension existence</h1>
+<p>The pointwise data $x \mapsto (K_x, K_{x,+}, \phi_x, \kappa_x)$
+constructed in [[node:applications.tame_K_F_construction]] and the
+parallel classical construction are defined vertex-by-vertex. To
+assemble them into a single $G$-equivariant family — required by (T1)
+constancy on facets, (T3) $G$-equivariance, and the global definition
+$\phi_x = \phi(K_{x,+}, \kappa_x)$ used in
+[[node:coefficient_systems.semisimple_character_T_axioms]] — one needs
+the <strong>β-extensions $\kappa_x$ to be compatible across $x$</strong>.</p>
+<p>For quaternionic forms of $p$-adic classical groups (and by analogous
+arguments for inner forms and twisted Levi situations), this global
+compatibility is addressed by the Skodlerack–Ye preprint; see
+<a class="node-ref" data-node-id="references.skodlerack_ye_compatible_beta" href="../references/references_skodlerack_ye_compatible_beta.html">Skodlerack–Ye: compatible families of β-extensions (Thm 5.21)</a> for the original
+statement and proof.</p>
+<blockquote>
+<p>⚠️ <strong>Preprint status.</strong> The Skodlerack–Ye paper is not yet published
+or formally refereed. The construction below is the most complete
+argument currently available; earlier partial results in
+[Stevens:SC §4.2] (local existence), [Sko:SS] (intertwiner identity),
+[KSS21] (endo-parameters with $\beta$-extension data), and [HKSS §7]
+(the conjecture being closed) provide the surrounding context.
+Downstream nodes that cite this theorem are qualified as
+"preprint-conditional".</p>
+</blockquote>
+<h2>Stevens-side literature trail</h2>
+<p>The chain of papers leading to the SkoYe statement is:</p>
+<ul>
+<li>[Stevens:SC] — original construction of $\beta$-extensions for
+  classical groups (single-vertex case);</li>
+<li>[Sko:SS] (Skodlerack–Stevens) — refined intertwiner identity for
+  semisimple characters;</li>
+<li>[KSS21] (Kurinczuk–Skodlerack–Stevens) — endo-parameters, including
+  a compatible-$\beta$-extension framework over a fixed maximal Levi;</li>
+<li>[HKSS] §7 (Conj 7.8) — explicit formulation of the global
+  compatibility as a conjecture;</li>
+<li>[SkoYe] (preprint) — resolution of the conjecture in the
+  quaternionic case via the quadratic-correction construction below.</li>
+</ul>
+<p>The general (non-quaternionic) classical case is expected to follow by
+the same technique, but is not yet documented in print.</p>
+<h2>Statement in our notation</h2>
+<p>Fix a self-dual semisimple stratum $\Delta = [\Lambda, n, 0, \beta]$
+and a self-dual semisimple character $\theta \in \mathrm C(\Delta)$.
+Let $\mathcal B(G_\beta)$ be the Bruhat–Tits building of the
+centralizer, and fix a chamber $\mathcal C \subseteq \mathcal B(G_\beta)$.</p>
+<blockquote>
+<p><strong>Theorem (global β-extension family).</strong> There exists a family
+$$\bigl\{\tilde\kappa^\circ_x \;\big|\; x \in \overline{\mathcal C}\bigr\}, \qquad
+&gt;   \tilde\kappa^\circ_x \in \beta\text{-ext}^\circ_{\Lambda_{M_0}}(\Lambda_x),$$
+such that for all $\Lambda_x, \Lambda_y \in \overline{\mathcal C}$
+with $\bar{\mathfrak b}(\Lambda) \subseteq \bar{\mathfrak b}(\Lambda_x) \cap \bar{\mathfrak b}(\Lambda_y)$,
+$$\Psi^\circ_{\Lambda, \Lambda_x, \Lambda_y}\!\Bigl(\mathrm{Res}^{J^\circ(\Lambda_x)}_{J^\circ_{\Lambda, \Lambda_x}} \tilde\kappa^\circ_x\Bigr)
+&gt;   \;\cong\;
+&gt;   \mathrm{Res}^{J^\circ(\Lambda_y)}_{J^\circ_{\Lambda, \Lambda_y}} \tilde\kappa^\circ_y.$$</p>
+<p>Equivalently, the local $\kappa$-data glue into a single $G_\beta$-equivariant
+coefficient system of β-extensions on the closed chamber
+$\overline{\mathcal C}$, hence (via the $G_\beta$-action on chambers)
+on all of $\mathcal B(G_\beta)$.</p>
+</blockquote>
+<p>(This is <code>[SkoYe Theorem 5.21]</code> in their notation; the extension
+to barycentre / midpoint-of-vertex points needed for non-vertex $x$
+is §5.4, especially Propositions 5.25 and 5.27 in the GL_m(D) case.)</p>
+<h2>Construction of the family — outline</h2>
+<p>The construction is a <em>twisting</em> procedure: start from any β-extension,
+then correct it by an explicit quadratic character.</p>
+<h3>Step 1 — base point.</h3>
+<p>Fix an arbitrary vertex $\Lambda_{M_0} \in \overline{\mathcal C}$ and
+pick the unique ORD-$p$ β-extension $\kappa^\circ_{M_0} \in \beta\text{-ext}^\circ(\Lambda_{M_0})$
+([Sko23 Lem 9.5] (maximal-order case $M_\Lambda = \Lambda$, corresponding to a vertex)).</p>
+<h3>Step 2 — transfer to arbitrary $x \in \overline{\mathcal C}$.</h3>
+<p>For $x \in \overline{\mathcal C}$ with $\bar{\mathfrak b}(\Lambda_x)
+\subseteq \bar{\mathfrak b}(\Lambda_{M_0})$, set
+$\kappa^\circ_{M_0, x} := \mathrm{Res}^{J^\circ(\Lambda_{M_0})}_{J^\circ_{\Lambda_x, \Lambda_{M_0}}} \kappa^\circ_{M_0}$,
+then transfer via $\Psi^\circ_{\Lambda_x, \Lambda_{M_0}, \Lambda_x}$ to
+obtain $\kappa^\circ_x \in \beta\text{-ext}^\circ_{\Lambda_{M_0}}(\Lambda_x)$
+satisfying ORD-$p$.</p>
+<h3>Step 3 — quadratic correction $\chi^\circ_x$ (Construction 5.18).</h3>
+<p>Define $\chi^\circ_x := \chi^\circ_{x,1} \cdot \chi^\circ_{x,2} \cdot \chi^\circ_{x,3}$
+where:</p>
+<ul>
+<li>
+<p>$\chi^\circ_{x,1}: J^\circ(\Lambda_x) \to \{\pm 1\}$ is the signature
+  of the conjugation action $\sigma_g$ on the coset
+  $\mathrm J^1(\Lambda_x) \backslash \mathrm P^\circ(\Lambda_x)$ for
+  $g \in J^\circ(\Lambda_x)$.</p>
+</li>
+<li>
+<p>$\chi^\circ_{x,2}: J^\circ(\Lambda_x) \to \{\pm 1\}$ comes from the
+  quadratic character $\bar\chi^\circ_{x,2}$ on the finite reductive
+  quotient $\mathrm P^\circ(\Lambda_x)/\mathrm P_1(\Lambda_x)$
+  (existence and uniqueness: §5.2 + Prop 5.5), inflated to
+  $\mathrm P^\circ(\Lambda_x)$ and then to $J^\circ(\Lambda_x)$.</p>
+</li>
+<li>
+<p>$\chi^\circ_{x,3}: J^\circ(\Lambda_x) \to \{\pm 1\}$ is the analog of
+  $\chi^\circ_{x,2}$ for the β-reduction quotient
+  $\mathrm P^\circ(\Lambda_{x, \beta})/\mathrm P_1(\Lambda_{x, \beta}) \cong \mathbb H_3 \times \mathbb H_4$.</p>
+</li>
+</ul>
+<h3>Step 4 — final β-extension.</h3>
+<p>Put
+$$\tilde\kappa^\circ_x \;:=\; \kappa^\circ_x \otimes \chi^\circ_x.$$
+Then $\tilde\kappa^\circ_x \in \beta\text{-ext}^\circ_{\Lambda_{M_0}}(\Lambda_x)$
+and is, by Prop 5.20, the <em>unique</em> element of $\beta\text{-ext}^\circ$
+making the diagram of transfers commute (up to isomorphism) for all
+pairs $(x, y)$.</p>
+<h2>Why the proof closes</h2>
+<p>The compatibility identity of Theorem 5.21 reduces (via the (ORD-$p$)
+hypothesis and [Sko23 Lemma 9.6]) to computing a discrepancy character
+$\nu^\circ_{x,y} := \det(\pi_x)/\det(\pi_y)$ on $J^\circ_{\Lambda, \Lambda_y}$.
+Skodlerack–Ye Prop 5.20 expresses $\nu^\circ_{x,y}(g) = (-1)^{e_{x,y}(g)}$
+where $e_{x,y}(g)$ is an <em>integer-valued</em> index counting orbits of
+$\langle g \rangle$ on various double cosets
+$\mathrm J^\circ \backslash \mathrm P^\circ$. Using the orbit-counting
+identity (5) [equivariant decompositions of finite $H$-sets give
+additive orbit-count formulas mod 2] applied repeatedly, $e_{x,y}$
+collapses modulo 2 to $e_x(g) - e_y(g)$, exactly matching the
+construction of $\chi^\circ_x$ and $\chi^\circ_y$. Hence
+$\nu^\circ_{x,y} = \chi^\circ_x (\chi^\circ_y)^{-1}$, which is the
+desired compatibility (after multiplying through by $\chi^\circ_x,
+\chi^\circ_y$ in the definition $\tilde\kappa = \kappa \otimes \chi$).</p>
+<p>The §5.4 extension from chamber vertices to all rational points in
+$\overline{\mathcal C}$ uses the strong transitivity of $G_\beta$ on
+chambers (Lemma 5.24) plus a uniqueness argument: any two β-extensions
+in $\beta\text{-ext}(\Lambda_j)$ satisfying ORD-$p$ are equal, so
+transport-of-structure along path-connectedness in
+$\mathcal B(G_\beta)$ propagates the family.</p>
+<h2>Application: globalization of the K-cosheaf</h2>
+<p>The family $\{\tilde\kappa^\circ_x\}$ is the missing piece that turns
+the pointwise tame/classical Yu/AFMO data
+$x \mapsto (K_x, K_{x,+}, \phi_x, \kappa_x)$
+([[node:applications.tame_K_F_construction]]) into an actual
+$G$-equivariant $K$-cosheaf on $\mathcal B(G_\beta)$ (and, via the
+$G$-equivariant embedding $j_\beta: \mathcal B(G_\beta) \hookrightarrow
+\mathcal B(G)$, on the image in $\mathcal B(G)$). With this in place:</p>
+<ol>
+<li>
+<p><strong>(T1) facet-constancy</strong> holds because $\tilde\kappa^\circ_x$
+   depends only on the facet of $x$ in $\overline{\mathcal C}$
+   (Prop 5.27: rational points in the same facet give isomorphic
+   β-extensions).</p>
+</li>
+<li>
+<p><strong>(T3) $G$-equivariance</strong> holds because the family is $G_\beta$-equivariant
+   on $\overline{\mathcal C}$ by construction (uniqueness of ORD-$p$
+   plus equivariant transfer), and $G$ acts on
+   $\mathcal B(G) \supseteq j_\beta(\mathcal B(G_\beta))$ by isometries
+   compatible with $G_\beta$-translation.</p>
+</li>
+<li>
+<p><strong>(T4) intertwining</strong> reduces (via Prop 5.20) to the compatibility
+   identity, which is exactly the content of the family being compatible.</p>
+</li>
+</ol>
+<p>The dependence chain into the §7.2 cartesian unit-iso proof is:
+$$\text{Skodlerack–Ye Thm 5.21} \longrightarrow
+  \text{(T1)–(T4) for classical/tame} \longrightarrow
+  \text{idempotent system (i)–(v)} \longrightarrow
+  \text{§7.2 cartesian unit-iso}.$$</p>
+<h2>Editorial note</h2>
+<p>Until April 2026, the §7.2 blueprint treated "global β-extension
+existence" as a hypothesis listed alongside (T1)–(T5) without a
+specific reference. With the Skodlerack–Ye preprint now available
+(see <a class="node-ref" data-node-id="references.skodlerack_ye_compatible_beta" href="../references/references_skodlerack_ye_compatible_beta.html">Skodlerack–Ye: compatible families of β-extensions (Thm 5.21)</a>), this is a
+<strong>preprint-conditional theorem</strong> in the quaternionic case: the proof
+technique (correction-by-quadratic-character via finite-reductive-group
+signature) is documented and should extend to the general classical
+case (and to inner forms / twisted Levi situations) by the same
+argument; an explicit write-up of that extension is not yet available.</p>
+<p>For users who want a <em>fully refereed</em> dependency, the best current
+combination is:</p>
+<ul>
+<li>[Stevens:SC §4.2] + [KSS21] for the single-vertex / single-Levi part;</li>
+<li>[HKSS Conj 8.14] explicitly stated as the missing global compatibility;</li>
+<li>citation of [SkoYe, preprint] for the closure in the quaternionic
+  case, with a note that the general extension is in progress.</li>
+</ul>
+<h2>See also</h2>
+<ul>
+<li><a class="node-ref" data-node-id="references.skodlerack_ye_compatible_beta" href="../references/references_skodlerack_ye_compatible_beta.html">Skodlerack–Ye: compatible families of β-extensions (Thm 5.21)</a> — the source
+  paper, with exact statement and proof outline.</li>
+<li>[[node:applications.tame_K_F_construction]] — the pointwise
+  construction this theorem globalizes.</li>
+<li>[[node:applications.classical_T_axioms]] — verification of (T1)–(T5)
+  for classical groups, which silently relies on global β-extension
+  existence in the form of this theorem.</li>
+<li>[[node:applications.tame_T_axioms]] — tame analogue.</li>
+<li>[[node:coefficient_systems.semisimple_character_T_axioms]] —
+  consumer of the global $(\sK_+, \phi)$ family.</li>
+</ul>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="applications_classical_T_axioms.html">Hypotheses (T1)–(T5) for classical groups</a></li>
+      
+      <li><a href="applications_classical_main_theorem.html">Main theorem applied to classical groups</a></li>
+      
+      <li><a href="applications_classical_serre.html">Hypothesis (S) for classical groups via [HKSS]</a></li>
+      
+      <li><a href="applications_tame_T_axioms.html">Hypotheses (T1)–(T5) and (E1)–(E3) for tame types</a></li>
+      
+      <li><a href="applications_tame_main_theorem.html">Main theorem applied to tame types</a></li>
+      
+      <li><a href="../depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html">Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">beta-extension</span><span class="tag">global-existence</span><span class="tag">classical</span><span class="tag">quaternionic</span><span class="tag">T-axioms</span><span class="tag">K-cosheaf</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

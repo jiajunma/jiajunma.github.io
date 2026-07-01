@@ -1,0 +1,54 @@
+{
+  "id": "depth_zero_reduction.res_sat_quasi_inverse",
+  "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>$\\Res$ and $\\Sat$ are quasi-inverse</h1>\n<blockquote>\n<p><strong>Proposition (Sheaf7 Prop 8.2).</strong> $\\Res$ and $\\Sat$ are quasi-inverse to\neach other; hence\n$$\\Coeff_M^0(\\mathcal{B}(M)) \\;\\xrightleftharpoons[\\Res]{\\Sat}\\; \\Coeff_G(\\BSigma, \\Phi).$$</p>\n</blockquote>\n<p>This is the $\\Phi$-isotypic incarnation of\n[[node:equivariant_sheaves.heisenberg_weil_equivalence|the §4 Heisenberg–Weil\nequivalence]] specialized to the data $(J, Q, \\kappa)$ of this section.</p>",
+  "proof_html": "<p>Specialize [[node:equivariant_sheaves.heisenberg_weil_equivalence|§4\nHeisenberg–Weil equivalence]] (Sheaf7 Prop 4.2) to:</p>\n<ul>\n<li>$X = \\BSigma$, $G$-action;</li>\n<li>$J := \\mathscr K_{\\bullet,0+}$ (the cosheaf of $K_{\\mathcal F, 0+}$);</li>\n<li>$Q := \\mathscr K_{\\bullet,+}$ (the sheaf of $K_{\\mathcal F, +}$);</li>\n<li>$\\phi := \\phi$ (our character system);</li>\n<li>$\\check{\\mathscr K} := \\mathcal F \\mapsto \\kappa^*_\\mathcal F$ (the dual\n  $\\kappa$-coefficient system from\n  <a class=\"node-ref\" data-node-id=\"depth_zero_reduction.kappa_dual_coeff\" href=\"depth_zero_reduction_kappa_dual_coeff.html\">Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))</a>);</li>\n<li>$\\mathscr K := \\mathcal F \\mapsto \\kappa_\\mathcal F$ (the $\\kappa$ system\n  itself).</li>\n</ul>\n<p>Then the §4 abstract functors $\\mathfrak R$ and $\\mathfrak S$\nspecialize to our $\\Res$ and $\\Sat$ from\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.res_sat_functors\" href=\"depth_zero_reduction_res_sat_functors.html\">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a>:</p>\n<p>$$\\Res(\\mathscr V) = \\mathbb{III}^*(\\kappa^* \\otimes \\mathscr V)_J,\n   \\qquad\n   \\Sat(\\mathscr W)_\\mathcal F = \\varinjlim_{(g, \\mathcal F')} {}^g(\\mathscr W_{\\mathcal F'} \\otimes \\kappa_{\\mathcal F'}).$$</p>\n<p><strong>Verification of hypotheses for §4.</strong> The abstract result applies once\nwe check:</p>\n<ol>\n<li>\n<p><strong>$\\kappa$ is a sheaf of $J$-Heisenberg–Weil types</strong> — this is\n   axiom (E1)–(E2) of [[node:depth_zero_reduction.hypothesis_E]]: each\n   $\\kappa_\\mathcal F$ extends the unique Heisenberg–Weil type $\\eta_\\mathcal F$\n   of $J_\\mathcal F = K_{\\mathcal F, 0+}$ with $\\eta_\\mathcal F|<em>{K</em>{\\mathcal F, +} \\cap K_{\\mathcal F, 0+}}\n   = \\phi_\\mathcal F$-isotypic.</p>\n</li>\n<li>\n<p><strong>Compatibility along restrictions</strong> — (E3) gives the cInd\n   intertwiner\n   $\\iota_{\\mathcal F, \\mathcal E}: \\cInd_{\\hat K_\\mathcal F}^{\\hat K_\\mathcal F K_{\\mathcal E, 0+}} \\kappa_\\mathcal F\n   \\xrightarrow{\\sim} \\kappa_\\mathcal E|<em>{\\hat K</em>\\mathcal F K_{\\mathcal E, 0+}}$\n   for $\\mathcal E \\preceq \\mathcal F$. This is exactly the\n   compatibility of §4 specialized to our $(\\eta_\\mathcal F, \\phi_\\mathcal F)$.</p>\n</li>\n<li>\n<p><strong>The torsor is non-empty</strong> — (E4) plus the global $\\beta$-extension\n   existence from <a class=\"node-ref\" data-node-id=\"applications.compatible_beta_extension_family\" href=\"../applications/applications_compatible_beta_extension_family.html\">Global β-extension existence (compatible κ-family on B(G_β))</a>\n   (= Skodlerack–Ye Thm 5.21 in the classical/quaternionic case,\n   adapted to Yu/AFMO κ in the tame case via the same technique). This\n   gives the object $\\mathscr K = \\kappa$ with $(\\check{\\mathscr K} \\otimes\n   \\mathscr K)_J = (\\kappa^* \\otimes \\kappa)_J = \\mathbf 1$.</p>\n</li>\n<li>\n<p><strong>(K4)</strong> — [[node:depth_zero_reduction.K4_hypothesis]] gives the\n   reductive-quotient isomorphism $\\hat M_\\mathcal F / M_{\\mathcal F, 0+}\n   \\cong \\hat K_\\mathcal F / K_{\\mathcal F, 0+}$ needed to identify\n   $\\Coeff_M^0(\\mathcal B(M))$ with $\\Coeff_G(\\BSigma, \\mathbf 1_{QJ})$\n   after specialization.</p>\n</li>\n</ol>\n<p>All four hypotheses hold (the first three by construction of $\\kappa$;\nthe fourth as a standard structural fact of the K-cosheaf). Hence the\n§4 equivalence applies and $\\Res, \\Sat$ are quasi-inverse. $\\square$</p>\n<h2>Where the proof matters</h2>\n<p>This is the <em>middle</em> arrow of the main reduction-to-depth-zero chain\n(<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)</a>). The leftmost and rightmost\narrows are localized equivalences (§7.4 + Schneider–Stuhler); this Prop\n8.2 bridges $\\Phi$-isotypic systems on $\\BSigma$ to depth-zero systems\non $\\mathcal B(M)$.</p>",
+  "deps": [
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html"
+    },
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    },
+    {
+      "id": "depth_zero_reduction.kappa_dual_coeff",
+      "title": "Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))",
+      "href": "depth_zero_reduction/depth_zero_reduction_kappa_dual_coeff.html"
+    },
+    {
+      "id": "depth_zero_reduction.K4_hypothesis",
+      "title": "Hypothesis (K4): hat-M_F / M_{F,0+} ≅ hat-K_F / K_{F,0+}",
+      "href": "depth_zero_reduction/depth_zero_reduction_K4_hypothesis.html"
+    },
+    {
+      "id": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)",
+      "href": "equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html"
+    },
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "href": "applications/applications_compatible_beta_extension_family.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

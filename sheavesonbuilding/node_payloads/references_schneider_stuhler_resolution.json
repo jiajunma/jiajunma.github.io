@@ -1,0 +1,17 @@
+{
+  "id": "references.schneider_stuhler_resolution",
+  "title": "Schneider–Stuhler resolution theorem (depth-zero baseline)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "references/references_schneider_stuhler_resolution.html",
+  "primary_topic": "references",
+  "topics": [
+    "references"
+  ],
+  "body_html": "<h1>Schneider–Stuhler resolution / equivalence theorem</h1>\n<blockquote>\n<p><strong>Theorem [Schneider–Stuhler, Thm V.1].</strong> For a $p$-adic reductive group\n$G$ with the standard Moy–Prasad cosheaf $G_{\\bullet, 0+}$ and trivial\ncharacter, $H_0$ induces an equivalence\n$$\\Coeff_G^0(\\mathcal{B}(G))[E_0^{-1}] \\;\\simeq\\; \\Rep_0(G).$$</p>\n</blockquote>\n<p>This is the <em>depth-zero</em> baseline that <a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"../depth_zero_reduction/depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)</a>\ngeneralizes: rather than working with the standard building $\\mathcal{B}(G)$\nand trivial character, the §8 theorem uses the <em>generalized</em> building\n$\\BSigma$ with a non-trivial semisimple character $\\Phi$ and shows the\nresulting category $\\Rep_\\Phi(G)$ matches $\\Rep_0(M)$ for the depth-zero\nLevi $M$.</p>\n<h2>Connection to the Bestvina–Savin contraction</h2>\n<p>Schneider–Stuhler's original proof uses the polysimplicial structure on\n$\\mathcal{B}(G)$ and a contraction at integer depth. Bestvina–Savin's\ngeneralization to DeBacker's $r$-facets (App C of the paper) extends this\nto arbitrary depth and is what lets the present work apply the same\ntemplate to $\\BSigma$.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

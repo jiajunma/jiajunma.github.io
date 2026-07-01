@@ -1,0 +1,39 @@
+{
+  "id": "applications.unramified_characters_cosheaf",
+  "title": "Unramified characters bijection X^ur(G) ↔ Cosh_G(B(G); 1_Fix) (App B.1)",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "applications/applications_unramified_characters_cosheaf.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>$\\mathcal{X}^{\\mathrm{ur}}(G)$ bijects with isomorphism classes in $\\Cosh_G(\\mathcal{B}(G); \\mathbf{1}_{\\mathrm{Fix}})$</h1>\n<p>Let $\\mathcal{X}^{\\mathrm{ur}}(G)$ be the set of unramified characters of\n$G(F)$, and $\\Cosh_G(\\mathcal{B}(G); \\mathbf{1}_{\\mathrm{Fix}})$ the\nsubcategory of cosheaves on $\\mathcal{B}(G)$ such that $\\mathscr{V}_E$ is\ntrivial as a representation and $\\Fix_G(E)$ acts trivially.</p>\n<p>A character $\\chi$ gives the cosheaf with $\\mathscr{V}_E = R$, identity\nrestrictions, and equivariance $a_{g, E} = \\chi(g) \\cdot$.</p>\n<blockquote>\n<p><strong>Proposition.</strong> This map is a bijection of $\\mathcal{X}^{\\mathrm{ur}}(G)$\nwith isomorphism classes of $\\Cosh_G(\\mathcal{B}(G); \\mathbf{1}_{\\mathrm{Fix}})$.</p>\n</blockquote>",
+  "proof_html": "<p>Injectivity is straightforward. Surjectivity: for any\n$\\mathscr{V}$ in this category, $H_i(C_\\bullet \\mathscr{V}) = 0$ for\n$i &gt; 0$ and $H_0(C_\\bullet \\mathscr{V}) = R$. The induced $G$-action on\n$H_0$ is by a character $\\chi$. For each vertex $x$, $\\mathscr{V}<em>x \\to\nH_0(\\mathscr{V})$ is $\\Fix_G(x)$-equivariant, so $\\chi|</em>{\\Fix_G(x)}$ is\ntrivial; since $\\bigcup_x \\Fix_G(x) = G^1(k)$, $\\chi|_{G^1(k)} = 1$, i.e.\n$\\chi$ is unramified. $\\square$</p>\n<p>This justifies the <em>Remark</em> in\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.heisenberg_weil_equivalence\" href=\"../equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html\">Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)</a> that\n$\\Cosh_G(X, \\mathbf{1}_{QJ})$ is equivalent to the category of unramified\ncharacters when $Q_E = \\Fix_G(E)$.</p>",
+  "deps": [
+    {
+      "id": "applications.qfd_from_alcove",
+      "title": "Quasi-fundamental domain from a closed alcove (App B)",
+      "href": "applications/applications_qfd_from_alcove.html"
+    },
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    },
+    {
+      "id": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)",
+      "href": "equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.compatible_system_from_alcove",
+      "title": "Construction of the compatible cosheaf 𝒦 from pointwise {κ_E} via an alcove (§12.2)",
+      "href": "applications/applications_compatible_system_from_alcove.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

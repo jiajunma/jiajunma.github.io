@@ -1,0 +1,34 @@
+{
+  "id": "coefficient_systems.contraction_on_phi_x_chain",
+  "title": "Contraction c on C_d(Φ, V)[φ_x]",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_contraction_on_phi_x_chain.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Contraction on $C_d(\\Phi, V)[\\phi_x]$</h1>\n<p>Let $e_x : C_\\bullet(\\BSigma) \\otimes V \\to (C_\\bullet(\\BSigma) \\otimes V)[\\phi_x]$\nbe the projector to the $\\phi_x$-isotypic component,\n$$e_x(\\mathcal{F} \\otimes v) \\;=\\; \\int_{g \\in K_{x,+}} \\phi_x^{-1}(g)\\, g\\mathcal{F} \\otimes gv.$$</p>\n<blockquote>\n<p><strong>Lemma.</strong> For each vertex $x \\in A$, the contraction $c$ on\n$C_\\bullet(\\BSigma)$ from [[node:building.contraction_extension_K3]]\ninduces a map\n$$c : C_d(\\Phi, V)[\\phi_x] \\to C_{d+1}(\\Phi, V)[\\phi_x].$$</p>\n</blockquote>",
+  "proof_html": "<p>By [[node:coefficient_systems.support_in_BSx]], the relevant chains are\nsupported in $\\BSigma_x$, where $c$ is defined and $K_{x,+}$-equivariant.\nFor $\\mathcal{F} \\otimes v \\in C_d(\\BSigma_x) \\otimes V$,\n$$c(e_x(\\mathcal{F} \\otimes v)) = \\int_{g \\in K_{x,+}} \\phi_x^{-1}(g)\\, c(g\\mathcal{F}) \\otimes gv\n  = \\sum_\\mathcal{E} c(\\mathcal{F}, \\mathcal{E})\\, e_x(\\mathcal{E} \\otimes v),$$\nusing $c(g\\mathcal{F}) = g \\cdot c(\\mathcal{F})$ for $g \\in K_{x,+}\n\\subseteq \\Fix_G(x)$.</p>\n<p>For each $\\mathcal{E}$ with $c(\\mathcal{F}, \\mathcal{E}) \\ne 0$, property\n<strong>(C2)</strong> gives $z \\in \\mathcal{E}$ on a geodesic from $x$, and axiom\n<strong>(T5)</strong> gives $K_{\\mathcal{E},+} = (K_{x,+} \\cap K_{\\mathcal{E},+})\n(K_{\\mathcal{F},+} \\cap K_{\\mathcal{E},+})$. Choose coset representatives\n$\\{g_1, \\dots, g_n\\} \\subseteq K_{x,+} \\cap K_{\\mathcal{E},+}$ so that\n$K_{\\mathcal{E},+} = \\bigcup_i g_i (K_{\\mathcal{F},+} \\cap K_{\\mathcal{E},+})$.\nA direct calculation shows\n$e_x(\\mathcal{E} \\otimes v) = e_x(\\mathcal{E} \\otimes e_\\mathcal{E}(v))$,\nlanding in the $\\phi_x$-isotypic component. (Use (T4) for the agreement\n$\\phi_x(h) = \\phi_y(h)$ on $K_{x,+} \\cap K_{y,+}$.) $\\square$</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.support_in_BSx",
+      "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+      "href": "coefficient_systems/coefficient_systems_support_in_BSx.html"
+    },
+    {
+      "id": "building.contraction_extension_K3",
+      "title": "Equivariant extension of the contraction under (K3)",
+      "href": "building/building_contraction_extension_K3.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.acyclicity_phi_x_chain",
+      "title": "Acyclicity of C_d(Φ, V)[φ_x] for vertices x",
+      "href": "coefficient_systems/coefficient_systems_acyclicity_phi_x_chain.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "applications.classical_T_axioms",
+  "title": "Hypotheses (T1)–(T5) for classical groups",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "applications/applications_classical_T_axioms.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Hypotheses (T1)–(T5) hold for classical groups</h1>\n<blockquote>\n<p><strong>Lemma.</strong> For the Stevens construction, the cellular structure on $A$\ngiven by hyperplanes $\\{x_{i,l} \\pm x_{i,l} = \\tfrac{1}{2e}\\}$ satisfies\n(F1)–(F4), and the data $(K_{x,+}, \\phi_x)$ satisfies the type axioms\n(T1)–(T5).</p>\n</blockquote>",
+  "proof_html": "<p>of (T1)–(T4)</p>\n<ul>\n<li>(T1)–(T4) follow from [KSS Prop 8.13] (using\n  $S_1(\\beta, \\Lambda_x) = K_x \\cap G_{x, 0+}$) together with\n  [Schneider–Stuhler §II.2] (NOT BL Cor 4.5 — earlier KB drafts misattributed; BL Cor 4.5 is a lattice/ramification computation, unrelated) for the constancy on facets.</li>\n<li>\n<p>The unstated global existence step — that the local $\\kappa_x$\n  assemble into a single $G$-equivariant family making (T1)/(T3)\n  literally true (not just up to isomorphism at each $x$) — is the\n  global $\\beta$-extension compatibility, addressed in the\n  Stevens-school literature as follows:</p>\n</li>\n<li>\n<p><strong>Local:</strong> [Stevens:SC §4.2] establishes existence at a single\n    vertex; [Sko:SS Prop 7.10(ii)] (Skodlerack–Stevens) provides the refined\n    intertwiner needed for compatibility.</p>\n</li>\n<li><strong>Endo-parameter framework:</strong> [KSS21] formalizes the\n    compatibility condition over a fixed maximal Levi via\n    endo-parameters.</li>\n<li><strong>Global compatibility (formerly [HKSS Conj 8.14]):</strong> the\n    Skodlerack–Ye preprint (Thm 5.21) closes the quaternionic case;\n    see <a class=\"node-ref\" data-node-id=\"applications.compatible_beta_extension_family\" href=\"applications_compatible_beta_extension_family.html\">Global β-extension existence (compatible κ-family on B(G_β))</a>.</li>\n</ul>\n<p>The general classical case remains preprint-conditional pending\n  publication of [SkoYe] and a documented extension of the\n  quadratic-correction technique beyond the quaternionic setting.</p>\n<h2>Proof of (T5)</h2>\n<p>This is the geometric heart of the verification. Use the lattice-function\nlanguage: $\\Lambda_x$ and $\\Lambda_y$ are also lattice functions for each\n$G^{(i)}$, so $z \\in [x, y]$ in $\\mathcal{B}(G^{(i)})$ for all $i$.</p>\n<p>By [BS Lemma 3.1] (which gives the inclusion\n$G^{(i)}_{z, r} \\subseteq G^{(i)}_{x, r} G^{(i)}_{y, r}$) plus the\nstandard converse (each factor lies in $G^{(i)}_{z, r}$ since\n$z \\in [x, y]$, so $G^{(i)}_{x, r} \\cap G^{(i)}_{z, r}$ and similarly\nfor $y$ are contained in $G^{(i)}_{z, r}$):\n$$G^{(i)}_{z, r} = (G^{(i)}_{z, r} \\cap G^{(i)}_{x, r})(G^{(i)}_{z, r} \\cap G^{(i)}_{y, r})\n  \\qquad \\forall r &gt; 0,\\ i = 0, \\dots, d.$$</p>\n<p>Decompose $K_{z, +, r} := K_{z,+} \\cap G_{x, r}$ and induct on the jumps\n$r_1 &lt; r_2 &lt; \\dots$ in $K_{z, +, \\bullet}$. Setting $U^\\pm_r := K_{z, +, r}\n\\cap K_{x/y, +}$, the BS identity gives the seed\n$K_{z, +, r_k} = U^+_{r_k} U^-_{r_k}$ at the top level. The inductive step\ncombines the BS factorization at level $r_{l-1}$ with a commutator\nmanipulation: for $g \\in K_{x, r_{l-1}}$, write $g = a_1 a_2 u_1 u_2$ and\nrearrange using $u_1^{-1} a_2 u_1 a_2^{-1} \\in K_{z, +, r_l} = U^+_{r_l} U^-_{r_l}$\nto obtain $g \\in U^+_{r_{l-1}} U^-_{r_{l-1}}$. $\\square$</p>",
+  "deps": [
+    {
+      "id": "applications.classical_K1_K2_K3",
+      "title": "Hypotheses (K1)–(K3) for classical groups",
+      "href": "applications/applications_classical_K1_K2_K3.html"
+    },
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "href": "applications/applications_compatible_beta_extension_family.html"
+    },
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_main_theorem",
+      "title": "Main theorem applied to classical groups",
+      "href": "applications/applications_classical_main_theorem.html"
+    },
+    {
+      "id": "applications.classical_serre",
+      "title": "Hypothesis (S) for classical groups via [HKSS]",
+      "href": "applications/applications_classical_serre.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

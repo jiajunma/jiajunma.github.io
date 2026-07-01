@@ -1,0 +1,39 @@
+{
+  "id": "depth_zero_reduction.res_preserves_E",
+  "title": "Res sends E_Φ to E_M (Prop 8.1)",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_res_preserves_E.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>$\\Res$ preserves homological isomorphisms</h1>\n<p>Let $E_\\Phi$ (resp. $E_M$) be the class of morphisms in $\\Coeff_G(\\BSigma, \\Phi)$\n(resp. $\\Coeff_M^0(\\mathcal{B}(M))$) that induce an isomorphism after $H_0$.</p>\n<blockquote>\n<p><strong>Proposition (Sheaf7 Prop 8.1).</strong> $\\Res(E_\\Phi) \\subseteq E_M$ and\n$\\Sat(E_M) \\subseteq E_\\Phi$.</p>\n</blockquote>",
+  "proof_html": "<p>outline</p>\n<p>Given $s : \\mathscr{V}_1 \\to \\mathscr{V}_2$ in $\\Coeff_G(\\BSigma, \\Phi)$.\nSet $\\mathscr{W}_i := \\Res \\mathscr{V}_i$. Since taking $K_{x,0+}$- and\n$M_{x, 0+}$-coinvariants is exact, the isomorphism $i_x$ of\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.chain_complex_iso\" href=\"depth_zero_reduction_chain_complex_iso.html\">i_x: C_d(B(Σ),𝒱)_x ≅ C_d(B(M),𝒲)_x</a> gives the commutative\ndiagram (for each $\\mathscr{V}_i$):\n$$(\\kappa_x^* \\otimes H_0(C_\\bullet \\BSigma, \\mathscr{V}_i))_{K_{x,0+}}\n  \\cong H_0((\\kappa_x^* \\otimes C_\\bullet \\BSigma, \\mathscr{V}_i)_{K_{x,0+}})\n  \\cong H_0(C_\\bullet(\\mathcal{B}(M), \\mathscr{W}_i)_{M_{x, 0+}})\n  \\cong H_0(C_\\bullet(\\mathcal{B}(M), \\mathscr{W}_i))_{M_{x, 0+}}.$$</p>\n<p>Now $H_0(s)$ is an iso in $\\Rep_\\Phi(G)$ iff\n$\\Hom_{K_{x,0+}}(\\kappa_x, H_0(s))$ is iso for every vertex $x$ of\n$\\mathcal{B}(M)$. Similarly $H_0(\\Res s)$ is iso iff\n$H_0(\\Res s)^{M_{x, 0+}}$ is iso for every vertex. The diagram above shows\nthe two conditions agree. $\\square$</p>\n<p>This is the <strong>single most important</strong> statement in §8: it is the bridge\nthat lets the §7.4 localization equivalence on $\\Coeff_G(\\BSigma, \\Phi)$\nmatch the analogous one on $\\Coeff_M^0(\\mathcal{B}(M))$ for depth-zero $M$.</p>",
+  "deps": [
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html"
+    },
+    {
+      "id": "depth_zero_reduction.chain_complex_iso",
+      "title": "i_x: C_d(B(Σ),𝒱)_x ≅ C_d(B(M),𝒲)_x",
+      "href": "depth_zero_reduction/depth_zero_reduction_chain_complex_iso.html"
+    },
+    {
+      "id": "coefficient_systems.localized_equivalence",
+      "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+      "href": "coefficient_systems/coefficient_systems_localized_equivalence.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

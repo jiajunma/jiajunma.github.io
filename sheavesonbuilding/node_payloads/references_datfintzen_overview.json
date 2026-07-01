@@ -1,0 +1,53 @@
+{
+  "id": "references.datfintzen_overview",
+  "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "references/references_datfintzen_overview.html",
+  "primary_topic": "references",
+  "topics": [
+    "references"
+  ],
+  "body_html": "<h1>Dat–Fintzen 2026 overview</h1>\n<p>[Dat–Fintzen 2026] develops a parallel approach to the reduction-to-depth-zero\nresult for tame reductive groups:</p>\n<ol>\n<li><strong>Block decomposition</strong> parameterized by <em>wild inertia parameters</em>\n   (§§2–3 of [DF]).</li>\n<li><strong>Coefficient systems</strong> on the building with a Heisenberg–Weil twist\n   (§§3–4 of [DF]).</li>\n<li><strong>Equivalence</strong> between block subcategories and depth-zero blocks of a\n   Levi, via Lanard's coefficient-system framework.</li>\n<li><strong>Applications</strong> to Hecke algebras, projective generators, and the\n   categorical local Langlands correspondence (CLLC) (§4 of [DF]).</li>\n</ol>\n<p>The present paper's approach (Ma–Wang–Yu) differs in two key respects:</p>\n<ul>\n<li>It uses the <strong>generalized building</strong> $\\BSigma = G \\times^K A$ rather\n  than the ordinary Bruhat–Tits building. The generalization is essential\n  for handling the <em>positive-depth</em> character $\\phi$ uniformly.</li>\n<li>It works <strong>without invoking blocks</strong> explicitly: hypothesis (S) (Serre\n  subcategory) is the only block-related input, and it can be verified\n  <em>a posteriori</em> using results like [KY] or [HKSS].</li>\n</ul>\n<p>Both approaches yield equivalences with depth-zero categories of the\nrelevant Levi, and the two should be compatible (yielding the same\nequivalence on common ground); making this compatibility explicit is an\nopen follow-up.</p>\n<h2>Cross-comparison notes</h2>\n<p>Earlier working notes in the paper's repository carried out a\nchapter-by-chapter comparison with [DF §§1–4]. The conclusions:</p>\n<ul>\n<li>The notion of \"compatible semisimple character\" in this paper aligns\n  with [DF]'s \"wild inertia parameter + extension data\";</li>\n<li>The §8 Res/Sat functors play the role of [DF]'s \"block reduction\n  functors\";</li>\n<li>§7.2 cartesian cosheaves are the present paper's name for the [Lanard]\n  /[DF] cartesian coefficient systems.</li>\n</ul>\n<h2>Detailed map of [DF §3] vs. our §7–§8</h2>\n<p>Read of [DF] (Feb 2026 arXiv version, 105 pages) confirms a tight\nstructural parallel:</p>\n<table>\n<thead>\n<tr>\n<th>[DF]</th>\n<th>Ours</th>\n<th>Note</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>§2.4 <em>Characters and idempotents</em></td>\n<td>(T1)–(T5) on $\\Phi$</td>\n<td>DF averages over a wild-inertia equivalence class $I_x / \\sim_x$ to form $e_{\\phi,I,x}$; we use a single $\\phi_F$-projector $e_\\mathcal F$ — strictly simpler</td>\n</tr>\n<tr>\n<td>§2.6 <em>Systems of idempotents</em> (Lemmas 2.6.1, 2.6.6, etc.)</td>\n<td>future §7.2 abstract framework (i)–(v)</td>\n<td>Same Hecke-algebra identities; our (T5) ⇒ \"geodesic telescoping\" identity matches their Lemma 2.6.6</td>\n</tr>\n<tr>\n<td>§2.7 <em>The category $\\mathrm{Rep}^{\\phi, I}_R(G)$</em></td>\n<td>$\\mathrm{Rep}_\\Phi(G)$, <a class=\"node-ref\" data-node-id=\"coefficient_systems.rep_capital_phi\" href=\"../coefficient_systems/coefficient_systems_rep_capital_phi.html\">The subcategory Rep_Φ(G)</a></td>\n<td>DF also proves a Serre-subcategory theorem (their Thm 2.7.1), analogous to our Hypothesis (S)</td>\n</tr>\n<tr>\n<td>§3.2 <em>Localization on the buildings</em></td>\n<td>§7 chain complex + §7.4 localization</td>\n<td>DF Prop 3.2.4: cartesian equivalence $\\mathrm{Coef}^{\\phi,I,\\mathrm{cart}} \\simeq \\mathrm{Rep}^{\\phi,I}_R$ — <strong>proved by directly invoking [Lan21 Thm 4.11]</strong></td>\n</tr>\n<tr>\n<td>§3.3 <em>Heisenberg–Weil coefficient systems</em></td>\n<td>§4 Heisenberg–Weil equivalence (<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.heisenberg_weil_equivalence\" href=\"../equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html\">Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)</a>) + §8 Res/Sat</td>\n<td>Same role: bridge between the two sides of the depth-zero reduction</td>\n</tr>\n<tr>\n<td>§3.4 <em>Construction of the equivalences</em></td>\n<td>§8 Res/Sat</td>\n<td>DF uses pull-push with kernel $\\mathcal W_\\iota$; we use Res = $\\mathbb{III}^* \\circ \\mathfrak R^*$ + Sat as colimit</td>\n</tr>\n<tr>\n<td>§3.4.6 Theorem</td>\n<td><a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"../depth_zero_reduction/depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)</a> (Thm 8.2.1)</td>\n<td>Both yield $\\Rep_\\Phi(G) \\simeq \\Rep_0(M_\\phi)$</td>\n</tr>\n</tbody>\n</table>\n<h2>What we explicitly do <em>not</em> import</h2>\n<p>Per user decision when planning §7.2:</p>\n<ul>\n<li><strong>Cartesian equivalence</strong>: we do not invoke [DF Prop 3.2.4] (nor\n  [Lan21 Thm 4.11]) as a black box. The proof of our\n  <a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves\" href=\"../coefficient_systems/coefficient_systems_cartesian_cosheaves.html\">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a> proposition will be\n  self-contained on the apartment $A$ — see\n  <a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents\" href=\"../coefficient_systems/cartesian_cosheaves/plan/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html\">Proof plan: Cartesian unit-iso via apartment-level system of idempotents</a>.</li>\n<li><strong>Heisenberg–Weil coefficient systems</strong> (DF §3.3): not pulled into\n  §7. Belongs conceptually to §8 (which has its own Res/Sat construction).</li>\n<li><strong>Wild-inertia parameter setup</strong> (DF §2.1–§2.5): our (T1)–(T5)\n  axiomatization is character-centric and does not require the\n  Langlands-parameter machinery.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "applications.tame_hypotheses_K",
+      "title": "Hypotheses (K1)–(K3), (F1)–(F4) for tame types",
+      "href": "applications/applications_tame_hypotheses_K.html"
+    },
+    {
+      "id": "applications.tame_intertwiner",
+      "title": "Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y",
+      "href": "applications/applications_tame_intertwiner.html"
+    },
+    {
+      "id": "applications.tame_kappa_intertwiner",
+      "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+      "href": "applications/applications_tame_kappa_intertwiner.html"
+    },
+    {
+      "id": "applications.tame_main_theorem",
+      "title": "Main theorem applied to tame types",
+      "href": "applications/applications_tame_main_theorem.html"
+    },
+    {
+      "id": "applications.tame_serre",
+      "title": "Hypothesis (S) for tame types via Bernstein + [KY]",
+      "href": "applications/applications_tame_serre.html"
+    },
+    {
+      "id": "applications.tame_two_term_intertwiner",
+      "title": "Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G' G_{y,s} (Yu Thm 9.4 generalized)",
+      "href": "applications/applications_tame_two_term_intertwiner.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

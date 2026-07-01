@@ -1,0 +1,54 @@
+{
+  "id": "applications.tame_kappa_intertwiner",
+  "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "applications/applications_tame_kappa_intertwiner.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>$\\kappa$-intertwiner is one-dimensional and $G^{(0)}$-trivial</h1>\n<blockquote>\n<p><strong>Lemma.</strong> For $x, y \\in \\mathcal{B}^0$,\n$$\\dim \\Hom_{K_{y,0+} \\cap K_{x,0+}}(\\kappa_x, \\kappa_y) = 1,$$\nand $G^{(0)}_{y, 0+} \\cap G^{(0)}_x$ acts on this Hom-space trivially.</p>\n</blockquote>",
+  "proof_html": "<p>This proof invokes several lemmas as black boxes — including Yu Prop 14.1\n(global induction) and Yu Lem 12.4 / 12.5 / 13.6 / 13.7 (index calculus).</p>\n<blockquote>\n<p>⚠️ <strong>Primary source is Fintzen 2021 + Dat–Fintzen 2026</strong>, <em>not</em> Yu\n2001 directly. Yu's original proof of Prop 14.1 has the gap fixed in\n[Fintzen 2021]; [Dat–Fintzen 2026] §3.4 packages the corrected\nintertwiner calculation in the wild-inertia idempotent framework. See\n<a class=\"node-ref\" data-node-id=\"references.fintzen_yu_correction\" href=\"../references/references_fintzen_yu_correction.html\">Fintzen 2021: correction to Yu&#x27;s tame supercuspidal construction</a> for the citation hierarchy.\nYu 2001 is retained only for notation alignment.</p>\n</blockquote>\n<p>Following the corrected Yu Prop 14.1 (as in Fintzen 2021 / DF §3.4),\napplied inductively via the two-term case\n<a class=\"node-ref\" data-node-id=\"applications.tame_two_term_intertwiner\" href=\"applications_tame_two_term_intertwiner.html\">Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G&#x27; G_{y,s} (Yu Thm 9.4 generalized)</a>:</p>\n<p>For the two-term case retain the notation of the intertwiner lemma; define\nthe residue-field cosets\n$$V := J_x / J_{x, +}, \\quad V^+ := (J_x \\cap J_{y, +}) J_{x, +} / J_{x, +},\n  \\quad V' := (J_x \\cap J_y) J_{x, +},$$\nand the symmetric $W$, $W^+$, $W'$.</p>\n<p>[Yu Lemma 13.6] gives $|V| = |V^+| |V'|$ and $|W| = |W^+| |W'|$;\n[Yu Lemma 12.5] gives\n$|V'| = [J_x \\cap J_y : (J_{x,+} \\cap J_y)(J_x \\cap J_{y, +})] / |W^+|$\nand symmetrically for $|W'|$.</p>\n<p>By [Yu Lemma 12.4],\n$$\\dim \\Hom_{J_y \\cap J_x}(\\kappa_x, \\kappa_y) =\n  \\frac{[J_x : J_{x, +}]^{1/2} [J_y : J_{y, +}]^{1/2}}{[J_x \\cap J_y : (J_{x,+} \\cap J_y)(J_x \\cap J_{y, +})]} = 1.$$</p>\n<p>By [Yu Remark 12.7],\n$\\Hom_{J_x \\cap J_y}(\\kappa_x, \\kappa_y) = \\Hom_{J_x \\cap J_y}(\\kappa_x[\\phi|_{J_y \\cap J_{x, +}}], \\kappa_y[\\phi|_{J_x \\cap J_{y, +}}])$.\nBy Heisenberg–Weil functoriality [Geradin (2.19)(2.20)],\n$G'_{x, 0+} \\cap G_y$ acts trivially. $\\square$</p>\n<p>This is exactly (E3) of [[node:depth_zero_reduction.hypothesis_E]] for\ntame types.</p>\n<h2>Alternative source: Dat–Fintzen</h2>\n<p>The Yu lemmas 12.4, 12.5, 13.6, 13.7 used in the proof above are\nrepackaged in [Dat–Fintzen 2026 §3.4] as a single lattice-index +\nHeisenberg–Weil dimension calculation. The DF version separates:</p>\n<ul>\n<li>the <em>geometric</em> content (lattice indices for the intersection\n  $J_x \\cap J_y$) — DF §3.4 lattice argument;</li>\n<li>the <em>representation-theoretic</em> content (Heisenberg–Weil functoriality)\n  — DF §3.3 statement of Géradin (2.19)/(2.20).</li>\n</ul>\n<p>For verifying the one-dimensionality and $G^{(0)}$-triviality of the\n$\\kappa$-Hom in detail, the DF reformulation may be cleaner. See the\nmapping in [[node:references.yu_construction|yu_construction § Dat-Fintzen\nparallel]] for the explicit cross-references.</p>",
+  "deps": [
+    {
+      "id": "applications.tame_two_term_intertwiner",
+      "title": "Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G' G_{y,s} (Yu Thm 9.4 generalized)",
+      "href": "applications/applications_tame_two_term_intertwiner.html"
+    },
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    },
+    {
+      "id": "references.datfintzen_overview",
+      "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+      "href": "references/references_datfintzen_overview.html"
+    },
+    {
+      "id": "references.fintzen_yu_correction",
+      "title": "Fintzen 2021: correction to Yu's tame supercuspidal construction",
+      "href": "references/references_fintzen_yu_correction.html"
+    },
+    {
+      "id": "references.yu_construction",
+      "title": "Yu's tame supercuspidal construction",
+      "href": "references/references_yu_construction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.tame_T_axioms",
+      "title": "Hypotheses (T1)–(T5) and (E1)–(E3) for tame types",
+      "href": "applications/applications_tame_T_axioms.html"
+    },
+    {
+      "id": "applications.tame_main_theorem",
+      "title": "Main theorem applied to tame types",
+      "href": "applications/applications_tame_main_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

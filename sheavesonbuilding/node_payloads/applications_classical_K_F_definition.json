@@ -1,0 +1,39 @@
+{
+  "id": "applications.classical_K_F_definition",
+  "title": "Stevens groups K_x, K_{x,+} from a β-approximation sequence",
+  "kind": "definition",
+  "status": "staged",
+  "href": "applications/applications_classical_K_F_definition.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Stevens groups $K_x$, $K_{x,+}$ from a $\\beta$-approximation sequence</h1>\n<p>Fix the classical-groups setup (see <a class=\"node-ref\" data-node-id=\"applications.classical_setting\" href=\"applications_classical_setting.html\">Classical groups setting: G = isometry of an ε-Hermitian form, p ≠ 2</a>)\nand apartment data: an $E_i$-basis $\\{w_{i,l}\\}$ of each $V_i$ such that\n$\\{w_{i,k}\\}$ spans an anisotropic part. The maximal split torus $S$ is the\ndiagonal in this basis, the apartment $A \\cong \\mathbb{R}^n$.</p>\n<h2>Approximation sequence</h2>\n<p>By [Stevens:SS, Prop 3.4], choose an <em>approximation sequence</em>\n$$\\beta = \\gamma_0,\\ \\gamma_1,\\ \\dots,\\ \\gamma_d = 0,\n  \\qquad \\gamma_i \\in \\mathfrak{g},$$\nwith $-k_F(\\gamma_i) &lt; -k_F(\\gamma_{i+1})$ and\n$\\gamma_i \\equiv \\gamma_{i+1} \\pmod{\\mathfrak{g}_{x, -k_F(\\gamma_i)}}$.</p>\n<p>Let $s_i := -k_F(\\gamma_i) / 2$ for $i = 1, \\dots, d-1$ and\n$s_d := \\mathrm{depth}_x(\\beta)$. Set $G^{(i)} := G^{\\gamma_i}$ (so\n$G^{(d)} = G$).</p>\n<h2>Definition</h2>\n<p>$$K_x \\;:=\\; G^{(0)}_x\\, G^{(1)}_{s_1}\\, \\cdots\\, G^{(d)}_{s_d}, \\qquad\n  K_{x,+} \\;:=\\; G^{(0)}_{x, 0+}\\, G^{(1)}_{s_1+}\\, \\cdots\\, G^{(d)}_{s_d+},$$\n$$\\hat K_x \\;:=\\; \\hat G^{(0)}_x\\, G^{(1)}_{s_1}\\, \\cdots\\, G^{(d)}_{s_d}.$$</p>\n<p>For $x$ a rational point in $A$, there is $e \\in \\mathbb{Z}_{&gt;0}$ with\n$\\mathrm{Jump}(\\Lambda_x) \\subseteq \\tfrac{1}{e}\\mathbb{Z}$, and the Stevens\nidentifications\n$$K_x = J^\\circ(\\beta, \\Lambda_x), \\qquad K_{x,+} = H^1(\\beta, \\Lambda_x)$$\nagree with [Stevens:SS §3.1, p.138].</p>\n<h2>Character $\\phi_x$</h2>\n<p>$$\\phi_x \\;:=\\; \\Phi(V, \\varphi, \\Lambda'_x, 0),$$\nin the notation of [KSS Def 9.4], where $\\varphi$ is the natural embedding\n$F[\\beta] \\hookrightarrow \\mathfrak{gl}(V)$ and $x'$ is any rational point\nin the same facet as $x$.</p>\n<p>The data $(K_x, K_{x,+}, \\phi_x)$ provides the $\\mathscr{K}$-cosheaf used\nin [[node:applications.classical_K1_K2_K3]] and\n[[node:applications.classical_T_axioms]].</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "applications.classical_setting",
+      "title": "Classical groups setting: G = isometry of an ε-Hermitian form, p ≠ 2",
+      "href": "applications/applications_classical_setting.html"
+    },
+    {
+      "id": "building.K_cosheaf",
+      "title": "K-cosheaf on the apartment with K-condition",
+      "href": "building/building_K_cosheaf.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_K1_K2_K3",
+      "title": "Hypotheses (K1)–(K3) for classical groups",
+      "href": "applications/applications_classical_K1_K2_K3.html"
+    },
+    {
+      "id": "building.A1_Kx_local_verifications",
+      "title": "Verifications of K_x-local (A1) for parahoric, classical, and tame cases",
+      "href": "building/building_A1_Kx_local_verifications.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "applications.tame_serre",
+  "title": "Hypothesis (S) for tame types via Bernstein + [KY]",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "applications/applications_tame_serre.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Hypothesis (S) for tame types</h1>\n<blockquote>\n<p><strong>Proposition.</strong> For the tame Yu/AFMO data, $\\Rep_\\Phi(G)$ is a direct\nsummand of $\\Rep(G)$ — in particular a Serre subcategory.</p>\n</blockquote>",
+  "proof_html": "<p>By the Bernstein decomposition $\\Rep(G) = \\prod_{\\mathfrak s}\n\\Rep^{\\mathfrak s}(G)$, $\\Rep_\\Phi(G)$ is a Serre subcategory iff the\nindexing set of Bernstein components matching $\\Phi$ is closed under\nthe Bernstein-equivalence relation. Two routes give this:</p>\n<p><strong>Route 1 (Kim–Yu).</strong> [Kim–Yu, Thm 6.3] (also stated as Yu/AFMO\nclassification) gives an explicit bijection between Bernstein components\nof $\\Rep(G)$ and equivalence classes of tame generic cuspidal data\n$(\\vec G, (x, \\{\\iota\\}), \\vec r, \\rho, \\vec\\phi)$ for the depth-zero\nLevi $G^{(0)} = M$. Components matching a given $\\Phi = (\\mathscr K_+,\n\\phi)$ are precisely those with $\\vec\\phi|<em>{\\mathscr K</em>+}$ in the\nequivalence class of $\\phi$; this is manifestly a <em>union</em> of Bernstein\nblocks, hence a direct factor and a Serre subcategory.</p>\n<p><strong>Route 2 (Dat–Fintzen, modern).</strong> [Dat–Fintzen 2026 §2] gives the\n<em>wild-inertia parameter</em> version: Bernstein components of $\\Rep(G)$\ncorrespond to wild-inertia equivalence classes $\\iota \\in I_x / \\sim_x$,\nand the categories $\\Rep^{\\phi, I}_R(G)$ they introduce (§2.7) are\ndefined block-by-block. Their Theorem 2.7.1 proves the Serre-subcategory\nproperty in this framework. Specializing the wild-inertia parameter to\nour single semisimple character $\\phi$ (treating $I = \\{\\iota\\}$ as a\nsingleton class) gives back our $\\Rep_\\Phi(G)$, with the same Serre\nproperty. $\\square$</p>\n<p>Either route closes (S); both rely on the <em>corrected</em> Yu construction\n(Fintzen 2021; see <a class=\"node-ref\" data-node-id=\"references.fintzen_yu_correction\" href=\"../references/references_fintzen_yu_correction.html\">Fintzen 2021: correction to Yu&#x27;s tame supercuspidal construction</a>) which\nguarantees that the cuspidal data $(\\vec G, (x, {\\iota}), \\vec r,\n\\rho, \\vec\\phi)$ produce actual supercuspidals, ensuring the Bernstein\nbijection is well-defined.</p>\n<p>Combined with [[node:applications.tame_T_axioms]] and\n[[node:applications.tame_hypotheses_K]] this verifies all hypotheses of\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"../depth_zero_reduction/depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)</a> in the tame setting.</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.serre_subcategory_hypothesis",
+      "title": "Serre-subcategory property (S) — a consequence, not a hypothesis",
+      "href": "coefficient_systems/coefficient_systems_serre_subcategory_hypothesis.html"
+    },
+    {
+      "id": "applications.tame_T_axioms",
+      "title": "Hypotheses (T1)–(T5) and (E1)–(E3) for tame types",
+      "href": "applications/applications_tame_T_axioms.html"
+    },
+    {
+      "id": "references.datfintzen_overview",
+      "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+      "href": "references/references_datfintzen_overview.html"
+    },
+    {
+      "id": "references.fintzen_yu_correction",
+      "title": "Fintzen 2021: correction to Yu's tame supercuspidal construction",
+      "href": "references/references_fintzen_yu_correction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.tame_main_theorem",
+      "title": "Main theorem applied to tame types",
+      "href": "applications/applications_tame_main_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

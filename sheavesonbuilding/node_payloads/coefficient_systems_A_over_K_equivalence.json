@@ -1,0 +1,44 @@
+{
+  "id": "coefficient_systems.A_over_K_equivalence",
+  "title": "Equivalence [A/𝒦] ≃ [B(Σ)/G] (RES theorem)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_A_over_K_equivalence.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Equivalence $[A / \\mathscr{K}] \\;\\xrightarrow{\\sim}\\; [\\BSigma / G]$</h1>\n<p>Define the category $[A / \\mathscr{K}]$ on facets in $A$ with\n$$\\Hom_{[A / \\mathscr{K}]}(\\mathcal{F}, \\mathcal{E}) := \\{kn \\;|\\; k \\in K_\\mathcal{E},\\ n \\in N,\\ \\mathcal{E} \\subseteq \\overline{n \\mathcal{F}}\\} \\subseteq G,$$\nand similarly $[\\BSigma / G]$ on facets of $\\BSigma$.</p>\n<blockquote>\n<p><strong>Lemma.</strong> $\\Hom_{[A / \\mathscr{K}]}(\\mathcal{F}, \\mathcal{E})\n= \\Hom_{[\\BSigma / G]}(\\mathcal{F}, \\mathcal{E})$ for facets in $A$.</p>\n<p><strong>Theorem.</strong> The natural functor $\\mathrm{RES} : [A / \\mathscr{K}] \\to\n[\\BSigma / G]$ is an equivalence of categories.</p>\n</blockquote>",
+  "proof_html": "<p>Every facet of $\\BSigma$ is $G$-conjugate to a facet in\n$A$ (so $\\mathrm{RES}$ is essentially surjective); the lemma above gives\nfully-faithfulness. $\\square$</p>\n<p>The advantage: hypotheses about $\\BSigma$ can be checked on the apartment\n$A$. The further refinement\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.alcove_equivalence\" href=\"coefficient_systems_alcove_equivalence.html\">[𝒜/𝒦] ≃ [A/𝒦] (alcove reduction under (F5)–(F6))</a> reduces the apartment\nitself to a fundamental alcove.</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.coeff_phi",
+      "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+      "href": "coefficient_systems/coefficient_systems_coeff_phi.html"
+    },
+    {
+      "id": "equivariant_sheaves.reduction_to_qfd",
+      "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
+      "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.alcove_equivalence",
+      "title": "[𝒜/𝒦] ≃ [A/𝒦] (alcove reduction under (F5)–(F6))",
+      "href": "coefficient_systems/coefficient_systems_alcove_equivalence.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

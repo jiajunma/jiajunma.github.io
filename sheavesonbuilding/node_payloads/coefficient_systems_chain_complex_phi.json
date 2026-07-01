@@ -1,0 +1,44 @@
+{
+  "id": "coefficient_systems.chain_complex_phi",
+  "title": "Chain complex C_•(Φ, V) of φ-isotypic chains",
+  "kind": "definition",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_chain_complex_phi.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Chain complex $C_\\bullet(\\Phi, V)$</h1>\n<p>Let $\\Phi = (\\mathscr{K}_+, \\phi)$ be a compatible system of semisimple\ncharacters (see [[node:coefficient_systems.semisimple_character_T_axioms]])\nand let $V \\in \\Rep(G)$. Define\n$$C_\\bullet(\\Phi, V) \\;:=\\; \\mathrm{span}\\{ \\mathcal{F} \\otimes v \\;|\\; v \\in V[\\phi_\\mathcal{F}] \\}\n  \\;\\subseteq\\; C_\\bullet(\\BSigma) \\otimes_R V,$$\ngraded by the dimension of facets.</p>\n<p>By (T2), the boundary $\\partial$ on $C_\\bullet(\\BSigma)$ extends to a\nboundary on $C_\\bullet(\\Phi, V)$, giving the augmented complex\n$$0 \\to C_d(\\Phi, V) \\to \\cdots \\to C_0(\\Phi, V) \\xrightarrow{\\epsilon_V} V \\to 0,$$\nwith $\\epsilon_V(\\sum_x x \\otimes v_x) = \\sum_x v_x$.</p>\n<h2>$G$-module structure via compact induction</h2>\n<p>$C_\\bullet(\\BSigma) \\otimes V$ carries the diagonal $G$-action\n$g \\cdot (\\mathcal{F} \\otimes v) = g\\mathcal{F} \\otimes gv$. By (T3),\n$V[\\phi_\\mathcal{F}]$ is a $\\hat K_\\mathcal{F}$-module, and:</p>\n<blockquote>\n<p><strong>Lemma.</strong> $C_\\bullet(\\Phi, V) \\subseteq C_\\bullet(\\BSigma) \\otimes V$ is\na $G$-submodule, and\n$$C_d(\\Phi, V) \\;=\\; \\bigoplus_\\mathcal{F} \\cInd_{\\hat K_\\mathcal{F}}^G\\, V[\\phi_\\mathcal{F}],$$\nwhere $\\mathcal{F}$ ranges over a set of representatives of\n$G$-conjugacy classes of $d$-dimensional facets in $\\BSigma$.</p>\n</blockquote>",
+  "proof_html": "<p>Immediate from (T2) and (T3). $\\square$</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    },
+    {
+      "id": "representations.chain_complex_C_dot",
+      "title": "Schneider–Stuhler chain complex C_•(V) of a cosheaf",
+      "href": "representations/representations_chain_complex_C_dot.html"
+    },
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "href": "building/building_generalized_building_bs.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.resolution_theorem",
+      "title": "Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)",
+      "href": "coefficient_systems/coefficient_systems_resolution_theorem.html"
+    },
+    {
+      "id": "coefficient_systems.support_in_BSx",
+      "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+      "href": "coefficient_systems/coefficient_systems_support_in_BSx.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

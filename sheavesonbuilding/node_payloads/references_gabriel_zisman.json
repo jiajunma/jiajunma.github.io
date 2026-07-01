@@ -1,0 +1,23 @@
+{
+  "id": "references.gabriel_zisman",
+  "title": "Gabriel–Zisman calculus of fractions (localization criterion)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "references/references_gabriel_zisman.html",
+  "primary_topic": "references",
+  "topics": [
+    "references"
+  ],
+  "body_html": "<h1>Gabriel–Zisman localization criterion</h1>\n<blockquote>\n<p><strong>Proposition [Gabriel–Zisman, §1.3].</strong> Let $F : \\mathcal{A} \\to \\mathcal{B}$\nbe a functor with right adjoint $G$, and let $\\Sigma$ be the class of\nmorphisms in $\\mathcal{A}$ that $F$ sends to isomorphisms. If the counit\n$\\mathrm{counit}_B : F G(B) \\to B$ is an isomorphism for every\n$B \\in \\mathcal{B}$, then $F$ induces an equivalence\n$$\\mathcal{A}[\\Sigma^{-1}] \\;\\xrightarrow{\\;\\sim\\;}\\; \\mathcal{B}.$$</p>\n</blockquote>\n<p>This is the abstract category-theory engine behind both\n<a class=\"node-ref\" data-node-id=\"representations.localization_equivalence\" href=\"../representations/representations_localization_equivalence.html\">Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)</a> and\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.localized_equivalence\" href=\"../coefficient_systems/coefficient_systems_localized_equivalence.html\">Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)</a>: combine an adjunction\nwith a counit-isomorphism statement (the resolution theorem) and get a\nlocalization equivalence for free.</p>\n<p>The relevant references are §1.3 Prop 1.3 parts (ii) and (iii) of the\nGabriel–Zisman book.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "coefficient_systems.localized_equivalence",
+      "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+      "href": "coefficient_systems/coefficient_systems_localized_equivalence.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "applications.tame_setting",
+  "title": "Tamely ramified setting: Yu / Kim–Yu / AFMO datum",
+  "kind": "topic",
+  "status": "staged",
+  "href": "applications/applications_tame_setting.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Tamely ramified setting</h1>\n<p>A <strong>generic cuspidal datum</strong> (Yu) is a 5-tuple\n$(\\vec G, (x, \\{\\iota\\}), \\vec r, \\rho, \\vec \\phi)$ where:</p>\n<ol>\n<li>$\\vec G = (G^0, \\dots, G^n = G)$ is a sequence of tamely ramified\n   twisted Levi subgroups with $Z(G^0) / Z(G)$ anisotropic.</li>\n<li>$x \\in \\mathcal{B}^0 := \\mathcal{B}(G^0)$ is a point in the extended\n   Bruhat–Tits building of $G^0$, with image $[x]$ in the reduced building;\n   $\\{\\iota\\}$ is a family of compatible admissible embeddings of buildings\n   $\\mathcal{B}^0 \\hookrightarrow \\mathcal{B}^1 \\hookrightarrow \\cdots\n   \\hookrightarrow \\mathcal{B}^n$.</li>\n<li>$\\vec r = (r_0, \\dots, r_n)$, $0 &lt; r_0 &lt; \\cdots &lt; r_{n-1} \\le r_n$ (with\n   $r_0 \\ge 0$ if $n = 0$).</li>\n<li>$\\rho$ is an irreducible $G^0_{[x]}$-representation with\n   $\\rho|_{G^0_{x, 0+}}$ being $\\mathbf 1$-isotypic and $\\rho|_{G^0_{x, 0}}$\n   containing an inflation of a cuspidal representation of\n   $G^0_{x, 0} / G^0_{x, 0+}$, and such that\n   $\\cInd_{G^0_{[x]}}^{G^0} \\rho$ is irreducible.</li>\n<li>$\\vec \\phi = (\\phi_0, \\dots, \\phi_n)$ a sequence of characters\n   $\\phi_i : G^i \\to R^\\times$ of depth $r_i$, $G^{i+1}$-generic at $x$\n   in Yu's sense for $i &lt; n$.</li>\n</ol>\n<h2>Heisenberg–Weil datum [AFMO2 §3.6]</h2>\n<p>The positive-depth part of a generic cuspidal datum is encapsulated in a\n<strong>Heisenberg–Weil datum</strong> $(\\vec G, (x, \\{\\iota\\}), \\vec r, K_x^0, \\vec \\phi)$\nwith $n \\ge 1$ and $K_x^0$ an open subgroup of $G^0_{[x]}$.</p>\n<p>For our purposes set $M := G^0$, $\\mathcal{B}(M) := \\mathcal{B}(G^0)$. A\n(partial) Heisenberg–Weil datum $\\Sigma := (\\vec G, \\vec r, \\vec \\phi)$\ngives rise to:\n$$K_{x,+} = G^{(0)}_{x, 0+} G^{(1)}_{x, r_0/2+} \\cdots,\n  \\quad K_{x,0+} = G^{(0)}_{x, 0+} G^{(1)}_{x, r_0/2} \\cdots,\n  \\quad J_x = G^{(1)}_{x, r_0/2} \\cdots,\n  \\quad K_x = G^{(0)}_{x, 0} J_x.$$</p>\n<p>These give the $\\mathscr{K}$-cosheaf for the §5 generalized building\nmachinery (see [[node:applications.tame_K_F_construction]]).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "building.reductive_pair_setting",
+      "title": "Reductive pair (G', G) and the apartment A",
+      "href": "building/building_reductive_pair_setting.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.tame_K_F_construction",
+      "title": "Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)",
+      "href": "applications/applications_tame_K_F_construction.html"
+    },
+    {
+      "id": "applications.tame_hypotheses_K",
+      "title": "Hypotheses (K1)–(K3), (F1)–(F4) for tame types",
+      "href": "applications/applications_tame_hypotheses_K.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,39 @@
+{
+  "id": "coefficient_systems.acyclicity_phi_x_chain",
+  "title": "Acyclicity of C_d(Φ, V)[φ_x] for vertices x",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_acyclicity_phi_x_chain.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Acyclicity of $C_\\bullet(\\Phi, V)[\\phi_x]$</h1>\n<blockquote>\n<p><strong>Lemma.</strong> <em>Assume (T3), (T4) (for the support lemma) and (K3) (for\nthe contraction extension).</em> For each vertex $x \\in A$, the chain\ncomplex $C_\\bullet(\\Phi, V)[\\phi_x]$ (augmented by\n$\\epsilon_V|_{V[\\phi_x]} : C_0[\\phi_x] \\to V[\\phi_x]$) is acyclic.</p>\n<p><strong>Hypothesis tightness.</strong> Direct uses: (T3), (T4) (via the support\nlemma), (K3) (via the contraction extension). (T1), (T2), (T5), (S)\nplay no role in this acyclicity proof.</p>\n</blockquote>",
+  "proof_html": "<p>By [[node:coefficient_systems.support_in_BSx]], every element of\n$C_d(\\Phi, V)[\\phi_x]$ is supported in $\\BSigma_x = K_x \\cdot A$. By\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.contraction_on_phi_x_chain\" href=\"coefficient_systems_contraction_on_phi_x_chain.html\">Contraction c on C_d(Φ, V)[φ_x]</a>, the contraction\n$c$ of $C_\\bullet(A)$ to the vertex $x$ extends $G$-equivariantly to\n$C_\\bullet(\\BSigma_x)$ and preserves the $\\phi_x$-isotypic subcomplex:\n$$c \\colon C_d(\\Phi, V)[\\phi_x] \\;\\longrightarrow\\; C_{d+1}(\\Phi, V)[\\phi_x].$$</p>\n<p>The contraction satisfies the homotopy identity\n$$\\partial \\circ c + c \\circ \\partial = \\mathrm{id} - i \\circ p,$$\nwhere $i \\circ p$ is the projection-then-inclusion to the constant\n0-cycle at $x$ (i.e.\\ the chain $x \\otimes \\epsilon$ in degree 0,\nzero in positive degrees). Hence:</p>\n<ul>\n<li>\n<p>In positive degrees $d \\ge 1$, $i \\circ p = 0$, so\n  $\\partial c + c \\partial = \\mathrm{id}$, which gives exactness:\n  every cycle $z$ with $\\partial z = 0$ satisfies $z = \\partial(cz)$.</p>\n</li>\n<li>\n<p>In degree 0, $\\partial c(z) = z - i(p(z))$, so $z$ and $i(p(z))$ are\n  in the same equivalence class modulo boundaries; $i(p(z)) = x \\otimes p(z)$\n  with $p(z) \\in V[\\phi_x]$, so $\\epsilon_V(z) = p(z)$ surjects onto\n  $V[\\phi_x]$.</p>\n</li>\n</ul>\n<p>Combining: the augmented complex $C_\\bullet(\\Phi, V)[\\phi_x] \\to\nV[\\phi_x] \\to 0$ is exact. $\\square$</p>\n<p>This is the per-vertex acyclicity feeding into the global resolution\ntheorem <a class=\"node-ref\" data-node-id=\"coefficient_systems.resolution_theorem\" href=\"coefficient_systems_resolution_theorem.html\">Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)</a> once $\\Rep_\\Phi(G)$\nis assumed to be a Serre subcategory.</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.contraction_on_phi_x_chain",
+      "title": "Contraction c on C_d(Φ, V)[φ_x]",
+      "href": "coefficient_systems/coefficient_systems_contraction_on_phi_x_chain.html"
+    },
+    {
+      "id": "coefficient_systems.support_in_BSx",
+      "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+      "href": "coefficient_systems/coefficient_systems_support_in_BSx.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.contraction_map_existence",
+      "title": "Bestvina–Savin contraction on a convex polyhedron complex (App C)",
+      "href": "applications/applications_contraction_map_existence.html"
+    },
+    {
+      "id": "coefficient_systems.resolution_theorem",
+      "title": "Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)",
+      "href": "coefficient_systems/coefficient_systems_resolution_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

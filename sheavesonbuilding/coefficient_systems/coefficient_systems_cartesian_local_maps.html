@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local maps ε^τ_σ along taut paths in the apartment — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../keywords/category.html">category</a></li>
+      
+        <li><a href="../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../keywords/external.html">external</a></li>
+      
+        <li><a href="../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../keywords/main.html">main</a></li>
+      
+        <li><a href="../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../keywords/res.html">res</a></li>
+      
+        <li><a href="../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-coefficient_systems-2e-cartesian_local_maps">
+  <header class="lemma_thmheading thm-heading">
+    <span class="lemma_thmcaption thm-caption">Lemma</span>
+    <span class="lemma_thmtitle thm-title">Local maps ε^τ_σ along taut paths in the apartment</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-lemma">lemma</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-coefficient_systems-2e-cartesian_local_maps">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="coefficient_systems_idempotent_system_from_T_axioms.html">Idempotent system extracted from (T1)–(T5)</a></li>
+        
+        <li><a href="../cellular_categories/cellular_categories_equivariant_sheaves.html">G-equivariant sheaves and cosheaves</a></li>
+        
+        <li><a href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="lemma_thmcontent thm-content body">
+    <h1>Local maps $\varepsilon^\tau_\sigma$ along taut paths in $A$</h1>
+<p>This node delivers Steps 3 and 4 of
+<a class="node-ref" data-node-id="coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents" href="cartesian_cosheaves/plan/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html">Proof plan: Cartesian unit-iso via apartment-level system of idempotents</a>:
+the construction of local maps $\varepsilon^\tau_\sigma$ between facet
+values of a cartesian cosheaf, indexed by taut paths in the apartment
+$A$, together with the proof that they depend only on the endpoints.</p>
+<h2>Setting</h2>
+<p>Throughout: $\mathscr V \in \Cosh^{\mathrm{cart}}_G(\BSigma, R, \phi)$
+(cartesian cosheaf), $A \subseteq \BSigma$ is the apartment, equipped
+with the polysimplicial structure from (F1)–(F4). Idempotents $e_\mathcal F$
+(for facets $\mathcal F$ of $A$) and their abstract properties (i)–(v) come
+from [[node:coefficient_systems.idempotent_system_from_T_axioms]].</p>
+<p>For $\mathcal E \preceq \mathcal F$ (i.e. $\mathcal E \subseteq \overline{\mathcal F}$,
+$\mathcal E$ smaller), the cosheaf restriction is
+$$r^\mathcal F_\mathcal E \;:\; \mathscr V_\mathcal F \longrightarrow \mathscr V_\mathcal E.$$
+The cartesian condition says: $r^\mathcal F_\mathcal E$ identifies
+$\mathscr V_\mathcal F$ with $e_\mathcal F \mathscr V_\mathcal E \subseteq \mathscr V_\mathcal E$.</p>
+<h2>Elementary local maps</h2>
+<p>For an <em>adjacent pair</em> of facets $\sigma, \tau$ in $A$ (i.e. $\sigma \preceq \tau$
+or $\tau \preceq \sigma$), define the elementary local map
+$\varepsilon^\sigma_\tau : \mathscr V_\sigma \to \mathscr V_\tau$ as follows:</p>
+<ul>
+<li><strong>Inclusion case</strong> ($\tau \preceq \sigma$, target smaller): set
+  $$\varepsilon^\sigma_\tau \;:=\; r^\sigma_\tau \;:\; \mathscr V_\sigma \longrightarrow \mathscr V_\tau.$$
+  This is just the cosheaf restriction, which by cartesianness identifies
+  $\mathscr V_\sigma$ with $e_\sigma \mathscr V_\tau$ inside $\mathscr V_\tau$.</li>
+<li><strong>Projection case</strong> ($\sigma \preceq \tau$, source smaller): set
+  $$\varepsilon^\sigma_\tau \;:=\; (r^\tau_\sigma)^{-1} \circ e_\tau \;:\; \mathscr V_\sigma \twoheadrightarrow e_\tau \mathscr V_\sigma \xrightarrow{(r^\tau_\sigma)^{-1}} \mathscr V_\tau.$$
+  Here $e_\tau$ projects $\mathscr V_\sigma$ onto its $\phi_\tau$-isotypic
+  part, which by cartesianness is the image $r^\tau_\sigma(\mathscr V_\tau)$;
+  the inverse of $r^\tau_\sigma$ on this image lifts back to $\mathscr V_\tau$.</li>
+</ul>
+<p>These elementary maps satisfy:</p>
+<ul>
+<li>$\varepsilon^\sigma_\sigma = \id_{\mathscr V_\sigma}$.</li>
+<li>If $\sigma \preceq \tau \preceq \omega$, then
+  $\varepsilon^\tau_\omega \circ \varepsilon^\sigma_\tau = \varepsilon^\sigma_\omega$
+  (both are projections then inclusions through the chain).</li>
+<li>If $\omega \preceq \tau \preceq \sigma$, then
+  $\varepsilon^\tau_\omega \circ \varepsilon^\sigma_\tau = \varepsilon^\sigma_\omega$
+  (cosheaf composition: $r^\tau_\omega \circ r^\sigma_\tau = r^\sigma_\omega$).</li>
+</ul>
+<p>These are immediate from the definitions and the cosheaf axioms; the
+verification uses property (i) of $\{e_\mathcal F\}$ at each step (to
+identify $\phi$-isotypic parts across face inclusions).</p>
+<h2>Taut paths</h2>
+<h3>Rigorous definition</h3>
+<p>Throughout, $A$ is a finite-dimensional Euclidean polysimplicial
+complex satisfying (F1)–(F4); $\mathfrak F(A)$ denotes its set of
+facets, partially ordered by $\sigma \preceq \tau \iff \sigma \subseteq \overline\tau$,
+and $A = \coprod_{\sigma \in \mathfrak F(A)} \sigma^\circ$ is the open
+cell decomposition.</p>
+<blockquote>
+<p><strong>Definition (Taut path).</strong> Let $\sigma, \tau \in \mathfrak F(A)$.
+A <strong>taut path</strong> from $\sigma$ to $\tau$ in $A$ is a tuple
+$$\mathcal P \;=\; \bigl(\, x,\, y\, ;\; 0 = t_0 &lt; t_1 &lt; \cdots &lt; t_n = 1\, ;\; \sigma_0, \sigma_1, \dots, \sigma_n \,\bigr)$$
+satisfying:</p>
+<p><strong>(T-pts)</strong> $x \in \sigma^\circ$ and $y \in \tau^\circ$. Define
+$\gamma : [0,1] \to A$ by $\gamma(t) := (1-t)x + ty$. Convexity of $A$
+(Euclidean apartment) gives $[x,y] = \gamma([0,1]) \subseteq A$.</p>
+<p><strong>(T-cells)</strong> $\sigma_i \in \mathfrak F(A)$, $\sigma_0 = \sigma$,
+$\sigma_n = \tau$.</p>
+<p><strong>(T-realize)</strong> For each $i = 0, 1, \dots, n-1$,
+$\gamma\bigl((t_i, t_{i+1})\bigr) \subseteq \sigma_i^\circ$, and the
+endpoints $\gamma(0) = x$, $\gamma(1) = y$ lie in $\sigma_0^\circ$ and
+$\sigma_n^\circ$ respectively (this is just (T-pts) restated).</p>
+<p><strong>(T-adjacent)</strong> For each $i = 0, \dots, n-1$, $\sigma_i$ and $\sigma_{i+1}$
+are <strong>face-comparable</strong>: $\sigma_i \preceq \sigma_{i+1}$ or $\sigma_{i+1} \preceq \sigma_i$.</p>
+<p><strong>(T-minimal)</strong> $\sigma_i \ne \sigma_{i+1}$ for all $i$ (no stuttering;
+the $t_i$ are genuine cell crossings).</p>
+</blockquote>
+<p>Two taut paths are <strong>equivalent</strong> iff they share both $(x, y)$ and the
+facet sequence $(\sigma_0, \dots, \sigma_n)$; the transition times
+$t_i$ are then forced by $\gamma$ and the cell decomposition. The
+content of the well-definedness Proposition below is that the further
+dependence on $(x, y)$ drops out at the level of $\varepsilon^\tau_\sigma$.</p>
+<h3>Immediate corollaries of the definition</h3>
+<p><strong>(C1) Transition points lie on common faces.</strong> At each $t_i$
+($1 \le i \le n-1$), $\gamma(t_i) \in \overline{\sigma_{i-1}} \cap \overline{\sigma_i}$.
+By (F2), this intersection is the closure of a common face
+$\rho_i \preceq \sigma_{i-1}, \sigma_i$. Combined with (T-adjacent),
+$\rho_i$ is whichever of $\sigma_{i-1}, \sigma_i$ is the smaller one.</p>
+<p><strong>(C2) No imposed dimension monotonicity.</strong> Unlike Coxeter galleries,
+$\sigma_i$ and $\sigma_{i+1}$ may differ in dimension by any amount;
+the only constraint is face-comparability.</p>
+<p><strong>(C3) Existence.</strong> For any $\sigma, \tau \in \mathfrak F(A)$ and any
+$x \in \sigma^\circ, y \in \tau^\circ$, the segment $[x,y]$ meets only
+finitely many cells (local finiteness of $A$). Indexing them in order
+along $\gamma$ yields a taut path.</p>
+<p><strong>(C4) Non-uniqueness.</strong> Different choices of $(x, y)$ may yield
+different facet sequences. Typical failure: $\gamma$ travels along the
+relative interior of a lower-dimensional face $\rho$ of some cell;
+(T-realize) then forces $\sigma_i = \rho$, but a small perturbation of
+$(x, y)$ makes $\gamma$ skirt $\rho$ through higher-dimensional cells,
+producing a different taut path with the same endpoint facets
+$(\sigma, \tau)$. The well-definedness Proposition handles exactly
+this.</p>
+<h3>Equivalent formulations</h3>
+<p>The following are equivalent to the rigorous definition above:</p>
+<ul>
+<li><strong>(Gallery form)</strong> A minimal-length walk in the face-comparability
+  graph (vertices = facets, edges = face-comparable pairs) from $\sigma$
+  to $\tau$ that is <strong>realized by</strong> some straight segment $[x, y]$ with
+  $x \in \sigma^\circ, y \in \tau^\circ$.</li>
+<li><strong>(Piecewise-affine form)</strong> A continuous injection
+  $\gamma : [0,1] \to A$, piecewise affine with all pieces sharing one
+  common direction (hence globally affine = a straight segment), with
+  $\gamma(0) \in \sigma^\circ, \gamma(1) \in \tau^\circ$, together with
+  the induced facet sequence.</li>
+</ul>
+<h3>Contrast with Lanard's admissible paths</h3>
+<p><strong>Caution on terminology.</strong> The phrase "taut path" originates with Wang
+[Wan17 §2.3] (unpublished manuscript) (unpublished manuscript) in the $\mathrm{GL}_n$ setting. Lanard [Lan19, §2] does
+<strong>not</strong> use taut paths; he introduces a different, more general notion
+called <strong>admissible paths</strong>, designed to cope with arbitrary reductive
+$G$ where the simplicial hull of two polysimplices need not be a
+simplex.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><strong>Wang / our taut path</strong></th>
+<th><strong>Lanard admissible path</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ambient space</td>
+<td>Single apartment $A$ (Euclidean)</td>
+<td>All of $\mathrm{BT}$ (or $\BSigma$)</td>
+</tr>
+<tr>
+<td>Path data</td>
+<td>Geometric: a straight segment $[x,y] \subseteq A$ plus the facet sequence it traverses</td>
+<td>Combinatorial: a chain of facets in a hull $H(\sigma, \tau)$ satisfying an admissibility condition (monotone w.r.t.\ a hull function)</td>
+</tr>
+<tr>
+<td>Hull machinery</td>
+<td>None</td>
+<td>Hull $H(\sigma, \tau)$ central; well-definedness needs hull-equivalence lemmas</td>
+</tr>
+<tr>
+<td>"Adjacent" means</td>
+<td>Face-comparable, full stop</td>
+<td>Face-comparable <strong>plus</strong> an admissibility constraint</td>
+</tr>
+<tr>
+<td>Indexing level</td>
+<td>Facets (T1 makes $\phi$ facet-constant; vertices not privileged)</td>
+<td>Vertices, with induced data at polysimplices via condition (*)</td>
+</tr>
+<tr>
+<td>Elementary moves to classify</td>
+<td>Only Case C / Case D (intermediate face refinements)</td>
+<td>More: galleries can branch and reconverge, needing path-equivalence machinery</td>
+</tr>
+<tr>
+<td>Well-definedness proof length</td>
+<td>$\sim 1$ page (single idempotent property (i) + cosheaf composition)</td>
+<td>Lanard §3, $\sim 10$ pages (3 axioms + path equivalences)</td>
+</tr>
+<tr>
+<td>Works when</td>
+<td>$A$ is Euclidean polysimplicial (always, for us)</td>
+<td>General reductive $G$, no Euclidean ambient required</td>
+</tr>
+</tbody>
+</table>
+<p>Our setting can use Wang taut paths in place of Lanard admissible paths
+because we first reduce to a single apartment $A$
+(<a class="node-ref" data-node-id="coefficient_systems.cartesian_reduction_to_apartment" href="coefficient_systems_cartesian_reduction_to_apartment.html">Reduction lemma: cartesian unit-iso check transfers to apartment</a>) which
+is convex Euclidean. Lanard cannot reduce to a single apartment because
+his hulls $H(\sigma, \tau)$ generically do not lie in one.</p>
+<p><strong>Consequence for terminology.</strong> Throughout this node and the rest of
+the §7.2 proof, "taut path" always means the Definition above —
+Wang-style, in an apartment, realized by a straight segment. The
+phrase <strong>never</strong> refers to Lanard's admissible paths, and we never
+invoke Lanard's path-equivalence machinery as a black box.</p>
+<h2>Composed local map along a taut path</h2>
+<p>Given a taut path $\sigma_0, \dots, \sigma_n$ from $\sigma_0 = \tau$ to
+$\sigma_n = \sigma$ (note the source-target convention: $\tau$ is the
+source, $\sigma$ the target), define
+$$\varepsilon^\tau_\sigma \;:=\; \varepsilon^{\sigma_{n-1}}_{\sigma_n} \circ \cdots \circ \varepsilon^{\sigma_0}_{\sigma_1} : \mathscr V_\tau \longrightarrow \mathscr V_\sigma.$$</p>
+<h2>Well-definedness (Step 4)</h2>
+<blockquote>
+<p><strong>Proposition (Well-definedness).</strong> $\varepsilon^\tau_\sigma$ depends
+only on $\tau$ and $\sigma$, not on the chosen taut path.</p>
+</blockquote>
+<p>The proof follows Wang [Wan17 §2.3] (Chuijia Wang, unpublished manuscript by Sheaf7 co-author) (Chuijia Wang, unpublished manuscript by Sheaf7 co-author) adapted to facet-level idempotents.
+The key observation, which makes the apartment case simpler than
+Lanard's, is that in the Euclidean apartment $A$ two taut paths between
+the same endpoints differ by a finite sequence of "elementary moves"
+that can be analyzed using properties (ii) and (iii) of $\{e_\mathcal F\}$
+directly.</p>
+<h3>Strategy</h3>
+<p>The proof proceeds in three reductions:</p>
+<ol>
+<li><strong>Local independence at one cell crossing.</strong> Show that if two paths
+   differ by a single "detour" through one adjacent facet (an elementary
+   move of the form $\sigma_i, \sigma_{i+1} \rightsquigarrow \sigma_i, \sigma', \sigma_{i+1}$
+   where $\sigma' \in \overline{\sigma_i} \cap \overline{\sigma_{i+1}}$ or vice versa),
+   the composed map is unchanged.</li>
+<li><strong>Adjacent transposition.</strong> Any two taut paths from $\tau$ to $\sigma$
+   differ by a finite sequence of moves of type (1), via the standard
+   apartment-geometry argument.</li>
+<li>Combine.</li>
+</ol>
+<h3>Proof of (1) — single-detour invariance</h3>
+<p>A taut path is induced by a straight line segment in $A$. The <em>elementary
+moves</em> that can change a taut path without changing its endpoints are
+exactly:</p>
+<blockquote>
+<p>Insert (or delete) one intermediate facet $\sigma'$ between consecutive
+$\sigma_i, \sigma_{i+1}$ such that $\sigma_i \preceq \sigma' \preceq \sigma_{i+1}$
+(or with all face relations reversed).</p>
+</blockquote>
+<p>(<em>Note</em>: it is NOT a valid elementary move to insert a $\sigma'$ that is
+<em>bigger</em> than both $\sigma_i$ and $\sigma_{i+1}$ — the line segment that
+defines the taut path does not detour into a bigger cell, by (T-realize).
+Similarly, inserting a $\sigma'$ that is <em>smaller</em> than both, where
+neither $\sigma_i$ nor $\sigma_{i+1}$ contains the other, does not arise
+either — that would require $\sigma_i, \sigma_{i+1}$ to be non-face-comparable
+in the original path, contradicting (T-adjacent).)</p>
+<p>So there are essentially <strong>two cases</strong>:</p>
+<ul>
+<li><strong>Case C</strong> (intermediate, ascending): $\sigma_i \preceq \sigma' \preceq \sigma_{i+1}$.</li>
+<li><strong>Case D</strong> (intermediate, descending): $\sigma_i \succeq \sigma' \succeq \sigma_{i+1}$.</li>
+</ul>
+<p>Both are about refining the face inclusion $\sigma_i \leftrightarrow \sigma_{i+1}$
+by an intermediate cell.</p>
+<p><strong>Case C</strong> ($\sigma_i \preceq \sigma' \preceq \sigma_{i+1}$).</p>
+<p>We need $\varepsilon^{\sigma'}_{\sigma_{i+1}} \circ \varepsilon^{\sigma_i}_{\sigma'} = \varepsilon^{\sigma_i}_{\sigma_{i+1}}$.
+All three maps are "projection-then-lift" type ($\sigma_i$ smaller in
+each pair):
+- $\varepsilon^{\sigma_i}_{\sigma_{i+1}}(v) = (r^{\sigma_{i+1}}_{\sigma_i})^{-1}(e_{\sigma_{i+1}}(v))$
+- $\varepsilon^{\sigma_i}_{\sigma'}(v) = (r^{\sigma'}_{\sigma_i})^{-1}(e_{\sigma'}(v))$
+- $\varepsilon^{\sigma'}_{\sigma_{i+1}}(u) = (r^{\sigma_{i+1}}_{\sigma'})^{-1}(e_{\sigma_{i+1}}(u))$</p>
+<p>Both target $\mathscr V_{\sigma_{i+1}}$; we can compare them by applying
+the (injective) cartesian iso $r^{\sigma_{i+1}}_{\sigma_i}: \mathscr V_{\sigma_{i+1}} \xrightarrow{\sim} e_{\sigma_{i+1}} \mathscr V_{\sigma_i}$.</p>
+<p>For the direct path:
+$$r^{\sigma_{i+1}}_{\sigma_i}\bigl(\varepsilon^{\sigma_i}_{\sigma_{i+1}}(v)\bigr) \;=\; e_{\sigma_{i+1}}(v).$$</p>
+<p>For the detour, factor $r^{\sigma_{i+1}}_{\sigma_i} = r^{\sigma'}_{\sigma_i} \circ r^{\sigma_{i+1}}_{\sigma'}$ (cosheaf composition via $\sigma_i \preceq \sigma' \preceq \sigma_{i+1}$):
+$$r^{\sigma_{i+1}}_{\sigma_i}\bigl(\varepsilon^{\sigma'}_{\sigma_{i+1}}(\varepsilon^{\sigma_i}_{\sigma'}(v))\bigr)
+  = r^{\sigma'}_{\sigma_i}\Bigl( r^{\sigma_{i+1}}_{\sigma'} \bigl((r^{\sigma_{i+1}}_{\sigma'})^{-1}(e_{\sigma_{i+1}}(\varepsilon^{\sigma_i}_{\sigma'}(v)))\bigr) \Bigr)$$
+$$= r^{\sigma'}_{\sigma_i}\bigl(e_{\sigma_{i+1}}(\varepsilon^{\sigma_i}_{\sigma'}(v))\bigr).$$</p>
+<p><strong>Key step</strong>: $r^{\sigma'}_{\sigma_i}$ is $\hat K_{\sigma'}$-equivariant
+(by cartesianness and the definition of restriction maps), and since
+$\sigma_{i+1} \succeq \sigma'$ implies $K_{\sigma_{i+1},+} \subseteq \hat K_{\sigma'}$
+(because $\hat K_{\sigma_{i+1}} \subseteq \hat K_{\sigma'}$ as
+$\overline{\sigma_{i+1}} \supseteq \overline{\sigma'}$), it commutes with
+the action of every element of $K_{\sigma_{i+1},+}$ and hence with their
+averaging $e_{\sigma_{i+1}}$. So
+$$r^{\sigma'}_{\sigma_i}\bigl(e_{\sigma_{i+1}}(\varepsilon^{\sigma_i}_{\sigma'}(v))\bigr)
+  = e_{\sigma_{i+1}}\bigl(r^{\sigma'}_{\sigma_i}(\varepsilon^{\sigma_i}_{\sigma'}(v))\bigr).$$</p>
+<p>But $r^{\sigma'}<em>{\sigma_i}(\varepsilon^{\sigma_i}</em>{\sigma'}(v)) =
+r^{\sigma'}<em>{\sigma_i}((r^{\sigma'}</em>{\sigma_i})^{-1}(e_{\sigma'}(v))) = e_{\sigma'}(v)$.</p>
+<p>So the detour reduces to $e_{\sigma_{i+1}}(e_{\sigma'}(v))$. By property
+(i) of [[node:coefficient_systems.idempotent_system_from_T_axioms]],
+$e_{\sigma_{i+1}} e_{\sigma'} = e_{\sigma_{i+1}}$ (since $\sigma' \preceq \sigma_{i+1}$).
+Therefore
+$$r^{\sigma_{i+1}}_{\sigma_i}(\text{detour}) = e_{\sigma_{i+1}}(v) = r^{\sigma_{i+1}}_{\sigma_i}(\text{direct}).$$</p>
+<p>Since $r^{\sigma_{i+1}}_{\sigma_i}$ is injective (cartesian iso onto
+$e_{\sigma_{i+1}} \mathscr V_{\sigma_i}$), the detour and direct maps
+agree. $\square$</p>
+<p><strong>Case D</strong> ($\sigma_i \succeq \sigma' \succeq \sigma_{i+1}$).</p>
+<p>All three local maps are now of "inclusion" type (cosheaf restrictions):
+- $\varepsilon^{\sigma_i}_{\sigma_{i+1}} = r^{\sigma_i}_{\sigma_{i+1}}$.
+- $\varepsilon^{\sigma_i}_{\sigma'} = r^{\sigma_i}_{\sigma'}$.
+- $\varepsilon^{\sigma'}_{\sigma_{i+1}} = r^{\sigma'}_{\sigma_{i+1}}$.</p>
+<p>The detour equals $r^{\sigma'}_{\sigma_{i+1}} \circ r^{\sigma_i}_{\sigma'} = r^{\sigma_i}_{\sigma_{i+1}}$
+by cosheaf composition. $\square$</p>
+<h3>Proof of (2) — any two taut paths differ by intermediate detours</h3>
+<p>In Euclidean apartment $A$, given two taut paths $P_1, P_2$ from
+$\sigma_0$ to $\sigma_n$ with witnessing line segments $[x_1, y_1]$,
+$[x_2, y_2]$ (where $x_i \in \sigma_0^\circ$, $y_i \in \sigma_n^\circ$),
+we can homotope $P_1$ to $P_2$ by continuously deforming the segment.
+Each generic continuous deformation introduces or removes one
+"intermediate face crossing" — exactly the Case C/D elementary moves
+above. Special (non-generic) deformations passing through codimension-2
+or higher faces decompose into finite sequences of generic ones.</p>
+<p>This is the standard combinatorial-topology argument on a polysimplicial
+Euclidean apartment; it requires only the cellular structure (F1)–(F4)
+and convexity of $\overline{\mathcal F}$ (a standing CW assumption).</p>
+<h3>Conclusion</h3>
+<p>By (1) [Cases C and D] and (2), any two taut paths from $\tau$ to
+$\sigma$ give the same composite map $\varepsilon^\tau_\sigma$. $\square$</p>
+<h2>Open question (β) — Wang citation</h2>
+<p>In the formal write-up we have to decide whether to:</p>
+<ul>
+<li>(β1) Re-prove (1) and (2) inline (full self-contained, ~1.5 pages)</li>
+<li>(β2) Cite [Wan17 §2.3] (unpublished manuscript) for the path lemmas, only verify our identities
+  on elementary moves (saves ~1 page)</li>
+</ul>
+<p>Decision deferred until the rest of the proof is in place.</p>
+<h2>Step in the broader proof</h2>
+<p>This is <strong>Steps 3 and 4</strong> of the §7.2 cartesian unit-iso proof
+(<a class="node-ref" data-node-id="coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents" href="cartesian_cosheaves/plan/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html">Proof plan: Cartesian unit-iso via apartment-level system of idempotents</a>).
+The next and final step (Step 5) uses these well-defined
+$\varepsilon^\tau_\sigma$ to assemble the unit-iso.</p>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="coefficient_systems_cartesian_cosheaves.html">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a></li>
+      
+      <li><a href="coefficient_systems_cartesian_reduction_to_apartment.html">Reduction lemma: cartesian unit-iso check transfers to apartment</a></li>
+      
+      <li><a href="coefficient_systems_cartesian_unit_iso_assembly.html">Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity</a></li>
+      
+      <li><a href="coefficient_systems_lanard_49_analogue.html">Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">taut-paths</span><span class="tag">local-maps</span><span class="tag">apartment</span><span class="tag">wang</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

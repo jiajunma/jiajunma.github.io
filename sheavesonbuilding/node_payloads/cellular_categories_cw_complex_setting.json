@@ -1,0 +1,132 @@
+{
+  "id": "cellular_categories.cw_complex_setting",
+  "title": "Locally finite regular CW complex with cellular G-action",
+  "kind": "topic",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_cw_complex_setting.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>Locally finite regular CW complex with cellular $G$-action</h1>\n<p>Throughout §§2–4 we fix the following data.</p>\n<ul>\n<li>$X$ is a <strong>locally finite regular CW complex</strong>. <em>Regular</em> means the attaching\n  map from the boundary of each cell to $X$ is an embedding. <em>Locally finite</em>\n  means every cell is contained in the closure of finitely many cells.</li>\n<li>$G$ is a (locally profinite) group acting <strong>continuously and cellularly</strong> on\n  $X$, i.e. $G$ permutes the set of cells and the action restricted to each cell\n  is a homeomorphism.</li>\n<li>$R$ is a coefficient ring.</li>\n</ul>\n<p>The underlying topological space of $X$ is denoted $|X|$. We write\n$[\\![X]\\!]$ for the set of cells of $X$, and $[\\![X]\\!]_d$ for the $d$-dimensional\ncells. The face relation $E \\preceq F$ holds when $E \\subseteq \\overline{F}$.</p>\n<p>Two further standing notations:</p>\n<ul>\n<li>$\\Fix_G(S) := \\{g \\in G : g \\cdot s = s \\text{ for all } s \\in S\\}$ — pointwise\n  stabilizer.</li>\n<li>$\\Stab_G(S) := \\{g \\in G : g \\cdot S = S\\}$ — setwise stabilizer.</li>\n</ul>\n<p>For a cell $E$, $\\Fix_G(E)$ and $\\Stab_G(E)$ may differ; refining the CW\nstructure can force them to agree.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "cellular_categories.category_jXk",
+      "title": "The cell categories ]X[ and [X]",
+      "href": "cellular_categories/cellular_categories_category_jXk.html"
+    },
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    },
+    {
+      "id": "cellular_categories.quotient_category_jXGk",
+      "title": "The quotient categories ]X/G[ and [X/G]",
+      "href": "cellular_categories/cellular_categories_quotient_category_jXGk.html"
+    },
+    {
+      "id": "equivariant_sheaves.induction_GxP_X",
+      "title": "Induced space G ×^P X' along a cosheaf P",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html"
+    },
+    {
+      "id": "equivariant_sheaves.quasi_fundamental_domain",
+      "title": "Quasi-fundamental domain",
+      "href": "equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html"
+    },
+    {
+      "id": "representations.rep_phi",
+      "title": "The subcategory Rep_φ(G)",
+      "href": "representations/representations_rep_phi.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.AbstractCellComplex",
+      "display_name": "SheafOnBuilding.AbstractCellComplex",
+      "qualified_name": "SheafOnBuilding.AbstractCellComplex",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "class",
+      "signature": "class AbstractCellComplex (X : Type*) [PartialOrder X] where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GCellComplex.lean#L58",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.IsLocallyFinite",
+      "display_name": "SheafOnBuilding.IsLocallyFinite",
+      "qualified_name": "SheafOnBuilding.IsLocallyFinite",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "class",
+      "signature": "class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GCellComplex.lean#L82",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GCellComplex",
+      "display_name": "SheafOnBuilding.GCellComplex",
+      "qualified_name": "SheafOnBuilding.GCellComplex",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "class",
+      "signature": "class GCellComplex (G : Type*) [Group G] (X : Type*)\n    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GCellComplex.lean#L139",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.Subcomplex",
+      "display_name": "SheafOnBuilding.Subcomplex",
+      "qualified_name": "SheafOnBuilding.Subcomplex",
+      "module": "SheafOnBuilding.GCellComplex",
+      "kind": "structure",
+      "signature": "structure Subcomplex (X : Type*) [PartialOrder X] where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GCellComplex.lean#L157",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.GCellComplex",
+      "display_name": "SheafOnBuilding.GCellComplex",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GCellComplex.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

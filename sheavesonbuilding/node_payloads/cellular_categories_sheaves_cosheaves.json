@@ -1,0 +1,77 @@
+{
+  "id": "cellular_categories.sheaves_cosheaves",
+  "title": "Sheaves and cosheaves on X as functor categories",
+  "kind": "definition",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_sheaves_cosheaves.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>Sheaves and cosheaves on $X$ as functor categories</h1>\n<p>Let $\\mathscr{C}$ be a category. Define</p>\n<ul>\n<li>the <strong>category of $\\mathscr{C}$-valued sheaves on $X$</strong>, $\\Sh(X,\\mathscr{C}) :=\n  \\underline{\\mathrm{Fun}}(]X[,\\mathscr{C})$;</li>\n<li>the <strong>category of $\\mathscr{C}$-valued cosheaves on $X$</strong>, $\\Cosh(X,\\mathscr{C}) :=\n  \\underline{\\mathrm{Fun}}([X],\\mathscr{C})$.</li>\n</ul>\n<p>A cosheaf is also called a (combinatorial) <strong>coefficient system</strong> in the\nliterature.</p>\n<p><strong>Stalk notation.</strong> For a sheaf or cosheaf $V$ and $x \\in |X|$ lying in the\nopen cell $E$, set $V_x := V(E)$. We routinely specify $V$ via the function\n$x \\mapsto V_x$ (constant along each open cell) together with the restriction\nmaps $V(a)$ for face morphisms $a$.</p>\n<p><strong>Topological comparison.</strong> When $\\mathscr{C}$ is the category of sets,\nabelian groups, or $R$-modules, $\\underline{\\mathrm{Fun}}(]X[,\\mathscr{C})$ is\nequivalent to the category of $\\mathscr{C}$-valued sheaves $V'$ on $|X|$ that\nare constant on each open cell. The corresponding topological sheaf is\ndenoted $|F|$.</p>\n<blockquote>\n<p><strong>Lemma.</strong> With $\\mathscr{C} \\in \\{\\text{Sets, Grp, Ab, $R$-Mod}\\}$ and $F$\na $\\mathscr{C}$-valued sheaf on $X$, the topological sheaf $|F|$ is <em>locally\nconstant</em> iff $F(a)$ is an isomorphism for every morphism $a$ in $]X[$.</p>\n</blockquote>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.category_jXk",
+      "title": "The cell categories ]X[ and [X]",
+      "href": "cellular_categories/cellular_categories_category_jXk.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.Sheaf",
+      "display_name": "SheafOnBuilding.Sheaf",
+      "qualified_name": "SheafOnBuilding.Sheaf",
+      "module": "SheafOnBuilding.SheafCosheaf",
+      "kind": "abbrev",
+      "signature": "abbrev Sheaf (C : Type*) [Category C] : Type _",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/SheafCosheaf.lean#L67",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.Cosheaf",
+      "display_name": "SheafOnBuilding.Cosheaf",
+      "qualified_name": "SheafOnBuilding.Cosheaf",
+      "module": "SheafOnBuilding.SheafCosheaf",
+      "kind": "abbrev",
+      "signature": "abbrev Cosheaf (C : Type*) [Category C] : Type _",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/SheafCosheaf.lean#L76",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.SheafCosheaf",
+      "display_name": "SheafOnBuilding.SheafCosheaf",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/SheafCosheaf.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

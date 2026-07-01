@@ -1,0 +1,39 @@
+{
+  "id": "depth_zero_reduction.kappa_dual_coeff",
+  "title": "Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_kappa_dual_coeff.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>Dual coefficient system $\\mathcal{F} \\mapsto \\kappa_\\mathcal{F}^*$</h1>\n<p>Goal: turn the abstract hypothesis (E3) into a geometric structure on\n$\\BSigma$.</p>\n<h2>Setup</h2>\n<p>For two facets with $\\mathcal{E} \\subseteq \\overline{\\mathcal{F}}$, (E3)\ngives the isomorphism\n$$\\iota_{\\mathcal{F}, \\mathcal{E}} : \\cInd_{\\hat K_\\mathcal{F}}^{\\hat K_\\mathcal{F} K_{\\mathcal{E}, 0+}} \\kappa_\\mathcal{F}\n  \\;\\xrightarrow{\\;\\cong\\;}\\; \\kappa_\\mathcal{E}|_{\\hat K_\\mathcal{F} K_{\\mathcal{E}, 0+}},$$\nrealized as\n$$\\iota_{\\mathcal{F}, \\mathcal{E}}(f) = \\sum_{[g] \\in \\hat K_\\mathcal{F} K_{\\mathcal{E}, 0+} / \\hat K_\\mathcal{F}}\n  g \\cdot r^\\mathcal{F}_\\mathcal{E}(f(g)).$$</p>\n<p>In the standard \"functions on $B$ with $f(ba) = a^{-1} f(b)$\" realization\nof $\\cInd$, we have $\\mathrm{proj}_e \\circ i_e = \\id$. Define\n$$\\mathrm{proj}_{\\mathcal{E}, \\mathcal{F}} := \\mathrm{proj}_e \\circ \\iota_{\\mathcal{F}, \\mathcal{E}}^{-1}\n  : \\kappa_\\mathcal{E} \\to \\kappa_\\mathcal{F}.$$</p>\n<p>Key property: $\\mathrm{proj}<em>{\\mathcal{E}, \\mathcal{F}} \\circ r^\\mathcal{F}</em>\\mathcal{E}\n= \\id_{\\kappa_\\mathcal{F}}$. Its kernel is\n$\\sum_{[g] \\ne [e]} g \\cdot \\mathrm{Im}(r^\\mathcal{F}_\\mathcal{E})$ in the\ndecomposition $\\kappa_\\mathcal{E} = \\bigoplus_{[g]} g \\cdot \\mathrm{Im}(r^\\mathcal{F}_\\mathcal{E})$.</p>\n<h2>The theorem</h2>\n<blockquote>\n<p><strong>Theorem (Sheaf7 §8).</strong> The assignment\n$\\mathcal{F} \\mapsto \\kappa_\\mathcal{F}^*$ with transition map\n$(r^<em>)<em>{\\mathcal{F}, \\mathcal{E}} := (\\mathrm{proj}</em>{\\mathcal{E}, \\mathcal{F}})^</em>\n: \\kappa^<em>_\\mathcal{F} \\to \\kappa^</em>_\\mathcal{E}$ for $\\mathcal{E}\n\\subseteq \\overline{\\mathcal{F}}$ defines a $G$-equivariant coefficient\nsystem of $R$-modules on $\\BSigma$.</p>\n</blockquote>",
+  "proof_html": "<p>Functoriality reduces to\n$\\mathrm{proj}<em>{\\mathcal{E}, \\mathcal{F}} \\circ \\mathrm{proj}</em>{\\mathcal{D}, \\mathcal{E}}\n= \\mathrm{proj}_{\\mathcal{D}, \\mathcal{F}}$ for $\\mathcal{D} \\le \\mathcal{E}\n\\le \\mathcal{F}$. Since each projection is characterized by its kernel,\nthis follows from the fibration\n$$K_{\\mathcal{E}, 0+} / (K_{\\mathcal{F}, 0+} \\cap K_{\\mathcal{E}, 0+})\n  \\hookrightarrow K_{\\mathcal{F}, 0+} K_{\\mathcal{D}, 0+} / K_{\\mathcal{F}, 0+}\n  \\twoheadrightarrow K_{\\mathcal{E}, 0+} K_{\\mathcal{D}, 0+} / K_{\\mathcal{E}, 0+}.$$\nThe $G$-action is $r_{g, \\mathcal{F}} \\circ c(g)$. $\\square$</p>",
+  "deps": [
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    },
+    {
+      "id": "depth_zero_reduction.E2_construction",
+      "title": "Construction of the cocycle r_{g, F} in (E2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_E2_construction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_quasi_inverse",
+      "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

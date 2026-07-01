@@ -1,0 +1,59 @@
+{
+  "id": "coefficient_systems.support_in_BSx",
+  "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_support_in_BSx.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Support of $\\phi_x$-isotypic chains</h1>\n<blockquote>\n<p><strong>Lemma.</strong> <em>Assume (T3) and (T4).</em> For $x \\in A$, every element of\n$C_d(\\Phi, V)[\\phi_x]$ has support contained in $\\BSigma_x := K_x \\cdot A$.\nIn particular, $C_d(\\Phi, V)[\\phi_x]$ is a submodule of\n$C_d(\\BSigma_x) \\otimes V$.</p>\n<p><strong>Hypothesis tightness.</strong> Only (T3) ($G$-equivariance) and (T4)\n(intertwiner) are used. (T1), (T2), (T5) and any of (K·) play no\nrole in this lemma.</p>\n</blockquote>",
+  "proof_html": "<p>Recall the explicit chain-complex form\n(<a class=\"node-ref\" data-node-id=\"coefficient_systems.chain_complex_phi\" href=\"coefficient_systems_chain_complex_phi.html\">Chain complex C_•(Φ, V) of φ-isotypic chains</a>):\n$$C_d(\\Phi, V) \\;=\\; \\bigoplus_{\\mathcal F \\in [\\![\\BSigma]\\!]_d}\n   \\mathcal F \\otimes V[\\phi_{\\mathcal F}].$$\nProjecting to the $\\phi_x$-isotypic component for the action of\n$K_{x,+}$ at the stalk gives\n$$C_d(\\Phi, V)[\\phi_x] \\;=\\; \\bigoplus_{\\mathcal F \\in [\\![\\BSigma]\\!]_d}\n   \\mathcal F \\otimes \\bigl(V[\\phi_{\\mathcal F}] \\cap V[\\phi_x]\\bigr).$$\nSo a $d$-cell $\\mathcal F$ contributes a non-zero term to\n$C_d(\\Phi, V)[\\phi_x]$ only when $V[\\phi_{\\mathcal F}] \\cap V[\\phi_x]\n\\ne 0$, i.e.\\ when there is a non-zero vector simultaneously\n$\\phi_{\\mathcal F}$-isotypic for $K_{\\mathcal F, +}$ and\n$\\phi_x$-isotypic for $K_{x,+}$. The vector lies in\n$V[\\phi_x|<em>{K</em>{\\mathcal F, +} \\cap K_{x,+}}]\n= V[\\phi_{\\mathcal F}|<em>{K</em>{\\mathcal F, +} \\cap K_{x,+}}]$, so\n$$\\Hom_{K_{\\mathcal F, +} \\cap K_{x,+}}\\bigl(\\phi_{\\mathcal F},\\, \\phi_x\\bigr) \\ne 0. \\tag{$\\ast$}$$</p>\n<p><strong>Apply (T4).</strong> Write $\\mathcal F = g\\mathcal F_0$ for some\n$\\mathcal F_0 \\in [\\![A]\\!]_d$ and $g \\in G$. Then $K_{\\mathcal F, +} = {}^g K_{\\mathcal F_0, +}$\nand $\\phi_{\\mathcal F} = {}^g \\phi_{\\mathcal F_0}$ by (T3), so $(\\ast)$ becomes\n$\\Hom_{{}^g K_{\\mathcal F_0, +} \\cap K_{x,+}}({}^g \\phi_{\\mathcal F_0},\\, \\phi_x) \\ne 0$.\nBy the intertwiner axiom (T4)\n([[node:coefficient_systems.semisimple_character_T_axioms]]),\n$$g \\in K_x \\cdot M \\cdot K_{\\mathcal F_0}\n   \\;\\Longrightarrow\\; g \\mathcal F_0 \\in K_x \\cdot \\mathcal B(M).$$</p>\n<p><strong>Conclude.</strong> By <a class=\"node-ref\" data-node-id=\"building.bs_subset_x\" href=\"../building/building_bs_subset_x.html\">The K_x-orbit subset B(Σ)_x := K_x · A</a>,\n$\\BSigma_x = K_x \\cdot A = K_x \\cdot \\mathcal B(M)$ as subsets of $\\BSigma$\n(the apartment $A$ equals $\\mathcal B(M)$ embedded via the canonical\n$M = G^{(0)}$-action). Hence $\\mathcal F = g\\mathcal F_0 \\in K_x \\cdot\n\\mathcal B(M) = \\BSigma_x$, and every non-trivial summand of\n$C_d(\\Phi, V)[\\phi_x]$ has its underlying cell in $\\BSigma_x$. $\\square$</p>\n<blockquote>\n<p><strong>Remark (where (T4) really matters).</strong> It is exactly (T4) — the\nintertwiner hypothesis on $\\Phi$ — that forces the support to lie in\nthe $K_x$-translate of the apartment. Without (T4), the\n$\\phi_x$-isotypic subspace could pick up contributions from $G$-translates\nof $A$ unrelated to $K_x$, and the geometric structure of the §7.2\nargument (in particular the apartment-reduction of cartesian unit-iso)\nwould collapse. After Fintzen 2021, the corrected formulation of (T4)\nfor tame data is in [Dat–Fintzen 2026 §2]; the proof here works\nverbatim under that corrected form.</p>\n</blockquote>\n<p>This support lemma is the geometric prerequisite for the contraction\nextension acting on $C_d(\\Phi, V)[\\phi_x]$ — see\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.contraction_on_phi_x_chain\" href=\"coefficient_systems_contraction_on_phi_x_chain.html\">Contraction c on C_d(Φ, V)[φ_x]</a>.</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.chain_complex_phi",
+      "title": "Chain complex C_•(Φ, V) of φ-isotypic chains",
+      "href": "coefficient_systems/coefficient_systems_chain_complex_phi.html"
+    },
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    },
+    {
+      "id": "building.bs_subset_x",
+      "title": "The K_x-orbit subset B(Σ)_x := K_x · A",
+      "href": "building/building_bs_subset_x.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.acyclicity_phi_x_chain",
+      "title": "Acyclicity of C_d(Φ, V)[φ_x] for vertices x",
+      "href": "coefficient_systems/coefficient_systems_acyclicity_phi_x_chain.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_unit_iso_assembly",
+      "title": "Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity",
+      "href": "coefficient_systems/coefficient_systems_cartesian_unit_iso_assembly.html"
+    },
+    {
+      "id": "coefficient_systems.contraction_on_phi_x_chain",
+      "title": "Contraction c on C_d(Φ, V)[φ_x]",
+      "href": "coefficient_systems/coefficient_systems_contraction_on_phi_x_chain.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

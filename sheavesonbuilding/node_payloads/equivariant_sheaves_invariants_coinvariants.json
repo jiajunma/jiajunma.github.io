@@ -1,0 +1,28 @@
+{
+  "id": "equivariant_sheaves.invariants_coinvariants",
+  "title": "Invariants and coinvariants of G-equivariant (co)sheaves",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "equivariant_sheaves/equivariant_sheaves_invariants_coinvariants.html",
+  "primary_topic": "equivariant_sheaves",
+  "topics": [
+    "equivariant_sheaves"
+  ],
+  "body_html": "<h1>Invariants and coinvariants of $G$-equivariant (co)sheaves</h1>\n<p>Let $G$ act cellularly on $X$, $\\mathscr{V} \\in \\Cosh_G(X, R)$, and let\n$K$ (resp.\\ $K^+$) be a cosheaf (resp.\\ sheaf) of subgroups of $G$ with\n$K_x \\subseteq \\Fix_G(x)$ (resp.\\ $K_{x,+} \\subseteq \\Fix_G(x)$) for every $x$.</p>\n<blockquote>\n<p><strong>Lemma.</strong> Both\n$$E \\mapsto (\\mathscr{V}_E)_{K_E}, \\qquad E \\mapsto (\\mathscr{V}_E)^{K_E^+}$$\nare objects of $\\Cosh_G(X, R)$.</p>\n</blockquote>\n<p>Dually, for $\\mathscr{V} \\in \\Sh_G(X, R)$,\n$$E \\mapsto (\\mathscr{V}_E)^{K_E}, \\qquad E \\mapsto (\\mathscr{V}_E)_{K_E^+}$$\nare objects of $\\Sh_G(X, R)$.</p>\n<p>The restriction and equivariance maps descend functorially because\n$K_E \\trianglelefteq \\Fix_G(E)$ and $r^\\mathscr{V}_{E,E'}$ is\n$\\Fix_G(E)$-equivariant on stalks. These constructions are the source of\nthe \"type-isotypic\" cosheaves $\\mathscr{V}[\\phi]$ used in\n<a class=\"node-ref\" data-node-id=\"representations.rep_phi\" href=\"../representations/representations_rep_phi.html\">The subcategory Rep_φ(G)</a> and\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.coeff_phi\" href=\"../coefficient_systems/coefficient_systems_coeff_phi.html\">Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.sheaf_of_subgroups",
+      "title": "G-equivariant (co)sheaf of subgroups and characters",
+      "href": "cellular_categories/cellular_categories_sheaf_of_subgroups.html"
+    },
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

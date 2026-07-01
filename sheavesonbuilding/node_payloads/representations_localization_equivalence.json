@@ -1,0 +1,39 @@
+{
+  "id": "representations.localization_equivalence",
+  "title": "Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "representations/representations_localization_equivalence.html",
+  "primary_topic": "representations",
+  "topics": [
+    "representations"
+  ],
+  "body_html": "<h1>Localization equivalence</h1>\n<blockquote>\n<p><strong>Corollary.</strong> Suppose the counit\n$H_0(C_\\bullet(\\Loc_\\phi V)) \\to V$ of the adjunction\n[[node:representations.h0_C_dot_adjoint]] is an isomorphism for every\n$V \\in \\Rep_\\phi(G)$. Then the induced functor\n$$H_0 \\circ C_\\bullet \\;:\\; \\Cosh_G(X, R, \\phi)[\\Sigma^{-1}] \\;\\xrightarrow{\\;\\sim\\;}\\; \\Rep_\\phi(G)$$\nis an equivalence, where $\\Sigma$ is the class of morphisms $\\alpha$ in\n$\\Cosh_G(X, R, \\phi)$ for which $H_0 \\circ C_\\bullet(\\alpha)$ is an\nisomorphism.</p>\n</blockquote>",
+  "proof_html": "<p>This is [Gabriel–Zisman, §1.3] applied to the adjunction. The\nquasi-inverse is induced by $\\Loc_\\phi$. $\\square$</p>\n<p>This corollary is the schematic model for the\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.localized_equivalence\" href=\"../coefficient_systems/coefficient_systems_localized_equivalence.html\">fully fledged equivalence</a>\n$\\Coeff_G(\\BSigma, \\Phi)[E_\\Phi^{-1}] \\simeq \\Rep_\\Phi(G)$ proved in §7.4\nonce the counit-isomorphism hypothesis is verified via the resolution\ntheorem <a class=\"node-ref\" data-node-id=\"coefficient_systems.resolution_theorem\" href=\"../coefficient_systems/coefficient_systems_resolution_theorem.html\">Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)</a>.</p>",
+  "deps": [
+    {
+      "id": "representations.h0_C_dot_adjoint",
+      "title": "H₀ ∘ C_• ⊣ Loc_φ adjunction (§3 Prop)",
+      "href": "representations/representations_h0_C_dot_adjoint.html"
+    },
+    {
+      "id": "coefficient_systems.localized_equivalence",
+      "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+      "href": "coefficient_systems/coefficient_systems_localized_equivalence.html"
+    },
+    {
+      "id": "coefficient_systems.resolution_theorem",
+      "title": "Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)",
+      "href": "coefficient_systems/coefficient_systems_resolution_theorem.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

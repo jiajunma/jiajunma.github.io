@@ -1,0 +1,64 @@
+{
+  "id": "depth_zero_reduction.hypothesis_E",
+  "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+  "kind": "definition",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>Hypothesis (E) on extensions $\\kappa$</h1>\n<p>Assume $\\Phi = (\\mathscr{K}_+, \\phi)$ as in\n[[node:coefficient_systems.semisimple_character_T_axioms]]. We further fix\na family $\\{\\kappa_\\mathcal{F}\\}$ of representations indexed by facets of\n$\\BSigma$ and require:</p>\n<blockquote>\n<p><strong>(E1)</strong> $\\kappa_\\mathcal{F}$ is an irreducible representation of\n$\\hat K_\\mathcal{F}$ such that $\\kappa_\\mathcal{F}|_{K_{\\mathcal{F}, 0+}}$\nis an irreducible $K_{\\mathcal{F}, 0+}$-representation that is\n$\\phi_\\mathcal{F}$-isotypic as a $K_{\\mathcal{F}, +}$-representation.</p>\n<p><strong>(E2)</strong> There exist coherent isomorphisms $r_{g, \\mathcal{F}} :\n{}^g \\kappa_\\mathcal{F} \\to \\kappa_{g\\mathcal{F}}$ for $g \\in G$, with\n$r_{g, h\\mathcal{F}} \\circ r_{h, \\mathcal{F}} = r_{gh, \\mathcal{F}}$.</p>\n<p><strong>(E3)</strong> Induction-compatibility: for $\\mathcal{E} \\subseteq\n\\overline{\\mathcal{F}}$,\n$$\\kappa_\\mathcal{E}|_{\\hat K_\\mathcal{F} K_{\\mathcal{E}, 0+}}\n&gt;  \\;\\cong\\; \\cInd_{\\hat K_\\mathcal{F}}^{\\hat K_\\mathcal{F} K_{\\mathcal{E}, 0+}} \\kappa_\\mathcal{F}.$$</p>\n<p><strong>(E4)</strong> For a vertex $x \\in \\mathcal{B}(M)$ and a facet $\\mathcal{F}$ in\n$\\mathcal{B}(M)$, the space\n$\\Hom_{J_x \\cap J_\\mathcal{F}}(\\kappa_x, \\kappa_\\mathcal{F})$ is\none-dimensional and $M_x \\cap M_\\mathcal{F}$ acts on it trivially.</p>\n</blockquote>\n<p>(E1)–(E4) say that the $\\phi$-isotypic types extend coherently to a\n$G$-equivariant <strong>coefficient system</strong> $\\mathcal{F} \\mapsto \\kappa_\\mathcal{F}$\nwith all the right intertwining properties.</p>\n<p>In §8 these hypotheses are <em>geometrized</em> — (E3) becomes the existence of\nrestriction maps $\\mathrm{proj}_{\\mathcal{E}, \\mathcal{F}}$ between the dual\ncoefficient system $\\kappa^*$ (see\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.kappa_dual_coeff\" href=\"depth_zero_reduction_kappa_dual_coeff.html\">Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))</a>), and (E4) becomes the\nintertwiner space coefficient system $\\mathscr{R}_{x, \\bullet}$ on\n$\\mathcal{B}(M)$ (see [[node:depth_zero_reduction.R_xF_coeff]]).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.tame_T_axioms",
+      "title": "Hypotheses (T1)–(T5) and (E1)–(E3) for tame types",
+      "href": "applications/applications_tame_T_axioms.html"
+    },
+    {
+      "id": "applications.tame_kappa_intertwiner",
+      "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+      "href": "applications/applications_tame_kappa_intertwiner.html"
+    },
+    {
+      "id": "depth_zero_reduction.E2_construction",
+      "title": "Construction of the cocycle r_{g, F} in (E2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_E2_construction.html"
+    },
+    {
+      "id": "depth_zero_reduction.K4_hypothesis",
+      "title": "Hypothesis (K4): hat-M_F / M_{F,0+} ≅ hat-K_F / K_{F,0+}",
+      "href": "depth_zero_reduction/depth_zero_reduction_K4_hypothesis.html"
+    },
+    {
+      "id": "depth_zero_reduction.R_xF_coeff",
+      "title": "Intertwiner coefficient system 𝒞_{x,F} = Hom(κ_x, κ_F)_{J ∩ J} (geometrization of (E4))",
+      "href": "depth_zero_reduction/depth_zero_reduction_R_xF_coeff.html"
+    },
+    {
+      "id": "depth_zero_reduction.kappa_dual_coeff",
+      "title": "Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))",
+      "href": "depth_zero_reduction/depth_zero_reduction_kappa_dual_coeff.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_quasi_inverse",
+      "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

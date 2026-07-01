@@ -1,0 +1,64 @@
+{
+  "id": "depth_zero_reduction.res_sat_functors",
+  "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+  "kind": "definition",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>Restriction and saturation functors $\\Res$, $\\Sat$</h1>\n<h2>Notation: depth-zero coefficient systems on $\\mathcal B(M)$</h2>\n<p>$\\Coeff_M^0(\\mathcal B(M))$ denotes the full subcategory of\n$M$-equivariant coefficient systems $\\mathscr W$ on $\\mathcal B(M)$\n(in the sense of <a class=\"node-ref\" data-node-id=\"coefficient_systems.coeff_phi\" href=\"../coefficient_systems/coefficient_systems_coeff_phi.html\">Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)</a> specialized to\n$\\Phi = (\\mathscr K_+, \\mathbf 1) = (M_{\\bullet, 0+}, \\mathbf 1)$) on\nthose $\\mathscr W$ such that for every facet $\\mathcal F$ of\n$\\mathcal B(M)$, the parahoric pro-$p$ radical $M_{\\mathcal F, 0+}$\nacts trivially on $\\mathscr W_\\mathcal F$. Equivalently,\n$\\Coeff_M^0(\\mathcal B(M))$ is the depth-zero coefficient-system\ncategory of [Schneider–Stuhler]; it is the target of the\ndepth-zero localization functor for $M$.</p>\n<h2>$\\mathfrak{R}$ on $\\BSigma$</h2>\n<p>For $\\mathscr{V} \\in \\Coeff_G(\\BSigma, \\Phi)$, define\n$$\\mathfrak{R}\\mathscr{V} := (\\kappa^* \\otimes \\mathscr{V})_J,\n  \\qquad (\\mathfrak{R}\\mathscr{V})_\\mathcal{F} := (\\kappa_\\mathcal{F}^* \\otimes \\mathscr{V}_\\mathcal{F})_{J_\\mathcal{F}}.$$\nThe $G$-action on $\\mathfrak{R}\\mathscr{V}_\\mathcal{F}$ sends $T$ to\n$(g^\\mathscr{V}_\\mathcal{F}) \\circ T \\circ (g^\\kappa_\\mathcal{F})^{-1}$;\nrestrictions are the natural projections.</p>\n<h2>Restriction $\\Res$</h2>\n<p>By [[node:coefficient_systems.A_over_K_equivalence]], the natural functor\n$[A/\\mathscr{K}_M] \\to [A/\\mathscr{K}]$ yields\n$\\mathbb{III} : [\\mathcal{B}(M)/M] \\to [\\BSigma / G]$. Set\n$$\\Res(\\mathscr{V}) := \\mathbb{III}^*(\\mathfrak{R}(\\mathscr{V})).$$</p>\n<blockquote>\n<p><strong>Lemma.</strong> $\\Res \\mathscr{V}$ defines a coefficient system on\n$\\mathcal{B}(M)$, and moreover\n$\\Res \\mathscr{V} \\in \\Coeff_M^0(\\mathcal{B}(M))$.</p>\n</blockquote>",
+  "proof_html": "<p>By (E2), $\\mathscr{V}_x|_{M_{x, 0+}}$ is\n$\\kappa_x|_{M_{x, 0+}}$-isotypic, so $M_{x, 0+}$ acts trivially on\n$(\\Res \\mathscr{V})_\\mathcal{F}$. Transitivity of restrictions follows by\ndirect check.</p>\n<h2>Saturation $\\Sat$</h2>\n<p>For $\\mathscr{W} \\in \\Coeff_M^0(\\mathcal{B}(M))$ and a pair $(g, \\mathcal{F})$\nwith $\\mathcal{F}$ in $\\mathcal{B}(M)$, define\n$$\\mathscr{V}_{g, \\mathcal{F}} := {}^g(\\mathscr{W}_\\mathcal{F} \\otimes \\kappa_\\mathcal{F}).$$</p>\n<p>For another pair $(g', \\mathcal{F}')$ with $g \\mathcal{F} = g' \\mathcal{F}'$,\nthere is $n \\in N$ with $n \\mathcal{F} = \\mathcal{F}'$ and a canonical\nisomorphism $\\mathscr{V}_{g, \\mathcal{F}} \\cong \\mathscr{V}_{g', \\mathcal{F}'}$\nusing (K4) (which gives an action of $n^{-1} (g')^{-1} g \\in K_\\mathcal{F}$\non $\\mathscr{W}_\\mathcal{F}$ via $\\hat K_\\mathcal{F}/K_{\\mathcal{F}, 0+}\n\\cong \\hat M_\\mathcal{F}/M_{\\mathcal{F}, 0+}$).</p>\n<p>For each facet $\\mathcal{F}$ in $\\BSigma$, set\n$$(\\Sat \\mathscr{W})_\\mathcal{F} := \\varinjlim_{(g, \\mathcal{F}')} \\mathscr{V}_{g, \\mathcal{F}'},$$\nwhere the colimit is over pairs $(g, \\mathcal{F}')$ with $g \\mathcal{F}' =\n\\mathcal{F}$.</p>\n<p>Restrictions are induced from those of $\\mathscr{W}$ along a witnessing\nchoice of $(g, \\mathcal{F}')$; this is well-defined by the canonical\nisomorphisms.</p>\n<blockquote>\n<p><strong>Lemma.</strong> $\\Sat : \\Coeff_M^0(\\mathcal{B}(M)) \\to \\Coeff_G(\\BSigma, \\Phi)$\nis a functor.</p>\n</blockquote>",
+  "deps": [
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    },
+    {
+      "id": "depth_zero_reduction.kappa_dual_coeff",
+      "title": "Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))",
+      "href": "depth_zero_reduction/depth_zero_reduction_kappa_dual_coeff.html"
+    },
+    {
+      "id": "depth_zero_reduction.K4_hypothesis",
+      "title": "Hypothesis (K4): hat-M_F / M_{F,0+} ≅ hat-K_F / K_{F,0+}",
+      "href": "depth_zero_reduction/depth_zero_reduction_K4_hypothesis.html"
+    },
+    {
+      "id": "coefficient_systems.coeff_phi",
+      "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+      "href": "coefficient_systems/coefficient_systems_coeff_phi.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.M_K_orbit_bijection",
+      "title": "M_{x,0+}\\B(M)_d ↔ K_{x,0+}\\(K_x B(M))_d bijection",
+      "href": "depth_zero_reduction/depth_zero_reduction_M_K_orbit_bijection.html"
+    },
+    {
+      "id": "depth_zero_reduction.chain_complex_iso",
+      "title": "i_x: C_d(B(Σ),𝒱)_x ≅ C_d(B(M),𝒲)_x",
+      "href": "depth_zero_reduction/depth_zero_reduction_chain_complex_iso.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_preserves_E",
+      "title": "Res sends E_Φ to E_M (Prop 8.1)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_preserves_E.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_quasi_inverse",
+      "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html"
+    },
+    {
+      "id": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)",
+      "href": "equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

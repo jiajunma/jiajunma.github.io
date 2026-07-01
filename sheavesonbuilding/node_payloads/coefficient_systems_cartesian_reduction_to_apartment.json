@@ -1,0 +1,79 @@
+{
+  "id": "coefficient_systems.cartesian_reduction_to_apartment",
+  "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Reduction lemma: from $\\BSigma$ to the apartment $A$</h1>\n<h2>Statement</h2>\n<blockquote>\n<p><strong>Lemma (Reduction).</strong> Let $\\mathscr V \\in \\Cosh^{\\mathrm{cart}}_G(\\BSigma, R, \\phi)$.\nThe unit map\n$$\\mathrm{unit}_\\mathscr V : \\mathscr V \\;\\longrightarrow\\; \\Loc_\\phi\\bigl(H_0(\\BSigma, \\mathscr V)\\bigr)$$\nis an isomorphism in $\\Coeff_G(\\BSigma, \\Phi)$ if and only if\n$(\\mathrm{unit}_\\mathscr V)_\\mathcal F$ is an $R$-module isomorphism for\n<strong>every facet $\\mathcal F \\subseteq A$</strong>.</p>\n</blockquote>\n<p>Equivalently (via (T1)): the condition is that\n$(\\mathrm{unit})_x : \\mathscr V_x \\to e_x H_0(\\BSigma, \\mathscr V)$ is an\niso for every point $x \\in A$. Either formulation suffices.</p>",
+  "proof_html": "<p>A morphism in $\\Coeff_G(\\BSigma, \\Phi)$ is an isomorphism iff it is an\n$R$-module isomorphism on every facet (this is just the definition of\nisomorphism in a functor category — the values are the $\\mathscr V_\\mathcal F$,\nand structure maps invertibility is checked stalkwise). So the question\nreduces to: for which facets $\\mathcal F \\in \\BSigma$ does $(\\mathrm{unit})_\\mathcal F$\nneed to be checked?</p>\n<p>We claim: it is enough to check on facets contained in the apartment $A$.</p>\n<h3>(a) $G$-orbit reduction</h3>\n<p>Both source and target of $\\mathrm{unit}_\\mathscr V$ are $G$-equivariant\n(this is just (EC3) and the $G$-equivariance of $H_0$). Thus if\n$\\mathcal F' = g \\mathcal F$ for some $g \\in G$, then $(\\mathrm{unit})_{\\mathcal F'}$ is\nobtained from $(\\mathrm{unit})_\\mathcal F$ by the action of $g$ on both\nsides, and hence one is iso iff the other is.</p>\n<p>Concretely: the diagram\n$$\\begin{array}{ccc}\n  \\mathscr V_\\mathcal F &amp; \\xrightarrow{(\\mathrm{unit})_\\mathcal F} &amp; e_\\mathcal F H_0(\\BSigma, \\mathscr V) \\\\\n  \\;\\;\\downarrow g_\\mathcal F^\\mathscr V &amp; &amp; \\;\\;\\downarrow g \\\\\n  \\mathscr V_{g\\mathcal F} &amp; \\xrightarrow{(\\mathrm{unit})_{g\\mathcal F}} &amp; e_{g\\mathcal F} H_0(\\BSigma, \\mathscr V)\n\\end{array}$$\ncommutes, with both vertical arrows isomorphisms (by (EC3) and the\n$G$-action on $H_0$, using (iv) of\n[[node:coefficient_systems.idempotent_system_from_T_axioms]] for the\nright column: $e_{g\\mathcal F} = g e_\\mathcal F g^{-1}$).</p>\n<p>So $(\\mathrm{unit})_\\mathcal F$ being iso transports along $G$-orbits.</p>\n<h3>(b) Every $G$-orbit meets $A$</h3>\n<p>By [[node:coefficient_systems.A_over_K_equivalence]] (the §7.3 equivalence\n$[A/\\mathscr K] \\xrightarrow{\\sim} [\\BSigma/G]$), the inclusion of facets\nof $A$ into facets of $\\BSigma$ induces a bijection between $N$-orbits in\n$[\\![A]\\!]$ and $G$-orbits in $[\\![\\BSigma]\\!]$. In particular, every\n$G$-orbit of facets in $\\BSigma$ has a representative inside $A$.</p>\n<p>Combining (a) and (b): checking $(\\mathrm{unit})_\\mathcal F$ for all\n$\\mathcal F \\in \\BSigma$ reduces to checking it for $\\mathcal F \\subseteq A$.</p>\n<p>This proves the \"iff\" of the lemma. $\\square$</p>\n<h2>Remark — what the reduction does <em>not</em> require</h2>\n<p>Note we have not used:</p>\n<ul>\n<li>The Bestvina–Savin contraction\n  (<a class=\"node-ref\" data-node-id=\"building.contraction_map_apartment\" href=\"../building/building_contraction_map_apartment.html\">Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)</a>) — that is used only in\n  the §7.1 resolution theorem and in the subsequent local-map argument,\n  not in this reduction.</li>\n<li>(F5)–(F6) — the alcove-level structure. We stop at the apartment.</li>\n<li>The cartesian condition itself — the reduction lemma is purely about\n  $G$-equivariance and the apartment being a QFD for $G$ acting on\n  $\\BSigma$. The cartesian condition only enters in the <em>next</em> step,\n  where we evaluate $(\\mathrm{unit})_\\mathcal F$ at facets $\\mathcal F \\subseteq A$.</li>\n</ul>\n<h2>Localization at a chosen point (preparation for §7.2.5)</h2>\n<p>For the subsequent unit-iso proof, it is useful to also localize the\nchain complex $C_\\bullet(\\BSigma, \\mathscr V)$ around a chosen point. The\nfollowing companion observation, used in <a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents\" href=\"cartesian_cosheaves/plan/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html\">Proof plan: Cartesian unit-iso via apartment-level system of idempotents</a>\nstep (d), is independent of the reduction lemma above but worth\nrecording here.</p>\n<blockquote>\n<p><strong>Companion lemma.</strong> For any $x \\in \\BSigma$ with $\\mathcal F = \\mathcal F_x$,\n$$e_\\mathcal F \\cdot C_d(\\BSigma, \\mathscr V) \\;\\subseteq\\; C_d(\\BSigma_x, \\mathscr V)$$\nwhere $\\BSigma_x := K_x \\cdot A = \\hat K_x \\cdot A$. Consequently\n$$e_\\mathcal F \\cdot H_0(\\BSigma, \\mathscr V) = e_\\mathcal F \\cdot H_0(\\BSigma_x, \\mathscr V|_{\\BSigma_x}).$$</p>\n</blockquote>\n<p>This is [[node:coefficient_systems.support_in_BSx]] specialized to the\nfacet level. Combined with the reduction lemma, it means the entire\nunit-iso computation lives on $\\BSigma_x = \\hat K_x A$ — a much smaller\ngeometric object than $\\BSigma$, and one fully determined by data on the\napartment $A$ plus the $\\hat K_x$-action.</p>\n<h2>Step in the broader proof</h2>\n<p>This lemma is <strong>Step 1</strong> of the §7.2 cartesian unit-iso proof\n(<a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents\" href=\"cartesian_cosheaves/plan/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html\">Proof plan: Cartesian unit-iso via apartment-level system of idempotents</a>).\nAfter this reduction:</p>\n<ol>\n<li>Step 2: extract abstract idempotent system properties (i)-(v) from\n   (T1)-(T5) — done in\n   [[node:coefficient_systems.idempotent_system_from_T_axioms]].</li>\n<li>Step 3: define local maps $\\varepsilon^\\tau_\\sigma$ along taut paths\n   in $A$ — done in <a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_local_maps\" href=\"coefficient_systems_cartesian_local_maps.html\">Local maps ε^τ_σ along taut paths in the apartment</a>.</li>\n<li>Step 4: prove $\\varepsilon^\\tau_\\sigma$ is well-defined (path-independent)\n   — done (Cases C, D) in <a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_local_maps\" href=\"coefficient_systems_cartesian_local_maps.html\">Local maps ε^τ_σ along taut paths in the apartment</a>.</li>\n<li>Step 5: assemble unit-iso using (i)-(v) and the local maps — done\n   via <a class=\"node-ref\" data-node-id=\"coefficient_systems.lanard_49_analogue\" href=\"coefficient_systems_lanard_49_analogue.html\">Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets</a> and\n   <a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_unit_iso_assembly\" href=\"coefficient_systems_cartesian_unit_iso_assembly.html\">Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity</a>.</li>\n</ol>",
+  "deps": [
+    {
+      "id": "coefficient_systems.A_over_K_equivalence",
+      "title": "Equivalence [A/𝒦] ≃ [B(Σ)/G] (RES theorem)",
+      "href": "coefficient_systems/coefficient_systems_A_over_K_equivalence.html"
+    },
+    {
+      "id": "coefficient_systems.support_in_BSx",
+      "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+      "href": "coefficient_systems/coefficient_systems_support_in_BSx.html"
+    },
+    {
+      "id": "coefficient_systems.coeff_phi",
+      "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+      "href": "coefficient_systems/coefficient_systems_coeff_phi.html"
+    },
+    {
+      "id": "representations.loc_phi_functor",
+      "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+      "href": "representations/representations_loc_phi_functor.html"
+    },
+    {
+      "id": "building.bs_subset_x",
+      "title": "The K_x-orbit subset B(Σ)_x := K_x · A",
+      "href": "building/building_bs_subset_x.html"
+    },
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    },
+    {
+      "id": "coefficient_systems.idempotent_system_from_T_axioms",
+      "title": "Idempotent system extracted from (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_idempotent_system_from_T_axioms.html"
+    },
+    {
+      "id": "building.contraction_map_apartment",
+      "title": "Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)",
+      "href": "building/building_contraction_map_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_local_maps",
+      "title": "Local maps ε^τ_σ along taut paths in the apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_local_maps.html"
+    },
+    {
+      "id": "coefficient_systems.lanard_49_analogue",
+      "title": "Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets",
+      "href": "coefficient_systems/coefficient_systems_lanard_49_analogue.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.cartesian_cosheaves",
+      "title": "Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_unit_iso_assembly",
+      "title": "Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity",
+      "href": "coefficient_systems/coefficient_systems_cartesian_unit_iso_assembly.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

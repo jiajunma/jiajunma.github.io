@@ -1,0 +1,89 @@
+{
+  "id": "coefficient_systems.semisimple_character_T_axioms",
+  "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Compatible system of semisimple characters $\\Phi$</h1>\n<p>Setting: $\\BSigma$ is a generalized building (see\n<a class=\"node-ref\" data-node-id=\"building.generalized_building_bs\" href=\"../building/building_generalized_building_bs.html\">Generalized building B(Σ) = G ×^K A</a>) satisfying (K1)–(K3), (F1)–(F2),\n(F3)–(F5).</p>\n<p>A <strong>compatible system of semisimple characters</strong> is a pair\n$\\Phi = (\\mathscr{K}_+, \\phi)$ where, for each $x \\in \\BSigma$,\n$\\mathscr{K}_{+, x} = K_{x,+}$ is an open subgroup of $\\hat K_x = \\Fix_G(x)$\nand $\\phi_x : K_{x,+} \\to R^\\times$ is a character. We write\n$\\phi_\\mathcal{F} := \\phi_x$ for any $x \\in \\mathcal{F}$ (by axiom (T1)).</p>\n<h2>Hypothesis (Type)</h2>\n<blockquote>\n<p><strong>(T1)</strong> $\\mathscr{K}_+$ and $\\phi$ are constant on each facet of\n$\\BSigma$.</p>\n<p><strong>(T2)</strong> $K_{\\mathcal{E},+} \\subseteq K_{\\mathcal{F},+}$ and\n$\\phi_\\mathcal{E} = \\phi_\\mathcal{F}|_{K_{\\mathcal{E},+}}$ for\n$\\mathcal{E} \\subseteq \\overline{\\mathcal{F}}$ — i.e. $\\mathscr{K}_+$ is a\n<em>sheaf</em> of subgroups and $\\phi$ is a sheaf of characters.</p>\n<p><strong>(T3)</strong> $G$-equivariance: $K_{gx,+} = {}^g K_{x,+}$ and $\\phi_{gx} =\n{}^g \\phi_x$.</p>\n<p><strong>(T4)</strong> Intertwining: for $x, y \\in A$ and $g \\in G$,\n$$\\Hom_{{}^g K_{y,+} \\cap K_{x,+}}({}^g \\phi_y, \\phi_x) \\ne 0\n&gt;   \\;\\Longleftrightarrow\\; g \\in K_x M K_y\n&gt;   \\;\\Longrightarrow\\; gy \\in K_x \\mathcal{B}(M).$$</p>\n<p><strong>(T5)</strong> Geodesic factorization: for $z \\in [x, y]$,\n$$K_{z,+} = (K_{x,+} \\cap K_{z,+})(K_{y,+} \\cap K_{z,+}).$$</p>\n</blockquote>\n<p>(T4) and (T5) are the deep input axioms. They are verified for\nclassical groups (see [[node:applications.classical_T_axioms]]) and for\ntame types (see [[node:applications.tame_T_axioms]]).</p>\n<h2>Consequence of (T4) used in §7.2: the character-agreement statement</h2>\n<blockquote>\n<p><strong>(T4b) — character agreement.</strong> For any $x, y \\in A$, the characters\n$\\phi_x$ and $\\phi_y$ agree on $K_{x,+} \\cap K_{y,+}$.</p>\n</blockquote>",
+  "proof_html": "<p>Apply (T4) with $g = e$. The right-hand side becomes\n$e \\in K_x M K_y$, which is true (always). Hence the left-hand side\nforces $\\Hom_{K_{x,+} \\cap K_{y,+}}(\\phi_y, \\phi_x) \\neq 0$. Both sides\nof the Hom are 1-dimensional characters of $K_{x,+} \\cap K_{y,+}$;\nnon-orthogonality of two characters is equivalent to equality (a\ncharacter of $H$ either equals another character of $H$ or is\northogonal to it in $\\Hom_H$, the latter by Schur). So\n$\\phi_x|_{K_{x,+} \\cap K_{y,+}} = \\phi_y|_{K_{x,+} \\cap K_{y,+}}$.\n$\\square$</p>\n<p>This is the form of (T4) actually consumed by the unconditional\ngeodesic-telescoping identity (iii) of\n[[node:coefficient_systems.idempotent_system_from_T_axioms]].</p>",
+  "deps": [
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "href": "building/building_generalized_building_bs.html"
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "href": "building/building_K3_hypothesis.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_T_axioms",
+      "title": "Hypotheses (T1)–(T5) for classical groups",
+      "href": "applications/applications_classical_T_axioms.html"
+    },
+    {
+      "id": "applications.tame_T_axioms",
+      "title": "Hypotheses (T1)–(T5) and (E1)–(E3) for tame types",
+      "href": "applications/applications_tame_T_axioms.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves",
+      "title": "Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.chain_complex_phi",
+      "title": "Chain complex C_•(Φ, V) of φ-isotypic chains",
+      "href": "coefficient_systems/coefficient_systems_chain_complex_phi.html"
+    },
+    {
+      "id": "coefficient_systems.coeff_phi",
+      "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+      "href": "coefficient_systems/coefficient_systems_coeff_phi.html"
+    },
+    {
+      "id": "coefficient_systems.idempotent_system_from_T_axioms",
+      "title": "Idempotent system extracted from (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_idempotent_system_from_T_axioms.html"
+    },
+    {
+      "id": "coefficient_systems.lanard_49_analogue",
+      "title": "Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets",
+      "href": "coefficient_systems/coefficient_systems_lanard_49_analogue.html"
+    },
+    {
+      "id": "coefficient_systems.rep_capital_phi",
+      "title": "The subcategory Rep_Φ(G)",
+      "href": "coefficient_systems/coefficient_systems_rep_capital_phi.html"
+    },
+    {
+      "id": "coefficient_systems.support_in_BSx",
+      "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+      "href": "coefficient_systems/coefficient_systems_support_in_BSx.html"
+    },
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

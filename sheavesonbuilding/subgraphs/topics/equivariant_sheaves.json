@@ -1,0 +1,410 @@
+{
+  "topic": {
+    "id": "equivariant_sheaves",
+    "title": "Equivariant Sheaves",
+    "href": "equivariant_sheaves/index.html",
+    "parent": null,
+    "node_count": 9,
+    "descendant_node_count": 9
+  },
+  "counts": {
+    "internal_nodes": 9,
+    "inlined_nodes": 0,
+    "descendant_nodes": 9,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 9,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 5,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 15,
+    "visible_nodes_with_selected_proof_plans": 15
+  },
+  "nodes": [
+    {
+      "id": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html",
+      "payload": "node_payloads/equivariant_sheaves_heisenberg_weil_equivalence.json"
+    },
+    {
+      "id": "equivariant_sheaves.induced_cw_structure",
+      "title": "CW structure and QFD property on G ×^P X' (Prop 2.8)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html",
+      "payload": "node_payloads/equivariant_sheaves_induced_cw_structure.json"
+    },
+    {
+      "id": "equivariant_sheaves.induction_GxP_X",
+      "title": "Induced space G ×^P X' along a cosheaf P",
+      "kind": "definition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html",
+      "payload": "node_payloads/equivariant_sheaves_induction_GxP_X.json"
+    },
+    {
+      "id": "equivariant_sheaves.induction_universal_property",
+      "title": "Universal property of G ×^P X' and induction by stages",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_universal_property.html",
+      "payload": "node_payloads/equivariant_sheaves_induction_universal_property.json"
+    },
+    {
+      "id": "equivariant_sheaves.invariants_coinvariants",
+      "title": "Invariants and coinvariants of G-equivariant (co)sheaves",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_invariants_coinvariants.html",
+      "payload": "node_payloads/equivariant_sheaves_invariants_coinvariants.json"
+    },
+    {
+      "id": "equivariant_sheaves.qfd_orbit_lemma",
+      "title": "QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_qfd_orbit_lemma.html",
+      "payload": "node_payloads/equivariant_sheaves_qfd_orbit_lemma.json"
+    },
+    {
+      "id": "equivariant_sheaves.quasi_fundamental_domain",
+      "title": "Quasi-fundamental domain",
+      "kind": "definition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html",
+      "payload": "node_payloads/equivariant_sheaves_quasi_fundamental_domain.json"
+    },
+    {
+      "id": "equivariant_sheaves.reduction_to_qfd",
+      "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html",
+      "payload": "node_payloads/equivariant_sheaves_reduction_to_qfd.json"
+    },
+    {
+      "id": "equivariant_sheaves.section4_equivalence",
+      "title": "Cosh_G(X,1_Q) ≃ Cosh_{G'}(X',1_{Q'}) under induced structure (Prop 4.1)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_section4_equivalence.html",
+      "payload": "node_payloads/equivariant_sheaves_section4_equivalence.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "equivariant_sheaves.section4_equivalence",
+      "to": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "equivariant_sheaves.induction_universal_property",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_universal_property",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.qfd_orbit_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.qfd_orbit_lemma",
+      "to": "equivariant_sheaves.reduction_to_qfd",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.reduction_to_qfd",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.section4_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.reduction_to_qfd",
+      "to": "equivariant_sheaves.section4_equivalence",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "applications",
+      "title": "Applications",
+      "href": "applications/index.html",
+      "role": "dependent",
+      "node_count": 21
+    },
+    {
+      "id": "building",
+      "title": "Building",
+      "href": "building/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 16
+    },
+    {
+      "id": "cellular_categories",
+      "title": "Cellular Categories",
+      "href": "cellular_categories/index.html",
+      "role": "dependency",
+      "node_count": 7
+    },
+    {
+      "id": "coefficient_systems",
+      "title": "Coefficient Systems",
+      "href": "coefficient_systems/index.html",
+      "role": "dependent",
+      "node_count": 21
+    },
+    {
+      "id": "depth_zero_reduction",
+      "title": "Depth Zero Reduction",
+      "href": "depth_zero_reduction/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 12
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:building",
+      "to": "equivariant_sheaves.induction_universal_property",
+      "kind": "boundary_dependency",
+      "topic": "building",
+      "count": 1
+    },
+    {
+      "from": "topic:cellular_categories",
+      "to": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "topic:cellular_categories",
+      "to": "equivariant_sheaves.induction_GxP_X",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 2
+    },
+    {
+      "from": "topic:cellular_categories",
+      "to": "equivariant_sheaves.invariants_coinvariants",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 2
+    },
+    {
+      "from": "topic:cellular_categories",
+      "to": "equivariant_sheaves.quasi_fundamental_domain",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "topic:cellular_categories",
+      "to": "equivariant_sheaves.reduction_to_qfd",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "topic:depth_zero_reduction",
+      "to": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "kind": "boundary_dependency",
+      "topic": "depth_zero_reduction",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 2
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "topic:building",
+      "kind": "boundary_dependent",
+      "topic": "building",
+      "count": 4
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "topic:building",
+      "kind": "boundary_dependent",
+      "topic": "building",
+      "count": 3
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "topic:building",
+      "kind": "boundary_dependent",
+      "topic": "building",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_dependent",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.reduction_to_qfd",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_dependent",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "to": "topic:depth_zero_reduction",
+      "kind": "boundary_dependent",
+      "topic": "depth_zero_reduction",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.qfd_orbit_lemma",
+      "to": "topic:depth_zero_reduction",
+      "kind": "boundary_dependent",
+      "topic": "depth_zero_reduction",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "topic:building",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "building",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "adjunction",
+      "title": "adjunction",
+      "href": "keywords/adjunction.html",
+      "count": 1
+    },
+    {
+      "id": "coinvariants",
+      "title": "coinvariants",
+      "href": "keywords/coinvariants.html",
+      "count": 1
+    },
+    {
+      "id": "cw-structure",
+      "title": "cw-structure",
+      "href": "keywords/cw-structure.html",
+      "count": 1
+    },
+    {
+      "id": "equivalence",
+      "title": "equivalence",
+      "href": "keywords/equivalence.html",
+      "count": 2
+    },
+    {
+      "id": "equivariance",
+      "title": "equivariance",
+      "href": "keywords/equivariance.html",
+      "count": 1
+    },
+    {
+      "id": "fundamental-domain",
+      "title": "fundamental-domain",
+      "href": "keywords/fundamental-domain.html",
+      "count": 1
+    },
+    {
+      "id": "heisenberg-weil",
+      "title": "heisenberg-weil",
+      "href": "keywords/heisenberg-weil.html",
+      "count": 1
+    },
+    {
+      "id": "induced-space",
+      "title": "induced-space",
+      "href": "keywords/induced-space.html",
+      "count": 1
+    },
+    {
+      "id": "induction",
+      "title": "induction",
+      "href": "keywords/induction.html",
+      "count": 3
+    },
+    {
+      "id": "invariants",
+      "title": "invariants",
+      "href": "keywords/invariants.html",
+      "count": 1
+    },
+    {
+      "id": "orbits",
+      "title": "orbits",
+      "href": "keywords/orbits.html",
+      "count": 1
+    },
+    {
+      "id": "qfd",
+      "title": "qfd",
+      "href": "keywords/qfd.html",
+      "count": 3
+    },
+    {
+      "id": "reduction",
+      "title": "reduction",
+      "href": "keywords/reduction.html",
+      "count": 1
+    },
+    {
+      "id": "trivial-isotypic",
+      "title": "trivial-isotypic",
+      "href": "keywords/trivial-isotypic.html",
+      "count": 1
+    },
+    {
+      "id": "twist",
+      "title": "twist",
+      "href": "keywords/twist.html",
+      "count": 1
+    },
+    {
+      "id": "universal-property",
+      "title": "universal-property",
+      "href": "keywords/universal-property.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

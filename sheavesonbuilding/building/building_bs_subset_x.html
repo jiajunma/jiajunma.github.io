@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The K_x-orbit subset B(Σ)_x := K_x · A — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../keywords/category.html">category</a></li>
+      
+        <li><a href="../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../keywords/external.html">external</a></li>
+      
+        <li><a href="../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../keywords/main.html">main</a></li>
+      
+        <li><a href="../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../keywords/res.html">res</a></li>
+      
+        <li><a href="../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-building-2e-bs_subset_x">
+  <header class="lemma_thmheading thm-heading">
+    <span class="lemma_thmcaption thm-caption">Lemma</span>
+    <span class="lemma_thmtitle thm-title">The K_x-orbit subset B(Σ)_x := K_x · A</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-lemma">lemma</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-building-2e-bs_subset_x">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a></li>
+        
+        <li><a href="building_apartments_in_bsigma.html">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a></li>
+        
+        <li><a href="../equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="lemma_thmcontent thm-content body">
+    <h1>The $K_x$-orbit subset $\BSigma_x := K_x \cdot A$</h1>
+<p>Fix $x \in A$. Define $\hat K_x := \Fix_G(x)$ and
+$$\BSigma_x \;:=\; K_x \cdot A \;\subseteq\; \BSigma.$$</p>
+<blockquote>
+<p><strong>Lemma.</strong> $\BSigma_x = \hat K_x A = K_x M_x A = K_x \mathcal{B}(M) = \hat K_x \mathcal{B}(M)$.</p>
+</blockquote>
+<p>The intermediate $M_x$ and $\mathcal{B}(M)$ refer to a Levi (or analogous)
+subgroup $M$ of $G$ relevant to the application — e.g. in §8 the Levi
+attached to a semisimple character. The role of $M$ is detailed
+separately in <a class="node-ref" data-node-id="building.connected_components.plan.classification" href="connected_components/plan/building_connected_components_plan_classification.html">Plan: identify each connected component of B(Σ) as K_x · A</a>
+task C.7 — TBD.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>of $K_x \cdot A = \hat K_x \cdot A$ (= C.3.3)</p>
+<p>This identifies $K_x \cdot A$ with the union of all apartments of
+$\BSigma$ through $x$ (combining with the geometric meaning of
+$\hat K_x \cdot A$ in <a class="node-ref" data-node-id="building.apartments_in_bsigma" href="building_apartments_in_bsigma.html">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a> Corollary
+C.3.1').</p>
+<p><strong>Inclusion $\subseteq$.</strong> $K_x \subseteq \hat K_x$: every $k \in K_x$
+fixes $x$ in $\BSigma$. Indeed $k \cdot x = [(k, x)]_\sim$ and
+$[(k, x)] = [(1, x)]$ iff $\exists n \in N$ with $n \cdot x = x$ (so
+$n \in \Fix_N(x)$, take $n = e$) and $k n \in K_x$ (i.e.\ $k \in K_x$,
+✓). So $K_x \cdot A \subseteq \hat K_x \cdot A$.</p>
+<p><strong>Inclusion $\supseteq$.</strong> Take $\hat k \in \hat K_x$ and $a \in A$;
+construct $k' \in K_x$, $a' \in A$ with $\hat k \cdot a = k' \cdot a'$
+in $\BSigma$.</p>
+<p>By Sheaf7 Lemma <code>lem:Stab_gx</code> (= [[node:equivariant_sheaves.induction_GxP_X]]):
+$$\hat K_x \;=\; \Fix_G(x) \;=\; \Fix_N(x) \cdot K_x.$$</p>
+<p>So write $\hat k = n k_0$ with $n \in \Fix_N(x)$ and $k_0 \in K_x$.</p>
+<p>Set
+$$k' \;:=\; n k_0 n^{-1}, \qquad a' \;:=\; n \cdot a \;\in\; A.$$</p>
+<ul>
+<li>$k' \in K_x$: by $N$-equivariance of the $K$-cosheaf,
+  $n K_x n^{-1} = K_{nx} = K_x$ (since $n \cdot x = x$). So
+  $n k_0 n^{-1} \in K_x$.</li>
+<li>$a' \in A$: $N$ stabilises $A$ setwise.</li>
+</ul>
+<p>We check $\hat k \cdot a = k' \cdot a'$ in $\BSigma$:
+$$\hat k \cdot a \;=\; [(\hat k, a)]_\sim \;=\; [(n k_0, a)]_\sim,
+\qquad k' \cdot a' \;=\; [(k', a')]_\sim \;=\; [(n k_0 n^{-1}, n a)]_\sim.$$</p>
+<p>We verify the equivalence $(n k_0, a) \sim (n k_0 n^{-1}, n a)$ using
+$m := n \in N$:</p>
+<ul>
+<li>$m \cdot a = n \cdot a = a'$, ✓.</li>
+<li>$(n k_0)^{-1} \cdot (n k_0 n^{-1}) \cdot m
+  = k_0^{-1} n^{-1} \cdot n k_0 n^{-1} \cdot n
+  = k_0^{-1} k_0 n^{-1} n
+  = 1 \in K_a$. ✓</li>
+</ul>
+<p>So $(nk_0, a) \sim (n k_0 n^{-1}, na)$, i.e.\ $\hat k \cdot a = k' \cdot a'$
+in $\BSigma$. Hence $\hat K_x \cdot A \subseteq K_x \cdot A$.</p>
+<p>Combining the two inclusions: $K_x \cdot A = \hat K_x \cdot A$.
+$\square$</p>
+<h2>Geometric meaning</h2>
+<p>Combined with <a class="node-ref" data-node-id="building.apartments_in_bsigma" href="building_apartments_in_bsigma.html">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a> Cor. C.3.1':
+$$\BSigma_x \;=\; K_x \cdot A \;=\; \hat K_x \cdot A
+\;=\; \bigcup_{A' \in \mathrm{Apt}_x} A'
+\;=\; \text{union of all apartments of } \BSigma \text{ through } x.$$</p>
+<p>This is the precise geometric content of "$K_x$-stable neighborhood":
+$\BSigma_x$ is the <strong>closed star of $x$ at the apartment level</strong>.</p>
+<h2>The other equalities $K_x M_x A = K_x \mathcal{B}(M) = \hat K_x \mathcal{B}(M)$</h2>
+<p>These require specifying the Levi $M$ and using the Bruhat–Tits
+building $\mathcal{B}(M)$. The argument is application-dependent (e.g.\ §8
+uses the Levi attached to a semisimple character $\phi$). The
+identifications follow by:</p>
+<ul>
+<li>$M_x A = \mathcal{B}(M)$: standard building axiom for $\mathcal{B}(M)$
+  ($M$-apartments through $x$ cover $\mathcal{B}(M)$).</li>
+<li>$K_x M_x A = K_x \mathcal{B}(M)$: substitution.</li>
+<li>$K_x \mathcal{B}(M) = \hat K_x \mathcal{B}(M)$: same argument as
+  $K_x A = \hat K_x A$ above, with $A$ replaced by $\mathcal{B}(M)$.</li>
+</ul>
+<p>Detailed write-up of these deferred to task C.7
+(<a class="node-ref" data-node-id="building.connected_components.plan.classification" href="connected_components/plan/building_connected_components_plan_classification.html">Plan: identify each connected component of B(Σ) as K_x · A</a>).</p>
+<h2>Downstream uses</h2>
+<p>This $K_x$-stable neighborhood is the home of the contraction extension
+[[node:building.contraction_extension_K3]] and of the supports of the
+$\phi_x$-isotypic chains studied in
+[[node:coefficient_systems.support_in_BSx]].</p>
+<p>Combined with the building axiom (A1) inside a component
+([[node:building.A1_axiom_in_component]]), this gives the main
+geometric identification $C_0 = K_x \cdot A$ in
+[[node:building.component_is_KxA]] (task C.3.4).</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="building_A1_Kx_local_verifications.html">Verifications of K_x-local (A1) for parahoric, classical, and tame cases</a></li>
+      
+      <li><a href="building_Levi_M_in_BSx.html">The Levi M in B(Σ)_x = K_x · B(M)</a></li>
+      
+      <li><a href="building_component_is_KxA.html">Main theorem: each connected component of B(Σ) equals K_x · A</a></li>
+      
+      <li><a href="building_connected_components_plan_classification.html">Plan: identify each connected component of B(Σ) as K_x · A</a></li>
+      
+      <li><a href="building_contraction_extension_K3.html">Equivariant extension of the contraction under (K3)</a></li>
+      
+      <li><a href="../coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html">Proof plan: Cartesian unit-iso via apartment-level system of idempotents</a></li>
+      
+      <li><a href="../coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html">Reduction lemma: cartesian unit-iso check transfers to apartment</a></li>
+      
+      <li><a href="../coefficient_systems/coefficient_systems_cartesian_unit_iso_assembly.html">Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity</a></li>
+      
+      <li><a href="../coefficient_systems/coefficient_systems_support_in_BSx.html">C_d(Φ,V)[φ_x] is supported in B(Σ)_x</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">apartment</span><span class="tag">K-orbit</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

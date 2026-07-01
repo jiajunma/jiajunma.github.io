@@ -1,0 +1,102 @@
+{
+  "id": "equivariant_sheaves.quasi_fundamental_domain",
+  "title": "Quasi-fundamental domain",
+  "kind": "definition",
+  "status": "staged",
+  "href": "equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html",
+  "primary_topic": "equivariant_sheaves",
+  "topics": [
+    "equivariant_sheaves"
+  ],
+  "body_html": "<h1>Quasi-fundamental domain</h1>\n<p>Let $G$ act cellularly on a regular CW complex $X$.</p>\n<p><strong>Definition (fundamental domain).</strong> A subcomplex $X' \\subseteq X$ is a\n<em>fundamental domain</em> for the $G$-action if the natural map\n$[\\![X']\\!] \\to G \\backslash [\\![X]\\!]$ is a bijection.</p>\n<p><strong>Definition (quasi-fundamental domain, QFD).</strong> A subcomplex $X' \\subseteq X$\nis a <em>quasi-fundamental domain</em> for the $G$-action if there exists a\nsubgroup $G' \\le G$ stabilizing $X'$ such that\n$$G' \\backslash [\\![X']\\!] \\;\\xrightarrow{\\;\\sim\\;}\\; G \\backslash [\\![X]\\!]$$\nis a bijection. We then say <em>the $G'$-set $X'$ is a QFD of the $G$-set $X$.</em></p>\n<p>From the definition, $G' \\le \\Stab_G(X')$ and the map factors through\n$G'\\backslash[\\![X']\\!] \\to \\Stab_G(X')\\backslash[\\![X']\\!]$, so we may always\ntake $G' = \\Stab_G(X')$.</p>\n<h2>Canonical examples</h2>\n<p>Each item is a QFD of the preceding one:</p>\n<ol>\n<li><strong>The $G$-set $\\mathcal{B}(G)$</strong>, the extended Bruhat–Tits building of $G$\n   (with a suitable facet structure).</li>\n<li><strong>The $N$-set $A$</strong>, where $N$ is the normalizer of a maximal split torus\n   $S$ of $G$ and $A \\subset \\mathcal{B}(G)$ is the corresponding apartment.</li>\n<li><strong>The $\\Omega$-set $\\bar C$</strong>, where $\\bar C := \\mathrm{pr}^{-1}_{A,A^{\\mathrm{red}}}(\\overline{C'})$\n   is the preimage of a closed alcove $C'$ in the reduced apartment and\n   $\\Omega := \\Stab_N(C')$. Equivalently, $\\bar C$ is a fundamental domain\n   for the (non-extended) affine Weyl group $W^{\\mathrm{aff}}$ acting on $A$.</li>\n</ol>\n<p>The third example is developed further in\n<a class=\"node-ref\" data-node-id=\"applications.qfd_from_alcove\" href=\"../applications/applications_qfd_from_alcove.html\">Quasi-fundamental domain from a closed alcove (App B)</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.cw_complex_setting",
+      "title": "Locally finite regular CW complex with cellular G-action",
+      "href": "cellular_categories/cellular_categories_cw_complex_setting.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.qfd_from_alcove",
+      "title": "Quasi-fundamental domain from a closed alcove (App B)",
+      "href": "applications/applications_qfd_from_alcove.html"
+    },
+    {
+      "id": "building.apartments_in_bsigma",
+      "title": "Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x",
+      "href": "building/building_apartments_in_bsigma.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_local_maps",
+      "title": "Local maps ε^τ_σ along taut paths in the apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_local_maps.html"
+    },
+    {
+      "id": "equivariant_sheaves.induced_cw_structure",
+      "title": "CW structure and QFD property on G ×^P X' (Prop 2.8)",
+      "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html"
+    },
+    {
+      "id": "equivariant_sheaves.qfd_orbit_lemma",
+      "title": "QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E",
+      "href": "equivariant_sheaves/equivariant_sheaves_qfd_orbit_lemma.html"
+    },
+    {
+      "id": "equivariant_sheaves.reduction_to_qfd",
+      "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
+      "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.IsQuasiFundDomain",
+      "display_name": "SheafOnBuilding.IsQuasiFundDomain",
+      "qualified_name": "SheafOnBuilding.IsQuasiFundDomain",
+      "module": "SheafOnBuilding.QuasiFundDomain",
+      "kind": "class",
+      "signature": "class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}\n    [PartialOrder X] [AbstractCellComplex X]\n    [MulAction G X] [GCellComplex G X]\n    (G' : Subgroup G) (S : Subcomplex X) : Prop where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L76",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.Subcomplex.stabilizer",
+      "display_name": "SheafOnBuilding.Subcomplex.stabilizer",
+      "qualified_name": "SheafOnBuilding.Subcomplex.stabilizer",
+      "module": "SheafOnBuilding.QuasiFundDomain",
+      "kind": "def",
+      "signature": "def stabilizer (S : Subcomplex X) : Subgroup G where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L44",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.QuasiFundDomain",
+      "display_name": "SheafOnBuilding.QuasiFundDomain",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/QuasiFundDomain.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

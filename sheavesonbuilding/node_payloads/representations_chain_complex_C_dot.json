@@ -1,0 +1,39 @@
+{
+  "id": "representations.chain_complex_C_dot",
+  "title": "Schneider–Stuhler chain complex C_•(V) of a cosheaf",
+  "kind": "definition",
+  "status": "staged",
+  "href": "representations/representations_chain_complex_C_dot.html",
+  "primary_topic": "representations",
+  "topics": [
+    "representations"
+  ],
+  "body_html": "<h1>Schneider–Stuhler chain complex $C_\\bullet(\\mathscr{V})$</h1>\n<p>For $\\mathscr{V} \\in \\Cosh_G(X, R)$, define the <strong>chain complex</strong>\n$$C_d(\\mathscr{V}) \\;:=\\; \\bigoplus_{E \\in [\\![X]\\!]_d} \\mathscr{V}_E,$$\nwith boundary maps induced by the cosheaf restrictions\n$r^\\mathscr{V}_{E', E}$ for $E' \\preceq E$ (with signs from a chosen\norientation of cells).</p>\n<p>The $G$-action on $\\mathscr{V}$ makes each $C_d(\\mathscr{V})$ a smooth\n$R[G]$-module, and $\\partial : C_d \\to C_{d-1}$ is $G$-equivariant.</p>\n<p>If $\\mathscr{V} \\in \\Cosh_G(X, R, \\phi)$, then $C_\\bullet(\\mathscr{V})$ is a\nchain complex in $\\Rep_\\phi(G)$ (see <a class=\"node-ref\" data-node-id=\"representations.rep_phi\" href=\"representations_rep_phi.html\">The subcategory Rep_φ(G)</a>).</p>\n<p>The functor $\\mathscr{V} \\mapsto H_0(C_\\bullet(\\mathscr{V}))$ from\n$\\Cosh_G(X, R, \\phi)$ to $\\Rep_\\phi(G)$ is the left adjoint of $\\Loc_\\phi$\nin [[node:representations.h0_C_dot_adjoint]].</p>\n<h2>Augmentation</h2>\n<p>For a vertex $x \\in [\\![X]\\!]_0$ and $V \\in \\Rep_\\phi(G)$, applying this\nconstruction to $\\mathscr{V} = \\Loc_\\phi(V)$ gives a chain complex with\ncanonical augmentation\n$$\\epsilon_V : C_0(\\Loc_\\phi(V)) = \\bigoplus_x V[\\phi_x] \\to V,\n  \\qquad \\epsilon_V(\\textstyle\\sum_x x \\otimes v_x) = \\textstyle\\sum_x v_x.$$\n$\\epsilon_V$ kills boundaries and factors through $H_0$; this gives the\ncounit of the adjunction.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.chain_complex_phi",
+      "title": "Chain complex C_•(Φ, V) of φ-isotypic chains",
+      "href": "coefficient_systems/coefficient_systems_chain_complex_phi.html"
+    },
+    {
+      "id": "coefficient_systems.lanard_49_analogue",
+      "title": "Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets",
+      "href": "coefficient_systems/coefficient_systems_lanard_49_analogue.html"
+    },
+    {
+      "id": "representations.h0_C_dot_adjoint",
+      "title": "H₀ ∘ C_• ⊣ Loc_φ adjunction (§3 Prop)",
+      "href": "representations/representations_h0_C_dot_adjoint.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

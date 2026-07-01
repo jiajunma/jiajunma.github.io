@@ -1,0 +1,58 @@
+{
+  "id": "building.reductive_pair_setting",
+  "title": "Reductive pair (G', G) and the apartment A",
+  "kind": "topic",
+  "status": "staged",
+  "href": "building/building_reductive_pair_setting.html",
+  "primary_topic": "building",
+  "topics": [
+    "building"
+  ],
+  "body_html": "<h1>Reductive pair $(G', G)$ and the apartment $A$</h1>\n<p>Standing data for the construction of the generalized building:</p>\n<ul>\n<li>$(G', G)$ is a pair of (connected) reductive groups over a local field\n  $F$, with $G' \\le G$ a closed subgroup;</li>\n<li>$S$ is a maximal $F$-split torus of $G'$, and $N := N(G', S)$ is its\n  normalizer in $G'$;</li>\n<li>$A \\subseteq \\mathcal{B}(G')$ is the apartment of the (extended)\n  Bruhat–Tits building of $G'$ corresponding to $S$.</li>\n</ul>\n<p>For each point $x \\in A$, the <strong>parahoric subgroup</strong> $G'_x$ of $G'$ attached\nto $x$ is defined as in Bruhat–Tits theory (it agrees with $G'(\\mathcal{O})$\nmodulo $G_{x,0+}$ for an appropriate integral structure).</p>\n<p>The pair $(G', G)$ is the basic raw material from which §5 builds the\ngeneralized building $\\BSigma$ (see\n<a class=\"node-ref\" data-node-id=\"building.generalized_building_bs\" href=\"building_generalized_building_bs.html\">Generalized building B(Σ) = G ×^K A</a>).</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "applications.classical_setting",
+      "title": "Classical groups setting: G = isometry of an ε-Hermitian form, p ≠ 2",
+      "href": "applications/applications_classical_setting.html"
+    },
+    {
+      "id": "applications.tame_setting",
+      "title": "Tamely ramified setting: Yu / Kim–Yu / AFMO datum",
+      "href": "applications/applications_tame_setting.html"
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "href": "building/building_K3_hypothesis.html"
+    },
+    {
+      "id": "building.K_cosheaf",
+      "title": "K-cosheaf on the apartment with K-condition",
+      "href": "building/building_K_cosheaf.html"
+    },
+    {
+      "id": "building.apartments_in_bsigma",
+      "title": "Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x",
+      "href": "building/building_apartments_in_bsigma.html"
+    },
+    {
+      "id": "building.connected_components",
+      "title": "π₀(X) ≅ G/J for X = G ×^P X' (with applications to B(Σ))",
+      "href": "building/building_connected_components.html"
+    },
+    {
+      "id": "building.connected_components.plan.classification",
+      "title": "Plan: identify each connected component of B(Σ) as K_x · A",
+      "href": "building/building_connected_components_plan_classification.html"
+    },
+    {
+      "id": "building.contraction_map_apartment",
+      "title": "Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)",
+      "href": "building/building_contraction_map_apartment.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

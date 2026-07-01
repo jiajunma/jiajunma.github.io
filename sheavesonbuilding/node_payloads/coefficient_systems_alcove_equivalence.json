@@ -1,0 +1,29 @@
+{
+  "id": "coefficient_systems.alcove_equivalence",
+  "title": "[𝒜/𝒦] ≃ [A/𝒦] (alcove reduction under (F5)–(F6))",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_alcove_equivalence.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Alcove reduction $[\\mathcal{A} / \\mathscr{K}] \\;\\xrightarrow{\\sim}\\; [A / \\mathscr{K}]$</h1>\n<p>Let $\\mathcal{A}$ be a fixed closed alcove of $A$ (fundamental domain\nunder the $N$-action). Define $[\\mathcal{A} / \\mathscr{K}]$ on facets in\n$\\mathcal{A}$ with\n$$\\Hom_{[\\mathcal{A} / \\mathscr{K}]}(\\mathcal{F}, \\mathcal{E}) :=\n\\begin{cases} \\hat K_\\mathcal{E} &amp; \\mathcal{E} \\subseteq \\overline{\\mathcal{F}}, \\\\ \\emptyset &amp; \\text{otherwise.}\\end{cases}$$</p>\n<p>Assume the fine-structure hypothesis on $A$:</p>\n<blockquote>\n<p><strong>(F5)</strong> $\\hat N_\\mathcal{F} = \\{n \\in N : n \\mathcal{F} = \\mathcal{F}\\}$,\ni.e.\\ stabilizer and fixator agree on $\\mathscr{F}$.</p>\n<p><strong>(F6)</strong> Within $\\overline{\\mathcal{F}}$, facets in the same $N$-orbit\ncoincide: $n \\mathcal{E}_1 = \\mathcal{E}_2$ with $\\mathcal{E}_i \\subseteq\n\\overline{\\mathcal{F}}$ forces $\\mathcal{E}_1 = \\mathcal{E}_2$.</p>\n</blockquote>\n<p>These imply $\\hat K_\\mathcal{F} = \\{g \\in G : g \\mathcal{F} = \\mathcal{F}\\}$.</p>\n<blockquote>\n<p><strong>Lemma.</strong> $\\Hom_{[\\mathcal{A}/\\mathscr{K}]}(\\mathcal{F}, \\mathcal{E}) =\n\\Hom_{[A/\\mathscr{K}]}(\\mathcal{F}, \\mathcal{E})$.</p>\n</blockquote>",
+  "proof_html": "<p>For $n \\in N$ with $\\mathcal{E} \\subseteq \\overline{n\\mathcal{F}}$,\n$n^{-1}\\mathcal{E} \\subseteq \\overline{\\mathcal{F}} \\subseteq \\mathcal{A}$.\nBy (F6), $n^{-1}\\mathcal{E} = \\mathcal{E}$, so by (F5)\n$n \\in \\hat N_\\mathcal{E}$. Hence\n$\\Hom_{[A/\\mathscr{K}]}(\\mathcal{F}, \\mathcal{E}) = K_\\mathcal{E} \\hat N_\\mathcal{E}\n= \\hat K_\\mathcal{E}$. $\\square$</p>\n<blockquote>\n<p><strong>Corollary.</strong> The functor $[\\mathcal{A} / \\mathscr{K}] \\to [A / \\mathscr{K}]$\nis an equivalence of categories.</p>\n</blockquote>\n<p>Pulling back coefficient systems along this equivalence (and along\n[[node:coefficient_systems.A_over_K_equivalence]]) gives\n$\\Coeff_G(\\BSigma) \\to \\Coeff_\\mathscr{K}(\\mathcal{A})$, an equivalence\nbetween the global category and a much smaller one on the alcove.</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.A_over_K_equivalence",
+      "title": "Equivalence [A/𝒦] ≃ [B(Σ)/G] (RES theorem)",
+      "href": "coefficient_systems/coefficient_systems_A_over_K_equivalence.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.E2_construction",
+      "title": "Construction of the cocycle r_{g, F} in (E2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_E2_construction.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

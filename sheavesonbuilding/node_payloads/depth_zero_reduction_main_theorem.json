@@ -1,0 +1,54 @@
+{
+  "id": "depth_zero_reduction.main_theorem",
+  "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>Main Theorem 8.2.1 — Reduction to depth zero</h1>\n<blockquote>\n<p><strong>Theorem (Sheaf7 Thm 8.2.1, compare [Schneider–Stuhler, Thm V.1]).</strong>\nThe following diagram induces an equivalence of categories between\n$\\Rep_\\Phi(G)$ and $\\Rep_0(M)$:\n$$\\Rep_\\Phi(G) \\xleftarrow{\\;H_0\\;} \\Coeff_G(\\BSigma, \\Phi)[E_\\Phi^{-1}]\n&gt;   \\;\\xrightarrow{\\;\\Res\\;}\\; \\Coeff_M^0(\\mathcal{B}(M))[E_M^{-1}]\n&gt;   \\;\\xrightarrow{\\;H_0\\;}\\; \\Rep_0(M).$$</p>\n</blockquote>",
+  "proof_html": "<p>Three ingredients combine:</p>\n<ol>\n<li><strong>Two horizontal localized equivalences.</strong> The leftmost arrow is the §7.4\n   equivalence <a class=\"node-ref\" data-node-id=\"coefficient_systems.localized_equivalence\" href=\"../coefficient_systems/coefficient_systems_localized_equivalence.html\">Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)</a> for\n   $\\Phi$ on $\\BSigma$; the rightmost arrow is the same for the depth-zero\n   data on $\\mathcal{B}(M)$ (the Schneider–Stuhler case).</li>\n<li><strong>Coefficient-system equivalence.</strong> $\\Res \\dashv \\Sat$ are quasi-inverse\n   on the unlocalized categories\n   <a class=\"node-ref\" data-node-id=\"depth_zero_reduction.res_sat_quasi_inverse\" href=\"depth_zero_reduction_res_sat_quasi_inverse.html\">Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)</a>.</li>\n<li><strong>Matching of weak equivalences.</strong> $\\Res(E_\\Phi) \\subseteq E_M$ and\n   $\\Sat(E_M) \\subseteq E_\\Phi$ by\n   [[node:depth_zero_reduction.res_preserves_E]], so the equivalence\n   descends to the localized categories\n   $\\Coeff_G(\\BSigma, \\Phi)[E_\\Phi^{-1}] \\simeq \\Coeff_M^0(\\mathcal{B}(M))[E_M^{-1}]$.</li>\n</ol>\n<p>Compose. $\\square$</p>\n<h2>Hypotheses required</h2>\n<p>The (T·), (E·), (K·) axioms split into two groups: <strong>framework</strong>\n(needed to <em>define</em> the relevant categories) and <strong>directly used</strong>\n(consumed in the §8.2 proof above).</p>\n<table>\n<thead>\n<tr>\n<th>Hypothesis</th>\n<th>Role</th>\n<th>Verified in</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>(T1)</strong></td>\n<td>framework — facet-constancy of $\\mathscr K_+, \\phi$ (defines $K_{\\mathcal F,+}$ per facet)</td>\n<td>[[node:coefficient_systems.semisimple_character_T_axioms]]</td>\n</tr>\n<tr>\n<td><strong>(T2)</strong></td>\n<td>framework — restriction compatibility (defines restrictions in $\\Coeff_G(\\BSigma, \\Phi)$)</td>\n<td>same</td>\n</tr>\n<tr>\n<td><strong>(T3)</strong></td>\n<td>directly used — $G$-equivariance, called in the §7.1 resolution + the support lemma</td>\n<td>same</td>\n</tr>\n<tr>\n<td><strong>(T4)</strong></td>\n<td>directly used — intertwiner, called in the support lemma + the cartesian unit-iso</td>\n<td>same</td>\n</tr>\n<tr>\n<td><strong>(T5)</strong></td>\n<td>directly used — geodesic factorization, called in the idempotent (iii) for cartesian</td>\n<td>same</td>\n</tr>\n<tr>\n<td><strong>(S)</strong></td>\n<td>directly used — $\\Rep_\\Phi(G)$ Serre subcategory of $\\Rep(G)$ (called in §7.1 resolution)</td>\n<td><a class=\"node-ref\" data-node-id=\"coefficient_systems.serre_subcategory_hypothesis\" href=\"../coefficient_systems/coefficient_systems_serre_subcategory_hypothesis.html\">Serre-subcategory property (S) — a consequence, not a hypothesis</a></td>\n</tr>\n<tr>\n<td><strong>(E1)–(E4)</strong></td>\n<td>directly used — coherent $\\kappa$-extensions, called in §8.1 Res/Sat</td>\n<td>[[node:depth_zero_reduction.hypothesis_E]]</td>\n</tr>\n<tr>\n<td><strong>(K3)</strong></td>\n<td>directly used — fixator convexity, called in the contraction extension to $\\BSigma_x$</td>\n<td>[[node:building.K3_hypothesis]]</td>\n</tr>\n<tr>\n<td><strong>(K4)</strong></td>\n<td>directly used — reductive-quotient iso, called in §8.1 quasi-inverse</td>\n<td>[[node:depth_zero_reduction.K4_hypothesis]]</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p><strong>Bourbaki-style remark.</strong> (T1) and (T2) are <em>framework</em> assumptions\n(without them, $\\Coeff_G(\\BSigma, \\Phi)$ does not make sense as a\ncategory). Inside the §8.2 chain, only (T3), (T4), (T5), (S),\n(E1)–(E4), (K3), (K4) appear <em>directly</em>. (T1) and (T2) cannot be\ndropped because they are part of the setup, but it is worth noting\nthat they are not active hypotheses of the §8.2 argument.</p>\n</blockquote>\n<h2>Applications</h2>\n<p>The theorem applies in two situations:</p>\n<ul>\n<li><strong>Classical groups</strong> (§9, $p \\ne 2$): see\n  <a class=\"node-ref\" data-node-id=\"applications.classical_main_theorem\" href=\"../applications/applications_classical_main_theorem.html\">Main theorem applied to classical groups</a>;</li>\n<li><strong>Tame types</strong> (§10, $p$ large): see\n  <a class=\"node-ref\" data-node-id=\"applications.tame_main_theorem\" href=\"../applications/applications_tame_main_theorem.html\">Main theorem applied to tame types</a>.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "depth_zero_reduction.res_preserves_E",
+      "title": "Res sends E_Φ to E_M (Prop 8.1)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_preserves_E.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_quasi_inverse",
+      "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html"
+    },
+    {
+      "id": "coefficient_systems.localized_equivalence",
+      "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+      "href": "coefficient_systems/coefficient_systems_localized_equivalence.html"
+    },
+    {
+      "id": "representations.localization_equivalence",
+      "title": "Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)",
+      "href": "representations/representations_localization_equivalence.html"
+    },
+    {
+      "id": "coefficient_systems.serre_subcategory_hypothesis",
+      "title": "Serre-subcategory property (S) — a consequence, not a hypothesis",
+      "href": "coefficient_systems/coefficient_systems_serre_subcategory_hypothesis.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_main_theorem",
+      "title": "Main theorem applied to classical groups",
+      "href": "applications/applications_classical_main_theorem.html"
+    },
+    {
+      "id": "applications.tame_main_theorem",
+      "title": "Main theorem applied to tame types",
+      "href": "applications/applications_tame_main_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

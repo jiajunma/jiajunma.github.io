@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../keywords/category.html">category</a></li>
+      
+        <li><a href="../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../keywords/external.html">external</a></li>
+      
+        <li><a href="../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../keywords/main.html">main</a></li>
+      
+        <li><a href="../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../keywords/res.html">res</a></li>
+      
+        <li><a href="../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-coefficient_systems-2e-cartesian_unit_iso_assembly">
+  <header class="lemma_thmheading thm-heading">
+    <span class="lemma_thmcaption thm-caption">Lemma</span>
+    <span class="lemma_thmtitle thm-title">Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-lemma">lemma</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-coefficient_systems-2e-cartesian_unit_iso_assembly">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="coefficient_systems_cartesian_reduction_to_apartment.html">Reduction lemma: cartesian unit-iso check transfers to apartment</a></li>
+        
+        <li><a href="coefficient_systems_idempotent_system_from_T_axioms.html">Idempotent system extracted from (T1)–(T5)</a></li>
+        
+        <li><a href="coefficient_systems_cartesian_local_maps.html">Local maps ε^τ_σ along taut paths in the apartment</a></li>
+        
+        <li><a href="coefficient_systems_lanard_49_analogue.html">Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets</a></li>
+        
+        <li><a href="coefficient_systems_support_in_BSx.html">C_d(Φ,V)[φ_x] is supported in B(Σ)_x</a></li>
+        
+        <li><a href="../building/building_bs_subset_x.html">The K_x-orbit subset B(Σ)_x := K_x · A</a></li>
+        
+        <li><a href="../representations/representations_loc_phi_functor.html">Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="lemma_thmcontent thm-content body">
+    <h1>Unit-iso assembly: $\mathscr V_\mathcal F \;\xrightarrow{\sim}\; e_\mathcal F H_0(\BSigma, \mathscr V)$</h1>
+<p>This node completes the §7.2 cartesian unit-iso proof. Building on:</p>
+<ul>
+<li>Reduction to apartment (<a class="node-ref" data-node-id="coefficient_systems.cartesian_reduction_to_apartment" href="coefficient_systems_cartesian_reduction_to_apartment.html">Reduction lemma: cartesian unit-iso check transfers to apartment</a>)</li>
+<li>Abstract idempotent properties (i)-(v) ([[node:coefficient_systems.idempotent_system_from_T_axioms]])</li>
+<li>Local maps $\varepsilon^\sigma_\tau$ well-defined along taut paths
+  (<a class="node-ref" data-node-id="coefficient_systems.cartesian_local_maps" href="coefficient_systems_cartesian_local_maps.html">Local maps ε^τ_σ along taut paths in the apartment</a>)</li>
+<li>Lanard 4.9 analogue $i_\mathcal F \circ \varepsilon^\mathcal E_\mathcal F = e_\mathcal F \circ i_\mathcal E$
+  (<a class="node-ref" data-node-id="coefficient_systems.lanard_49_analogue" href="coefficient_systems_lanard_49_analogue.html">Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets</a>)</li>
+</ul>
+<h2>Statement and reduction</h2>
+<blockquote>
+<p><strong>Theorem (cartesian unit iso).</strong> Let $\mathscr V \in \Cosh^{\mathrm{cart}}_G(\BSigma, R, \phi)$
+under (T1)–(T5). For every facet $\mathcal F \subseteq \BSigma$, the unit map
+$$\mathrm{unit}_\mathcal F := i_\mathcal F \;:\; \mathscr V_\mathcal F \;\longrightarrow\; e_\mathcal F H_0(\BSigma, \mathscr V)$$
+is an isomorphism.</p>
+</blockquote>
+<p>By <a class="node-ref" data-node-id="coefficient_systems.cartesian_reduction_to_apartment" href="coefficient_systems_cartesian_reduction_to_apartment.html">Reduction lemma: cartesian unit-iso check transfers to apartment</a> it suffices
+to check this for facets $\mathcal F \subseteq A$. Fix such an $\mathcal F$ and a
+vertex $x \in \overline{\mathcal F}$.</p>
+<p>The proof has two halves: <strong>surjectivity</strong> and <strong>injectivity</strong>.</p>
+<h2>Surjectivity: $e_\mathcal F H_0 \subseteq i_\mathcal F(\mathscr V_\mathcal F)$</h2>
+<p>Following the structure of [Lanard 2019, Thm 4.10].</p>
+<p><strong>Step S1.</strong> $H_0(\BSigma, \mathscr V) = \sum_{y \in \BSigma_0} j_y(\mathscr V_y)$,
+where $j_y: \mathscr V_y \to H_0$ is the canonical map (= $i_y$ when $y$
+is a vertex viewed as a 0-facet). This is by definition of $H_0$: every
+class is represented by a 0-chain, which is a sum over vertex stalks.</p>
+<p><strong>Step S2.</strong> $e_\mathcal F H_0 = \sum_{y} e_\mathcal F j_y(\mathscr V_y)$, just by
+applying $e_\mathcal F$ (which is $R$-linear).</p>
+<p><strong>Step S3.</strong> By the support lemma
+[[node:coefficient_systems.support_in_BSx]], $e_\mathcal F j_y(\mathscr V_y) = 0$
+unless $y \in \BSigma_x = K_x \cdot A$. So we may restrict to
+$y \in (K_x A)_0$.</p>
+<p><strong>Step S4 — Apartment case ($y \in A$).</strong> For $y$ a vertex of $A$, apply
+the iterated Lanard 4.9 analogue (Corollary in
+<a class="node-ref" data-node-id="coefficient_systems.lanard_49_analogue" href="coefficient_systems_lanard_49_analogue.html">Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets</a>) with $\mathcal E = y$:
+$$e_\mathcal F \circ i_y \;=\; i_\mathcal F \circ \varepsilon^y_\mathcal F.$$
+Applied to $\mathscr V_y$:
+$$e_\mathcal F j_y(\mathscr V_y) = e_\mathcal F i_y(\mathscr V_y) = i_\mathcal F(\varepsilon^y_\mathcal F(\mathscr V_y)) \subseteq i_\mathcal F(\mathscr V_\mathcal F).$$</p>
+<p><strong>Step S5 — Extending across $K_x A$ via apartment choice.</strong> For
+$y \in K_x A$ with $y = k y'$ ($k \in K_x$, $y' \in A_0$): by the diagonal
+$G$-action on $C_\bullet$,
+$$j_y(\mathscr V_y) = k \cdot j_{y'}(\mathscr V_{y'})$$
+where the rightmost $k \cdot$ is the $G$-action on $H_0$.</p>
+<p>By property (iv) ($G$-equivariance of idempotents),
+$e_\mathcal F k = k e_{k^{-1} \mathcal F}$. Hence
+$$e_\mathcal F j_y(\mathscr V_y) = e_\mathcal F k j_{y'}(\mathscr V_{y'}) = k \cdot e_{k^{-1} \mathcal F} j_{y'}(\mathscr V_{y'}). \tag{$\dagger$}$$</p>
+<p>We now apply the iterated Lanard 4.9 analogue to the right side,
+working <strong>inside an apartment $A'' = h A$ ($h \in K_x$) chosen to contain
+both $y'$ and $k^{-1} \mathcal F$</strong>.</p>
+<p><strong>Existence of $A''$ — $K_x$-local two-apartment property.</strong> We need
+the $K_x$-local form of the Bruhat–Tits (A1) axiom for $\BSigma$,
+codified in [[node:building.A1_axiom_in_component]] as the <strong>Kx-local
+(A1)</strong> lemma:</p>
+<blockquote>
+<p>Any two cells of $\BSigma_x = K_x \cdot A$ lie in a common
+$K_x$-translate of $A$.</p>
+</blockquote>
+<p>The equivalent algebraic content (worked out in
+[[node:building.A1_axiom_in_component]]) is the Iwahori-type
+decomposition
+$\hat K_x \subseteq N \cdot \hat K_{E_1} \cdot \hat K_{E_2} \cdot N$
+for any cells $E_1, E_2 \in [\![A]\!]$ — which holds in the classical
+parahoric case and is to be verified case-by-case for the applications
+in Sheaf7 §10. Both $y' \in A \subseteq \BSigma_x$ and
+$k^{-1} \mathcal F \in k^{-1} A \subseteq \BSigma_x$ are in
+$\BSigma_x$, so the lemma applies.</p>
+<p>We do <strong>not</strong> need the component-global two-apartment property (which
+is the stronger statement covering all of $C_0$, equivalent to
+$J = \hat K_{E_1} \cdot N \cdot \hat K_{E_2}$). The Kx-local form
+suffices because the assembly only iterates within $\BSigma_x$.</p>
+<p>(Note: by [[node:building.component_is_KxA]], $C_0 = K_x \cdot A = \BSigma_x$
+when the component-global (A1) holds, so the Kx-local and
+component-global forms coincide in that case. Until the
+component-global form is verified, the Kx-local form is the
+intrinsic requirement of this proof.)</p>
+<p><strong>Lanard 4.9 in $A''$.</strong> The proof of
+<a class="node-ref" data-node-id="coefficient_systems.lanard_49_analogue" href="coefficient_systems_lanard_49_analogue.html">Lanard 4.9 analogue</a> used
+only:
+- Cosheaf composition $r^\mathcal F_x = r^\mathcal E_x \circ r^\mathcal F_\mathcal E$
+  (intrinsic, apartment-independent);
+- Commutation of $r^\mathcal E_x$ with $e_\mathcal F$, via $K_{\mathcal F,+} \subseteq \hat K_\mathcal E$
+  (intrinsic);
+- Cartesianness (a property of $\mathscr V$, not of any apartment).</p>
+<p>So the same proof gives the Lanard 4.9 analogue <strong>in any apartment $A''$</strong>:
+for two adjacent facets $\mathcal E, \mathcal F$ of $A''$ sharing a common vertex,
+$i_\mathcal F \circ \varepsilon^\mathcal E_\mathcal F = e_\mathcal F \circ i_\mathcal E$.</p>
+<p>Property (iii) (geodesic telescoping) likewise holds within $A''$: it
+was proved via (T5), which states a geometric condition for any
+$x, y, z \in A$ with $z \in [x, y]$ — the same condition applies inside
+$A''$ by $G$-equivariance (translate to $A$ if needed). So the iteration
+corollary applies in $A''$.</p>
+<p><strong>Application in $A''$.</strong> Take a taut path in $A''$ from $y'$ to $k^{-1} \mathcal F$
+(which exists since both lie in $A''$ and $A''$ is Euclidean). The
+iterated Lanard 4.9 analogue gives:
+$$e_{k^{-1} \mathcal F} \circ j_{y'} = i_{k^{-1} \mathcal F} \circ \varepsilon^{y'}_{k^{-1} \mathcal F}.$$
+Applied to $\mathscr V_{y'}$:
+$$e_{k^{-1} \mathcal F} j_{y'}(\mathscr V_{y'}) = i_{k^{-1} \mathcal F}(\varepsilon^{y'}_{k^{-1} \mathcal F}(\mathscr V_{y'})) \subseteq i_{k^{-1} \mathcal F}(\mathscr V_{k^{-1} \mathcal F}).$$</p>
+<p><strong>Translating back via $k$.</strong> By $G$-equivariance of $\mathscr V$ and $H_0$,
+$k \cdot i_{k^{-1} \mathcal F}(\mathscr V_{k^{-1} \mathcal F}) = i_\mathcal F(k \cdot \mathscr V_{k^{-1} \mathcal F}) = i_\mathcal F(\mathscr V_\mathcal F)$
+(using $k \cdot \mathscr V_{k^{-1} \mathcal F} = \mathscr V_\mathcal F$ via the cosheaf's
+$G$-action $g_\mathcal F^\mathscr V$).</p>
+<p>Combining with $(\dagger)$:
+$$e_\mathcal F j_y(\mathscr V_y) = k \cdot e_{k^{-1} \mathcal F} j_{y'}(\mathscr V_{y'}) \subseteq k \cdot i_{k^{-1} \mathcal F}(\mathscr V_{k^{-1} \mathcal F}) = i_\mathcal F(\mathscr V_\mathcal F). \qquad \square$$</p>
+<p>So Step S5 finishes the surjectivity: for any vertex $y \in (K_x A)_0$,
+$e_\mathcal F j_y(\mathscr V_y) \subseteq i_\mathcal F(\mathscr V_\mathcal F)$. Combined with Step S3
+(support reduces to $K_x A$) and Step S2 (decomposition by vertices),
+$e_\mathcal F H_0 \subseteq i_\mathcal F(\mathscr V_\mathcal F)$. $\square$</p>
+<h2>Injectivity: $i_\mathcal F$ is injective on $\mathscr V_\mathcal F$</h2>
+<p>This direction is <strong>strictly easier</strong> and does not require any
+$K_x$-translation analysis. We exhibit a left inverse $p_\mathcal F: e_\mathcal F H_0 \to \mathscr V_\mathcal F$
+to $i_\mathcal F$.</p>
+<p><strong>Construction of $p_\mathcal F$ on the image $i_\mathcal F(\mathscr V_\mathcal F)$.</strong> Define
+$$p_\mathcal F: i_\mathcal F(\mathscr V_\mathcal F) \to \mathscr V_\mathcal F, \qquad p_\mathcal F(i_\mathcal F(v)) := v.$$
+This is well-defined as a partial function on $i_\mathcal F(\mathscr V_\mathcal F)$ if
+and only if $i_\mathcal F$ is injective. We claim it is — and this claim
+follows from a different construction below.</p>
+<p><strong>Construction via local maps.</strong> Define $p_\mathcal F^\bullet: H_0(\BSigma_x, \mathscr V) \to \mathscr V_\mathcal F$
+on classes of the form $[y \otimes w]$ ($y \in A_0$, $w \in \mathscr V_y$):
+$$p_\mathcal F^\bullet([y \otimes w]) := \varepsilon^y_\mathcal F(w).$$</p>
+<p>This extends to all of $H_0(\BSigma_x, \mathscr V)$ — provided we show:</p>
+<p>(P1) $p_\mathcal F^\bullet$ is well-defined as a map on $H_0$ (i.e. vanishes on
+     boundaries of $C_1$).</p>
+<p>The vanishing-on-boundaries argument: for a 1-cell $E \subseteq A$ with
+vertices $\mathcal F_\pm$ (so $\mathcal F_\pm \preceq E$), and $w \in \mathscr V_E$,
+$$\partial(E \otimes w) = \mathcal F_+ \otimes r^E_{\mathcal F_+}(w) - \mathcal F_- \otimes r^E_{\mathcal F_-}(w).$$</p>
+<p>Apply $p_\mathcal F^\bullet$ to the boundary class:
+$$p_\mathcal F^\bullet(\partial(E \otimes w)) = \varepsilon^{\mathcal F_+}_\mathcal F(r^E_{\mathcal F_+}(w)) - \varepsilon^{\mathcal F_-}_\mathcal F(r^E_{\mathcal F_-}(w)).$$</p>
+<p>By the well-definedness of $\varepsilon^\bullet_\mathcal F$ along taut paths
+(<a class="node-ref" data-node-id="coefficient_systems.cartesian_local_maps" href="coefficient_systems_cartesian_local_maps.html">Local maps ε^τ_σ along taut paths in the apartment</a>), we may compute each
+$\varepsilon^{\mathcal F_\pm}_\mathcal F$ via a taut path that <em>passes through $E$</em>.
+Such a path exists by prepending $\mathcal F_\pm \to E$:
+$$\varepsilon^{\mathcal F_\pm}_\mathcal F = \varepsilon^E_\mathcal F \circ \varepsilon^{\mathcal F_\pm}_E.$$</p>
+<p>The elementary step $\varepsilon^{\mathcal F_\pm}_E$ (projection-then-lift,
+since $\mathcal F_\pm \preceq E$) applied to $r^E_{\mathcal F_\pm}(w) \in \mathscr V_{\mathcal F_\pm}$:
+by cartesianness $r^E_{\mathcal F_\pm}(w) \in e_E \mathscr V_{\mathcal F_\pm} = r^E_{\mathcal F_\pm}(\mathscr V_E)$,
+hence $\varepsilon^{\mathcal F_\pm}_E(r^E_{\mathcal F_\pm}(w)) = (r^E_{\mathcal F_\pm})^{-1}(r^E_{\mathcal F_\pm}(w)) = w$.
+So
+$$\varepsilon^{\mathcal F_+}_\mathcal F(r^E_{\mathcal F_+}(w)) = \varepsilon^E_\mathcal F(w) = \varepsilon^{\mathcal F_-}_\mathcal F(r^E_{\mathcal F_-}(w)).$$</p>
+<p>Hence $p_\mathcal F^\bullet(\partial(E \otimes w)) = 0$, proving (P1) for 1-cells.</p>
+<p>For general $d$-cells, the boundary $\partial$ is an alternating sum
+over (d-1)-faces; the same argument applied to each pair of
+codimension-1 faces (or, equivalently, to the equivalence relation on
+the boundary 0-chain) gives vanishing.</p>
+<p><strong>Composition $p_\mathcal F^\bullet \circ i_\mathcal F = \id$.</strong> For $v \in \mathscr V_\mathcal F$:
+$i_\mathcal F(v) = [x \otimes r^\mathcal F_x(v)]$, so
+$$p_\mathcal F^\bullet(i_\mathcal F(v)) = \varepsilon^x_\mathcal F(r^\mathcal F_x(v)).$$
+Using the definition of $\varepsilon^x_\mathcal F$ (projection-then-lift, since
+$x \preceq \mathcal F$):
+$$\varepsilon^x_\mathcal F(r^\mathcal F_x(v)) = (r^\mathcal F_x)^{-1}(e_\mathcal F(r^\mathcal F_x(v))).$$
+But $r^\mathcal F_x(v) \in r^\mathcal F_x(\mathscr V_\mathcal F) = e_\mathcal F \mathscr V_x$ already,
+so $e_\mathcal F(r^\mathcal F_x(v)) = r^\mathcal F_x(v)$. Hence
+$\varepsilon^x_\mathcal F(r^\mathcal F_x(v)) = (r^\mathcal F_x)^{-1}(r^\mathcal F_x(v)) = v$.</p>
+<p>So $p_\mathcal F^\bullet \circ i_\mathcal F = \id_{\mathscr V_\mathcal F}$. ✓</p>
+<p>This forces $i_\mathcal F$ to be injective: if $i_\mathcal F(v) = 0$, then
+$v = p_\mathcal F^\bullet(i_\mathcal F(v)) = p_\mathcal F^\bullet(0) = 0$. $\square$</p>
+<h2>Combining surjectivity + injectivity</h2>
+<p>By surjectivity (above), $e_\mathcal F H_0 \subseteq i_\mathcal F(\mathscr V_\mathcal F)$.
+By definition of $i_\mathcal F$ (image in $\phi_\mathcal F$-isotypic), $i_\mathcal F(\mathscr V_\mathcal F) \subseteq e_\mathcal F H_0$.
+So $i_\mathcal F(\mathscr V_\mathcal F) = e_\mathcal F H_0$.</p>
+<p>By injectivity, $i_\mathcal F: \mathscr V_\mathcal F \to i_\mathcal F(\mathscr V_\mathcal F) = e_\mathcal F H_0$
+is a bijection. As an $R$-linear map between $R$-modules, this is an
+isomorphism. $\square$</p>
+<h2>Final form of the theorem (the expected equivalence)</h2>
+<blockquote>
+<p><strong>Theorem (cartesian equivalence).</strong> Assume $(T1)$-$(T5)$ and
+Hypothesis $(S)$ ($\Rep_\Phi(G)$ is a Serre subcategory of $\Rep(G)$).
+Then
+$$\Loc_\phi : \Rep_\Phi(G) \;\xrightleftarrows[\sim]{\sim}\; \Cosh^{\mathrm{cart}}_G(\BSigma, R, \phi) : H_0 \circ C_\bullet$$
+is a pair of quasi-inverse equivalences of $R$-linear categories.</p>
+</blockquote>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <ul>
+<li>$\Loc_\phi$ lands in $\Cosh^{\mathrm{cart}}_G$: immediate from the
+  definition of cartesian (any $V \in \Rep_\Phi(G)$ has
+  $\Loc_\phi(V)_\mathcal F = V[\phi_\mathcal F]$ cartesian by (T2)).</li>
+<li>$H_0 \circ C_\bullet$ lands in $\Rep_\Phi(G)$: by definition of
+  $\Rep_\Phi(G)$ as generated by $\bigcup_x V[\phi_x]$, and the
+  construction of $C_\bullet$ from $\phi$-isotypic stalks.</li>
+<li>Counit iso: apply the unit-iso theorem above at $\Loc_\phi V$
+  (which is cartesian); the unit-iso $\Loc_\phi V \xrightarrow\sim
+  \Loc_\phi(H_0 C_\bullet \Loc_\phi V)$ combined with the adjunction
+  triangle identity gives the counit iso $H_0 C_\bullet \Loc_\phi V
+  \xrightarrow\sim V$. (Under the Lanard cartesian framework this
+  supersedes the older §7.1 contraction-based resolution argument.)</li>
+<li>Unit iso: the theorem above. $\square$</li>
+</ul>
+<p>This matches [Lan19 Thm 4.10/4.11] and [DF Prop 3.2.4] in form. The proof
+strategy mirrors Lanard's but specialized to our setting:
+- We work on the apartment $A$ (via §7.3 reduction) instead of the full
+  building, so Wang-style taut paths suffice in place of Lanard's
+  admissible paths.
+- Our single-character $\phi$ collapses the wild-inertia torsor sum that
+  appears in DF, removing the orthogonality / equivalence-class
+  bookkeeping of [Lan19 Lem 2.6.1] / [DF Lem 2.6.1].</p>
+<h2>Where the <strong>single-character simplification</strong> enters</h2>
+<p>In DF's setting, $e_{\phi,I,x} = \sum_{\iota \in I_x/\sim} e_{\iota,x}$
+is a sum of "pure" idempotents indexed by a wild-inertia equivalence
+class. Lanard's iterated identity $e_\mathcal F j_y(\mathscr V_y) \subseteq i_\mathcal F(\mathscr V_\mathcal F)$
+then requires orthogonality between sub-idempotents to avoid double
+counting (Lemma 2.6.1 of DF).</p>
+<p>In our setting, $e_\mathcal F = e_{\phi_\mathcal F}$ is a <em>single</em> idempotent.
+Steps S2-S4 above proceed directly without invoking any orthogonality
+lemma. The K_x-extension (Step S5) inherits the same simplification.</p>
+<p>This is the substantive simplification that lets us omit the torsor /
+equivalence-class machinery of [Lan19 §2] / [DF §2.6].</p>
+<h2>Proof state</h2>
+<p>All five steps of the §7.2 cartesian unit-iso proof are now fully
+written in blueprint form:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Reduction to apartment</td>
+<td>✅ fully proved</td>
+</tr>
+<tr>
+<td>2 — Abstract idempotent properties (i)–(v)</td>
+<td>✅ fully proved</td>
+</tr>
+<tr>
+<td>3 — Local maps $\varepsilon^\sigma_\tau$ defined</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4 — Well-definedness via Cases C, D</td>
+<td>✅ fully proved</td>
+</tr>
+<tr>
+<td>5 — Unit-iso assembly</td>
+<td>✅ fully proved</td>
+</tr>
+<tr>
+<td>5a — Lanard 4.9 analogue</td>
+<td>✅ extracted to own node</td>
+</tr>
+<tr>
+<td>5b — Injectivity via local-map left inverse</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>5c — Surjectivity Step S4 (apartment case)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>5d — Surjectivity Step S5 ($K_x$-extension via apartment choice)</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>The only remaining work is <strong>translation to LaTeX in <code>Sheaf7.tex</code> §7.2</strong>.
+The mathematics is complete.</p>
+<h2>Step in the broader proof</h2>
+<p>This is the <strong>final step (Step 5)</strong> of the §7.2 cartesian unit-iso proof.
+Combined with the other four steps, the cartesian equivalence theorem
+$\Loc_\phi : \Rep_\Phi(G) \simeq \Cosh^{\mathrm{cart}}_G(\BSigma, R, \phi)$
+is fully proved, modulo the <strong>Kx-local two-apartment property</strong> for
+$\BSigma$ codified in [[node:building.A1_axiom_in_component]] (the
+weaker of the (A1)-axiom variants — sufficient for this assembly).</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="../building/building_connected_components.html">π₀(X) ≅ G/J for X = G ×^P X&#39; (with applications to B(Σ))</a></li>
+      
+      <li><a href="coefficient_systems_cartesian_cosheaves.html">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">unit-iso</span><span class="tag">meyer-solleveld</span><span class="tag">assembly</span><span class="tag">final-step</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

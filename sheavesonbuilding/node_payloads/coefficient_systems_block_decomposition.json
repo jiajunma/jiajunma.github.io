@@ -1,0 +1,23 @@
+{
+  "id": "coefficient_systems.block_decomposition",
+  "title": "Block decomposition of Rep(G) and the depth-zero block",
+  "kind": "topic",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_block_decomposition.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Block decomposition of $\\Rep(G)$</h1>\n<p>For an abelian category $\\mathcal{A}$ we write\n$\\mathcal{A} = \\prod_{s \\in S} \\mathcal{A}_s$ for a <em>direct summand\ndecomposition</em> into full subcategories: every $A \\in \\mathcal{A}$ decomposes\nas $A = \\bigoplus_s A_s$ with $A_s \\in \\mathcal{A}_s$, and\n$\\Hom(A_1, A_2) = 0$ when $A_i \\in \\mathcal{A}_{s_i}$ for $s_1 \\ne s_2$.\nThe $\\mathcal{A}_s$ are Serre subcategories.</p>\n<p>We specialize $\\mathcal{A} = \\Rep(G)$ in two regimes:</p>\n<ol>\n<li><strong>$R = \\mathbb{C}$</strong> with $G$ a general tamely-ramified reductive group:\n   the <strong>Bernstein decomposition</strong>\n   $$\\Rep(G) = \\prod_{\\mathfrak{s} \\in B(G)} \\Rep(G)_\\mathfrak{s},$$\n   where $B(G)$ is the Bernstein spectrum, $\\Rep(G)_\\mathfrak{s}$ the\n   subcategory whose irreducible subquotients have supercuspidal support\n   $\\mathfrak{s}$. Bushnell–Kutzko's theory of $\\mathfrak{s}$-types\n   describes each block via compact open subgroups; Yu's construction makes\n   the positive-depth part explicit ([KY], [AFMO2]).</li>\n<li><strong>$R = \\overline{\\mathbb{F}_\\ell}$</strong> with $G$ a classical group and\n   $\\ell \\ne p$: no Bernstein decomposition, but [HKSS Thm 1.1] gives a\n   decomposition indexed by <strong>endo-classes</strong>.</li>\n</ol>\n<h2>Depth-zero block</h2>\n<p>A block of $\\Rep(G)$ has <strong>depth 0</strong> if every object has non-zero invariants\nunder some pro-unipotent radical $G_{x,0+}$. We write $\\Rep_0(G)$ for the\ndepth-zero block; equivalently,\n$$V \\in \\Rep_0(G) \\iff V = \\sum_{x \\text{ vertex of } \\mathcal{B}(G)} V^{G_{x,0+}}.$$</p>\n<p><strong>Lemma.</strong> $\\Rep_0(G)$ is a Serre subcategory of $\\Rep(G)$ (apply the\nfive-lemma to $C_0(\\mathcal{B}, \\mathscr{V}) \\to V$).</p>\n<p>It admits a further decomposition\n$$\\Rep_0(G) = \\prod_{\\sigma \\text{ depth-0 supercuspidal of } M} \\Rep(G)_{[M, \\sigma]}.$$\nThe §8 main theorem is the bridge between $\\Rep_\\Phi(G)$ for a positive-depth\ncharacter and $\\Rep_0(M)$ for the associated Levi (see\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"../depth_zero_reduction/depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)</a>).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "representations.rep_phi",
+      "title": "The subcategory Rep_φ(G)",
+      "href": "representations/representations_rep_phi.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

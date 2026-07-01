@@ -1,0 +1,44 @@
+{
+  "id": "depth_zero_reduction.K4_hypothesis",
+  "title": "Hypothesis (K4): hat-M_F / M_{F,0+} ≅ hat-K_F / K_{F,0+}",
+  "kind": "definition",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_K4_hypothesis.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>Hypothesis (K4)</h1>\n<blockquote>\n<p><strong>(K4)</strong> The natural map $\\hat M_\\mathcal{F} \\to \\hat K_\\mathcal{F}$\ninduces an isomorphism\n$$\\hat M_\\mathcal{F} / M_{\\mathcal{F}, 0+} \\;\\xrightarrow{\\;\\cong\\;}\\; \\hat K_\\mathcal{F} / K_{\\mathcal{F}, 0+},$$\nwhere $M_{\\mathcal{F}, 0+}$ is the pro-unipotent radical of $M_\\mathcal{F}$.</p>\n</blockquote>\n<p>(K4) lets us transport actions between $\\hat K_\\mathcal{F}$ and\n$\\hat M_\\mathcal{F}$ modulo pro-$p$ parts; it is required to make the\n$\\Sat$ functor of <a class=\"node-ref\" data-node-id=\"depth_zero_reduction.res_sat_functors\" href=\"depth_zero_reduction_res_sat_functors.html\">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a> well-defined.</p>\n<p>It is verified in the standard examples — classical groups and tame types\n— via the explicit description of $K_\\mathcal{F}$ in those cases.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.M_K_orbit_bijection",
+      "title": "M_{x,0+}\\B(M)_d ↔ K_{x,0+}\\(K_x B(M))_d bijection",
+      "href": "depth_zero_reduction/depth_zero_reduction_M_K_orbit_bijection.html"
+    },
+    {
+      "id": "depth_zero_reduction.O_hypothesis",
+      "title": "Hypothesis (O): K_{x,0+}-vs-M_{x,0+} transversality on B(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_O_hypothesis.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_quasi_inverse",
+      "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

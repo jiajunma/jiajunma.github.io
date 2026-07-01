@@ -1,0 +1,59 @@
+{
+  "id": "coefficient_systems.cartesian_cosheaves",
+  "title": "Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Cartesian cosheaves $\\Cosh^{\\mathrm{cart}}_G(X, R, \\phi)$</h1>\n<p>Following [Lanard] and [DF]:</p>\n<p><strong>Definition.</strong> $\\Cosh^{\\mathrm{cart}}_G(X, R, \\phi) \\subseteq\n\\Cosh_G(X, R, \\phi)$ is the full subcategory of those $\\mathscr{V}$ such\nthat the restriction $r^\\mathscr{V}_{F, E}$ induces a bijection between\n$\\mathscr{V}_F$ and $\\mathscr{V}_E[\\phi_F]$ for all $F \\prec E$.</p>\n<p>The image of $\\Loc_\\phi$ lies in $\\Cosh^{\\mathrm{cart}}_G(X, R, \\phi)$.</p>\n<blockquote>\n<p><strong>Proposition.</strong> Assume (T1)–(T5). For\n$\\mathscr{V} \\in \\Cosh^{\\mathrm{cart}}_G(X, R, \\phi)$,\n$$\\mathrm{unit}_\\mathscr{V} : \\mathscr{V} \\to \\Loc_\\phi(H_0(\\mathscr{V}))$$\nis an isomorphism.</p>\n</blockquote>",
+  "proof_html": "<p>status</p>\n<p><strong>In the paper</strong>: the proof block in <code>Sheaf7.tex</code> §7.2 is currently empty.</p>\n<p><strong>In the blueprint</strong>: a self-contained proof has been fully written,\nsplit into six supporting nodes. All technical steps are spelled out;\nthe only remaining work is LaTeX transcription.</p>\n<h3>Proof outline (blueprint version)</h3>\n<p>The proof follows\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents\" href=\"cartesian_cosheaves/plan/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html\">Proof plan: Cartesian unit-iso via apartment-level system of idempotents</a>:</p>\n<table>\n<thead>\n<tr>\n<th>Step</th>\n<th>Node</th>\n<th>Status</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1 — Reduction to apartment</td>\n<td><a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_reduction_to_apartment\" href=\"coefficient_systems_cartesian_reduction_to_apartment.html\">Reduction lemma: cartesian unit-iso check transfers to apartment</a></td>\n<td>✅ fully proved</td>\n</tr>\n<tr>\n<td>2 — Idempotent system from (T1)–(T5)</td>\n<td>[[node:coefficient_systems.idempotent_system_from_T_axioms]]</td>\n<td>✅ fully proved (5 properties)</td>\n</tr>\n<tr>\n<td>3 — Local maps along taut paths</td>\n<td><a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_local_maps\" href=\"coefficient_systems_cartesian_local_maps.html\">Local maps ε^τ_σ along taut paths in the apartment</a></td>\n<td>✅ defined</td>\n</tr>\n<tr>\n<td>4 — Well-definedness of $\\varepsilon^\\tau_\\sigma$</td>\n<td>(same node)</td>\n<td>✅ fully proved (2 case-analysis cases)</td>\n</tr>\n<tr>\n<td>5a — Lanard 4.9 analogue $i_\\mathcal F \\varepsilon^\\mathcal E_\\mathcal F = e_\\mathcal F i_\\mathcal E$</td>\n<td><a class=\"node-ref\" data-node-id=\"coefficient_systems.lanard_49_analogue\" href=\"coefficient_systems_lanard_49_analogue.html\">Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets</a></td>\n<td>✅ fully proved + iteration corollary</td>\n</tr>\n<tr>\n<td>5b/c/d — Unit-iso assembly (injectivity, apartment surjectivity, $K_x$-extension)</td>\n<td><a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_unit_iso_assembly\" href=\"coefficient_systems_cartesian_unit_iso_assembly.html\">Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity</a></td>\n<td>✅ fully proved</td>\n</tr>\n</tbody>\n</table>\n<h3>Companion theorem (the categorical equivalence)</h3>\n<p>The proposition above upgrades directly to the cartesian\nequivalence, with both unit and counit isomorphisms following from\nthe unit-iso theorem applied at $\\sV$ and at $\\Loc_\\phi V$\nrespectively (via the adjunction triangle identity, see\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_unit_iso_assembly\" href=\"coefficient_systems_cartesian_unit_iso_assembly.html\">Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity</a>):</p>\n<blockquote>\n<p><strong>Theorem (cartesian equivalence).</strong> Under (T1)–(T5),\n$$\\Loc_\\phi : \\Rep_\\Phi(G) \\;\\xrightleftarrows[\\sim]{\\sim}\\; \\Cosh^{\\mathrm{cart}}_G(\\BSigma, R, \\phi) : H_0 \\circ C_\\bullet$$\nis an equivalence of categories. <strong>The Serre-subcategory property\n(S) for $\\Rep_\\Phi(G)$ is now a consequence</strong>\n(<a class=\"node-ref\" data-node-id=\"coefficient_systems.serre_subcategory_hypothesis\" href=\"coefficient_systems_serre_subcategory_hypothesis.html\">Serre-subcategory property (S) — a consequence, not a hypothesis</a>) rather\nthan a hypothesis.</p>\n</blockquote>\n<p>This is the same theorem as [Lan19 Thm 4.10/4.11] and [DF Prop 3.2.4],\nspecialized to our $(\\Phi, \\BSigma)$ setting and proved from scratch\n(not citing them as a black box, per user decision).</p>\n<h3>Reference comparison</h3>\n<table>\n<thead>\n<tr>\n<th></th>\n<th>Lanard 2019 (Thm 4.10/4.11)</th>\n<th>DF 2026 (Prop 3.2.4)</th>\n<th>Ours</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Geometry</td>\n<td>Bruhat–Tits building $\\mathrm{BT}$</td>\n<td>$\\mathcal B'$ with e-subdivision</td>\n<td>Apartment $A$ inside $\\BSigma$</td>\n</tr>\n<tr>\n<td>Idempotent source</td>\n<td>abstract</td>\n<td>wild-inertia torsor sum</td>\n<td>single $\\phi_\\mathcal F$-projector</td>\n</tr>\n<tr>\n<td>Path technique</td>\n<td>admissible paths (general reductive)</td>\n<td>(cites Lan21)</td>\n<td>Wang-style taut paths in $A$</td>\n</tr>\n<tr>\n<td>Subdivision</td>\n<td>none</td>\n<td>yes (e-subdivision)</td>\n<td>none (apartment already fine)</td>\n</tr>\n<tr>\n<td>Proof style</td>\n<td>self-contained</td>\n<td>invokes Lan21</td>\n<td>self-contained, Wang-style</td>\n</tr>\n<tr>\n<td>Estimated LaTeX size</td>\n<td>~10 pages</td>\n<td>~½ page (cite)</td>\n<td>~5.5 pages</td>\n</tr>\n</tbody>\n</table>",
+  "deps": [
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    },
+    {
+      "id": "representations.loc_phi_functor",
+      "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+      "href": "representations/representations_loc_phi_functor.html"
+    },
+    {
+      "id": "coefficient_systems.idempotent_system_from_T_axioms",
+      "title": "Idempotent system extracted from (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_idempotent_system_from_T_axioms.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_local_maps",
+      "title": "Local maps ε^τ_σ along taut paths in the apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_local_maps.html"
+    },
+    {
+      "id": "coefficient_systems.lanard_49_analogue",
+      "title": "Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets",
+      "href": "coefficient_systems/coefficient_systems_lanard_49_analogue.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_unit_iso_assembly",
+      "title": "Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity",
+      "href": "coefficient_systems/coefficient_systems_cartesian_unit_iso_assembly.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.serre_subcategory_hypothesis",
+      "title": "Serre-subcategory property (S) — a consequence, not a hypothesis",
+      "href": "coefficient_systems/coefficient_systems_serre_subcategory_hypothesis.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

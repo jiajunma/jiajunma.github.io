@@ -1,0 +1,43 @@
+{
+  "id": "references.yu_construction",
+  "title": "Yu's tame supercuspidal construction",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "references/references_yu_construction.html",
+  "primary_topic": "references",
+  "topics": [
+    "references"
+  ],
+  "body_html": "<h1>Yu's tame supercuspidal construction</h1>\n<p>[Yu 2001] introduces the <em>generic cuspidal datum</em>\n$(\\vec G, (x, \\{\\iota\\}), \\vec r, \\rho, \\vec \\phi)$ for tame reductive\ngroups and constructs the associated supercuspidal representations via\niterated Heisenberg–Weil twists.</p>\n<blockquote>\n<p>⚠️ <strong>Important: Yu 2001 has a gap; use Fintzen 2021 for the affected\nproofs.</strong> Yu's proofs of Prop 14.1 and Thm 14.2 (and consequently\nseveral of the §12–14 intertwiner lemmas below) had a gap in the\nhandling of certain sign characters across the twisted Levi tower.\n[Fintzen 2021] fixes the gap under an explicit hypothesis on $p$\n(satisfied in all cases used in this KB); the <em>statements</em> are\nunchanged, but the <em>proofs</em> should reference Fintzen 2021 or the\ndownstream [Dat–Fintzen 2026] reformulation, not Yu 2001 directly. See\n<a class=\"node-ref\" data-node-id=\"references.fintzen_yu_correction\" href=\"references_fintzen_yu_correction.html\">Fintzen 2021: correction to Yu&#x27;s tame supercuspidal construction</a> for details.</p>\n</blockquote>\n<p>Lemmas / theorems from [Yu] that this paper uses (mostly in §10):</p>\n<ul>\n<li><strong>Lemma 9.3</strong> — depth-shifting identity for $\\hat \\phi$;</li>\n<li><strong>Theorem 9.4</strong> — two-term intertwiner identity, used in\n  <a class=\"node-ref\" data-node-id=\"applications.tame_two_term_intertwiner\" href=\"../applications/applications_tame_two_term_intertwiner.html\">Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G&#x27; G_{y,s} (Yu Thm 9.4 generalized)</a>;</li>\n<li><strong>Lemma 12.4</strong> — dimension formula for $\\Hom_{J_y \\cap J_x}(\\kappa_x, \\kappa_y)$;</li>\n<li><strong>Lemma 12.5</strong> — index identity feeding the dimension count;</li>\n<li><strong>Remark 12.7</strong> — reduction of the Hom to isotypic blocks;</li>\n<li><strong>Lemma 13.6</strong> — $V/V^+/V'$ index identity;</li>\n<li><strong>Lemma 13.7</strong> — intersection factorization\n  ${}^g K_{y,+} \\cap K_{x,+} = ({}^g K^{(d-1)}<em>{y, +} \\cap K^{(d-1)}</em>{x, +})\n   ({}^g J_y \\cap J_x)$, used in the inductive intertwiner argument.</li>\n</ul>\n<p>A modern recasting of all of these can be found in [AFMO2 §3], which is\nthe more direct source for the data we use.</p>\n<h2>Dat–Fintzen parallel</h2>\n<p>[Dat–Fintzen 2026] (see <a class=\"node-ref\" data-node-id=\"references.datfintzen_overview\" href=\"references_datfintzen_overview.html\">Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)</a>) re-derives\nmost of the Yu lemmas in a cleaner, modular form built around their\nwild-inertia / idempotent-system framework. The following mapping is\nuseful when looking up alternative statements or proofs:</p>\n<table>\n<thead>\n<tr>\n<th>Yu reference</th>\n<th>DF / corrected analogue</th>\n<th>Comments</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Yu Lem 8.3 (descent: $\\mathrm{Ad}(g)Y_1^*=Y_2^*$ with both generic ⇒ $g \\in G'(F)$)</td>\n<td>DF §3.3 (wild-inertia parameter setup)</td>\n<td>Used implicitly in our (T4)-derivation chain. Earlier KB drafts called this \"Iwahori factorization\" — that's wrong; Lem 8.3 is a <em>descent-to-twisted-Levi</em> statement.</td>\n</tr>\n<tr>\n<td>Yu Lem 8.4 (depth-shifting / dual filtration isomorphism for $G$-generic $X^*$)</td>\n<td>DF §3.3 (wild-inertia recasting)</td>\n<td>Earlier KB drafts called this \"MP convexity\" — that's wrong; Lem 8.4 is a depth-shifting Lie-algebra/group filtration <em>isomorphism</em>, not a convexity statement. Convexity-along-geodesics is in [BS Lem 3.1] (inclusion only) or Yu §13.</td>\n</tr>\n<tr>\n<td>Yu Lem 9.3 (depth-shifting / $G'$-invariance of $\\hat\\phi$)</td>\n<td>DF §3.3</td>\n<td>✅ Verified.</td>\n</tr>\n<tr>\n<td>Yu Thm 9.4 (two-term intertwiner $g$ intertwines $\\hat\\phi$ ⇔ $g \\in JG'J$)</td>\n<td>DF Lem 2.6.6 (geodesic-telescoping idempotent identity)</td>\n<td>✅ Verified (Yu's statement); the <em>proof</em> in Yu has the §§9-14 gap fixed by [Fin21].</td>\n</tr>\n<tr>\n<td>Yu Lem 12.4 ($\\dim I_g(\\bar\\phi\\|J) = [J:J_+]/[{}^{g\\cap}J:{}^{g\\cap}J_+]$)</td>\n<td>DF Prop 3.4 (intertwiner dimension via lattice index)</td>\n<td>✅ Verified.</td>\n</tr>\n<tr>\n<td>Yu Lem 12.5 + Rem 12.7 (index identity + isotypic reduction)</td>\n<td>DF §3.4</td>\n<td>Verified existence; we use as cited; proof gap fixed by [Fin21].</td>\n</tr>\n<tr>\n<td>Yu Lem 13.6 + 13.7 (${}^{g\\cap}(KJ) = ({}^{g\\cap}K)({}^{g\\cap}J)$ intersection factorization)</td>\n<td>DF §3.4 (lattice index argument; intersection identity)</td>\n<td>✅ Verified (Lem 13.7). DF cleaner for inductive arguments.</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p><strong>Citation priority (revised after Fintzen 2021).</strong> For <em>proofs of the\n§12–14 intertwiner lemmas</em> (which include Yu Prop 14.1 and Thm 14.2),\nthe priority is <strong>DF 2026 &gt; Fintzen 2021 &gt; Yu 2001</strong>: Yu's original\nproofs of these contain a gap (see\n<a class=\"node-ref\" data-node-id=\"references.fintzen_yu_correction\" href=\"references_fintzen_yu_correction.html\">Fintzen 2021: correction to Yu&#x27;s tame supercuspidal construction</a>), and the modern references\nreflect the corrected argument. Yu 2001 is kept only for <em>historical\nnotation alignment</em> and for the <em>statements</em> of the lemmas.</p>\n<p>For lemmas where Yu's proof is correct (e.g. Yu Lem 8.3 descent,\nYu Lem 8.4 depth-shifting isomorphism, Yu Lem 9.3 $G'$-invariance,\nYu Lem 13.7 intersection factorization), all three sources agree;\nDF gives the cleanest reformulation, so it remains the\npreferred reference for verification.</p>\n</blockquote>\n<p>Specific KB nodes that benefit from the DF alternative source:</p>\n<ul>\n<li>[[node:applications.tame_hypotheses_K]] — (K3) proof via MP convexity\n  in each $G^{(i)}$ uses Yu Lem 8.4 + Cor 8.3; DF gives a more uniform\n  statement.</li>\n<li><a class=\"node-ref\" data-node-id=\"applications.tame_two_term_intertwiner\" href=\"../applications/applications_tame_two_term_intertwiner.html\">Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G&#x27; G_{y,s} (Yu Thm 9.4 generalized)</a> — Yu Thm 9.4; DF Lem\n  2.6.6 is a cleaner alternative.</li>\n<li><a class=\"node-ref\" data-node-id=\"applications.tame_kappa_intertwiner\" href=\"../applications/applications_tame_kappa_intertwiner.html\">Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))</a> — Yu Lem 12.4/12.5/13.6/13.7;\n  DF §3.4 packages these.</li>\n<li><a class=\"node-ref\" data-node-id=\"applications.tame_intertwiner\" href=\"../applications/applications_tame_intertwiner.html\">Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y</a> — Yu Lem 13.7 for the inductive\n  step; DF lattice-index argument suffices.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "href": "applications/applications_compatible_beta_extension_family.html"
+    },
+    {
+      "id": "applications.tame_hypotheses_K",
+      "title": "Hypotheses (K1)–(K3), (F1)–(F4) for tame types",
+      "href": "applications/applications_tame_hypotheses_K.html"
+    },
+    {
+      "id": "applications.tame_intertwiner",
+      "title": "Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y",
+      "href": "applications/applications_tame_intertwiner.html"
+    },
+    {
+      "id": "applications.tame_kappa_intertwiner",
+      "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+      "href": "applications/applications_tame_kappa_intertwiner.html"
+    },
+    {
+      "id": "applications.tame_two_term_intertwiner",
+      "title": "Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G' G_{y,s} (Yu Thm 9.4 generalized)",
+      "href": "applications/applications_tame_two_term_intertwiner.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

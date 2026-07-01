@@ -1,0 +1,34 @@
+{
+  "id": "depth_zero_reduction.O_hypothesis",
+  "title": "Hypothesis (O): K_{x,0+}-vs-M_{x,0+} transversality on B(M)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_O_hypothesis.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>Hypothesis (O)</h1>\n<blockquote>\n<p><strong>Hypothesis (O).</strong> For each vertex $x \\in A \\subseteq \\mathcal{B}(M)$\nand each $d \\geq 0$: if $\\mathcal{F}, \\mathcal{F}' \\in \\mathcal{B}(M)_d$ and\n$\\mathcal{F}' = k \\cdot \\mathcal{F}$ for some $k \\in K_{x, 0+}$, then\nthere exists $m \\in M_{x, 0+}$ with $\\mathcal{F}' = m \\cdot \\mathcal{F}$.</p>\n</blockquote>\n<p>(O) is a <em>transversality</em> hypothesis: the pro-$p$ part $K_{x, 0+}$\nof $K_x$ does not bring $\\mathcal{B}(M)$-cells to genuinely new\n$\\mathcal{B}(M)$-cells beyond the $M_{x, 0+}$-action. Equivalently,\n$K_{x, 0+}$ admits a (set-theoretic) decomposition\n$K_{x, 0+} = M_{x, 0+} \\cdot P_x$ in which $P_x \\subseteq K_{x, 0+}$\ndoes not stabilise any $\\mathcal{B}(M)$-cell setwise.</p>\n<h2>Role: isolating mock-exp from the main framework</h2>\n<p>(O) is the substantive content of the orbit bijection\n([[node:depth_zero_reduction.M_K_orbit_bijection]] Lemma): in the\npresent formulation (option (B) of the 2026-05-25 audit), the\nabstract framework consumes (O) as a black box, and the\nmock-exponential machinery of $[$Adler, §1.5$]$ enters only at the\n<strong>verification</strong> of (O) in each application.</p>\n<p>This is the cleanest separation: the cartesian-cosheaf framework\nof <a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves\" href=\"../coefficient_systems/coefficient_systems_cartesian_cosheaves.html\">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a> does not see\nmock-exp anywhere; mock-exp is fully isolated to the\napplication-specific verification step.</p>\n<h2>Why (O) cannot be eliminated entirely</h2>\n<p>Mock-exp's substantive content is precisely the existence of the\ntransversal $P_x = \\varphi(\\mathfrak{k}^\\perp_{x, 0+})$ inside\n$K_{x, 0+}$. This is a real structural fact about the relation\nbetween $K$ and $M$ that does not follow from any abstract axiom\n((T1)–(T5), (K1)–(K4), (E1)–(E4)).</p>\n<p>In comparison:\n- <strong>Lanard's framework</strong> (no $M$-vs-$G$ distinction): the question\n  does not arise.\n- <strong>Dat–Fintzen</strong> (with $M$-vs-$G$): cites Adler explicitly.</p>\n<p>So the dependency is real. (O) is the cleanest way to record it.</p>\n<h2>Verification in the two applications</h2>\n<h3>Classical case</h3>\n<p>Mock-exp via the Cayley transform on $\\mathfrak{gl}_F(V)$\n[Stevens:SC App A], descended to $G^\\beta$ via Galois; explicitly\nverifies (O) by producing the transversal\n$P_x = \\varphi(\\mathfrak{k}^\\perp_{x, 0+})$ inside $K_{x, 0+}$.</p>\n<h3>Tame case</h3>\n<p>Mock-exp via the exponential map on the Lie algebra (large $p$),\n$\\varphi_x = \\exp$ on $\\mathfrak{m}^\\perp_{x, 0+}$; the corresponding\ntransversal is verified across the apartment using parabolic Bruhat\ndecomposition in the enveloping group, plus Galois descent\n[Adler, §1.5].</p>\n<h3>Abstract case</h3>\n<p>(O) is an additional axiom that must be verified case-by-case\n(parahoric, classical, tame all check, abstract is open).</p>\n<h2>See also</h2>\n<ul>\n<li>[[node:depth_zero_reduction.M_K_orbit_bijection]] — the orbit\n  bijection that uses (O) as its substantive injectivity content.</li>\n<li>[[node:depth_zero_reduction.K4_hypothesis]] — the reductive-quotient\n  hypothesis (K4); (K4) gives the <strong>surjectivity</strong> part of the\n  orbit bijection (via the Levi splitting $K_x = K_{x, 0+} \\cdot M_x$),\n  while (O) gives <strong>injectivity</strong>.</li>\n<li><a class=\"node-ref\" data-node-id=\"applications.mock_exponential_map\" href=\"../applications/applications_mock_exponential_map.html\">Good mock exponential map and factorization M × m^⊥_{x,0+} → MG_{x,0+}</a> — the mock-exp\n  construction that verifies (O) in classical / tame cases.</li>\n</ul>\n<h2>Open question</h2>\n<p>Can (O) be derived from a cartesian-cosheaf-style axiom (e.g., a\ncategorical compatibility condition on the functor $[A/\\mathscr K_M]\n\\to [A/\\mathscr K]$)? If so, mock-exp could be eliminated entirely\nfrom the framework. Currently open.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "href": "building/building_generalized_building_bs.html"
+    },
+    {
+      "id": "depth_zero_reduction.K4_hypothesis",
+      "title": "Hypothesis (K4): hat-M_F / M_{F,0+} ≅ hat-K_F / K_{F,0+}",
+      "href": "depth_zero_reduction/depth_zero_reduction_K4_hypothesis.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.M_K_orbit_bijection",
+      "title": "M_{x,0+}\\B(M)_d ↔ K_{x,0+}\\(K_x B(M))_d bijection",
+      "href": "depth_zero_reduction/depth_zero_reduction_M_K_orbit_bijection.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

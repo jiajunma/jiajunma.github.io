@@ -1,0 +1,28 @@
+{
+  "id": "applications.contraction_map_existence",
+  "title": "Bestvina–Savin contraction on a convex polyhedron complex (App C)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "applications/applications_contraction_map_existence.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Bestvina–Savin contraction on a convex polyhedron complex</h1>\n<p>A <strong>convex polyhedron complex</strong> is a convex closed subset $A \\subseteq E$\nof a Euclidean space with a regular CW structure such that each closed cell\n$\\bar F$ is a convex polyhedron, and every compact subset of $E$ meets\nfinitely many cells. The <strong>cellular convex hull</strong> $\\mathrm{CCH}(S)$ of\n$S \\subseteq A$ is the smallest convex subcomplex containing $S$.</p>\n<h2>PL skeletal collapse lemmas</h2>\n<blockquote>\n<p><strong>Lemma 1.</strong> Let $f : D \\to A$ be PL, $F$ a cell of $A$ with $\\dim F &gt;\n\\dim D$. There is a PL $g : D \\to A$ with $g(D) \\subseteq (f(D) \\setminus\nF) \\cup \\partial F$ and $g = f$ off $F$.</p>\n</blockquote>",
+  "proof_html": "<p>Pick $z \\in F \\setminus f(D)$ (non-empty by dimensionality);\n\"radial\" projection from $z$ to $\\partial F$ gives a PL retraction\n$A \\setminus \\{z\\} \\to A$, hence $g := p \\circ f$.</p>\n<blockquote>\n<p><strong>Lemma 2.</strong> Let $f : D \\to A$ PL, $d = \\dim D$. There is PL $g$ with\n$g(D) \\subseteq \\mathrm{sk}_d A$ and $g = f$ on $f^{-1}(\\mathrm{sk}_d A)$.</p>\n</blockquote>\n<p><strong>Proof.</strong> Induct on the skeletal level $r$ such that $f(D) \\subseteq\n\\mathrm{sk}_r A$, applying Lemma 1 to each $r$-cell.</p>\n<h2>Main contraction theorem</h2>\n<blockquote>\n<p><strong>Theorem.</strong> Fix $x_0 \\in A^{(0)}$. There exists a cellular contraction\n$H : A \\times [0, 1] \\to A$ with:</p>\n<ul>\n<li>$H(y, 0) = y$, $H(y, 1) = x_0$ for all $y \\in A$;</li>\n<li>$H(y, [0, 1]) \\subseteq \\mathrm{CCH}(\\{y, x_0\\})$ for all $y \\in A$.</li>\n</ul>\n</blockquote>\n<p>The second condition (containment in CCH) is the <em>crucial refinement</em>\nbeyond mere homotopy; it gives the (C2) support property used in\n<a class=\"node-ref\" data-node-id=\"building.contraction_map_apartment\" href=\"../building/building_contraction_map_apartment.html\">Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)</a>.</p>\n<p><strong>Proof.</strong> Construct $H_F$ for cells $F$ inductively on $\\dim F$.\nFor a 0-cell $y$, pick a PL path in $\\mathrm{sk}_1 \\mathrm{CCH}(\\{y, x_0\\})$.\nFor an $i$-cell $E$: define $f$ on $\\partial(\\bar E \\times [0, 1])$ via the\npreviously built $H_F$'s; extend to a \"cone\" using a point $z_E \\in E$ and\n$w_E \\in \\mathrm{CCH}(\\bar E \\cup \\{x_0\\})$; apply Lemma 2 to land in\n$\\mathrm{sk}_{i+1} \\mathrm{CCH}(\\bar E \\cup \\{x_0\\})$.</p>\n<h2>$N$-equivariant version</h2>\n<blockquote>\n<p><strong>Proposition.</strong> If $N$ is a finite reflection group of $A$ fixing $x_0$,\nand for every Weyl chamber $C$ of $N$, $\\bar C \\cap A$ is a subcomplex of\n$A$, then $H$ can be taken to be $N$-equivariant.</p>\n</blockquote>\n<p><strong>Proof.</strong> Build $H_0$ on a fundamental chamber and extend by\nequivariance.</p>\n<h2>Chain incarnation</h2>\n<blockquote>\n<p><strong>Corollary.</strong> There is a chain homotopy $c_i : C_i(A) \\to C_{i+1}(A)$\nbetween $\\id$ and $(p_{x_0})_*$ with the same support property: if\n$c_i(\\sigma) = \\sum c(\\sigma, \\tau) \\tau$ and $c(\\sigma, \\tau) \\ne 0$,\nthen $\\tau \\subseteq \\mathrm{CCH}(\\sigma \\cup \\{x_0\\})$.</p>\n</blockquote>\n<p>This is the $c$ used throughout\n<a class=\"node-ref\" data-node-id=\"building.contraction_map_apartment\" href=\"../building/building_contraction_map_apartment.html\">Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)</a> and consequently in\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.acyclicity_phi_x_chain\" href=\"../coefficient_systems/coefficient_systems_acyclicity_phi_x_chain.html\">Acyclicity of C_d(Φ, V)[φ_x] for vertices x</a>.</p>\n<blockquote>\n<p><strong>Example.</strong> For Schneider–Stuhler-style polysimplicial $A$ this recovers\nthe original BS proof at integer depth; for DeBacker $r$-facets it\nhandles general depth $r$.</p>\n</blockquote>",
+  "deps": [
+    {
+      "id": "building.contraction_map_apartment",
+      "title": "Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)",
+      "href": "building/building_contraction_map_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.acyclicity_phi_x_chain",
+      "title": "Acyclicity of C_d(Φ, V)[φ_x] for vertices x",
+      "href": "coefficient_systems/coefficient_systems_acyclicity_phi_x_chain.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction of the compatible cosheaf 𝒦 from pointwise {κ_E} via an alcove (§12.2) — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf topic-active">
+          <a href="../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../keywords/category.html">category</a></li>
+      
+        <li><a href="../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../keywords/external.html">external</a></li>
+      
+        <li><a href="../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../keywords/main.html">main</a></li>
+      
+        <li><a href="../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../keywords/res.html">res</a></li>
+      
+        <li><a href="../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-applications-2e-compatible_system_from_alcove">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Construction of the compatible cosheaf 𝒦 from pointwise {κ_E} via an alcove (§12.2)</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-applications-2e-compatible_system_from_alcove">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="applications_qfd_from_alcove.html">Quasi-fundamental domain from a closed alcove (App B)</a></li>
+        
+        <li><a href="applications_unramified_characters_cosheaf.html">Unramified characters bijection X^ur(G) ↔ Cosh_G(B(G); 1_Fix) (App B.1)</a></li>
+        
+        <li><a href="../cellular_categories/cellular_categories_sheaf_of_subgroups.html">G-equivariant (co)sheaf of subgroups and characters</a></li>
+        
+        <li><a href="../equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html">Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)</a></li>
+        
+        <li><a href="../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Construction of the compatible cosheaf $\mathscr K$ from a pointwise $\{\kappa_E\}$</h1>
+<p>This is the <strong>constructive companion</strong> to the §4 abstract Heisenberg–Weil
+equivalence (<a class="node-ref" data-node-id="equivariant_sheaves.heisenberg_weil_equivalence" href="../equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html">Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)</a>):
+given a <em>pointwise</em> compatible family $\{\kappa_E\}_E$ of irreducible
+representations satisfying the type axioms, it builds an explicit
+$N$-equivariant cosheaf $\mathscr K$ on the generalized building
+$\BSigma$. The construction uses the alcove fundamental domain
+(<a class="node-ref" data-node-id="applications.qfd_from_alcove" href="applications_qfd_from_alcove.html">Quasi-fundamental domain from a closed alcove (App B)</a>) plus a free-abelian extension
+of the action of $\Omega = N_{\mathcal C'}$.</p>
+<h2>Setting</h2>
+<p>We work with two cosheaves / sheaves of subgroups of $G$ on $X = \BSigma$:</p>
+<ul>
+<li>$J$ a <strong>cosheaf</strong> of subgroups, with $J_E \trianglelefteq \Fix_G(E)$
+  for all $E \in [\![X]\!]$.</li>
+<li>$Q$ a <strong>sheaf</strong> of subgroups, with $Q_E \trianglelefteq \Fix_G(E)$ for
+  all $E$.</li>
+<li>$Q$ normalizes $J$: $g J_E g^{-1} = J_E$ for $g \in Q_E$.</li>
+<li>Set $K_{E,+} := Q_E \cdot J_E$ (the "type group" at $E$).</li>
+<li><strong>Intersection formula:</strong> $K_{x,+} \cap K_{E,+} = (Q_x \cap Q_E)(J_x \cap J_E)$
+  for all $x \in X$ and $E \in [\![X]\!]$.</li>
+</ul>
+<p>We are given a family $\{\kappa_E\}_E$ of irreducible representations of
+$\{K_{E,+}\}_E$ satisfying:</p>
+<ul>
+<li><strong>One-dimensional intertwiner:</strong>
+  $\dim \Hom_{K_{x,+} \cap K_{E,+}}(\kappa_x, \kappa_E) = 1$ for all
+  $x \in X$, $E \in [\![X]\!]$.</li>
+</ul>
+<p>The goal is to upgrade this pointwise data to a <em>cosheaf</em>
+$\mathscr K : [\![X]\!] \to \mathrm{Rep}(R)$ with $\mathscr K_E$ carrying
+the type $\kappa_E$ as a $K_{E,+}$-module, equipped with an
+$N$-equivariant structure $a^\mathscr K_{n, E} : \mathscr K_E \to {}^{n^{-1}}\mathscr K_{nE}$.</p>
+<h2>The alcove setup</h2>
+<p>Let $T \subseteq G$ be a maximal $F$-split torus, $N = N(G, T)$, $A$
+the apartment of the extended building. Let $A' = A / A(Z_G)$ be the
+reduced apartment, $\mathrm{pr} : A \to A'$ the projection. Fix:</p>
+<ul>
+<li>An alcove $\mathcal C'$ in $A'$.</li>
+<li>$\mathcal C := \mathrm{pr}^{-1}(\mathcal C') \subseteq A$.</li>
+<li>$\Omega := \mathrm{stab}_N(\mathcal C')$ — the stabilizer in $N$.</li>
+<li>$\Omega_0 := \Omega \cap G^0(F)$ — the preimage of the torsion part of
+  $\Omega / T_0$.</li>
+<li>A decomposition $\Omega = \Omega_0 \times \Omega_1$ with $\Omega_1$
+  free abelian.</li>
+<li>A point $x_0 \in \mathcal C$ fixed by $\Omega_0$.</li>
+</ul>
+<p>By <a class="node-ref" data-node-id="applications.qfd_from_alcove" href="applications_qfd_from_alcove.html">Quasi-fundamental domain from a closed alcove (App B)</a>, $\mathcal C$ is a quasi-fundamental
+domain for the $G$-action on $\BSigma$ with stabilizing subgroup $N$
+(and $\Omega_1$ acts freely).</p>
+<h2>Main theorem</h2>
+<blockquote>
+<p><strong>Theorem (Sheaf7 §12.2).</strong> Under the assumptions above, there exists
+a cosheaf $\mathscr K$ on $\BSigma$ with $\mathscr K_E$ of type
+$\kappa_E$ for each $E$, together with an $N$-equivariant structure
+$a^\mathscr K_{n, E} : \mathscr K_E \to {}^{n^{-1}}\mathscr K_{nE}$
+satisfying the cocycle identity
+$a^\mathscr K_{n, hE} \circ a^\mathscr K_{h, E} = a^\mathscr K_{nh, E}$
+for $n, h \in N$ and all facets $E$.</p>
+</blockquote>
+<p>The construction proceeds in three steps.</p>
+<h2>Step 1 — Restriction maps on $\mathcal C$ via $\mathscr I_E$</h2>
+<p>Let $\mathcal R_{\mathcal C}(\mathscr K)$ be the set of collections
+$\{r^\mathscr K_{F, E} \in \Hom_{K_{F,+} \cap K_{E,+}}(\kappa_F, \kappa_E) \mid E \preceq F\}$
+satisfying the cocycle $r^\mathscr K_{E, D} \circ r^\mathscr K_{F, E} = r^\mathscr K_{F, D}$
+for $D \preceq E \preceq F$.</p>
+<p>Define
+$$\mathscr I_E \;:=\; \bigl( (\mathscr K_{x_0}^* \otimes \mathscr K_E)_{J_{x_0} \cap J_E} \bigr)^{Q_{x_0} \cap Q_E}.$$</p>
+<p>For $E \preceq F$, there is a natural isomorphism
+$$e_{F, E} \colon \Hom_{K_{F,+} \cap K_{E,+}}(\mathscr K_F, \mathscr K_E)
+   \;\xrightarrow{\;\cong\;}\;
+   \Hom(\mathscr I_F, \mathscr I_E),$$
+given on classes by
+$$e_{F, E}(r)\bigl([{\textstyle\sum_i} v_0 \otimes v_i]_{J_{x_0} \cap J_F}\bigr)
+   \;=\; [{\textstyle\sum_i} v_0 \otimes r(v_i)]_{J_{x_0} \cap J_E}.$$</p>
+<blockquote>
+<p><strong>Claim.</strong> For a collection $\{r_{F, E}\}$, the cocycle
+$r_{E, D} \circ r_{F, E} = r_{F, D}$ holds iff
+$e(r_{E, D}) \circ e(r_{F, E}) = e(r_{F, D})$.</p>
+</blockquote>
+<p><strong>Proof of claim.</strong> Both sides differ by a scalar (since each
+$\Hom$-space is one-dimensional); the $e$ isomorphism transports the
+scalar identically. $\square$</p>
+<p><strong>Existence of a coherent collection.</strong> Since $\mathcal C$ is simply
+connected, one can globally choose the $\{r_{F, E}\}$ to satisfy the
+cocycle. Two such choices differ by a collection of $\mathscr K_E$-isomorphisms
+$\{i_E : \mathscr K_E \to \mathscr K_E\}$, so $\mathcal R_{\mathcal C}(\mathscr K)$
+is non-empty and unique up to canonical isomorphism.</p>
+<h2>Step 2 — $\Omega_0$-equivariance via the diagram</h2>
+<p>For each $E$ in $\mathcal C$, the chosen restriction $r_{x_0 \to E}$
+(transported through the $r_{F, E}$-collection) gives an iso
+$$\mathscr I_{x_0} = \Hom_{K_{x_0, 0+}}(\mathscr K_{x_0}, \mathscr K_{x_0})_{J_{x_0}}
+   \;\xrightarrow{\;\cong\;}\;
+   \mathscr I_E = \Hom_{K_{x_0, 0+} \cap K_{E,0+}}(\mathscr K_{x_0}, \mathscr K_E).$$</p>
+<p>Let $c_E$ be the image of $1 \in \mathscr I_{x_0}$ under this iso.</p>
+<p>For $n \in \Omega_0$ (which stabilizes $x_0$), consider the commutative
+diagram (with $(c_E)^*$ denoting pre-composition by $c_E$ and $(c_E)_*$
+post-composition):</p>
+<p>$$\begin{array}{ccc}
+\Hom_{K_{E,0+}}(\mathscr K_E, {}^{n^{-1}}\mathscr K_{nE})
+  &amp; \xrightarrow[\cong]{(c_E)^*}
+  &amp; \Hom_{K_{x_0, 0+} \cap K_{E,0+}}(\mathscr K_{x_0}, {}^{n^{-1}}\mathscr K_{nE}) \\
+  &amp; &amp; \parallel \\
+\Hom_{K_{x_0, 0+}}({}^n \mathscr K_{x_0}, \mathscr K_{x_0})
+  &amp; \xrightarrow[\cong]{(c_{nE})_*}
+  &amp; \Hom_{K_{x_0, 0+} \cap K_{nE,0+}}({}^n \mathscr K_{x_0}, \mathscr K_{nE})
+\end{array}$$</p>
+<p>Define
+$$a^\mathscr K_{n, E} \;:=\; (c_E^*)^{-1}\bigl((c_{nE})_*(a^\mathscr K_{x_0}(n))\bigr)
+   \;\in\; \Hom_{K_{E,0+}}(\mathscr K_E, {}^{n^{-1}}\mathscr K_{nE}),$$
+where $a^\mathscr K_{x_0}(n) \in \Hom_{K_{x_0, 0+}}({}^n \mathscr K_{x_0}, \mathscr K_{x_0})$
+is the given $\Omega_0$-action at $x_0$.</p>
+<blockquote>
+<p><strong>Cocycle identity.</strong> $a^\mathscr K_{n, hE} \circ a^\mathscr K_{h, E}
+= a^\mathscr K_{nh, E}$ for $n, h \in \Omega_0$.</p>
+</blockquote>
+<p><strong>Proof of cocycle.</strong> Apply $(c_E)^*$ to both sides; the definition
+unwinds (using $((c_E)^*)^{-1}(T) \circ c_E = T$ for any
+$T \in \Hom_{K_{x_0, 0+} \cap K_{E,0+}}(\mathscr K_{x_0}, {}^{n^{-1}}\mathscr K_{nE})$):
+$$(c_E)^*\bigl(a^\mathscr K_{n, hE} \circ a^\mathscr K_{h, E}\bigr)
+  \;=\; c_{nhE} \circ a^\mathscr K_{x_0}(n) \circ a^\mathscr K_{x_0}(h)
+  \;=\; c_{nhE} \circ a^\mathscr K_{x_0}(nh).$$
+Since $(c_E)^*$ is an iso, the cocycle holds. $\square$</p>
+<h2>Step 3 — Extension to $\Omega_1$ via the free-abelian basis</h2>
+<p>$\Omega_1$ is free abelian of finite rank; pick a basis
+$n_1, \dots, n_k$.</p>
+<p>For each generator $n_i$: since $\Omega_1$ acts freely on $\mathcal C$
+(by <a class="node-ref" data-node-id="applications.qfd_from_alcove" href="applications_qfd_from_alcove.html">Quasi-fundamental domain from a closed alcove (App B)</a>), the sheaf
+$E \mapsto {}^{n_i^{-1}}\mathscr K_{n_i E}$ on $\mathcal C$ has the same
+type structure as $\mathscr K$. By Step 1 applied to this twisted sheaf,
+$a^\mathscr K_{n_i, E}$ is determined up to a single global scalar; fix a
+choice.</p>
+<p>For general $n = \sum_i k_i n_i \in \Omega_1$,
+$$a^\mathscr K_{n, E} \;:=\; \prod_{i=1}^k \bigl(a^\mathscr K_{n_i, E}\bigr)^{k_i}.$$</p>
+<p>The cocycle identity for $\Omega_1$ follows from the free-abelian
+relations; commutativity reduces to the $\Omega_0$-case in Step 2
+applied to the twisted sheaves.</p>
+<p>Combining Steps 2 and 3 with $\Omega = \Omega_0 \times \Omega_1$ and
+extending $G$-equivariantly to $\BSigma = G \times^N \mathcal C$ (via
+the QFD property) gives the full $N$-equivariant structure. $\square$</p>
+<h2>Where this is used</h2>
+<p>This construction is the <strong>explicit-cosheaf</strong> counterpart to the global
+β-extension family of
+<a class="node-ref" data-node-id="applications.compatible_beta_extension_family" href="applications_compatible_beta_extension_family.html">Global β-extension existence (compatible κ-family on B(G_β))</a>:
+- <em>Compatible β-extension family</em> (Skodlerack–Ye) tells us that a
+  pointwise $\{\tilde\kappa^\circ_x\}$ exists with the right
+  compatibility.
+- The §12.2 construction here assembles that pointwise data into the
+  actual $G$-equivariant cosheaf $\mathscr K$ needed by the §4
+  Heisenberg–Weil equivalence
+  (<a class="node-ref" data-node-id="equivariant_sheaves.heisenberg_weil_equivalence" href="../equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html">Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)</a>) and hence
+  by the §8 Res/Sat
+  (<a class="node-ref" data-node-id="depth_zero_reduction.res_sat_quasi_inverse" href="../depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html">Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)</a>).</p>
+<h2>Remarks</h2>
+<ul>
+<li>The construction is reminiscent of the <em>Mackey machine</em> (extending an
+  $\Omega_0$-action on $\mathscr K_{x_0}$ to all of $\Omega$ via Clifford
+  theory), but here applied at the cosheaf level rather than the
+  representation level.</li>
+<li>The role of $\mathscr I_E$ is to control the scalar ambiguity in the
+  one-dim Hom spaces: $\mathscr I_E \cong R$ canonically (one-dim),
+  and the maps $e_{F, E}$ make the cocycle pinning explicit.</li>
+<li>The free abelian extension to $\Omega_1$ requires choosing one scalar
+  per generator $n_i$; different choices give isomorphic cosheaves but
+  not equal ones (a torsor for $\Omega_1^*$ acting on $\mathscr K$).</li>
+</ul>
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">cosheaf</span><span class="tag">alcove</span><span class="tag">N-equivariant</span><span class="tag">compatible-system</span><span class="tag">construction</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

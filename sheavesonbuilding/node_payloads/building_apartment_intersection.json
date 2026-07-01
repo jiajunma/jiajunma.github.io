@@ -1,0 +1,49 @@
+{
+  "id": "building.apartment_intersection",
+  "title": "g·A ∩ A is a cellular subcomplex of A",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "building/building_apartment_intersection.html",
+  "primary_topic": "building",
+  "topics": [
+    "building"
+  ],
+  "body_html": "<h1>$g \\cdot A \\cap A$ is a cellular subcomplex of $A$</h1>\n<blockquote>\n<p><strong>Lemma.</strong> For any $g \\in G$, the intersection $g \\cdot A \\cap A$ is a\ncellular subcomplex of $A$.</p>\n</blockquote>",
+  "proof_html": "<p>By the cell intersection lemma from\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"../equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a> applied to\n$X = \\BSigma$, $g \\cdot A \\cap A$ is a union of facets in\n$\\mathscr{F}$. For any two facets $\\mathcal{F}, \\mathcal{F}' \\in \\mathscr{F}$\nwith $\\mathcal{F} = g \\mathcal{F}' \\subseteq g \\cdot A \\cap A$, the QFD\nproperty gives $n \\in N$ with $n \\cdot \\mathcal{F}' = \\mathcal{F}$. Then\n$gA \\supseteq \\partial(g\\mathcal{F}') = \\partial(n\\mathcal{F}') = n\\partial\\mathcal{F}'\n= \\partial\\mathcal{F}$, so the boundary of every facet of the intersection\nis again in the intersection. Hence it is a subcomplex. $\\square$</p>\n<p>This compatibility of apartments is the geometric input for the contraction\nextension argument (see [[node:building.contraction_extension_K3]]).</p>",
+  "deps": [
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "href": "building/building_generalized_building_bs.html"
+    },
+    {
+      "id": "equivariant_sheaves.induced_cw_structure",
+      "title": "CW structure and QFD property on G ×^P X' (Prop 2.8)",
+      "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "building.A1_axiom_in_component",
+      "title": "Bruhat–Tits axiom (A1) inside each connected component of B(Σ)",
+      "href": "building/building_A1_axiom_in_component.html"
+    },
+    {
+      "id": "building.apartments_in_bsigma",
+      "title": "Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x",
+      "href": "building/building_apartments_in_bsigma.html"
+    },
+    {
+      "id": "building.connected_components.plan.classification",
+      "title": "Plan: identify each connected component of B(Σ) as K_x · A",
+      "href": "building/building_connected_components_plan_classification.html"
+    },
+    {
+      "id": "building.geodesics_in_component",
+      "title": "Geodesic uniqueness and CAT(0) structure on a connected component of B(Σ)",
+      "href": "building/building_geodesics_in_component.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

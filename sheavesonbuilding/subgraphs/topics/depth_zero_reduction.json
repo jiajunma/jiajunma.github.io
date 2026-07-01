@@ -1,0 +1,531 @@
+{
+  "topic": {
+    "id": "depth_zero_reduction",
+    "title": "Depth Zero Reduction",
+    "href": "depth_zero_reduction/index.html",
+    "parent": null,
+    "node_count": 12,
+    "descendant_node_count": 12
+  },
+  "counts": {
+    "internal_nodes": 12,
+    "inlined_nodes": 0,
+    "descendant_nodes": 12,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 12,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 5,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 18,
+    "visible_nodes_with_selected_proof_plans": 18
+  },
+  "nodes": [
+    {
+      "id": "depth_zero_reduction.E2_construction",
+      "title": "Construction of the cocycle r_{g, F} in (E2)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_E2_construction.html",
+      "payload": "node_payloads/depth_zero_reduction_E2_construction.json"
+    },
+    {
+      "id": "depth_zero_reduction.K4_hypothesis",
+      "title": "Hypothesis (K4): hat-M_F / M_{F,0+} ≅ hat-K_F / K_{F,0+}",
+      "kind": "definition",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_K4_hypothesis.html",
+      "payload": "node_payloads/depth_zero_reduction_K4_hypothesis.json"
+    },
+    {
+      "id": "depth_zero_reduction.M_K_orbit_bijection",
+      "title": "M_{x,0+}\\B(M)_d ↔ K_{x,0+}\\(K_x B(M))_d bijection",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_M_K_orbit_bijection.html",
+      "payload": "node_payloads/depth_zero_reduction_M_K_orbit_bijection.json"
+    },
+    {
+      "id": "depth_zero_reduction.O_hypothesis",
+      "title": "Hypothesis (O): K_{x,0+}-vs-M_{x,0+} transversality on B(M)",
+      "kind": "definition",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_O_hypothesis.html",
+      "payload": "node_payloads/depth_zero_reduction_O_hypothesis.json"
+    },
+    {
+      "id": "depth_zero_reduction.R_xF_coeff",
+      "title": "Intertwiner coefficient system 𝒞_{x,F} = Hom(κ_x, κ_F)_{J ∩ J} (geometrization of (E4))",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_R_xF_coeff.html",
+      "payload": "node_payloads/depth_zero_reduction_R_xF_coeff.json"
+    },
+    {
+      "id": "depth_zero_reduction.chain_complex_iso",
+      "title": "i_x: C_d(B(Σ),𝒱)_x ≅ C_d(B(M),𝒲)_x",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_chain_complex_iso.html",
+      "payload": "node_payloads/depth_zero_reduction_chain_complex_iso.json"
+    },
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "kind": "definition",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html",
+      "payload": "node_payloads/depth_zero_reduction_hypothesis_E.json"
+    },
+    {
+      "id": "depth_zero_reduction.kappa_dual_coeff",
+      "title": "Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_kappa_dual_coeff.html",
+      "payload": "node_payloads/depth_zero_reduction_kappa_dual_coeff.json"
+    },
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html",
+      "payload": "node_payloads/depth_zero_reduction_main_theorem.json"
+    },
+    {
+      "id": "depth_zero_reduction.res_preserves_E",
+      "title": "Res sends E_Φ to E_M (Prop 8.1)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_preserves_E.html",
+      "payload": "node_payloads/depth_zero_reduction_res_preserves_E.json"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "kind": "definition",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_functors.html",
+      "payload": "node_payloads/depth_zero_reduction_res_sat_functors.json"
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_quasi_inverse",
+      "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_sat_quasi_inverse.html",
+      "payload": "node_payloads/depth_zero_reduction_res_sat_quasi_inverse.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.E2_construction",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.K4_hypothesis",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.M_K_orbit_bijection",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.O_hypothesis",
+      "to": "depth_zero_reduction.M_K_orbit_bijection",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.M_K_orbit_bijection",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.O_hypothesis",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.R_xF_coeff",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.M_K_orbit_bijection",
+      "to": "depth_zero_reduction.chain_complex_iso",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.R_xF_coeff",
+      "to": "depth_zero_reduction.chain_complex_iso",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.chain_complex_iso",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.E2_construction",
+      "to": "depth_zero_reduction.kappa_dual_coeff",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.kappa_dual_coeff",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.res_preserves_E",
+      "to": "depth_zero_reduction.main_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_quasi_inverse",
+      "to": "depth_zero_reduction.main_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.chain_complex_iso",
+      "to": "depth_zero_reduction.res_preserves_E",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.res_preserves_E",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.res_sat_functors",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.res_sat_functors",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.kappa_dual_coeff",
+      "to": "depth_zero_reduction.res_sat_functors",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.kappa_dual_coeff",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse",
+      "kind": "uses"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "applications",
+      "title": "Applications",
+      "href": "applications/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 21
+    },
+    {
+      "id": "building",
+      "title": "Building",
+      "href": "building/index.html",
+      "role": "dependency",
+      "node_count": 16
+    },
+    {
+      "id": "coefficient_systems",
+      "title": "Coefficient Systems",
+      "href": "coefficient_systems/index.html",
+      "role": "dependency",
+      "node_count": 21
+    },
+    {
+      "id": "equivariant_sheaves",
+      "title": "Equivariant Sheaves",
+      "href": "equivariant_sheaves/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 9
+    },
+    {
+      "id": "representations",
+      "title": "Representations",
+      "href": "representations/index.html",
+      "role": "dependency",
+      "node_count": 5
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:applications",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse",
+      "kind": "boundary_dependency",
+      "topic": "applications",
+      "count": 1
+    },
+    {
+      "from": "topic:building",
+      "to": "depth_zero_reduction.O_hypothesis",
+      "kind": "boundary_dependency",
+      "topic": "building",
+      "count": 1
+    },
+    {
+      "from": "topic:coefficient_systems",
+      "to": "depth_zero_reduction.E2_construction",
+      "kind": "boundary_dependency",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "topic:coefficient_systems",
+      "to": "depth_zero_reduction.hypothesis_E",
+      "kind": "boundary_dependency",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "topic:coefficient_systems",
+      "to": "depth_zero_reduction.main_theorem",
+      "kind": "boundary_dependency",
+      "topic": "coefficient_systems",
+      "count": 2
+    },
+    {
+      "from": "topic:coefficient_systems",
+      "to": "depth_zero_reduction.res_preserves_E",
+      "kind": "boundary_dependency",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "topic:coefficient_systems",
+      "to": "depth_zero_reduction.res_sat_functors",
+      "kind": "boundary_dependency",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "topic:equivariant_sheaves",
+      "to": "depth_zero_reduction.M_K_orbit_bijection",
+      "kind": "boundary_dependency",
+      "topic": "equivariant_sheaves",
+      "count": 1
+    },
+    {
+      "from": "topic:equivariant_sheaves",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse",
+      "kind": "boundary_dependency",
+      "topic": "equivariant_sheaves",
+      "count": 1
+    },
+    {
+      "from": "topic:representations",
+      "to": "depth_zero_reduction.main_theorem",
+      "kind": "boundary_dependency",
+      "topic": "representations",
+      "count": 1
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 2
+    },
+    {
+      "from": "depth_zero_reduction.main_theorem",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 2
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "topic:equivariant_sheaves",
+      "kind": "boundary_dependent",
+      "topic": "equivariant_sheaves",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "K4",
+      "title": "K4",
+      "href": "keywords/K4.html",
+      "count": 1
+    },
+    {
+      "id": "alcove",
+      "title": "alcove",
+      "href": "keywords/alcove.html",
+      "count": 1
+    },
+    {
+      "id": "building",
+      "title": "building",
+      "href": "keywords/building.html",
+      "count": 1
+    },
+    {
+      "id": "chain-complex",
+      "title": "chain-complex",
+      "href": "keywords/chain-complex.html",
+      "count": 1
+    },
+    {
+      "id": "cocycle",
+      "title": "cocycle",
+      "href": "keywords/cocycle.html",
+      "count": 1
+    },
+    {
+      "id": "coefficient-system",
+      "title": "coefficient-system",
+      "href": "keywords/coefficient-system.html",
+      "count": 2
+    },
+    {
+      "id": "constant",
+      "title": "constant",
+      "href": "keywords/constant.html",
+      "count": 1
+    },
+    {
+      "id": "dual",
+      "title": "dual",
+      "href": "keywords/dual.html",
+      "count": 1
+    },
+    {
+      "id": "equivalence",
+      "title": "equivalence",
+      "href": "keywords/equivalence.html",
+      "count": 2
+    },
+    {
+      "id": "extension",
+      "title": "extension",
+      "href": "keywords/extension.html",
+      "count": 1
+    },
+    {
+      "id": "extensions",
+      "title": "extensions",
+      "href": "keywords/extensions.html",
+      "count": 1
+    },
+    {
+      "id": "functor",
+      "title": "functor",
+      "href": "keywords/functor.html",
+      "count": 1
+    },
+    {
+      "id": "geometrization",
+      "title": "geometrization",
+      "href": "keywords/geometrization.html",
+      "count": 1
+    },
+    {
+      "id": "hypothesis",
+      "title": "hypothesis",
+      "href": "keywords/hypothesis.html",
+      "count": 3
+    },
+    {
+      "id": "intertwiner",
+      "title": "intertwiner",
+      "href": "keywords/intertwiner.html",
+      "count": 1
+    },
+    {
+      "id": "isomorphism",
+      "title": "isomorphism",
+      "href": "keywords/isomorphism.html",
+      "count": 1
+    },
+    {
+      "id": "kappa",
+      "title": "kappa",
+      "href": "keywords/kappa.html",
+      "count": 1
+    },
+    {
+      "id": "localization",
+      "title": "localization",
+      "href": "keywords/localization.html",
+      "count": 1
+    },
+    {
+      "id": "main-input",
+      "title": "main-input",
+      "href": "keywords/main-input.html",
+      "count": 1
+    },
+    {
+      "id": "main-theorem",
+      "title": "main-theorem",
+      "href": "keywords/main-theorem.html",
+      "count": 1
+    },
+    {
+      "id": "mock-exp-isolation",
+      "title": "mock-exp-isolation",
+      "href": "keywords/mock-exp-isolation.html",
+      "count": 2
+    },
+    {
+      "id": "orbit-bijection",
+      "title": "orbit-bijection",
+      "href": "keywords/orbit-bijection.html",
+      "count": 2
+    },
+    {
+      "id": "res",
+      "title": "res",
+      "href": "keywords/res.html",
+      "count": 3
+    },
+    {
+      "id": "sat",
+      "title": "sat",
+      "href": "keywords/sat.html",
+      "count": 2
+    },
+    {
+      "id": "transversality",
+      "title": "transversality",
+      "href": "keywords/transversality.html",
+      "count": 1
+    },
+    {
+      "id": "twisting",
+      "title": "twisting",
+      "href": "keywords/twisting.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

@@ -1,0 +1,54 @@
+{
+  "id": "coefficient_systems.localized_equivalence",
+  "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_localized_equivalence.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Localized equivalence</h1>\n<p>Let $E_\\Phi$ be the class of morphisms $s$ in $\\Coeff_G(\\BSigma, \\Phi)$\nsuch that $H_0(s)$ is an isomorphism in $\\Rep_\\Phi(G)$.</p>\n<blockquote>\n<p><strong>Theorem (Sheaf7 §7.4).</strong> $H_0$ induces an equivalence of categories\n$$\\Coeff_G(\\BSigma, \\Phi)[E_\\Phi^{-1}] \\;\\xrightarrow{\\;H_0\\;}\\; \\Rep_\\Phi(G),$$\nwith quasi-inverse $\\Loc_\\Phi$.</p>\n</blockquote>",
+  "proof_html": "<p>The argument is the standard localization-from-adjunction.</p>\n<p><strong>Adjunction.</strong> By <a class=\"node-ref\" data-node-id=\"coefficient_systems.loc_phi_capital\" href=\"coefficient_systems_loc_phi_capital.html\">Loc_Φ: Rep_Φ(G) → Coeff_G(B(Σ), Φ) and H_0 adjunction</a>, $H_0$ is\nleft adjoint to $\\Loc_\\Phi$, with counit\n$\\mathrm{counit}_V : H_0(\\Loc_\\Phi V) \\xrightarrow{\\sim} V$ an\nisomorphism for every $V \\in \\Rep_\\Phi(G)$ (this is the §7.1 resolution\ntheorem <a class=\"node-ref\" data-node-id=\"coefficient_systems.resolution_theorem\" href=\"coefficient_systems_resolution_theorem.html\">Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)</a> combined with\nhypothesis (S) <a class=\"node-ref\" data-node-id=\"coefficient_systems.serre_subcategory_hypothesis\" href=\"coefficient_systems_serre_subcategory_hypothesis.html\">Serre-subcategory property (S) — a consequence, not a hypothesis</a>).</p>\n<p><strong>Gabriel–Zisman localization.</strong> When the counit of an adjunction\n$F \\dashv G$ is a natural iso, the left adjoint $F$ factors through the\nlocalization $C[F^{-1}\\text{-isos}]$ as an equivalence — this is\n[Gabriel–Zisman, <em>Calculus of Fractions and Homotopy Theory</em>, Prop\nI.1.3(ii)–(iii)]. Apply it to:\n- $F = H_0$, $G = \\Loc_\\Phi$;\n- $C = \\Coeff_G(\\BSigma, \\Phi)$, $D = \\Rep_\\Phi(G)$;\n- the class $E_\\Phi$ is by definition $\\{s \\mid H_0(s) \\text{ iso}\\}$.</p>\n<p>The \"counit iso\" hypothesis of GZ is what we just established. The\nconclusion is:\n$$H_0 \\colon \\Coeff_G(\\BSigma, \\Phi)[E_\\Phi^{-1}] \\;\\xrightarrow{\\;\\sim\\;}\\; \\Rep_\\Phi(G),$$\nwith $\\Loc_\\Phi$ as quasi-inverse on $\\Rep_\\Phi(G)$ (induced from the\nright adjoint after localization). $\\square$</p>\n<p><strong>Remark on the unit side.</strong> The unit\n$\\mathrm{unit}_\\mathscr V \\colon \\mathscr V \\to \\Loc_\\Phi(H_0(\\mathscr V))$\nis in general <em>not</em> an iso; it is an iso precisely on the cartesian\nsubcategory $\\Cosh^{\\mathrm{cart}}_G(\\BSigma, R, \\phi) \\subseteq\n\\Coeff_G(\\BSigma, \\Phi)$, by the §7.2 cartesian unit-iso theorem\n(<a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves\" href=\"coefficient_systems_cartesian_cosheaves.html\">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a>). The localization is\ntherefore unnecessary on the cartesian subcategory — the equivalence\nholds before inverting any morphisms. This is what makes the cartesian\nframework valuable for the §8 Res/Sat construction, where\n$\\Res(E_\\Phi) \\subseteq E_M$ is checked block-by-block on cartesian\ncosheaves.</p>\n<h2>Example: depth-zero block (Schneider–Stuhler)</h2>\n<p>Take $M = G$, $K_x = G_x$, $K_{x,0+} = G_{x, 0+}$, $\\phi_x = \\mathbf 1$\non $G_{x, 0+}$. Then $\\Coeff_G^0(\\mathcal{B}(G))$ recovers the standard\nSchneider–Stuhler coefficient system category, and the localization\nequivalence specializes to their depth-zero result. This case is the\ntarget of the §8 reduction\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"../depth_zero_reduction/depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)</a>.</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.loc_phi_capital",
+      "title": "Loc_Φ: Rep_Φ(G) → Coeff_G(B(Σ), Φ) and H_0 adjunction",
+      "href": "coefficient_systems/coefficient_systems_loc_phi_capital.html"
+    },
+    {
+      "id": "coefficient_systems.resolution_theorem",
+      "title": "Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)",
+      "href": "coefficient_systems/coefficient_systems_resolution_theorem.html"
+    },
+    {
+      "id": "coefficient_systems.serre_subcategory_hypothesis",
+      "title": "Serre-subcategory property (S) — a consequence, not a hypothesis",
+      "href": "coefficient_systems/coefficient_systems_serre_subcategory_hypothesis.html"
+    },
+    {
+      "id": "references.gabriel_zisman",
+      "title": "Gabriel–Zisman calculus of fractions (localization criterion)",
+      "href": "references/references_gabriel_zisman.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html"
+    },
+    {
+      "id": "depth_zero_reduction.res_preserves_E",
+      "title": "Res sends E_Φ to E_M (Prop 8.1)",
+      "href": "depth_zero_reduction/depth_zero_reduction_res_preserves_E.html"
+    },
+    {
+      "id": "representations.localization_equivalence",
+      "title": "Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)",
+      "href": "representations/representations_localization_equivalence.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

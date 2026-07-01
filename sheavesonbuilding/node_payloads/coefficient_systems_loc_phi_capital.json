@@ -1,0 +1,39 @@
+{
+  "id": "coefficient_systems.loc_phi_capital",
+  "title": "Loc_Φ: Rep_Φ(G) → Coeff_G(B(Σ), Φ) and H_0 adjunction",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_loc_phi_capital.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>$\\Loc_\\Phi$ and its left adjoint $H_0$</h1>\n<p>Define\n$$\\Loc_\\Phi : \\Rep_\\Phi(G) \\to \\Coeff_G(\\BSigma, \\Phi), \\qquad\n  (\\Loc_\\Phi V)_\\mathcal{F} := V[\\phi_\\mathcal{F}],$$\nwith restrictions the natural inclusions (justified by (T2)) and the obvious\n$G$-action.</p>\n<p>For $\\mathscr{V} \\in \\Coeff_G(\\BSigma, \\Phi)$, define the chain complex\n$$C_d(\\BSigma, \\mathscr{V}) := \\mathrm{span}\\{\\mathcal{F} \\otimes v : \\mathcal{F}\\in [\\![\\BSigma]\\!]_d, v \\in \\mathscr{V}_\\mathcal{F}\\}$$\nwith diagonal $G$-action and boundary\n$\\partial(\\mathcal{F} \\otimes v) = \\sum_{\\mathcal{E} \\subseteq \\overline{\\mathcal{F}}}\n\\epsilon(\\mathcal{F}, \\mathcal{E})\\, \\mathcal{E} \\otimes r^\\mathcal{F}_\\mathcal{E}(v)$.\nWrite $H_i(\\mathscr{V}) := H_i(C_\\bullet(\\BSigma, \\mathscr{V}))$.</p>\n<p>When $\\mathscr{V} = \\Loc_\\Phi(V)$,\n$C_d(\\BSigma, \\Loc_\\Phi V) = C_d(\\Phi, V)$, so the resolution theorem\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.resolution_theorem\" href=\"coefficient_systems_resolution_theorem.html\">Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)</a> gives:</p>\n<blockquote>\n<p><strong>Lemma (counit).</strong> $\\mathrm{counit}_V : H_0(\\Loc_\\Phi V) \\to V$ is a\nnatural isomorphism.</p>\n</blockquote>\n<p>The <strong>unit</strong> $(\\mathrm{unit}<em>\\mathscr{V})</em>\\mathcal{F} := q_\\mathscr{V}\n\\circ r^\\mathcal{F}<em>x : \\mathscr{V}</em>\\mathcal{F} \\to H_0(\\mathscr{V})[\\phi_\\mathcal{F}]$\nis independent of the chosen vertex $x \\in \\overline{\\mathcal{F}}$\n(small lemma using path connectivity inside $\\overline{\\mathcal{F}}$).</p>\n<blockquote>\n<p><strong>Lemma.</strong> $H_0$ is left adjoint to $\\Loc_\\Phi$.</p>\n</blockquote>",
+  "proof_html": "<p>We verify both triangle identities of the adjunction.</p>\n<p><strong>Triangle 1.</strong> For $V \\in \\Rep_\\Phi(G)$, must show\n$\\Loc_\\Phi(\\mathrm{counit}_V) \\circ \\mathrm{unit}_{\\Loc_\\Phi V} = \\id$.</p>\n<p>The counit $\\mathrm{counit}_V : H_0(\\Loc_\\Phi V) \\to V$ is, in\nrepresentation terms, the surjection $[\\mathcal F \\otimes v] \\mapsto v$\n(well-defined: $v \\in (\\Loc_\\Phi V)_\\mathcal F = V[\\phi_\\mathcal F] \\subseteq V$);\nthe resolution theorem (<a class=\"node-ref\" data-node-id=\"coefficient_systems.resolution_theorem\" href=\"coefficient_systems_resolution_theorem.html\">Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)</a>)\nmakes it an iso. Applying $\\Loc_\\Phi$ at facet $\\mathcal F$ gives the\nmap $\\mathrm{counit}_V|_{V[\\phi_\\mathcal F]} : V[\\phi_\\mathcal F] \\to V[\\phi_\\mathcal F]$,\nwhich is the identity.</p>\n<p>The unit $(\\mathrm{unit}<em>{\\Loc</em>\\Phi V})<em>\\mathcal F : V[\\phi</em>\\mathcal F] \\to\nH_0(\\Loc_\\Phi V)[\\phi_\\mathcal F]$ sends $v$ to $q([\\mathcal F \\otimes v])$,\nthe 0-homology class. Composing with $\\Loc_\\Phi(\\mathrm{counit}_V)$ yields\n$v$ back, so the composite is $\\id_{V[\\phi_\\mathcal F]}$, as required.</p>\n<p><strong>Triangle 2.</strong> For $\\mathscr V \\in \\Coeff_G(\\BSigma, \\Phi)$, must show\n$\\mathrm{counit}_{H_0 \\mathscr V} \\circ H_0(\\mathrm{unit}_\\mathscr V) = \\id$.</p>\n<p>The unit $(\\mathrm{unit}_\\mathscr V)_\\mathcal F$ is the map $q_\\mathscr V \\circ r^\\mathcal F_x$,\nchoosing any vertex $x \\in \\overline{\\mathcal F}$; it factors as\n$\\mathscr V_\\mathcal F \\xrightarrow{r^\\mathcal F_x} \\mathscr V_x \\xrightarrow{q_\\mathscr V}\nH_0(\\mathscr V)[\\phi_\\mathcal F]$. Applying $H_0$ gives\n$$H_0(\\mathrm{unit}_\\mathscr V) : H_0(\\mathscr V) \\to H_0(\\Loc_\\Phi H_0(\\mathscr V)),\n   \\qquad [\\mathcal F \\otimes v] \\mapsto [\\mathcal F \\otimes q_\\mathscr V(r^\\mathcal F_x(v))].$$\nBy the cell-poset relation $\\mathcal F \\succeq x$, the class\n$[\\mathcal F \\otimes q_\\mathscr V(r^\\mathcal F_x(v))]$ equals $[x \\otimes q_\\mathscr V(r^\\mathcal F_x(v))]$\nin $H_0(\\Loc_\\Phi H_0(\\mathscr V))$ (boundary computation).</p>\n<p>Then $\\mathrm{counit}_{H_0 \\mathscr V}$ sends this back to\n$q_\\mathscr V(r^\\mathcal F_x(v)) \\in H_0(\\mathscr V)$, which by construction\nequals $[\\mathcal F \\otimes v]$. So the composite is $\\id_{H_0(\\mathscr V)}$.</p>\n<p>Both triangle identities hold, so $H_0 \\dashv \\Loc_\\Phi$. $\\square$</p>\n<h2>Why this matters</h2>\n<p>The adjunction $H_0 \\dashv \\Loc_\\Phi$ is the engine of §7.4: combined\nwith Gabriel–Zisman localization, the counit-iso half (Triangle 1)\nupgrades to a full localized equivalence\n$\\Coeff_G(\\BSigma, \\Phi)[E_\\Phi^{-1}] \\simeq \\Rep_\\Phi(G)$\n(<a class=\"node-ref\" data-node-id=\"coefficient_systems.localized_equivalence\" href=\"coefficient_systems_localized_equivalence.html\">Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)</a>). Triangle 2 by\nitself does not need cartesianness — it holds for <em>all</em> coefficient\nsystems in $\\Coeff_G(\\BSigma, \\Phi)$; cartesianness enters only when\ndemanding the unit itself (not just $H_0$-applied) to be an iso, which\nis the §7.2 unit-iso theorem\n(<a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves\" href=\"coefficient_systems_cartesian_cosheaves.html\">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a>).</p>",
+  "deps": [
+    {
+      "id": "coefficient_systems.coeff_phi",
+      "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+      "href": "coefficient_systems/coefficient_systems_coeff_phi.html"
+    },
+    {
+      "id": "coefficient_systems.rep_capital_phi",
+      "title": "The subcategory Rep_Φ(G)",
+      "href": "coefficient_systems/coefficient_systems_rep_capital_phi.html"
+    },
+    {
+      "id": "coefficient_systems.resolution_theorem",
+      "title": "Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)",
+      "href": "coefficient_systems/coefficient_systems_resolution_theorem.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.localized_equivalence",
+      "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+      "href": "coefficient_systems/coefficient_systems_localized_equivalence.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

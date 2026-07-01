@@ -1,0 +1,34 @@
+{
+  "id": "depth_zero_reduction.E2_construction",
+  "title": "Construction of the cocycle r_{g, F} in (E2)",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "depth_zero_reduction/depth_zero_reduction_E2_construction.html",
+  "primary_topic": "depth_zero_reduction",
+  "topics": [
+    "depth_zero_reduction"
+  ],
+  "body_html": "<h1>Construction of the cocycle $r_{g, \\mathcal{F}}$</h1>\n<p>Setting: $\\mathcal{A}$ a fixed alcove. Define the subcategory\n$[\\mathcal{A}/\\mathscr{K}]' \\subseteq [\\mathcal{A}/\\mathscr{K}]$ on\nfacets, with morphisms\n$$\\Hom_{[\\mathcal{A}/\\mathscr{K}]'}(\\mathcal{F}, \\mathcal{E}) =\n\\begin{cases} \\hat K_\\mathcal{E} &amp; \\mathcal{E} \\preceq \\mathcal{F}, \\\\ \\emptyset &amp; \\text{otherwise.}\\end{cases}$$</p>\n<p>A functor $\\mathscr{V}' : [\\mathcal{A}/\\mathscr{K}]' \\to R\\text{-mod}$ is\ndata $(\\mathscr{V}'_\\mathcal{F}, r^\\mathcal{F}_\\mathcal{E})$ of\n$\\hat K_\\mathcal{F}$-representations and equivariant restrictions.</p>\n<p>Suppose $\\mathscr{V}'$ is given with $V_\\mathcal{F} := \\mathscr{V}'<em>\\mathcal{F}\n\\cong \\kappa</em>\\mathcal{F}$. The goal is to extend $\\mathscr{V}'$ to a functor\n$\\mathscr{V} : [\\mathcal{A}/\\mathscr{K}] \\to R\\text{-mod}$, which adds the\nextra data $i_{n, \\mathcal{E}} : \\mathscr{V}_\\mathcal{E} \\to {}^{n^{-1}}\\mathscr{V}_{n\\mathcal{E}}$\nfor $n \\in \\Omega := \\hat K_{x_0}$.</p>\n<h2>Constant coefficient system on $\\mathbb{I}$</h2>\n<p>For the barycenter $x_0$ of $\\mathcal{A}$, set\n$$\\mathbb{I}_\\mathcal{F} := \\Hom(V_{x_0}, V_\\mathcal{F})_{J_{x_0} \\cap J_\\mathcal{F}}\n\\;\\cong\\; (V_{x_0}^* \\otimes V_\\mathcal{F})_{J_{x_0} \\cap J_\\mathcal{F}}.$$\nEach $\\mathbb{I}_\\mathcal{F}$ is one-dimensional (by (E4)), and the natural\ntransition maps $r^\\mathbb{I}_{\\mathcal{F}, \\mathcal{E}}$ are isomorphisms,\nso $\\mathbb{I} : [A] \\to R\\text{-mod}$ is a constant coefficient system.</p>\n<h2>Cocycle definition</h2>\n<p>For $k \\in \\Omega_0$, the transition map sends $1 \\in \\mathbb{I}_{x_0} \\cong R$\nto $a_\\mathcal{E} := c_\\mathcal{E}(1) \\in \\mathbb{I}_\\mathcal{E}$. Define\n$$r_{k, \\mathcal{E}} := ((a_\\mathcal{E})^*)^{-1}\\,(a_{k\\mathcal{E}})_*\\,\\bigl(\\kappa_{x_0}(k)\\bigr).$$</p>\n<h2>Cocycle property</h2>\n<p>A direct computation (carried out in <code>Sheaf7.tex</code> §8) yields\n$$(a_\\mathcal{E})^*\\bigl(r_{k, h\\mathcal{E}} \\circ r_{h, \\mathcal{E}}\\bigr)\n  = (a_\\mathcal{E})^*(r_{kh, \\mathcal{E}}),$$\nhence $r_{k, h\\mathcal{E}} \\circ r_{h, \\mathcal{E}} = r_{kh, \\mathcal{E}}$.</p>\n<p>Combined with the alcove equivalence\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.alcove_equivalence\" href=\"../coefficient_systems/coefficient_systems_alcove_equivalence.html\">[𝒜/𝒦] ≃ [A/𝒦] (alcove reduction under (F5)–(F6))</a>, this extends $\\kappa$\nto a functor on $[\\mathcal{A}/\\mathscr{K}]$, then to $[A/\\mathscr{K}]$,\nand finally to the full $G$-equivariant coefficient system on $\\BSigma$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    },
+    {
+      "id": "coefficient_systems.alcove_equivalence",
+      "title": "[𝒜/𝒦] ≃ [A/𝒦] (alcove reduction under (F5)–(F6))",
+      "href": "coefficient_systems/coefficient_systems_alcove_equivalence.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "depth_zero_reduction.kappa_dual_coeff",
+      "title": "Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))",
+      "href": "depth_zero_reduction/depth_zero_reduction_kappa_dual_coeff.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,53 @@
+{
+  "id": "applications.tame_main_theorem",
+  "title": "Main theorem applied to tame types",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "applications/applications_tame_main_theorem.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Main theorem applied to tame types</h1>\n<blockquote>\n<p><strong>Theorem (synthesis).</strong> Let $G$ be a tamely ramified reductive group\nover a $p$-adic field with $p$ large enough, $\\Sigma$ a Heisenberg–Weil\ndatum with depth-zero Levi $M = G^{(0)}$. Then\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"../depth_zero_reduction/depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1</a> gives\n$$\\Rep_\\Phi(G) \\;\\simeq\\; \\Rep_0(M).$$</p>\n</blockquote>",
+  "proof_html": "<p>All axioms required by Main Theorem 8.2.1 are verified for the tame\nYu/AFMO datum:</p>\n<table>\n<thead>\n<tr>\n<th>Axiom</th>\n<th>Source</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(K1)–(K3), (F1)–(F4)</td>\n<td>[[node:applications.tame_hypotheses_K]] (K3 via twisted-Levi tower)</td>\n</tr>\n<tr>\n<td>(T1)–(T5), (E1)–(E3)</td>\n<td>[[node:applications.tame_T_axioms]]</td>\n</tr>\n<tr>\n<td>(S)</td>\n<td><a class=\"node-ref\" data-node-id=\"applications.tame_serre\" href=\"applications_tame_serre.html\">Hypothesis (S) for tame types via Bernstein + [KY]</a></td>\n</tr>\n<tr>\n<td>(E4)</td>\n<td>Follows from <a class=\"node-ref\" data-node-id=\"applications.tame_kappa_intertwiner\" href=\"applications_tame_kappa_intertwiner.html\">Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))</a></td>\n</tr>\n<tr>\n<td>(K4)</td>\n<td>Standard via $K_x = G^{(0)}_{x, 0} J_x$</td>\n</tr>\n<tr>\n<td>Global $\\kappa$-extension</td>\n<td><a class=\"node-ref\" data-node-id=\"applications.compatible_beta_extension_family\" href=\"applications_compatible_beta_extension_family.html\">Global β-extension existence (compatible κ-family on B(G_β))</a> (Skodlerack–Ye Thm 5.21, adapted to AFMO $\\kappa_x$ via the Yu twisted-Levi reductive quotients of $\\mathrm P^\\circ(\\Lambda_x)/\\mathrm P_1(\\Lambda_x)$)</td>\n</tr>\n</tbody>\n</table>\n<p>With all hypotheses satisfied, [Sheaf7 Thm 8.2.1] applies directly. $\\square$</p>\n<h2>Relation to other approaches</h2>\n<p>This is a sheaf-theoretic counterpart of the Hecke-algebra reduction in\n[AFMO2]. The key conceptual difference: our argument goes through\nequivariant coefficient systems on the <em>generalized</em> building $\\BSigma$,\nwhereas [AFMO2] manipulates Hecke algebras directly. The reduction of\ntheta correspondence to the depth-zero case (via [LM]) is the originating\nmotivation.</p>\n<p>See <a class=\"node-ref\" data-node-id=\"references.datfintzen_overview\" href=\"../references/references_datfintzen_overview.html\">Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)</a> for a parallel approach via\nblock decomposition.</p>",
+  "deps": [
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html"
+    },
+    {
+      "id": "applications.tame_hypotheses_K",
+      "title": "Hypotheses (K1)–(K3), (F1)–(F4) for tame types",
+      "href": "applications/applications_tame_hypotheses_K.html"
+    },
+    {
+      "id": "applications.tame_T_axioms",
+      "title": "Hypotheses (T1)–(T5) and (E1)–(E3) for tame types",
+      "href": "applications/applications_tame_T_axioms.html"
+    },
+    {
+      "id": "applications.tame_serre",
+      "title": "Hypothesis (S) for tame types via Bernstein + [KY]",
+      "href": "applications/applications_tame_serre.html"
+    },
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "href": "applications/applications_compatible_beta_extension_family.html"
+    },
+    {
+      "id": "applications.tame_kappa_intertwiner",
+      "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+      "href": "applications/applications_tame_kappa_intertwiner.html"
+    },
+    {
+      "id": "references.datfintzen_overview",
+      "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+      "href": "references/references_datfintzen_overview.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

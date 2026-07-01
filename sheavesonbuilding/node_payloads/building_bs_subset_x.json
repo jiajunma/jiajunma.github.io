@@ -1,0 +1,79 @@
+{
+  "id": "building.bs_subset_x",
+  "title": "The K_x-orbit subset B(Σ)_x := K_x · A",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "building/building_bs_subset_x.html",
+  "primary_topic": "building",
+  "topics": [
+    "building"
+  ],
+  "body_html": "<h1>The $K_x$-orbit subset $\\BSigma_x := K_x \\cdot A$</h1>\n<p>Fix $x \\in A$. Define $\\hat K_x := \\Fix_G(x)$ and\n$$\\BSigma_x \\;:=\\; K_x \\cdot A \\;\\subseteq\\; \\BSigma.$$</p>\n<blockquote>\n<p><strong>Lemma.</strong> $\\BSigma_x = \\hat K_x A = K_x M_x A = K_x \\mathcal{B}(M) = \\hat K_x \\mathcal{B}(M)$.</p>\n</blockquote>\n<p>The intermediate $M_x$ and $\\mathcal{B}(M)$ refer to a Levi (or analogous)\nsubgroup $M$ of $G$ relevant to the application — e.g. in §8 the Levi\nattached to a semisimple character. The role of $M$ is detailed\nseparately in <a class=\"node-ref\" data-node-id=\"building.connected_components.plan.classification\" href=\"connected_components/plan/building_connected_components_plan_classification.html\">Plan: identify each connected component of B(Σ) as K_x · A</a>\ntask C.7 — TBD.</p>",
+  "proof_html": "<p>of $K_x \\cdot A = \\hat K_x \\cdot A$ (= C.3.3)</p>\n<p>This identifies $K_x \\cdot A$ with the union of all apartments of\n$\\BSigma$ through $x$ (combining with the geometric meaning of\n$\\hat K_x \\cdot A$ in <a class=\"node-ref\" data-node-id=\"building.apartments_in_bsigma\" href=\"building_apartments_in_bsigma.html\">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a> Corollary\nC.3.1').</p>\n<p><strong>Inclusion $\\subseteq$.</strong> $K_x \\subseteq \\hat K_x$: every $k \\in K_x$\nfixes $x$ in $\\BSigma$. Indeed $k \\cdot x = [(k, x)]_\\sim$ and\n$[(k, x)] = [(1, x)]$ iff $\\exists n \\in N$ with $n \\cdot x = x$ (so\n$n \\in \\Fix_N(x)$, take $n = e$) and $k n \\in K_x$ (i.e.\\ $k \\in K_x$,\n✓). So $K_x \\cdot A \\subseteq \\hat K_x \\cdot A$.</p>\n<p><strong>Inclusion $\\supseteq$.</strong> Take $\\hat k \\in \\hat K_x$ and $a \\in A$;\nconstruct $k' \\in K_x$, $a' \\in A$ with $\\hat k \\cdot a = k' \\cdot a'$\nin $\\BSigma$.</p>\n<p>By Sheaf7 Lemma <code>lem:Stab_gx</code> (= [[node:equivariant_sheaves.induction_GxP_X]]):\n$$\\hat K_x \\;=\\; \\Fix_G(x) \\;=\\; \\Fix_N(x) \\cdot K_x.$$</p>\n<p>So write $\\hat k = n k_0$ with $n \\in \\Fix_N(x)$ and $k_0 \\in K_x$.</p>\n<p>Set\n$$k' \\;:=\\; n k_0 n^{-1}, \\qquad a' \\;:=\\; n \\cdot a \\;\\in\\; A.$$</p>\n<ul>\n<li>$k' \\in K_x$: by $N$-equivariance of the $K$-cosheaf,\n  $n K_x n^{-1} = K_{nx} = K_x$ (since $n \\cdot x = x$). So\n  $n k_0 n^{-1} \\in K_x$.</li>\n<li>$a' \\in A$: $N$ stabilises $A$ setwise.</li>\n</ul>\n<p>We check $\\hat k \\cdot a = k' \\cdot a'$ in $\\BSigma$:\n$$\\hat k \\cdot a \\;=\\; [(\\hat k, a)]_\\sim \\;=\\; [(n k_0, a)]_\\sim,\n\\qquad k' \\cdot a' \\;=\\; [(k', a')]_\\sim \\;=\\; [(n k_0 n^{-1}, n a)]_\\sim.$$</p>\n<p>We verify the equivalence $(n k_0, a) \\sim (n k_0 n^{-1}, n a)$ using\n$m := n \\in N$:</p>\n<ul>\n<li>$m \\cdot a = n \\cdot a = a'$, ✓.</li>\n<li>$(n k_0)^{-1} \\cdot (n k_0 n^{-1}) \\cdot m\n  = k_0^{-1} n^{-1} \\cdot n k_0 n^{-1} \\cdot n\n  = k_0^{-1} k_0 n^{-1} n\n  = 1 \\in K_a$. ✓</li>\n</ul>\n<p>So $(nk_0, a) \\sim (n k_0 n^{-1}, na)$, i.e.\\ $\\hat k \\cdot a = k' \\cdot a'$\nin $\\BSigma$. Hence $\\hat K_x \\cdot A \\subseteq K_x \\cdot A$.</p>\n<p>Combining the two inclusions: $K_x \\cdot A = \\hat K_x \\cdot A$.\n$\\square$</p>\n<h2>Geometric meaning</h2>\n<p>Combined with <a class=\"node-ref\" data-node-id=\"building.apartments_in_bsigma\" href=\"building_apartments_in_bsigma.html\">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a> Cor. C.3.1':\n$$\\BSigma_x \\;=\\; K_x \\cdot A \\;=\\; \\hat K_x \\cdot A\n\\;=\\; \\bigcup_{A' \\in \\mathrm{Apt}_x} A'\n\\;=\\; \\text{union of all apartments of } \\BSigma \\text{ through } x.$$</p>\n<p>This is the precise geometric content of \"$K_x$-stable neighborhood\":\n$\\BSigma_x$ is the <strong>closed star of $x$ at the apartment level</strong>.</p>\n<h2>The other equalities $K_x M_x A = K_x \\mathcal{B}(M) = \\hat K_x \\mathcal{B}(M)$</h2>\n<p>These require specifying the Levi $M$ and using the Bruhat–Tits\nbuilding $\\mathcal{B}(M)$. The argument is application-dependent (e.g.\\ §8\nuses the Levi attached to a semisimple character $\\phi$). The\nidentifications follow by:</p>\n<ul>\n<li>$M_x A = \\mathcal{B}(M)$: standard building axiom for $\\mathcal{B}(M)$\n  ($M$-apartments through $x$ cover $\\mathcal{B}(M)$).</li>\n<li>$K_x M_x A = K_x \\mathcal{B}(M)$: substitution.</li>\n<li>$K_x \\mathcal{B}(M) = \\hat K_x \\mathcal{B}(M)$: same argument as\n  $K_x A = \\hat K_x A$ above, with $A$ replaced by $\\mathcal{B}(M)$.</li>\n</ul>\n<p>Detailed write-up of these deferred to task C.7\n(<a class=\"node-ref\" data-node-id=\"building.connected_components.plan.classification\" href=\"connected_components/plan/building_connected_components_plan_classification.html\">Plan: identify each connected component of B(Σ) as K_x · A</a>).</p>\n<h2>Downstream uses</h2>\n<p>This $K_x$-stable neighborhood is the home of the contraction extension\n[[node:building.contraction_extension_K3]] and of the supports of the\n$\\phi_x$-isotypic chains studied in\n[[node:coefficient_systems.support_in_BSx]].</p>\n<p>Combined with the building axiom (A1) inside a component\n([[node:building.A1_axiom_in_component]]), this gives the main\ngeometric identification $C_0 = K_x \\cdot A$ in\n[[node:building.component_is_KxA]] (task C.3.4).</p>",
+  "deps": [
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "href": "building/building_generalized_building_bs.html"
+    },
+    {
+      "id": "building.apartments_in_bsigma",
+      "title": "Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x",
+      "href": "building/building_apartments_in_bsigma.html"
+    },
+    {
+      "id": "equivariant_sheaves.induction_GxP_X",
+      "title": "Induced space G ×^P X' along a cosheaf P",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "building.A1_Kx_local_verifications",
+      "title": "Verifications of K_x-local (A1) for parahoric, classical, and tame cases",
+      "href": "building/building_A1_Kx_local_verifications.html"
+    },
+    {
+      "id": "building.Levi_M_in_BSx",
+      "title": "The Levi M in B(Σ)_x = K_x · B(M)",
+      "href": "building/building_Levi_M_in_BSx.html"
+    },
+    {
+      "id": "building.component_is_KxA",
+      "title": "Main theorem: each connected component of B(Σ) equals K_x · A",
+      "href": "building/building_component_is_KxA.html"
+    },
+    {
+      "id": "building.connected_components.plan.classification",
+      "title": "Plan: identify each connected component of B(Σ) as K_x · A",
+      "href": "building/building_connected_components_plan_classification.html"
+    },
+    {
+      "id": "building.contraction_extension_K3",
+      "title": "Equivariant extension of the contraction under (K3)",
+      "href": "building/building_contraction_extension_K3.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_unit_iso_assembly",
+      "title": "Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity",
+      "href": "coefficient_systems/coefficient_systems_cartesian_unit_iso_assembly.html"
+    },
+    {
+      "id": "coefficient_systems.support_in_BSx",
+      "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+      "href": "coefficient_systems/coefficient_systems_support_in_BSx.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

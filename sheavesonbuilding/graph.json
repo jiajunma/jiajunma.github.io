@@ -1,0 +1,3653 @@
+{
+  "nodes": [
+    {
+      "id": "applications.classical_K1_K2_K3",
+      "title": "Hypotheses (K1)–(K3) for classical groups",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "classical",
+        "K1-K3",
+        "verification"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.classical_K_F_definition",
+        "building.K3_hypothesis",
+        "building.K_cosheaf"
+      ],
+      "used_by": [
+        "applications.classical_T_axioms",
+        "applications.classical_main_theorem",
+        "building.A1_Kx_local_verifications"
+      ]
+    },
+    {
+      "id": "applications.classical_K_F_definition",
+      "title": "Stevens groups K_x, K_{x,+} from a β-approximation sequence",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "stevens",
+        "K-group",
+        "approximation"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.classical_setting",
+        "building.K_cosheaf"
+      ],
+      "used_by": [
+        "applications.classical_K1_K2_K3",
+        "building.A1_Kx_local_verifications"
+      ]
+    },
+    {
+      "id": "applications.classical_T_axioms",
+      "title": "Hypotheses (T1)–(T5) for classical groups",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "classical",
+        "T-axioms",
+        "verification"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.classical_K1_K2_K3",
+        "applications.compatible_beta_extension_family",
+        "coefficient_systems.semisimple_character_T_axioms"
+      ],
+      "used_by": [
+        "applications.classical_main_theorem",
+        "applications.classical_serre"
+      ]
+    },
+    {
+      "id": "applications.classical_main_theorem",
+      "title": "Main theorem applied to classical groups",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "classical",
+        "main-theorem",
+        "corollary"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.classical_K1_K2_K3",
+        "applications.classical_T_axioms",
+        "applications.classical_serre",
+        "applications.compatible_beta_extension_family",
+        "depth_zero_reduction.main_theorem"
+      ]
+    },
+    {
+      "id": "applications.classical_serre",
+      "title": "Hypothesis (S) for classical groups via [HKSS]",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "classical",
+        "serre",
+        "HKSS"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.classical_T_axioms",
+        "applications.compatible_beta_extension_family",
+        "coefficient_systems.rep_capital_phi",
+        "coefficient_systems.serre_subcategory_hypothesis",
+        "references.skodlerack_ye_compatible_beta"
+      ],
+      "used_by": [
+        "applications.classical_main_theorem"
+      ]
+    },
+    {
+      "id": "applications.classical_setting",
+      "title": "Classical groups setting: G = isometry of an ε-Hermitian form, p ≠ 2",
+      "kind": "topic",
+      "status": "staged",
+      "tags": [
+        "classical-group",
+        "hermitian-form"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "building.reductive_pair_setting"
+      ],
+      "used_by": [
+        "applications.classical_K_F_definition"
+      ]
+    },
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "beta-extension",
+        "global-existence",
+        "classical",
+        "quaternionic",
+        "T-axioms",
+        "K-cosheaf"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.tame_K_F_construction",
+        "references.skodlerack_ye_compatible_beta",
+        "references.yu_construction"
+      ],
+      "used_by": [
+        "applications.classical_T_axioms",
+        "applications.classical_main_theorem",
+        "applications.classical_serre",
+        "applications.tame_T_axioms",
+        "applications.tame_main_theorem",
+        "depth_zero_reduction.res_sat_quasi_inverse"
+      ]
+    },
+    {
+      "id": "applications.compatible_system_from_alcove",
+      "title": "Construction of the compatible cosheaf 𝒦 from pointwise {κ_E} via an alcove (§12.2)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "cosheaf",
+        "alcove",
+        "N-equivariant",
+        "compatible-system",
+        "construction"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.qfd_from_alcove",
+        "applications.unramified_characters_cosheaf",
+        "building.generalized_building_bs",
+        "cellular_categories.sheaf_of_subgroups",
+        "equivariant_sheaves.heisenberg_weil_equivalence"
+      ]
+    },
+    {
+      "id": "applications.contraction_map_existence",
+      "title": "Bestvina–Savin contraction on a convex polyhedron complex (App C)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "bestvina-savin",
+        "contraction",
+        "PL"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "building.contraction_map_apartment",
+        "coefficient_systems.acyclicity_phi_x_chain"
+      ]
+    },
+    {
+      "id": "applications.mock_exponential_map",
+      "title": "Good mock exponential map and factorization M × m^⊥_{x,0+} → MG_{x,0+}",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "mock-exponential",
+        "reduction-to-M"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications"
+    },
+    {
+      "id": "applications.qfd_from_alcove",
+      "title": "Quasi-fundamental domain from a closed alcove (App B)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "alcove",
+        "qfd",
+        "kottwitz"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "equivariant_sheaves.quasi_fundamental_domain"
+      ],
+      "used_by": [
+        "applications.compatible_system_from_alcove",
+        "applications.unramified_characters_cosheaf"
+      ]
+    },
+    {
+      "id": "applications.tame_K_F_construction",
+      "title": "Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "tame-types",
+        "yu",
+        "heisenberg-weil"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.tame_setting",
+        "building.K_cosheaf"
+      ],
+      "used_by": [
+        "applications.compatible_beta_extension_family",
+        "applications.tame_hypotheses_K",
+        "applications.tame_two_term_intertwiner",
+        "building.A1_Kx_local_verifications"
+      ]
+    },
+    {
+      "id": "applications.tame_T_axioms",
+      "title": "Hypotheses (T1)–(T5) and (E1)–(E3) for tame types",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "tame",
+        "T-axioms",
+        "E-axioms"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.compatible_beta_extension_family",
+        "applications.tame_intertwiner",
+        "applications.tame_kappa_intertwiner",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "depth_zero_reduction.hypothesis_E"
+      ],
+      "used_by": [
+        "applications.tame_main_theorem",
+        "applications.tame_serre"
+      ]
+    },
+    {
+      "id": "applications.tame_hypotheses_K",
+      "title": "Hypotheses (K1)–(K3), (F1)–(F4) for tame types",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "tame",
+        "K-axioms",
+        "F-axioms"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.tame_K_F_construction",
+        "applications.tame_setting",
+        "building.K3_hypothesis",
+        "references.datfintzen_overview",
+        "references.yu_construction"
+      ],
+      "used_by": [
+        "applications.tame_main_theorem",
+        "building.A1_Kx_local_verifications"
+      ]
+    },
+    {
+      "id": "applications.tame_intertwiner",
+      "title": "Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "tame",
+        "intertwiner"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.tame_two_term_intertwiner",
+        "references.datfintzen_overview",
+        "references.fintzen_yu_correction",
+        "references.yu_construction"
+      ],
+      "used_by": [
+        "applications.tame_T_axioms"
+      ]
+    },
+    {
+      "id": "applications.tame_kappa_intertwiner",
+      "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "tame",
+        "kappa",
+        "intertwiner",
+        "heisenberg-weil"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.tame_two_term_intertwiner",
+        "depth_zero_reduction.hypothesis_E",
+        "references.datfintzen_overview",
+        "references.fintzen_yu_correction",
+        "references.yu_construction"
+      ],
+      "used_by": [
+        "applications.tame_T_axioms",
+        "applications.tame_main_theorem"
+      ]
+    },
+    {
+      "id": "applications.tame_main_theorem",
+      "title": "Main theorem applied to tame types",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "tame",
+        "main-theorem",
+        "corollary"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.compatible_beta_extension_family",
+        "applications.tame_T_axioms",
+        "applications.tame_hypotheses_K",
+        "applications.tame_kappa_intertwiner",
+        "applications.tame_serre",
+        "depth_zero_reduction.main_theorem",
+        "references.datfintzen_overview"
+      ]
+    },
+    {
+      "id": "applications.tame_serre",
+      "title": "Hypothesis (S) for tame types via Bernstein + [KY]",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "tame",
+        "serre",
+        "bernstein"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.tame_T_axioms",
+        "coefficient_systems.serre_subcategory_hypothesis",
+        "references.datfintzen_overview",
+        "references.fintzen_yu_correction"
+      ],
+      "used_by": [
+        "applications.tame_main_theorem"
+      ]
+    },
+    {
+      "id": "applications.tame_setting",
+      "title": "Tamely ramified setting: Yu / Kim–Yu / AFMO datum",
+      "kind": "topic",
+      "status": "staged",
+      "tags": [
+        "tame-types",
+        "yu",
+        "afmo"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "building.reductive_pair_setting"
+      ],
+      "used_by": [
+        "applications.tame_K_F_construction",
+        "applications.tame_hypotheses_K"
+      ]
+    },
+    {
+      "id": "applications.tame_two_term_intertwiner",
+      "title": "Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G' G_{y,s} (Yu Thm 9.4 generalized)",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "tame",
+        "intertwiner",
+        "yu"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.tame_K_F_construction",
+        "references.datfintzen_overview",
+        "references.fintzen_yu_correction",
+        "references.yu_construction"
+      ],
+      "used_by": [
+        "applications.tame_intertwiner",
+        "applications.tame_kappa_intertwiner"
+      ]
+    },
+    {
+      "id": "applications.unramified_characters_cosheaf",
+      "title": "Unramified characters bijection X^ur(G) ↔ Cosh_G(B(G); 1_Fix) (App B.1)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "unramified",
+        "character",
+        "cosheaf"
+      ],
+      "primary_topic": "applications",
+      "topics": [
+        "applications"
+      ],
+      "topic": "applications",
+      "uses": [
+        "applications.qfd_from_alcove",
+        "cellular_categories.equivariant_sheaves",
+        "equivariant_sheaves.heisenberg_weil_equivalence"
+      ],
+      "used_by": [
+        "applications.compatible_system_from_alcove"
+      ]
+    },
+    {
+      "id": "building.A1_Kx_local_verifications",
+      "title": "Verifications of K_x-local (A1) for parahoric, classical, and tame cases",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "A1",
+        "Iwahori",
+        "parahoric",
+        "classical",
+        "tame"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "applications.classical_K1_K2_K3",
+        "applications.classical_K_F_definition",
+        "applications.tame_K_F_construction",
+        "applications.tame_hypotheses_K",
+        "building.A1_axiom_in_component",
+        "building.apartments_in_bsigma",
+        "building.bs_subset_x"
+      ],
+      "used_by": [
+        "building.geodesics_in_component"
+      ]
+    },
+    {
+      "id": "building.A1_axiom_in_component",
+      "title": "Bruhat–Tits axiom (A1) inside each connected component of B(Σ)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "building-axiom",
+        "apartment",
+        "A1",
+        "K3"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.K3_hypothesis",
+        "building.K_cosheaf",
+        "building.apartment_intersection",
+        "building.apartments_in_bsigma",
+        "building.generalized_building_bs",
+        "equivariant_sheaves.induced_cw_structure"
+      ],
+      "used_by": [
+        "building.A1_Kx_local_verifications",
+        "building.component_is_KxA",
+        "building.geodesics_in_component"
+      ]
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "hypothesis",
+        "K3",
+        "convexity"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.K_cosheaf",
+        "building.reductive_pair_setting"
+      ],
+      "used_by": [
+        "applications.classical_K1_K2_K3",
+        "applications.tame_hypotheses_K",
+        "building.A1_axiom_in_component",
+        "building.component_is_KxA",
+        "building.connected_components.plan.classification",
+        "building.contraction_extension_K3",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.semisimple_character_T_axioms"
+      ]
+    },
+    {
+      "id": "building.K_cosheaf",
+      "title": "K-cosheaf on the apartment with K-condition",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "cosheaf",
+        "K-condition"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.reductive_pair_setting",
+        "cellular_categories.sheaf_of_subgroups"
+      ],
+      "used_by": [
+        "applications.classical_K1_K2_K3",
+        "applications.classical_K_F_definition",
+        "applications.tame_K_F_construction",
+        "building.A1_axiom_in_component",
+        "building.K3_hypothesis",
+        "building.apartments_in_bsigma",
+        "building.component_is_KxA",
+        "building.connected_components.plan.classification",
+        "building.generalized_building_bs"
+      ]
+    },
+    {
+      "id": "building.Levi_M_in_BSx",
+      "title": "The Levi M in B(Σ)_x = K_x · B(M)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "Levi",
+        "building",
+        "K-orbit"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.bs_subset_x",
+        "building.component_is_KxA"
+      ]
+    },
+    {
+      "id": "building.apartment_intersection",
+      "title": "g·A ∩ A is a cellular subcomplex of A",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "apartment",
+        "cellular-subcomplex"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.generalized_building_bs",
+        "equivariant_sheaves.induced_cw_structure"
+      ],
+      "used_by": [
+        "building.A1_axiom_in_component",
+        "building.apartments_in_bsigma",
+        "building.connected_components.plan.classification",
+        "building.geodesics_in_component"
+      ]
+    },
+    {
+      "id": "building.apartments_in_bsigma",
+      "title": "Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "apartment",
+        "stabilizer",
+        "generalized-building"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.K_cosheaf",
+        "building.apartment_intersection",
+        "building.generalized_building_bs",
+        "building.reductive_pair_setting",
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.quasi_fundamental_domain"
+      ],
+      "used_by": [
+        "building.A1_Kx_local_verifications",
+        "building.A1_axiom_in_component",
+        "building.bs_subset_x",
+        "building.component_is_KxA",
+        "building.geodesics_in_component"
+      ]
+    },
+    {
+      "id": "building.bs_subset_x",
+      "title": "The K_x-orbit subset B(Σ)_x := K_x · A",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "apartment",
+        "K-orbit"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.apartments_in_bsigma",
+        "building.generalized_building_bs",
+        "equivariant_sheaves.induction_GxP_X"
+      ],
+      "used_by": [
+        "building.A1_Kx_local_verifications",
+        "building.Levi_M_in_BSx",
+        "building.component_is_KxA",
+        "building.connected_components.plan.classification",
+        "building.contraction_extension_K3",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.cartesian_unit_iso_assembly",
+        "coefficient_systems.support_in_BSx"
+      ]
+    },
+    {
+      "id": "building.component_is_KxA",
+      "title": "Main theorem: each connected component of B(Σ) equals K_x · A",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "generalized-building",
+        "connected-components",
+        "K-orbit",
+        "main-theorem"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.A1_axiom_in_component",
+        "building.K3_hypothesis",
+        "building.K_cosheaf",
+        "building.apartments_in_bsigma",
+        "building.bs_subset_x",
+        "building.connected_components",
+        "building.generalized_building_bs"
+      ],
+      "used_by": [
+        "building.Levi_M_in_BSx",
+        "building.geodesics_in_component"
+      ]
+    },
+    {
+      "id": "building.connected_components",
+      "title": "π₀(X) ≅ G/J for X = G ×^P X' (with applications to B(Σ))",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "connected-components",
+        "induction",
+        "pi-0"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.generalized_building_bs",
+        "building.reductive_pair_setting",
+        "coefficient_systems.cartesian_unit_iso_assembly",
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induction_GxP_X"
+      ],
+      "used_by": [
+        "building.component_is_KxA"
+      ]
+    },
+    {
+      "id": "building.connected_components.plan.classification",
+      "title": "Plan: identify each connected component of B(Σ) as K_x · A",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "generalized-building",
+        "connected-components",
+        "apartments",
+        "building-axiom",
+        "proof-plan"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "target": "building.connected_components",
+      "plan_status": "formalized",
+      "topic": "building",
+      "uses": [
+        "building.K3_hypothesis",
+        "building.K_cosheaf",
+        "building.apartment_intersection",
+        "building.bs_subset_x",
+        "building.generalized_building_bs",
+        "building.reductive_pair_setting",
+        "equivariant_sheaves.induced_cw_structure"
+      ]
+    },
+    {
+      "id": "building.contraction_extension_K3",
+      "title": "Equivariant extension of the contraction under (K3)",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "contraction",
+        "equivariance",
+        "K3"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.K3_hypothesis",
+        "building.bs_subset_x",
+        "building.contraction_map_apartment"
+      ],
+      "used_by": [
+        "coefficient_systems.contraction_on_phi_x_chain"
+      ]
+    },
+    {
+      "id": "building.contraction_map_apartment",
+      "title": "Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "contraction",
+        "chain-homotopy"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.reductive_pair_setting"
+      ],
+      "used_by": [
+        "applications.contraction_map_existence",
+        "building.contraction_extension_K3",
+        "coefficient_systems.cartesian_reduction_to_apartment"
+      ]
+    },
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "generalized-building",
+        "induction"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.K_cosheaf",
+        "equivariant_sheaves.induction_GxP_X"
+      ],
+      "used_by": [
+        "applications.compatible_system_from_alcove",
+        "building.A1_axiom_in_component",
+        "building.apartment_intersection",
+        "building.apartments_in_bsigma",
+        "building.bs_subset_x",
+        "building.component_is_KxA",
+        "building.connected_components",
+        "building.connected_components.plan.classification",
+        "building.geodesics_in_component",
+        "coefficient_systems.chain_complex_phi",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "depth_zero_reduction.O_hypothesis",
+        "equivariant_sheaves.induction_universal_property"
+      ]
+    },
+    {
+      "id": "building.geodesics_in_component",
+      "title": "Geodesic uniqueness and CAT(0) structure on a connected component of B(Σ)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "geodesic",
+        "CAT0",
+        "metric-structure",
+        "apartment-intersection",
+        "Cartan-Hadamard"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "uses": [
+        "building.A1_Kx_local_verifications",
+        "building.A1_axiom_in_component",
+        "building.apartment_intersection",
+        "building.apartments_in_bsigma",
+        "building.component_is_KxA",
+        "building.generalized_building_bs"
+      ]
+    },
+    {
+      "id": "building.reductive_pair_setting",
+      "title": "Reductive pair (G', G) and the apartment A",
+      "kind": "topic",
+      "status": "staged",
+      "tags": [
+        "reductive-group",
+        "apartment"
+      ],
+      "primary_topic": "building",
+      "topics": [
+        "building"
+      ],
+      "topic": "building",
+      "used_by": [
+        "applications.classical_setting",
+        "applications.tame_setting",
+        "building.K3_hypothesis",
+        "building.K_cosheaf",
+        "building.apartments_in_bsigma",
+        "building.connected_components",
+        "building.connected_components.plan.classification",
+        "building.contraction_map_apartment"
+      ]
+    },
+    {
+      "id": "cellular_categories.category_jXk",
+      "title": "The cell categories ]X[ and [X]",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "category",
+        "face-poset"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.cw_complex_setting"
+      ],
+      "used_by": [
+        "cellular_categories.quotient_category_jXGk",
+        "cellular_categories.sheaves_cosheaves"
+      ]
+    },
+    {
+      "id": "cellular_categories.cw_complex_setting",
+      "title": "Locally finite regular CW complex with cellular G-action",
+      "kind": "topic",
+      "status": "staged",
+      "tags": [
+        "cw-complex",
+        "cellular-action"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.AbstractCellComplex",
+        "SheafOnBuilding.IsLocallyFinite",
+        "SheafOnBuilding.GCellComplex",
+        "SheafOnBuilding.Subcomplex"
+      ],
+      "topic": "cellular_categories",
+      "used_by": [
+        "cellular_categories.category_jXk",
+        "cellular_categories.equivariant_sheaves",
+        "cellular_categories.quotient_category_jXGk",
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.quasi_fundamental_domain",
+        "representations.rep_phi"
+      ]
+    },
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "equivariant-sheaf",
+        "cellular-action"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.GEquivariantSheaf",
+        "SheafOnBuilding.GEquivariantCosheaf",
+        "SheafOnBuilding.smulFunctor"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.cw_complex_setting",
+        "cellular_categories.sheaves_cosheaves"
+      ],
+      "used_by": [
+        "applications.unramified_characters_cosheaf",
+        "cellular_categories.equivariant_via_functors",
+        "cellular_categories.sheaf_of_subgroups",
+        "coefficient_systems.cartesian_local_maps",
+        "coefficient_systems.coeff_phi",
+        "equivariant_sheaves.invariants_coinvariants",
+        "equivariant_sheaves.reduction_to_qfd",
+        "representations.chain_complex_C_dot",
+        "representations.loc_phi_functor"
+      ]
+    },
+    {
+      "id": "cellular_categories.equivariant_via_functors",
+      "title": "Equivalence: G-equivariant (co)sheaves and functors on ]X/G[",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "equivalence",
+        "functor-category"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.equivariant_sheaves",
+        "cellular_categories.quotient_category_jXGk"
+      ]
+    },
+    {
+      "id": "cellular_categories.quotient_category_jXGk",
+      "title": "The quotient categories ]X/G[ and [X/G]",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "quotient-category",
+        "equivariant"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.category_jXk",
+        "cellular_categories.cw_complex_setting"
+      ],
+      "used_by": [
+        "cellular_categories.equivariant_via_functors",
+        "coefficient_systems.coeff_phi"
+      ]
+    },
+    {
+      "id": "cellular_categories.sheaf_of_subgroups",
+      "title": "G-equivariant (co)sheaf of subgroups and characters",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "subgroup-sheaf",
+        "moy-prasad",
+        "character"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.equivariant_sheaves"
+      ],
+      "used_by": [
+        "applications.compatible_system_from_alcove",
+        "building.K_cosheaf",
+        "coefficient_systems.idempotent_system_from_T_axioms",
+        "equivariant_sheaves.heisenberg_weil_equivalence",
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.invariants_coinvariants",
+        "representations.loc_phi_functor",
+        "representations.rep_phi"
+      ]
+    },
+    {
+      "id": "cellular_categories.sheaves_cosheaves",
+      "title": "Sheaves and cosheaves on X as functor categories",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "sheaf",
+        "cosheaf",
+        "coefficient-system"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.Sheaf",
+        "SheafOnBuilding.Cosheaf"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.category_jXk"
+      ],
+      "used_by": [
+        "cellular_categories.equivariant_sheaves"
+      ]
+    },
+    {
+      "id": "coefficient_systems.A_over_K_equivalence",
+      "title": "Equivalence [A/𝒦] ≃ [B(Σ)/G] (RES theorem)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "equivalence",
+        "apartment"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.coeff_phi",
+        "equivariant_sheaves.reduction_to_qfd"
+      ],
+      "used_by": [
+        "coefficient_systems.alcove_equivalence",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.cartesian_reduction_to_apartment"
+      ]
+    },
+    {
+      "id": "coefficient_systems.acyclicity_phi_x_chain",
+      "title": "Acyclicity of C_d(Φ, V)[φ_x] for vertices x",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "acyclicity",
+        "resolution"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.contraction_on_phi_x_chain",
+        "coefficient_systems.support_in_BSx"
+      ],
+      "used_by": [
+        "applications.contraction_map_existence",
+        "coefficient_systems.resolution_theorem"
+      ]
+    },
+    {
+      "id": "coefficient_systems.alcove_equivalence",
+      "title": "[𝒜/𝒦] ≃ [A/𝒦] (alcove reduction under (F5)–(F6))",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "alcove",
+        "reduction",
+        "F5-F6"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.A_over_K_equivalence"
+      ],
+      "used_by": [
+        "depth_zero_reduction.E2_construction"
+      ]
+    },
+    {
+      "id": "coefficient_systems.block_decomposition",
+      "title": "Block decomposition of Rep(G) and the depth-zero block",
+      "kind": "topic",
+      "status": "staged",
+      "tags": [
+        "block-decomposition",
+        "bernstein",
+        "depth-zero"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "representations.rep_phi"
+      ]
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves",
+      "title": "Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "cartesian",
+        "cosheaf"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.cartesian_local_maps",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.cartesian_unit_iso_assembly",
+        "coefficient_systems.idempotent_system_from_T_axioms",
+        "coefficient_systems.lanard_49_analogue",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "representations.loc_phi_functor"
+      ],
+      "used_by": [
+        "coefficient_systems.serre_subcategory_hypothesis"
+      ]
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "cartesian",
+        "cosheaf",
+        "idempotents",
+        "proof-plan",
+        "lanard"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "target": "coefficient_systems.cartesian_cosheaves",
+      "plan_status": "candidate",
+      "topic": "coefficient_systems",
+      "uses": [
+        "building.K3_hypothesis",
+        "building.bs_subset_x",
+        "coefficient_systems.A_over_K_equivalence",
+        "coefficient_systems.coeff_phi",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "coefficient_systems.support_in_BSx",
+        "references.datfintzen_overview",
+        "references.lanard_equivalence",
+        "representations.loc_phi_functor"
+      ]
+    },
+    {
+      "id": "coefficient_systems.cartesian_local_maps",
+      "title": "Local maps ε^τ_σ along taut paths in the apartment",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "taut-paths",
+        "local-maps",
+        "apartment",
+        "wang"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "cellular_categories.equivariant_sheaves",
+        "coefficient_systems.idempotent_system_from_T_axioms",
+        "equivariant_sheaves.quasi_fundamental_domain"
+      ],
+      "used_by": [
+        "coefficient_systems.cartesian_cosheaves",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.cartesian_unit_iso_assembly",
+        "coefficient_systems.lanard_49_analogue"
+      ]
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "reduction",
+        "cartesian",
+        "apartment"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "building.bs_subset_x",
+        "building.contraction_map_apartment",
+        "coefficient_systems.A_over_K_equivalence",
+        "coefficient_systems.cartesian_local_maps",
+        "coefficient_systems.coeff_phi",
+        "coefficient_systems.idempotent_system_from_T_axioms",
+        "coefficient_systems.lanard_49_analogue",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "coefficient_systems.support_in_BSx",
+        "representations.loc_phi_functor"
+      ],
+      "used_by": [
+        "coefficient_systems.cartesian_cosheaves",
+        "coefficient_systems.cartesian_unit_iso_assembly"
+      ]
+    },
+    {
+      "id": "coefficient_systems.cartesian_unit_iso_assembly",
+      "title": "Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "unit-iso",
+        "meyer-solleveld",
+        "assembly",
+        "final-step"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "building.bs_subset_x",
+        "coefficient_systems.cartesian_local_maps",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.idempotent_system_from_T_axioms",
+        "coefficient_systems.lanard_49_analogue",
+        "coefficient_systems.support_in_BSx",
+        "representations.loc_phi_functor"
+      ],
+      "used_by": [
+        "building.connected_components",
+        "coefficient_systems.cartesian_cosheaves"
+      ]
+    },
+    {
+      "id": "coefficient_systems.chain_complex_phi",
+      "title": "Chain complex C_•(Φ, V) of φ-isotypic chains",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "chain-complex",
+        "phi-isotypic"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "building.generalized_building_bs",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "representations.chain_complex_C_dot"
+      ],
+      "used_by": [
+        "coefficient_systems.resolution_theorem",
+        "coefficient_systems.support_in_BSx"
+      ]
+    },
+    {
+      "id": "coefficient_systems.coeff_phi",
+      "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "coefficient-system",
+        "axioms"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "cellular_categories.equivariant_sheaves",
+        "cellular_categories.quotient_category_jXGk",
+        "coefficient_systems.semisimple_character_T_axioms"
+      ],
+      "used_by": [
+        "coefficient_systems.A_over_K_equivalence",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.loc_phi_capital",
+        "depth_zero_reduction.res_sat_functors"
+      ]
+    },
+    {
+      "id": "coefficient_systems.contraction_on_phi_x_chain",
+      "title": "Contraction c on C_d(Φ, V)[φ_x]",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "contraction",
+        "isotypic"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "building.contraction_extension_K3",
+        "coefficient_systems.support_in_BSx"
+      ],
+      "used_by": [
+        "coefficient_systems.acyclicity_phi_x_chain"
+      ]
+    },
+    {
+      "id": "coefficient_systems.idempotent_system_from_T_axioms",
+      "title": "Idempotent system extracted from (T1)–(T5)",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "idempotents",
+        "hecke-algebra",
+        "T-axioms"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "cellular_categories.sheaf_of_subgroups",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "references.lanard_equivalence"
+      ],
+      "used_by": [
+        "coefficient_systems.cartesian_cosheaves",
+        "coefficient_systems.cartesian_local_maps",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.cartesian_unit_iso_assembly",
+        "coefficient_systems.lanard_49_analogue"
+      ]
+    },
+    {
+      "id": "coefficient_systems.lanard_49_analogue",
+      "title": "Lanard 4.9 analogue: i_F ∘ ε^E_F = e_F ∘ i_E for adjacent facets",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "lanard",
+        "intertwining",
+        "inclusions",
+        "h0"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.cartesian_local_maps",
+        "coefficient_systems.idempotent_system_from_T_axioms",
+        "coefficient_systems.semisimple_character_T_axioms",
+        "representations.chain_complex_C_dot"
+      ],
+      "used_by": [
+        "coefficient_systems.cartesian_cosheaves",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.cartesian_unit_iso_assembly"
+      ]
+    },
+    {
+      "id": "coefficient_systems.loc_phi_capital",
+      "title": "Loc_Φ: Rep_Φ(G) → Coeff_G(B(Σ), Φ) and H_0 adjunction",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "localization",
+        "adjunction"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.coeff_phi",
+        "coefficient_systems.rep_capital_phi",
+        "coefficient_systems.resolution_theorem"
+      ],
+      "used_by": [
+        "coefficient_systems.localized_equivalence"
+      ]
+    },
+    {
+      "id": "coefficient_systems.localized_equivalence",
+      "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "localization",
+        "equivalence",
+        "main"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.loc_phi_capital",
+        "coefficient_systems.resolution_theorem",
+        "coefficient_systems.serre_subcategory_hypothesis",
+        "references.gabriel_zisman"
+      ],
+      "used_by": [
+        "depth_zero_reduction.main_theorem",
+        "depth_zero_reduction.res_preserves_E",
+        "representations.localization_equivalence"
+      ]
+    },
+    {
+      "id": "coefficient_systems.rep_capital_phi",
+      "title": "The subcategory Rep_Φ(G)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "representation",
+        "phi-isotypic"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.semisimple_character_T_axioms",
+        "representations.rep_phi"
+      ],
+      "used_by": [
+        "applications.classical_serre",
+        "coefficient_systems.loc_phi_capital",
+        "coefficient_systems.serre_subcategory_hypothesis"
+      ]
+    },
+    {
+      "id": "coefficient_systems.resolution_theorem",
+      "title": "Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "resolution",
+        "main"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.acyclicity_phi_x_chain",
+        "coefficient_systems.chain_complex_phi",
+        "coefficient_systems.serre_subcategory_hypothesis"
+      ],
+      "used_by": [
+        "coefficient_systems.loc_phi_capital",
+        "coefficient_systems.localized_equivalence",
+        "representations.localization_equivalence"
+      ]
+    },
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "semisimple-character",
+        "type",
+        "hypothesis"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "building.K3_hypothesis",
+        "building.generalized_building_bs"
+      ],
+      "used_by": [
+        "applications.classical_T_axioms",
+        "applications.tame_T_axioms",
+        "coefficient_systems.cartesian_cosheaves",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.chain_complex_phi",
+        "coefficient_systems.coeff_phi",
+        "coefficient_systems.idempotent_system_from_T_axioms",
+        "coefficient_systems.lanard_49_analogue",
+        "coefficient_systems.rep_capital_phi",
+        "coefficient_systems.support_in_BSx",
+        "depth_zero_reduction.hypothesis_E"
+      ]
+    },
+    {
+      "id": "coefficient_systems.serre_subcategory_hypothesis",
+      "title": "Serre-subcategory property (S) — a consequence, not a hypothesis",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "serre",
+        "corollary",
+        "lanard-switch"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "coefficient_systems.cartesian_cosheaves",
+        "coefficient_systems.rep_capital_phi"
+      ],
+      "used_by": [
+        "applications.classical_serre",
+        "applications.tame_serre",
+        "coefficient_systems.localized_equivalence",
+        "coefficient_systems.resolution_theorem",
+        "depth_zero_reduction.main_theorem"
+      ]
+    },
+    {
+      "id": "coefficient_systems.support_in_BSx",
+      "title": "C_d(Φ,V)[φ_x] is supported in B(Σ)_x",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "support",
+        "isotypic"
+      ],
+      "primary_topic": "coefficient_systems",
+      "topics": [
+        "coefficient_systems"
+      ],
+      "topic": "coefficient_systems",
+      "uses": [
+        "building.bs_subset_x",
+        "coefficient_systems.chain_complex_phi",
+        "coefficient_systems.semisimple_character_T_axioms"
+      ],
+      "used_by": [
+        "coefficient_systems.acyclicity_phi_x_chain",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.cartesian_unit_iso_assembly",
+        "coefficient_systems.contraction_on_phi_x_chain"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.E2_construction",
+      "title": "Construction of the cocycle r_{g, F} in (E2)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "cocycle",
+        "extension",
+        "alcove"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "coefficient_systems.alcove_equivalence",
+        "depth_zero_reduction.hypothesis_E"
+      ],
+      "used_by": [
+        "depth_zero_reduction.kappa_dual_coeff"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.K4_hypothesis",
+      "title": "Hypothesis (K4): hat-M_F / M_{F,0+} ≅ hat-K_F / K_{F,0+}",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "hypothesis",
+        "K4"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "depth_zero_reduction.hypothesis_E"
+      ],
+      "used_by": [
+        "depth_zero_reduction.M_K_orbit_bijection",
+        "depth_zero_reduction.O_hypothesis",
+        "depth_zero_reduction.res_sat_functors",
+        "depth_zero_reduction.res_sat_quasi_inverse"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.M_K_orbit_bijection",
+      "title": "M_{x,0+}\\B(M)_d ↔ K_{x,0+}\\(K_x B(M))_d bijection",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "orbit-bijection",
+        "building",
+        "mock-exp-isolation"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "depth_zero_reduction.K4_hypothesis",
+        "depth_zero_reduction.O_hypothesis",
+        "depth_zero_reduction.res_sat_functors",
+        "equivariant_sheaves.qfd_orbit_lemma"
+      ],
+      "used_by": [
+        "depth_zero_reduction.chain_complex_iso"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.O_hypothesis",
+      "title": "Hypothesis (O): K_{x,0+}-vs-M_{x,0+} transversality on B(M)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "hypothesis",
+        "transversality",
+        "orbit-bijection",
+        "mock-exp-isolation"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "building.generalized_building_bs",
+        "depth_zero_reduction.K4_hypothesis"
+      ],
+      "used_by": [
+        "depth_zero_reduction.M_K_orbit_bijection"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.R_xF_coeff",
+      "title": "Intertwiner coefficient system 𝒞_{x,F} = Hom(κ_x, κ_F)_{J ∩ J} (geometrization of (E4))",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "intertwiner",
+        "constant",
+        "coefficient-system"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "depth_zero_reduction.hypothesis_E"
+      ],
+      "used_by": [
+        "depth_zero_reduction.chain_complex_iso"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.chain_complex_iso",
+      "title": "i_x: C_d(B(Σ),𝒱)_x ≅ C_d(B(M),𝒲)_x",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "chain-complex",
+        "isomorphism",
+        "twisting"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "depth_zero_reduction.M_K_orbit_bijection",
+        "depth_zero_reduction.R_xF_coeff",
+        "depth_zero_reduction.res_sat_functors"
+      ],
+      "used_by": [
+        "depth_zero_reduction.res_preserves_E"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "hypothesis",
+        "extensions",
+        "kappa"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "coefficient_systems.semisimple_character_T_axioms"
+      ],
+      "used_by": [
+        "applications.tame_T_axioms",
+        "applications.tame_kappa_intertwiner",
+        "depth_zero_reduction.E2_construction",
+        "depth_zero_reduction.K4_hypothesis",
+        "depth_zero_reduction.R_xF_coeff",
+        "depth_zero_reduction.kappa_dual_coeff",
+        "depth_zero_reduction.res_sat_functors",
+        "depth_zero_reduction.res_sat_quasi_inverse"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.kappa_dual_coeff",
+      "title": "Dual coefficient system 𝒦*: F ↦ κ_F* (geometrization of (E3))",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "dual",
+        "coefficient-system",
+        "geometrization"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "depth_zero_reduction.E2_construction",
+        "depth_zero_reduction.hypothesis_E"
+      ],
+      "used_by": [
+        "depth_zero_reduction.res_sat_functors",
+        "depth_zero_reduction.res_sat_quasi_inverse"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "main-theorem",
+        "equivalence"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "coefficient_systems.localized_equivalence",
+        "coefficient_systems.serre_subcategory_hypothesis",
+        "depth_zero_reduction.res_preserves_E",
+        "depth_zero_reduction.res_sat_quasi_inverse",
+        "representations.localization_equivalence"
+      ],
+      "used_by": [
+        "applications.classical_main_theorem",
+        "applications.tame_main_theorem"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.res_preserves_E",
+      "title": "Res sends E_Φ to E_M (Prop 8.1)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "res",
+        "localization",
+        "main-input"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "coefficient_systems.localized_equivalence",
+        "depth_zero_reduction.chain_complex_iso",
+        "depth_zero_reduction.res_sat_functors"
+      ],
+      "used_by": [
+        "depth_zero_reduction.main_theorem"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_functors",
+      "title": "Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "res",
+        "sat",
+        "functor"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "coefficient_systems.coeff_phi",
+        "depth_zero_reduction.K4_hypothesis",
+        "depth_zero_reduction.hypothesis_E",
+        "depth_zero_reduction.kappa_dual_coeff"
+      ],
+      "used_by": [
+        "depth_zero_reduction.M_K_orbit_bijection",
+        "depth_zero_reduction.chain_complex_iso",
+        "depth_zero_reduction.res_preserves_E",
+        "depth_zero_reduction.res_sat_quasi_inverse",
+        "equivariant_sheaves.heisenberg_weil_equivalence"
+      ]
+    },
+    {
+      "id": "depth_zero_reduction.res_sat_quasi_inverse",
+      "title": "Res and Sat are quasi-inverse: Coeff_G(B(Σ), Φ) ≃ Coeff_M⁰(B(M)) (Prop 8.2)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "equivalence",
+        "res",
+        "sat"
+      ],
+      "primary_topic": "depth_zero_reduction",
+      "topics": [
+        "depth_zero_reduction"
+      ],
+      "topic": "depth_zero_reduction",
+      "uses": [
+        "applications.compatible_beta_extension_family",
+        "depth_zero_reduction.K4_hypothesis",
+        "depth_zero_reduction.hypothesis_E",
+        "depth_zero_reduction.kappa_dual_coeff",
+        "depth_zero_reduction.res_sat_functors",
+        "equivariant_sheaves.heisenberg_weil_equivalence"
+      ],
+      "used_by": [
+        "depth_zero_reduction.main_theorem"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "heisenberg-weil",
+        "equivalence",
+        "twist"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "cellular_categories.sheaf_of_subgroups",
+        "depth_zero_reduction.res_sat_functors",
+        "equivariant_sheaves.section4_equivalence"
+      ],
+      "used_by": [
+        "applications.compatible_system_from_alcove",
+        "applications.unramified_characters_cosheaf",
+        "depth_zero_reduction.res_sat_quasi_inverse"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.induced_cw_structure",
+      "title": "CW structure and QFD property on G ×^P X' (Prop 2.8)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "induction",
+        "cw-structure"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.InducedSpace.iota_injective",
+        "SheafOnBuilding.InducedSpace.iota_le_iff",
+        "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
+        "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota",
+        "SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff",
+        "SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff",
+        "SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.quasi_fundamental_domain"
+      ],
+      "used_by": [
+        "building.A1_axiom_in_component",
+        "building.apartment_intersection",
+        "building.apartments_in_bsigma",
+        "building.connected_components",
+        "building.connected_components.plan.classification",
+        "equivariant_sheaves.induction_universal_property"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.induction_GxP_X",
+      "title": "Induced space G ×^P X' along a cosheaf P",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "induction",
+        "induced-space"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.InductionDatum",
+        "SheafOnBuilding.InductionRel",
+        "SheafOnBuilding.InductionRel.setoid",
+        "SheafOnBuilding.InducedSpace",
+        "SheafOnBuilding.InducedSpace.iota"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "cellular_categories.cw_complex_setting",
+        "cellular_categories.sheaf_of_subgroups"
+      ],
+      "used_by": [
+        "building.bs_subset_x",
+        "building.connected_components",
+        "building.generalized_building_bs",
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induction_universal_property",
+        "equivariant_sheaves.section4_equivalence"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.induction_universal_property",
+      "title": "Universal property of G ×^P X' and induction by stages",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "induction",
+        "universal-property",
+        "adjunction"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "building.generalized_building_bs",
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induction_GxP_X"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.invariants_coinvariants",
+      "title": "Invariants and coinvariants of G-equivariant (co)sheaves",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "invariants",
+        "coinvariants"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "cellular_categories.equivariant_sheaves",
+        "cellular_categories.sheaf_of_subgroups"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.qfd_orbit_lemma",
+      "title": "QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "qfd",
+        "orbits"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "equivariant_sheaves.quasi_fundamental_domain"
+      ],
+      "used_by": [
+        "depth_zero_reduction.M_K_orbit_bijection",
+        "equivariant_sheaves.reduction_to_qfd"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.quasi_fundamental_domain",
+      "title": "Quasi-fundamental domain",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "qfd",
+        "fundamental-domain"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.IsQuasiFundDomain",
+        "SheafOnBuilding.Subcomplex.stabilizer"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "cellular_categories.cw_complex_setting"
+      ],
+      "used_by": [
+        "applications.qfd_from_alcove",
+        "building.apartments_in_bsigma",
+        "coefficient_systems.cartesian_local_maps",
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.qfd_orbit_lemma",
+        "equivariant_sheaves.reduction_to_qfd"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.reduction_to_qfd",
+      "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "reduction",
+        "qfd",
+        "equivariance"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "cellular_categories.equivariant_sheaves",
+        "equivariant_sheaves.qfd_orbit_lemma",
+        "equivariant_sheaves.quasi_fundamental_domain"
+      ],
+      "used_by": [
+        "coefficient_systems.A_over_K_equivalence",
+        "equivariant_sheaves.section4_equivalence"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.section4_equivalence",
+      "title": "Cosh_G(X,1_Q) ≃ Cosh_{G'}(X',1_{Q'}) under induced structure (Prop 4.1)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "equivalence",
+        "trivial-isotypic"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.reduction_to_qfd"
+      ],
+      "used_by": [
+        "equivariant_sheaves.heisenberg_weil_equivalence"
+      ]
+    },
+    {
+      "id": "references.afmo_hecke",
+      "title": "Adler–Fintzen–Mishra–Ohara: refined types and Hecke algebras",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "afmo",
+        "hecke"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references"
+    },
+    {
+      "id": "references.datfintzen_overview",
+      "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "dat-fintzen",
+        "tame",
+        "blocks"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references",
+      "used_by": [
+        "applications.tame_hypotheses_K",
+        "applications.tame_intertwiner",
+        "applications.tame_kappa_intertwiner",
+        "applications.tame_main_theorem",
+        "applications.tame_serre",
+        "applications.tame_two_term_intertwiner",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+      ]
+    },
+    {
+      "id": "references.fintzen_yu_correction",
+      "title": "Fintzen 2021: correction to Yu's tame supercuspidal construction",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "fintzen",
+        "yu",
+        "correction",
+        "tame"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references",
+      "used_by": [
+        "applications.tame_intertwiner",
+        "applications.tame_kappa_intertwiner",
+        "applications.tame_serre",
+        "applications.tame_two_term_intertwiner"
+      ]
+    },
+    {
+      "id": "references.gabriel_zisman",
+      "title": "Gabriel–Zisman calculus of fractions (localization criterion)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "localization",
+        "category-theory"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references",
+      "used_by": [
+        "coefficient_systems.localized_equivalence"
+      ]
+    },
+    {
+      "id": "references.lanard_equivalence",
+      "title": "Lanard's depth-zero block equivalence",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "lanard",
+        "blocks",
+        "l-modular"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references",
+      "used_by": [
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.idempotent_system_from_T_axioms"
+      ]
+    },
+    {
+      "id": "references.schneider_stuhler_resolution",
+      "title": "Schneider–Stuhler resolution theorem (depth-zero baseline)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "schneider-stuhler",
+        "depth-zero"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references"
+    },
+    {
+      "id": "references.skodlerack_ye_compatible_beta",
+      "title": "Skodlerack–Ye: compatible families of β-extensions (Thm 5.21)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "skodlerack-ye",
+        "beta-extension",
+        "compatible-family",
+        "classical"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references",
+      "used_by": [
+        "applications.classical_serre",
+        "applications.compatible_beta_extension_family"
+      ]
+    },
+    {
+      "id": "references.yu_construction",
+      "title": "Yu's tame supercuspidal construction",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "external",
+        "yu",
+        "tame",
+        "supercuspidal"
+      ],
+      "primary_topic": "references",
+      "topics": [
+        "references"
+      ],
+      "topic": "references",
+      "used_by": [
+        "applications.compatible_beta_extension_family",
+        "applications.tame_hypotheses_K",
+        "applications.tame_intertwiner",
+        "applications.tame_kappa_intertwiner",
+        "applications.tame_two_term_intertwiner"
+      ]
+    },
+    {
+      "id": "representations.chain_complex_C_dot",
+      "title": "Schneider–Stuhler chain complex C_•(V) of a cosheaf",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "chain-complex",
+        "schneider-stuhler"
+      ],
+      "primary_topic": "representations",
+      "topics": [
+        "representations"
+      ],
+      "topic": "representations",
+      "uses": [
+        "cellular_categories.equivariant_sheaves"
+      ],
+      "used_by": [
+        "coefficient_systems.chain_complex_phi",
+        "coefficient_systems.lanard_49_analogue",
+        "representations.h0_C_dot_adjoint"
+      ]
+    },
+    {
+      "id": "representations.h0_C_dot_adjoint",
+      "title": "H₀ ∘ C_• ⊣ Loc_φ adjunction (§3 Prop)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "adjunction",
+        "schneider-stuhler"
+      ],
+      "primary_topic": "representations",
+      "topics": [
+        "representations"
+      ],
+      "topic": "representations",
+      "uses": [
+        "representations.chain_complex_C_dot",
+        "representations.loc_phi_functor",
+        "representations.rep_phi"
+      ],
+      "used_by": [
+        "representations.localization_equivalence"
+      ]
+    },
+    {
+      "id": "representations.loc_phi_functor",
+      "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "localization",
+        "functor"
+      ],
+      "primary_topic": "representations",
+      "topics": [
+        "representations"
+      ],
+      "topic": "representations",
+      "uses": [
+        "cellular_categories.equivariant_sheaves",
+        "cellular_categories.sheaf_of_subgroups",
+        "representations.rep_phi"
+      ],
+      "used_by": [
+        "coefficient_systems.cartesian_cosheaves",
+        "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+        "coefficient_systems.cartesian_reduction_to_apartment",
+        "coefficient_systems.cartesian_unit_iso_assembly",
+        "representations.h0_C_dot_adjoint"
+      ]
+    },
+    {
+      "id": "representations.localization_equivalence",
+      "title": "Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "localization",
+        "equivalence"
+      ],
+      "primary_topic": "representations",
+      "topics": [
+        "representations"
+      ],
+      "topic": "representations",
+      "uses": [
+        "coefficient_systems.localized_equivalence",
+        "coefficient_systems.resolution_theorem",
+        "representations.h0_C_dot_adjoint"
+      ],
+      "used_by": [
+        "depth_zero_reduction.main_theorem"
+      ]
+    },
+    {
+      "id": "representations.rep_phi",
+      "title": "The subcategory Rep_φ(G)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "representation",
+        "isotypic"
+      ],
+      "primary_topic": "representations",
+      "topics": [
+        "representations"
+      ],
+      "topic": "representations",
+      "uses": [
+        "cellular_categories.cw_complex_setting",
+        "cellular_categories.sheaf_of_subgroups"
+      ],
+      "used_by": [
+        "coefficient_systems.block_decomposition",
+        "coefficient_systems.rep_capital_phi",
+        "representations.h0_C_dot_adjoint",
+        "representations.loc_phi_functor"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "applications.classical_K_F_definition",
+      "to": "applications.classical_K1_K2_K3"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "applications.classical_K1_K2_K3"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "applications.classical_K1_K2_K3"
+    },
+    {
+      "from": "applications.classical_setting",
+      "to": "applications.classical_K_F_definition"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "applications.classical_K_F_definition"
+    },
+    {
+      "from": "applications.classical_K1_K2_K3",
+      "to": "applications.classical_T_axioms"
+    },
+    {
+      "from": "applications.compatible_beta_extension_family",
+      "to": "applications.classical_T_axioms"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "applications.classical_T_axioms"
+    },
+    {
+      "from": "applications.classical_K1_K2_K3",
+      "to": "applications.classical_main_theorem"
+    },
+    {
+      "from": "applications.classical_T_axioms",
+      "to": "applications.classical_main_theorem"
+    },
+    {
+      "from": "applications.classical_serre",
+      "to": "applications.classical_main_theorem"
+    },
+    {
+      "from": "applications.compatible_beta_extension_family",
+      "to": "applications.classical_main_theorem"
+    },
+    {
+      "from": "depth_zero_reduction.main_theorem",
+      "to": "applications.classical_main_theorem"
+    },
+    {
+      "from": "applications.classical_T_axioms",
+      "to": "applications.classical_serre"
+    },
+    {
+      "from": "applications.compatible_beta_extension_family",
+      "to": "applications.classical_serre"
+    },
+    {
+      "from": "coefficient_systems.rep_capital_phi",
+      "to": "applications.classical_serre"
+    },
+    {
+      "from": "coefficient_systems.serre_subcategory_hypothesis",
+      "to": "applications.classical_serre"
+    },
+    {
+      "from": "references.skodlerack_ye_compatible_beta",
+      "to": "applications.classical_serre"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "applications.classical_setting"
+    },
+    {
+      "from": "applications.tame_K_F_construction",
+      "to": "applications.compatible_beta_extension_family"
+    },
+    {
+      "from": "references.skodlerack_ye_compatible_beta",
+      "to": "applications.compatible_beta_extension_family"
+    },
+    {
+      "from": "references.yu_construction",
+      "to": "applications.compatible_beta_extension_family"
+    },
+    {
+      "from": "applications.qfd_from_alcove",
+      "to": "applications.compatible_system_from_alcove"
+    },
+    {
+      "from": "applications.unramified_characters_cosheaf",
+      "to": "applications.compatible_system_from_alcove"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "applications.compatible_system_from_alcove"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "applications.compatible_system_from_alcove"
+    },
+    {
+      "from": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "to": "applications.compatible_system_from_alcove"
+    },
+    {
+      "from": "building.contraction_map_apartment",
+      "to": "applications.contraction_map_existence"
+    },
+    {
+      "from": "coefficient_systems.acyclicity_phi_x_chain",
+      "to": "applications.contraction_map_existence"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "applications.qfd_from_alcove"
+    },
+    {
+      "from": "applications.tame_setting",
+      "to": "applications.tame_K_F_construction"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "applications.tame_K_F_construction"
+    },
+    {
+      "from": "applications.compatible_beta_extension_family",
+      "to": "applications.tame_T_axioms"
+    },
+    {
+      "from": "applications.tame_intertwiner",
+      "to": "applications.tame_T_axioms"
+    },
+    {
+      "from": "applications.tame_kappa_intertwiner",
+      "to": "applications.tame_T_axioms"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "applications.tame_T_axioms"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "applications.tame_T_axioms"
+    },
+    {
+      "from": "applications.tame_K_F_construction",
+      "to": "applications.tame_hypotheses_K"
+    },
+    {
+      "from": "applications.tame_setting",
+      "to": "applications.tame_hypotheses_K"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "applications.tame_hypotheses_K"
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "applications.tame_hypotheses_K"
+    },
+    {
+      "from": "references.yu_construction",
+      "to": "applications.tame_hypotheses_K"
+    },
+    {
+      "from": "applications.tame_two_term_intertwiner",
+      "to": "applications.tame_intertwiner"
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "applications.tame_intertwiner"
+    },
+    {
+      "from": "references.fintzen_yu_correction",
+      "to": "applications.tame_intertwiner"
+    },
+    {
+      "from": "references.yu_construction",
+      "to": "applications.tame_intertwiner"
+    },
+    {
+      "from": "applications.tame_two_term_intertwiner",
+      "to": "applications.tame_kappa_intertwiner"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "applications.tame_kappa_intertwiner"
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "applications.tame_kappa_intertwiner"
+    },
+    {
+      "from": "references.fintzen_yu_correction",
+      "to": "applications.tame_kappa_intertwiner"
+    },
+    {
+      "from": "references.yu_construction",
+      "to": "applications.tame_kappa_intertwiner"
+    },
+    {
+      "from": "applications.compatible_beta_extension_family",
+      "to": "applications.tame_main_theorem"
+    },
+    {
+      "from": "applications.tame_T_axioms",
+      "to": "applications.tame_main_theorem"
+    },
+    {
+      "from": "applications.tame_hypotheses_K",
+      "to": "applications.tame_main_theorem"
+    },
+    {
+      "from": "applications.tame_kappa_intertwiner",
+      "to": "applications.tame_main_theorem"
+    },
+    {
+      "from": "applications.tame_serre",
+      "to": "applications.tame_main_theorem"
+    },
+    {
+      "from": "depth_zero_reduction.main_theorem",
+      "to": "applications.tame_main_theorem"
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "applications.tame_main_theorem"
+    },
+    {
+      "from": "applications.tame_T_axioms",
+      "to": "applications.tame_serre"
+    },
+    {
+      "from": "coefficient_systems.serre_subcategory_hypothesis",
+      "to": "applications.tame_serre"
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "applications.tame_serre"
+    },
+    {
+      "from": "references.fintzen_yu_correction",
+      "to": "applications.tame_serre"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "applications.tame_setting"
+    },
+    {
+      "from": "applications.tame_K_F_construction",
+      "to": "applications.tame_two_term_intertwiner"
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "applications.tame_two_term_intertwiner"
+    },
+    {
+      "from": "references.fintzen_yu_correction",
+      "to": "applications.tame_two_term_intertwiner"
+    },
+    {
+      "from": "references.yu_construction",
+      "to": "applications.tame_two_term_intertwiner"
+    },
+    {
+      "from": "applications.qfd_from_alcove",
+      "to": "applications.unramified_characters_cosheaf"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "applications.unramified_characters_cosheaf"
+    },
+    {
+      "from": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "to": "applications.unramified_characters_cosheaf"
+    },
+    {
+      "from": "applications.classical_K1_K2_K3",
+      "to": "building.A1_Kx_local_verifications"
+    },
+    {
+      "from": "applications.classical_K_F_definition",
+      "to": "building.A1_Kx_local_verifications"
+    },
+    {
+      "from": "applications.tame_K_F_construction",
+      "to": "building.A1_Kx_local_verifications"
+    },
+    {
+      "from": "applications.tame_hypotheses_K",
+      "to": "building.A1_Kx_local_verifications"
+    },
+    {
+      "from": "building.A1_axiom_in_component",
+      "to": "building.A1_Kx_local_verifications"
+    },
+    {
+      "from": "building.apartments_in_bsigma",
+      "to": "building.A1_Kx_local_verifications"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "building.A1_Kx_local_verifications"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "building.A1_axiom_in_component"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "building.A1_axiom_in_component"
+    },
+    {
+      "from": "building.apartment_intersection",
+      "to": "building.A1_axiom_in_component"
+    },
+    {
+      "from": "building.apartments_in_bsigma",
+      "to": "building.A1_axiom_in_component"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.A1_axiom_in_component"
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "building.A1_axiom_in_component"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "building.K3_hypothesis"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "building.K3_hypothesis"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "building.K_cosheaf"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "building.K_cosheaf"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "building.Levi_M_in_BSx"
+    },
+    {
+      "from": "building.component_is_KxA",
+      "to": "building.Levi_M_in_BSx"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.apartment_intersection"
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "building.apartment_intersection"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "building.apartments_in_bsigma"
+    },
+    {
+      "from": "building.apartment_intersection",
+      "to": "building.apartments_in_bsigma"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.apartments_in_bsigma"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "building.apartments_in_bsigma"
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "building.apartments_in_bsigma"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "building.apartments_in_bsigma"
+    },
+    {
+      "from": "building.apartments_in_bsigma",
+      "to": "building.bs_subset_x"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.bs_subset_x"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "building.bs_subset_x"
+    },
+    {
+      "from": "building.A1_axiom_in_component",
+      "to": "building.component_is_KxA"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "building.component_is_KxA"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "building.component_is_KxA"
+    },
+    {
+      "from": "building.apartments_in_bsigma",
+      "to": "building.component_is_KxA"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "building.component_is_KxA"
+    },
+    {
+      "from": "building.connected_components",
+      "to": "building.component_is_KxA"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.component_is_KxA"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.connected_components"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "building.connected_components"
+    },
+    {
+      "from": "coefficient_systems.cartesian_unit_iso_assembly",
+      "to": "building.connected_components"
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "building.connected_components"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "building.connected_components"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "building.connected_components.plan.classification"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "building.connected_components.plan.classification"
+    },
+    {
+      "from": "building.apartment_intersection",
+      "to": "building.connected_components.plan.classification"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "building.connected_components.plan.classification"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.connected_components.plan.classification"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "building.connected_components.plan.classification"
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "building.connected_components.plan.classification"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "building.contraction_extension_K3"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "building.contraction_extension_K3"
+    },
+    {
+      "from": "building.contraction_map_apartment",
+      "to": "building.contraction_extension_K3"
+    },
+    {
+      "from": "building.reductive_pair_setting",
+      "to": "building.contraction_map_apartment"
+    },
+    {
+      "from": "building.K_cosheaf",
+      "to": "building.generalized_building_bs"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "building.generalized_building_bs"
+    },
+    {
+      "from": "building.A1_Kx_local_verifications",
+      "to": "building.geodesics_in_component"
+    },
+    {
+      "from": "building.A1_axiom_in_component",
+      "to": "building.geodesics_in_component"
+    },
+    {
+      "from": "building.apartment_intersection",
+      "to": "building.geodesics_in_component"
+    },
+    {
+      "from": "building.apartments_in_bsigma",
+      "to": "building.geodesics_in_component"
+    },
+    {
+      "from": "building.component_is_KxA",
+      "to": "building.geodesics_in_component"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "building.geodesics_in_component"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.category_jXk"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.equivariant_sheaves"
+    },
+    {
+      "from": "cellular_categories.sheaves_cosheaves",
+      "to": "cellular_categories.equivariant_sheaves"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "cellular_categories.equivariant_via_functors"
+    },
+    {
+      "from": "cellular_categories.quotient_category_jXGk",
+      "to": "cellular_categories.equivariant_via_functors"
+    },
+    {
+      "from": "cellular_categories.category_jXk",
+      "to": "cellular_categories.quotient_category_jXGk"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.quotient_category_jXGk"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "cellular_categories.sheaf_of_subgroups"
+    },
+    {
+      "from": "cellular_categories.category_jXk",
+      "to": "cellular_categories.sheaves_cosheaves"
+    },
+    {
+      "from": "coefficient_systems.coeff_phi",
+      "to": "coefficient_systems.A_over_K_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.reduction_to_qfd",
+      "to": "coefficient_systems.A_over_K_equivalence"
+    },
+    {
+      "from": "coefficient_systems.contraction_on_phi_x_chain",
+      "to": "coefficient_systems.acyclicity_phi_x_chain"
+    },
+    {
+      "from": "coefficient_systems.support_in_BSx",
+      "to": "coefficient_systems.acyclicity_phi_x_chain"
+    },
+    {
+      "from": "coefficient_systems.A_over_K_equivalence",
+      "to": "coefficient_systems.alcove_equivalence"
+    },
+    {
+      "from": "representations.rep_phi",
+      "to": "coefficient_systems.block_decomposition"
+    },
+    {
+      "from": "coefficient_systems.cartesian_local_maps",
+      "to": "coefficient_systems.cartesian_cosheaves"
+    },
+    {
+      "from": "coefficient_systems.cartesian_reduction_to_apartment",
+      "to": "coefficient_systems.cartesian_cosheaves"
+    },
+    {
+      "from": "coefficient_systems.cartesian_unit_iso_assembly",
+      "to": "coefficient_systems.cartesian_cosheaves"
+    },
+    {
+      "from": "coefficient_systems.idempotent_system_from_T_axioms",
+      "to": "coefficient_systems.cartesian_cosheaves"
+    },
+    {
+      "from": "coefficient_systems.lanard_49_analogue",
+      "to": "coefficient_systems.cartesian_cosheaves"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.cartesian_cosheaves"
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "coefficient_systems.cartesian_cosheaves"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "coefficient_systems.A_over_K_equivalence",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "coefficient_systems.coeff_phi",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "coefficient_systems.support_in_BSx",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "references.lanard_equivalence",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "coefficient_systems.cartesian_local_maps"
+    },
+    {
+      "from": "coefficient_systems.idempotent_system_from_T_axioms",
+      "to": "coefficient_systems.cartesian_local_maps"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "coefficient_systems.cartesian_local_maps"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "building.contraction_map_apartment",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "coefficient_systems.A_over_K_equivalence",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "coefficient_systems.cartesian_local_maps",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "coefficient_systems.coeff_phi",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "coefficient_systems.idempotent_system_from_T_axioms",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "coefficient_systems.lanard_49_analogue",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "coefficient_systems.support_in_BSx",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "coefficient_systems.cartesian_reduction_to_apartment"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "coefficient_systems.cartesian_unit_iso_assembly"
+    },
+    {
+      "from": "coefficient_systems.cartesian_local_maps",
+      "to": "coefficient_systems.cartesian_unit_iso_assembly"
+    },
+    {
+      "from": "coefficient_systems.cartesian_reduction_to_apartment",
+      "to": "coefficient_systems.cartesian_unit_iso_assembly"
+    },
+    {
+      "from": "coefficient_systems.idempotent_system_from_T_axioms",
+      "to": "coefficient_systems.cartesian_unit_iso_assembly"
+    },
+    {
+      "from": "coefficient_systems.lanard_49_analogue",
+      "to": "coefficient_systems.cartesian_unit_iso_assembly"
+    },
+    {
+      "from": "coefficient_systems.support_in_BSx",
+      "to": "coefficient_systems.cartesian_unit_iso_assembly"
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "coefficient_systems.cartesian_unit_iso_assembly"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "coefficient_systems.chain_complex_phi"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.chain_complex_phi"
+    },
+    {
+      "from": "representations.chain_complex_C_dot",
+      "to": "coefficient_systems.chain_complex_phi"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "coefficient_systems.coeff_phi"
+    },
+    {
+      "from": "cellular_categories.quotient_category_jXGk",
+      "to": "coefficient_systems.coeff_phi"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.coeff_phi"
+    },
+    {
+      "from": "building.contraction_extension_K3",
+      "to": "coefficient_systems.contraction_on_phi_x_chain"
+    },
+    {
+      "from": "coefficient_systems.support_in_BSx",
+      "to": "coefficient_systems.contraction_on_phi_x_chain"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "coefficient_systems.idempotent_system_from_T_axioms"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.idempotent_system_from_T_axioms"
+    },
+    {
+      "from": "references.lanard_equivalence",
+      "to": "coefficient_systems.idempotent_system_from_T_axioms"
+    },
+    {
+      "from": "coefficient_systems.cartesian_local_maps",
+      "to": "coefficient_systems.lanard_49_analogue"
+    },
+    {
+      "from": "coefficient_systems.idempotent_system_from_T_axioms",
+      "to": "coefficient_systems.lanard_49_analogue"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.lanard_49_analogue"
+    },
+    {
+      "from": "representations.chain_complex_C_dot",
+      "to": "coefficient_systems.lanard_49_analogue"
+    },
+    {
+      "from": "coefficient_systems.coeff_phi",
+      "to": "coefficient_systems.loc_phi_capital"
+    },
+    {
+      "from": "coefficient_systems.rep_capital_phi",
+      "to": "coefficient_systems.loc_phi_capital"
+    },
+    {
+      "from": "coefficient_systems.resolution_theorem",
+      "to": "coefficient_systems.loc_phi_capital"
+    },
+    {
+      "from": "coefficient_systems.loc_phi_capital",
+      "to": "coefficient_systems.localized_equivalence"
+    },
+    {
+      "from": "coefficient_systems.resolution_theorem",
+      "to": "coefficient_systems.localized_equivalence"
+    },
+    {
+      "from": "coefficient_systems.serre_subcategory_hypothesis",
+      "to": "coefficient_systems.localized_equivalence"
+    },
+    {
+      "from": "references.gabriel_zisman",
+      "to": "coefficient_systems.localized_equivalence"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.rep_capital_phi"
+    },
+    {
+      "from": "representations.rep_phi",
+      "to": "coefficient_systems.rep_capital_phi"
+    },
+    {
+      "from": "coefficient_systems.acyclicity_phi_x_chain",
+      "to": "coefficient_systems.resolution_theorem"
+    },
+    {
+      "from": "coefficient_systems.chain_complex_phi",
+      "to": "coefficient_systems.resolution_theorem"
+    },
+    {
+      "from": "coefficient_systems.serre_subcategory_hypothesis",
+      "to": "coefficient_systems.resolution_theorem"
+    },
+    {
+      "from": "building.K3_hypothesis",
+      "to": "coefficient_systems.semisimple_character_T_axioms"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "coefficient_systems.semisimple_character_T_axioms"
+    },
+    {
+      "from": "coefficient_systems.cartesian_cosheaves",
+      "to": "coefficient_systems.serre_subcategory_hypothesis"
+    },
+    {
+      "from": "coefficient_systems.rep_capital_phi",
+      "to": "coefficient_systems.serre_subcategory_hypothesis"
+    },
+    {
+      "from": "building.bs_subset_x",
+      "to": "coefficient_systems.support_in_BSx"
+    },
+    {
+      "from": "coefficient_systems.chain_complex_phi",
+      "to": "coefficient_systems.support_in_BSx"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "coefficient_systems.support_in_BSx"
+    },
+    {
+      "from": "coefficient_systems.alcove_equivalence",
+      "to": "depth_zero_reduction.E2_construction"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.E2_construction"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.K4_hypothesis"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.M_K_orbit_bijection"
+    },
+    {
+      "from": "depth_zero_reduction.O_hypothesis",
+      "to": "depth_zero_reduction.M_K_orbit_bijection"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.M_K_orbit_bijection"
+    },
+    {
+      "from": "equivariant_sheaves.qfd_orbit_lemma",
+      "to": "depth_zero_reduction.M_K_orbit_bijection"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "depth_zero_reduction.O_hypothesis"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.O_hypothesis"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.R_xF_coeff"
+    },
+    {
+      "from": "depth_zero_reduction.M_K_orbit_bijection",
+      "to": "depth_zero_reduction.chain_complex_iso"
+    },
+    {
+      "from": "depth_zero_reduction.R_xF_coeff",
+      "to": "depth_zero_reduction.chain_complex_iso"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.chain_complex_iso"
+    },
+    {
+      "from": "coefficient_systems.semisimple_character_T_axioms",
+      "to": "depth_zero_reduction.hypothesis_E"
+    },
+    {
+      "from": "depth_zero_reduction.E2_construction",
+      "to": "depth_zero_reduction.kappa_dual_coeff"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.kappa_dual_coeff"
+    },
+    {
+      "from": "coefficient_systems.localized_equivalence",
+      "to": "depth_zero_reduction.main_theorem"
+    },
+    {
+      "from": "coefficient_systems.serre_subcategory_hypothesis",
+      "to": "depth_zero_reduction.main_theorem"
+    },
+    {
+      "from": "depth_zero_reduction.res_preserves_E",
+      "to": "depth_zero_reduction.main_theorem"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_quasi_inverse",
+      "to": "depth_zero_reduction.main_theorem"
+    },
+    {
+      "from": "representations.localization_equivalence",
+      "to": "depth_zero_reduction.main_theorem"
+    },
+    {
+      "from": "coefficient_systems.localized_equivalence",
+      "to": "depth_zero_reduction.res_preserves_E"
+    },
+    {
+      "from": "depth_zero_reduction.chain_complex_iso",
+      "to": "depth_zero_reduction.res_preserves_E"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.res_preserves_E"
+    },
+    {
+      "from": "coefficient_systems.coeff_phi",
+      "to": "depth_zero_reduction.res_sat_functors"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.res_sat_functors"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.res_sat_functors"
+    },
+    {
+      "from": "depth_zero_reduction.kappa_dual_coeff",
+      "to": "depth_zero_reduction.res_sat_functors"
+    },
+    {
+      "from": "applications.compatible_beta_extension_family",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse"
+    },
+    {
+      "from": "depth_zero_reduction.K4_hypothesis",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse"
+    },
+    {
+      "from": "depth_zero_reduction.hypothesis_E",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse"
+    },
+    {
+      "from": "depth_zero_reduction.kappa_dual_coeff",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse"
+    },
+    {
+      "from": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "equivariant_sheaves.heisenberg_weil_equivalence"
+    },
+    {
+      "from": "depth_zero_reduction.res_sat_functors",
+      "to": "equivariant_sheaves.heisenberg_weil_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.section4_equivalence",
+      "to": "equivariant_sheaves.heisenberg_weil_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "equivariant_sheaves.induction_GxP_X"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "equivariant_sheaves.induction_GxP_X"
+    },
+    {
+      "from": "building.generalized_building_bs",
+      "to": "equivariant_sheaves.induction_universal_property"
+    },
+    {
+      "from": "equivariant_sheaves.induced_cw_structure",
+      "to": "equivariant_sheaves.induction_universal_property"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_universal_property"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "equivariant_sheaves.invariants_coinvariants"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "equivariant_sheaves.invariants_coinvariants"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.qfd_orbit_lemma"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "equivariant_sheaves.quasi_fundamental_domain"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "equivariant_sheaves.reduction_to_qfd"
+    },
+    {
+      "from": "equivariant_sheaves.qfd_orbit_lemma",
+      "to": "equivariant_sheaves.reduction_to_qfd"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "equivariant_sheaves.reduction_to_qfd"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.section4_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.reduction_to_qfd",
+      "to": "equivariant_sheaves.section4_equivalence"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "representations.chain_complex_C_dot"
+    },
+    {
+      "from": "representations.chain_complex_C_dot",
+      "to": "representations.h0_C_dot_adjoint"
+    },
+    {
+      "from": "representations.loc_phi_functor",
+      "to": "representations.h0_C_dot_adjoint"
+    },
+    {
+      "from": "representations.rep_phi",
+      "to": "representations.h0_C_dot_adjoint"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "representations.loc_phi_functor"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "representations.loc_phi_functor"
+    },
+    {
+      "from": "representations.rep_phi",
+      "to": "representations.loc_phi_functor"
+    },
+    {
+      "from": "coefficient_systems.localized_equivalence",
+      "to": "representations.localization_equivalence"
+    },
+    {
+      "from": "coefficient_systems.resolution_theorem",
+      "to": "representations.localization_equivalence"
+    },
+    {
+      "from": "representations.h0_C_dot_adjoint",
+      "to": "representations.localization_equivalence"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "representations.rep_phi"
+    },
+    {
+      "from": "cellular_categories.sheaf_of_subgroups",
+      "to": "representations.rep_phi"
+    }
+  ]
+}

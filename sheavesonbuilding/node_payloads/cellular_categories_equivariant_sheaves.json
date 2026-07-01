@@ -1,0 +1,140 @@
+{
+  "id": "cellular_categories.equivariant_sheaves",
+  "title": "G-equivariant sheaves and cosheaves",
+  "kind": "definition",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_equivariant_sheaves.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>$G$-equivariant sheaves and cosheaves</h1>\n<p>Assume $G$ acts cellularly on $X$ (see\n<a class=\"node-ref\" data-node-id=\"cellular_categories.cw_complex_setting\" href=\"cellular_categories_cw_complex_setting.html\">Locally finite regular CW complex with cellular G-action</a>).</p>\n<p><strong>Definition.</strong> A $G$-equivariant $\\mathscr{C}$-valued sheaf on $X$ is a pair\n$(V,a)$ where $V$ is a sheaf on $X$ and $a$ assigns to each $g \\in G$ a\nmorphism $a(g) \\in \\Hom(V, g^*V)$ satisfying $a(gh) = (h^* a(g)) \\circ a(h)$,\nwith $g^*V$ obtained by post-composing $V$ with $g : ]X[ \\to ]X[$.</p>\n<p><strong>Cellular form.</strong> Equivalently, a $G$-equivariant sheaf is a collection</p>\n<ul>\n<li>$V_F$, one object of $\\mathscr{C}$ for each cell $F \\in [\\![X]\\!]$;</li>\n<li>a restriction $r^V_{E,F} : V_E \\to V_F$ for each $E \\preceq F$;</li>\n<li>an isomorphism $a^V_{g,F} : V_F \\to V_{gF}$ for each $g \\in G$, $F \\in [\\![X]\\!]$,</li>\n</ul>\n<p>subject to four compatibilities:</p>\n<ul>\n<li>$r^V_{E,E} = \\id_{V_E}$;</li>\n<li>$r^V_{E,F} \\circ r^V_{D,E} = r^V_{D,F}$ for $D \\preceq E \\preceq F$;</li>\n<li>$a^V_{g,hF} \\circ a^V_{h,F} = a^V_{gh,F}$;</li>\n<li>$a^V_{g,F} \\circ r^V_{E,F} = r^V_{gE,gF} \\circ a^V_{g,E}$ (equivariance of restrictions).</li>\n</ul>\n<p>A $G$-equivariant cosheaf has the analogous data with restriction directions\nreversed.</p>\n<p><strong>Notation.</strong> We write $\\Sh_G(X,R)$ (resp.\\ $\\Cosh_G(X,R)$) for $G$-equivariant\n$R$-modules; for the trivial group we recover $\\Sh(X,R) = \\Sh_{\\{e\\}}(X,R)$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.sheaves_cosheaves",
+      "title": "Sheaves and cosheaves on X as functor categories",
+      "href": "cellular_categories/cellular_categories_sheaves_cosheaves.html"
+    },
+    {
+      "id": "cellular_categories.cw_complex_setting",
+      "title": "Locally finite regular CW complex with cellular G-action",
+      "href": "cellular_categories/cellular_categories_cw_complex_setting.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.unramified_characters_cosheaf",
+      "title": "Unramified characters bijection X^ur(G) ↔ Cosh_G(B(G); 1_Fix) (App B.1)",
+      "href": "applications/applications_unramified_characters_cosheaf.html"
+    },
+    {
+      "id": "cellular_categories.equivariant_via_functors",
+      "title": "Equivalence: G-equivariant (co)sheaves and functors on ]X/G[",
+      "href": "cellular_categories/cellular_categories_equivariant_via_functors.html"
+    },
+    {
+      "id": "cellular_categories.sheaf_of_subgroups",
+      "title": "G-equivariant (co)sheaf of subgroups and characters",
+      "href": "cellular_categories/cellular_categories_sheaf_of_subgroups.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_local_maps",
+      "title": "Local maps ε^τ_σ along taut paths in the apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_local_maps.html"
+    },
+    {
+      "id": "coefficient_systems.coeff_phi",
+      "title": "Coeff_G(B(Σ), Φ) with axioms (EC1)–(EC4)",
+      "href": "coefficient_systems/coefficient_systems_coeff_phi.html"
+    },
+    {
+      "id": "equivariant_sheaves.invariants_coinvariants",
+      "title": "Invariants and coinvariants of G-equivariant (co)sheaves",
+      "href": "equivariant_sheaves/equivariant_sheaves_invariants_coinvariants.html"
+    },
+    {
+      "id": "equivariant_sheaves.reduction_to_qfd",
+      "title": "Reduction of G-equivariant cosheaves to a QFD (Prop 2.6.3)",
+      "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html"
+    },
+    {
+      "id": "representations.chain_complex_C_dot",
+      "title": "Schneider–Stuhler chain complex C_•(V) of a cosheaf",
+      "href": "representations/representations_chain_complex_C_dot.html"
+    },
+    {
+      "id": "representations.loc_phi_functor",
+      "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+      "href": "representations/representations_loc_phi_functor.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.GEquivariantSheaf",
+      "display_name": "SheafOnBuilding.GEquivariantSheaf",
+      "qualified_name": "SheafOnBuilding.GEquivariantSheaf",
+      "module": "SheafOnBuilding.GEquivariant",
+      "kind": "class",
+      "signature": "class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GEquivariant.lean#L78",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GEquivariantCosheaf",
+      "display_name": "SheafOnBuilding.GEquivariantCosheaf",
+      "qualified_name": "SheafOnBuilding.GEquivariantCosheaf",
+      "module": "SheafOnBuilding.GEquivariant",
+      "kind": "class",
+      "signature": "class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GEquivariant.lean#L134",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.smulFunctor",
+      "display_name": "SheafOnBuilding.smulFunctor",
+      "qualified_name": "SheafOnBuilding.smulFunctor",
+      "module": "SheafOnBuilding.GEquivariant",
+      "kind": "def",
+      "signature": "def smulFunctor (g : G) : X ⥤ X where",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GEquivariant.lean#L58",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.GEquivariant",
+      "display_name": "SheafOnBuilding.GEquivariant",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "e66a219d642cc728fd93ad612c020d5a78f34021",
+      "short_revision": "e66a219",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/e66a219d642cc728fd93ad612c020d5a78f34021/SheafOnBuilding/GEquivariant.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

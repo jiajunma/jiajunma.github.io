@@ -1,0 +1,54 @@
+{
+  "id": "applications.tame_hypotheses_K",
+  "title": "Hypotheses (K1)–(K3), (F1)–(F4) for tame types",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "applications/applications_tame_hypotheses_K.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>(K1)–(K3) and (F1)–(F4) hold for tame types</h1>\n<blockquote>\n<p><strong>Proposition.</strong> With the Yu/AFMO data of\n[[node:applications.tame_K_F_construction]], hypotheses (K1)–(K3) of\nthe generalized-building setup and (F1)–(F4) of the apartment\ncellular-structure setup hold.</p>\n</blockquote>\n<h2>Setup</h2>\n<p>The tame setting fixes a twisted Levi tower $G^{(0)} \\subseteq G^{(1)}\n\\subseteq \\cdots \\subseteq G^{(d)} = G$ over the depth vector\n$\\vec r = (r_0, r_1, \\dots, r_d)$ with $0 = r_0 &lt; r_1 &lt; \\cdots &lt; r_d$\n(<a class=\"node-ref\" data-node-id=\"applications.tame_setting\" href=\"applications_tame_setting.html\">Tamely ramified setting: Yu / Kim–Yu / AFMO datum</a>), an apartment $A = \\mathcal A(T)$\nof a maximal $F$-split torus $T \\subseteq G^{(0)}$, and the Kim–Yu\ngroups $J_x = \\prod_{i=1}^d G^{(i)}_{x, s_i}$ for the half-shifts\n$s_i := r_i / 2$. The $K$-cosheaf stalk is\n$$K_x \\;=\\; G^{(0)}_{x, 0} \\cdot J_x, \\qquad\n  K_{x,+} \\;=\\; G^{(0)}_{x, 0+} \\cdot J_{x, +}, \\qquad\n  J_{x, +} \\;:=\\; \\prod_{i=1}^d G^{(i)}_{x, s_i +},$$\nand $\\hat K_x = \\Fix_G(x)$ is the $G$-fixator of $x$ when $A$ is\nembedded into $\\BSigma = G \\times^K A$ via $x \\mapsto [e, x]$.</p>",
+  "proof_html": "<p>of (F1)–(F4)</p>\n<p>The apartment $A$ is a finite-dimensional Euclidean polysimplicial\ncomplex equipped with the standard hyperplane arrangement of $T$ (root\nhyperplanes plus the shift hyperplanes $\\alpha = m$ for the depths\n$s_1, \\dots, s_d$). (F1) local finiteness and (F2) regularity are\nimmediate. (F3) finite isotropy of the Weyl group action is standard.\n(F4) is checked stalk-by-stalk: the $G^{(i)}_{\\bullet, s_i}$ are\nconstant on facets of the chosen polysimplicial refinement by the\nMoy–Prasad construction.</p>\n<h2>Proof of (K1)</h2>\n<p>(K1) requires $K_x$ to be a compact open subgroup of $G$ for every\n$x \\in A$, with $K_x = K_{x'}$ for $x, x'$ in the same open facet.</p>\n<p>Compactness and openness of $K_x = G^{(0)}_{x, 0} J_x$ follow because\neach factor is compact open in its respective $G^{(i)}$, and the\nproduct (taken inside $G$) is closed and open by standard MP\nproperties. Facet-constancy is by construction of $G^{(i)}_{\\bullet, s_i}$\non the polysimplicial refinement (cf. (F4)).</p>\n<h2>Proof of (K2)</h2>\n<p>(K2) is the $N$-equivariance and the inclusion $G'<em>x \\subseteq K_x \\cap\nG' \\subseteq \\Fix</em>{G'}(x)$ where $G' = G^{(0)} = M$.</p>\n<p>$N$-equivariance of $K$: for $n \\in N \\subseteq G^{(0)}$ and $x \\in A$,\n${}^n K_x = {}^n G^{(0)}<em>{x, 0} \\cdot {}^n J_x = G^{(0)}</em>{nx, 0} \\cdot\n\\prod_i {}^n G^{(i)}_{x, s_i}$. Since $N$ normalizes each $G^{(i)}$\n(twisted Levi structure) and $N$ acts on $A$ by isometries respecting\nthe MP filtration, ${}^n G^{(i)}_{x, s_i} = G^{(i)}_{nx, s_i}$. Hence\n${}^n K_x = K_{nx}$.</p>\n<p>K-condition:\n- $G^{(0)}_{x, 0+} \\subseteq K_x$ is immediate ($G^{(0)}<em>{x, 0+}\n  \\subseteq G^{(0)}</em>{x, 0}$).\n- $K_x \\cap G^{(0)} = G^{(0)}_{x, 0} \\cdot (J_x \\cap G^{(0)})$. The\n  intersection $J_x \\cap G^{(0)} = \\prod_i (G^{(i)}<em>{x, s_i} \\cap G^{(0)})\n  = \\prod_i G^{(0)}</em>{x, s_i}$ (twisted Levi factor intersection), so\n  $K_x \\cap G^{(0)} = G^{(0)}<em>{x, 0} \\cdot \\prod_i G^{(0)}</em>{x, s_i} =\n  G^{(0)}<em>{x, 0}$. This sits inside $\\Fix</em>{G^{(0)}}(x) = G^{(0)}<em>{x, 0}\n  \\cdot \\mathrm{stab}</em>{N^{(0)}}(x)$, giving the second inclusion.</p>\n<h2>Proof of (K3) — the tame analogue</h2>\n<p>The classical-groups proof in [[node:applications.classical_K1_K2_K3]]\nused the <em>enveloping-$\\widetilde G$</em> trick (embed in $\\mathrm{GL}_F(V)$,\nuse lattice-function intersection); this is unavailable in the tame\nsetting. We use the twisted-Levi tower directly.</p>\n<blockquote>\n<p><strong>Lemma (tame K3).</strong> For all $x, y \\in A$ and all $z \\in [x, y]$,\n$$\\Fix_G(x) \\cap \\Fix_G(y) \\;\\subseteq\\; \\Fix_G(z).$$</p>\n</blockquote>\n<p><strong>Proof.</strong> $\\Fix_G(x) = K_x \\cdot \\mathrm{stab}_N(x)$ where the\nstabilizer in $N \\subseteq G^{(0)}$ contributes the translation part of\nthe $T$-action fixing $x$. Since $\\mathrm{stab}_N(x) \\cap\n\\mathrm{stab}_N(y) \\subseteq \\mathrm{stab}_N(z)$ trivially (point\nstabilizers in $N$ acting affinely on $A$ are convex-closed along\ngeodesics), it suffices to show\n\\begin{equation}\\label{eq:K3-Kpart}\n  K_x \\cap K_y \\;\\subseteq\\; K_z, \\qquad z \\in [x, y].\n\\end{equation}</p>\n<p>Recall $K_x = G^{(0)}_{x, 0} J_x = G^{(0)}_{x, 0} \\prod_{i=1}^d G^{(i)}_{x, s_i}$.\nThe Iwahori-style factorization of $G^{(i)}_{x, s_i}$ along the twisted\nLevi tower (see [Yu, §15] for the original construction; [AFMO2 Lemma 3.6.12]\nfor the modernized version; note: earlier KB drafts cited \"Kim–Yu\nCor 8.3\" — that corollary does not exist; Kim–Yu §8 ends at Cor 8.2)\ngives\n$$K_x \\;=\\; \\prod_{i=0}^d \\bigl(G^{(i)}_{x, s_i} \\cap G^{(i+1)}_{x, 0+}\\bigr)\n   \\;\\cdot\\; G^{(0)}_{x, 0},$$\nwhere we put $s_0 = 0$ and $G^{(d+1)} := G$ formally. Each factor is an\nMP-filtration piece of a single twisted Levi group, intersected\nmultiplicatively.</p>\n<p>Apply the standard MP-convexity-along-geodesics lemma in each $G^{(i)}$:\nby [Bruhat–Tits, Cor 6.4.46] (see also [BS, Lem 3.1] which gives the\ninclusion $G_{z,r} \\subseteq G_{x,r}G_{y,r}$),\n\\begin{equation}\\label{eq:MP-convex}\n  G^{(i)}<em>{x, r} \\cap G^{(i)}</em>{y, r} \\;\\subseteq\\; G^{(i)}_{z, r}\n  \\qquad \\forall i,\\ \\forall r \\geq 0,\\ \\forall z \\in [x, y].\n\\end{equation}</p>\n<p>Now take $g \\in K_x \\cap K_y$. By the iterated Iwahori factorization\nalong the twisted Levi tower (Kim–Yu, ibid.), write $g$ uniquely as\n$g = g_0 g_1 \\cdots g_d$ with $g_i \\in G^{(i)}<em>{x, s_i} \\cap\nG^{(i+1)}</em>{x, 0+}$ on the $x$-side. Computing the same factorization\nrelative to $y$ and using uniqueness (Yu's lemma applies to both $x$\nand $y$ inside $\\mathcal B(G^{(d)})$, and $G^{(0)}_{x, 0}$ contains\n$T(\\mathcal O_F)$), each $g_i$ lies in $G^{(i)}_{x, s_i} \\cap G^{(i)}_{y, s_i}$.\nBy \\eqref{eq:MP-convex} applied at depth $s_i$, $g_i \\in G^{(i)}_{z, s_i}$.\nHence $g \\in \\prod_i G^{(i)}_{z, s_i} \\cdot G^{(0)}_{z, 0} = K_z$.</p>\n<p>This proves \\eqref{eq:K3-Kpart}, and (K3) follows. $\\square$</p>\n<h2>Comparison with the classical proof</h2>\n<p>The classical proof factored through the enveloping $\\widetilde G =\n\\mathrm{GL}_F(V)$ and used lattice-function intersections in\n$\\widetilde{\\mathfrak g}$. The tame proof avoids the enveloping algebra\nby working directly with the twisted-Levi factorization of $K_x$ and\napplying MP-convexity ([BS Lem 3.1] generalization) in each tower\nstratum. The two arguments give the same conclusion for groups in the\nintersection of both setups (e.g. $G = \\mathrm{Sp}_{2n}$ with classical\nStevens types vs. Kim–Yu tame types).</p>\n<h2>Alternative source: Dat–Fintzen</h2>\n<p>Both the Iwahori-style factorization ([AFMO2 Lemma 3.6.12], cf. Yu §15)\nand the MP-convexity statement \\eqref{eq:MP-convex} have cleaner\nreformulations in [Dat–Fintzen 2026] (see the comparison table in\n<a class=\"node-ref\" data-node-id=\"references.yu_construction\" href=\"../references/references_yu_construction.html\">yu_construction § Dat-Fintzen parallel</a>):</p>\n<ul>\n<li>The twisted-Levi factorization of $K_x$ corresponds to DF's\n  decomposition along the wild-inertia filtration (DF §3.3).</li>\n<li>MP-convexity along geodesics for each $G^{(i)}$ is restated explicitly\n  in DF §2.3.</li>\n</ul>\n<p>Reading the K3 proof through the DF lens makes the geometric content\n(MP convexity in each stratum) and the algebraic content (Iwahori\nfactorization) cleanly separable.</p>",
+  "deps": [
+    {
+      "id": "applications.tame_K_F_construction",
+      "title": "Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)",
+      "href": "applications/applications_tame_K_F_construction.html"
+    },
+    {
+      "id": "applications.tame_setting",
+      "title": "Tamely ramified setting: Yu / Kim–Yu / AFMO datum",
+      "href": "applications/applications_tame_setting.html"
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "href": "building/building_K3_hypothesis.html"
+    },
+    {
+      "id": "references.yu_construction",
+      "title": "Yu's tame supercuspidal construction",
+      "href": "references/references_yu_construction.html"
+    },
+    {
+      "id": "references.datfintzen_overview",
+      "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+      "href": "references/references_datfintzen_overview.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.tame_main_theorem",
+      "title": "Main theorem applied to tame types",
+      "href": "applications/applications_tame_main_theorem.html"
+    },
+    {
+      "id": "building.A1_Kx_local_verifications",
+      "title": "Verifications of K_x-local (A1) for parahoric, classical, and tame cases",
+      "href": "building/building_A1_Kx_local_verifications.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

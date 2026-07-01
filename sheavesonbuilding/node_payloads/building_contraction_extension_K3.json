@@ -1,0 +1,39 @@
+{
+  "id": "building.contraction_extension_K3",
+  "title": "Equivariant extension of the contraction under (K3)",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "building/building_contraction_extension_K3.html",
+  "primary_topic": "building",
+  "topics": [
+    "building"
+  ],
+  "body_html": "<h1>Equivariant extension of the contraction under (K3)</h1>\n<p>Setting: fixed vertex $x \\in A$; $c : C_d(A) \\to C_{d+1}(A)$ from\n<a class=\"node-ref\" data-node-id=\"building.contraction_map_apartment\" href=\"building_contraction_map_apartment.html\">Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)</a>; hypothesis (K3) from\n[[node:building.K3_hypothesis]].</p>\n<blockquote>\n<p><strong>Lemma (Sheaf7 §5.2).</strong> Under (K3), the contraction map $c$ extends\nuniquely to a map\n$$c : C_d(\\BSigma_x) \\to C_{d+1}(\\BSigma_x)$$\nsuch that\n$$c(k \\cdot E) = k \\cdot c(E) \\qquad \\forall k \\in \\Fix_G(x),\\ E \\in [\\![\\BSigma_x]\\!]_d,$$\nand for every cell $E$ in $\\BSigma_x$, $\\partial c(E) + c(\\partial E) = E$.</p>\n</blockquote>",
+  "proof_html": "<p>Well-definedness reduces to: if $kE = E$ then $c(E) = k \\cdot c(E)$. The\ncondition $kE = E$ implies $k \\in \\Fix_G(y)$ for every $y \\in \\overline E$.\nFor each $E'$ with $c(E, E') \\ne 0$, property <strong>(C2)</strong> of $c$ gives\n$y \\in \\overline E$ with $E' \\cap [y, x] \\ne \\emptyset$. Pick\n$z \\in E' \\cap [y, x]$. By <strong>(K3)</strong>:\n$$k \\in \\Fix_G(x) \\cap \\Fix_G(y) \\;\\subseteq\\; \\Fix_G(z) = \\Fix_G(E'),$$\nso $k \\cdot E' = E'$ and $c$ is $k$-equivariant on $E$. The chain-homotopy\nidentity follows from <strong>(C3)</strong> plus the cell-face inclusion lemma from\n§2.8. $\\square$</p>\n<p>This $\\Fix_G(x)$-equivariant extension is what powers\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.acyclicity_phi_x_chain\" href=\"../coefficient_systems/coefficient_systems_acyclicity_phi_x_chain.html\">Acyclicity of C_d(Φ, V)[φ_x] for vertices x</a>\n(acyclicity of $C_\\bullet(\\Phi, V)[\\phi_x]$).</p>",
+  "deps": [
+    {
+      "id": "building.contraction_map_apartment",
+      "title": "Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)",
+      "href": "building/building_contraction_map_apartment.html"
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "href": "building/building_K3_hypothesis.html"
+    },
+    {
+      "id": "building.bs_subset_x",
+      "title": "The K_x-orbit subset B(Σ)_x := K_x · A",
+      "href": "building/building_bs_subset_x.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.contraction_on_phi_x_chain",
+      "title": "Contraction c on C_d(Φ, V)[φ_x]",
+      "href": "coefficient_systems/coefficient_systems_contraction_on_phi_x_chain.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "applications.mock_exponential_map",
+  "title": "Good mock exponential map and factorization M × m^⊥_{x,0+} → MG_{x,0+}",
+  "kind": "definition",
+  "status": "staged",
+  "href": "applications/applications_mock_exponential_map.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Good mock exponential map</h1>\n<p><strong>Definition.</strong> Suppose $M \\le G$, $\\mathcal{B}(M) \\hookrightarrow\n\\mathcal{B}(G)$, and for $x \\in \\mathcal{B}(M)$ a continuous bijection\n$\\mathrm{Exp} : \\mathfrak{g}_{x, 0+} \\to G_{x, 0+}$. We call $\\mathrm{Exp}$\n<strong>good</strong> if:</p>\n<ul>\n<li>(a) $\\mathrm{Exp}$ induces a group iso\n  $\\mathrm{Exp}<em>r : \\mathfrak{g}</em>{x, r} / \\mathfrak{g}<em>{x, r+}\n   \\;\\xrightarrow{\\sim}\\; G</em>{x, r} / G_{x, r+}$;</li>\n<li>(b) for $X \\in \\mathfrak{g}_{x, 0+}$, $H \\in \\mathfrak{g}_{x, r}$,\n  $\\mathrm{Exp}(X + H)\\, \\mathrm{Exp}(X)^{-1}\\, G_{x, r+} = \\mathrm{Exp}_r(H)$.</li>\n</ul>\n<h2>Examples</h2>\n<ul>\n<li><strong>Cayley transform</strong> $C(X) = (1 + X/2)(1 - X/2)^{-1}$ is a good mock\n  exponential for $G$ a classical group or general linear group with\n  $p \\ne 2$.</li>\n<li><strong>Truncated $\\exp$</strong> is a good mock exponential for general reductive\n  $G$ when $p$ is sufficiently large (BCH-controlled).</li>\n<li>In general the mock exponential exists once a pinning is fixed; see\n  [Adler §1.5].</li>\n</ul>\n<h2>Factorization $\\varphi_x$</h2>\n<p>Decompose $\\mathfrak{g} = \\mathfrak{m} \\oplus \\mathfrak{m}^\\perp$ as\n$M$-invariant subspaces under $\\mathrm{Ad}$. With $\\mathfrak{m}<em>{x, r} :=\n\\mathfrak{g}</em>{x, r} \\cap \\mathfrak{m}$ and the analogous $\\mathfrak{m}^\\perp_{x, r}$,\n$\\mathfrak{g}_{x, r} = \\mathfrak{m}_{x, r} \\oplus \\mathfrak{m}^\\perp_{x, r}$.</p>\n<p>Define\n$$\\varphi_x : M \\times \\mathfrak{m}^\\perp_{x, 0+} \\to G,\n  \\qquad (m, X) \\mapsto m\\, \\mathrm{Exp}(X).$$</p>\n<blockquote>\n<p><strong>Proposition (Sheaf7 App A).</strong> $\\varphi_x$ is injective and its image\nequals $M G_{x, 0+}$.</p>\n</blockquote>\n<p>The proofs use the BCH/decomposition formula iteratively along the\nfiltration $r_0 &lt; r_1 &lt; \\cdots$.</p>\n<h2>Restriction to $K_x$ and gluing</h2>\n<blockquote>\n<p><strong>Corollary.</strong> $\\varphi_x$ restricts to a bijection\n$M_x \\times \\mathfrak{k}^\\perp_{x, 0+} \\to K_x$, where\n$\\mathfrak{k}^\\perp_{x, 0+} := \\mathfrak{m}^\\perp_{x, 0+} \\cap \\mathfrak{k}_{x, 0+}$.</p>\n<p><strong>Theorem (apartment version).</strong> Fixing an apartment $A$ of\n$\\mathcal{B}(M)$, the maps $\\{\\varphi_x\\}_{x \\in A}$ glue to a bijection\n$$\\varphi : M \\times \\bigcup_{x \\in A} \\mathfrak{m}^\\perp_{x, 0+}\n&gt;   \\;\\xrightarrow{\\;\\sim\\;}\\; M \\bigcup_{x \\in A} G_{x, 0+}.$$</p>\n</blockquote>\n<p>The proof reduces to overlapping pairs and uses Iwahori decomposition\n[MP96 Thm 4.2] of $\\widetilde G$ for an enveloping $(\\widetilde G,\n\\widetilde M, \\Gamma)$ with $G = \\widetilde G^\\Gamma$, $M = \\widetilde M^\\Gamma$.</p>\n<p>This apartment-wide factorization is the crucial input to\n[[node:depth_zero_reduction.M_K_orbit_bijection]].</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

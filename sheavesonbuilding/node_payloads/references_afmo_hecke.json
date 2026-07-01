@@ -1,0 +1,17 @@
+{
+  "id": "references.afmo_hecke",
+  "title": "Adler–Fintzen–Mishra–Ohara: refined types and Hecke algebras",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "references/references_afmo_hecke.html",
+  "primary_topic": "references",
+  "topics": [
+    "references"
+  ],
+  "body_html": "<h1>AFMO Hecke algebra approach</h1>\n<p>[Adler–Fintzen–Mishra–Ohara] developed a refined type theory and the\n<em>Heisenberg–Weil datum</em> formalism (an evolution of Yu's generic cuspidal\ndatum that cleanly separates depth-zero from positive-depth parts).</p>\n<p>Key items used in this paper:</p>\n<ul>\n<li><strong>Heisenberg–Weil datum</strong> ([AFMO2 §3.6]) — input to\n  <a class=\"node-ref\" data-node-id=\"applications.tame_setting\" href=\"../applications/applications_tame_setting.html\">Tamely ramified setting: Yu / Kim–Yu / AFMO datum</a>;</li>\n<li><strong>Twisted Yu representation</strong> $\\kappa_x$ ([AFMO2 §3.6, p.34 (κ_x defined just above Notation 3.6.4)]) — the\n  representations in [[node:applications.tame_K_F_construction]];</li>\n<li><strong>Coherence of $\\kappa$ under $G$-action</strong> ([AFMO2 Prop 3.6.13]) —\n  proves (E2) in [[node:applications.tame_T_axioms]].</li>\n</ul>\n<h2>Methodological contrast</h2>\n<p>AFMO's reduction to depth zero goes through explicit <strong>Hecke algebra</strong>\nisomorphisms. The present paper supplies a parallel, fully\nsheaf-theoretic reduction via the §8 Res/Sat functors and the §7.4\nlocalization equivalence. The two routes yield the same equivalence on\n$\\Rep_\\Phi(G)$ vs.\\ $\\Rep_0(M)$ in the tame setting, but the sheaf-side\nroute is more amenable to:</p>\n<ul>\n<li>handling positive-depth characters uniformly (via the generalized\n  building $\\BSigma$);</li>\n<li>$\\ell$-modular generalizations (no Hecke-algebra Bernstein theory\n  needed);</li>\n<li>bridging to theta correspondence reductions [LM].</li>\n</ul>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

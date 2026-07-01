@@ -1,0 +1,54 @@
+{
+  "id": "coefficient_systems.serre_subcategory_hypothesis",
+  "title": "Serre-subcategory property (S) — a consequence, not a hypothesis",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "coefficient_systems/coefficient_systems_serre_subcategory_hypothesis.html",
+  "primary_topic": "coefficient_systems",
+  "topics": [
+    "coefficient_systems"
+  ],
+  "body_html": "<h1>Serre-subcategory property (S) — a consequence, not a hypothesis</h1>\n<p>In earlier formulations of this framework, the Serre-subcategory\nproperty\n$$\\textup{(S):}\\quad\n\\Rep_\\Phi(G) \\subseteq \\Rep(G)\n\\text{ is closed under subobjects, quotients, and extensions}$$\nwas assumed as a separate hypothesis (used to lift a per-irreducible\nacyclicity argument to arbitrary $V \\in \\Rep_\\Phi(G)$ in the\ncontraction-based §7.1 resolution argument).</p>\n<p>Under the cartesian-cosheaf framework (following Lanard;\n<a class=\"node-ref\" data-node-id=\"references.lanard_equivalence\" href=\"../references/references_lanard_equivalence.html\">Lanard&#x27;s depth-zero block equivalence</a> and\n<a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves\" href=\"coefficient_systems_cartesian_cosheaves.html\">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a>), <strong>(S) is automatic</strong>:\nit follows as a corollary of the cartesian equivalence.</p>\n<h2>Statement</h2>\n<blockquote>\n<p><strong>Proposition ((S) as a consequence).</strong> Assume (T1)–(T5), (K1)–(K2),\nand $K_x$-local (A1) (verified for parahoric / classical / tame in\n[[node:building.A1_Kx_local_verifications]]). Then $\\Rep_\\Phi(G)$\nis a Serre subcategory of $\\Rep(G)$ stable under arbitrary direct\nsums.</p>\n</blockquote>",
+  "proof_html": "<p>By the cartesian equivalence theorem\n(<a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves\" href=\"coefficient_systems_cartesian_cosheaves.html\">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a> Thm), $\\Loc_\\phi$\ninduces an equivalence\n$$\\Rep_\\Phi(G) \\;\\simeq\\; \\mathrm{Cosh}^{\\mathrm{cart}}_G(\\BSigma, R, \\phi).$$</p>\n<p>The right-hand category is visibly a Serre subcategory of\n$\\mathrm{Cosh}_G(\\BSigma, R, \\phi)$ (defined by a restriction-map\ncondition preserved under sub/quot/ext), and the latter is a Serre\nsubcategory of $\\mathrm{Cosh}_G(\\BSigma, R)$ (depth-restriction at\neach facet). Transporting this Serre structure across the\nequivalence, $\\Rep_\\Phi(G) \\subseteq \\Rep(G)$ is a Serre\nsubcategory.</p>\n<p>Closure under arbitrary direct sums: same argument applied to\ndirect sums (which are preserved by $\\Loc_\\phi$ and $H_0$).\n$\\square$</p>\n<h2>Status change</h2>\n<table>\n<thead>\n<tr>\n<th>Era</th>\n<th>(S) status</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Pre-Lanard (Sheaf7 §7.1)</td>\n<td>Hypothesis; required for global resolution</td>\n</tr>\n<tr>\n<td>Cartesian framework (this paper)</td>\n<td><strong>Corollary</strong> of Thm cartesian-equivalence</td>\n</tr>\n</tbody>\n</table>\n<p>This is a clean reduction in hypothesis count, as the audit in\n[HYPOTHESIS_AUDIT.md] anticipated under the Lanard switch.</p>\n<h2>Historical note (per-application verifications no longer needed)</h2>\n<p>The previous per-application verifications of (S) (which existed\nwhen (S) was a hypothesis):</p>\n<ul>\n<li><strong>Classical</strong>: $[HKSS, Prop 6.7]$ — see\n  <a class=\"node-ref\" data-node-id=\"applications.classical_serre\" href=\"../applications/applications_classical_serre.html\">Hypothesis (S) for classical groups via [HKSS]</a>.</li>\n<li><strong>Tame</strong>: Bernstein decomposition + $[KY, Thm 6.3]$ — see\n  <a class=\"node-ref\" data-node-id=\"applications.tame_serre\" href=\"../applications/applications_tame_serre.html\">Hypothesis (S) for tame types via Bernstein + [KY]</a>.</li>\n</ul>\n<p>These verifications are now <strong>redundant</strong> for the main framework\n(they were specific to the hypothesis-driven formulation). The\napplications nodes are kept for historical reference but the main\nchain no longer needs them.</p>\n<h2>See also</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"coefficient_systems.cartesian_cosheaves\" href=\"coefficient_systems_cartesian_cosheaves.html\">Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism</a> — the cartesian\n  equivalence that makes (S) a corollary.</li>\n<li><a class=\"node-ref\" data-node-id=\"references.lanard_equivalence\" href=\"../references/references_lanard_equivalence.html\">Lanard&#x27;s depth-zero block equivalence</a> — Lanard's framework.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "coefficient_systems.rep_capital_phi",
+      "title": "The subcategory Rep_Φ(G)",
+      "href": "coefficient_systems/coefficient_systems_rep_capital_phi.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves",
+      "title": "Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_serre",
+      "title": "Hypothesis (S) for classical groups via [HKSS]",
+      "href": "applications/applications_classical_serre.html"
+    },
+    {
+      "id": "applications.tame_serre",
+      "title": "Hypothesis (S) for tame types via Bernstein + [KY]",
+      "href": "applications/applications_tame_serre.html"
+    },
+    {
+      "id": "coefficient_systems.localized_equivalence",
+      "title": "Coeff_G(B(Σ), Φ)[E_Φ⁻¹] ≃ Rep_Φ(G) (§7.4 Thm)",
+      "href": "coefficient_systems/coefficient_systems_localized_equivalence.html"
+    },
+    {
+      "id": "coefficient_systems.resolution_theorem",
+      "title": "Resolution theorem: C_•(Φ, V) → V (Thm 7.1.7)",
+      "href": "coefficient_systems/coefficient_systems_resolution_theorem.html"
+    },
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

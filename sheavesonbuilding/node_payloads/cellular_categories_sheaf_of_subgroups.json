@@ -1,0 +1,64 @@
+{
+  "id": "cellular_categories.sheaf_of_subgroups",
+  "title": "G-equivariant (co)sheaf of subgroups and characters",
+  "kind": "definition",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_sheaf_of_subgroups.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>$G$-equivariant (co)sheaf of subgroups and characters</h1>\n<p>Assume $G$ is a subgroup of a larger group $M$, and $G$ acts cellularly on\nthe regular CW complex $X$.</p>\n<p><strong>Definition (sheaf/cosheaf of subgroups).</strong> A $G$-equivariant sheaf\n(resp.\\ cosheaf) $K$ on $X$ of subgroups of $M$ is a $G$-equivariant\nsheaf (resp.\\ cosheaf) of groups on $X$ with:</p>\n<ul>\n<li>$K_E \\le M$ for every $E \\in [\\![X]\\!]$;</li>\n<li>$r^K_{E,E'}$ is the inclusion $K_E \\hookrightarrow K_{E'}$ (sheaf case:\n  $E \\preceq E'$; cosheaf case: $E' \\preceq E$);</li>\n<li>$K_{gE} = g K_E g^{-1}$ and $a^K_{g,E}$ is conjugation by $g$.</li>\n</ul>\n<p>Equivalently $K$ is an object of $\\Cosh_G(X,\\mathrm{Sub}(M))$, where\n$\\mathrm{Sub}(M)$ is the category of subgroups of $M$ with group\nhomomorphisms.</p>\n<p><strong>Definition (character).</strong> A <em>character</em> of $K$ is a family\n$\\phi = \\{\\phi_E\\}_{E \\in [\\![X]\\!]}$ with\n$\\phi_E \\in \\Hom(K_E, R^\\times)$ satisfying</p>\n<ul>\n<li>compatibility: $\\phi_E |_{K_{E'}} = \\phi_{E'}$ along restrictions;</li>\n<li>equivariance: $\\phi_{gE}(g u g^{-1}) = \\phi_E(u)$ for $g \\in G$.</li>\n</ul>\n<h2>Standard examples</h2>\n<ul>\n<li>$E \\mapsto \\Fix_G(E)$ is always a cosheaf of subgroups of $G$.</li>\n<li>$E \\mapsto \\Stab_G(E)$ is <strong>not</strong> in general a cosheaf, but it becomes one\n  after refining the CW structure so that $\\Stab_G(E) = \\Fix_G(E)$ for every\n  cell.</li>\n<li>For $X = \\mathcal{B}(G)$ (the Bruhat–Tits building of a reductive $G$ over a\n  local field, with the standard polysimplicial structure), $x \\mapsto G_{x,0}$\n  is a cosheaf and $x \\mapsto G_{x,0+}$ is a sheaf. After refining to the\n  polyhedral structure of [BT2], the same is true of $x \\mapsto G_{x,r}$\n  and $x \\mapsto G_{x,r+}$ for $r \\in \\tfrac{1}{n}\\mathbb{Z}_{\\ge 0}$.</li>\n</ul>\n<h2>Two derived (co)sheaves</h2>\n<p>Given a sheaf $K$ of subgroups, a character $\\phi$ of $K$, and an\n$R[G]$-module $V$, both of the following are objects of $\\Cosh_G(X,R)$\nresp.\\ $\\Sh_G(X,R)$:</p>\n<ul>\n<li>$\\widetilde V : E \\mapsto V[\\phi_E]$ — the $\\phi_E$-isotypic submodule of\n  $V$, viewed as a cosheaf;</li>\n<li>$\\widetilde{\\widetilde V} : E \\mapsto V_{\\phi_E}$ — the $\\phi_E$-isotypic\n  quotient of $V$, viewed as a sheaf.</li>\n</ul>\n<p>These are the building blocks of Schneider–Stuhler theory and recur in\n<a class=\"node-ref\" data-node-id=\"representations.rep_phi\" href=\"../representations/representations_rep_phi.html\">The subcategory Rep_φ(G)</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.compatible_system_from_alcove",
+      "title": "Construction of the compatible cosheaf 𝒦 from pointwise {κ_E} via an alcove (§12.2)",
+      "href": "applications/applications_compatible_system_from_alcove.html"
+    },
+    {
+      "id": "building.K_cosheaf",
+      "title": "K-cosheaf on the apartment with K-condition",
+      "href": "building/building_K_cosheaf.html"
+    },
+    {
+      "id": "coefficient_systems.idempotent_system_from_T_axioms",
+      "title": "Idempotent system extracted from (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_idempotent_system_from_T_axioms.html"
+    },
+    {
+      "id": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "title": "Heisenberg–Weil equivalence Cosh_G(X,phi) ≃ Cosh_G(X,1_{QJ}) (Prop 4.2)",
+      "href": "equivariant_sheaves/equivariant_sheaves_heisenberg_weil_equivalence.html"
+    },
+    {
+      "id": "equivariant_sheaves.induction_GxP_X",
+      "title": "Induced space G ×^P X' along a cosheaf P",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html"
+    },
+    {
+      "id": "equivariant_sheaves.invariants_coinvariants",
+      "title": "Invariants and coinvariants of G-equivariant (co)sheaves",
+      "href": "equivariant_sheaves/equivariant_sheaves_invariants_coinvariants.html"
+    },
+    {
+      "id": "representations.loc_phi_functor",
+      "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+      "href": "representations/representations_loc_phi_functor.html"
+    },
+    {
+      "id": "representations.rep_phi",
+      "title": "The subcategory Rep_φ(G)",
+      "href": "representations/representations_rep_phi.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

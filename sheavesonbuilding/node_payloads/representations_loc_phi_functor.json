@@ -1,0 +1,59 @@
+{
+  "id": "representations.loc_phi_functor",
+  "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "representations/representations_loc_phi_functor.html",
+  "primary_topic": "representations",
+  "topics": [
+    "representations"
+  ],
+  "body_html": "<h1>Localization functor $\\mathrm{Loc}_\\phi$</h1>\n<p>Let $\\Cosh_G(X, R, \\phi)$ be the full subcategory of $\\Cosh_G(X, R)$ on\nthose $\\mathscr{V}$ such that $K_E$ acts on $\\mathscr{V}_E$ via $\\phi_E$:\ni.e.\\ $\\mathscr{V} = \\mathscr{V}[\\phi]$ where $\\mathscr{V}[\\phi]<em>E :=\n(\\mathscr{V}_E|</em>{K_E})[\\phi_E]$. By\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.invariants_coinvariants\" href=\"../equivariant_sheaves/equivariant_sheaves_invariants_coinvariants.html\">Invariants and coinvariants of G-equivariant (co)sheaves</a>, $\\mathscr{V}[\\phi]$ is\nitself an object of $\\Cosh_G(X, R)$.</p>\n<p><strong>Definition.</strong> The <strong>localization functor</strong>\n$$\\Loc_\\phi : \\Rep(G) \\to \\Cosh_G(X, R, \\phi)$$\nis defined on stalks by\n$$\\Loc_\\phi(V)_E \\;:=\\; (V|_{K_E})[\\phi_E].$$</p>\n<p>The restriction maps $r^{\\Loc_\\phi(V)}_{E,E'}$ are induced from the\ncompatibility $\\phi_E|_{K_{E'}} = \\phi_{E'}$ for $E \\preceq E'$ (the <em>sheaf</em>\ndirection); the $G$-action is the restriction of the $G$-action on $V$.</p>\n<p>For $V \\in \\Rep_\\phi(G)$, the restricted functor\n$\\Loc_\\phi : \\Rep_\\phi(G) \\to \\Cosh_G(X, R, \\phi)$ has a left adjoint built\nfrom chain homology, namely\n[[node:representations.h0_C_dot_adjoint]].</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "representations.rep_phi",
+      "title": "The subcategory Rep_φ(G)",
+      "href": "representations/representations_rep_phi.html"
+    },
+    {
+      "id": "cellular_categories.sheaf_of_subgroups",
+      "title": "G-equivariant (co)sheaf of subgroups and characters",
+      "href": "cellular_categories/cellular_categories_sheaf_of_subgroups.html"
+    },
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "coefficient_systems.cartesian_cosheaves",
+      "title": "Cartesian cosheaves Cosh^cart_G(X,R,φ) and unit isomorphism",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_cosheaves.plan.via_apartment_idempotents",
+      "title": "Proof plan: Cartesian unit-iso via apartment-level system of idempotents",
+      "href": "coefficient_systems/coefficient_systems_cartesian_cosheaves_plan_via_apartment_idempotents.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_unit_iso_assembly",
+      "title": "Unit-iso assembly: V_F ≅ e_F H_0 via surjectivity + injectivity",
+      "href": "coefficient_systems/coefficient_systems_cartesian_unit_iso_assembly.html"
+    },
+    {
+      "id": "representations.h0_C_dot_adjoint",
+      "title": "H₀ ∘ C_• ⊣ Loc_φ adjunction (§3 Prop)",
+      "href": "representations/representations_h0_C_dot_adjoint.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

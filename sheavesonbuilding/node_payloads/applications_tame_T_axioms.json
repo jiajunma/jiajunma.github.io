@@ -1,0 +1,54 @@
+{
+  "id": "applications.tame_T_axioms",
+  "title": "Hypotheses (T1)–(T5) and (E1)–(E3) for tame types",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "applications/applications_tame_T_axioms.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>(T1)–(T5) and (E1)–(E3) for tame types</h1>\n<blockquote>\n<p><strong>Proposition.</strong> For the tame Yu/AFMO data of\n[[node:applications.tame_K_F_construction]]:</p>\n<ul>\n<li><strong>(T1)–(T5)</strong> hold: (T1)–(T3) from Yu's construction; (T4) from the\n  global intertwiner identity\n  <a class=\"node-ref\" data-node-id=\"applications.tame_intertwiner\" href=\"applications_tame_intertwiner.html\">Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y</a> / support corollary.</li>\n<li><strong>(E1)–(E3)</strong> hold: (E1) from Yu directly; (E2) from [AFMO2 Prop 3.6.13];\n  (E3) from <a class=\"node-ref\" data-node-id=\"applications.tame_kappa_intertwiner\" href=\"applications_tame_kappa_intertwiner.html\">Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))</a>.</li>\n</ul>\n</blockquote>\n<p>This is the tame-side counterpart of\n[[node:applications.classical_T_axioms]].</p>\n<p>The global existence of the $\\kappa$-family on the closed chamber of\n$\\mathcal B(G_\\beta)$ (needed for (T1) facet-constancy and (T3)\n$G$-equivariance to be literal rather than up-to-iso at each point) is\nprovided by Skodlerack–Ye Thm 5.21 in the quaternionic case; see\n<a class=\"node-ref\" data-node-id=\"applications.compatible_beta_extension_family\" href=\"applications_compatible_beta_extension_family.html\">Global β-extension existence (compatible κ-family on B(G_β))</a>. The same\ncorrection-by-quadratic-character technique applies to the AFMO tame\n$\\kappa_x$ by replacing the finite reductive signature characters of\n[Skodlerack–Ye §5.2] with the Yu-side reductive quotients of\n$\\mathrm P^\\circ(\\Lambda_x)/\\mathrm P_1(\\Lambda_x)$ inside Yu's\ntwisted Levi $G^{(i)}$'s.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "applications.tame_intertwiner",
+      "title": "Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y",
+      "href": "applications/applications_tame_intertwiner.html"
+    },
+    {
+      "id": "applications.tame_kappa_intertwiner",
+      "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+      "href": "applications/applications_tame_kappa_intertwiner.html"
+    },
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "href": "applications/applications_compatible_beta_extension_family.html"
+    },
+    {
+      "id": "coefficient_systems.semisimple_character_T_axioms",
+      "title": "Compatible system of semisimple characters: hypothesis (T1)–(T5)",
+      "href": "coefficient_systems/coefficient_systems_semisimple_character_T_axioms.html"
+    },
+    {
+      "id": "depth_zero_reduction.hypothesis_E",
+      "title": "Hypothesis (E1)–(E4) on a compatible system of extensions κ",
+      "href": "depth_zero_reduction/depth_zero_reduction_hypothesis_E.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.tame_main_theorem",
+      "title": "Main theorem applied to tame types",
+      "href": "applications/applications_tame_main_theorem.html"
+    },
+    {
+      "id": "applications.tame_serre",
+      "title": "Hypothesis (S) for tame types via Bernstein + [KY]",
+      "href": "applications/applications_tame_serre.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

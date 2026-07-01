@@ -1,0 +1,49 @@
+{
+  "id": "applications.tame_K_F_construction",
+  "title": "Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "applications/applications_tame_K_F_construction.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Pointwise Yu/AFMO construction</h1>\n<p>For a (partial) Heisenberg–Weil datum $\\Sigma$ as in\n<a class=\"node-ref\" data-node-id=\"applications.tame_setting\" href=\"applications_tame_setting.html\">Tamely ramified setting: Yu / Kim–Yu / AFMO datum</a> and $x \\in \\mathcal{B}^0$, set:</p>\n<ul>\n<li>$K_x := G^{(0)}_{x, 0} \\cdot J_x$, where $J_x$ is the Yu/Kim–Yu open\n  compact subgroup of $G$ at $x$ ([Kim–Yu], [AFMO2 §3.6 (Def 3.6.1)]). This is the\n  group serving as the $K$-cosheaf stalk for the tame setting (see\n  [[node:building.K_cosheaf]]).</li>\n<li>$K_{x,0+}$ is the maximal pro-$p$ normal subgroup of $K_x$;</li>\n<li>the character $\\phi_x := \\prod_{i=0}^d \\hat \\phi_i$, where $\\hat \\phi_i$\n  is the unique extension of the depth-$r_i$ character $\\phi_i$ from\n  $G^{(i)}$ to $G^{(i)}_{x, 0} G_{x, r_i/2 +}$;</li>\n<li>under the generic assumption, there is a unique irreducible\n  $K_{x,0+}$-representation that is $\\phi_x$-isotypic on $K_{x,+}$, call\n  it $\\kappa_x|_{K_{x,0+}}$;</li>\n<li>$\\kappa_x$ is the <strong>twisted Yu Heisenberg–Weil representation</strong> of $K_x$\n  attached to $\\phi_x$ as constructed in [AFMO2 §3.6, p.34 (κ_x defined just above Notation 3.6.4)].</li>\n</ul>\n<p>This gives a map\n$$\\mathcal{B}^0 \\ni x \\;\\longmapsto\\; (K_x,\\ K_{x,0+},\\ K_{x,+},\\ \\phi_x,\\ \\kappa_x),$$\ni.e. the input to all the §5–§8 machinery in the tame setting.</p>\n<p>The crucial properties needed downstream are verified in\n[[node:applications.tame_hypotheses_K]] (geometric (K)/(F)),\n[[node:applications.tame_T_axioms]] (type axioms), and\n<a class=\"node-ref\" data-node-id=\"applications.tame_intertwiner\" href=\"applications_tame_intertwiner.html\">Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y</a> (the global intertwiner identity).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "applications.tame_setting",
+      "title": "Tamely ramified setting: Yu / Kim–Yu / AFMO datum",
+      "href": "applications/applications_tame_setting.html"
+    },
+    {
+      "id": "building.K_cosheaf",
+      "title": "K-cosheaf on the apartment with K-condition",
+      "href": "building/building_K_cosheaf.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "href": "applications/applications_compatible_beta_extension_family.html"
+    },
+    {
+      "id": "applications.tame_hypotheses_K",
+      "title": "Hypotheses (K1)–(K3), (F1)–(F4) for tame types",
+      "href": "applications/applications_tame_hypotheses_K.html"
+    },
+    {
+      "id": "applications.tame_two_term_intertwiner",
+      "title": "Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G' G_{y,s} (Yu Thm 9.4 generalized)",
+      "href": "applications/applications_tame_two_term_intertwiner.html"
+    },
+    {
+      "id": "building.A1_Kx_local_verifications",
+      "title": "Verifications of K_x-local (A1) for parahoric, classical, and tame cases",
+      "href": "building/building_A1_Kx_local_verifications.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

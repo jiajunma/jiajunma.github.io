@@ -1,0 +1,291 @@
+{
+  "topic": {
+    "id": "references",
+    "title": "References",
+    "href": "references/index.html",
+    "parent": null,
+    "node_count": 8,
+    "descendant_node_count": 8
+  },
+  "counts": {
+    "internal_nodes": 8,
+    "inlined_nodes": 0,
+    "descendant_nodes": 8,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 8,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
+  },
+  "nodes": [
+    {
+      "id": "references.afmo_hecke",
+      "title": "Adler–Fintzen–Mishra–Ohara: refined types and Hecke algebras",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_afmo_hecke.html",
+      "payload": "node_payloads/references_afmo_hecke.json"
+    },
+    {
+      "id": "references.datfintzen_overview",
+      "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_datfintzen_overview.html",
+      "payload": "node_payloads/references_datfintzen_overview.json"
+    },
+    {
+      "id": "references.fintzen_yu_correction",
+      "title": "Fintzen 2021: correction to Yu's tame supercuspidal construction",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_fintzen_yu_correction.html",
+      "payload": "node_payloads/references_fintzen_yu_correction.json"
+    },
+    {
+      "id": "references.gabriel_zisman",
+      "title": "Gabriel–Zisman calculus of fractions (localization criterion)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_gabriel_zisman.html",
+      "payload": "node_payloads/references_gabriel_zisman.json"
+    },
+    {
+      "id": "references.lanard_equivalence",
+      "title": "Lanard's depth-zero block equivalence",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_lanard_equivalence.html",
+      "payload": "node_payloads/references_lanard_equivalence.json"
+    },
+    {
+      "id": "references.schneider_stuhler_resolution",
+      "title": "Schneider–Stuhler resolution theorem (depth-zero baseline)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_schneider_stuhler_resolution.html",
+      "payload": "node_payloads/references_schneider_stuhler_resolution.json"
+    },
+    {
+      "id": "references.skodlerack_ye_compatible_beta",
+      "title": "Skodlerack–Ye: compatible families of β-extensions (Thm 5.21)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_skodlerack_ye_compatible_beta.html",
+      "payload": "node_payloads/references_skodlerack_ye_compatible_beta.json"
+    },
+    {
+      "id": "references.yu_construction",
+      "title": "Yu's tame supercuspidal construction",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "references/references_yu_construction.html",
+      "payload": "node_payloads/references_yu_construction.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "applications",
+      "title": "Applications",
+      "href": "applications/index.html",
+      "role": "dependent",
+      "node_count": 21
+    },
+    {
+      "id": "coefficient_systems",
+      "title": "Coefficient Systems",
+      "href": "coefficient_systems/index.html",
+      "role": "dependent",
+      "node_count": 21
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "references.datfintzen_overview",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 6
+    },
+    {
+      "from": "references.fintzen_yu_correction",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 4
+    },
+    {
+      "from": "references.skodlerack_ye_compatible_beta",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 2
+    },
+    {
+      "from": "references.yu_construction",
+      "to": "topic:applications",
+      "kind": "boundary_dependent",
+      "topic": "applications",
+      "count": 5
+    },
+    {
+      "from": "references.gabriel_zisman",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_dependent",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "references.lanard_equivalence",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_dependent",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "references.datfintzen_overview",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "coefficient_systems",
+      "count": 1
+    },
+    {
+      "from": "references.lanard_equivalence",
+      "to": "topic:coefficient_systems",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "coefficient_systems",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "afmo",
+      "title": "afmo",
+      "href": "keywords/afmo.html",
+      "count": 1
+    },
+    {
+      "id": "beta-extension",
+      "title": "beta-extension",
+      "href": "keywords/beta-extension.html",
+      "count": 1
+    },
+    {
+      "id": "blocks",
+      "title": "blocks",
+      "href": "keywords/blocks.html",
+      "count": 2
+    },
+    {
+      "id": "category-theory",
+      "title": "category-theory",
+      "href": "keywords/category-theory.html",
+      "count": 1
+    },
+    {
+      "id": "classical",
+      "title": "classical",
+      "href": "keywords/classical.html",
+      "count": 1
+    },
+    {
+      "id": "compatible-family",
+      "title": "compatible-family",
+      "href": "keywords/compatible-family.html",
+      "count": 1
+    },
+    {
+      "id": "correction",
+      "title": "correction",
+      "href": "keywords/correction.html",
+      "count": 1
+    },
+    {
+      "id": "dat-fintzen",
+      "title": "dat-fintzen",
+      "href": "keywords/dat-fintzen.html",
+      "count": 1
+    },
+    {
+      "id": "depth-zero",
+      "title": "depth-zero",
+      "href": "keywords/depth-zero.html",
+      "count": 1
+    },
+    {
+      "id": "external",
+      "title": "external",
+      "href": "keywords/external.html",
+      "count": 8
+    },
+    {
+      "id": "fintzen",
+      "title": "fintzen",
+      "href": "keywords/fintzen.html",
+      "count": 1
+    },
+    {
+      "id": "hecke",
+      "title": "hecke",
+      "href": "keywords/hecke.html",
+      "count": 1
+    },
+    {
+      "id": "l-modular",
+      "title": "l-modular",
+      "href": "keywords/l-modular.html",
+      "count": 1
+    },
+    {
+      "id": "lanard",
+      "title": "lanard",
+      "href": "keywords/lanard.html",
+      "count": 1
+    },
+    {
+      "id": "localization",
+      "title": "localization",
+      "href": "keywords/localization.html",
+      "count": 1
+    },
+    {
+      "id": "schneider-stuhler",
+      "title": "schneider-stuhler",
+      "href": "keywords/schneider-stuhler.html",
+      "count": 1
+    },
+    {
+      "id": "skodlerack-ye",
+      "title": "skodlerack-ye",
+      "href": "keywords/skodlerack-ye.html",
+      "count": 1
+    },
+    {
+      "id": "supercuspidal",
+      "title": "supercuspidal",
+      "href": "keywords/supercuspidal.html",
+      "count": 1
+    },
+    {
+      "id": "tame",
+      "title": "tame",
+      "href": "keywords/tame.html",
+      "count": 3
+    },
+    {
+      "id": "yu",
+      "title": "yu",
+      "href": "keywords/yu.html",
+      "count": 2
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

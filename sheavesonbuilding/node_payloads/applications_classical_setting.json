@@ -1,0 +1,29 @@
+{
+  "id": "applications.classical_setting",
+  "title": "Classical groups setting: G = isometry of an ε-Hermitian form, p ≠ 2",
+  "kind": "topic",
+  "status": "staged",
+  "href": "applications/applications_classical_setting.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Classical groups setting</h1>\n<p>Let $F_0$ be a $p$-adic field with $p \\ne 2$ and let $F$ be either $F_0$\nor a quadratic extension of $F_0$, with non-trivial involution\n$\\overline{\\;\\cdot\\;}$. Let $V$ be a finite-dimensional $F$-vector space\nequipped with a non-degenerate $\\epsilon$-Hermitian form\n$\\langle \\cdot, \\cdot \\rangle$:\n$$\\langle v, w \\rangle = \\epsilon\\,\\overline{\\langle w, v \\rangle},\n  \\quad \\epsilon \\in \\{+1, -1\\}.$$</p>\n<p>$G$ is the <strong>isometry group</strong> of $(V, \\langle\\cdot,\\cdot\\rangle)$. With\n$\\sigma$ the involution $g \\mapsto (g^*)^{-1}$ on $\\mathrm{GL}(V)$,\n$G = \\mathrm{GL}(V)^\\sigma$ with Lie algebra\n$\\mathfrak{g} = \\mathfrak{gl}(V)^\\sigma$.</p>\n<h2>Endo-class data</h2>\n<p>Following [KSS, §9], an endo-class of $G$ is a pair $(\\beta, \\Phi)$:</p>\n<ul>\n<li>$\\beta \\in \\mathfrak{g}$ semisimple with $-k_F(\\beta) &gt; 0$, i.e.\n  $(0, \\beta)$ is a semisimple pair [KSS Def 9.1];</li>\n<li>$\\Phi$ a self-dual potential semisimple character on $(0, \\beta)$\n  [KSS Defs 9.4–9.5].</li>\n</ul>\n<p>Let $E := F[\\beta]$. Since $\\beta^* = -\\beta$, $E$ decomposes as\n$$E = \\bigoplus_{i^+ \\in I^+}(E_{i^+} \\oplus E_{i^-}) \\oplus \\bigoplus_{k \\in I_0} E_k,$$\neach $E_\\bullet$ a field extension of $F$, with appropriate dual/self-dual\nstructure.</p>\n<h2>Centralizer $M = G^\\beta$</h2>\n<p>The Levi $M := G^\\beta$ has the form\n$$M = \\prod_i \\mathrm{GL}_{E_{i^+}}(V_{i^+}) \\times \\prod_{k \\in I_0} \\mathrm{U}(V_k),$$\nwhere the $V_k$ carry $\\epsilon$-Hermitian forms with respect to\n$E_k / E_k^\\circ$ (the fixed-point subfield).</p>\n<p>This $M$ is the depth-zero target of the §8 main theorem applied to the\nsemisimple type $(K_x, \\kappa_x)$ defined in\n[[node:applications.classical_K_F_definition]].</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "building.reductive_pair_setting",
+      "title": "Reductive pair (G', G) and the apartment A",
+      "href": "building/building_reductive_pair_setting.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_K_F_definition",
+      "title": "Stevens groups K_x, K_{x,+} from a β-approximation sequence",
+      "href": "applications/applications_classical_K_F_definition.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

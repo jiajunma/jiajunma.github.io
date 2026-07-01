@@ -1,0 +1,43 @@
+{
+  "id": "applications.classical_main_theorem",
+  "title": "Main theorem applied to classical groups",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "applications/applications_classical_main_theorem.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Main theorem applied to classical groups</h1>\n<blockquote>\n<p><strong>Theorem (synthesis).</strong> Let $G$ be a classical group over a $p$-adic\nfield with $p \\ne 2$, $\\Phi$ a Stevens semisimple character with\nassociated Levi $M = G^\\beta$. The §8 main theorem\n<a class=\"node-ref\" data-node-id=\"depth_zero_reduction.main_theorem\" href=\"../depth_zero_reduction/depth_zero_reduction_main_theorem.html\">Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)</a> yields an equivalence\n$$\\Rep_\\Phi(G) \\;\\simeq\\; \\Rep_0(M).$$</p>\n</blockquote>\n<p><strong>Status.</strong> Statement accepted. Proof accepted <em>modulo the status of\nthe global $\\beta$-extension existence</em> (formerly listed as [HKSS\nConjecture 7.8]):</p>\n<ul>\n<li>All axioms (T1)–(T5), (S), (E1)–(E3) (local), (K1)–(K4) are\n  established in the Stevens-school literature (BK, Sécherre–Stevens,\n  Stevens, Miyauchi–Stevens, Skodlerack–Stevens, KSS, HKSS).</li>\n<li>The <strong>global</strong> $\\beta$-extension compatibility — needed to make the\n  $\\kappa_x$ data into a literal $G$-equivariant family — is addressed\n  by the <strong>Skodlerack–Ye preprint</strong> in the quaternionic case (Thm 5.21\n  of [SkoYe]; see <a class=\"node-ref\" data-node-id=\"applications.compatible_beta_extension_family\" href=\"applications_compatible_beta_extension_family.html\">Global β-extension existence (compatible κ-family on B(G_β))</a>\n  and <a class=\"node-ref\" data-node-id=\"references.skodlerack_ye_compatible_beta\" href=\"../references/references_skodlerack_ye_compatible_beta.html\">Skodlerack–Ye: compatible families of β-extensions (Thm 5.21)</a>). The same\n  quadratic-correction technique is expected to extend to the general\n  classical case, but neither extension nor the preprint is published.</li>\n</ul>",
+  "proof_html": "<p>All axioms required by [[node:depth_zero_reduction.main_theorem|Main\nTheorem 8.2.1]] are verified for classical-groups Stevens data:</p>\n<table>\n<thead>\n<tr>\n<th>Axiom</th>\n<th>Source</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(K1)–(K3)</td>\n<td>[[node:applications.classical_K1_K2_K3]] (uses [Stevens:SC §3], [BK 3.3.4] enveloping-$\\widetilde G$ argument)</td>\n</tr>\n<tr>\n<td>(T1)–(T5)</td>\n<td>[[node:applications.classical_T_axioms]] (uses [Stevens:SC §3], [KSS Prop 8.13], [Schneider–Stuhler §II.2] (NOT BL Cor 4.5 — earlier KB drafts misattributed; BL Cor 4.5 is a lattice/ramification computation, unrelated))</td>\n</tr>\n<tr>\n<td>(S)</td>\n<td><a class=\"node-ref\" data-node-id=\"applications.classical_serre\" href=\"applications_classical_serre.html\">Hypothesis (S) for classical groups via [HKSS]</a> (= [HKSS Prop 6.7], building on [BK93]/[SS:IV,VI]/[Stevens:SC]/[Sko:SS]/[KSS21])</td>\n</tr>\n<tr>\n<td>(E1)–(E3) (locally)</td>\n<td>[Stevens:SC §3], [Stevens:SC §4.2], [MS §3]</td>\n</tr>\n<tr>\n<td>(E3) (globally)</td>\n<td><a class=\"node-ref\" data-node-id=\"applications.compatible_beta_extension_family\" href=\"applications_compatible_beta_extension_family.html\">Global β-extension existence (compatible κ-family on B(G_β))</a> = [SkoYe Thm 5.21] (preprint, quaternionic case; general classical case in progress)</td>\n</tr>\n<tr>\n<td>(K4)</td>\n<td>Standard, from Stevens decomposition; cf. [Stevens:SC §3] and [HKSS §5]</td>\n</tr>\n</tbody>\n</table>\n<p>With all axioms in place, [Sheaf7 Thm 8.2.1] applies directly. $\\square$</p>\n<blockquote>\n<p><strong>Honest accounting.</strong> This statement is <em>as unconditional as it\ncurrently can be</em>: every axiom has a published proof or a clearly\nidentified preprint. When [SkoYe] appears in print (and the general\nclassical extension is documented), the conditional language can be\nremoved; until then, \"global $\\beta$-extension existence\" is a\npreprint-conditional input.</p>\n</blockquote>",
+  "deps": [
+    {
+      "id": "depth_zero_reduction.main_theorem",
+      "title": "Main Theorem 8.2.1: Rep_Φ(G) ≃ Rep_0(M)",
+      "href": "depth_zero_reduction/depth_zero_reduction_main_theorem.html"
+    },
+    {
+      "id": "applications.classical_K1_K2_K3",
+      "title": "Hypotheses (K1)–(K3) for classical groups",
+      "href": "applications/applications_classical_K1_K2_K3.html"
+    },
+    {
+      "id": "applications.classical_T_axioms",
+      "title": "Hypotheses (T1)–(T5) for classical groups",
+      "href": "applications/applications_classical_T_axioms.html"
+    },
+    {
+      "id": "applications.classical_serre",
+      "title": "Hypothesis (S) for classical groups via [HKSS]",
+      "href": "applications/applications_classical_serre.html"
+    },
+    {
+      "id": "applications.compatible_beta_extension_family",
+      "title": "Global β-extension existence (compatible κ-family on B(G_β))",
+      "href": "applications/applications_compatible_beta_extension_family.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

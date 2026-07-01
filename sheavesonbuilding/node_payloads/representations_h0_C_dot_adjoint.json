@@ -1,0 +1,39 @@
+{
+  "id": "representations.h0_C_dot_adjoint",
+  "title": "H₀ ∘ C_• ⊣ Loc_φ adjunction (§3 Prop)",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "representations/representations_h0_C_dot_adjoint.html",
+  "primary_topic": "representations",
+  "topics": [
+    "representations"
+  ],
+  "body_html": "<h1>Adjunction $H_0 \\circ C_\\bullet \\;\\dashv\\; \\Loc_\\phi$</h1>\n<blockquote>\n<p><strong>Proposition.</strong> The functor\n$\\Loc_\\phi : \\Rep_\\phi(G) \\to \\Cosh_G(X, R, \\phi)$ is a <em>right</em> adjoint of\n$H_0 \\circ C_\\bullet : \\Cosh_G(X, R, \\phi) \\to \\Rep_\\phi(G)$.</p>\n</blockquote>\n<h2>Counit</h2>\n<p>For $V \\in \\Rep_\\phi(G)$, the augmentation\n$\\epsilon_V : C_0(\\Loc_\\phi V) \\to V$ (see\n[[node:representations.chain_complex_C_dot]]) kills boundaries and factors\nthrough $H_0$ because $V = \\sum_x V[\\phi_x]$ by assumption. This gives\n$$\\epsilon_V : H_0(C_\\bullet(\\Loc_\\phi V)) \\to V.$$</p>\n<h2>Unit</h2>\n<p>For $\\mathscr{V} \\in \\Cosh_G(X, R, \\phi)$ and a cell $E$, set\n$$(\\eta_\\mathscr{V})_E := q_\\mathscr{V} \\circ r^\\mathscr{V}_{E, x}$$\nfor any vertex $x \\in \\overline E$, where $q_\\mathscr{V} : C_0(\\mathscr{V})\n\\twoheadrightarrow H_0(C_\\bullet \\mathscr{V})$ is the canonical quotient.\nThe composite is independent of the choice of $x$ by the definition of\n$H_0$. Its image lies in $H_0(C_\\bullet \\mathscr{V})[\\phi_E]$ because\n$q_\\mathscr{V} \\circ r^\\mathscr{V}_{E, x}$ is $K_E$-equivariant. This gives\n$\\eta : \\mathrm{id} \\to \\Loc_\\phi \\circ H_0 \\circ C_\\bullet$.</p>\n<h2>Unit–counit identities</h2>\n<ul>\n<li>For $V \\in \\Rep_\\phi(G)$: $\\Loc_\\phi(\\epsilon_V) \\circ \\eta_{\\Loc_\\phi V}\n  = \\id_{\\Loc_\\phi V}$. On each cell $E$, $v \\in V[\\phi_E]$ maps to\n  $q(r^{\\Loc_\\phi V}_{E, x}(v))$, then to $r^{\\Loc_\\phi V}_{E,x}(v)$ under\n  $\\epsilon_V$; composing with the projection back to $V[\\phi_E]$ is the\n  identity since $r^{\\Loc_\\phi V}_{E,x}$ is just inclusion.</li>\n<li>For $\\mathscr{V} \\in \\Cosh_G(X, R, \\phi)$: $\\epsilon_{H_0 C_\\bullet \\mathscr{V}}\n  \\circ H_0(C_\\bullet \\eta_\\mathscr{V}) = \\id_{H_0 C_\\bullet \\mathscr{V}}$.\n  Direct computation on $z = \\sum_x x \\otimes v_x$ tracks the identity. $\\square$</li>\n</ul>\n<p>A standard corollary\n(<a class=\"node-ref\" data-node-id=\"representations.localization_equivalence\" href=\"representations_localization_equivalence.html\">Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)</a>): if the counit is an\nisomorphism for every $V$, then $H_0 \\circ C_\\bullet$ exhibits\n$\\Rep_\\phi(G)$ as a <em>localization</em> of $\\Cosh_G(X, R, \\phi)$ at the class of\nmorphisms inducing $H_0$-isomorphisms.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "representations.loc_phi_functor",
+      "title": "Localization functor Loc_φ: Rep(G) → Cosh_G(X, R, φ)",
+      "href": "representations/representations_loc_phi_functor.html"
+    },
+    {
+      "id": "representations.chain_complex_C_dot",
+      "title": "Schneider–Stuhler chain complex C_•(V) of a cosheaf",
+      "href": "representations/representations_chain_complex_C_dot.html"
+    },
+    {
+      "id": "representations.rep_phi",
+      "title": "The subcategory Rep_φ(G)",
+      "href": "representations/representations_rep_phi.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "representations.localization_equivalence",
+      "title": "Cosh_G(X,R,φ)[Σ⁻¹] ≃ Rep_φ(G) (§3 Cor)",
+      "href": "representations/representations_localization_equivalence.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

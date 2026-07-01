@@ -1,0 +1,74 @@
+{
+  "id": "building.K_cosheaf",
+  "title": "K-cosheaf on the apartment with K-condition",
+  "kind": "definition",
+  "status": "staged",
+  "href": "building/building_K_cosheaf.html",
+  "primary_topic": "building",
+  "topics": [
+    "building"
+  ],
+  "body_html": "<h1>$K$-cosheaf on the apartment with $K$-condition</h1>\n<p>Let $(G', G)$, $S$, $N$, $A$ be as in\n<a class=\"node-ref\" data-node-id=\"building.reductive_pair_setting\" href=\"building_reductive_pair_setting.html\">Reductive pair (G&#x27;, G) and the apartment A</a>.</p>\n<p><strong>Definition.</strong> A $K$-cosheaf for $(G', G)$ on $A$ is an $N$-equivariant\ncosheaf $K$ of compact open subgroups of $G$ on $A$ satisfying the\n<strong>$K$-condition</strong>:\n$$G'_x \\;\\le\\; K_x \\cap G' \\;\\le\\; \\Fix_{G'}(x) \\qquad \\text{for all } x \\in A.$$</p>\n<p>The $K$-condition implies $G'_x \\cap N \\le K_x \\cap N \\le \\Fix_N(x)$.</p>\n<p>The cosheaf $K$ encodes a choice of \"thickening\" of the parahorics $G'_x$\ninside $G$; the resulting generalized building\n<a class=\"node-ref\" data-node-id=\"building.generalized_building_bs\" href=\"building_generalized_building_bs.html\">Generalized building B(Σ) = G ×^K A</a> is to $K$ what the Bruhat–Tits\nbuilding is to $G'$.</p>\n<h2>Examples</h2>\n<ul>\n<li>$K_x := G'_x$ recovers the Bruhat–Tits building of $G'$ as a special case.</li>\n<li>For $G$ classical and $G' = G^{(0)}$ a centralizer in a semisimple type,\n  the Stevens groups $J^\\circ(\\beta, \\Lambda_x)$ give $K_x$\n  (see [[node:applications.classical_K1_K2_K3]]).</li>\n<li>For tame types, the Kim–Yu–AFMO construction supplies $K_x$ as the\n  product $G^{(0)}_{x,0} J_x$\n  (see [[node:applications.tame_K_F_construction]]).</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "building.reductive_pair_setting",
+      "title": "Reductive pair (G', G) and the apartment A",
+      "href": "building/building_reductive_pair_setting.html"
+    },
+    {
+      "id": "cellular_categories.sheaf_of_subgroups",
+      "title": "G-equivariant (co)sheaf of subgroups and characters",
+      "href": "cellular_categories/cellular_categories_sheaf_of_subgroups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_K1_K2_K3",
+      "title": "Hypotheses (K1)–(K3) for classical groups",
+      "href": "applications/applications_classical_K1_K2_K3.html"
+    },
+    {
+      "id": "applications.classical_K_F_definition",
+      "title": "Stevens groups K_x, K_{x,+} from a β-approximation sequence",
+      "href": "applications/applications_classical_K_F_definition.html"
+    },
+    {
+      "id": "applications.tame_K_F_construction",
+      "title": "Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)",
+      "href": "applications/applications_tame_K_F_construction.html"
+    },
+    {
+      "id": "building.A1_axiom_in_component",
+      "title": "Bruhat–Tits axiom (A1) inside each connected component of B(Σ)",
+      "href": "building/building_A1_axiom_in_component.html"
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "href": "building/building_K3_hypothesis.html"
+    },
+    {
+      "id": "building.apartments_in_bsigma",
+      "title": "Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x",
+      "href": "building/building_apartments_in_bsigma.html"
+    },
+    {
+      "id": "building.component_is_KxA",
+      "title": "Main theorem: each connected component of B(Σ) equals K_x · A",
+      "href": "building/building_component_is_KxA.html"
+    },
+    {
+      "id": "building.connected_components.plan.classification",
+      "title": "Plan: identify each connected component of B(Σ) as K_x · A",
+      "href": "building/building_connected_components_plan_classification.html"
+    },
+    {
+      "id": "building.generalized_building_bs",
+      "title": "Generalized building B(Σ) = G ×^K A",
+      "href": "building/building_generalized_building_bs.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hypotheses (K1)–(K3), (F1)–(F4) for tame types — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf topic-active">
+          <a href="../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../keywords/category.html">category</a></li>
+      
+        <li><a href="../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../keywords/external.html">external</a></li>
+      
+        <li><a href="../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../keywords/main.html">main</a></li>
+      
+        <li><a href="../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../keywords/res.html">res</a></li>
+      
+        <li><a href="../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-applications-2e-tame_hypotheses_K">
+  <header class="proposition_thmheading thm-heading">
+    <span class="proposition_thmcaption thm-caption">Proposition</span>
+    <span class="proposition_thmtitle thm-title">Hypotheses (K1)–(K3), (F1)–(F4) for tame types</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-proposition">proposition</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-applications-2e-tame_hypotheses_K">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="applications_tame_K_F_construction.html">Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)</a></li>
+        
+        <li><a href="applications_tame_setting.html">Tamely ramified setting: Yu / Kim–Yu / AFMO datum</a></li>
+        
+        <li><a href="../building/building_K3_hypothesis.html">Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics</a></li>
+        
+        <li><a href="../references/references_yu_construction.html">Yu&#39;s tame supercuspidal construction</a></li>
+        
+        <li><a href="../references/references_datfintzen_overview.html">Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="proposition_thmcontent thm-content body">
+    <h1>(K1)–(K3) and (F1)–(F4) hold for tame types</h1>
+<blockquote>
+<p><strong>Proposition.</strong> With the Yu/AFMO data of
+[[node:applications.tame_K_F_construction]], hypotheses (K1)–(K3) of
+the generalized-building setup and (F1)–(F4) of the apartment
+cellular-structure setup hold.</p>
+</blockquote>
+<h2>Setup</h2>
+<p>The tame setting fixes a twisted Levi tower $G^{(0)} \subseteq G^{(1)}
+\subseteq \cdots \subseteq G^{(d)} = G$ over the depth vector
+$\vec r = (r_0, r_1, \dots, r_d)$ with $0 = r_0 &lt; r_1 &lt; \cdots &lt; r_d$
+(<a class="node-ref" data-node-id="applications.tame_setting" href="applications_tame_setting.html">Tamely ramified setting: Yu / Kim–Yu / AFMO datum</a>), an apartment $A = \mathcal A(T)$
+of a maximal $F$-split torus $T \subseteq G^{(0)}$, and the Kim–Yu
+groups $J_x = \prod_{i=1}^d G^{(i)}_{x, s_i}$ for the half-shifts
+$s_i := r_i / 2$. The $K$-cosheaf stalk is
+$$K_x \;=\; G^{(0)}_{x, 0} \cdot J_x, \qquad
+  K_{x,+} \;=\; G^{(0)}_{x, 0+} \cdot J_{x, +}, \qquad
+  J_{x, +} \;:=\; \prod_{i=1}^d G^{(i)}_{x, s_i +},$$
+and $\hat K_x = \Fix_G(x)$ is the $G$-fixator of $x$ when $A$ is
+embedded into $\BSigma = G \times^K A$ via $x \mapsto [e, x]$.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>of (F1)–(F4)</p>
+<p>The apartment $A$ is a finite-dimensional Euclidean polysimplicial
+complex equipped with the standard hyperplane arrangement of $T$ (root
+hyperplanes plus the shift hyperplanes $\alpha = m$ for the depths
+$s_1, \dots, s_d$). (F1) local finiteness and (F2) regularity are
+immediate. (F3) finite isotropy of the Weyl group action is standard.
+(F4) is checked stalk-by-stalk: the $G^{(i)}_{\bullet, s_i}$ are
+constant on facets of the chosen polysimplicial refinement by the
+Moy–Prasad construction.</p>
+<h2>Proof of (K1)</h2>
+<p>(K1) requires $K_x$ to be a compact open subgroup of $G$ for every
+$x \in A$, with $K_x = K_{x'}$ for $x, x'$ in the same open facet.</p>
+<p>Compactness and openness of $K_x = G^{(0)}_{x, 0} J_x$ follow because
+each factor is compact open in its respective $G^{(i)}$, and the
+product (taken inside $G$) is closed and open by standard MP
+properties. Facet-constancy is by construction of $G^{(i)}_{\bullet, s_i}$
+on the polysimplicial refinement (cf. (F4)).</p>
+<h2>Proof of (K2)</h2>
+<p>(K2) is the $N$-equivariance and the inclusion $G'<em>x \subseteq K_x \cap
+G' \subseteq \Fix</em>{G'}(x)$ where $G' = G^{(0)} = M$.</p>
+<p>$N$-equivariance of $K$: for $n \in N \subseteq G^{(0)}$ and $x \in A$,
+${}^n K_x = {}^n G^{(0)}<em>{x, 0} \cdot {}^n J_x = G^{(0)}</em>{nx, 0} \cdot
+\prod_i {}^n G^{(i)}_{x, s_i}$. Since $N$ normalizes each $G^{(i)}$
+(twisted Levi structure) and $N$ acts on $A$ by isometries respecting
+the MP filtration, ${}^n G^{(i)}_{x, s_i} = G^{(i)}_{nx, s_i}$. Hence
+${}^n K_x = K_{nx}$.</p>
+<p>K-condition:
+- $G^{(0)}_{x, 0+} \subseteq K_x$ is immediate ($G^{(0)}<em>{x, 0+}
+  \subseteq G^{(0)}</em>{x, 0}$).
+- $K_x \cap G^{(0)} = G^{(0)}_{x, 0} \cdot (J_x \cap G^{(0)})$. The
+  intersection $J_x \cap G^{(0)} = \prod_i (G^{(i)}<em>{x, s_i} \cap G^{(0)})
+  = \prod_i G^{(0)}</em>{x, s_i}$ (twisted Levi factor intersection), so
+  $K_x \cap G^{(0)} = G^{(0)}<em>{x, 0} \cdot \prod_i G^{(0)}</em>{x, s_i} =
+  G^{(0)}<em>{x, 0}$. This sits inside $\Fix</em>{G^{(0)}}(x) = G^{(0)}<em>{x, 0}
+  \cdot \mathrm{stab}</em>{N^{(0)}}(x)$, giving the second inclusion.</p>
+<h2>Proof of (K3) — the tame analogue</h2>
+<p>The classical-groups proof in [[node:applications.classical_K1_K2_K3]]
+used the <em>enveloping-$\widetilde G$</em> trick (embed in $\mathrm{GL}_F(V)$,
+use lattice-function intersection); this is unavailable in the tame
+setting. We use the twisted-Levi tower directly.</p>
+<blockquote>
+<p><strong>Lemma (tame K3).</strong> For all $x, y \in A$ and all $z \in [x, y]$,
+$$\Fix_G(x) \cap \Fix_G(y) \;\subseteq\; \Fix_G(z).$$</p>
+</blockquote>
+<p><strong>Proof.</strong> $\Fix_G(x) = K_x \cdot \mathrm{stab}_N(x)$ where the
+stabilizer in $N \subseteq G^{(0)}$ contributes the translation part of
+the $T$-action fixing $x$. Since $\mathrm{stab}_N(x) \cap
+\mathrm{stab}_N(y) \subseteq \mathrm{stab}_N(z)$ trivially (point
+stabilizers in $N$ acting affinely on $A$ are convex-closed along
+geodesics), it suffices to show
+\begin{equation}\label{eq:K3-Kpart}
+  K_x \cap K_y \;\subseteq\; K_z, \qquad z \in [x, y].
+\end{equation}</p>
+<p>Recall $K_x = G^{(0)}_{x, 0} J_x = G^{(0)}_{x, 0} \prod_{i=1}^d G^{(i)}_{x, s_i}$.
+The Iwahori-style factorization of $G^{(i)}_{x, s_i}$ along the twisted
+Levi tower (see [Yu, §15] for the original construction; [AFMO2 Lemma 3.6.12]
+for the modernized version; note: earlier KB drafts cited "Kim–Yu
+Cor 8.3" — that corollary does not exist; Kim–Yu §8 ends at Cor 8.2)
+gives
+$$K_x \;=\; \prod_{i=0}^d \bigl(G^{(i)}_{x, s_i} \cap G^{(i+1)}_{x, 0+}\bigr)
+   \;\cdot\; G^{(0)}_{x, 0},$$
+where we put $s_0 = 0$ and $G^{(d+1)} := G$ formally. Each factor is an
+MP-filtration piece of a single twisted Levi group, intersected
+multiplicatively.</p>
+<p>Apply the standard MP-convexity-along-geodesics lemma in each $G^{(i)}$:
+by [Bruhat–Tits, Cor 6.4.46] (see also [BS, Lem 3.1] which gives the
+inclusion $G_{z,r} \subseteq G_{x,r}G_{y,r}$),
+\begin{equation}\label{eq:MP-convex}
+  G^{(i)}<em>{x, r} \cap G^{(i)}</em>{y, r} \;\subseteq\; G^{(i)}_{z, r}
+  \qquad \forall i,\ \forall r \geq 0,\ \forall z \in [x, y].
+\end{equation}</p>
+<p>Now take $g \in K_x \cap K_y$. By the iterated Iwahori factorization
+along the twisted Levi tower (Kim–Yu, ibid.), write $g$ uniquely as
+$g = g_0 g_1 \cdots g_d$ with $g_i \in G^{(i)}<em>{x, s_i} \cap
+G^{(i+1)}</em>{x, 0+}$ on the $x$-side. Computing the same factorization
+relative to $y$ and using uniqueness (Yu's lemma applies to both $x$
+and $y$ inside $\mathcal B(G^{(d)})$, and $G^{(0)}_{x, 0}$ contains
+$T(\mathcal O_F)$), each $g_i$ lies in $G^{(i)}_{x, s_i} \cap G^{(i)}_{y, s_i}$.
+By \eqref{eq:MP-convex} applied at depth $s_i$, $g_i \in G^{(i)}_{z, s_i}$.
+Hence $g \in \prod_i G^{(i)}_{z, s_i} \cdot G^{(0)}_{z, 0} = K_z$.</p>
+<p>This proves \eqref{eq:K3-Kpart}, and (K3) follows. $\square$</p>
+<h2>Comparison with the classical proof</h2>
+<p>The classical proof factored through the enveloping $\widetilde G =
+\mathrm{GL}_F(V)$ and used lattice-function intersections in
+$\widetilde{\mathfrak g}$. The tame proof avoids the enveloping algebra
+by working directly with the twisted-Levi factorization of $K_x$ and
+applying MP-convexity ([BS Lem 3.1] generalization) in each tower
+stratum. The two arguments give the same conclusion for groups in the
+intersection of both setups (e.g. $G = \mathrm{Sp}_{2n}$ with classical
+Stevens types vs. Kim–Yu tame types).</p>
+<h2>Alternative source: Dat–Fintzen</h2>
+<p>Both the Iwahori-style factorization ([AFMO2 Lemma 3.6.12], cf. Yu §15)
+and the MP-convexity statement \eqref{eq:MP-convex} have cleaner
+reformulations in [Dat–Fintzen 2026] (see the comparison table in
+<a class="node-ref" data-node-id="references.yu_construction" href="../references/references_yu_construction.html">yu_construction § Dat-Fintzen parallel</a>):</p>
+<ul>
+<li>The twisted-Levi factorization of $K_x$ corresponds to DF's
+  decomposition along the wild-inertia filtration (DF §3.3).</li>
+<li>MP-convexity along geodesics for each $G^{(i)}$ is restated explicitly
+  in DF §2.3.</li>
+</ul>
+<p>Reading the K3 proof through the DF lens makes the geometric content
+(MP convexity in each stratum) and the algebraic content (Iwahori
+factorization) cleanly separable.</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="applications_tame_main_theorem.html">Main theorem applied to tame types</a></li>
+      
+      <li><a href="../building/building_A1_Kx_local_verifications.html">Verifications of K_x-local (A1) for parahoric, classical, and tame cases</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">tame</span><span class="tag">K-axioms</span><span class="tag">F-axioms</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

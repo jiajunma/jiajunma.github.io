@@ -1,0 +1,39 @@
+{
+  "id": "building.contraction_map_apartment",
+  "title": "Contraction map c: C_d(A) → C_{d+1}(A) (Bestvina–Savin)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "building/building_contraction_map_apartment.html",
+  "primary_topic": "building",
+  "topics": [
+    "building"
+  ],
+  "body_html": "<h1>Contraction map $c : C_d(A) \\to C_{d+1}(A)$ (Bestvina–Savin)</h1>\n<p>Fix a vertex $x \\in A$. Following [BS, §2], there is a chain homotopy\n$c : C_d(A) \\to C_{d+1}(A)$, expressed as\n$$c(E) = \\sum_{E' \\in [\\![A]\\!]_{d+1}} c(E, E')\\, E',$$\nsatisfying:</p>\n<ul>\n<li><strong>(C1)</strong> $c_{-1}(1) = x$.</li>\n<li><strong>(C2)</strong> $c(E, E') \\ne 0$ only if $E'$ is contained in the smallest\n  subcomplex of $A$ containing the cone with vertex $x$ and base $E$.</li>\n<li><strong>(C3)</strong> $\\partial c(E) + c(\\partial E) = E$.</li>\n</ul>\n<p>Existence and the explicit construction are reviewed in\n<a class=\"node-ref\" data-node-id=\"applications.contraction_map_existence\" href=\"../applications/applications_contraction_map_existence.html\">Bestvina–Savin contraction on a convex polyhedron complex (App C)</a>. (C3) is the chain-homotopy\nidentity making $A$ acyclic with respect to the augmentation\n$C_\\bullet(A) \\to \\mathbb{Z}_{x}$.</p>\n<p>The Bestvina–Savin construction extends to $\\BSigma_x$ once the\n$K$-condition is supplemented by [[node:building.K3_hypothesis|hypothesis (K3)]];\nsee [[node:building.contraction_extension_K3]].</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "building.reductive_pair_setting",
+      "title": "Reductive pair (G', G) and the apartment A",
+      "href": "building/building_reductive_pair_setting.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.contraction_map_existence",
+      "title": "Bestvina–Savin contraction on a convex polyhedron complex (App C)",
+      "href": "applications/applications_contraction_map_existence.html"
+    },
+    {
+      "id": "building.contraction_extension_K3",
+      "title": "Equivariant extension of the contraction under (K3)",
+      "href": "building/building_contraction_extension_K3.html"
+    },
+    {
+      "id": "coefficient_systems.cartesian_reduction_to_apartment",
+      "title": "Reduction lemma: cartesian unit-iso check transfers to apartment",
+      "href": "coefficient_systems/coefficient_systems_cartesian_reduction_to_apartment.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

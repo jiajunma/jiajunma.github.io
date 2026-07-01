@@ -1,0 +1,28 @@
+{
+  "id": "cellular_categories.equivariant_via_functors",
+  "title": "Equivalence: G-equivariant (co)sheaves and functors on ]X/G[",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_equivariant_via_functors.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>Equivalence: $G$-equivariant (co)sheaves as functors on $]X/G[$</h1>\n<blockquote>\n<p><strong>Lemma.</strong> The category of $G$-equivariant $\\mathscr{C}$-valued sheaves on\n$X$ is equivalent to $\\underline{\\mathrm{Fun}}(]X/G[,\\mathscr{C})$. Dually,\nthe category of $G$-equivariant $\\mathscr{C}$-valued cosheaves on $X$ is\nequivalent to $\\underline{\\mathrm{Fun}}([X/G],\\mathscr{C})$.</p>\n</blockquote>\n<p>In particular, taking $G = \\{e\\}$ recovers the equivalences\n$\\Sh(X,\\mathscr{C}) = \\underline{\\mathrm{Fun}}(]X[,\\mathscr{C})$ and\n$\\Cosh(X,\\mathscr{C}) = \\underline{\\mathrm{Fun}}([X],\\mathscr{C})$.</p>\n<h2>Sketch of the equivalence (sheaf case)</h2>\n<p>Given $(V,a) \\in \\Sh_G(X,\\mathscr{C})$, define $F : \\,]X/G[\\, \\to\n\\mathscr{C}$ by $F(E) := V_E$ and, for $g \\in \\Hom_{]X/G[}(E,E')$\n(i.e.\\ $gE \\preceq E'$),\n$$F(g) := r^V_{gE,E'} \\circ a^V_{g,E}.$$</p>\n<p>Functoriality (i.e.\\ $F(h) \\circ F(g) = F(hg)$) follows by chasing the\nequivariance axiom of $a^V$ and the transitivity of $r^V$. Conversely,\ngiven $F : \\,]X/G[\\, \\to \\mathscr{C}$, set $V_E := F(E)$,\n$r^V_{E,E'} := F(e : E \\to E')$, and $a^V_{g,E} := F(g : E \\to gE)$;\nthis gives a $G$-equivariant sheaf. The two constructions are mutually\ninverse.</p>\n<p>The cosheaf case is dual.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    },
+    {
+      "id": "cellular_categories.quotient_category_jXGk",
+      "title": "The quotient categories ]X/G[ and [X/G]",
+      "href": "cellular_categories/cellular_categories_quotient_category_jXGk.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

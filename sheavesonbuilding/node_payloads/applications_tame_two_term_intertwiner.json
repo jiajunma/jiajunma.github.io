@@ -1,0 +1,49 @@
+{
+  "id": "applications.tame_two_term_intertwiner",
+  "title": "Two-term intertwiner I(φ_y, φ_x) = G_{x,s} G' G_{y,s} (Yu Thm 9.4 generalized)",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "applications/applications_tame_two_term_intertwiner.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Two-term intertwiner identity</h1>\n<p>Setting: $(G', G)$ a twisted Levi sequence, $(\\phi', \\phi)$ quasi-characters\non $G', G$ with $\\phi'$ generic of depth $r &gt; 0$. For $x \\in \\mathcal{B}(G')$,\n$\\mathfrak{j}_x := \\mathfrak{g}'_{x, r} \\oplus (\\mathfrak{g}')^\\perp_{x, s+}$\nand dually $\\mathfrak{j}^*_x$. Fix a maximal torus $T \\subset G$ tame, $x$\nin the apartment of $T$, and the Yu mock-exponential\n$e^T : \\mathfrak{j}_x \\to J_x$.</p>\n<p>By [Adler §1.5(.2) + Cor 1.6.6] (the single-point iso + T-independence; the $\\mathfrak j_x$-restricted version uses §1.9), $e_x$ induces an iso\n$\\mathfrak{j}_x / \\mathfrak{g}_{x, r+} \\cong J_x / G_{x, r+}$, independent\nof $T$.</p>\n<p>By the definition of generic quasi-character there is\n$X^* \\in (\\mathfrak{z}')^*$ of depth $-r$ with\n$$\\hat \\phi'_x(g) = \\psi(\\langle X^*, (e^T_x)^{-1}(g) \\rangle)\n  \\qquad \\forall g \\in J_x.$$</p>\n<blockquote>\n<p><strong>Lemma (cf. Yu Lemma 9.3, Thm 9.4).</strong> For $x, y \\in \\mathcal{B}(G')$,\n$$I(\\hat \\phi_y|_{J_y}, \\hat \\phi_x|_{J_x}) = G_{x, s} G' G_{y, s}.$$</p>\n</blockquote>",
+  "proof_html": "<p>This proof reduces to two cited results: Adler §1.5(.2) (mock-exponential identity; the <em>covariance</em> statement at Lem 1.6.4 is a different ingredient) for the calculation step, and <strong>Yu Theorem 9.4 (as corrected /\nreformulated in [Dat–Fintzen 2026] Lem 2.6.6)</strong> for the geometric\ncoset-meeting conclusion.</p>\n<blockquote>\n<p>⚠️ <strong>Primary source: Dat–Fintzen 2026.</strong> Yu Thm 9.4 is one of the\nintertwiner statements whose original proof in Yu 2001 §9 was\naffected by the gap fixed in [Fintzen 2021]. The <em>statement</em> of Yu\n9.4 is correct; the <em>proof</em> should reference DF / Fintzen 2021. See\n<a class=\"node-ref\" data-node-id=\"references.fintzen_yu_correction\" href=\"../references/references_fintzen_yu_correction.html\">Fintzen 2021: correction to Yu&#x27;s tame supercuspidal construction</a>.</p>\n</blockquote>\n<p>We give the reduction explicitly; for the cited results see\n<a class=\"node-ref\" data-node-id=\"references.datfintzen_overview\" href=\"../references/references_datfintzen_overview.html\">Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)</a> (primary) and\n<a class=\"node-ref\" data-node-id=\"references.yu_construction\" href=\"../references/references_yu_construction.html\">Yu&#x27;s tame supercuspidal construction</a> (historical notation).</p>\n<p>For $g \\in I(\\cdots)$, WLOG $gy$ and $x$ lie in the apartment of a common\n$T$, so $e^T : {}^g \\mathfrak{j}_y \\cap \\mathfrak{j}_x \\to {}^g J_y \\cap J_x$\nis a bijection. By the mock-exponential duality identity (cf. [Adler §1.5(.2)], not Adler Lem 1.6.4 — that lemma is a <em>covariance</em> identity, not the duality formula), for $Z \\in {}^g \\mathfrak{j}_y \\cap\n\\mathfrak{j}_x$,\n$$\\hat \\phi'_y({}^{g^{-1}} e^T(Z)) = \\psi(\\langle {}^g X^*, Z \\rangle),\n  \\qquad \\hat \\phi'_x(e^T(Z)) = \\psi(\\langle X^*, Z \\rangle).$$</p>\n<p>Equating: $g \\in I$ iff ${}^g X^<em> - X^</em> \\in ({}^g \\mathfrak{j}_y \\cup\n\\mathfrak{j}_x)^\\perp = {}^g \\mathfrak{j}^<em>_y + \\mathfrak{j}^</em>_x$, i.e.\n${}^g X^* + {}^g \\mathfrak{j}_y^*$ meets $X^* + \\mathfrak{j}_x^*$. The\nremainder follows the proof of Yu Thm 9.4 <strong>as corrected in [Fintzen\n2021] / reformulated in [DF Lem 2.6.6]</strong>. $\\square$</p>\n<h2>Alternative source: Dat–Fintzen</h2>\n<p>The two-term intertwiner identity is recast in [Dat–Fintzen 2026] as a\n<em>geodesic-telescoping idempotent identity</em> — DF Lemma 2.6.6 — and the\nspecialization to two strata recovers Yu Thm 9.4. See the comparison\ntable in [[node:references.yu_construction|yu_construction § Dat-Fintzen\nparallel]]. The DF derivation is purely Hecke-algebraic and avoids the\nexplicit Yu mock-exponential bookkeeping; for verifying this lemma in\ndetail, either source works.</p>",
+  "deps": [
+    {
+      "id": "applications.tame_K_F_construction",
+      "title": "Yu / AFMO data x ↦ (K_x, K_{x,0+}, K_{x,+}, φ_x, κ_x)",
+      "href": "applications/applications_tame_K_F_construction.html"
+    },
+    {
+      "id": "references.datfintzen_overview",
+      "title": "Dat–Fintzen 2026: block decomposition + reduction to depth zero (tame)",
+      "href": "references/references_datfintzen_overview.html"
+    },
+    {
+      "id": "references.fintzen_yu_correction",
+      "title": "Fintzen 2021: correction to Yu's tame supercuspidal construction",
+      "href": "references/references_fintzen_yu_correction.html"
+    },
+    {
+      "id": "references.yu_construction",
+      "title": "Yu's tame supercuspidal construction",
+      "href": "references/references_yu_construction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.tame_intertwiner",
+      "title": "Global intertwiner I(φ_y, φ_x) = K_x G^(0) K_y",
+      "href": "applications/applications_tame_intertwiner.html"
+    },
+    {
+      "id": "applications.tame_kappa_intertwiner",
+      "title": "Hom(κ_x, κ_y)_{K∩K} one-dim and G^{(0)}-trivial (proves (E3))",
+      "href": "applications/applications_tame_kappa_intertwiner.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

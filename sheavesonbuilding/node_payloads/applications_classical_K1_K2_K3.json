@@ -1,0 +1,49 @@
+{
+  "id": "applications.classical_K1_K2_K3",
+  "title": "Hypotheses (K1)–(K3) for classical groups",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "applications/applications_classical_K1_K2_K3.html",
+  "primary_topic": "applications",
+  "topics": [
+    "applications"
+  ],
+  "body_html": "<h1>Hypotheses (K1)–(K3) hold for classical groups</h1>\n<blockquote>\n<p><strong>Lemma.</strong> With $K_x$, $K_{x,+}$ as in\n[[node:applications.classical_K_F_definition]], hypotheses (K1), (K2),\n(K3) of [[node:building.K_cosheaf]] and\n[[node:building.K3_hypothesis]] hold.</p>\n</blockquote>",
+  "proof_html": "<ul>\n<li><strong>(K1)</strong> is immediate from the definition of $K_x$.</li>\n<li><strong>(K2)</strong> ($N$-equivariance of the K-cosheaf) follows from the\n  standard $N$-equivariance of the Stevens groups $J^\\circ$ and the\n  $G'$-equivariance of the centralizer; see [Stevens:SC §3.4] for the\n  relevant equivariance and [Stevens:SS §3.5] for the lattice-sequence\n  framework. (Earlier drafts cited <code>[Stevens:SC Lemma 2.6]</code> — that lemma\n  does not exist; §2 of Stevens:SC ends at <code>[Stevens:SC Corollary 2.5]</code>.)</li>\n<li><strong>(K3)</strong> uses the <em>enveloping general linear group</em> trick. Let\n  $\\widetilde{\\mathfrak{g}} := \\mathrm{End}_F(V)$,\n  $\\widetilde G := \\mathrm{GL}_F(V)$, $\\widetilde G^{(i)} :=\n  \\widetilde G^{\\gamma_i}$. For each $x$ define the lattice function\n  $\\widetilde{\\mathfrak{g}}_{x, r} := {X : X \\Lambda_x(t) \\subset\n  \\Lambda_x(t+r)\\ \\forall t}$ and the centralizer pieces\n  $\\widetilde{\\mathfrak{g}}^{(i)}_{x, r}$.</li>\n</ul>\n<p>Set $\\widetilde{\\mathfrak{j}}_x := \\sum_{i=0}^d \\widetilde{\\mathfrak{g}}^{(i)}_{x, s_i}$.\n  By [Stevens:SS §3.6 (Glauberman fixed-pt construction; $\\hat K_x = \\widetilde{\\mathfrak j}_x \\cap G$ implicit)], $\\hat K_x = \\widetilde{\\mathfrak{j}}_x \\cap G$.\n  By induction on $d$ (BK 3.3.4 style),\n  $$\\widetilde{\\mathfrak{j}}_x \\cap \\widetilde{\\mathfrak{j}}_y =\n    \\sum_i (\\widetilde{\\mathfrak{g}}^{(i)}_{x, s_i} \\cap \\widetilde{\\mathfrak{g}}^{(i)}_{y, s_i}).$$</p>\n<p>For $z$ on the geodesic of $x, y$ inside the building of\n  $\\widetilde G^{(i)}$, the standard root-group analysis gives\n  $\\widetilde{\\mathfrak{g}}^{(i)}<em>{x, r} \\cap \\widetilde{\\mathfrak{g}}^{(i)}</em>{y, r}\n   \\subseteq \\widetilde{\\mathfrak{g}}^{(i)}_{z, r}$. Summing and intersecting\n  with $G$ gives (K3). $\\square$</p>",
+  "deps": [
+    {
+      "id": "applications.classical_K_F_definition",
+      "title": "Stevens groups K_x, K_{x,+} from a β-approximation sequence",
+      "href": "applications/applications_classical_K_F_definition.html"
+    },
+    {
+      "id": "building.K3_hypothesis",
+      "title": "Hypothesis (K3): Fix_G intersections lie in Fix_G along geodesics",
+      "href": "building/building_K3_hypothesis.html"
+    },
+    {
+      "id": "building.K_cosheaf",
+      "title": "K-cosheaf on the apartment with K-condition",
+      "href": "building/building_K_cosheaf.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "applications.classical_T_axioms",
+      "title": "Hypotheses (T1)–(T5) for classical groups",
+      "href": "applications/applications_classical_T_axioms.html"
+    },
+    {
+      "id": "applications.classical_main_theorem",
+      "title": "Main theorem applied to classical groups",
+      "href": "applications/applications_classical_main_theorem.html"
+    },
+    {
+      "id": "building.A1_Kx_local_verifications",
+      "title": "Verifications of K_x-local (A1) for parahoric, classical, and tame cases",
+      "href": "building/building_A1_Kx_local_verifications.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

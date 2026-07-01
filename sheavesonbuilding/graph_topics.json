@@ -1,0 +1,281 @@
+{
+  "topics": [
+    {
+      "id": "applications",
+      "title": "Applications",
+      "depth": 1,
+      "parent": null,
+      "node_count": 21,
+      "direct_node_count": 21,
+      "kind_counts": {
+        "definition": 3,
+        "lemma": 5,
+        "proposition": 6,
+        "theorem": 5,
+        "topic": 2
+      },
+      "status_counts": {
+        "staged": 21
+      },
+      "href": "applications/index.html",
+      "children": []
+    },
+    {
+      "id": "building",
+      "title": "Building",
+      "depth": 1,
+      "parent": null,
+      "node_count": 16,
+      "direct_node_count": 16,
+      "kind_counts": {
+        "definition": 5,
+        "lemma": 5,
+        "proof-plan": 1,
+        "proposition": 1,
+        "theorem": 3,
+        "topic": 1
+      },
+      "status_counts": {
+        "staged": 16
+      },
+      "href": "building/index.html",
+      "children": []
+    },
+    {
+      "id": "cellular_categories",
+      "title": "Cellular Categories",
+      "depth": 1,
+      "parent": null,
+      "node_count": 7,
+      "direct_node_count": 7,
+      "kind_counts": {
+        "definition": 5,
+        "lemma": 1,
+        "topic": 1
+      },
+      "status_counts": {
+        "staged": 7
+      },
+      "href": "cellular_categories/index.html",
+      "children": []
+    },
+    {
+      "id": "coefficient_systems",
+      "title": "Coefficient Systems",
+      "depth": 1,
+      "parent": null,
+      "node_count": 21,
+      "direct_node_count": 21,
+      "kind_counts": {
+        "definition": 4,
+        "lemma": 9,
+        "proof-plan": 1,
+        "proposition": 3,
+        "theorem": 3,
+        "topic": 1
+      },
+      "status_counts": {
+        "staged": 21
+      },
+      "href": "coefficient_systems/index.html",
+      "children": []
+    },
+    {
+      "id": "depth_zero_reduction",
+      "title": "Depth Zero Reduction",
+      "depth": 1,
+      "parent": null,
+      "node_count": 12,
+      "direct_node_count": 12,
+      "kind_counts": {
+        "definition": 4,
+        "lemma": 2,
+        "proposition": 3,
+        "theorem": 3
+      },
+      "status_counts": {
+        "staged": 12
+      },
+      "href": "depth_zero_reduction/index.html",
+      "children": []
+    },
+    {
+      "id": "equivariant_sheaves",
+      "title": "Equivariant Sheaves",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "definition": 2,
+        "lemma": 2,
+        "proposition": 5
+      },
+      "status_counts": {
+        "staged": 9
+      },
+      "href": "equivariant_sheaves/index.html",
+      "children": []
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "depth": 1,
+      "parent": null,
+      "node_count": 8,
+      "direct_node_count": 8,
+      "kind_counts": {
+        "theorem": 8
+      },
+      "status_counts": {
+        "staged": 8
+      },
+      "href": "references/index.html",
+      "children": []
+    },
+    {
+      "id": "representations",
+      "title": "Representations",
+      "depth": 1,
+      "parent": null,
+      "node_count": 5,
+      "direct_node_count": 5,
+      "kind_counts": {
+        "definition": 3,
+        "proposition": 2
+      },
+      "status_counts": {
+        "staged": 5
+      },
+      "href": "representations/index.html",
+      "children": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "applications",
+      "to": "building",
+      "count": 4
+    },
+    {
+      "from": "applications",
+      "to": "depth_zero_reduction",
+      "count": 1
+    },
+    {
+      "from": "building",
+      "to": "applications",
+      "count": 9
+    },
+    {
+      "from": "building",
+      "to": "coefficient_systems",
+      "count": 8
+    },
+    {
+      "from": "building",
+      "to": "depth_zero_reduction",
+      "count": 1
+    },
+    {
+      "from": "building",
+      "to": "equivariant_sheaves",
+      "count": 1
+    },
+    {
+      "from": "cellular_categories",
+      "to": "applications",
+      "count": 2
+    },
+    {
+      "from": "cellular_categories",
+      "to": "building",
+      "count": 1
+    },
+    {
+      "from": "cellular_categories",
+      "to": "coefficient_systems",
+      "count": 4
+    },
+    {
+      "from": "cellular_categories",
+      "to": "equivariant_sheaves",
+      "count": 7
+    },
+    {
+      "from": "cellular_categories",
+      "to": "representations",
+      "count": 5
+    },
+    {
+      "from": "coefficient_systems",
+      "to": "applications",
+      "count": 6
+    },
+    {
+      "from": "coefficient_systems",
+      "to": "building",
+      "count": 1
+    },
+    {
+      "from": "coefficient_systems",
+      "to": "depth_zero_reduction",
+      "count": 6
+    },
+    {
+      "from": "coefficient_systems",
+      "to": "representations",
+      "count": 2
+    },
+    {
+      "from": "depth_zero_reduction",
+      "to": "applications",
+      "count": 4
+    },
+    {
+      "from": "depth_zero_reduction",
+      "to": "equivariant_sheaves",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves",
+      "to": "applications",
+      "count": 3
+    },
+    {
+      "from": "equivariant_sheaves",
+      "to": "building",
+      "count": 8
+    },
+    {
+      "from": "equivariant_sheaves",
+      "to": "coefficient_systems",
+      "count": 2
+    },
+    {
+      "from": "equivariant_sheaves",
+      "to": "depth_zero_reduction",
+      "count": 2
+    },
+    {
+      "from": "references",
+      "to": "applications",
+      "count": 17
+    },
+    {
+      "from": "references",
+      "to": "coefficient_systems",
+      "count": 2
+    },
+    {
+      "from": "representations",
+      "to": "coefficient_systems",
+      "count": 7
+    },
+    {
+      "from": "representations",
+      "to": "depth_zero_reduction",
+      "count": 1
+    }
+  ]
+}
