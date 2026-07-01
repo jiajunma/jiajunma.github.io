@@ -234,6 +234,8 @@
       
         <li><a href="../keywords/fintzen.html">fintzen</a></li>
       
+        <li><a href="../keywords/fixator.html">fixator</a></li>
+      
         <li><a href="../keywords/functor.html">functor</a></li>
       
         <li><a href="../keywords/functor-category.html">functor-category</a></li>
@@ -326,6 +328,8 @@
       
         <li><a href="../keywords/pi-0.html">pi-0</a></li>
       
+        <li><a href="../keywords/poset.html">poset</a></li>
+      
         <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
       
         <li><a href="../keywords/qfd.html">qfd</a></li>
@@ -400,6 +404,8 @@
       
         <li><a href="../keywords/wang.html">wang</a></li>
       
+        <li><a href="../keywords/well-definedness.html">well-definedness</a></li>
+      
         <li><a href="../keywords/yu.html">yu</a></li>
       
       </ul>
@@ -436,11 +442,13 @@
         
         <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
         
+        <li><a href="equivariant_sheaves_induced_poset_structure.html">Well-defined poset structure on the induced space G ×^P X&#39;</a></li>
+        
         <li><a href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#39; → G ×^P X&#39; is a cellular embedding (poset form)</a></li>
         
         <li><a href="equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space</a></li>
         
-        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space</a></li>
+        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a></li>
         
         <li><a href="equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
         
@@ -458,12 +466,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.Induction
           </span>
           
           
@@ -474,7 +482,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -493,21 +501,30 @@
 </ul>
 <p>Set $[\![X]\!] := \{gE : g \in G,\ E \in [\![X']\!]\}$.</p>
 <h2>Key intermediate lemmas</h2>
-<p>The proof of the main proposition rests on three combinatorial
+<p>The proof of the main proposition rests on four combinatorial
 building blocks, each treated as its own node:</p>
 <ul>
-<li><strong>Cell equality on $X$</strong>
+<li>
+<p><strong>Poset structure on $X$</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.induced_poset_structure" href="equivariant_sheaves_induced_poset_structure.html">Well-defined poset structure on the induced space G ×^P X&#x27;</a>): the face
+  relation descends through the quotient by $\sim$ to a well-defined
+  partial order on $G \times^P X'$, using (P0), (P1), and dimension
+  preservation of the cellular action for antisymmetry.</p>
+</li>
+<li>
+<p><strong>Cell equality on $X$</strong>
   (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (5)):
   $g_1 \cdot \iota E = g_2 \cdot \iota F$ iff $\exists n \in G'$ with
   $n \cdot E = F$ and $g_1^{-1} g_2 n \in P_E$. This is the
-  cell-intersection / QFD orbit lemma in the induction context.</li>
+  cell-intersection / QFD orbit lemma in the induction context.</p>
+</li>
 <li><strong>Face relation on $X$</strong>
   (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (6)):
   the analogous statement with $\preceq$.  Together with clauses
   (1)–(4) this equips $X$ with a $G$-cell-complex structure at the
   face-poset level.</li>
 <li><strong>Stabiliser formula</strong>
-  (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space</a>):
+  (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a>):
   $\Fix_G(\iota E) = \Fix_{G'}(E) \cdot P_E$ and
   $P_E \subseteq \Fix_G(\iota E)$; the second inclusion makes the
   face relation on $X$ well-defined after descent through $\sim$.</li>

@@ -234,6 +234,8 @@
       
         <li><a href="../keywords/fintzen.html">fintzen</a></li>
       
+        <li><a href="../keywords/fixator.html">fixator</a></li>
+      
         <li><a href="../keywords/functor.html">functor</a></li>
       
         <li><a href="../keywords/functor-category.html">functor-category</a></li>
@@ -326,6 +328,8 @@
       
         <li><a href="../keywords/pi-0.html">pi-0</a></li>
       
+        <li><a href="../keywords/poset.html">poset</a></li>
+      
         <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
       
         <li><a href="../keywords/qfd.html">qfd</a></li>
@@ -400,6 +404,8 @@
       
         <li><a href="../keywords/wang.html">wang</a></li>
       
+        <li><a href="../keywords/well-definedness.html">well-definedness</a></li>
+      
         <li><a href="../keywords/yu.html">yu</a></li>
       
       </ul>
@@ -440,7 +446,7 @@
         
         <li><a href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#39; → G ×^P X&#39; is a cellular embedding (poset form)</a></li>
         
-        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space</a></li>
+        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a></li>
         
       </ul>
     </div>
@@ -456,12 +462,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/Induction.lean#L709"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L709"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.Induction
           </span>
           
           
@@ -472,12 +478,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/Induction.lean#L738"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L738"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.Induction
           </span>
           
           
@@ -489,12 +495,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/Induction.lean#L770"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L770"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.Induction
           </span>
           
           
@@ -506,7 +512,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -545,7 +551,7 @@ $n \in G'$ with $n \cdot F \preceq E$ and $g^{-1} n \in P_E$. Then
 $g = n \cdot p^{-1}$ for some $p \in P_E$, so
 $q = n \cdot p^{-1} \cdot \iota F = n \cdot \iota F$
 (using $P_E \subseteq \Fix_G(E)$ from
-<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space</a> to see $p^{-1}
+<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a> to see $p^{-1}
 \cdot \iota F = \iota F$ after face-closing to $E$), so
 $q = \iota(n \cdot F)$ by $G'$-equivariance. Thus $q \in \iota(X')$.</p>
 <p><strong>(2) QFD.</strong> Coverage is clause (4) of
@@ -592,7 +598,7 @@ instance isQuasiFundDomain_subcomplexOfIota :
 The <code>orbit_iff</code> field is discharged using
 <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (5) and
 the stabiliser formula
-<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Stabiliser formula on the induced space</a> to see that
+<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a> to see that
 $g_1^{-1} g_2 n \in P_E$ implies $(g_1^{-1} g_2 n) \cdot E = E$ at
 the poset level (via <code>P_le_stabilizer_iota</code>).</p>
       </div>

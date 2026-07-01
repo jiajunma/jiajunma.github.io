@@ -4,22 +4,22 @@
     "title": "Equivariant Sheaves",
     "href": "equivariant_sheaves/index.html",
     "parent": null,
-    "node_count": 13,
-    "descendant_node_count": 13
+    "node_count": 14,
+    "descendant_node_count": 14
   },
   "counts": {
-    "internal_nodes": 13,
+    "internal_nodes": 14,
     "inlined_nodes": 0,
-    "descendant_nodes": 13,
+    "descendant_nodes": 14,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 13,
+    "non_proof_plan_nodes": 14,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 20,
-    "visible_nodes_with_selected_proof_plans": 20
+    "visible_nodes_without_proof_plans": 21,
+    "visible_nodes_with_selected_proof_plans": 21
   },
   "nodes": [
     {
@@ -37,6 +37,14 @@
       "status": "staged",
       "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html",
       "payload": "node_payloads/equivariant_sheaves_induced_cw_structure.json"
+    },
+    {
+      "id": "equivariant_sheaves.induced_poset_structure",
+      "title": "Well-defined poset structure on the induced space G ×^P X'",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_induced_poset_structure.html",
+      "payload": "node_payloads/equivariant_sheaves_induced_poset_structure.json"
     },
     {
       "id": "equivariant_sheaves.induced_qfd_property",
@@ -120,7 +128,7 @@
     },
     {
       "id": "equivariant_sheaves.stabilizer_formula_iota",
-      "title": "Stabiliser formula on the induced space",
+      "title": "Cell-stabiliser and fixator formulas on the induced space",
       "kind": "lemma",
       "status": "staged",
       "href": "equivariant_sheaves/equivariant_sheaves_stabilizer_formula_iota.html",
@@ -131,6 +139,11 @@
     {
       "from": "equivariant_sheaves.section4_equivalence",
       "to": "equivariant_sheaves.heisenberg_weil_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induced_poset_structure",
+      "to": "equivariant_sheaves.induced_cw_structure",
       "kind": "uses"
     },
     {
@@ -156,6 +169,11 @@
     {
       "from": "equivariant_sheaves.stabilizer_formula_iota",
       "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_poset_structure",
       "kind": "uses"
     },
     {
@@ -284,6 +302,13 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:abstract_cell_complex",
+      "to": "equivariant_sheaves.induced_poset_structure",
+      "kind": "boundary_dependency",
+      "topic": "abstract_cell_complex",
+      "count": 1
+    },
     {
       "from": "topic:abstract_cell_complex",
       "to": "equivariant_sheaves.iota_cellular_embedding",
@@ -456,6 +481,12 @@
       "count": 1
     },
     {
+      "id": "fixator",
+      "title": "fixator",
+      "href": "keywords/fixator.html",
+      "count": 1
+    },
+    {
       "id": "fundamental-domain",
       "title": "fundamental-domain",
       "href": "keywords/fundamental-domain.html",
@@ -477,7 +508,7 @@
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
-      "count": 7
+      "count": 8
     },
     {
       "id": "invariants",
@@ -489,6 +520,12 @@
       "id": "orbits",
       "title": "orbits",
       "href": "keywords/orbits.html",
+      "count": 1
+    },
+    {
+      "id": "poset",
+      "title": "poset",
+      "href": "keywords/poset.html",
       "count": 1
     },
     {
@@ -537,6 +574,12 @@
       "id": "universal-property",
       "title": "universal-property",
       "href": "keywords/universal-property.html",
+      "count": 1
+    },
+    {
+      "id": "well-definedness",
+      "title": "well-definedness",
+      "href": "keywords/well-definedness.html",
       "count": 1
     }
   ],

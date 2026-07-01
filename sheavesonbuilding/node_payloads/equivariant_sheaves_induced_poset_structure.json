@@ -1,0 +1,200 @@
+{
+  "id": "equivariant_sheaves.induced_poset_structure",
+  "title": "Well-defined poset structure on the induced space G ×^P X'",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "equivariant_sheaves/equivariant_sheaves_induced_poset_structure.html",
+  "primary_topic": "equivariant_sheaves",
+  "topics": [
+    "equivariant_sheaves"
+  ],
+  "body_html": "<h1>Well-defined poset structure on the induced space</h1>\n<p>Fix the induction data $(G', P)$ satisfying (P0)–(P2) and the induced\nspace $X = G \\times^P X'$ of\n[[node:equivariant_sheaves.induction_GxP_X]].</p>\n<p>The face relation on $X$ is not automatic from the definition of $X$\nas a set-theoretic quotient — it must be extracted from a candidate\nrelation on the representative product $G \\times X'$ and shown to\ndescend to the quotient by $\\sim$.</p>\n<h2>Candidate relation on representatives</h2>\n<p>Define $\\preceq_{\\text{rep}}$ on $G \\times X'$ by</p>\n<p>$$\n(g_1, E_1) \\preceq_{\\text{rep}} (g_2, E_2)\n\\;:\\iff\\;\n\\exists\\, n \\in G',\\;\\; n \\cdot E_1 \\preceq E_2 \\;\\text{in } X'\n\\;\\text{and}\\; g_1^{-1} g_2 n \\in P_{E_1}.\n$$</p>\n<p>Compare with the equivalence relation\n$$\n(g_1, E_1) \\sim (g_2, E_2)\n\\;:\\iff\\;\n\\exists\\, n \\in G',\\;\\; n \\cdot E_1 = E_2\n\\;\\text{and}\\; g_1^{-1} g_2 n \\in P_{E_1},\n$$\nwhich is the special case with the face relation $\\preceq$ replaced\nby equality.</p>\n<h2>Well-definedness</h2>\n<blockquote>\n<p><strong>Proposition (poset structure on $G \\times^P X'$).</strong>\nUnder (P0)–(P2), $\\preceq_{\\text{rep}}$ satisfies:</p>\n<ol>\n<li><strong>Reflexivity.</strong> $(g, E) \\preceq_{\\text{rep}} (g, E)$.</li>\n<li><strong>Transitivity.</strong> $(g_1, E_1) \\preceq_{\\text{rep}} (g_2, E_2)$\n   and $(g_2, E_2) \\preceq_{\\text{rep}} (g_3, E_3)$ imply\n   $(g_1, E_1) \\preceq_{\\text{rep}} (g_3, E_3)$.</li>\n<li><strong>Left descent.</strong> If $(g_1, E_1) \\sim (g_1', E_1')$ then\n   $(g_1, E_1) \\preceq_{\\text{rep}} (h, F) \\iff\n    (g_1', E_1') \\preceq_{\\text{rep}} (h, F)$.</li>\n<li><strong>Right descent.</strong> If $(h, F) \\sim (h', F')$ then\n   $(g, E) \\preceq_{\\text{rep}} (h, F) \\iff\n    (g, E) \\preceq_{\\text{rep}} (h', F')$.</li>\n<li><strong>Antisymmetry modulo $\\sim$.</strong> If both\n   $(g_1, E_1) \\preceq_{\\text{rep}} (g_2, E_2)$ and\n   $(g_2, E_2) \\preceq_{\\text{rep}} (g_1, E_1)$, then\n   $(g_1, E_1) \\sim (g_2, E_2)$.</li>\n</ol>\n<p>Consequently, the relation\n$$[(g_1, E_1)] \\preceq [(g_2, E_2)]\n&gt;    \\;:\\iff\\;\n&gt;    (g_1, E_1) \\preceq_{\\text{rep}} (g_2, E_2)$$\nis a <strong>well-defined partial order</strong> on $G \\times^P X'$.</p>\n</blockquote>",
+  "proof_html": "<p><strong>(1) Reflexivity.</strong> Take $n := 1 \\in G'$. Then $1 \\cdot E = E \\preceq\nE$ and $g^{-1} g \\cdot 1 = 1 \\in P_E$.</p>\n<p><strong>(2) Transitivity.</strong> Given witnesses $n_1$ for $(g_1, E_1)\n\\preceq_{\\text{rep}} (g_2, E_2)$ and $n_2$ for $(g_2, E_2)\n\\preceq_{\\text{rep}} (g_3, E_3)$, take $n := n_2 n_1 \\in G'$.\nFace-chain: $(n_2 n_1) \\cdot E_1 = n_2 \\cdot (n_1 \\cdot E_1) \\preceq\nn_2 \\cdot E_2 \\preceq E_3$ using cellularity ($n_2$ preserves\n$\\preceq$) and transitivity of $\\preceq$.</p>\n<p>The membership $g_1^{-1} g_3 (n_2 n_1) \\in P_{E_1}$ is the technical\ncore. From the hypotheses\n$g_1^{-1} g_2 n_1 \\in P_{E_1}$ and $g_2^{-1} g_3 n_2 \\in P_{E_2}$:</p>\n<ul>\n<li>By (P0) and $n_1 \\cdot E_1 \\preceq E_2$: $P_{E_2} \\le P_{n_1 \\cdot E_1}$,\n  so $g_2^{-1} g_3 n_2 \\in P_{n_1 \\cdot E_1}$.</li>\n<li>By (P1): $P_{n_1 \\cdot E_1} = n_1 P_{E_1} n_1^{-1}$, so there\n  exists $p \\in P_{E_1}$ with $n_1 p n_1^{-1} = g_2^{-1} g_3 n_2$.</li>\n<li>Rearranging: $g_1^{-1} g_3 (n_2 n_1) = (g_1^{-1} g_2 n_1) \\cdot p\n  \\in P_{E_1} \\cdot P_{E_1} = P_{E_1}$.</li>\n</ul>\n<p><strong>(3) Left descent.</strong> Suppose $(g_1, E_1) \\sim (g_1', E_1')$ with\nwitness $m \\in G'$: $m \\cdot E_1 = E_1'$ and $g_1^{-1} g_1' m \\in\nP_{E_1}$. Assume $(g_1, E_1) \\preceq_{\\text{rep}} (h, F)$ with witness\n$n$. Take $n'' := n m^{-1} \\in G'$.</p>\n<ul>\n<li>Face-chain: $n'' \\cdot E_1' = n m^{-1} \\cdot (m \\cdot E_1) =\n  n \\cdot E_1 \\preceq F$.</li>\n<li>Membership: write $g_1^{-1} g_1' m = \\alpha \\in P_{E_1}$. Compute\n  $(g_1')^{-1} h n'' = m \\alpha^{-1} g_1^{-1} h n m^{-1}$; substitute\n  $g_1^{-1} h n \\in P_{E_1}$ and use (P1) with $m$ to conclude\n  $m \\alpha^{-1} (g_1^{-1} h n) m^{-1} \\in m P_{E_1} m^{-1} =\n  P_{m \\cdot E_1} = P_{E_1'}$.</li>\n</ul>\n<p>The reverse implication is symmetric via $m^{-1}$.</p>\n<p><strong>(4) Right descent.</strong> Suppose $(h, F) \\sim (h', F')$ with witness\n$m$. Assume $(g, E) \\preceq_{\\text{rep}} (h, F)$ with witness $n$.\nTake $n'' := m n \\in G'$.</p>\n<ul>\n<li>Face-chain: $n'' \\cdot E = m \\cdot (n \\cdot E) \\preceq m \\cdot F =\n  F'$.</li>\n<li>Membership: write $h^{-1} h' m = \\alpha \\in P_F$. By (P0) with\n  $n \\cdot E \\preceq F$: $\\alpha \\in P_F \\le P_{n \\cdot E}$. By (P1):\n  $\\alpha = n p n^{-1}$ for some $p \\in P_E$. Compute $g^{-1} h' n'' =\n  (g^{-1} h n) \\cdot p$; both factors lie in $P_E$.</li>\n</ul>\n<p><strong>(5) Antisymmetry modulo $\\sim$.</strong> From\n$(g_1, E_1) \\preceq_{\\text{rep}} (g_2, E_2)$ via $n_1$ and the reverse\nvia $n_2$, we obtain $(n_2 n_1) \\cdot E_1 \\preceq E_1$. Because the\n$G$-action is cellular it preserves dimension\n(<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.g_cell_complex\" href=\"../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html\">Cellular G-action on an abstract cell complex</a>):\n$\\dim((n_2 n_1) \\cdot E_1) = \\dim E_1$. Strict monotonicity of $\\dim$\nalong a proper face-chain\n(<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.abstract_cell_complex\" href=\"../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html\">Abstract cell complex</a>) then forces\n$(n_2 n_1) \\cdot E_1 = E_1$, hence $n_1 \\cdot E_1 = E_2$ (and the\n$P_{E_1}$-membership from the $n_1$-witness is exactly the\n$\\sim$-witness).</p>\n<p><strong>Descent packaging.</strong> Clauses (3) + (4) give bivariate descent of\n$\\preceq_{\\text{rep}}$ through $\\sim$ on both arguments, so the\nquotient carries a well-defined relation $\\preceq$. Clauses (1) + (2)\ntransport to $\\preceq$ verbatim; clause (5) makes $\\preceq$\nantisymmetric on the quotient. Thus $\\preceq$ is a partial order on\n$G \\times^P X'$.  $\\square$</p>\n<h2>Consequences</h2>\n<ul>\n<li>The embedding $\\iota : X' \\to G \\times^P X'$, $E \\mapsto [(1, E)]$,\n  is order-preserving and order-reflecting; this is\n  <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.iota_cellular_embedding\" href=\"equivariant_sheaves_iota_cellular_embedding.html\">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (2),\n  now supported by a genuine partial-order structure on the target.</li>\n<li>The dimension function $\\dim([(g, E)]) := \\dim E$ is well-defined\n  because $\\sim$ implies dimension-equal (from $n \\cdot E_1 = E_2$\n  and dimension-preservation of the $G$-action).</li>\n<li>Together with local finiteness of $X'$ (inherited via $G$-translates),\n  this equips $G \\times^P X'$ with the abstract-cell-complex and\n  $G$-cell-complex instances that\n  <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27;</a> uses as its\n  poset-level content.</li>\n</ul>\n<h2>Which axioms feed into which clause</h2>\n<table>\n<thead>\n<tr>\n<th>Clause</th>\n<th>Axioms used</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(1) Reflexivity</td>\n<td>none (unit in $G'$, unit in $P_E$)</td>\n</tr>\n<tr>\n<td>(2) Transitivity</td>\n<td>(P0), (P1)</td>\n</tr>\n<tr>\n<td>(3) Left descent</td>\n<td>(P1)</td>\n</tr>\n<tr>\n<td>(4) Right descent</td>\n<td>(P0), (P1)</td>\n</tr>\n<tr>\n<td>(5) Antisymmetry</td>\n<td>dimension preservation (cellular action), strict monotonicity</td>\n</tr>\n</tbody>\n</table>\n<p>(P2) does not enter this proposition; it enters the <em>equivalence</em>\n(as opposed to face) relation via\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.iota_cellular_embedding\" href=\"equivariant_sheaves_iota_cellular_embedding.html\">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (1)\n(injectivity of $\\iota$).</p>\n<h2>Lean formalization</h2>\n<p>The representative relation is\n<code>InductionDatum.leRep : G × X' → G × X' → Prop</code>:</p>\n<p><code>lean\ndef leRep (g₁E₁ g₂E₂ : G × X') : Prop :=\n  ∃ n ∈ d.G', n • g₁E₁.2 ≤ g₂E₂.2 ∧\n              g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2</code></p>\n<p>The five clauses correspond to</p>\n<table>\n<thead>\n<tr>\n<th>Clause</th>\n<th>Lean lemma</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>(1)</td>\n<td><code>leRep_refl</code></td>\n</tr>\n<tr>\n<td>(2)</td>\n<td><code>leRep_trans</code></td>\n</tr>\n<tr>\n<td>(3)</td>\n<td><code>leRep_left_descends</code></td>\n</tr>\n<tr>\n<td>(4)</td>\n<td><code>leRep_right_descends</code></td>\n</tr>\n<tr>\n<td>(5)</td>\n<td><code>leRep_antisymm</code></td>\n</tr>\n</tbody>\n</table>\n<p>The <code>PartialOrder</code> instance on <code>InducedSpace d</code> is built by\n<code>Quotient.lift₂ (leRep d)</code> — clauses (3) + (4) discharge the\nwell-definedness side condition of <code>Quotient.lift₂</code>; clauses (1) +\n(2) discharge reflexivity and transitivity of the descended <code>le</code>;\nclause (5) discharges antisymmetry.</p>\n<p><code>lean\ninstance : PartialOrder (InducedSpace d) where\n  le := Quotient.lift₂ (leRep d) ⟨left/right descent + symm/inv⟩\n  le_refl  := ⟨leRep_refl⟩\n  le_trans := ⟨leRep_trans⟩\n  le_antisymm := ⟨leRep_antisymm⟩</code></p>\n<p>The dimension function <code>InducedSpace.dim</code> and the <code>AbstractCellComplex\n(InducedSpace d)</code> / <code>GCellComplex G (InducedSpace d)</code> instances stack\non top of this <code>PartialOrder</code>.</p>",
+  "deps": [
+    {
+      "id": "equivariant_sheaves.induction_GxP_X",
+      "title": "Induced space G ×^P X' along a cosheaf P",
+      "href": "equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html"
+    },
+    {
+      "id": "abstract_cell_complex.g_cell_complex",
+      "title": "Cellular G-action on an abstract cell complex",
+      "href": "abstract_cell_complex/abstract_cell_complex_g_cell_complex.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "equivariant_sheaves.induced_cw_structure",
+      "title": "CW structure and QFD property on G ×^P X'",
+      "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.InductionDatum.leRep",
+      "display_name": "SheafOnBuilding.InductionDatum.leRep",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.leRep",
+        "SheafOnBuilding.BuildingData.toInductionDatum",
+        "SheafOnBuilding.InducedSpace.leRep_antisymm"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.InductionDatum.leRep_refl",
+      "display_name": "SheafOnBuilding.InductionDatum.leRep_refl",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.leRep_refl",
+        "SheafOnBuilding.BuildingData.toInductionDatum",
+        "SheafOnBuilding.InducedSpace.leRep"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.InductionDatum.leRep_trans",
+      "display_name": "SheafOnBuilding.InductionDatum.leRep_trans",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.leRep_trans",
+        "SheafOnBuilding.BuildingData.toInductionDatum",
+        "SheafOnBuilding.InducedSpace.leRep"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.InductionDatum.leRep_left_descends",
+      "display_name": "SheafOnBuilding.InductionDatum.leRep_left_descends",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.leRep_left_descends",
+        "SheafOnBuilding.InducedSpace.leRep_right_descends",
+        "SheafOnBuilding.BuildingData.toInductionDatum"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.InductionDatum.leRep_right_descends",
+      "display_name": "SheafOnBuilding.InductionDatum.leRep_right_descends",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.leRep_right_descends",
+        "SheafOnBuilding.InducedSpace.leRep_left_descends",
+        "SheafOnBuilding.BuildingData.toInductionDatum"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.InductionDatum.leRep_antisymm",
+      "display_name": "SheafOnBuilding.InductionDatum.leRep_antisymm",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.leRep_antisymm",
+        "SheafOnBuilding.BuildingData.toInductionDatum",
+        "SheafOnBuilding.InducedSpace.leRep"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.InducedSpace.instPartialOrder",
+      "display_name": "SheafOnBuilding.InducedSpace.instPartialOrder",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace",
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.Induction",
+      "display_name": "SheafOnBuilding.Induction",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "c4e85303fa6d49366e5cf8f597849cd0512ed1c4",
+      "short_revision": "c4e8530",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}
