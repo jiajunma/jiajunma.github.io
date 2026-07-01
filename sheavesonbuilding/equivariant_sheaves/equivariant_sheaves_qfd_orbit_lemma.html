@@ -448,12 +448,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/QuasiFundDomain.lean#L134"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/QuasiFundDomain.lean#L134"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -465,12 +465,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/QuasiFundDomain.lean#L119"><code>SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/QuasiFundDomain.lean#L119"><code>SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -483,12 +483,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/QuasiFundDomain.lean#L258"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/QuasiFundDomain.lean#L258"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -501,7 +501,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
       </p>
       
     </div>
@@ -536,6 +536,29 @@ P_{nE}$ and $\Fix_{G'}(E) P_E = \Fix_G(E)$, then $gE = hF$ iff there is
 $n \in G'$ with $nE = F$ and $g^{-1}hn \in P_E$. This refined form is the
 input to the induction construction
 [[node:equivariant_sheaves.induction_GxP_X]].</p>
+<h2>Lean formalization</h2>
+<p>The plain form is <code>IsQuasiFundDomain.orbit_eq_iff</code>:</p>
+<p><code>lean
+theorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G' S]
+    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
+    g • E = h • F ↔
+      ∃ n ∈ G',
+        n • E = F ∧ (g⁻¹ * h * n) ∈ MulAction.stabilizer G E</code></p>
+<p>The <code>(→)</code> direction is the <code>orbit_iff</code> clause of <code>IsQuasiFundDomain</code>
+re-expressed with $\Fix_G(E)$ read as <code>MulAction.stabilizer G E</code>; the
+<code>(←)</code> direction is a direct group-action calculation with no QFD
+hypothesis.</p>
+<p>The refined form with an explicit family
+$\{P_E\}$ requires an [[induction datum|node:equivariant_sheaves.induction_data_reverse]]
+<code>InductionData G' S</code> and appears as
+<code>InductionData.orbit_eq_iff</code>: the forward direction reuses
+<code>orbit_eq_iff</code> and absorbs the $\Fix_G$ residue via the $\mathrm{P4}$
+factorisation; the backward direction uses <code>P3</code> and $G$-equivariance.</p>
+<p>Equivariance of $\Fix_G$ under $G$-conjugation, needed above, is
+<code>MulAction.stabilizer_smul_eq_stabilizer_map_conj</code> from Mathlib; a
+project-local specialisation is exposed as
+<code>IsQuasiFundDomain.stabilizer_smul</code>.</p>
       </div>
     </details>
     

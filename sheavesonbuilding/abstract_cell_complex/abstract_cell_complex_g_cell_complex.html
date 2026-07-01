@@ -448,12 +448,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ a00fb82, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -462,27 +462,10 @@
     [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where</code></pre>
         </li>
         
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L151"><code>SheafOnBuilding.Fix</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def Fix {G : Type*} [Group G] {X : Type*} [MulAction G X]
-    (E : X) (g : G) : Prop</code></pre>
-        </li>
-        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a00fb82716a26aaaba1e479404069bb77c59b193/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -527,12 +510,10 @@ class GCellComplex (G : Type*) [Group G] (X : Type*)
 top of <code>[MulAction G X]</code> and <code>[AbstractCellComplex X]</code>.  Bundling the
 group action into the class is deliberately avoided: the cell complex
 data (dimension, face relation) and the action are independent inputs.</p>
-<p>The cell-fixator is exposed separately:</p>
-<p><code>lean
-def Fix {G : Type*} [Group G] {X : Type*} [MulAction G X]
-    (E : X) (g : G) : Prop := g • E = E</code></p>
-<p>This is a plain predicate on $G$ requiring only <code>[MulAction G X]</code>; it
-does not need the cellularity typeclass.</p>
+<p>The cell-fixator $\Fix_G(E)$ is Mathlib's <code>MulAction.stabilizer G E</code>,
+a <code>Subgroup G</code>; the membership predicate is
+<code>MulAction.mem_stabilizer_iff</code>.  No project-local re-definition is
+needed and no cell-complex structure is required — only <code>[MulAction G X]</code>.</p>
     
   </div>
 
