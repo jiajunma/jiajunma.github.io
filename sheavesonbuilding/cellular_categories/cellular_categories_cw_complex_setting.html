@@ -458,12 +458,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -474,12 +474,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -490,12 +490,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -507,12 +507,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -523,7 +523,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -616,13 +616,24 @@ variable [MulAction G X] [GCellComplex G X]</code></p>
 <p>Every downstream Lean definition — cosheaves, chain complex,
 equivariant functors, induction, QFD — is stated against exactly this
 typeclass stack.  Regularity of the CW complex is not tracked as a
-Prop mixin at the abstract level: it re-enters only in the
-geometric-realisation direction, where it identifies $\Fix_G$
-(pointwise) with $\Stab_G$ (setwise) on individual cells.</p>
-<p>At the poset level the pointwise-vs-setwise distinction collapses,
-and the cell stabiliser is a single object,
-<code>MulAction.stabilizer G E : Subgroup G</code> — see the design remark in
-<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>.</p>
+Prop mixin at the abstract level; it re-enters only in the
+geometric-realisation direction, where it identifies a fixator of the
+open cell with a fixator of its closure.</p>
+<p>Two distinct subgroups are attached to a cell $E$, and both are
+needed:</p>
+<ul>
+<li>$\Stab_G(E) = \mathrm{MulAction.stabilizer\ G\ E}$ — "$g$ maps $E$
+  to itself";</li>
+<li>$\Fix_G(E) = \bigcap_{F \preceq E} \Stab_G(F)$ — "$g$ fixes $E$
+  and every one of its faces".</li>
+</ul>
+<p>These are genuinely different at the poset level (they agree only on
+minimal cells).  The abstract induction / QFD machinery in the Lean
+library is stated using the setwise version $\Stab_G(E)$; the
+pointwise version is available when a specific geometric input
+supplies a down-monotone cell fixator.  See
+<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a> for the definitions and
+the design rationale.</p>
     
   </div>
 

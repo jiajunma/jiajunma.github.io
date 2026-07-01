@@ -450,12 +450,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ fd72626, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -467,7 +467,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd72626fbbb94f7c844adfe04a0aabe39974887c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -486,16 +486,33 @@ it preserves the face relation and the dimension function:</p>
 <p>Equivalently, $G$ permutes the cells and preserves the entire graded
 face poset.  This is the combinatorial content of "$G$ acts by
 cellular homeomorphisms" on the geometric realisation.</p>
-<p>For a cell $E \in X$, the <strong>fixator</strong> of $E$ in $G$ is</p>
-<p>$$
-\Fix_G(E) := \{ g \in G : g \cdot E = E \}.
-$$</p>
-<p>The paper distinguishes $\Fix_G$ (pointwise stabiliser in the
-topological sense) from the setwise stabiliser $\Stab_G$; at the
-combinatorial level these coincide with the setwise stabiliser of the
-cell.  The distinction re-enters when one goes back to a geometric
-realisation: see the design remark in
-<a class="node-ref" data-node-id="equivariant_sheaves.induction_data_reverse" href="../equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a>.</p>
+<p>For a cell $E \in X$ there are two natural subgroups of $G$
+attached to $E$:</p>
+<ul>
+<li>the <strong>setwise stabiliser</strong>
+  $$\Stab_G(E) := \{g \in G : g \cdot E = E\};$$</li>
+<li>the <strong>pointwise fixator</strong>
+  $$\Fix_G(E) := \bigcap_{F \preceq E} \Stab_G(F) \;=\;
+      \{g \in G : g \cdot F = F \text{ for every } F \preceq E\}.$$</li>
+</ul>
+<p>The pointwise fixator is the combinatorial shadow of "$g$ fixes $E$
+and its entire boundary": $g \in \Fix_G(E)$ requires $g$ to fix not
+only $E$ itself but every face $F \preceq E$ (setwise, which at the
+poset level is the same as pointwise on a single cell of the discrete
+face poset).  In particular $\Fix_G(E) \le \Stab_G(E)$, and the
+inclusion is strict as soon as $E$ has a proper face on which $G$ acts
+nontrivially.  Equality $\Fix_G(E) = \Stab_G(E)$ holds automatically
+when $E$ is a minimal cell (a vertex), where there are no proper
+faces.</p>
+<p>This distinction is <em>already visible</em> at the combinatorial level — it
+is not merely a topological artefact.  The paper's pointwise/setwise
+convention thus transports without change: $\Fix_G(E)$ is always the
+subgroup fixing $E$ and its boundary; $\Stab_G(E)$ is the coarser
+"permutes $E$ to itself" subgroup.  Downstream axioms such as
+$P_E \subseteq \Fix_G(E)$ (paper's (P3)) use the finer subgroup.
+See the design remark in
+<a class="node-ref" data-node-id="equivariant_sheaves.induction_data_reverse" href="../equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a> for the QFD
+implications.</p>
 <h2>Downstream</h2>
 <p>The cellular-action structure is the standing hypothesis of the QFD
 and induction machinery: <a class="node-ref" data-node-id="equivariant_sheaves.quasi_fundamental_domain" href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a>,
@@ -512,10 +529,37 @@ class GCellComplex (G : Type*) [Group G] (X : Type*)
 top of <code>[MulAction G X]</code> and <code>[AbstractCellComplex X]</code>.  Bundling the
 group action into the class is deliberately avoided: the cell complex
 data (dimension, face relation) and the action are independent inputs.</p>
-<p>The cell-fixator $\Fix_G(E)$ is Mathlib's <code>MulAction.stabilizer G E</code>,
-a <code>Subgroup G</code>; the membership predicate is
-<code>MulAction.mem_stabilizer_iff</code>.  No project-local re-definition is
-needed and no cell-complex structure is required — only <code>[MulAction G X]</code>.</p>
+<p>The <strong>setwise stabiliser</strong> $\Stab_G(E)$ is Mathlib's
+<code>MulAction.stabilizer G E : Subgroup G</code>; membership is
+<code>MulAction.mem_stabilizer_iff</code>.  It takes only <code>[MulAction G X]</code> and
+does not depend on the cell-complex structure.  This is the natural
+stabiliser of a <em>poset element</em> under a poset-respecting group action.</p>
+<p>The <strong>pointwise fixator</strong> $\Fix_G(E)$ is the infimum</p>
+<p><code>lean
+def pointwiseFix (G : Type*) [Group G] {X : Type*}
+    [PartialOrder X] [MulAction G X] (E : X) : Subgroup G :=
+  ⨅ F ∈ {F : X | F ≤ E}, MulAction.stabilizer G F</code></p>
+<p>which depends on the poset structure through the down-set
+$\{F : F \preceq E\}$.  Both concepts are needed and neither replaces
+the other:</p>
+<ul>
+<li>$\Stab_G(E)$ is what makes the $G$-action a well-defined map on
+  poset elements — the natural symmetry of a single cell as an
+  abstract object.</li>
+<li>$\Fix_G(E)$ is the combinatorial trace of "fixes the closure of
+  $E$" and shows up whenever a cosheaf-like family
+  $\{P_E\}$ has to interact with cells below $E$.</li>
+</ul>
+<p>The induction / QFD machinery in
+<code>SheafOnBuilding.QuasiFundDomain</code> and <code>SheafOnBuilding.Induction</code> is
+stated with <code>MulAction.stabilizer G E</code> — the setwise version — and
+that choice is deliberate: the abstract framework tracks the
+$G$-action on individual poset elements and the residual factorisation
+$g^{-1} h n \in \mathrm{Stab}_G(E)$ that comes out of the
+<code>InductionRel</code> calculation.  The pointwise refinement re-enters when
+a specific geometric or subgroup-theoretic input (a cell fixator that
+is automatically down-monotone) is available; that is where the
+distinction from the paper's conventions surfaces.</p>
     
   </div>
 
