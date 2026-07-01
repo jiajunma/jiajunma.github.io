@@ -456,12 +456,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L97"><code>SheafOnBuilding.AbstractCellComplex.star</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L97"><code>SheafOnBuilding.AbstractCellComplex.star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -490,12 +490,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L101"><code>SheafOnBuilding.AbstractCellComplex.self_mem_star</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L101"><code>SheafOnBuilding.AbstractCellComplex.self_mem_star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -506,12 +506,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L124"><code>SheafOnBuilding.AbstractCellComplex.isOpen_star</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L124"><code>SheafOnBuilding.AbstractCellComplex.isOpen_star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -522,7 +522,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -554,20 +554,23 @@ sheaf condition on the star basis reduces to a functoriality
 statement on the poset.  This underpins the sheaf/cosheaf formalism
 of <a class="node-ref" data-node-id="cellular_categories.sheaves_cosheaves" href="../cellular_categories/cellular_categories_sheaves_cosheaves.html">Sheaves and cosheaves on X as functor categories</a>.</p>
 <h2>Lean formalization</h2>
-<p>```lean
-def AbstractCellComplex.star (E : X) : Set X := {F | E ≤ F}</p>
-<p>@[simp] theorem mem_star {E F : X} : F ∈ star E ↔ E ≤ F := Iff.rfl</p>
-<p>theorem self_mem_star (E : X) : E ∈ star E := le_refl E</p>
-<p>scoped instance : TopologicalSpace X where
+<pre><code class="language-lean">def AbstractCellComplex.star (E : X) : Set X := {F | E ≤ F}
+
+@[simp] theorem mem_star {E F : X} : F ∈ star E ↔ E ≤ F := Iff.rfl
+
+theorem self_mem_star (E : X) : E ∈ star E := le_refl E
+
+scoped instance : TopologicalSpace X where
   IsOpen U := ∀ ⦃E : X⦄, E ∈ U → star E ⊆ U
   isOpen_univ  := fun _ _ F _ =&gt; Set.mem_univ F
   isOpen_inter := fun _ _ hs ht _ hE _ hEF =&gt; ⟨hs hE.1 hEF, ht hE.2 hEF⟩
   isOpen_sUnion := fun _ hS _ hE _ hEF =&gt;
     let ⟨t, ht, hEt⟩ := hE
-    ⟨t, ht, hS t ht hEt hEF⟩</p>
-<p>theorem isOpen_star (E : X) : IsOpen (star E) :=
+    ⟨t, ht, hS t ht hEt hEF⟩
+
+theorem isOpen_star (E : X) : IsOpen (star E) :=
   fun _ hE _ hF =&gt; le_trans hE hF
-```</p>
+</code></pre>
 <p>The topological-space instance is declared <code>scoped</code> so it activates
 only under <code>open AbstractCellComplex</code>.  This prevents silent clashes
 when a downstream file wants to give $X$ a different topology (e.g.

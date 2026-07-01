@@ -456,12 +456,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L76"><code>SheafOnBuilding.IsQuasiFundDomain</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L76"><code>SheafOnBuilding.IsQuasiFundDomain</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -475,12 +475,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L44"><code>SheafOnBuilding.Subcomplex.stabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L44"><code>SheafOnBuilding.Subcomplex.stabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -491,7 +491,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
       </p>
       
     </div>
@@ -527,8 +527,7 @@ take $G' = \Stab_G(X')$.</p>
 <p>The third example is developed further in
 <a class="node-ref" data-node-id="applications.qfd_from_alcove" href="../applications/applications_qfd_from_alcove.html">Quasi-fundamental domain from a closed alcove (App B)</a>.</p>
 <h2>Lean formalization</h2>
-<p><code>lean
-class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}
+<pre><code class="language-lean">class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}
     [PartialOrder X] [AbstractCellComplex X]
     [MulAction G X] [GCellComplex G X]
     (G' : Subgroup G) (S : Subcomplex X) : Prop where
@@ -536,7 +535,8 @@ class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}
   surj : ∀ F : X, ∃ (g : G) (E : X), E ∈ S ∧ g • E = F
   orbit_iff : ∀ {E F : X}, E ∈ S → F ∈ S → ∀ (g h : G),
     g • E = h • F →
-    ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) • E = E</code></p>
+    ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) • E = E
+</code></pre>
 <p><code>IsQuasiFundDomain G' S</code> is a <code>Prop</code> class <strong>parameterised by the
 distinguished subgroup <code>G'</code></strong>, not by taking $\Stab_G(S)$ implicitly.
 This is the sharpest form of the QFD hypothesis: choosing <code>G'</code> smaller
@@ -544,9 +544,9 @@ than $\Stab_G(S)$ <em>refines</em> the orbit statement <code>orbit_iff</code> ac
 Setwise-stabiliser instances are recovered by setting
 $G' := \mathrm{Subcomplex.stabilizer}\ S$.</p>
 <p>The setwise stabiliser of a subcomplex is exposed as a subgroup:</p>
-<p><code>lean
-def Subcomplex.stabilizer (S : Subcomplex X) : Subgroup G where
-  carrier := {g | ∀ E : X, g • E ∈ S ↔ E ∈ S}</code></p>
+<pre><code class="language-lean">def Subcomplex.stabilizer (S : Subcomplex X) : Subgroup G where
+  carrier := {g | ∀ E : X, g • E ∈ S ↔ E ∈ S}
+</code></pre>
 <p>The iff form of the carrier ensures both $g \cdot S \subseteq S$ and
 $g^{-1} \cdot S \subseteq S$, which is what makes it a subgroup.</p>
     

@@ -584,7 +584,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -761,10 +761,10 @@ $G \times^P X'$.  $\square$</p>
 <h2>Lean formalization</h2>
 <p>The representative relation is
 <code>InductionDatum.leRep : G × X' → G × X' → Prop</code>:</p>
-<p><code>lean
-def leRep (g₁E₁ g₂E₂ : G × X') : Prop :=
+<pre><code class="language-lean">def leRep (g₁E₁ g₂E₂ : G × X') : Prop :=
   ∃ n ∈ d.G', n • g₁E₁.2 ≤ g₂E₂.2 ∧
-              g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2</code></p>
+              g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2
+</code></pre>
 <p>The five clauses correspond to</p>
 <table>
 <thead>
@@ -801,12 +801,12 @@ def leRep (g₁E₁ g₂E₂ : G × X') : Prop :=
 well-definedness side condition of <code>Quotient.lift₂</code>; clauses (1) +
 (2) discharge reflexivity and transitivity of the descended <code>le</code>;
 clause (5) discharges antisymmetry.</p>
-<p><code>lean
-instance : PartialOrder (InducedSpace d) where
+<pre><code class="language-lean">instance : PartialOrder (InducedSpace d) where
   le := Quotient.lift₂ (leRep d) ⟨left/right descent + symm/inv⟩
   le_refl  := ⟨leRep_refl⟩
   le_trans := ⟨leRep_trans⟩
-  le_antisymm := ⟨leRep_antisymm⟩</code></p>
+  le_antisymm := ⟨leRep_antisymm⟩
+</code></pre>
 <p>The dimension function <code>InducedSpace.dim</code> and the <code>AbstractCellComplex
 (InducedSpace d)</code> / <code>GCellComplex G (InducedSpace d)</code> instances stack
 on top of this <code>PartialOrder</code>.</p>

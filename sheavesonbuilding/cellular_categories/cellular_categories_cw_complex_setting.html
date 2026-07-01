@@ -464,12 +464,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -480,12 +480,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -496,12 +496,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -513,12 +513,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -529,7 +529,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -614,11 +614,11 @@ action, and the compatibility conditions can be stacked, refined, or
 replaced independently.</p>
 <p>The "locally finite regular CW complex with cellular $G$-action" is
 realised by the standing variable block</p>
-<p><code>lean
-variable {G : Type*} [Group G]
+<pre><code class="language-lean">variable {G : Type*} [Group G]
 variable {X : Type*}
 variable [PartialOrder X] [AbstractCellComplex X] [IsLocallyFinite X]
-variable [MulAction G X] [GCellComplex G X]</code></p>
+variable [MulAction G X] [GCellComplex G X]
+</code></pre>
 <p>Every downstream Lean definition — cosheaves, chain complex,
 equivariant functors, induction, QFD — is stated against exactly this
 typeclass stack.  Regularity of the CW complex is not tracked as a

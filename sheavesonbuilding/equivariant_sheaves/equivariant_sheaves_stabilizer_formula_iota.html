@@ -458,12 +458,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L320"><code>SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L320"><code>SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
           </span>
           
           
@@ -476,12 +476,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L343"><code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L343"><code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
           </span>
           
           
@@ -493,12 +493,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L352"><code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L352"><code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
           </span>
           
           
@@ -511,7 +511,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -606,18 +606,18 @@ used in the descent of the face relation to $\mathrm{InducedSpace}$
 <code>MulAction.stabilizer G (iota d E)</code> in the code is
 $\Stab_G(\iota E)$, not the pointwise $\Fix_G(\iota E)$.</p>
 <p>Lemma A(1) specialised to $g = 1$ is <code>InducedSpace.mem_stabilizer_iota_iff</code>:</p>
-<p><code>lean
-theorem mem_stabilizer_iota_iff (E : X') (m : G) :
+<pre><code class="language-lean">theorem mem_stabilizer_iota_iff (E : X') (m : G) :
     m ∈ MulAction.stabilizer G (iota d E) ↔
-      ∃ u ∈ MulAction.stabilizer d.G' E, ∃ p ∈ d.P E, m = u * p</code></p>
+      ∃ u ∈ MulAction.stabilizer d.G' E, ∃ p ∈ d.P E, m = u * p
+</code></pre>
 <p>The two half-inclusions are</p>
-<p>```lean
-theorem P_le_stabilizer_iota (E : X') :
-    d.P E ≤ MulAction.stabilizer G (iota d E)</p>
-<p>theorem fix_G'_le_stabilizer_iota (E : X') {n : G}
+<pre><code class="language-lean">theorem P_le_stabilizer_iota (E : X') :
+    d.P E ≤ MulAction.stabilizer G (iota d E)
+
+theorem fix_G'_le_stabilizer_iota (E : X') {n : G}
     (hn : n ∈ MulAction.stabilizer d.G' E) :
     n ∈ MulAction.stabilizer G (iota d E)
-```</p>
+</code></pre>
 <p><code>P_le_stabilizer_iota</code> is Lemma A(2); <code>fix_G'_le_stabilizer_iota</code>
 records $\Stab_{G'}(E) \le \Stab_G(\iota E)$ (the ($\supseteq$)
 direction restricted to $p = 1$).  The generic $g \ne 1$ form is

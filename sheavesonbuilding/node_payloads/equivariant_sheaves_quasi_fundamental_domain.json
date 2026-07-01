@@ -8,7 +8,7 @@
   "topics": [
     "equivariant_sheaves"
   ],
-  "body_html": "<h1>Quasi-fundamental domain</h1>\n<p>Let $G$ act cellularly on a regular CW complex $X$.</p>\n<p><strong>Definition (fundamental domain).</strong> A subcomplex $X' \\subseteq X$ is a\n<em>fundamental domain</em> for the $G$-action if the natural map\n$[\\![X']\\!] \\to G \\backslash [\\![X]\\!]$ is a bijection.</p>\n<p><strong>Definition (quasi-fundamental domain, QFD).</strong> A subcomplex $X' \\subseteq X$\nis a <em>quasi-fundamental domain</em> for the $G$-action if there exists a\nsubgroup $G' \\le G$ stabilizing $X'$ such that\n$$G' \\backslash [\\![X']\\!] \\;\\xrightarrow{\\;\\sim\\;}\\; G \\backslash [\\![X]\\!]$$\nis a bijection. We then say <em>the $G'$-set $X'$ is a QFD of the $G$-set $X$.</em></p>\n<p>From the definition, $G' \\le \\Stab_G(X')$ and the map factors through\n$G'\\backslash[\\![X']\\!] \\to \\Stab_G(X')\\backslash[\\![X']\\!]$, so we may always\ntake $G' = \\Stab_G(X')$.</p>\n<h2>Canonical examples</h2>\n<p>Each item is a QFD of the preceding one:</p>\n<ol>\n<li><strong>The $G$-set $\\mathcal{B}(G)$</strong>, the extended Bruhat–Tits building of $G$\n   (with a suitable facet structure).</li>\n<li><strong>The $N$-set $A$</strong>, where $N$ is the normalizer of a maximal split torus\n   $S$ of $G$ and $A \\subset \\mathcal{B}(G)$ is the corresponding apartment.</li>\n<li><strong>The $\\Omega$-set $\\bar C$</strong>, where $\\bar C := \\mathrm{pr}^{-1}_{A,A^{\\mathrm{red}}}(\\overline{C'})$\n   is the preimage of a closed alcove $C'$ in the reduced apartment and\n   $\\Omega := \\Stab_N(C')$. Equivalently, $\\bar C$ is a fundamental domain\n   for the (non-extended) affine Weyl group $W^{\\mathrm{aff}}$ acting on $A$.</li>\n</ol>\n<p>The third example is developed further in\n<a class=\"node-ref\" data-node-id=\"applications.qfd_from_alcove\" href=\"../applications/applications_qfd_from_alcove.html\">Quasi-fundamental domain from a closed alcove (App B)</a>.</p>\n<h2>Lean formalization</h2>\n<p><code>lean\nclass IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}\n    [PartialOrder X] [AbstractCellComplex X]\n    [MulAction G X] [GCellComplex G X]\n    (G' : Subgroup G) (S : Subcomplex X) : Prop where\n  G'_le_stab : G' ≤ S.stabilizer\n  surj : ∀ F : X, ∃ (g : G) (E : X), E ∈ S ∧ g • E = F\n  orbit_iff : ∀ {E F : X}, E ∈ S → F ∈ S → ∀ (g h : G),\n    g • E = h • F →\n    ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) • E = E</code></p>\n<p><code>IsQuasiFundDomain G' S</code> is a <code>Prop</code> class <strong>parameterised by the\ndistinguished subgroup <code>G'</code></strong>, not by taking $\\Stab_G(S)$ implicitly.\nThis is the sharpest form of the QFD hypothesis: choosing <code>G'</code> smaller\nthan $\\Stab_G(S)$ <em>refines</em> the orbit statement <code>orbit_iff</code> accordingly.\nSetwise-stabiliser instances are recovered by setting\n$G' := \\mathrm{Subcomplex.stabilizer}\\ S$.</p>\n<p>The setwise stabiliser of a subcomplex is exposed as a subgroup:</p>\n<p><code>lean\ndef Subcomplex.stabilizer (S : Subcomplex X) : Subgroup G where\n  carrier := {g | ∀ E : X, g • E ∈ S ↔ E ∈ S}</code></p>\n<p>The iff form of the carrier ensures both $g \\cdot S \\subseteq S$ and\n$g^{-1} \\cdot S \\subseteq S$, which is what makes it a subgroup.</p>",
+  "body_html": "<h1>Quasi-fundamental domain</h1>\n<p>Let $G$ act cellularly on a regular CW complex $X$.</p>\n<p><strong>Definition (fundamental domain).</strong> A subcomplex $X' \\subseteq X$ is a\n<em>fundamental domain</em> for the $G$-action if the natural map\n$[\\![X']\\!] \\to G \\backslash [\\![X]\\!]$ is a bijection.</p>\n<p><strong>Definition (quasi-fundamental domain, QFD).</strong> A subcomplex $X' \\subseteq X$\nis a <em>quasi-fundamental domain</em> for the $G$-action if there exists a\nsubgroup $G' \\le G$ stabilizing $X'$ such that\n$$G' \\backslash [\\![X']\\!] \\;\\xrightarrow{\\;\\sim\\;}\\; G \\backslash [\\![X]\\!]$$\nis a bijection. We then say <em>the $G'$-set $X'$ is a QFD of the $G$-set $X$.</em></p>\n<p>From the definition, $G' \\le \\Stab_G(X')$ and the map factors through\n$G'\\backslash[\\![X']\\!] \\to \\Stab_G(X')\\backslash[\\![X']\\!]$, so we may always\ntake $G' = \\Stab_G(X')$.</p>\n<h2>Canonical examples</h2>\n<p>Each item is a QFD of the preceding one:</p>\n<ol>\n<li><strong>The $G$-set $\\mathcal{B}(G)$</strong>, the extended Bruhat–Tits building of $G$\n   (with a suitable facet structure).</li>\n<li><strong>The $N$-set $A$</strong>, where $N$ is the normalizer of a maximal split torus\n   $S$ of $G$ and $A \\subset \\mathcal{B}(G)$ is the corresponding apartment.</li>\n<li><strong>The $\\Omega$-set $\\bar C$</strong>, where $\\bar C := \\mathrm{pr}^{-1}_{A,A^{\\mathrm{red}}}(\\overline{C'})$\n   is the preimage of a closed alcove $C'$ in the reduced apartment and\n   $\\Omega := \\Stab_N(C')$. Equivalently, $\\bar C$ is a fundamental domain\n   for the (non-extended) affine Weyl group $W^{\\mathrm{aff}}$ acting on $A$.</li>\n</ol>\n<p>The third example is developed further in\n<a class=\"node-ref\" data-node-id=\"applications.qfd_from_alcove\" href=\"../applications/applications_qfd_from_alcove.html\">Quasi-fundamental domain from a closed alcove (App B)</a>.</p>\n<h2>Lean formalization</h2>\n<pre><code class=\"language-lean\">class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}\n    [PartialOrder X] [AbstractCellComplex X]\n    [MulAction G X] [GCellComplex G X]\n    (G' : Subgroup G) (S : Subcomplex X) : Prop where\n  G'_le_stab : G' ≤ S.stabilizer\n  surj : ∀ F : X, ∃ (g : G) (E : X), E ∈ S ∧ g • E = F\n  orbit_iff : ∀ {E F : X}, E ∈ S → F ∈ S → ∀ (g h : G),\n    g • E = h • F →\n    ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) • E = E\n</code></pre>\n<p><code>IsQuasiFundDomain G' S</code> is a <code>Prop</code> class <strong>parameterised by the\ndistinguished subgroup <code>G'</code></strong>, not by taking $\\Stab_G(S)$ implicitly.\nThis is the sharpest form of the QFD hypothesis: choosing <code>G'</code> smaller\nthan $\\Stab_G(S)$ <em>refines</em> the orbit statement <code>orbit_iff</code> accordingly.\nSetwise-stabiliser instances are recovered by setting\n$G' := \\mathrm{Subcomplex.stabilizer}\\ S$.</p>\n<p>The setwise stabiliser of a subcomplex is exposed as a subgroup:</p>\n<pre><code class=\"language-lean\">def Subcomplex.stabilizer (S : Subcomplex X) : Subgroup G where\n  carrier := {g | ∀ E : X, g • E ∈ S ↔ E ∈ S}\n</code></pre>\n<p>The iff form of the carrier ensures both $g \\cdot S \\subseteq S$ and\n$g^{-1} \\cdot S \\subseteq S$, which is what makes it a subgroup.</p>",
   "proof_html": null,
   "deps": [
     {
@@ -69,9 +69,9 @@
       "signature": "class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}\n    [PartialOrder X] [AbstractCellComplex X]\n    [MulAction G X] [GCellComplex G X]\n    (G' : Subgroup G) (S : Subcomplex X) : Prop where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "c4e85303fa6d49366e5cf8f597849cd0512ed1c4",
-      "short_revision": "c4e8530",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L76",
+      "revision": "2de5d11bfacd64c595ab3b2a1364c49f6ed9200d",
+      "short_revision": "2de5d11",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L76",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -87,9 +87,9 @@
       "signature": "def stabilizer (S : Subcomplex X) : Subgroup G where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "c4e85303fa6d49366e5cf8f597849cd0512ed1c4",
-      "short_revision": "c4e8530",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L44",
+      "revision": "2de5d11bfacd64c595ab3b2a1364c49f6ed9200d",
+      "short_revision": "2de5d11",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L44",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -102,9 +102,9 @@
       "name": "SheafOnBuilding.QuasiFundDomain",
       "display_name": "SheafOnBuilding.QuasiFundDomain",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "c4e85303fa6d49366e5cf8f597849cd0512ed1c4",
-      "short_revision": "c4e8530",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L1",
+      "revision": "2de5d11bfacd64c595ab3b2a1364c49f6ed9200d",
+      "short_revision": "2de5d11",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L1",
       "status": "resolved",
       "reason": null
     }

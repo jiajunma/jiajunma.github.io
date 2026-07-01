@@ -456,12 +456,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -472,12 +472,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L167"><code>SheafOnBuilding.Subcomplex.face_closed</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L167"><code>SheafOnBuilding.Subcomplex.face_closed</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -489,7 +489,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -526,16 +526,17 @@ inclusion alone is not enough for a subgroup structure.</p>
   see <a class="node-ref" data-node-id="equivariant_sheaves.induction_data_reverse" href="../equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a>.</li>
 </ul>
 <h2>Lean formalization</h2>
-<p>```lean
-structure Subcomplex (X : Type*) [PartialOrder X] where
+<pre><code class="language-lean">structure Subcomplex (X : Type*) [PartialOrder X] where
   carrier      : Set X
-  face_closed' : ∀ {E F : X}, E ≤ F → F ∈ carrier → E ∈ carrier</p>
-<p>instance : SetLike (Subcomplex X) X where
+  face_closed' : ∀ {E F : X}, E ≤ F → F ∈ carrier → E ∈ carrier
+
+instance : SetLike (Subcomplex X) X where
   coe S := S.carrier
-  coe_injective' := fun S T h =&gt; by cases S; cases T; congr</p>
-<p>theorem face_closed (S : Subcomplex X) {E F : X} (hEF : E ≤ F)
+  coe_injective' := fun S T h =&gt; by cases S; cases T; congr
+
+theorem face_closed (S : Subcomplex X) {E F : X} (hEF : E ≤ F)
     (hF : F ∈ S) : E ∈ S := S.face_closed' hEF hF
-```</p>
+</code></pre>
 <p>The <code>Subcomplex</code> type is modelled after mathlib's <code>Subgroup</code> /
 <code>Submonoid</code> idiom: a <code>carrier : Set X</code> field plus a <code>SetLike</code>
 instance gives the usual $E \in S$ notation and coercion to <code>Set X</code>.

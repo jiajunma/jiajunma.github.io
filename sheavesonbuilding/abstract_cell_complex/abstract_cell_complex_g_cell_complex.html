@@ -456,12 +456,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -473,7 +473,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -525,12 +525,12 @@ and induction machinery: <a class="node-ref" data-node-id="equivariant_sheaves.q
 <a class="node-ref" data-node-id="equivariant_sheaves.qfd_orbit_lemma" href="../equivariant_sheaves/equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a>,
 [[node:equivariant_sheaves.induction_GxP_X]] all take it as input.</p>
 <h2>Lean formalization</h2>
-<p><code>lean
-class GCellComplex (G : Type*) [Group G] (X : Type*)
+<pre><code class="language-lean">class GCellComplex (G : Type*) [Group G] (X : Type*)
     [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where
   smul_le  : ∀ (g : G) {E F : X}, E ≤ F → (g • E) ≤ (g • F)
   smul_dim : ∀ (g : G) (E : X),
-    AbstractCellComplex.dim (g • E) = AbstractCellComplex.dim E</code></p>
+    AbstractCellComplex.dim (g • E) = AbstractCellComplex.dim E
+</code></pre>
 <p><code>GCellComplex G X</code> is a pure <code>Prop</code> compatibility class stacked on
 top of <code>[MulAction G X]</code> and <code>[AbstractCellComplex X]</code>.  Bundling the
 group action into the class is deliberately avoided: the cell complex
@@ -541,10 +541,10 @@ data (dimension, face relation) and the action are independent inputs.</p>
 does not depend on the cell-complex structure.  This is the natural
 stabiliser of a <em>poset element</em> under a poset-respecting group action.</p>
 <p>The <strong>pointwise fixator</strong> $\Fix_G(E)$ is the infimum</p>
-<p><code>lean
-def pointwiseFix (G : Type*) [Group G] {X : Type*}
+<pre><code class="language-lean">def pointwiseFix (G : Type*) [Group G] {X : Type*}
     [PartialOrder X] [MulAction G X] (E : X) : Subgroup G :=
-  ⨅ F ∈ {F : X | F ≤ E}, MulAction.stabilizer G F</code></p>
+  ⨅ F ∈ {F : X | F ≤ E}, MulAction.stabilizer G F
+</code></pre>
 <p>which depends on the poset structure through the down-set
 $\{F : F \preceq E\}$.  Both concepts are needed and neither replaces
 the other:</p>

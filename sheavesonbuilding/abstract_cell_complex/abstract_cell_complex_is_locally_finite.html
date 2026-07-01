@@ -456,12 +456,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -472,7 +472,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -510,10 +510,10 @@ unavoidable — most prominently the boundary of the cellular chain
 complex ([[node:representations.chain_complex_C_dot]]) — does local
 finiteness enter.</p>
 <h2>Lean formalization</h2>
-<p><code>lean
-class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where
+<pre><code class="language-lean">class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where
   finite_faces   : ∀ E : X, Set.Finite {F : X | F ≤ E}
-  finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}</code></p>
+  finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}
+</code></pre>
 <p><code>IsLocallyFinite</code> is a <code>Prop</code> mixin, kept separate from
 <code>AbstractCellComplex</code> so lemmas that need only the poset and dimension
 do not depend on finiteness.  It takes only <code>[PartialOrder X]</code> (not

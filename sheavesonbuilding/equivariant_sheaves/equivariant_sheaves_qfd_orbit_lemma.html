@@ -456,12 +456,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L134"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L134"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -473,12 +473,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L119"><code>SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L119"><code>SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -491,12 +491,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L258"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L258"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ c4e8530, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -509,7 +509,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/c4e85303fa6d49366e5cf8f597849cd0512ed1c4/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
       </p>
       
     </div>
@@ -546,13 +546,13 @@ input to the induction construction
 [[node:equivariant_sheaves.induction_GxP_X]].</p>
 <h2>Lean formalization</h2>
 <p>The plain form is <code>IsQuasiFundDomain.orbit_eq_iff</code>:</p>
-<p><code>lean
-theorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)
+<pre><code class="language-lean">theorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G' S]
     {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
     g • E = h • F ↔
       ∃ n ∈ G',
-        n • E = F ∧ (g⁻¹ * h * n) ∈ MulAction.stabilizer G E</code></p>
+        n • E = F ∧ (g⁻¹ * h * n) ∈ MulAction.stabilizer G E
+</code></pre>
 <p>The <code>(→)</code> direction is the <code>orbit_iff</code> clause of <code>IsQuasiFundDomain</code>
 re-expressed with $\Fix_G(E)$ read as <code>MulAction.stabilizer G E</code>; the
 <code>(←)</code> direction is a direct group-action calculation with no QFD
