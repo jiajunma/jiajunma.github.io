@@ -458,12 +458,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a0df11407ed41aea3235cb968788db66ed581d9c/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a0df114, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -474,12 +474,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a0df11407ed41aea3235cb968788db66ed581d9c/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a0df114, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -490,12 +490,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a0df11407ed41aea3235cb968788db66ed581d9c/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a0df114, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -507,12 +507,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a0df11407ed41aea3235cb968788db66ed581d9c/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L152"><code>SheafOnBuilding.Subcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ a0df114, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ d087088, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -523,7 +523,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a0df11407ed41aea3235cb968788db66ed581d9c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/d087088692a4d7f7639af233f233013e2feb7fb3/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -554,62 +554,75 @@ cells. The face relation $E \preceq F$ holds when $E \subseteq \overline{F}$.</p
 <p>For a cell $E$, $\Fix_G(E)$ and $\Stab_G(E)$ may differ; refining the CW
 structure can force them to agree.</p>
 <h2>Lean formalisation</h2>
-<p>The topological setup distils to a purely combinatorial poset-with-dimension
-abstraction. The four ingredients — poset structure, dimension, locally
-finite, cellular $G$-action — are separate Prop classes stacked on the same
-type:</p>
+<p>The topological setup distils to a purely combinatorial
+poset-with-dimension abstraction.  Poset structure, dimension, local
+finiteness, and cellular $G$-action are separate typeclass layers
+stacked on the same carrier type — each a <code>class</code> / <code>structure</code> in
+its own right:</p>
 <table>
 <thead>
 <tr>
 <th>Ingredient</th>
-<th>Lean class</th>
+<th>Kind</th>
+<th>Lean signature</th>
 <th>KB node</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>face poset + dimension</td>
-<td><code>AbstractCellComplex X</code> (<code>extends PartialOrder X</code>)</td>
+<td>data-carrying <code>class</code></td>
+<td><code>class AbstractCellComplex (X) [PartialOrder X]</code> (with field <code>dim : X → ℕ</code>)</td>
 <td><a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a></td>
 </tr>
 <tr>
 <td>local finiteness</td>
-<td><code>IsLocallyFinite X : Prop</code></td>
+<td>Prop-valued <code>class</code></td>
+<td><code>class IsLocallyFinite (X) [PartialOrder X] : Prop</code></td>
 <td><a class="node-ref" data-node-id="abstract_cell_complex.is_locally_finite" href="../abstract_cell_complex/abstract_cell_complex_is_locally_finite.html">Locally finite abstract cell complex</a></td>
 </tr>
 <tr>
 <td>$G$-action compatibility</td>
-<td><code>GCellComplex G X : Prop</code> on top of <code>[MulAction G X]</code></td>
+<td>Prop-valued <code>class</code></td>
+<td><code>class GCellComplex (G) [Group G] (X) [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop</code></td>
 <td><a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a></td>
 </tr>
 <tr>
 <td>face-closed subsets</td>
-<td><code>Subcomplex X</code> (<code>extends SetLike</code>)</td>
+<td><code>structure</code></td>
+<td><code>structure Subcomplex (X) [PartialOrder X]</code> (with a separate <code>SetLike</code> instance)</td>
 <td><a class="node-ref" data-node-id="abstract_cell_complex.subcomplex" href="../abstract_cell_complex/abstract_cell_complex_subcomplex.html">Subcomplex of an abstract cell complex</a></td>
 </tr>
 <tr>
 <td>topology on the face poset</td>
-<td>Alexandrov star topology</td>
+<td><code>scoped instance : TopologicalSpace X</code></td>
+<td>(Alexandrov star topology)</td>
 <td><a class="node-ref" data-node-id="abstract_cell_complex.star_topology" href="../abstract_cell_complex/abstract_cell_complex_star_topology.html">Alexandrov star topology on the face poset</a></td>
 </tr>
 </tbody>
 </table>
-<p>The "locally finite regular CW complex with cellular $G$-action" of the
-paper is realised, at the abstract level, by</p>
+<p>None of these classes <code>extends</code> its underlying <code>[PartialOrder X]</code> /
+<code>[MulAction G X]</code> / <code>[AbstractCellComplex X]</code>: those are taken as
+separate instance parameters, so the cell-poset data, the group
+action, and the compatibility conditions can be stacked, refined, or
+replaced independently.</p>
+<p>The "locally finite regular CW complex with cellular $G$-action" is
+realised by the standing variable block</p>
 <p><code>lean
 variable {G : Type*} [Group G]
 variable {X : Type*}
 variable [PartialOrder X] [AbstractCellComplex X] [IsLocallyFinite X]
 variable [MulAction G X] [GCellComplex G X]</code></p>
-<p>Every downstream Lean definition — cosheaves, chain complex, equivariant
-functors, induction, QFD — is stated against exactly this typeclass stack.
-Regularity of the CW complex is not tracked as a Prop mixin at the abstract
-level; it re-enters only in the geometric-realisation direction, where it
-identifies $\Fix_G$ (pointwise) with $\Stab_G$ (setwise) on individual cells.</p>
-<p>The pointwise-vs-setwise distinction on the paper side collapses to
-<code>MulAction.stabilizer G E : Subgroup G</code> at the poset level (a single object,
-since setwise = pointwise on the discrete cell set) — see the design remark
-in <a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>.</p>
+<p>Every downstream Lean definition — cosheaves, chain complex,
+equivariant functors, induction, QFD — is stated against exactly this
+typeclass stack.  Regularity of the CW complex is not tracked as a
+Prop mixin at the abstract level: it re-enters only in the
+geometric-realisation direction, where it identifies $\Fix_G$
+(pointwise) with $\Stab_G$ (setwise) on individual cells.</p>
+<p>At the poset level the pointwise-vs-setwise distinction collapses,
+and the cell stabiliser is a single object,
+<code>MulAction.stabilizer G E : Subgroup G</code> — see the design remark in
+<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>.</p>
     
   </div>
 
