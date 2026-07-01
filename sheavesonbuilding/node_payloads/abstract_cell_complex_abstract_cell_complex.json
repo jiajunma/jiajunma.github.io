@@ -8,15 +8,9 @@
   "topics": [
     "abstract_cell_complex"
   ],
-  "body_html": "<h1>Abstract cell complex</h1>\n<p>An <strong>abstract cell complex</strong> is a partially ordered set $(X, \\preceq)$\ntogether with a <strong>dimension function</strong> $\\dim : X \\to \\mathbb{N}$\nsatisfying the following two axioms:</p>\n<ul>\n<li><strong>Strict monotonicity</strong>: for $E, F \\in X$, if $E \\preceq F$ and\n  $E \\neq F$, then $\\dim E &lt; \\dim F$.</li>\n<li><strong>Face existence</strong>: every $F \\in X$ with $\\dim F &gt; 0$ has a face of\n  dimension $\\dim F - 1$; that is, there exists $E \\in X$ with\n  $E \\prec F$ and $\\dim E + 1 = \\dim F$.</li>\n</ul>\n<p>The elements of $X$ are called <strong>cells</strong> and $\\preceq$ is the <strong>face\nrelation</strong>.  For $E \\preceq F$ we say $E$ is a <em>face</em> of $F$; when the\ncontainment is strict we write $E \\prec F$.</p>\n<p>The combinatorial data $(X, \\preceq, \\dim)$ is a direct abstraction of\nthe face poset of a regular CW complex —\n<a class=\"node-ref\" data-node-id=\"cellular_categories.cw_complex_setting\" href=\"../cellular_categories/cellular_categories_cw_complex_setting.html\">Locally finite regular CW complex with cellular G-action</a> — with all topology\ndiscarded.  Strict monotonicity is the standard \"dimension separates\nfaces\" property; face existence rules out pathological posets (e.g. a\n\"2-cell\" attached directly to a vertex with no intermediate edge),\nwhich are never face posets of regular CW complexes.</p>\n<h2>Relation to §§2–4</h2>\n<p>Every downstream construction — sheaves and cosheaves\n(<a class=\"node-ref\" data-node-id=\"cellular_categories.sheaves_cosheaves\" href=\"../cellular_categories/cellular_categories_sheaves_cosheaves.html\">Sheaves and cosheaves on X as functor categories</a>), the Alexandrov star\ntopology (<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.star_topology\" href=\"abstract_cell_complex_star_topology.html\">Alexandrov star topology on the face poset</a>), the QFD and\ninduction machinery (<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.quasi_fundamental_domain\" href=\"../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html\">Quasi-fundamental domain</a>,\n[[node:equivariant_sheaves.induction_GxP_X]]), and the cellular chain\ncomplex ([[node:representations.chain_complex_C_dot]]) — is stated\nagainst this poset-with-dimension structure and does not use the\ntopological realisation.</p>\n<p>Finiteness of the face poset (finitely many faces, finitely many\ncofaces of each cell) is a <em>separate</em> condition, recorded as\n<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.is_locally_finite\" href=\"abstract_cell_complex_is_locally_finite.html\">Locally finite abstract cell complex</a>; likewise\ncompatibility with a group action is a separate layer\n<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.g_cell_complex\" href=\"abstract_cell_complex_g_cell_complex.html\">Cellular G-action on an abstract cell complex</a>.</p>\n<h2>Lean formalization</h2>\n<p><code>lean\nclass AbstractCellComplex (X : Type*) [PartialOrder X] where\n  dim : X → ℕ\n  dim_lt : ∀ {E F : X}, E ≤ F → E ≠ F → dim E &lt; dim F\n  exists_face_dim_pred :\n    ∀ {F : X}, 0 &lt; dim F → ∃ E : X, E &lt; F ∧ dim E + 1 = dim F</code></p>\n<p><code>AbstractCellComplex</code> is a data-carrying <code>class</code>, not a <code>Prop</code> — the\ndimension function itself is genuine data and downstream files depend\non it definitionally.  The two axioms are the two bullets above.</p>\n<p>Finiteness and $G$-equivariance are deliberately <em>not</em> fields of this\nclass; they are separate typeclass layers so that lemmas requiring\nonly the poset and dimension do not carry irrelevant hypotheses.</p>",
+  "body_html": "<h1>Abstract cell complex</h1>\n<p>An <strong>abstract cell complex</strong> is a partially ordered set $(X, \\preceq)$\ntogether with a <strong>dimension function</strong> $\\dim : X \\to \\mathbb{N}$\nsatisfying the following two axioms:</p>\n<ul>\n<li><strong>Strict monotonicity</strong>: for $E, F \\in X$, if $E \\preceq F$ and\n  $E \\neq F$, then $\\dim E &lt; \\dim F$.</li>\n<li><strong>Face existence</strong>: every $F \\in X$ with $\\dim F &gt; 0$ has a face of\n  dimension $\\dim F - 1$; that is, there exists $E \\in X$ with\n  $E \\prec F$ and $\\dim E + 1 = \\dim F$.</li>\n</ul>\n<p>The elements of $X$ are called <strong>cells</strong> and $\\preceq$ is the <strong>face\nrelation</strong>.  For $E \\preceq F$ we say $E$ is a <em>face</em> of $F$; when the\ncontainment is strict we write $E \\prec F$.</p>\n<p>The combinatorial data $(X, \\preceq, \\dim)$ is a direct abstraction of\nthe face poset of a regular CW complex —\n<a class=\"node-ref\" data-node-id=\"cellular_categories.cw_complex_setting\" href=\"../cellular_categories/cellular_categories_cw_complex_setting.html\">Locally finite regular CW complex with cellular G-action</a> — with all topology\ndiscarded.  Strict monotonicity is the standard \"dimension separates\nfaces\" property; face existence rules out pathological posets (e.g. a\n\"2-cell\" attached directly to a vertex with no intermediate edge),\nwhich are never face posets of regular CW complexes.</p>\n<h2>Downstream</h2>\n<p>Every downstream construction — sheaves and cosheaves\n(<a class=\"node-ref\" data-node-id=\"cellular_categories.sheaves_cosheaves\" href=\"../cellular_categories/cellular_categories_sheaves_cosheaves.html\">Sheaves and cosheaves on X as functor categories</a>), the Alexandrov star\ntopology (<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.star_topology\" href=\"abstract_cell_complex_star_topology.html\">Alexandrov star topology on the face poset</a>), the QFD and\ninduction machinery (<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.quasi_fundamental_domain\" href=\"../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html\">Quasi-fundamental domain</a>,\n[[node:equivariant_sheaves.induction_GxP_X]]), and the cellular chain\ncomplex ([[node:representations.chain_complex_C_dot]]) — is stated\nagainst this poset-with-dimension structure and does not use the\ntopological realisation.</p>\n<p>Finiteness of the face poset (finitely many faces, finitely many\ncofaces of each cell) is a <em>separate</em> condition, recorded as\n<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.is_locally_finite\" href=\"abstract_cell_complex_is_locally_finite.html\">Locally finite abstract cell complex</a>; likewise\ncompatibility with a group action is a separate layer\n<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.g_cell_complex\" href=\"abstract_cell_complex_g_cell_complex.html\">Cellular G-action on an abstract cell complex</a>.</p>\n<h2>Lean formalization</h2>\n<p><code>lean\nclass AbstractCellComplex (X : Type*) [PartialOrder X] where\n  dim : X → ℕ\n  dim_lt : ∀ {E F : X}, E ≤ F → E ≠ F → dim E &lt; dim F\n  exists_face_dim_pred :\n    ∀ {F : X}, 0 &lt; dim F → ∃ E : X, E &lt; F ∧ dim E + 1 = dim F</code></p>\n<p><code>AbstractCellComplex</code> is a data-carrying <code>class</code>, not a <code>Prop</code> — the\ndimension function itself is genuine data and downstream files depend\non it definitionally.  The two axioms are the two bullets above.</p>\n<p>Finiteness and $G$-equivariance are deliberately <em>not</em> fields of this\nclass; they are separate typeclass layers so that lemmas requiring\nonly the poset and dimension do not carry irrelevant hypotheses.</p>",
   "proof_html": null,
-  "deps": [
-    {
-      "id": "cellular_categories.cw_complex_setting",
-      "title": "Locally finite regular CW complex with cellular G-action",
-      "href": "cellular_categories/cellular_categories_cw_complex_setting.html"
-    }
-  ],
+  "deps": [],
   "dependents": [
     {
       "id": "abstract_cell_complex.g_cell_complex",
@@ -37,6 +31,11 @@
       "id": "abstract_cell_complex.subcomplex",
       "title": "Subcomplex of an abstract cell complex",
       "href": "abstract_cell_complex/abstract_cell_complex_subcomplex.html"
+    },
+    {
+      "id": "cellular_categories.cw_complex_setting",
+      "title": "Locally finite regular CW complex with cellular G-action",
+      "href": "cellular_categories/cellular_categories_cw_complex_setting.html"
     }
   ],
   "lean_refs": [
@@ -49,9 +48,9 @@
       "signature": "class AbstractCellComplex (X : Type*) [PartialOrder X] where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "567425131a7a884b8be08ed075ff591efc15ef60",
-      "short_revision": "5674251",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/567425131a7a884b8be08ed075ff591efc15ef60/SheafOnBuilding/GCellComplex.lean#L58",
+      "revision": "a0df11407ed41aea3235cb968788db66ed581d9c",
+      "short_revision": "a0df114",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a0df11407ed41aea3235cb968788db66ed581d9c/SheafOnBuilding/GCellComplex.lean#L58",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -64,9 +63,9 @@
       "name": "SheafOnBuilding.GCellComplex",
       "display_name": "SheafOnBuilding.GCellComplex",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "567425131a7a884b8be08ed075ff591efc15ef60",
-      "short_revision": "5674251",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/567425131a7a884b8be08ed075ff591efc15ef60/SheafOnBuilding/GCellComplex.lean#L1",
+      "revision": "a0df11407ed41aea3235cb968788db66ed581d9c",
+      "short_revision": "a0df114",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/a0df11407ed41aea3235cb968788db66ed581d9c/SheafOnBuilding/GCellComplex.lean#L1",
       "status": "resolved",
       "reason": null
     }

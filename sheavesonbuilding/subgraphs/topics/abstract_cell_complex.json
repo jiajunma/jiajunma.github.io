@@ -90,7 +90,7 @@
       "id": "cellular_categories",
       "title": "Cellular Categories",
       "href": "cellular_categories/index.html",
-      "role": "dependency",
+      "role": "dependent",
       "node_count": 8
     },
     {
@@ -103,9 +103,37 @@
   ],
   "boundary_edges": [
     {
-      "from": "topic:cellular_categories",
-      "to": "abstract_cell_complex.abstract_cell_complex",
-      "kind": "boundary_dependency",
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "topic:cellular_categories",
+      "kind": "boundary_dependent",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "topic:cellular_categories",
+      "kind": "boundary_dependent",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "abstract_cell_complex.is_locally_finite",
+      "to": "topic:cellular_categories",
+      "kind": "boundary_dependent",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "abstract_cell_complex.star_topology",
+      "to": "topic:cellular_categories",
+      "kind": "boundary_dependent",
+      "topic": "cellular_categories",
+      "count": 1
+    },
+    {
+      "from": "abstract_cell_complex.subcomplex",
+      "to": "topic:cellular_categories",
+      "kind": "boundary_dependent",
       "topic": "cellular_categories",
       "count": 1
     },

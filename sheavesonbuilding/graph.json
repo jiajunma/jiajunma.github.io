@@ -17,14 +17,12 @@
         "SheafOnBuilding.AbstractCellComplex"
       ],
       "topic": "abstract_cell_complex",
-      "uses": [
-        "cellular_categories.cw_complex_setting"
-      ],
       "used_by": [
         "abstract_cell_complex.g_cell_complex",
         "abstract_cell_complex.is_locally_finite",
         "abstract_cell_complex.star_topology",
-        "abstract_cell_complex.subcomplex"
+        "abstract_cell_complex.subcomplex",
+        "cellular_categories.cw_complex_setting"
       ]
     },
     {
@@ -48,6 +46,7 @@
         "abstract_cell_complex.abstract_cell_complex"
       ],
       "used_by": [
+        "cellular_categories.cw_complex_setting",
         "equivariant_sheaves.iota_cellular_embedding",
         "equivariant_sheaves.stabilizer_formula_iota"
       ]
@@ -71,6 +70,9 @@
       "topic": "abstract_cell_complex",
       "uses": [
         "abstract_cell_complex.abstract_cell_complex"
+      ],
+      "used_by": [
+        "cellular_categories.cw_complex_setting"
       ]
     },
     {
@@ -95,6 +97,9 @@
       "topic": "abstract_cell_complex",
       "uses": [
         "abstract_cell_complex.abstract_cell_complex"
+      ],
+      "used_by": [
+        "cellular_categories.cw_complex_setting"
       ]
     },
     {
@@ -116,6 +121,9 @@
       "topic": "abstract_cell_complex",
       "uses": [
         "abstract_cell_complex.abstract_cell_complex"
+      ],
+      "used_by": [
+        "cellular_categories.cw_complex_setting"
       ]
     },
     {
@@ -1112,9 +1120,21 @@
       "topics": [
         "cellular_categories"
       ],
+      "lean_declarations": [
+        "SheafOnBuilding.AbstractCellComplex",
+        "SheafOnBuilding.IsLocallyFinite",
+        "SheafOnBuilding.GCellComplex",
+        "SheafOnBuilding.Subcomplex"
+      ],
       "topic": "cellular_categories",
-      "used_by": [
+      "uses": [
         "abstract_cell_complex.abstract_cell_complex",
+        "abstract_cell_complex.g_cell_complex",
+        "abstract_cell_complex.is_locally_finite",
+        "abstract_cell_complex.star_topology",
+        "abstract_cell_complex.subcomplex"
+      ],
+      "used_by": [
         "cellular_categories.category_jXk",
         "cellular_categories.equivariant_sheaves",
         "cellular_categories.orientation",
@@ -2816,10 +2836,6 @@
   ],
   "edges": [
     {
-      "from": "cellular_categories.cw_complex_setting",
-      "to": "abstract_cell_complex.abstract_cell_complex"
-    },
-    {
       "from": "abstract_cell_complex.abstract_cell_complex",
       "to": "abstract_cell_complex.g_cell_complex"
     },
@@ -3362,6 +3378,26 @@
     {
       "from": "cellular_categories.cw_complex_setting",
       "to": "cellular_categories.category_jXk"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "cellular_categories.cw_complex_setting"
+    },
+    {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "cellular_categories.cw_complex_setting"
+    },
+    {
+      "from": "abstract_cell_complex.is_locally_finite",
+      "to": "cellular_categories.cw_complex_setting"
+    },
+    {
+      "from": "abstract_cell_complex.star_topology",
+      "to": "cellular_categories.cw_complex_setting"
+    },
+    {
+      "from": "abstract_cell_complex.subcomplex",
+      "to": "cellular_categories.cw_complex_setting"
     },
     {
       "from": "cellular_categories.cw_complex_setting",
