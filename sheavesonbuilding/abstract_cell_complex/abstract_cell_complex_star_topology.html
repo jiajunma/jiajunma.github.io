@@ -290,15 +290,11 @@
       
         <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
       
-        <li><a href="../keywords/lean-abstraction.html">lean-abstraction</a></li>
-      
-        <li><a href="../keywords/lean-formalisation.html">lean-formalisation</a></li>
+        <li><a href="../keywords/local-finiteness.html">local-finiteness</a></li>
       
         <li><a href="../keywords/local-maps.html">local-maps</a></li>
       
         <li><a href="../keywords/localization.html">localization</a></li>
-      
-        <li><a href="../keywords/locally-finite.html">locally-finite</a></li>
       
         <li><a href="../keywords/main.html">main</a></li>
       
@@ -315,8 +311,6 @@
         <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
       
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
-      
-        <li><a href="../keywords/open-basis.html">open-basis</a></li>
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
@@ -337,6 +331,8 @@
         <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
       
         <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reconstruction.html">reconstruction</a></li>
       
         <li><a href="../keywords/reduction.html">reduction</a></li>
       
@@ -364,7 +360,7 @@
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
       
-        <li><a href="../keywords/star-topology.html">star-topology</a></li>
+        <li><a href="../keywords/star.html">star</a></li>
       
         <li><a href="../keywords/stevens.html">stevens</a></li>
       
@@ -436,7 +432,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a></li>
+        <li><a href="abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a></li>
         
       </ul>
     </div>
@@ -452,12 +448,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L97"><code>SheafOnBuilding.AbstractCellComplex.star</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L97"><code>SheafOnBuilding.AbstractCellComplex.star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -468,12 +464,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L101"><code>SheafOnBuilding.AbstractCellComplex.self_mem_star</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L101"><code>SheafOnBuilding.AbstractCellComplex.self_mem_star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -484,12 +480,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L124"><code>SheafOnBuilding.AbstractCellComplex.isOpen_star</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L124"><code>SheafOnBuilding.AbstractCellComplex.isOpen_star</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -500,7 +496,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -509,43 +505,47 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Alexandrov star topology</h1>
-<p>For each cell $E$, the <strong>open star</strong></p>
-<p>$$\mathrm{star}(E) := \{F \in [\![X]\!] : E \le F\}$$</p>
-<p>is the up-set at $E$ in the face poset.  The Alexandrov topology on
-$[\![X]\!]$ takes a set to be <em>open</em> iff it is up-closed under the face
-relation — equivalently, iff it is a union of stars.</p>
-<h2>Signatures</h2>
-<p>The star and its membership rewrite:</p>
+<p>Let $X$ be an [[abstract cell complex|node:abstract_cell_complex.abstract_cell_complex]].
+For each cell $E \in X$, the <strong>open star</strong> of $E$ is the up-set</p>
+<p>$$
+\mathrm{star}(E) := \{ F \in X : E \preceq F \}.
+$$</p>
+<p>The <strong>Alexandrov star topology</strong> on $X$ takes a subset $U \subseteq X$
+to be open iff $U$ is up-closed under $\preceq$; equivalently, iff $U$
+is a union of stars.  Under this topology:</p>
+<ul>
+<li>each $\mathrm{star}(E)$ is open;</li>
+<li>$E \in \mathrm{star}(E)$ for every $E$;</li>
+<li>$\mathrm{star}(E)$ is the <em>smallest</em> open set containing $E$;</li>
+<li>the family $\{\mathrm{star}(E) : E \in X\}$ is a basis for the
+  topology.</li>
+</ul>
+<p>The last two properties make the Alexandrov star topology the "right"
+topology for treating sheaves and cosheaves on the face poset as
+sheaves and cosheaves on a space.  For a presheaf $\mathscr F$ on $X$,
+the value $\mathscr F(\mathrm{star}(E))$ is the stalk at $E$; the
+sheaf condition on the star basis reduces to a functoriality
+statement on the poset.  This underpins the sheaf/cosheaf formalism
+of <a class="node-ref" data-node-id="cellular_categories.sheaves_cosheaves" href="../cellular_categories/cellular_categories_sheaves_cosheaves.html">Sheaves and cosheaves on X as functor categories</a>.</p>
+<h2>Lean formalization</h2>
 <p>```lean
 def AbstractCellComplex.star (E : X) : Set X := {F | E ≤ F}</p>
 <p>@[simp] theorem mem_star {E F : X} : F ∈ star E ↔ E ≤ F := Iff.rfl</p>
-<p>theorem self_mem_star (E : X) : E ∈ star E := le_refl E
-```</p>
-<p>The topological-space instance is <code>scoped</code>, i.e. only active inside
-<code>open AbstractCellComplex</code>, so it does not silently clash with any
-other topology one might place on <code>X</code>:</p>
-<p><code>lean
-scoped instance : TopologicalSpace X where
+<p>theorem self_mem_star (E : X) : E ∈ star E := le_refl E</p>
+<p>scoped instance : TopologicalSpace X where
   IsOpen U := ∀ ⦃E : X⦄, E ∈ U → star E ⊆ U
-  isOpen_univ  := ...
-  isOpen_inter := ...
-  isOpen_sUnion := ...</code></p>
-<p>Each <code>star E</code> is open in this topology:</p>
-<p><code>lean
-theorem isOpen_star (E : X) : IsOpen (star E) :=
-  fun _ hE _ hF =&gt; le_trans hE hF</code></p>
-<h2>Why star topology</h2>
-<p>The Alexandrov star topology is the "right" topology for making
-sheaves/cosheaves on a cell complex behave like sheaves/cosheaves on a
-space:</p>
-<ul>
-<li>stars form an <strong>open basis</strong>;</li>
-<li>$\mathrm{star}(E)$ is the <strong>smallest open</strong> containing $E$;</li>
-<li>the value of a sheaf on $\mathrm{star}(E)$ is exactly its stalk at
-  $E$ — the <em>Alexandrov-star sheaf condition</em>.</li>
-</ul>
-<p>See <a class="node-ref" data-node-id="cellular_categories.sheaves_cosheaves" href="../cellular_categories/cellular_categories_sheaves_cosheaves.html">Sheaves and cosheaves on X as functor categories</a> for how this
-underpins the definition of <code>Sheaf</code> and <code>Cosheaf</code> on $[\![X]\!]$.</p>
+  isOpen_univ  := fun _ _ F _ =&gt; Set.mem_univ F
+  isOpen_inter := fun _ _ hs ht _ hE _ hEF =&gt; ⟨hs hE.1 hEF, ht hE.2 hEF⟩
+  isOpen_sUnion := fun _ hS _ hE _ hEF =&gt;
+    let ⟨t, ht, hEt⟩ := hE
+    ⟨t, ht, hS t ht hEt hEF⟩</p>
+<p>theorem isOpen_star (E : X) : IsOpen (star E) :=
+  fun _ hE _ hF =&gt; le_trans hE hF
+```</p>
+<p>The topological-space instance is declared <code>scoped</code> so it activates
+only under <code>open AbstractCellComplex</code>.  This prevents silent clashes
+when a downstream file wants to give $X$ a different topology (e.g.
+the geometric realisation of a CW complex).</p>
     
   </div>
 
@@ -557,7 +557,7 @@ underpins the definition of <code>Sheaf</code> and <code>Cosheaf</code> on $[\![
 
   
   <footer class="tags">
-    <span class="tag">alexandrov</span><span class="tag">star-topology</span><span class="tag">open-basis</span>
+    <span class="tag">alexandrov</span><span class="tag">star</span>
   </footer>
   
 </article>

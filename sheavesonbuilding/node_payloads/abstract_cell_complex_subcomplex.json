@@ -1,6 +1,6 @@
 {
   "id": "abstract_cell_complex.subcomplex",
-  "title": "Subcomplex — face-closed subset of cells",
+  "title": "Subcomplex of an abstract cell complex",
   "kind": "definition",
   "status": "staged",
   "href": "abstract_cell_complex/abstract_cell_complex_subcomplex.html",
@@ -8,12 +8,12 @@
   "topics": [
     "abstract_cell_complex"
   ],
-  "body_html": "<h1><code>Subcomplex</code></h1>\n<p>A <strong>cellular subcomplex</strong> is a face-closed subset of the cells of $X$.\nModelled after mathlib's <code>Subgroup</code> / <code>Submonoid</code> idiom.</p>\n<h2>Signature</h2>\n<p><code>lean\nstructure Subcomplex (X : Type*) [PartialOrder X] where\n  carrier      : Set X\n  face_closed' : ∀ {E F : X}, E ≤ F → F ∈ carrier → E ∈ carrier</code></p>\n<ul>\n<li><code>carrier</code>: the underlying set of cells in $S \\subseteq [\\![X]\\!]$;</li>\n<li><code>face_closed'</code>: closed under taking faces — if a cell is in $S$, so\n  is every cell below it in the face poset.</li>\n</ul>\n<h2><code>SetLike</code></h2>\n<p><code>lean\ninstance : SetLike (Subcomplex X) X where\n  coe S := S.carrier\n  coe_injective' := fun S T h =&gt; by cases S; cases T; congr</code></p>\n<p>This gives $E \\in S$ notation and coercion to <code>Set X</code>, matching how\n<code>Subgroup G</code> is used in mathlib.</p>\n<h2>User-facing <code>face_closed</code></h2>\n<p>The primed field is the raw structure axiom.  A user-facing form using\n$\\in$ is exposed separately:</p>\n<p><code>lean\ntheorem face_closed (S : Subcomplex X) {E F : X} (hEF : E ≤ F)\n    (hF : F ∈ S) : E ∈ S :=\n  S.face_closed' hEF hF</code></p>\n<h2>Downstream uses</h2>\n<ul>\n<li>Setwise stabiliser\n  <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.quasi_fundamental_domain\" href=\"../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html\">Quasi-fundamental domain</a> takes a\n  <code>Subcomplex</code> as input.</li>\n<li>The image of the induction embedding\n  <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"../equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a> is packaged as a\n  <code>Subcomplex.ofIota d</code> on the induced space.</li>\n<li>Face-closedness of the QFD subcomplex is crucial for the reverse\n  direction <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induction_data_reverse\" href=\"../equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html\">Reverse-direction induction: reconstructing X as G ×^P S from a QFD</a>.</li>\n</ul>",
+  "body_html": "<h1>Subcomplex</h1>\n<p>Let $X$ be an [[abstract cell complex|node:abstract_cell_complex.abstract_cell_complex]].\nA <strong>subcomplex</strong> of $X$ is a subset $S \\subseteq X$ that is\n<strong>face-closed</strong>: if $F \\in S$ and $E \\preceq F$ then $E \\in S$.</p>\n<p>That is, whenever $S$ contains a cell it contains every one of that\ncell's faces.  Equivalently, $S$ is a down-set of the face poset $X$.</p>\n<p>If $X$ carries a cellular $G$-action\n(<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.g_cell_complex\" href=\"abstract_cell_complex_g_cell_complex.html\">Cellular G-action on an abstract cell complex</a>), the <strong>setwise\nstabiliser</strong> of a subcomplex $S$ is</p>\n<p>$$\n\\Stab_G(S) := \\{ g \\in G : g \\cdot S = S \\}\n= \\{ g \\in G : \\forall E \\in X, \\ g \\cdot E \\in S \\iff E \\in S \\}.\n$$</p>\n<p>The iff form emphasises that $g \\in \\Stab_G(S)$ requires both\n$g \\cdot S \\subseteq S$ and $g^{-1} \\cdot S \\subseteq S$; either\ninclusion alone is not enough for a subgroup structure.</p>\n<h2>Downstream uses</h2>\n<ul>\n<li>The setwise stabiliser is the coarsest choice of \"distinguished\n  subgroup\" in a quasi-fundamental domain\n  <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.quasi_fundamental_domain\" href=\"../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html\">Quasi-fundamental domain</a>; sharper QFDs\n  use a strictly smaller subgroup.</li>\n<li>The image of the canonical induction embedding is a subcomplex —\n  <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induced_cw_structure\" href=\"../equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html\">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a>.</li>\n<li>Face-closedness of the QFD subcomplex is what lets the reverse\n  induction construction lift ambient face relations back to $S$;\n  see <a class=\"node-ref\" data-node-id=\"equivariant_sheaves.induction_data_reverse\" href=\"../equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html\">Recovering the induction data from a quasi-fundamental domain</a>.</li>\n</ul>\n<h2>Lean formalization</h2>\n<p>```lean\nstructure Subcomplex (X : Type*) [PartialOrder X] where\n  carrier      : Set X\n  face_closed' : ∀ {E F : X}, E ≤ F → F ∈ carrier → E ∈ carrier</p>\n<p>instance : SetLike (Subcomplex X) X where\n  coe S := S.carrier\n  coe_injective' := fun S T h =&gt; by cases S; cases T; congr</p>\n<p>theorem face_closed (S : Subcomplex X) {E F : X} (hEF : E ≤ F)\n    (hF : F ∈ S) : E ∈ S := S.face_closed' hEF hF\n```</p>\n<p>The <code>Subcomplex</code> type is modelled after mathlib's <code>Subgroup</code> /\n<code>Submonoid</code> idiom: a <code>carrier : Set X</code> field plus a <code>SetLike</code>\ninstance gives the usual $E \\in S$ notation and coercion to <code>Set X</code>.\nThe primed field <code>face_closed'</code> is the raw structure axiom; the\nuser-facing lemma <code>face_closed</code> restates it in terms of $\\in$.</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "abstract_cell_complex.abstract_cell_complex",
-      "title": "AbstractCellComplex — dimension function on a face poset",
+      "title": "Abstract cell complex",
       "href": "abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html"
     }
   ],
@@ -28,9 +28,9 @@
       "signature": "structure Subcomplex (X : Type*) [PartialOrder X] where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "b594c1d86b58c2aa7146a4f8f7490709ead7c0a7",
-      "short_revision": "b594c1d",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L157",
+      "revision": "998e1169417259d1ac3b0521e5497f0bb3e2243c",
+      "short_revision": "998e116",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L157",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -46,9 +46,9 @@
       "signature": "theorem face_closed (S : Subcomplex X) {E F : X} (hEF : E ≤ F)\n    (hF : F ∈ S) : E ∈ S",
       "docstring": "The user-facing form of the face-closed axiom, using `∈`.",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "b594c1d86b58c2aa7146a4f8f7490709ead7c0a7",
-      "short_revision": "b594c1d",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L172",
+      "revision": "998e1169417259d1ac3b0521e5497f0bb3e2243c",
+      "short_revision": "998e116",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L172",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -61,9 +61,9 @@
       "name": "SheafOnBuilding.GCellComplex",
       "display_name": "SheafOnBuilding.GCellComplex",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "b594c1d86b58c2aa7146a4f8f7490709ead7c0a7",
-      "short_revision": "b594c1d",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L1",
+      "revision": "998e1169417259d1ac3b0521e5497f0bb3e2243c",
+      "short_revision": "998e116",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L1",
       "status": "resolved",
       "reason": null
     }

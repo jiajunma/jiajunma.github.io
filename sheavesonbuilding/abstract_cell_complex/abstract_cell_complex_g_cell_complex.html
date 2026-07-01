@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GCellComplex — cellular G-action compatibility — Sheaves on Buildings — Knowledge Base</title>
+  <title>Cellular G-action on an abstract cell complex — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -290,15 +290,11 @@
       
         <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
       
-        <li><a href="../keywords/lean-abstraction.html">lean-abstraction</a></li>
-      
-        <li><a href="../keywords/lean-formalisation.html">lean-formalisation</a></li>
+        <li><a href="../keywords/local-finiteness.html">local-finiteness</a></li>
       
         <li><a href="../keywords/local-maps.html">local-maps</a></li>
       
         <li><a href="../keywords/localization.html">localization</a></li>
-      
-        <li><a href="../keywords/locally-finite.html">locally-finite</a></li>
       
         <li><a href="../keywords/main.html">main</a></li>
       
@@ -315,8 +311,6 @@
         <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
       
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
-      
-        <li><a href="../keywords/open-basis.html">open-basis</a></li>
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
@@ -337,6 +331,8 @@
         <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
       
         <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reconstruction.html">reconstruction</a></li>
       
         <li><a href="../keywords/reduction.html">reduction</a></li>
       
@@ -364,7 +360,7 @@
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
       
-        <li><a href="../keywords/star-topology.html">star-topology</a></li>
+        <li><a href="../keywords/star.html">star</a></li>
       
         <li><a href="../keywords/stevens.html">stevens</a></li>
       
@@ -413,7 +409,7 @@
 <article class="definition_thmwrapper theorem-style-definition node-page" id="node-abstract_cell_complex-2e-g_cell_complex">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">GCellComplex — cellular G-action compatibility</span>
+    <span class="definition_thmtitle thm-title">Cellular G-action on an abstract cell complex</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-definition">definition</span>
@@ -436,7 +432,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a></li>
+        <li><a href="abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a></li>
         
       </ul>
     </div>
@@ -452,12 +448,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L139"><code>SheafOnBuilding.GCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -469,12 +465,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L151"><code>SheafOnBuilding.Fix</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L151"><code>SheafOnBuilding.Fix</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -486,7 +482,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -494,42 +490,49 @@
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1><code>GCellComplex</code></h1>
-<p>A <code>Prop</code> class asserting that a <code>MulAction G X</code> on the face poset $X$
-is <strong>cellular</strong> — i.e. compatible with both the face relation and the
-dimension function.</p>
-<h2>Signature</h2>
+    <h1>Cellular $G$-action on an abstract cell complex</h1>
+<p>Let $X$ be an [[abstract cell complex|node:abstract_cell_complex.abstract_cell_complex]]
+and let $G$ be a group acting on $X$.  The action is <strong>cellular</strong> if
+it preserves the face relation and the dimension function:</p>
+<ul>
+<li>for all $g \in G$ and $E \preceq F$ in $X$, $g \cdot E \preceq g \cdot F$;</li>
+<li>for all $g \in G$ and $E \in X$, $\dim(g \cdot E) = \dim E$.</li>
+</ul>
+<p>Equivalently, $G$ permutes the cells and preserves the entire graded
+face poset.  This is the combinatorial content of "$G$ acts by
+cellular homeomorphisms" on the geometric realisation.</p>
+<p>For a cell $E \in X$, the <strong>fixator</strong> of $E$ in $G$ is</p>
+<p>$$
+\Fix_G(E) := \{ g \in G : g \cdot E = E \}.
+$$</p>
+<p>The paper distinguishes $\Fix_G$ (pointwise stabiliser in the
+topological sense) from the setwise stabiliser $\Stab_G$; at the
+combinatorial level these coincide with the setwise stabiliser of the
+cell.  The distinction re-enters when one goes back to a geometric
+realisation: see the design remark in
+<a class="node-ref" data-node-id="equivariant_sheaves.induction_data_reverse" href="../equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a>.</p>
+<h2>Downstream</h2>
+<p>The cellular-action structure is the standing hypothesis of the QFD
+and induction machinery: <a class="node-ref" data-node-id="equivariant_sheaves.quasi_fundamental_domain" href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a>,
+<a class="node-ref" data-node-id="equivariant_sheaves.qfd_orbit_lemma" href="../equivariant_sheaves/equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a>,
+[[node:equivariant_sheaves.induction_GxP_X]] all take it as input.</p>
+<h2>Lean formalization</h2>
 <p><code>lean
 class GCellComplex (G : Type*) [Group G] (X : Type*)
     [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where
   smul_le  : ∀ (g : G) {E F : X}, E ≤ F → (g • E) ≤ (g • F)
   smul_dim : ∀ (g : G) (E : X),
     AbstractCellComplex.dim (g • E) = AbstractCellComplex.dim E</code></p>
-<ul>
-<li><code>smul_le</code>: the action preserves the face relation
-  $E \preceq F \Rightarrow g \cdot E \preceq g \cdot F$.</li>
-<li><code>smul_dim</code>: the action preserves dimension
-  $\dim(g \cdot E) = \dim E$.</li>
-</ul>
-<p>Combined, these two axioms say $G$ permutes the cells while preserving
-the face-and-dimension structure — the abstract analogue of "$G$ acts
-by cellular homeomorphisms."</p>
-<h2>Design choice: layered typeclasses, no bundling</h2>
-<p>The cell complex (<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a>)
-and the <code>MulAction</code> are <em>not</em> bundled into <code>GCellComplex</code>; both are
-separate typeclass inputs.  <code>GCellComplex G X</code> is purely the
-compatibility requirement on top.  This lets a downstream file speak
-of "an abstract cell complex" without mentioning $G$, and later add
-"...on which $G$ acts cellularly" as a separate assumption.</p>
-<h2><code>Fix</code> helper</h2>
-<p>Under the same module, the fixator of a cell is exposed as</p>
+<p><code>GCellComplex G X</code> is a pure <code>Prop</code> compatibility class stacked on
+top of <code>[MulAction G X]</code> and <code>[AbstractCellComplex X]</code>.  Bundling the
+group action into the class is deliberately avoided: the cell complex
+data (dimension, face relation) and the action are independent inputs.</p>
+<p>The cell-fixator is exposed separately:</p>
 <p><code>lean
 def Fix {G : Type*} [Group G] {X : Type*} [MulAction G X]
     (E : X) (g : G) : Prop := g • E = E</code></p>
-<p>— a plain predicate on $G$, no cell-complex structure needed.  This is
-the workhorse for the QFD / induction axioms P1, P2 (see
-<a class="node-ref" data-node-id="equivariant_sheaves.quasi_fundamental_domain" href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a> and
-[[node:equivariant_sheaves.induction_GxP_X]]).</p>
+<p>This is a plain predicate on $G$ requiring only <code>[MulAction G X]</code>; it
+does not need the cellularity typeclass.</p>
     
   </div>
 
@@ -541,7 +544,7 @@ the workhorse for the QFD / induction axioms P1, P2 (see
 
   
   <footer class="tags">
-    <span class="tag">g-action</span><span class="tag">cellular-action</span><span class="tag">lean-abstraction</span>
+    <span class="tag">g-action</span><span class="tag">cellular-action</span>
   </footer>
   
 </article>

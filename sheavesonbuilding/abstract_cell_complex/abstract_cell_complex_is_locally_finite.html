@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IsLocallyFinite — finite faces and finite cofaces — Sheaves on Buildings — Knowledge Base</title>
+  <title>Locally finite abstract cell complex — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -290,15 +290,11 @@
       
         <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
       
-        <li><a href="../keywords/lean-abstraction.html">lean-abstraction</a></li>
-      
-        <li><a href="../keywords/lean-formalisation.html">lean-formalisation</a></li>
+        <li><a href="../keywords/local-finiteness.html">local-finiteness</a></li>
       
         <li><a href="../keywords/local-maps.html">local-maps</a></li>
       
         <li><a href="../keywords/localization.html">localization</a></li>
-      
-        <li><a href="../keywords/locally-finite.html">locally-finite</a></li>
       
         <li><a href="../keywords/main.html">main</a></li>
       
@@ -315,8 +311,6 @@
         <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
       
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
-      
-        <li><a href="../keywords/open-basis.html">open-basis</a></li>
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
@@ -337,6 +331,8 @@
         <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
       
         <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reconstruction.html">reconstruction</a></li>
       
         <li><a href="../keywords/reduction.html">reduction</a></li>
       
@@ -364,7 +360,7 @@
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
       
-        <li><a href="../keywords/star-topology.html">star-topology</a></li>
+        <li><a href="../keywords/star.html">star</a></li>
       
         <li><a href="../keywords/stevens.html">stevens</a></li>
       
@@ -413,7 +409,7 @@
 <article class="definition_thmwrapper theorem-style-definition node-page" id="node-abstract_cell_complex-2e-is_locally_finite">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">IsLocallyFinite — finite faces and finite cofaces</span>
+    <span class="definition_thmtitle thm-title">Locally finite abstract cell complex</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-definition">definition</span>
@@ -436,7 +432,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a></li>
+        <li><a href="abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a></li>
         
       </ul>
     </div>
@@ -452,12 +448,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -468,7 +464,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -476,36 +472,45 @@
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1><code>IsLocallyFinite</code></h1>
-<p>A <code>Prop</code> mixin, independent of the
-<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="abstract_cell_complex_abstract_cell_complex.html">AbstractCellComplex — dimension function on a face poset</a> data, asserting
-that each cell has only finitely many faces <em>and</em> lies in only finitely
-many cells' closures:</p>
-<h2>Signature</h2>
+    <h1>Locally finite abstract cell complex</h1>
+<p>An [[abstract cell complex|node:abstract_cell_complex.abstract_cell_complex]]
+$X$ is <strong>locally finite</strong> when both of the following hold:</p>
+<ul>
+<li><strong>Finite faces</strong>: for every $E \in X$, the down-set
+  $\{F \in X : F \preceq E\}$ is finite.</li>
+<li><strong>Finite cofaces</strong>: for every $E \in X$, the up-set
+  $\{F \in X : E \preceq F\}$ is finite.</li>
+</ul>
+<h2>Two conditions, one class</h2>
+<p>At the level of an abstract poset with a dimension function the
+finite-face and finite-coface conditions are logically independent —
+neither implies the other without further structure.</p>
+<p>They do bundle for a regular CW complex: on a locally finite regular
+CW complex "each point has a neighbourhood meeting only finitely many
+cells" delivers both simultaneously.  Following this geometric
+convention we bundle them into a single condition, so downstream
+statements needing either can quote a single hypothesis rather than
+picking apart the two directions.</p>
+<p>Finiteness is genuinely additional data on top of
+<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a>: many results
+(the Alexandrov star topology
+<a class="node-ref" data-node-id="abstract_cell_complex.star_topology" href="abstract_cell_complex_star_topology.html">Alexandrov star topology on the face poset</a>, the order-embedding
+property of the induction map $\iota$
+<a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="../equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27; (Prop 2.8)</a>) use only the poset
+and dimension.  Only when a summation index or a <code>Finset</code> argument is
+unavoidable — most prominently the boundary of the cellular chain
+complex ([[node:representations.chain_complex_C_dot]]) — does local
+finiteness enter.</p>
+<h2>Lean formalization</h2>
 <p><code>lean
 class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where
   finite_faces   : ∀ E : X, Set.Finite {F : X | F ≤ E}
   finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}</code></p>
-<ul>
-<li><code>finite_faces</code>: the down-set at each cell $E$ is finite (closure of
-  $E$ meets finitely many cells).</li>
-<li><code>finite_cofaces</code>: the up-set at each cell $E$ is finite ($E$ lies in
-  the closure of finitely many cells).</li>
-</ul>
-<h2>Why both</h2>
-<p>Both conditions together formalise "each point has a neighbourhood
-meeting only finitely many cells" for a regular CW complex.  In the
-abstract poset setting, the two are independent — neither implies the
-other without further structure — but for a regular CW complex the
-geometric "locally finite" assumption delivers both at once.  Bundling
-them in a single <code>Prop</code> class matches the CW-intuition and keeps
-downstream lemmas single-parameter.</p>
-<h2>Design choice: <code>Prop</code> mixin, not part of <code>AbstractCellComplex</code></h2>
-<p>Finiteness is split out because the abstract poset / dimension
-structure is meaningful without it (and many lemmas — e.g. the
-star-topology basis, <code>iota</code> order-embedding — do not need finiteness).
-Downstream files pick up the finiteness typeclass only when the sum
-<code>∑_E V_E</code> or a <code>Finset</code> argument is unavoidable.</p>
+<p><code>IsLocallyFinite</code> is a <code>Prop</code> mixin, kept separate from
+<code>AbstractCellComplex</code> so lemmas that need only the poset and dimension
+do not depend on finiteness.  It takes only <code>[PartialOrder X]</code> (not
+<code>[AbstractCellComplex X]</code>) so it can be combined with any
+face-relation structure.</p>
     
   </div>
 
@@ -517,7 +522,7 @@ Downstream files pick up the finiteness typeclass only when the sum
 
   
   <footer class="tags">
-    <span class="tag">cw-complex</span><span class="tag">locally-finite</span><span class="tag">lean-abstraction</span>
+    <span class="tag">cell-complex</span><span class="tag">local-finiteness</span>
   </footer>
   
 </article>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AbstractCellComplex — dimension function on a face poset — Sheaves on Buildings — Knowledge Base</title>
+  <title>Abstract cell complex — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -290,15 +290,11 @@
       
         <li><a href="../keywords/lanard-switch.html">lanard-switch</a></li>
       
-        <li><a href="../keywords/lean-abstraction.html">lean-abstraction</a></li>
-      
-        <li><a href="../keywords/lean-formalisation.html">lean-formalisation</a></li>
+        <li><a href="../keywords/local-finiteness.html">local-finiteness</a></li>
       
         <li><a href="../keywords/local-maps.html">local-maps</a></li>
       
         <li><a href="../keywords/localization.html">localization</a></li>
-      
-        <li><a href="../keywords/locally-finite.html">locally-finite</a></li>
       
         <li><a href="../keywords/main.html">main</a></li>
       
@@ -315,8 +311,6 @@
         <li><a href="../keywords/mock-exponential.html">mock-exponential</a></li>
       
         <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
-      
-        <li><a href="../keywords/open-basis.html">open-basis</a></li>
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
@@ -337,6 +331,8 @@
         <li><a href="../keywords/quaternionic.html">quaternionic</a></li>
       
         <li><a href="../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../keywords/reconstruction.html">reconstruction</a></li>
       
         <li><a href="../keywords/reduction.html">reduction</a></li>
       
@@ -364,7 +360,7 @@
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
       
-        <li><a href="../keywords/star-topology.html">star-topology</a></li>
+        <li><a href="../keywords/star.html">star</a></li>
       
         <li><a href="../keywords/stevens.html">stevens</a></li>
       
@@ -413,7 +409,7 @@
 <article class="definition_thmwrapper theorem-style-definition node-page" id="node-abstract_cell_complex-2e-abstract_cell_complex">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">AbstractCellComplex — dimension function on a face poset</span>
+    <span class="definition_thmtitle thm-title">Abstract cell complex</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-definition">definition</span>
@@ -452,12 +448,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L58"><code>SheafOnBuilding.AbstractCellComplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ b594c1d, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 998e116, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -468,7 +464,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/b594c1d86b58c2aa7146a4f8f7490709ead7c0a7/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/998e1169417259d1ac3b0521e5497f0bb3e2243c/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -476,49 +472,54 @@
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1><code>AbstractCellComplex</code></h1>
-<p>The paper's §2.1 assumes $X$ is a <em>locally finite regular CW complex</em>
-with a cellular $G$-action — see
-<a class="node-ref" data-node-id="cellular_categories.cw_complex_setting" href="../cellular_categories/cellular_categories_cw_complex_setting.html">Locally finite regular CW complex with cellular G-action</a> for the topological
-statement.  The Lean formalisation extracts the purely
-<strong>combinatorial</strong> content that all of §§2–4 actually uses:</p>
-<blockquote>
-<p>the face poset $[\![X]\!]$ plus a dimension function $\dim$ with
-matching monotonicity axioms.</p>
-</blockquote>
-<h2>Signature</h2>
+    <h1>Abstract cell complex</h1>
+<p>An <strong>abstract cell complex</strong> is a partially ordered set $(X, \preceq)$
+together with a <strong>dimension function</strong> $\dim : X \to \mathbb{N}$
+satisfying the following two axioms:</p>
+<ul>
+<li><strong>Strict monotonicity</strong>: for $E, F \in X$, if $E \preceq F$ and
+  $E \neq F$, then $\dim E &lt; \dim F$.</li>
+<li><strong>Face existence</strong>: every $F \in X$ with $\dim F &gt; 0$ has a face of
+  dimension $\dim F - 1$; that is, there exists $E \in X$ with
+  $E \prec F$ and $\dim E + 1 = \dim F$.</li>
+</ul>
+<p>The elements of $X$ are called <strong>cells</strong> and $\preceq$ is the <strong>face
+relation</strong>.  For $E \preceq F$ we say $E$ is a <em>face</em> of $F$; when the
+containment is strict we write $E \prec F$.</p>
+<p>The combinatorial data $(X, \preceq, \dim)$ is a direct abstraction of
+the face poset of a regular CW complex —
+<a class="node-ref" data-node-id="cellular_categories.cw_complex_setting" href="../cellular_categories/cellular_categories_cw_complex_setting.html">Locally finite regular CW complex with cellular G-action</a> — with all topology
+discarded.  Strict monotonicity is the standard "dimension separates
+faces" property; face existence rules out pathological posets (e.g. a
+"2-cell" attached directly to a vertex with no intermediate edge),
+which are never face posets of regular CW complexes.</p>
+<h2>Relation to §§2–4</h2>
+<p>Every downstream construction — sheaves and cosheaves
+(<a class="node-ref" data-node-id="cellular_categories.sheaves_cosheaves" href="../cellular_categories/cellular_categories_sheaves_cosheaves.html">Sheaves and cosheaves on X as functor categories</a>), the Alexandrov star
+topology (<a class="node-ref" data-node-id="abstract_cell_complex.star_topology" href="abstract_cell_complex_star_topology.html">Alexandrov star topology on the face poset</a>), the QFD and
+induction machinery (<a class="node-ref" data-node-id="equivariant_sheaves.quasi_fundamental_domain" href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a>,
+[[node:equivariant_sheaves.induction_GxP_X]]), and the cellular chain
+complex ([[node:representations.chain_complex_C_dot]]) — is stated
+against this poset-with-dimension structure and does not use the
+topological realisation.</p>
+<p>Finiteness of the face poset (finitely many faces, finitely many
+cofaces of each cell) is a <em>separate</em> condition, recorded as
+<a class="node-ref" data-node-id="abstract_cell_complex.is_locally_finite" href="abstract_cell_complex_is_locally_finite.html">Locally finite abstract cell complex</a>; likewise
+compatibility with a group action is a separate layer
+<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>.</p>
+<h2>Lean formalization</h2>
 <p><code>lean
 class AbstractCellComplex (X : Type*) [PartialOrder X] where
   dim : X → ℕ
   dim_lt : ∀ {E F : X}, E ≤ F → E ≠ F → dim E &lt; dim F
   exists_face_dim_pred :
     ∀ {F : X}, 0 &lt; dim F → ∃ E : X, E &lt; F ∧ dim E + 1 = dim F</code></p>
-<p>Adds to <code>[PartialOrder X]</code>:</p>
-<ul>
-<li>a <strong>dimension function</strong> <code>dim : X → ℕ</code>;</li>
-<li><strong>strict monotonicity</strong> (<code>dim_lt</code>): a <em>proper</em> face has strictly
-  smaller dimension;</li>
-<li><strong>face existence</strong> (<code>exists_face_dim_pred</code>): every cell of positive
-  dimension has a face of dimension one less.  Without this axiom one
-  could have a "2-cell" attached directly to a vertex with no edges in
-  between, which is not the face poset of any regular CW complex.</li>
-</ul>
-<h2>Design choice: data, not <code>Prop</code></h2>
-<p><code>AbstractCellComplex</code> is a <code>class</code> (data), not a <code>Prop</code> — the
-dimension function <code>dim</code> is genuine data that has to be supplied.
-Statements that are pure properties of <code>dim</code> (like "each cell has
-finitely many faces") live in the separate
-<a class="node-ref" data-node-id="abstract_cell_complex.is_locally_finite" href="abstract_cell_complex_is_locally_finite.html">IsLocallyFinite — finite faces and finite cofaces</a> <code>Prop</code> mixin.</p>
-<h2>Downstream</h2>
-<ul>
-<li><a class="node-ref" data-node-id="abstract_cell_complex.is_locally_finite" href="abstract_cell_complex_is_locally_finite.html">IsLocallyFinite — finite faces and finite cofaces</a> — the finiteness
-  Prop mixin.</li>
-<li><a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="abstract_cell_complex_g_cell_complex.html">GCellComplex — cellular G-action compatibility</a> — the cellular
-  $G$-action Prop class.</li>
-<li><a class="node-ref" data-node-id="abstract_cell_complex.subcomplex" href="abstract_cell_complex_subcomplex.html">Subcomplex — face-closed subset of cells</a> — face-closed subsets.</li>
-<li><a class="node-ref" data-node-id="abstract_cell_complex.star_topology" href="abstract_cell_complex_star_topology.html">Alexandrov star topology on the face poset</a> — the Alexandrov star
-  topology on the face poset.</li>
-</ul>
+<p><code>AbstractCellComplex</code> is a data-carrying <code>class</code>, not a <code>Prop</code> — the
+dimension function itself is genuine data and downstream files depend
+on it definitionally.  The two axioms are the two bullets above.</p>
+<p>Finiteness and $G$-equivariance are deliberately <em>not</em> fields of this
+class; they are separate typeclass layers so that lemmas requiring
+only the poset and dimension do not carry irrelevant hypotheses.</p>
     
   </div>
 
@@ -529,13 +530,13 @@ finitely many faces") live in the separate
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="abstract_cell_complex_g_cell_complex.html">GCellComplex — cellular G-action compatibility</a></li>
+      <li><a href="abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a></li>
       
-      <li><a href="abstract_cell_complex_is_locally_finite.html">IsLocallyFinite — finite faces and finite cofaces</a></li>
+      <li><a href="abstract_cell_complex_is_locally_finite.html">Locally finite abstract cell complex</a></li>
       
       <li><a href="abstract_cell_complex_star_topology.html">Alexandrov star topology on the face poset</a></li>
       
-      <li><a href="abstract_cell_complex_subcomplex.html">Subcomplex — face-closed subset of cells</a></li>
+      <li><a href="abstract_cell_complex_subcomplex.html">Subcomplex of an abstract cell complex</a></li>
       
     </ul>
   </section>
@@ -545,7 +546,7 @@ finitely many faces") live in the separate
 
   
   <footer class="tags">
-    <span class="tag">cw-complex</span><span class="tag">cell-complex</span><span class="tag">dimension</span><span class="tag">lean-abstraction</span>
+    <span class="tag">cell-complex</span><span class="tag">dimension</span>
   </footer>
   
 </article>
