@@ -5,21 +5,21 @@
     "href": "equivariant_sheaves/index.html",
     "parent": null,
     "node_count": 4,
-    "descendant_node_count": 16
+    "descendant_node_count": 17
   },
   "counts": {
     "internal_nodes": 4,
-    "inlined_nodes": 12,
-    "descendant_nodes": 16,
+    "inlined_nodes": 13,
+    "descendant_nodes": 17,
     "child_topics": 0,
     "inlined_child_topics": 2,
-    "non_proof_plan_nodes": 16,
+    "non_proof_plan_nodes": 17,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 23,
-    "visible_nodes_with_selected_proof_plans": 23
+    "visible_nodes_without_proof_plans": 24,
+    "visible_nodes_with_selected_proof_plans": 24
   },
   "nodes": [
     {
@@ -71,6 +71,14 @@
       "payload": "node_payloads/equivariant_sheaves_induction_GxP_X.json"
     },
     {
+      "id": "equivariant_sheaves.induction_by_stages",
+      "title": "Induction by stages: G ×^P̃(G' ×^P' X'') ≅ G ×^P X''",
+      "kind": "proposition",
+      "status": "admitted",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_by_stages.html",
+      "payload": "node_payloads/equivariant_sheaves_induction_by_stages.json"
+    },
+    {
       "id": "equivariant_sheaves.induction_data_reverse",
       "title": "Recovering the induction data from a quasi-fundamental domain",
       "kind": "proposition",
@@ -80,7 +88,7 @@
     },
     {
       "id": "equivariant_sheaves.induction_universal_property",
-      "title": "Universal property of G ×^P X' and induction by stages",
+      "title": "Universal property of G ×^P X'",
       "kind": "proposition",
       "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_universal_property.html",
@@ -229,6 +237,16 @@
     },
     {
       "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_by_stages",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_universal_property",
+      "to": "equivariant_sheaves.induction_by_stages",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
       "to": "equivariant_sheaves.induction_data_reverse",
       "kind": "uses"
     },
@@ -240,11 +258,6 @@
     {
       "from": "equivariant_sheaves.quasi_fundamental_domain",
       "to": "equivariant_sheaves.induction_data_reverse",
-      "kind": "uses"
-    },
-    {
-      "from": "equivariant_sheaves.induced_cw_structure",
-      "to": "equivariant_sheaves.induction_universal_property",
       "kind": "uses"
     },
     {
@@ -373,7 +386,7 @@
     },
     {
       "from": "topic:building",
-      "to": "equivariant_sheaves.induction_universal_property",
+      "to": "equivariant_sheaves.induction_by_stages",
       "kind": "boundary_dependency",
       "topic": "building",
       "count": 1
@@ -576,7 +589,7 @@
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
-      "count": 9
+      "count": 10
     },
     {
       "id": "invariants",
@@ -615,6 +628,12 @@
       "count": 1
     },
     {
+      "id": "representability",
+      "title": "representability",
+      "href": "keywords/representability.html",
+      "count": 1
+    },
+    {
       "id": "representation",
       "title": "representation",
       "href": "keywords/representation.html",
@@ -625,6 +644,12 @@
       "title": "stabilizer",
       "href": "keywords/stabilizer.html",
       "count": 2
+    },
+    {
+      "id": "stages",
+      "title": "stages",
+      "href": "keywords/stages.html",
+      "count": 1
     },
     {
       "id": "stalk",

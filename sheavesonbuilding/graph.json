@@ -1037,7 +1037,7 @@
         "coefficient_systems.chain_complex_phi",
         "coefficient_systems.semisimple_character_T_axioms",
         "depth_zero_reduction.O_hypothesis",
-        "equivariant_sheaves.induction_universal_property"
+        "equivariant_sheaves.induction_by_stages"
       ]
     },
     {
@@ -2328,8 +2328,7 @@
         "building.apartment_intersection",
         "building.apartments_in_bsigma",
         "building.connected_components",
-        "building.connected_components.plan.classification",
-        "equivariant_sheaves.induction_universal_property"
+        "building.connected_components.plan.classification"
       ]
     },
     {
@@ -2461,11 +2460,34 @@
         "equivariant_sheaves.induced_poset_structure",
         "equivariant_sheaves.induced_poset_well_definedness",
         "equivariant_sheaves.induced_qfd_property",
+        "equivariant_sheaves.induction_by_stages",
         "equivariant_sheaves.induction_data_reverse",
         "equivariant_sheaves.induction_universal_property",
         "equivariant_sheaves.iota_cellular_embedding",
         "equivariant_sheaves.section4_equivalence",
         "equivariant_sheaves.stabilizer_formula_iota"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.induction_by_stages",
+      "title": "Induction by stages: G ×^P̃(G' ×^P' X'') ≅ G ×^P X''",
+      "kind": "proposition",
+      "status": "admitted",
+      "tags": [
+        "induction",
+        "stages",
+        "representability"
+      ],
+      "primary_topic": "equivariant_sheaves.induction",
+      "topics": [
+        "equivariant_sheaves.induction"
+      ],
+      "lean_declarations": [],
+      "topic": "equivariant_sheaves.induction",
+      "uses": [
+        "building.generalized_building_bs",
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.induction_universal_property"
       ]
     },
     {
@@ -2507,7 +2529,7 @@
     },
     {
       "id": "equivariant_sheaves.induction_universal_property",
-      "title": "Universal property of G ×^P X' and induction by stages",
+      "title": "Universal property of G ×^P X'",
       "kind": "proposition",
       "status": "admitted",
       "tags": [
@@ -2531,11 +2553,12 @@
       ],
       "topic": "equivariant_sheaves.induction",
       "uses": [
-        "building.generalized_building_bs",
-        "equivariant_sheaves.induced_cw_structure",
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.iota_cellular_embedding",
         "equivariant_sheaves.stabilizer_formula_iota"
+      ],
+      "used_by": [
+        "equivariant_sheaves.induction_by_stages"
       ]
     },
     {
@@ -4228,6 +4251,18 @@
       "to": "equivariant_sheaves.induction_GxP_X"
     },
     {
+      "from": "building.generalized_building_bs",
+      "to": "equivariant_sheaves.induction_by_stages"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_by_stages"
+    },
+    {
+      "from": "equivariant_sheaves.induction_universal_property",
+      "to": "equivariant_sheaves.induction_by_stages"
+    },
+    {
       "from": "equivariant_sheaves.induction_GxP_X",
       "to": "equivariant_sheaves.induction_data_reverse"
     },
@@ -4238,14 +4273,6 @@
     {
       "from": "equivariant_sheaves.quasi_fundamental_domain",
       "to": "equivariant_sheaves.induction_data_reverse"
-    },
-    {
-      "from": "building.generalized_building_bs",
-      "to": "equivariant_sheaves.induction_universal_property"
-    },
-    {
-      "from": "equivariant_sheaves.induced_cw_structure",
-      "to": "equivariant_sheaves.induction_universal_property"
     },
     {
       "from": "equivariant_sheaves.induction_GxP_X",

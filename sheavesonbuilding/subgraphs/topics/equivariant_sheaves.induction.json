@@ -4,22 +4,22 @@
     "title": "Equivariant Sheaves.Induction",
     "href": "equivariant_sheaves/induction/index.html",
     "parent": "equivariant_sheaves",
-    "node_count": 8,
-    "descendant_node_count": 8
+    "node_count": 9,
+    "descendant_node_count": 9
   },
   "counts": {
-    "internal_nodes": 8,
+    "internal_nodes": 9,
     "inlined_nodes": 0,
-    "descendant_nodes": 8,
+    "descendant_nodes": 9,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 8,
+    "non_proof_plan_nodes": 9,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 14,
-    "visible_nodes_with_selected_proof_plans": 14
+    "visible_nodes_without_proof_plans": 15,
+    "visible_nodes_with_selected_proof_plans": 15
   },
   "nodes": [
     {
@@ -63,8 +63,16 @@
       "payload": "node_payloads/equivariant_sheaves_induction_GxP_X.json"
     },
     {
+      "id": "equivariant_sheaves.induction_by_stages",
+      "title": "Induction by stages: G ×^P̃(G' ×^P' X'') ≅ G ×^P X''",
+      "kind": "proposition",
+      "status": "admitted",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_by_stages.html",
+      "payload": "node_payloads/equivariant_sheaves_induction_by_stages.json"
+    },
+    {
       "id": "equivariant_sheaves.induction_universal_property",
-      "title": "Universal property of G ×^P X' and induction by stages",
+      "title": "Universal property of G ×^P X'",
       "kind": "proposition",
       "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_universal_property.html",
@@ -149,8 +157,13 @@
       "kind": "uses"
     },
     {
-      "from": "equivariant_sheaves.induced_cw_structure",
-      "to": "equivariant_sheaves.induction_universal_property",
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_by_stages",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_universal_property",
+      "to": "equivariant_sheaves.induction_by_stages",
       "kind": "uses"
     },
     {
@@ -206,7 +219,7 @@
       "title": "Equivariant Sheaves",
       "href": "equivariant_sheaves/index.html",
       "role": "dependent",
-      "node_count": 16
+      "node_count": 17
     },
     {
       "id": "equivariant_sheaves.qfd",
@@ -247,7 +260,7 @@
     },
     {
       "from": "topic:building",
-      "to": "equivariant_sheaves.induction_universal_property",
+      "to": "equivariant_sheaves.induction_by_stages",
       "kind": "boundary_dependency",
       "topic": "building",
       "count": 1
@@ -350,7 +363,7 @@
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
-      "count": 8
+      "count": 9
     },
     {
       "id": "poset",
@@ -365,9 +378,21 @@
       "count": 1
     },
     {
+      "id": "representability",
+      "title": "representability",
+      "href": "keywords/representability.html",
+      "count": 1
+    },
+    {
       "id": "stabilizer",
       "title": "stabilizer",
       "href": "keywords/stabilizer.html",
+      "count": 1
+    },
+    {
+      "id": "stages",
+      "title": "stages",
+      "href": "keywords/stages.html",
       "count": 1
     },
     {
