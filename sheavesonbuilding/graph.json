@@ -2340,7 +2340,18 @@
       "topics": [
         "equivariant_sheaves.induction"
       ],
-      "lean_declarations": [],
+      "lean_declarations": [
+        "SheafOnBuilding.PXPrimeOrbitCat",
+        "SheafOnBuilding.PXPrimeOrbitCat.Mor",
+        "SheafOnBuilding.PXPrimeOrbitCat.Mor.id",
+        "SheafOnBuilding.PXPrimeOrbitCat.Mor.comp",
+        "SheafOnBuilding.PXPrimeOrbitCat.category",
+        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat",
+        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_essSurj",
+        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_full",
+        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_faithful",
+        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_isEquivalence"
+      ],
       "topic": "equivariant_sheaves.induction",
       "uses": [
         "cellular_categories.equivariant_via_functors",
@@ -2348,6 +2359,7 @@
         "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.iota_cellular_embedding",
+        "equivariant_sheaves.reduction_to_qfd",
         "equivariant_sheaves.stabilizer_formula_iota"
       ]
     },
@@ -2747,6 +2759,7 @@
       ],
       "used_by": [
         "coefficient_systems.A_over_K_equivalence",
+        "equivariant_sheaves.induced_orbit_equivalence",
         "equivariant_sheaves.section4_equivalence"
       ]
     },
@@ -4262,6 +4275,10 @@
     },
     {
       "from": "equivariant_sheaves.iota_cellular_embedding",
+      "to": "equivariant_sheaves.induced_orbit_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.reduction_to_qfd",
       "to": "equivariant_sheaves.induced_orbit_equivalence"
     },
     {
