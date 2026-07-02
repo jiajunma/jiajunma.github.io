@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reduction of G-equivariant cosheaves to a QFD — Sheaves on Buildings — Knowledge Base</title>
+  <title>Well-definedness of the face relation on G ×^P X&#39; (partial-order axioms) — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -58,9 +58,9 @@
         <li class="topic-parent topic-active">
           <details open data-topic-root="equivariant_sheaves">
             <summary><a href="../../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
+            <ul class="topic-children"><li class="topic-leaf topic-active">
           <a href="../../equivariant_sheaves/induction/index.html">Induction</a>
-        </li><li class="topic-leaf topic-active">
+        </li><li class="topic-leaf">
           <a href="../../equivariant_sheaves/qfd/index.html">Qfd</a>
         </li></ul>
           </details>
@@ -427,20 +427,22 @@
   </nav>
   <main>
     
-<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-reduction_to_qfd">
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induced_poset_well_definedness">
   <header class="proposition_thmheading thm-heading">
     <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Reduction of G-equivariant cosheaves to a QFD</span>
+    <span class="proposition_thmtitle thm-title">Well-definedness of the face relation on G ×^P X&#39; (partial-order axioms)</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-proposition">proposition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-equivariant_sheaves-2e-reduction_to_qfd">#</a>
+      <a class="permalink" href="#node-equivariant_sheaves-2e-induced_poset_well_definedness">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -451,11 +453,13 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../../cellular_categories/cellular_categories_equivariant_sheaves.html">G-equivariant sheaves and cosheaves</a></li>
+        <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
         
-        <li><a href="equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
+        <li><a href="equivariant_sheaves_induced_poset_structure.html">Face relation on the induced space G ×^P X&#39;</a></li>
         
-        <li><a href="equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a></li>
+        <li><a href="../../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a></li>
+        
+        <li><a href="../../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a></li>
         
       </ul>
     </div>
@@ -463,41 +467,325 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/17561e269de9757dd312a7ec2b232c37c4cbcb7a/SheafOnBuilding/Induction.lean#L382"><code>SheafOnBuilding.InducedSpace.InductionLe_refl</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 17561e2, SheafOnBuilding.Induction
+          </span>
+          
+          
+          <p class="lean-docstring">`InductionLe` is **reflexive** (`n = 1` works).</p>
+          <pre class="lean-signature"><code>theorem InductionLe_refl (gE : G × X&#39;) : InductionLe d gE gE</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/17561e269de9757dd312a7ec2b232c37c4cbcb7a/SheafOnBuilding/Induction.lean#L393"><code>SheafOnBuilding.InducedSpace.InductionLe_trans</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 17561e2, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem InductionLe_trans : ∀ {a b c : G × X&#39;},
+    InductionLe d a b → InductionLe d b c → InductionLe d a c</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/17561e269de9757dd312a7ec2b232c37c4cbcb7a/SheafOnBuilding/Induction.lean#L424"><code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 17561e2, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem InductionLe_left_descends {a₁ a₂ b : G × X&#39;}
+    (h_rel : (InductionRel.setoid (G</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/17561e269de9757dd312a7ec2b232c37c4cbcb7a/SheafOnBuilding/Induction.lean#L452"><code>SheafOnBuilding.InducedSpace.InductionLe_right_descends</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 17561e2, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem InductionLe_right_descends {a b₁ b₂ : G × X&#39;}
+    (h_rel : (InductionRel.setoid (G</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/17561e269de9757dd312a7ec2b232c37c4cbcb7a/SheafOnBuilding/Induction.lean#L489"><code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 17561e2, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem InductionLe_antisymm : ∀ {a b : G × X&#39;},
+    InductionLe d a b → InductionLe d b a → (InductionRel.setoid (G</code></pre>
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/17561e269de9757dd312a7ec2b232c37c4cbcb7a/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+      </p>
+      
+    </div>
+  </div>
+  
 
   <div class="proposition_thmcontent thm-content body">
-    <h1>Reduction of $G$-equivariant cosheaves to a QFD</h1>
-<p>Setting: $X' \subseteq X$ is a QFD for the $G$-action with stabilizing
-subgroup $G'$. Let $\mathscr{C}$ be a category.</p>
-<p>Let $\mathrm{SRep}_G(\mathscr{C})$ be the category whose objects are triples
-$(K, V, a)$ with $K \le G$, $V \in \mathscr{C}$, $a : K \to \Aut_\mathscr{C}(V)$;
-a morphism $(f, r)$ requires an injective $f : K \hookrightarrow L$ and
-$r \in \Hom_\mathscr{C}(V,W)$ intertwining $a, b$.</p>
-<p><strong>Definition.</strong> For a cosheaf $K$ of subgroups of $G$ on $X'$, let
-$\Cosh_{G',K}([\![X']\!], \mathscr{C})$ be the full subcategory of
-$\Cosh_{G'}(X', \mathrm{SRep}_G(\mathscr{C}))$ of those $V$ such that:</p>
-<ul>
-<li>$(V_E, a^{V_E})$ is a $K_E$-representation in $\mathscr{C}$ for each
-  $E \in [\![X']\!]$;</li>
-<li>$r^V_{E,E'} : V_E \to V_{E'}$ is $a^{V_E}_g$-equivariant for $E' \preceq E$;</li>
-<li>$a^V_{g,E} : V_E \to V_{gE}$ intertwines $a^{V_E}$ and $a^{V_{gE}}$:
-  $a^V_{g,E} \circ a^{V_E}_k = a^{V_{gE}}_{gkg^{-1}} \circ a^V_{g,E}$;</li>
-<li>$a^{V_E}_k = a^V_{k,E}$ for $k \in \Fix_G(E) \cap K_E$.</li>
-</ul>
+    <h1>Well-definedness of the face relation</h1>
+<p>Fix the induction data $(G', P)$ satisfying (P0)–(P2) and the induced
+space $X = G \times^P X'$ of
+[[node:equivariant_sheaves.induction_GxP_X]].  Recall the face relation
+$\preceq$ on $X$ from
+<a class="node-ref" data-node-id="equivariant_sheaves.induced_poset_structure" href="../equivariant_sheaves_induced_poset_structure.html">Face relation on the induced space G ×^P X&#x27;</a> and its
+single-witness form on representatives:
+$$
+(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)
+\;:\iff\;
+\exists\, n \in G',\;\; n \cdot E_1 \preceq E_2 \;\text{and}\; g_1^{-1} g_2 n \in P_{E_1}.
+$$</p>
+<p>This node establishes the four theorems needed to upgrade
+$\preceq_{\text{rep}}$ to a well-defined partial order on the quotient
+$X$: reflexivity, transitivity, descent through $\sim$, and
+antisymmetry modulo $\sim$.</p>
+<h2>Theorem 1 (reflexivity)</h2>
+<p>$(g, E) \preceq_{\text{rep}} (g, E)$ for every $(g, E) \in G \times X'$.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Take $n := 1 \in G'$. Then $1 \cdot E = E \preceq E$ and
+$g^{-1} g \cdot 1 = 1 \in P_E$.  $\square$</p>
+<h2>Theorem 2 (transitivity)</h2>
 <blockquote>
-<p><strong>Proposition.</strong> Let $K$ be the cosheaf on $X'$ with
-$\Fix_G(E) = \Fix_{G'}(E) K_E$ for all $E$. Then
-$$\Cosh_G(X, \mathscr{C}) \;\simeq\; \underline{\mathrm{Fun}}([X']_{[X/G]}, \mathscr{C})
-  \;\simeq\; \Cosh_{G', K}(X', \mathscr{C}).$$</p>
+<p>Under (P0) and (P1), $\preceq_{\text{rep}}$ is transitive: given
+witnesses $n_1$ for $(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and
+$n_2$ for $(g_2, E_2) \preceq_{\text{rep}} (g_3, E_3)$, the product
+$n := n_2 n_1 \in G'$ witnesses $(g_1, E_1) \preceq_{\text{rep}} (g_3, E_3)$.</p>
 </blockquote>
-<p>The first equivalence is essentially the QFD equivalence
-$\iota : [X']_{[X/G]} \to [X/G]$ at the level of categories; the second
-unfolds the $K$-action data. The reverse construction uses the factorization
-$\mathrm{Hom}_{]X/G[}(E,E') = \{kn : k \in K_E,\ n \in G',\ nE \preceq E'\}$.</p>
-<h2>Why it matters</h2>
-<p>This proposition is the keystone for §4 (Heisenberg–Weil equivalence) and §8
-(reduction to depth zero): equivariant data on the <em>full</em> generalized
-building $\BSigma$ can be checked on the apartment $A$. See
-<a class="node-ref" data-node-id="depth_zero_reduction.res_sat_functors" href="../../depth_zero_reduction/depth_zero_reduction_res_sat_functors.html">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a>.</p>
+<p><strong>Face-chain.</strong> $n \cdot E_1 = n_2 \cdot (n_1 \cdot E_1) \preceq
+n_2 \cdot E_2 \preceq E_3$, using cellularity of $n_2$ (preserves
+$\preceq$) and transitivity of $\preceq$ on $X'$.</p>
+<p><strong>Residual.</strong> Set $p_1 := g_1^{-1} g_2 n_1 \in P_{E_1}$ and
+$p_2 := g_2^{-1} g_3 n_2 \in P_{E_2}$.  Then
+$$
+g_1^{-1} g_3 (n_2 n_1)
+= (g_1^{-1} g_2)(g_2^{-1} g_3 n_2)(n_1)
+= (p_1 n_1^{-1}) p_2 n_1
+= p_1 \cdot \bigl(n_1^{-1} p_2 n_1\bigr).
+$$</p>
+<p>To conclude $g_1^{-1} g_3 n \in P_{E_1}$, we show
+$n_1^{-1} p_2 n_1 \in P_{E_1}$:</p>
+<ul>
+<li>$p_2 \in P_{E_2}$.</li>
+<li>From $n_1 \cdot E_1 \preceq E_2$ and (P0):
+  $P_{E_2} \le P_{n_1 \cdot E_1}$, so $p_2 \in P_{n_1 \cdot E_1}$.</li>
+<li>From (P1): $P_{n_1 \cdot E_1} = n_1 P_{E_1} n_1^{-1}$, i.e.\
+  $n_1^{-1} P_{n_1 \cdot E_1} n_1 = P_{E_1}$.  Applying to $p_2$:
+  $n_1^{-1} p_2 n_1 \in P_{E_1}$.</li>
+</ul>
+<p>Hence $g_1^{-1} g_3 n = p_1 \cdot (n_1^{-1} p_2 n_1) \in P_{E_1}
+\cdot P_{E_1} = P_{E_1}$.  $\square$</p>
+<p><strong>Role of each axiom.</strong> (P0) lifts $p_2$ from $P_{E_2}$ into the larger
+$P_{n_1 \cdot E_1}$ along the face relation $n_1 E_1 \preceq E_2$.  (P1)
+conjugates $P_{n_1 \cdot E_1}$ back to $P_{E_1}$ via $n_1 \in G'$.
+Neither can be dispensed with — a $P$ without cosheaf monotonicity or
+without $G'$-equivariance breaks transitivity of the induced face
+relation.</p>
+<h2>Theorem 3 (descent through $\sim$)</h2>
+<p>The face relation defined via representatives must be independent of
+the choice of representative for both arguments to descend to a
+well-defined relation on the quotient $X$.</p>
+<blockquote>
+<p>Under (P0) and (P1), for $(g_1, E_1) \sim (g_1', E_1')$ and
+$(g_2, E_2) \sim (g_2', E_2')$,
+$$
+(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)
+\iff
+(g_1', E_1') \preceq_{\text{rep}} (g_2', E_2').
+$$</p>
+</blockquote>
+<p><strong>Proof (left descent).</strong>  Take $m \in G'$ with $m \cdot E_1 = E_1'$
+and $\alpha := g_1^{-1} g_1' m \in P_{E_1}$.  Assume $(g_1, E_1)
+\preceq_{\text{rep}} (g_2, E_2)$ with witness $n$.  Take $n'' :=
+n m^{-1}$:</p>
+<ul>
+<li><strong>Face-chain.</strong> $n'' \cdot E_1' = n m^{-1} \cdot (m \cdot E_1) =
+  n \cdot E_1 \preceq E_2$.</li>
+<li><strong>Membership.</strong> $(g_1')^{-1} g_2 n'' = m \alpha^{-1} g_1^{-1} g_2 n
+  m^{-1}$; substitute $g_1^{-1} g_2 n \in P_{E_1}$ and use (P1)
+  with $m$ to conclude
+  $m \alpha^{-1} (g_1^{-1} g_2 n) m^{-1} \in m P_{E_1} m^{-1} =
+  P_{m \cdot E_1} = P_{E_1'}$.</li>
+</ul>
+<p>Reverse direction: symmetric via $m^{-1}$.</p>
+<p><strong>Proof (right descent).</strong>  Take $m \in G'$ with $m \cdot E_2 =
+E_2'$ and $\beta := g_2^{-1} g_2' m \in P_{E_2}$.  Assume $(g_1,
+E_1) \preceq_{\text{rep}} (g_2, E_2)$ with witness $n$.  Take
+$n'' := m n$:</p>
+<ul>
+<li><strong>Face-chain.</strong> $n'' \cdot E_1 = m \cdot (n \cdot E_1) \preceq m
+  \cdot E_2 = E_2'$.</li>
+<li><strong>Membership.</strong> $\beta \in P_{E_2}$, and by (P0) with $n \cdot E_1
+  \preceq E_2$: $\beta \in P_{n \cdot E_1}$.  By (P1): $\beta =
+  n p n^{-1}$ for some $p \in P_{E_1}$.  Compute $g_1^{-1} g_2'
+  n'' = (g_1^{-1} g_2 n) \cdot p \in P_{E_1} \cdot P_{E_1} =
+  P_{E_1}$.</li>
+</ul>
+<p>$\square$</p>
+<h2>Theorem 4 (antisymmetry modulo $\sim$)</h2>
+<blockquote>
+<p>If $(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and $(g_2, E_2)
+\preceq_{\text{rep}} (g_1, E_1)$, then $(g_1, E_1) \sim (g_2, E_2)$.</p>
+</blockquote>
+<p><strong>Proof.</strong> From witnesses $n_1$ and $n_2$ respectively, we get
+$(n_2 n_1) \cdot E_1 \preceq E_1$.  The $G$-action is cellular
+(<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>), hence dimension
+preserving: $\dim((n_2 n_1) \cdot E_1) = \dim E_1$.  Strict
+monotonicity of $\dim$ along a proper face-chain
+(<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a>) forces
+$(n_2 n_1) \cdot E_1 = E_1$, so $n_1 \cdot E_1 = E_2$, and the
+$P_{E_1}$-membership from the $n_1$-witness is exactly the
+$\sim$-witness.  $\square$</p>
+<h2>Corollary (partial-order structure)</h2>
+<p>Combining Theorems 1–4 with the descent proposition:</p>
+<blockquote>
+<p>$\preceq$ on $X = (G \times X')/{\sim}$ is a well-defined <strong>partial
+order</strong>.</p>
+</blockquote>
+<h2>Which axioms enter which theorem</h2>
+<table>
+<thead>
+<tr>
+<th>Theorem</th>
+<th>Axioms used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reflexivity (Theorem 1)</td>
+<td>none (unit in $G'$, unit in $P_E$)</td>
+</tr>
+<tr>
+<td>Transitivity (Theorem 2)</td>
+<td>(P0), (P1)</td>
+</tr>
+<tr>
+<td>Left descent (part of Theorem 3)</td>
+<td>(P1)</td>
+</tr>
+<tr>
+<td>Right descent (part of Theorem 3)</td>
+<td>(P0), (P1)</td>
+</tr>
+<tr>
+<td>Antisymmetry mod $\sim$ (Theorem 4)</td>
+<td>dim preservation (cellular action) + strict monotonicity of $\dim$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(P2) does not enter this node.</strong>  It is the axiom needed for
+injectivity of $\iota$
+(<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (1)),
+not for the face relation itself.</p>
+<h2>Lean formalization</h2>
+<p>Each theorem corresponds to a dedicated Lean lemma in
+<code>SheafOnBuilding.Induction</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Theorem</th>
+<th>Lean lemma</th>
+<th>Axioms used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reflexivity (Theorem 1)</td>
+<td><code>InductionLe_refl</code></td>
+<td>none</td>
+</tr>
+<tr>
+<td>Transitivity (Theorem 2)</td>
+<td><code>InductionLe_trans</code></td>
+<td>(P0), (P1)</td>
+</tr>
+<tr>
+<td>Left descent (Theorem 3, ⟵)</td>
+<td><code>InductionLe_left_descends</code></td>
+<td>(P1)</td>
+</tr>
+<tr>
+<td>Right descent (Theorem 3, ⟶)</td>
+<td><code>InductionLe_right_descends</code></td>
+<td>(P0), (P1)</td>
+</tr>
+<tr>
+<td>Antisymmetry mod $\sim$ (Theorem 4)</td>
+<td><code>InductionLe_antisymm</code></td>
+<td><code>GCellComplex.smul_dim</code>, <code>AbstractCellComplex.dim_lt</code></td>
+</tr>
+</tbody>
+</table>
+<p>The residual conjugation identity
+$$
+g_1^{-1} g_3 (n_2 n_1) = p_1 \cdot n_1^{-1} (n_2 p_2^{-1} n_2^{-1}) n_1
+$$
+appearing in the Theorem 2 proof reappears verbatim in the Theorem 3
+descent proofs and in the (⇒) direction of the definition ⇔
+single-witness equivalence
+(<a class="node-ref" data-node-id="equivariant_sheaves.induced_poset_structure" href="../equivariant_sheaves_induced_poset_structure.html">Face relation on the induced space G ×^P X&#x27;</a> Theorem 1).  All
+four proofs are instances of the same (P0)+(P1) group-theoretic
+manoeuvre.</p>
+<p>These lemmas assemble the <code>PartialOrder (InducedSpace d)</code> instance via
+<code>Quotient.lift₂</code>:</p>
+<pre><code class="language-lean">instance : PartialOrder (InducedSpace d) where
+  le := Quotient.lift₂ (InductionLe d) &lt;descent proof&gt;
+  le_refl q     := Quotient.inductionOn q (InductionLe_refl d)
+  le_trans      := Quotient.inductionOn₃ _ _ _ (fun _ _ _ =&gt; InductionLe_trans d)
+  le_antisymm   := Quotient.inductionOn₂ _ _
+    (fun _ _ h₁ h₂ =&gt; Quotient.sound (InductionLe_antisymm d h₁ h₂))
+</code></pre>
+<p>The <code>&lt;descent proof&gt;</code> argument of <code>Quotient.lift₂</code> is exactly the
+representative-independence check discharged by
+<code>InductionLe_left_descends</code> + <code>InductionLe_right_descends</code>.</p>
+      </div>
+    </details>
     
   </div>
 
@@ -508,9 +796,7 @@ building $\BSigma$ can be checked on the apartment $A$. See
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="../../coefficient_systems/coefficient_systems_A_over_K_equivalence.html">Equivalence [A/𝒦] ≃ [B(Σ)/G] (RES theorem)</a></li>
-      
-      <li><a href="../equivariant_sheaves_section4_equivalence.html">Cosh_G(X,1_Q) ≃ Cosh_{G&#39;}(X&#39;,1_{Q&#39;}) under induced structure</a></li>
+      <li><a href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#39;</a></li>
       
     </ul>
   </section>
@@ -520,7 +806,7 @@ building $\BSigma$ can be checked on the apartment $A$. See
 
   
   <footer class="tags">
-    <span class="tag">reduction</span><span class="tag">qfd</span><span class="tag">equivariance</span>
+    <span class="tag">induction</span><span class="tag">poset</span><span class="tag">well-definedness</span>
   </footer>
   
 </article>

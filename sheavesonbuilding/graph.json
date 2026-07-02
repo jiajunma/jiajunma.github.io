@@ -24,7 +24,7 @@
         "abstract_cell_complex.subcomplex",
         "cellular_categories.cw_complex_setting",
         "cellular_categories.orbit_end_stabilizer",
-        "equivariant_sheaves.induced_poset_structure"
+        "equivariant_sheaves.induced_poset_well_definedness"
       ]
     },
     {
@@ -52,6 +52,7 @@
         "cellular_categories.orbit_category",
         "cellular_categories.orbit_end_stabilizer",
         "equivariant_sheaves.induced_poset_structure",
+        "equivariant_sheaves.induced_poset_well_definedness",
         "equivariant_sheaves.iota_cellular_embedding",
         "equivariant_sheaves.stabilizer_formula_iota"
       ]
@@ -2300,7 +2301,7 @@
       "id": "equivariant_sheaves.induced_cw_structure",
       "title": "CW structure and QFD property on G ×^P X'",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "induction",
         "cw-structure"
@@ -2315,6 +2316,7 @@
       "topic": "equivariant_sheaves.induction",
       "uses": [
         "equivariant_sheaves.induced_poset_structure",
+        "equivariant_sheaves.induced_poset_well_definedness",
         "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.iota_cellular_embedding",
@@ -2332,9 +2334,9 @@
     },
     {
       "id": "equivariant_sheaves.induced_poset_structure",
-      "title": "Face relation and poset structure on the induced space G ×^P X'",
-      "kind": "proposition",
-      "status": "staged",
+      "title": "Face relation on the induced space G ×^P X'",
+      "kind": "definition",
+      "status": "admitted",
       "tags": [
         "induction",
         "poset",
@@ -2346,11 +2348,6 @@
       ],
       "lean_declarations": [
         "SheafOnBuilding.InducedSpace.InductionLe",
-        "SheafOnBuilding.InducedSpace.InductionLe_refl",
-        "SheafOnBuilding.InducedSpace.InductionLe_trans",
-        "SheafOnBuilding.InducedSpace.InductionLe_left_descends",
-        "SheafOnBuilding.InducedSpace.InductionLe_right_descends",
-        "SheafOnBuilding.InducedSpace.InductionLe_antisymm",
         "SheafOnBuilding.InducedSpace.dim",
         "SheafOnBuilding.InducedSpace.dim_iota",
         "SheafOnBuilding.InducedSpace.dim_mk",
@@ -2358,8 +2355,40 @@
       ],
       "topic": "equivariant_sheaves.induction",
       "uses": [
+        "abstract_cell_complex.g_cell_complex",
+        "equivariant_sheaves.induction_GxP_X"
+      ],
+      "used_by": [
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_poset_well_definedness"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.induced_poset_well_definedness",
+      "title": "Well-definedness of the face relation on G ×^P X' (partial-order axioms)",
+      "kind": "proposition",
+      "status": "admitted",
+      "tags": [
+        "induction",
+        "poset",
+        "well-definedness"
+      ],
+      "primary_topic": "equivariant_sheaves.induction",
+      "topics": [
+        "equivariant_sheaves.induction"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.InducedSpace.InductionLe_refl",
+        "SheafOnBuilding.InducedSpace.InductionLe_trans",
+        "SheafOnBuilding.InducedSpace.InductionLe_left_descends",
+        "SheafOnBuilding.InducedSpace.InductionLe_right_descends",
+        "SheafOnBuilding.InducedSpace.InductionLe_antisymm"
+      ],
+      "topic": "equivariant_sheaves.induction",
+      "uses": [
         "abstract_cell_complex.abstract_cell_complex",
         "abstract_cell_complex.g_cell_complex",
+        "equivariant_sheaves.induced_poset_structure",
         "equivariant_sheaves.induction_GxP_X"
       ],
       "used_by": [
@@ -2370,7 +2399,7 @@
       "id": "equivariant_sheaves.induced_qfd_property",
       "title": "X' is a quasi-fundamental domain of the induced space",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "induction",
         "qfd",
@@ -2400,7 +2429,7 @@
       "id": "equivariant_sheaves.induction_GxP_X",
       "title": "Induced space G ×^P X' along a cosheaf P",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "induction",
         "induced-space"
@@ -2430,6 +2459,7 @@
         "building.generalized_building_bs",
         "equivariant_sheaves.induced_cw_structure",
         "equivariant_sheaves.induced_poset_structure",
+        "equivariant_sheaves.induced_poset_well_definedness",
         "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_data_reverse",
         "equivariant_sheaves.induction_universal_property",
@@ -2479,7 +2509,7 @@
       "id": "equivariant_sheaves.induction_universal_property",
       "title": "Universal property of G ×^P X' and induction by stages",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "induction",
         "universal-property",
@@ -2519,7 +2549,7 @@
       "id": "equivariant_sheaves.iota_cellular_embedding",
       "title": "ι : X' → G ×^P X' is a cellular embedding (poset form)",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "induction",
         "cellular-embedding"
@@ -2661,7 +2691,7 @@
       "id": "equivariant_sheaves.stabilizer_formula_iota",
       "title": "Cell-stabiliser and fixator formulas on the induced space",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "induction",
         "stabilizer",
@@ -4112,6 +4142,10 @@
       "to": "equivariant_sheaves.induced_cw_structure"
     },
     {
+      "from": "equivariant_sheaves.induced_poset_well_definedness",
+      "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
       "from": "equivariant_sheaves.induced_qfd_property",
       "to": "equivariant_sheaves.induced_cw_structure"
     },
@@ -4132,16 +4166,28 @@
       "to": "equivariant_sheaves.induced_cw_structure"
     },
     {
-      "from": "abstract_cell_complex.abstract_cell_complex",
-      "to": "equivariant_sheaves.induced_poset_structure"
-    },
-    {
       "from": "abstract_cell_complex.g_cell_complex",
       "to": "equivariant_sheaves.induced_poset_structure"
     },
     {
       "from": "equivariant_sheaves.induction_GxP_X",
       "to": "equivariant_sheaves.induced_poset_structure"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "equivariant_sheaves.induced_poset_well_definedness"
+    },
+    {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "equivariant_sheaves.induced_poset_well_definedness"
+    },
+    {
+      "from": "equivariant_sheaves.induced_poset_structure",
+      "to": "equivariant_sheaves.induced_poset_well_definedness"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_poset_well_definedness"
     },
     {
       "from": "equivariant_sheaves.induction_GxP_X",

@@ -4,45 +4,53 @@
     "title": "Equivariant Sheaves.Induction",
     "href": "equivariant_sheaves/induction/index.html",
     "parent": "equivariant_sheaves",
-    "node_count": 7,
-    "descendant_node_count": 7
+    "node_count": 8,
+    "descendant_node_count": 8
   },
   "counts": {
-    "internal_nodes": 7,
+    "internal_nodes": 8,
     "inlined_nodes": 0,
-    "descendant_nodes": 7,
+    "descendant_nodes": 8,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 7,
+    "non_proof_plan_nodes": 8,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 13,
-    "visible_nodes_with_selected_proof_plans": 13
+    "visible_nodes_without_proof_plans": 14,
+    "visible_nodes_with_selected_proof_plans": 14
   },
   "nodes": [
     {
       "id": "equivariant_sheaves.induced_cw_structure",
       "title": "CW structure and QFD property on G ×^P X'",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_cw_structure.html",
       "payload": "node_payloads/equivariant_sheaves_induced_cw_structure.json"
     },
     {
       "id": "equivariant_sheaves.induced_poset_structure",
-      "title": "Face relation and poset structure on the induced space G ×^P X'",
-      "kind": "proposition",
-      "status": "staged",
+      "title": "Face relation on the induced space G ×^P X'",
+      "kind": "definition",
+      "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_poset_structure.html",
       "payload": "node_payloads/equivariant_sheaves_induced_poset_structure.json"
+    },
+    {
+      "id": "equivariant_sheaves.induced_poset_well_definedness",
+      "title": "Well-definedness of the face relation on G ×^P X' (partial-order axioms)",
+      "kind": "proposition",
+      "status": "admitted",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_poset_well_definedness.html",
+      "payload": "node_payloads/equivariant_sheaves_induced_poset_well_definedness.json"
     },
     {
       "id": "equivariant_sheaves.induced_qfd_property",
       "title": "X' is a quasi-fundamental domain of the induced space",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_qfd_property.html",
       "payload": "node_payloads/equivariant_sheaves_induced_qfd_property.json"
     },
@@ -50,7 +58,7 @@
       "id": "equivariant_sheaves.induction_GxP_X",
       "title": "Induced space G ×^P X' along a cosheaf P",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_GxP_X.html",
       "payload": "node_payloads/equivariant_sheaves_induction_GxP_X.json"
     },
@@ -58,7 +66,7 @@
       "id": "equivariant_sheaves.induction_universal_property",
       "title": "Universal property of G ×^P X' and induction by stages",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_universal_property.html",
       "payload": "node_payloads/equivariant_sheaves_induction_universal_property.json"
     },
@@ -66,7 +74,7 @@
       "id": "equivariant_sheaves.iota_cellular_embedding",
       "title": "ι : X' → G ×^P X' is a cellular embedding (poset form)",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_iota_cellular_embedding.html",
       "payload": "node_payloads/equivariant_sheaves_iota_cellular_embedding.json"
     },
@@ -74,7 +82,7 @@
       "id": "equivariant_sheaves.stabilizer_formula_iota",
       "title": "Cell-stabiliser and fixator formulas on the induced space",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_stabilizer_formula_iota.html",
       "payload": "node_payloads/equivariant_sheaves_stabilizer_formula_iota.json"
     }
@@ -82,6 +90,11 @@
   "edges": [
     {
       "from": "equivariant_sheaves.induced_poset_structure",
+      "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induced_poset_well_definedness",
       "to": "equivariant_sheaves.induced_cw_structure",
       "kind": "uses"
     },
@@ -108,6 +121,16 @@
     {
       "from": "equivariant_sheaves.induction_GxP_X",
       "to": "equivariant_sheaves.induced_poset_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induced_poset_structure",
+      "to": "equivariant_sheaves.induced_poset_well_definedness",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_poset_well_definedness",
       "kind": "uses"
     },
     {
@@ -173,7 +196,7 @@
       "title": "Equivariant Sheaves",
       "href": "equivariant_sheaves/index.html",
       "role": "dependent",
-      "node_count": 15
+      "node_count": 16
     },
     {
       "id": "equivariant_sheaves.qfd",
@@ -187,6 +210,13 @@
     {
       "from": "topic:abstract_cell_complex",
       "to": "equivariant_sheaves.induced_poset_structure",
+      "kind": "boundary_dependency",
+      "topic": "abstract_cell_complex",
+      "count": 1
+    },
+    {
+      "from": "topic:abstract_cell_complex",
+      "to": "equivariant_sheaves.induced_poset_well_definedness",
       "kind": "boundary_dependency",
       "topic": "abstract_cell_complex",
       "count": 2
@@ -310,13 +340,13 @@
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
-      "count": 7
+      "count": 8
     },
     {
       "id": "poset",
       "title": "poset",
       "href": "keywords/poset.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "qfd",
@@ -340,6 +370,12 @@
       "id": "universal-property",
       "title": "universal-property",
       "href": "keywords/universal-property.html",
+      "count": 1
+    },
+    {
+      "id": "well-definedness",
+      "title": "well-definedness",
+      "href": "keywords/well-definedness.html",
       "count": 1
     }
   ],
