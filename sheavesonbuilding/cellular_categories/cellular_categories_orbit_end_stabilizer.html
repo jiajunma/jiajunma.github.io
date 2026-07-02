@@ -537,7 +537,8 @@
           
           
           <pre class="lean-signature"><code>def endToStabilizer (E : OrbitCat G X) :
-    End E →* MulAction.stabilizer G (E : X)</code></pre>
+    End E →* MulAction.stabilizer G (E : X) :=
+  (endMulEquivStabilizer E).toMonoidHom</code></pre>
         </li>
         
       </ul>

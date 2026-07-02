@@ -31,7 +31,7 @@
       "qualified_name": "SheafOnBuilding.AbstractCellComplex.star",
       "module": "SheafOnBuilding.GCellComplex",
       "kind": "def",
-      "signature": "def star (E : X) : Set X",
+      "signature": "def star (E : X) : Set X := {F | E ≤ F}",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",

@@ -41,7 +41,7 @@
       "qualified_name": "SheafOnBuilding.InducedSpace.InductionLe",
       "module": "SheafOnBuilding.Induction",
       "kind": "def",
-      "signature": "def InductionLe (g₁E₁ g₂E₂ : G × X') : Prop",
+      "signature": "def InductionLe (g₁E₁ g₂E₂ : G × X') : Prop :=\n  ∃ n ∈ d.G', n • g₁E₁.2 ≤ g₂E₂.2 ∧ g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",

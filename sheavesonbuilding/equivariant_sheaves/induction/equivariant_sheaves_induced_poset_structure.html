@@ -483,7 +483,8 @@
           
           
           
-          <pre class="lean-signature"><code>def InductionLe (g₁E₁ g₂E₂ : G × X&#39;) : Prop</code></pre>
+          <pre class="lean-signature"><code>def InductionLe (g₁E₁ g₂E₂ : G × X&#39;) : Prop :=
+  ∃ n ∈ d.G&#39;, n • g₁E₁.2 ≤ g₂E₂.2 ∧ g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2</code></pre>
         </li>
         
         <li class="lean-ref">

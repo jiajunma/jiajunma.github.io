@@ -483,7 +483,9 @@
           
           
           <p class="lean-docstring">Full subcategory of `]X/G[` supported on cells of a subcomplex `S`.</p>
-          <pre class="lean-signature"><code>abbrev OnSubcomplex (S : Subcomplex X)</code></pre>
+          <pre class="lean-signature"><code>abbrev OnSubcomplex (S : Subcomplex X) :=
+  ObjectProperty.FullSubcategory
+    (C := OrbitCat G X) (fun E =&gt; (E : X) ∈ S)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -500,7 +502,8 @@
           
           <p class="lean-docstring">The inclusion functor `[X&#39;]_{ι} → ]X/G[`.</p>
           <pre class="lean-signature"><code>abbrev ιOnSubcomplex (S : Subcomplex X) :
-    OnSubcomplex (G := G) (X := X) S ⥤ OrbitCat G X</code></pre>
+    OnSubcomplex (G := G) (X := X) S ⥤ OrbitCat G X :=
+  ObjectProperty.ι _</code></pre>
         </li>
         
         <li class="lean-ref">

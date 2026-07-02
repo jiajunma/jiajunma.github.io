@@ -513,7 +513,8 @@
           
           
           
-          <pre class="lean-signature"><code>def Mor (E E&#39; : PXPrimeOrbitCat d) : Type _</code></pre>
+          <pre class="lean-signature"><code>def Mor (E E&#39; : PXPrimeOrbitCat d) : Type _ :=
+  { g : G // g • InducedSpace.iota d E.cell ≤ InducedSpace.iota d E&#39;.cell }</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -529,7 +530,9 @@
           
           
           <p class="lean-docstring">Identity morphism.</p>
-          <pre class="lean-signature"><code>def Mor.id (E : PXPrimeOrbitCat d) : Mor d E E</code></pre>
+          <pre class="lean-signature"><code>def Mor.id (E : PXPrimeOrbitCat d) : Mor d E E :=
+  ⟨1, show (1 : G) • InducedSpace.iota d E.cell ≤ InducedSpace.iota d E.cell by
+        rw [one_smul]⟩</code></pre>
         </li>
         
         <li class="lean-ref">

@@ -113,7 +113,7 @@
       "qualified_name": "SheafOnBuilding.GCosheaf.mapOfG",
       "module": "SheafOnBuilding.GCosheafToFun",
       "kind": "def",
-      "signature": "noncomputable def GCosheaf.mapOfG\n    (W : GCosheaf G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :\n    W.base.obj (op E) ⟶ W.base.obj (op E')",
+      "signature": "noncomputable def GCosheaf.mapOfG\n    (W : GCosheaf G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :\n    W.base.obj (op E) ⟶ W.base.obj (op E') :=\n  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E').inv",
       "docstring": "The building block of the forward-direction functor's `.map`.",
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",

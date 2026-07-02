@@ -599,7 +599,8 @@
           <p class="lean-docstring">The building block of the forward-direction functor&#39;s `.map`.</p>
           <pre class="lean-signature"><code>noncomputable def GCosheaf.mapOfG
     (W : GCosheaf G X C) {E E&#39; : X} (g : G) (hg : g • E&#39; ≤ E) :
-    W.base.obj (op E) ⟶ W.base.obj (op E&#39;)</code></pre>
+    W.base.obj (op E) ⟶ W.base.obj (op E&#39;) :=
+  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E&#39;).inv</code></pre>
         </li>
         
         <li class="lean-ref">

@@ -485,7 +485,7 @@
           
           
           <p class="lean-docstring">The **canonical map** `G × S → X`, `(g, E) ↦ g • E`.</p>
-          <pre class="lean-signature"><code>def natMap (S : Subcomplex X) : G × ↥S.carrier → X</code></pre>
+          <pre class="lean-signature"><code>def natMap (S : Subcomplex X) : G × ↥S.carrier → X := fun p =&gt; p.1 • p.2.val</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -604,7 +604,8 @@
           
           
           
-          <pre class="lean-signature"><code>def rel : (G × ↥S.carrier) → (G × ↥S.carrier) → Prop</code></pre>
+          <pre class="lean-signature"><code>def rel : (G × ↥S.carrier) → (G × ↥S.carrier) → Prop :=
+  fun p q =&gt; ∃ n ∈ G&#39;, n • p.2.val = q.2.val ∧ (p.1⁻¹ * q.1 * n) ∈ d.P p.2.val</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -638,7 +639,7 @@
           
           
           
-          <pre class="lean-signature"><code>def Quotient&#39; : Type _</code></pre>
+          <pre class="lean-signature"><code>def Quotient&#39; : Type _ := _root_.Quotient d.setoid</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -654,7 +655,10 @@
           
           
           
-          <pre class="lean-signature"><code>def toX : d.Quotient&#39; → X</code></pre>
+          <pre class="lean-signature"><code>def toX : d.Quotient&#39; → X :=
+  _root_.Quotient.lift (fun p : G × ↥S.carrier =&gt; p.1 • p.2.val) &lt;| by
+    rintro ⟨g, E⟩ ⟨h, F⟩ hrel
+    exact ((d.orbit_eq_iff E.property F.property g h).mpr hrel)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -702,7 +706,8 @@
           
           
           
-          <pre class="lean-signature"><code>noncomputable def equivX : d.Quotient&#39; ≃ X</code></pre>
+          <pre class="lean-signature"><code>noncomputable def equivX : d.Quotient&#39; ≃ X :=
+  Equiv.ofBijective d.toX ⟨d.toX_injective, d.toX_surjective⟩</code></pre>
         </li>
         
         <li class="lean-ref">

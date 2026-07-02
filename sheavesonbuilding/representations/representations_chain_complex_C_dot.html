@@ -482,7 +482,10 @@
           
           
           <pre class="lean-signature"><code>noncomputable def weightedRestriction (V : Cosheaf X C) (E F : X) :
-    V.obj (op F) ⟶ V.obj (op E)</code></pre>
+    V.obj (op F) ⟶ V.obj (op E) := by
+  by_cases h : E ≤ F
+  · exact Orientation.incidence E F • V.map (Quiver.Hom.op (homOfLE h))
+  · exact 0</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -499,7 +502,9 @@
           
           
           <pre class="lean-signature"><code>noncomputable def boundaryFromCell {Z : C} (F : X) (ι : ∀ E : X, V.obj (op E) ⟶ Z) :
-    V.obj (op F) ⟶ Z</code></pre>
+    V.obj (op F) ⟶ Z :=
+  (IsLocallyFinite.finite_faces F).toFinset.sum (fun E =&gt;
+    weightedRestriction V E F ≫ ι E)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -569,7 +574,8 @@
           
           
           <p class="lean-docstring">The cells of dimension `n` in `X`.</p>
-          <pre class="lean-signature"><code>def dimCells (X : Type*) [PartialOrder X] [AbstractCellComplex X] (n : ℕ) : Type _</code></pre>
+          <pre class="lean-signature"><code>def dimCells (X : Type*) [PartialOrder X] [AbstractCellComplex X] (n : ℕ) : Type _ :=
+  {E : X // AbstractCellComplex.dim E = n}</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -585,7 +591,8 @@
           
           
           
-          <pre class="lean-signature"><code>noncomputable def Cn (n : ℕ) : C</code></pre>
+          <pre class="lean-signature"><code>noncomputable def Cn (n : ℕ) : C :=
+  ∐ (fun E : dimCells X n =&gt; V.obj (op E.val))</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -633,7 +640,8 @@
           
           
           
-          <pre class="lean-signature"><code>noncomputable def chainComplex : ChainComplex C ℕ</code></pre>
+          <pre class="lean-signature"><code>noncomputable def chainComplex : ChainComplex C ℕ :=
+  ChainComplex.of (Cn V) (Cn.d V) (fun n =&gt; Cn.d_comp_d V n)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -679,7 +687,9 @@
           
           
           <pre class="lean-signature"><code>noncomputable def cellularHomologyFunctor
-    [CategoryWithHomology C] (n : ℕ) : (Cosheaf X C) ⥤ C</code></pre>
+    [CategoryWithHomology C] (n : ℕ) : (Cosheaf X C) ⥤ C :=
+  chainComplexFunctor ⋙
+    HomologicalComplex.homologyFunctor C (ComplexShape.down ℕ) n</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -695,7 +705,9 @@
           
           
           <p class="lean-docstring">The induced morphism `Cn V n ⟶ Cn W n` from a NatTrans `V ⟶ W`.</p>
-          <pre class="lean-signature"><code>noncomputable def cnMap (α : V ⟶ W) (n : ℕ) : Cn V n ⟶ Cn W n</code></pre>
+          <pre class="lean-signature"><code>noncomputable def cnMap (α : V ⟶ W) (n : ℕ) : Cn V n ⟶ Cn W n :=
+  Limits.Sigma.desc (fun E : dimCells X n =&gt;
+    α.app (op E.val) ≫ Cn.ι W E)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -746,7 +758,10 @@
           
           
           
-          <pre class="lean-signature"><code>noncomputable def Cn.smulMorphism (g : G) (n : ℕ) : Cn V n ⟶ Cn V n</code></pre>
+          <pre class="lean-signature"><code>noncomputable def Cn.smulMorphism (g : G) (n : ℕ) : Cn V n ⟶ Cn V n :=
+  Limits.Sigma.desc (fun E : dimCells X n =&gt;
+    (GEquivariantCosheaf.act g E.val).hom ≫
+      Cn.ι V ⟨g • E.val, by rw [GCellComplex.smul_dim]; exact E.property⟩)</code></pre>
         </li>
         
       </ul>

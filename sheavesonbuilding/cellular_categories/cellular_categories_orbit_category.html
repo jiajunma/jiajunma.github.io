@@ -485,7 +485,7 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev OrbitCat (G X : Type*) : Type _</code></pre>
+          <pre class="lean-signature"><code>abbrev OrbitCat (G X : Type*) : Type _ := X</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -501,7 +501,8 @@
           
           
           
-          <pre class="lean-signature"><code>def Mor (E E&#39; : OrbitCat G X) : Type _</code></pre>
+          <pre class="lean-signature"><code>def Mor (E E&#39; : OrbitCat G X) : Type _ :=
+  {g : G // g • (E : X) ≤ (E&#39; : X)}</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -517,7 +518,8 @@
           
           
           <p class="lean-docstring">The identity morphism `1 : E ⟶ E`.</p>
-          <pre class="lean-signature"><code>def Mor.id (E : OrbitCat G X) : Mor E E</code></pre>
+          <pre class="lean-signature"><code>def Mor.id (E : OrbitCat G X) : Mor E E :=
+  ⟨1, show (1 : G) • (E : X) ≤ (E : X) by rw [one_smul]⟩</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -624,7 +626,8 @@
           
           
           <pre class="lean-signature"><code>def endToStabilizer (E : OrbitCat G X) :
-    End E →* MulAction.stabilizer G (E : X)</code></pre>
+    End E →* MulAction.stabilizer G (E : X) :=
+  (endMulEquivStabilizer E).toMonoidHom</code></pre>
         </li>
         
       </ul>

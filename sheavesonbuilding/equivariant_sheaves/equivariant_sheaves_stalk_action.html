@@ -484,7 +484,9 @@
           
           
           <pre class="lean-signature"><code>def stalkHom (W : GCosheaf G X C) (E : X) (k : G) (hk : k • E = E) :
-    W.base.obj (op E) ⟶ W.base.obj (op E)</code></pre>
+    W.base.obj (op E) ⟶ W.base.obj (op E) :=
+  (W.equiv.act k E).hom ≫
+    eqToHom (show W.base.obj (op (k • E)) = W.base.obj (op E) by rw [hk])</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -558,7 +560,8 @@
           
           <pre class="lean-signature"><code>def kStalkAction {G&#39; : Subgroup G} {S : Subcomplex X}
     (κ : KData G&#39; S) (W : GCosheaf G X C) (E : X) :
-    κ.K E →* End (W.base.obj (op E))</code></pre>
+    κ.K E →* End (W.base.obj (op E)) :=
+  (stalkAction W E).comp (Subgroup.inclusion (κ.K_le_fix E))</code></pre>
         </li>
         
       </ul>

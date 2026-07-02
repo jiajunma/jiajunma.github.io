@@ -489,7 +489,7 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev OrbitCat (G X : Type*) : Type _</code></pre>
+          <pre class="lean-signature"><code>abbrev OrbitCat (G X : Type*) : Type _ := X</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -505,7 +505,8 @@
           
           
           
-          <pre class="lean-signature"><code>def Mor (E E&#39; : OrbitCat G X) : Type _</code></pre>
+          <pre class="lean-signature"><code>def Mor (E E&#39; : OrbitCat G X) : Type _ :=
+  {g : G // g • (E : X) ≤ (E&#39; : X)}</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -521,7 +522,8 @@
           
           
           <p class="lean-docstring">The identity morphism `1 : E ⟶ E`.</p>
-          <pre class="lean-signature"><code>def Mor.id (E : OrbitCat G X) : Mor E E</code></pre>
+          <pre class="lean-signature"><code>def Mor.id (E : OrbitCat G X) : Mor E E :=
+  ⟨1, show (1 : G) • (E : X) ≤ (E : X) by rw [one_smul]⟩</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -628,7 +630,8 @@
           
           
           <pre class="lean-signature"><code>def endToStabilizer (E : OrbitCat G X) :
-    End E →* MulAction.stabilizer G (E : X)</code></pre>
+    End E →* MulAction.stabilizer G (E : X) :=
+  (endMulEquivStabilizer E).toMonoidHom</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -644,7 +647,9 @@
           
           
           <p class="lean-docstring">Full subcategory of `]X/G[` supported on cells of a subcomplex `S`.</p>
-          <pre class="lean-signature"><code>abbrev OnSubcomplex (S : Subcomplex X)</code></pre>
+          <pre class="lean-signature"><code>abbrev OnSubcomplex (S : Subcomplex X) :=
+  ObjectProperty.FullSubcategory
+    (C := OrbitCat G X) (fun E =&gt; (E : X) ∈ S)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -661,7 +666,8 @@
           
           <p class="lean-docstring">The inclusion functor `[X&#39;]_{ι} → ]X/G[`.</p>
           <pre class="lean-signature"><code>abbrev ιOnSubcomplex (S : Subcomplex X) :
-    OnSubcomplex (G := G) (X := X) S ⥤ OrbitCat G X</code></pre>
+    OnSubcomplex (G := G) (X := X) S ⥤ OrbitCat G X :=
+  ObjectProperty.ι _</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -716,7 +722,9 @@
           <pre class="lean-signature"><code>noncomputable def funCatEquivOfQFD (G&#39; : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G&#39; S] :
     ((OnSubcomplex (G := G) (X := X) S)ᵒᵖ ⥤ C) ≌
-    ((OrbitCat G X)ᵒᵖ ⥤ C)</code></pre>
+    ((OrbitCat G X)ᵒᵖ ⥤ C) :=
+  letI := ιOnSubcomplex_isEquivalence G&#39; S
+  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -883,7 +891,8 @@
           <p class="lean-docstring">The building block of the forward-direction functor&#39;s `.map`.</p>
           <pre class="lean-signature"><code>noncomputable def GCosheaf.mapOfG
     (W : GCosheaf G X C) {E E&#39; : X} (g : G) (hg : g • E&#39; ≤ E) :
-    W.base.obj (op E) ⟶ W.base.obj (op E&#39;)</code></pre>
+    W.base.obj (op E) ⟶ W.base.obj (op E&#39;) :=
+  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E&#39;).inv</code></pre>
         </li>
         
         <li class="lean-ref">

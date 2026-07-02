@@ -71,7 +71,7 @@
       "qualified_name": "SheafOnBuilding.OrbitCat.endToStabilizer",
       "module": "SheafOnBuilding.OrbitCat",
       "kind": "def",
-      "signature": "def endToStabilizer (E : OrbitCat G X) :\n    End E →* MulAction.stabilizer G (E : X)",
+      "signature": "def endToStabilizer (E : OrbitCat G X) :\n    End E →* MulAction.stabilizer G (E : X) :=\n  (endMulEquivStabilizer E).toMonoidHom",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",

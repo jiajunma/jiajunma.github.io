@@ -514,7 +514,8 @@
           <pre class="lean-signature"><code>def InductionRel (X&#39; : Type*) [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
     [MulAction G X&#39;] [GCellComplex G X&#39;]
     (G&#39; : Subgroup G) (P : X&#39; → Subgroup G) :
-    (G × X&#39;) → (G × X&#39;) → Prop</code></pre>
+    (G × X&#39;) → (G × X&#39;) → Prop :=
+  fun ⟨g, E⟩ ⟨h, F⟩ =&gt; ∃ n ∈ G&#39;, n • E = F ∧ (g⁻¹ * h * n) ∈ P E</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -604,7 +605,8 @@
           
           <pre class="lean-signature"><code>def InducedSpace {X&#39; : Type*} [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
     [MulAction G X&#39;] [GCellComplex G X&#39;]
-    (d : InductionDatum (G := G) X&#39;) : Type _</code></pre>
+    (d : InductionDatum (G := G) X&#39;) : Type _ :=
+  Quotient (InductionRel.setoid (G := G) d)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -620,7 +622,8 @@
           
           
           
-          <pre class="lean-signature"><code>def iota (E : X&#39;) : InducedSpace d</code></pre>
+          <pre class="lean-signature"><code>def iota (E : X&#39;) : InducedSpace d :=
+  Quotient.mk (InductionRel.setoid (G := G) d) (1, E)</code></pre>
         </li>
         
       </ul>
