@@ -55,14 +55,6 @@
       "payload": "node_payloads/cellular_categories_equivariant_via_functors.json"
     },
     {
-      "id": "cellular_categories.orbit_category",
-      "title": "The orbit categories ]X/G[ and [X/G]",
-      "kind": "definition",
-      "status": "admitted",
-      "href": "cellular_categories/cellular_categories_orbit_category.html",
-      "payload": "node_payloads/cellular_categories_orbit_category.json"
-    },
-    {
       "id": "cellular_categories.orbit_end_stabilizer",
       "title": "Endomorphisms in ]X/G[ are the stabilizer",
       "kind": "lemma",
@@ -111,6 +103,14 @@
       "payload": "node_payloads/cellular_categories_sheaves_cosheaves.json"
     },
     {
+      "id": "cellular_categories.transporter_category",
+      "title": "The transporter categories ]X/G[ and [X/G]",
+      "kind": "definition",
+      "status": "admitted",
+      "href": "cellular_categories/cellular_categories_transporter_category.html",
+      "payload": "node_payloads/cellular_categories_transporter_category.json"
+    },
+    {
       "id": "equivariant_sheaves.stalk_action",
       "title": "Fixator action on the stalk of a G-equivariant cosheaf",
       "kind": "lemma",
@@ -141,22 +141,12 @@
       "kind": "uses"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "cellular_categories.equivariant_via_functors",
       "kind": "uses"
     },
     {
-      "from": "cellular_categories.category_jXk",
-      "to": "cellular_categories.orbit_category",
-      "kind": "uses"
-    },
-    {
-      "from": "cellular_categories.cw_complex_setting",
-      "to": "cellular_categories.orbit_category",
-      "kind": "uses"
-    },
-    {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "cellular_categories.orbit_end_stabilizer",
       "kind": "uses"
     },
@@ -166,7 +156,7 @@
       "kind": "uses"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "cellular_categories.orbit_subcomplex_equivalence",
       "kind": "uses"
     },
@@ -186,12 +176,22 @@
       "kind": "uses"
     },
     {
+      "from": "cellular_categories.category_jXk",
+      "to": "cellular_categories.transporter_category",
+      "kind": "uses"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.transporter_category",
+      "kind": "uses"
+    },
+    {
       "from": "cellular_categories.equivariant_sheaves",
       "to": "equivariant_sheaves.stalk_action",
       "kind": "uses"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "equivariant_sheaves.stalk_action",
       "kind": "uses"
     }
@@ -264,17 +264,17 @@
     },
     {
       "from": "topic:abstract_cell_complex",
-      "to": "cellular_categories.orbit_category",
-      "kind": "boundary_dependency",
-      "topic": "abstract_cell_complex",
-      "count": 1
-    },
-    {
-      "from": "topic:abstract_cell_complex",
       "to": "cellular_categories.orbit_end_stabilizer",
       "kind": "boundary_dependency",
       "topic": "abstract_cell_complex",
       "count": 2
+    },
+    {
+      "from": "topic:abstract_cell_complex",
+      "to": "cellular_categories.transporter_category",
+      "kind": "boundary_dependency",
+      "topic": "abstract_cell_complex",
+      "count": 1
     },
     {
       "from": "topic:equivariant_sheaves.qfd",
@@ -347,14 +347,14 @@
       "count": 1
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.sheaf_of_subgroups",
       "to": "topic:equivariant_sheaves.induction",
       "kind": "boundary_dependent",
       "topic": "equivariant_sheaves.induction",
       "count": 1
     },
     {
-      "from": "cellular_categories.sheaf_of_subgroups",
+      "from": "cellular_categories.transporter_category",
       "to": "topic:equivariant_sheaves.induction",
       "kind": "boundary_dependent",
       "topic": "equivariant_sheaves.induction",
@@ -382,7 +382,7 @@
       "count": 1
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "topic:equivariant_sheaves.qfd",
       "kind": "boundary_dependent",
       "topic": "equivariant_sheaves.qfd",
@@ -502,12 +502,6 @@
       "count": 1
     },
     {
-      "id": "orbit-category",
-      "title": "orbit-category",
-      "href": "keywords/orbit-category.html",
-      "count": 3
-    },
-    {
       "id": "orientation",
       "title": "orientation",
       "href": "keywords/orientation.html",
@@ -548,6 +542,12 @@
       "title": "subgroup-sheaf",
       "href": "keywords/subgroup-sheaf.html",
       "count": 1
+    },
+    {
+      "id": "transporter-category",
+      "title": "transporter-category",
+      "href": "keywords/transporter-category.html",
+      "count": 3
     }
   ],
   "proof_plan_attachments": [],

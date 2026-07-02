@@ -49,8 +49,8 @@
       ],
       "used_by": [
         "cellular_categories.cw_complex_setting",
-        "cellular_categories.orbit_category",
         "cellular_categories.orbit_end_stabilizer",
+        "cellular_categories.transporter_category",
         "equivariant_sheaves.induced_poset_structure",
         "equivariant_sheaves.induced_poset_well_definedness",
         "equivariant_sheaves.iota_cellular_embedding",
@@ -1109,8 +1109,8 @@
         "cellular_categories.cw_complex_setting"
       ],
       "used_by": [
-        "cellular_categories.orbit_category",
-        "cellular_categories.sheaves_cosheaves"
+        "cellular_categories.sheaves_cosheaves",
+        "cellular_categories.transporter_category"
       ]
     },
     {
@@ -1143,8 +1143,8 @@
       "used_by": [
         "cellular_categories.category_jXk",
         "cellular_categories.equivariant_sheaves",
-        "cellular_categories.orbit_category",
         "cellular_categories.orientation",
+        "cellular_categories.transporter_category",
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.quasi_fundamental_domain",
         "representations.rep_phi"
@@ -1216,49 +1216,11 @@
       "topic": "cellular_categories",
       "uses": [
         "cellular_categories.equivariant_sheaves",
-        "cellular_categories.orbit_category"
+        "cellular_categories.transporter_category"
       ],
       "used_by": [
         "equivariant_sheaves.induced_orbit_equivalence",
         "equivariant_sheaves.reduction_to_qfd"
-      ]
-    },
-    {
-      "id": "cellular_categories.orbit_category",
-      "title": "The orbit categories ]X/G[ and [X/G]",
-      "kind": "definition",
-      "status": "admitted",
-      "tags": [
-        "orbit-category",
-        "equivariant"
-      ],
-      "primary_topic": "cellular_categories",
-      "topics": [
-        "cellular_categories"
-      ],
-      "lean_declarations": [
-        "SheafOnBuilding.OrbitCat",
-        "SheafOnBuilding.OrbitCat.Mor",
-        "SheafOnBuilding.OrbitCat.Mor.id",
-        "SheafOnBuilding.OrbitCat.Mor.comp",
-        "SheafOnBuilding.OrbitCat.category",
-        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endToStabilizer"
-      ],
-      "topic": "cellular_categories",
-      "uses": [
-        "abstract_cell_complex.g_cell_complex",
-        "cellular_categories.category_jXk",
-        "cellular_categories.cw_complex_setting"
-      ],
-      "used_by": [
-        "cellular_categories.equivariant_via_functors",
-        "cellular_categories.orbit_end_stabilizer",
-        "cellular_categories.orbit_subcomplex_equivalence",
-        "equivariant_sheaves.induced_orbit_equivalence",
-        "equivariant_sheaves.reduction_to_qfd",
-        "equivariant_sheaves.stalk_action"
       ]
     },
     {
@@ -1267,7 +1229,7 @@
       "kind": "lemma",
       "status": "staged",
       "tags": [
-        "orbit-category",
+        "transporter-category",
         "stabilizer"
       ],
       "primary_topic": "cellular_categories",
@@ -1283,7 +1245,7 @@
       "uses": [
         "abstract_cell_complex.abstract_cell_complex",
         "abstract_cell_complex.g_cell_complex",
-        "cellular_categories.orbit_category"
+        "cellular_categories.transporter_category"
       ]
     },
     {
@@ -1314,7 +1276,7 @@
       "kind": "proposition",
       "status": "staged",
       "tags": [
-        "orbit-category",
+        "transporter-category",
         "qfd",
         "equivalence"
       ],
@@ -1330,7 +1292,7 @@
       ],
       "topic": "cellular_categories",
       "uses": [
-        "cellular_categories.orbit_category",
+        "cellular_categories.transporter_category",
         "equivariant_sheaves.quasi_fundamental_domain"
       ],
       "used_by": [
@@ -1414,6 +1376,44 @@
       ],
       "used_by": [
         "cellular_categories.equivariant_sheaves"
+      ]
+    },
+    {
+      "id": "cellular_categories.transporter_category",
+      "title": "The transporter categories ]X/G[ and [X/G]",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "transporter-category",
+        "equivariant"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.OrbitCat",
+        "SheafOnBuilding.OrbitCat.Mor",
+        "SheafOnBuilding.OrbitCat.Mor.id",
+        "SheafOnBuilding.OrbitCat.Mor.comp",
+        "SheafOnBuilding.OrbitCat.category",
+        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endToStabilizer"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "abstract_cell_complex.g_cell_complex",
+        "cellular_categories.category_jXk",
+        "cellular_categories.cw_complex_setting"
+      ],
+      "used_by": [
+        "cellular_categories.equivariant_via_functors",
+        "cellular_categories.orbit_end_stabilizer",
+        "cellular_categories.orbit_subcomplex_equivalence",
+        "equivariant_sheaves.induced_orbit_equivalence",
+        "equivariant_sheaves.reduction_to_qfd",
+        "equivariant_sheaves.stalk_action"
       ]
     },
     {
@@ -2330,12 +2330,12 @@
     },
     {
       "id": "equivariant_sheaves.induced_orbit_equivalence",
-      "title": "The category [X'/P] and its equivalence with the orbit category of G ×^P X'",
+      "title": "The category [X'/P] and its equivalence with the transporter category of G ×^P X'",
       "kind": "proposition",
       "status": "admitted",
       "tags": [
         "induction",
-        "orbit-category",
+        "transporter-category",
         "reduction"
       ],
       "primary_topic": "equivariant_sheaves.induction",
@@ -2357,7 +2357,7 @@
       "topic": "equivariant_sheaves.induction",
       "uses": [
         "cellular_categories.equivariant_via_functors",
-        "cellular_categories.orbit_category",
+        "cellular_categories.transporter_category",
         "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.iota_cellular_embedding",
@@ -2755,7 +2755,7 @@
       "uses": [
         "cellular_categories.equivariant_sheaves",
         "cellular_categories.equivariant_via_functors",
-        "cellular_categories.orbit_category",
+        "cellular_categories.transporter_category",
         "equivariant_sheaves.qfd_orbit_lemma",
         "equivariant_sheaves.quasi_fundamental_domain"
       ],
@@ -2843,7 +2843,7 @@
       "topic": "equivariant_sheaves",
       "uses": [
         "cellular_categories.equivariant_sheaves",
-        "cellular_categories.orbit_category"
+        "cellular_categories.transporter_category"
       ]
     },
     {
@@ -3732,20 +3732,8 @@
       "to": "cellular_categories.equivariant_via_functors"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "cellular_categories.equivariant_via_functors"
-    },
-    {
-      "from": "abstract_cell_complex.g_cell_complex",
-      "to": "cellular_categories.orbit_category"
-    },
-    {
-      "from": "cellular_categories.category_jXk",
-      "to": "cellular_categories.orbit_category"
-    },
-    {
-      "from": "cellular_categories.cw_complex_setting",
-      "to": "cellular_categories.orbit_category"
     },
     {
       "from": "abstract_cell_complex.abstract_cell_complex",
@@ -3756,7 +3744,7 @@
       "to": "cellular_categories.orbit_end_stabilizer"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "cellular_categories.orbit_end_stabilizer"
     },
     {
@@ -3764,7 +3752,7 @@
       "to": "cellular_categories.orbit_functor_cat_equivalence"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "cellular_categories.orbit_subcomplex_equivalence"
     },
     {
@@ -3782,6 +3770,18 @@
     {
       "from": "cellular_categories.category_jXk",
       "to": "cellular_categories.sheaves_cosheaves"
+    },
+    {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "cellular_categories.transporter_category"
+    },
+    {
+      "from": "cellular_categories.category_jXk",
+      "to": "cellular_categories.transporter_category"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
+      "to": "cellular_categories.transporter_category"
     },
     {
       "from": "coefficient_systems.coeff_phi",
@@ -4264,7 +4264,7 @@
       "to": "equivariant_sheaves.induced_orbit_equivalence"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "equivariant_sheaves.induced_orbit_equivalence"
     },
     {
@@ -4404,7 +4404,7 @@
       "to": "equivariant_sheaves.reduction_to_qfd"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "equivariant_sheaves.reduction_to_qfd"
     },
     {
@@ -4436,7 +4436,7 @@
       "to": "equivariant_sheaves.stalk_action"
     },
     {
-      "from": "cellular_categories.orbit_category",
+      "from": "cellular_categories.transporter_category",
       "to": "equivariant_sheaves.stalk_action"
     },
     {
