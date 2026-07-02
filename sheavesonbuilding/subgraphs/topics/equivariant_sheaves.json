@@ -5,21 +5,21 @@
     "href": "equivariant_sheaves/index.html",
     "parent": null,
     "node_count": 4,
-    "descendant_node_count": 17
+    "descendant_node_count": 18
   },
   "counts": {
     "internal_nodes": 4,
-    "inlined_nodes": 13,
-    "descendant_nodes": 17,
+    "inlined_nodes": 14,
+    "descendant_nodes": 18,
     "child_topics": 0,
     "inlined_child_topics": 2,
-    "non_proof_plan_nodes": 17,
+    "non_proof_plan_nodes": 18,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 24,
-    "visible_nodes_with_selected_proof_plans": 24
+    "visible_nodes_without_proof_plans": 25,
+    "visible_nodes_with_selected_proof_plans": 25
   },
   "nodes": [
     {
@@ -37,6 +37,14 @@
       "status": "admitted",
       "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_cw_structure.html",
       "payload": "node_payloads/equivariant_sheaves_induced_cw_structure.json"
+    },
+    {
+      "id": "equivariant_sheaves.induced_orbit_equivalence",
+      "title": "The category [X'/P] and its equivalence with the orbit category of G ×^P X'",
+      "kind": "proposition",
+      "status": "admitted",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_orbit_equivalence.html",
+      "payload": "node_payloads/equivariant_sheaves_induced_orbit_equivalence.json"
     },
     {
       "id": "equivariant_sheaves.induced_poset_structure",
@@ -198,6 +206,26 @@
     {
       "from": "equivariant_sheaves.stabilizer_formula_iota",
       "to": "equivariant_sheaves.induced_cw_structure",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induced_qfd_property",
+      "to": "equivariant_sheaves.induced_orbit_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_orbit_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.iota_cellular_embedding",
+      "to": "equivariant_sheaves.induced_orbit_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "equivariant_sheaves.stabilizer_formula_iota",
+      "to": "equivariant_sheaves.induced_orbit_equivalence",
       "kind": "uses"
     },
     {
@@ -400,6 +428,13 @@
     },
     {
       "from": "topic:cellular_categories",
+      "to": "equivariant_sheaves.induced_orbit_equivalence",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 2
+    },
+    {
+      "from": "topic:cellular_categories",
       "to": "equivariant_sheaves.induction_GxP_X",
       "kind": "boundary_dependency",
       "topic": "cellular_categories",
@@ -589,12 +624,18 @@
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
-      "count": 10
+      "count": 11
     },
     {
       "id": "invariants",
       "title": "invariants",
       "href": "keywords/invariants.html",
+      "count": 1
+    },
+    {
+      "id": "orbit-category",
+      "title": "orbit-category",
+      "href": "keywords/orbit-category.html",
       "count": 1
     },
     {
@@ -625,7 +666,7 @@
       "id": "reduction",
       "title": "reduction",
       "href": "keywords/reduction.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "representability",

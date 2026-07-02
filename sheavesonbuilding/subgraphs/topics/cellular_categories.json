@@ -230,14 +230,14 @@
       "title": "Equivariant Sheaves",
       "href": "equivariant_sheaves/index.html",
       "role": "dependent",
-      "node_count": 17
+      "node_count": 18
     },
     {
       "id": "equivariant_sheaves.induction",
       "title": "Equivariant Sheaves.Induction",
       "href": "equivariant_sheaves/induction/index.html",
       "role": "dependent",
-      "node_count": 9
+      "node_count": 10
     },
     {
       "id": "equivariant_sheaves.qfd",
@@ -334,6 +334,20 @@
     },
     {
       "from": "cellular_categories.cw_complex_setting",
+      "to": "topic:equivariant_sheaves.induction",
+      "kind": "boundary_dependent",
+      "topic": "equivariant_sheaves.induction",
+      "count": 1
+    },
+    {
+      "from": "cellular_categories.equivariant_via_functors",
+      "to": "topic:equivariant_sheaves.induction",
+      "kind": "boundary_dependent",
+      "topic": "equivariant_sheaves.induction",
+      "count": 1
+    },
+    {
+      "from": "cellular_categories.orbit_category",
       "to": "topic:equivariant_sheaves.induction",
       "kind": "boundary_dependent",
       "topic": "equivariant_sheaves.induction",

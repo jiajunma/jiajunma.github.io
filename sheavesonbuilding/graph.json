@@ -1217,6 +1217,7 @@
         "cellular_categories.orbit_category"
       ],
       "used_by": [
+        "equivariant_sheaves.induced_orbit_equivalence",
         "equivariant_sheaves.reduction_to_qfd"
       ]
     },
@@ -1253,6 +1254,7 @@
         "cellular_categories.equivariant_via_functors",
         "cellular_categories.orbit_end_stabilizer",
         "cellular_categories.orbit_subcomplex_equivalence",
+        "equivariant_sheaves.induced_orbit_equivalence",
         "equivariant_sheaves.reduction_to_qfd",
         "equivariant_sheaves.stalk_action"
       ]
@@ -2325,6 +2327,31 @@
       ]
     },
     {
+      "id": "equivariant_sheaves.induced_orbit_equivalence",
+      "title": "The category [X'/P] and its equivalence with the orbit category of G ×^P X'",
+      "kind": "proposition",
+      "status": "admitted",
+      "tags": [
+        "induction",
+        "orbit-category",
+        "reduction"
+      ],
+      "primary_topic": "equivariant_sheaves.induction",
+      "topics": [
+        "equivariant_sheaves.induction"
+      ],
+      "lean_declarations": [],
+      "topic": "equivariant_sheaves.induction",
+      "uses": [
+        "cellular_categories.equivariant_via_functors",
+        "cellular_categories.orbit_category",
+        "equivariant_sheaves.induced_qfd_property",
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.iota_cellular_embedding",
+        "equivariant_sheaves.stabilizer_formula_iota"
+      ]
+    },
+    {
       "id": "equivariant_sheaves.induced_poset_structure",
       "title": "Face relation on the induced space G ×^P X'",
       "kind": "definition",
@@ -2414,7 +2441,8 @@
         "equivariant_sheaves.stabilizer_formula_iota"
       ],
       "used_by": [
-        "equivariant_sheaves.induced_cw_structure"
+        "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_orbit_equivalence"
       ]
     },
     {
@@ -2450,6 +2478,7 @@
         "building.connected_components",
         "building.generalized_building_bs",
         "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_orbit_equivalence",
         "equivariant_sheaves.induced_poset_structure",
         "equivariant_sheaves.induced_poset_well_definedness",
         "equivariant_sheaves.induced_qfd_property",
@@ -2601,6 +2630,7 @@
       ],
       "used_by": [
         "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_orbit_equivalence",
         "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_universal_property"
       ]
@@ -2768,6 +2798,7 @@
       ],
       "used_by": [
         "equivariant_sheaves.induced_cw_structure",
+        "equivariant_sheaves.induced_orbit_equivalence",
         "equivariant_sheaves.induced_qfd_property",
         "equivariant_sheaves.induction_universal_property"
       ]
@@ -4212,6 +4243,30 @@
     {
       "from": "equivariant_sheaves.stabilizer_formula_iota",
       "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
+      "from": "cellular_categories.equivariant_via_functors",
+      "to": "equivariant_sheaves.induced_orbit_equivalence"
+    },
+    {
+      "from": "cellular_categories.orbit_category",
+      "to": "equivariant_sheaves.induced_orbit_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.induced_qfd_property",
+      "to": "equivariant_sheaves.induced_orbit_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induced_orbit_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.iota_cellular_embedding",
+      "to": "equivariant_sheaves.induced_orbit_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.stabilizer_formula_iota",
+      "to": "equivariant_sheaves.induced_orbit_equivalence"
     },
     {
       "from": "abstract_cell_complex.g_cell_complex",
