@@ -1109,7 +1109,7 @@
         "cellular_categories.cw_complex_setting"
       ],
       "used_by": [
-        "cellular_categories.quotient_category_jXGk",
+        "cellular_categories.orbit_category",
         "cellular_categories.sheaves_cosheaves"
       ]
     },
@@ -1143,8 +1143,8 @@
       "used_by": [
         "cellular_categories.category_jXk",
         "cellular_categories.equivariant_sheaves",
+        "cellular_categories.orbit_category",
         "cellular_categories.orientation",
-        "cellular_categories.quotient_category_jXGk",
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.quasi_fundamental_domain",
         "representations.rep_phi"
@@ -1154,7 +1154,7 @@
       "id": "cellular_categories.equivariant_sheaves",
       "title": "G-equivariant sheaves and cosheaves",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "equivariant-sheaf",
         "cellular-action"
@@ -1191,31 +1191,43 @@
     },
     {
       "id": "cellular_categories.equivariant_via_functors",
-      "title": "Equivalence: G-equivariant (co)sheaves and functors on ]X/G[",
-      "kind": "lemma",
-      "status": "staged",
+      "title": "G-equivariant (co)sheaves as functors on ]X/G[ resp. [X/G]",
+      "kind": "proposition",
+      "status": "admitted",
       "tags": [
         "equivalence",
-        "functor-category"
+        "functor-category",
+        "equivariance"
       ],
       "primary_topic": "cellular_categories",
       "topics": [
         "cellular_categories"
       ],
+      "lean_declarations": [
+        "SheafOnBuilding.GEquivariantSheaf",
+        "SheafOnBuilding.GEquivariantCosheaf",
+        "SheafOnBuilding.GCosheaf",
+        "SheafOnBuilding.GCosheaf.category",
+        "SheafOnBuilding.GCosheaf.mapOfG",
+        "SheafOnBuilding.GCosheaf.mapOfG_one"
+      ],
       "topic": "cellular_categories",
       "uses": [
         "cellular_categories.equivariant_sheaves",
-        "cellular_categories.quotient_category_jXGk"
+        "cellular_categories.orbit_category"
+      ],
+      "used_by": [
+        "equivariant_sheaves.reduction_to_qfd"
       ]
     },
     {
       "id": "cellular_categories.orbit_category",
-      "title": "The orbit category ]X/G[ as a Lean category",
+      "title": "The orbit categories ]X/G[ and [X/G]",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "orbit-category",
-        "cellular-action"
+        "equivariant"
       ],
       "primary_topic": "cellular_categories",
       "topics": [
@@ -1226,16 +1238,22 @@
         "SheafOnBuilding.OrbitCat.Mor",
         "SheafOnBuilding.OrbitCat.Mor.id",
         "SheafOnBuilding.OrbitCat.Mor.comp",
-        "SheafOnBuilding.OrbitCat.category"
+        "SheafOnBuilding.OrbitCat.category",
+        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endToStabilizer"
       ],
       "topic": "cellular_categories",
       "uses": [
         "abstract_cell_complex.g_cell_complex",
-        "cellular_categories.quotient_category_jXGk"
+        "cellular_categories.category_jXk",
+        "cellular_categories.cw_complex_setting"
       ],
       "used_by": [
+        "cellular_categories.equivariant_via_functors",
         "cellular_categories.orbit_end_stabilizer",
         "cellular_categories.orbit_subcomplex_equivalence",
+        "equivariant_sheaves.reduction_to_qfd",
         "equivariant_sheaves.stalk_action"
       ]
     },
@@ -1337,30 +1355,6 @@
       "topic": "cellular_categories",
       "uses": [
         "cellular_categories.cw_complex_setting"
-      ]
-    },
-    {
-      "id": "cellular_categories.quotient_category_jXGk",
-      "title": "The quotient categories ]X/G[ and [X/G]",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "quotient-category",
-        "equivariant"
-      ],
-      "primary_topic": "cellular_categories",
-      "topics": [
-        "cellular_categories"
-      ],
-      "topic": "cellular_categories",
-      "uses": [
-        "cellular_categories.category_jXk",
-        "cellular_categories.cw_complex_setting"
-      ],
-      "used_by": [
-        "cellular_categories.equivariant_via_functors",
-        "cellular_categories.orbit_category",
-        "coefficient_systems.coeff_phi"
       ]
     },
     {
@@ -1694,7 +1688,6 @@
       "topic": "coefficient_systems",
       "uses": [
         "cellular_categories.equivariant_sheaves",
-        "cellular_categories.quotient_category_jXGk",
         "coefficient_systems.semisimple_character_T_axioms"
       ],
       "used_by": [
@@ -2717,6 +2710,8 @@
       "topic": "equivariant_sheaves.qfd",
       "uses": [
         "cellular_categories.equivariant_sheaves",
+        "cellular_categories.equivariant_via_functors",
+        "cellular_categories.orbit_category",
         "equivariant_sheaves.qfd_orbit_lemma",
         "equivariant_sheaves.quasi_fundamental_domain"
       ],
@@ -3691,7 +3686,7 @@
       "to": "cellular_categories.equivariant_via_functors"
     },
     {
-      "from": "cellular_categories.quotient_category_jXGk",
+      "from": "cellular_categories.orbit_category",
       "to": "cellular_categories.equivariant_via_functors"
     },
     {
@@ -3699,7 +3694,11 @@
       "to": "cellular_categories.orbit_category"
     },
     {
-      "from": "cellular_categories.quotient_category_jXGk",
+      "from": "cellular_categories.category_jXk",
+      "to": "cellular_categories.orbit_category"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
       "to": "cellular_categories.orbit_category"
     },
     {
@@ -3729,14 +3728,6 @@
     {
       "from": "cellular_categories.cw_complex_setting",
       "to": "cellular_categories.orientation"
-    },
-    {
-      "from": "cellular_categories.category_jXk",
-      "to": "cellular_categories.quotient_category_jXGk"
-    },
-    {
-      "from": "cellular_categories.cw_complex_setting",
-      "to": "cellular_categories.quotient_category_jXGk"
     },
     {
       "from": "cellular_categories.equivariant_sheaves",
@@ -3928,10 +3919,6 @@
     },
     {
       "from": "cellular_categories.equivariant_sheaves",
-      "to": "coefficient_systems.coeff_phi"
-    },
-    {
-      "from": "cellular_categories.quotient_category_jXGk",
       "to": "coefficient_systems.coeff_phi"
     },
     {
@@ -4336,6 +4323,14 @@
     },
     {
       "from": "cellular_categories.equivariant_sheaves",
+      "to": "equivariant_sheaves.reduction_to_qfd"
+    },
+    {
+      "from": "cellular_categories.equivariant_via_functors",
+      "to": "equivariant_sheaves.reduction_to_qfd"
+    },
+    {
+      "from": "cellular_categories.orbit_category",
       "to": "equivariant_sheaves.reduction_to_qfd"
     },
     {

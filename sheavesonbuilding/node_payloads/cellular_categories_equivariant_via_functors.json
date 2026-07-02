@@ -1,14 +1,14 @@
 {
   "id": "cellular_categories.equivariant_via_functors",
-  "title": "Equivalence: G-equivariant (co)sheaves and functors on ]X/G[",
-  "kind": "lemma",
-  "status": "staged",
+  "title": "G-equivariant (co)sheaves as functors on ]X/G[ resp. [X/G]",
+  "kind": "proposition",
+  "status": "admitted",
   "href": "cellular_categories/cellular_categories_equivariant_via_functors.html",
   "primary_topic": "cellular_categories",
   "topics": [
     "cellular_categories"
   ],
-  "body_html": "<h1>Equivalence: $G$-equivariant (co)sheaves as functors on $]X/G[$</h1>\n<blockquote>\n<p><strong>Lemma.</strong> The category of $G$-equivariant $\\mathscr{C}$-valued sheaves on\n$X$ is equivalent to $\\underline{\\mathrm{Fun}}(]X/G[,\\mathscr{C})$. Dually,\nthe category of $G$-equivariant $\\mathscr{C}$-valued cosheaves on $X$ is\nequivalent to $\\underline{\\mathrm{Fun}}([X/G],\\mathscr{C})$.</p>\n</blockquote>\n<p>In particular, taking $G = \\{e\\}$ recovers the equivalences\n$\\Sh(X,\\mathscr{C}) = \\underline{\\mathrm{Fun}}(]X[,\\mathscr{C})$ and\n$\\Cosh(X,\\mathscr{C}) = \\underline{\\mathrm{Fun}}([X],\\mathscr{C})$.</p>\n<h2>Sketch of the equivalence (sheaf case)</h2>\n<p>Given $(V,a) \\in \\Sh_G(X,\\mathscr{C})$, define $F : \\,]X/G[\\, \\to\n\\mathscr{C}$ by $F(E) := V_E$ and, for $g \\in \\Hom_{]X/G[}(E,E')$\n(i.e.\\ $gE \\preceq E'$),\n$$F(g) := r^V_{gE,E'} \\circ a^V_{g,E}.$$</p>\n<p>Functoriality (i.e.\\ $F(h) \\circ F(g) = F(hg)$) follows by chasing the\nequivariance axiom of $a^V$ and the transitivity of $r^V$. Conversely,\ngiven $F : \\,]X/G[\\, \\to \\mathscr{C}$, set $V_E := F(E)$,\n$r^V_{E,E'} := F(e : E \\to E')$, and $a^V_{g,E} := F(g : E \\to gE)$;\nthis gives a $G$-equivariant sheaf. The two constructions are mutually\ninverse.</p>\n<p>The cosheaf case is dual.</p>",
+  "body_html": "<h1>$G$-equivariant (co)sheaves as functors on $]X/G[$ resp.\\ $[X/G]$</h1>\n<p>Given a cellular $G$-action on $X$\n(<a class=\"node-ref\" data-node-id=\"cellular_categories.cw_complex_setting\" href=\"cellular_categories_cw_complex_setting.html\">Locally finite regular CW complex with cellular G-action</a>), the two nominally\nindependent structures — the poset (face relation) and the group\naction — are packaged together in the two orbit categories $]X/G[$\nand $[X/G]$\n(<a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_category\" href=\"cellular_categories_orbit_category.html\">The orbit categories ]X/G[ and [X/G]</a>).  Every equivariant\nsheaf and cosheaf on $X$ arises as a functor on the appropriate one.</p>\n<h2>Statement</h2>\n<blockquote>\n<p><strong>Proposition.</strong> For any category $\\mathscr C$:</p>\n<p>$$\n\\Sh_G(X, \\mathscr C) \\;\\simeq\\; \\underline{\\mathrm{Fun}}(\\, ]X/G[,\\; \\mathscr C\\, )\n\\qquad\\text{and}\\qquad\n\\Cosh_G(X, \\mathscr C) \\;\\simeq\\; \\underline{\\mathrm{Fun}}(\\, [X/G],\\; \\mathscr C\\, ).\n$$</p>\n<p>Equivalently, $\\Cosh_G(X, \\mathscr C) \\simeq\n\\underline{\\mathrm{Fun}}(\\, ]X/G[^{\\mathrm{op}},\\; \\mathscr C\\, )$.</p>\n</blockquote>\n<p>Taking $G = \\{e\\}$ recovers $\\Sh(X, \\mathscr C) \\simeq\n\\underline{\\mathrm{Fun}}(]X[, \\mathscr C)$ and $\\Cosh(X, \\mathscr C)\n\\simeq \\underline{\\mathrm{Fun}}([X], \\mathscr C)$.</p>\n<h2>Sketch of the equivalence (sheaf case)</h2>\n<p>Given $(V, a) \\in \\Sh_G(X, \\mathscr C)$, define $F :\\, ]X/G[\\, \\to\n\\mathscr C$ by</p>\n<ul>\n<li>$F(E) := V_E$;</li>\n<li>for $g \\in \\Hom_{]X/G[}(E, E')$ (i.e.\\ $g \\cdot E \\preceq E'$),\n  $F(g) := r^V_{g \\cdot E,\\, E'} \\circ a^V_{g, E}$.</li>\n</ul>\n<p>Functoriality ($F(h) \\circ F(g) = F(hg)$ for composable $g : E \\to\nE'$, $h : E' \\to E''$) is a direct chase using the equivariance\naxiom of $a^V$ and transitivity of $r^V$.</p>\n<p><strong>Inverse.</strong> Given $F :\\, ]X/G[\\, \\to \\mathscr C$, set $V_E := F(E)$,\n$r^V_{E, E'} := F(e : E \\to E')$ (the identity element $e \\in G$ as\na morphism $E \\to E'$ whenever $E \\preceq E'$), and $a^V_{g, E} :=\nF(g : E \\to g \\cdot E)$.</p>\n<p>Cosheaf case is dual: $F : [X/G] \\to \\mathscr C$ takes morphisms in\nthe <em>reverse</em> direction, matching corestriction.</p>\n<h2>Corollary: stalk actions as endomorphism actions</h2>\n<p>Under the equivalence, the stalk action of $\\Stab_G(E)$ on $V_E$\n(a $G$-equivariant sheaf/cosheaf datum) is the endomorphism action\n$\\End_{]X/G[}(E) \\cong \\Stab_G(E)$ on $F(E)$\n(<a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_category\" href=\"cellular_categories_orbit_category.html\">The orbit categories ]X/G[ and [X/G]</a>).</p>\n<h2>Lean formalization</h2>\n<p><strong>What is done.</strong>  The two-sided packaging of $G$-equivariant\n(co)sheaves is fully in place:</p>\n<pre><code class=\"language-lean\">class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where\n  act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))\n  act_map : ...    -- naturality with restriction\n  act_one : ...    -- unit\n  act_mul : ...    -- multiplicativity\nclass GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where\n  ...              -- analogous\nstructure GCosheaf (C : Type*) [Category C] where\n  base : Cosheaf X C\n  equiv : GEquivariantCosheaf G X base\ninstance : Category (GCosheaf G X C) := ...\n</code></pre>\n<p>$G$-equivariant cosheaves are bundled as <code>GCosheaf G X C</code> with a\n<code>Category</code> instance (natural transformations commuting with <code>act</code>\nat every cell).  This is what the reduction node\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a> uses as its LHS.</p>\n<p><strong>What is in progress.</strong>  The equivalence\n$\\Cosh_G(X, \\mathscr C) \\simeq \\Fun(\\,]X/G[^{\\mathrm{op}}, \\mathscr C)$\nis being built up in <code>SheafOnBuilding.GCosheafToFun</code> starting from\nthe forward direction:</p>\n<pre><code class=\"language-lean\">noncomputable def GCosheaf.mapOfG\n    (W : GCosheaf G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :\n    W.base.obj (op E) ⟶ W.base.obj (op E') :=\n  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E').inv\n\ntheorem GCosheaf.mapOfG_one (W : GCosheaf G X C) (E : X) :\n    W.mapOfG (1 : G) ... = 𝟙 (W.base.obj (op E))\n</code></pre>\n<p><code>mapOfG</code> will be the morphism-on-morphisms half of the functor\n$W \\mapsto (F_W : ]X/G[^{\\mathrm{op}} \\to \\mathscr C)$; <code>mapOfG_one</code>\nis one of the two functoriality axioms.  The multiplicativity\nhalf (<code>mapOfG_comp</code>), the full functor packaging, and the inverse\ndirection are the remaining pieces.  The sheaf-side counterpart is\nnot yet started.</p>\n<p>Consequences for the reduction node.  Until the equivalence is\ncomplete on the Lean side, the reduction theorem\n<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a>\n$$\n\\Cosh_G(X, \\mathscr C) \\;\\simeq\\; \\Fun([S]^{\\mathrm{op}}, \\mathscr C)\n$$\nis fully Lean-formalised on its <em>categorical scaffolding</em> half\n(<code>funCatEquivOfQFD</code>) but still leans on the pending\n$\\Cosh_G \\simeq \\Fun(]X/G[^{\\mathrm{op}})$ piece for closure.</p>\n<h3>Hypotheses used</h3>\n<table>\n<thead>\n<tr>\n<th>Statement</th>\n<th>Hypotheses consumed</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>$\\Sh_G / \\Cosh_G$ as bundled types</td>\n<td><code>MulAction G X</code>, <code>GCellComplex G X</code></td>\n</tr>\n<tr>\n<td>$F(g) = r \\circ a$ construction</td>\n<td>(co)sheaf functoriality + <code>act_map</code> (naturality)</td>\n</tr>\n<tr>\n<td>Inverse (functor to equivariant sheaf)</td>\n<td><code>act_one</code>, <code>act_mul</code></td>\n</tr>\n<tr>\n<td><code>mapOfG_one</code> in Lean</td>\n<td><code>GEquivariantCosheaf.act_one_inv</code></td>\n</tr>\n</tbody>\n</table>\n<p>None involve a Lean-kernel <code>axiom</code>.</p>",
   "proof_html": null,
   "deps": [
     {
@@ -17,12 +17,168 @@
       "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
     },
     {
-      "id": "cellular_categories.quotient_category_jXGk",
-      "title": "The quotient categories ]X/G[ and [X/G]",
-      "href": "cellular_categories/cellular_categories_quotient_category_jXGk.html"
+      "id": "cellular_categories.orbit_category",
+      "title": "The orbit categories ]X/G[ and [X/G]",
+      "href": "cellular_categories/cellular_categories_orbit_category.html"
     }
   ],
-  "dependents": [],
-  "lean_refs": [],
-  "lean_modules": []
+  "dependents": [
+    {
+      "id": "equivariant_sheaves.reduction_to_qfd",
+      "title": "Reduction of G-equivariant cosheaves to a QFD",
+      "href": "equivariant_sheaves/qfd/equivariant_sheaves_reduction_to_qfd.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.GEquivariantSheaf",
+      "display_name": "SheafOnBuilding.GEquivariantSheaf",
+      "qualified_name": "SheafOnBuilding.GEquivariantSheaf",
+      "module": "SheafOnBuilding.GEquivariant",
+      "kind": "class",
+      "signature": "class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where\n  /-- Stalk-level action of `g` at `E` as an iso. -/\n  act : ∀ (g : G) (E : X), F.obj E ≅ F.obj (g • E)\n  /-- Naturality against sheaf restrictions. -/\n  act_map : ∀ (g : G) {E F' : X} (h : E ≤ F'),\n    (act g E).hom ≫ F.map (homOfLE (GCellComplex.smul_le g h)) =\n      F.map (homOfLE h) ≫ (act g F').hom\n  /-- Identity: `act 1 E = 𝟙`, modulo `eqToHom` for `1 • E = E`. -/\n  act_one : ∀ E : X,\n    (act 1 E).hom ≫ eqToHom (show F.obj ((1 : G) • E) = F.obj E by rw [one_smul]) =\n      𝟙 (F.obj E)\n  /-- Multiplicativity. -/\n  act_mul : ∀ (g h : G) (E : X),\n    (act (g * h) E).hom ≫\n        eqToHom (show F.obj ((g * h) • E) = F.obj (g • h • E) by rw [mul_smul]) =\n      (act h E).hom ≫ (act g (h • E)).hom",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GEquivariant.lean#L61",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GEquivariantCosheaf",
+      "display_name": "SheafOnBuilding.GEquivariantCosheaf",
+      "qualified_name": "SheafOnBuilding.GEquivariantCosheaf",
+      "module": "SheafOnBuilding.GEquivariant",
+      "kind": "class",
+      "signature": "class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where\n  /-- Stalk-level action of `g` at `E` as an iso. -/\n  act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))\n  /-- Naturality against cosheaf restrictions: for `h : E ≤ F'`,\n  ```\n  F.obj (op F') ──── F.map (homOfLE h).op ──► F.obj (op E)\n       │                                          │\n       │ (act g F').hom                           │ (act g E).hom\n       ▼                                          ▼\n  F.obj (op (g•F')) ─ F.map (...smul_le...).op ► F.obj (op (g•E))\n  ```\n  -/\n  act_map : ∀ (g : G) {E F' : X} (h : E ≤ F'),\n    F.map (homOfLE h).op ≫ (act g E).hom =\n      (act g F').hom ≫ F.map (homOfLE (GCellComplex.smul_le g h)).op\n  /-- Identity: `(act 1 E).hom = 𝟙`, modulo `eqToHom` for `1 • E = E`. -/\n  act_one : ∀ E : X,\n    (act 1 E).hom ≫\n        eqToHom (show F.obj (op ((1 : G) • E)) = F.obj (op E) by rw [one_smul]) =\n      𝟙 (F.obj (op E))\n  /-- Multiplicativity. -/\n  act_mul : ∀ (g h : G) (E : X),\n    (act (g * h) E).hom ≫\n        eqToHom (show F.obj (op ((g * h) • E)) = F.obj (op (g • h • E))\n          by rw [mul_smul]) =\n      (act h E).hom ≫ (act g (h • E)).hom",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GEquivariant.lean#L83",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf",
+      "display_name": "SheafOnBuilding.GCosheaf",
+      "qualified_name": "SheafOnBuilding.GCosheaf",
+      "module": "SheafOnBuilding.GCosheaf",
+      "kind": "structure",
+      "signature": "structure GCosheaf (C : Type*) [Category C] where\n  /-- Underlying cosheaf `F : Xᵒᵖ ⥤ C`. -/\n  base : Cosheaf X C\n  /-- The equivariant structure witnessing `G`-equivariance. -/\n  equiv : GEquivariantCosheaf G X base",
+      "docstring": "Bundled `G`-equivariant cosheaf on `X` with values in `C`.",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GCosheaf.lean#L37",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf.category",
+      "display_name": "SheafOnBuilding.GCosheaf.category",
+      "qualified_name": "SheafOnBuilding.GCosheaf.category",
+      "module": "SheafOnBuilding.GCosheaf",
+      "kind": "instance",
+      "signature": "instance category : Category (GCosheaf G X C) where\n  Hom F F' := Hom F F'\n  id F := Hom.id F\n  comp α β := Hom.comp α β\n  id_comp _ := Subtype.ext (Category.id_comp _)\n  comp_id _ := Subtype.ext (Category.comp_id _)\n  assoc _ _ _ := Subtype.ext (Category.assoc _ _ _)",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GCosheaf.lean#L81",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf.mapOfG",
+      "display_name": "SheafOnBuilding.GCosheaf.mapOfG",
+      "qualified_name": "SheafOnBuilding.GCosheaf.mapOfG",
+      "module": "SheafOnBuilding.GCosheafToFun",
+      "kind": "def",
+      "signature": "noncomputable def GCosheaf.mapOfG\n    (W : GCosheaf G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :\n    W.base.obj (op E) ⟶ W.base.obj (op E')",
+      "docstring": "The building block of the forward-direction functor's `.map`.",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GCosheafToFun.lean#L36",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf.mapOfG_one",
+      "display_name": "SheafOnBuilding.GCosheaf.mapOfG_one",
+      "qualified_name": "SheafOnBuilding.GCosheaf.mapOfG_one",
+      "module": "SheafOnBuilding.GCosheafToFun",
+      "kind": "theorem",
+      "signature": "theorem GCosheaf.mapOfG_one (W : GCosheaf G X C) (E : X) :\n    W.mapOfG (1 : G) (show (1 : G) • E ≤ E from by rw [one_smul]) =\n      𝟙 (W.base.obj (op E))",
+      "docstring": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GCosheafToFun.lean#L49",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.GEquivariant",
+      "display_name": "SheafOnBuilding.GEquivariant",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GEquivariant.lean#L1",
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf",
+      "display_name": "SheafOnBuilding.GCosheaf",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GCosheaf.lean#L1",
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SheafOnBuilding.GCosheafToFun",
+      "display_name": "SheafOnBuilding.GCosheafToFun",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/GCosheafToFun.lean#L1",
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat",
+      "display_name": "SheafOnBuilding.OrbitCat",
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "23953a7c3675bb57fa9b220c7426d84115adc21c",
+      "short_revision": "23953a7",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/23953a7c3675bb57fa9b220c7426d84115adc21c/SheafOnBuilding/OrbitCat.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

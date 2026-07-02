@@ -4,22 +4,22 @@
     "title": "Cellular Categories",
     "href": "cellular_categories/index.html",
     "parent": null,
-    "node_count": 13,
-    "descendant_node_count": 13
+    "node_count": 12,
+    "descendant_node_count": 12
   },
   "counts": {
-    "internal_nodes": 13,
+    "internal_nodes": 12,
     "inlined_nodes": 0,
-    "descendant_nodes": 13,
+    "descendant_nodes": 12,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 13,
+    "non_proof_plan_nodes": 12,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 22,
-    "visible_nodes_with_selected_proof_plans": 22
+    "visible_nodes_without_proof_plans": 21,
+    "visible_nodes_with_selected_proof_plans": 21
   },
   "nodes": [
     {
@@ -42,23 +42,23 @@
       "id": "cellular_categories.equivariant_sheaves",
       "title": "G-equivariant sheaves and cosheaves",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "cellular_categories/cellular_categories_equivariant_sheaves.html",
       "payload": "node_payloads/cellular_categories_equivariant_sheaves.json"
     },
     {
       "id": "cellular_categories.equivariant_via_functors",
-      "title": "Equivalence: G-equivariant (co)sheaves and functors on ]X/G[",
-      "kind": "lemma",
-      "status": "staged",
+      "title": "G-equivariant (co)sheaves as functors on ]X/G[ resp. [X/G]",
+      "kind": "proposition",
+      "status": "admitted",
       "href": "cellular_categories/cellular_categories_equivariant_via_functors.html",
       "payload": "node_payloads/cellular_categories_equivariant_via_functors.json"
     },
     {
       "id": "cellular_categories.orbit_category",
-      "title": "The orbit category ]X/G[ as a Lean category",
+      "title": "The orbit categories ]X/G[ and [X/G]",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "cellular_categories/cellular_categories_orbit_category.html",
       "payload": "node_payloads/cellular_categories_orbit_category.json"
     },
@@ -93,14 +93,6 @@
       "status": "staged",
       "href": "cellular_categories/cellular_categories_orientation.html",
       "payload": "node_payloads/cellular_categories_orientation.json"
-    },
-    {
-      "id": "cellular_categories.quotient_category_jXGk",
-      "title": "The quotient categories ]X/G[ and [X/G]",
-      "kind": "definition",
-      "status": "staged",
-      "href": "cellular_categories/cellular_categories_quotient_category_jXGk.html",
-      "payload": "node_payloads/cellular_categories_quotient_category_jXGk.json"
     },
     {
       "id": "cellular_categories.sheaf_of_subgroups",
@@ -149,12 +141,17 @@
       "kind": "uses"
     },
     {
-      "from": "cellular_categories.quotient_category_jXGk",
+      "from": "cellular_categories.orbit_category",
       "to": "cellular_categories.equivariant_via_functors",
       "kind": "uses"
     },
     {
-      "from": "cellular_categories.quotient_category_jXGk",
+      "from": "cellular_categories.category_jXk",
+      "to": "cellular_categories.orbit_category",
+      "kind": "uses"
+    },
+    {
+      "from": "cellular_categories.cw_complex_setting",
       "to": "cellular_categories.orbit_category",
       "kind": "uses"
     },
@@ -176,16 +173,6 @@
     {
       "from": "cellular_categories.cw_complex_setting",
       "to": "cellular_categories.orientation",
-      "kind": "uses"
-    },
-    {
-      "from": "cellular_categories.category_jXk",
-      "to": "cellular_categories.quotient_category_jXGk",
-      "kind": "uses"
-    },
-    {
-      "from": "cellular_categories.cw_complex_setting",
-      "to": "cellular_categories.quotient_category_jXGk",
       "kind": "uses"
     },
     {
@@ -325,13 +312,6 @@
       "count": 2
     },
     {
-      "from": "cellular_categories.quotient_category_jXGk",
-      "to": "topic:coefficient_systems",
-      "kind": "boundary_dependent",
-      "topic": "coefficient_systems",
-      "count": 1
-    },
-    {
       "from": "cellular_categories.sheaf_of_subgroups",
       "to": "topic:coefficient_systems",
       "kind": "boundary_dependent",
@@ -375,6 +355,20 @@
     },
     {
       "from": "cellular_categories.equivariant_sheaves",
+      "to": "topic:equivariant_sheaves.qfd",
+      "kind": "boundary_dependent",
+      "topic": "equivariant_sheaves.qfd",
+      "count": 1
+    },
+    {
+      "from": "cellular_categories.equivariant_via_functors",
+      "to": "topic:equivariant_sheaves.qfd",
+      "kind": "boundary_dependent",
+      "topic": "equivariant_sheaves.qfd",
+      "count": 1
+    },
+    {
+      "from": "cellular_categories.orbit_category",
       "to": "topic:equivariant_sheaves.qfd",
       "kind": "boundary_dependent",
       "topic": "equivariant_sheaves.qfd",
@@ -413,7 +407,7 @@
       "id": "cellular-action",
       "title": "cellular-action",
       "href": "keywords/cellular-action.html",
-      "count": 3
+      "count": 2
     },
     {
       "id": "chain-complex",
@@ -450,6 +444,12 @@
       "title": "equivalence",
       "href": "keywords/equivalence.html",
       "count": 3
+    },
+    {
+      "id": "equivariance",
+      "title": "equivariance",
+      "href": "keywords/equivariance.html",
+      "count": 1
     },
     {
       "id": "equivariant",
@@ -504,12 +504,6 @@
       "title": "qfd",
       "href": "keywords/qfd.html",
       "count": 2
-    },
-    {
-      "id": "quotient-category",
-      "title": "quotient-category",
-      "href": "keywords/quotient-category.html",
-      "count": 1
     },
     {
       "id": "representation",
