@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E — Sheaves on Buildings — Knowledge Base</title>
+  <title>Functor-category equivalence: Fun([X&#39;]^op, C) ≌ Fun(]X/G[^op, C) — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -43,7 +43,7 @@
           <a href="../building/index.html">Building</a>
         </li>
       
-        <li class="topic-leaf">
+        <li class="topic-leaf topic-active">
           <a href="../cellular_categories/index.html">Cellular Categories</a>
         </li>
       
@@ -55,8 +55,15 @@
           <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        <li class="topic-parent">
+          <details data-topic-root="equivariant_sheaves">
+            <summary><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -318,6 +325,8 @@
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
+        <li><a href="../keywords/orbit-category.html">orbit-category</a></li>
+      
         <li><a href="../keywords/orbits.html">orbits</a></li>
       
         <li><a href="../keywords/orientation.html">orientation</a></li>
@@ -365,6 +374,8 @@
         <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stalk.html">stalk</a></li>
       
         <li><a href="../keywords/star.html">star</a></li>
       
@@ -414,17 +425,17 @@
   </nav>
   <main>
     
-<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-equivariant_sheaves-2e-qfd_orbit_lemma">
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-cellular_categories-2e-orbit_functor_cat_equivalence">
   <header class="lemma_thmheading thm-heading">
     <span class="lemma_thmcaption thm-caption">Lemma</span>
-    <span class="lemma_thmtitle thm-title">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</span>
+    <span class="lemma_thmtitle thm-title">Functor-category equivalence: Fun([X&#39;]^op, C) ≌ Fun(]X/G[^op, C)</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-lemma">lemma</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-equivariant_sheaves-2e-qfd_orbit_lemma">#</a>
+      <a class="permalink" href="#node-cellular_categories-2e-orbit_functor_cat_equivalence">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -440,7 +451,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
+        <li><a href="cellular_categories_orbit_subcomplex_equivalence.html">QFD inclusion [X&#39;] ↪ ]X/G[ is a categorical equivalence</a></li>
         
       </ul>
     </div>
@@ -454,62 +465,27 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L134"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
+          <code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code>
           
           
           
-          <pre class="lean-signature"><code>theorem orbit_eq_iff (G&#39; : Subgroup G) (S : Subcomplex X)
-    [IsQuasiFundDomain (G</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L119"><code>SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul</code></a>
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.iota_smul_of_mem_G&#39;</code>?</span>
           
           
           
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
           
           
-          
-          <pre class="lean-signature"><code>theorem stabilizer_smul (n : G) (E : X) :
-    MulAction.stabilizer G (n • E) =
-      (MulAction.stabilizer G E).map (MulEquiv.toMonoidHom (MulAut.conj n))</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L258"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem orbit_eq_iff ⦃E F : X⦄ (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
-    g • E = h • F ↔
-      ∃ n ∈ G&#39;, n • E = F ∧ (g⁻¹ * h * n) ∈ d.P E</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
+        <code>SheafOnBuilding.OrbitFunEquiv</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
       </p>
       
     </div>
@@ -517,56 +493,39 @@
   
 
   <div class="lemma_thmcontent thm-content body">
-    <h1>QFD orbit lemma</h1>
-<p>Let $X' \subseteq X$ be a QFD for $G$ with stabilizing subgroup $G'$.</p>
+    <h1>$\underline{\mathrm{Fun}}([X']^{\mathrm{op}}, \mathscr C) \simeq \underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)$</h1>
+<p>Corollary of <a class="node-ref" data-node-id="cellular_categories.orbit_subcomplex_equivalence" href="cellular_categories_orbit_subcomplex_equivalence.html">QFD inclusion [X&#x27;] ↪ ]X/G[ is a categorical equivalence</a>.</p>
 <blockquote>
-<p><strong>Lemma.</strong> The action map $G \times [\![X']\!] \to [\![X]\!]$,
-$(g,E) \mapsto gE$ is surjective. For $E,F \in [\![X']\!]$ and
-$g,h \in G$, the equality $gE = hF$ holds if and only if there exists
-$n \in G'$ with $nE = F$ and $g^{-1}hn \in \Fix_G(E)$.</p>
+<p><strong>Corollary.</strong> If $S$ is a QFD for $G' \le G$, then for any category
+$\mathscr C$
+$$\underline{\mathrm{Fun}}\bigl([X']^{\mathrm{op}}, \mathscr C\bigr)
+&gt;   \;\simeq\;
+&gt;   \underline{\mathrm{Fun}}\bigl(\,]X/G[^{\mathrm{op}},\,\mathscr C\bigr).$$</p>
 </blockquote>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Surjectivity is immediate from the QFD bijection
-$G' \backslash [\![X']\!] \cong G \backslash [\![X]\!]$. For the second
-clause: if $gE = hF$ then $E$ and $F$ lie in the same $G$-orbit; by the QFD
-bijection, some $n \in G'$ satisfies $nE = F$, and
-$gE = hF = hnE$ forces $g^{-1}hn \in \Stab_G(E) = \Fix_G(E)$. The converse
-is immediate. $\square$</p>
-<p>This lemma is the technical backbone for reducing $G$-equivariant data on
-$X$ to $G'$-equivariant data on $X'$; see
-<a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a>.</p>
-<h2>Variant with a subgroup factorization</h2>
-<p>If $\{P_E\}_{E \in [\![X']\!]}$ is a family of subgroups with $nP_En^{-1} =
-P_{nE}$ and $\Fix_{G'}(E) P_E = \Fix_G(E)$, then $gE = hF$ iff there is
-$n \in G'$ with $nE = F$ and $g^{-1}hn \in P_E$. This refined form is the
-input to the induction construction
-[[node:equivariant_sheaves.induction_GxP_X]].</p>
+        <p>Full-subcategory inclusion $\iota : [X'] \hookrightarrow \,]X/G[$
+is an equivalence by <a class="node-ref" data-node-id="cellular_categories.orbit_subcomplex_equivalence" href="cellular_categories_orbit_subcomplex_equivalence.html">QFD inclusion [X&#x27;] ↪ ]X/G[ is a categorical equivalence</a>.
+Passing to opposite categories preserves equivalences, and the functor
+<code>Equivalence.congrLeft</code> sends an equivalence $\mathcal A \simeq \mathcal B$
+to an equivalence $\underline{\mathrm{Fun}}(\mathcal A, \mathscr C) \simeq
+\underline{\mathrm{Fun}}(\mathcal B, \mathscr C)$. $\square$</p>
 <h2>Lean formalization</h2>
-<p>The plain form is <code>IsQuasiFundDomain.orbit_eq_iff</code>:</p>
-<pre><code class="language-lean">theorem orbit_eq_iff (G' : Subgroup G) (S : Subcomplex X)
-    [IsQuasiFundDomain G' S]
-    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
-    g • E = h • F ↔
-      ∃ n ∈ G',
-        n • E = F ∧ (g⁻¹ * h * n) ∈ MulAction.stabilizer G E
+<pre><code class="language-lean">noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G' S] :
+    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((OrbitCat G X)ᵒᵖ ⥤ C) :=
+  letI := ιOnSubcomplex_isEquivalence G' S
+  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)
 </code></pre>
-<p>The <code>(→)</code> direction is the <code>orbit_iff</code> clause of <code>IsQuasiFundDomain</code>
-re-expressed with $\Fix_G(E)$ read as <code>MulAction.stabilizer G E</code>; the
-<code>(←)</code> direction is a direct group-action calculation with no QFD
-hypothesis.</p>
-<p>The refined form with an explicit family
-$\{P_E\}$ requires an [[induction datum|node:equivariant_sheaves.induction_data_reverse]]
-<code>InductionData G' S</code> and appears as
-<code>InductionData.orbit_eq_iff</code>: the forward direction reuses
-<code>orbit_eq_iff</code> and absorbs the $\Fix_G$ residue via the $\mathrm{P4}$
-factorisation; the backward direction uses <code>P3</code> and $G$-equivariance.</p>
-<p>Equivariance of $\Fix_G$ under $G$-conjugation, needed above, is
-<code>MulAction.stabilizer_smul_eq_stabilizer_map_conj</code> from Mathlib; a
-project-local specialisation is exposed as
-<code>IsQuasiFundDomain.stabilizer_smul</code>.</p>
+<p>Uses <code>Functor.op</code> (preserves <code>IsEquivalence</code>) composed with mathlib's
+<code>Equivalence.congrLeft</code>.  Together with the still-to-be-formalized
+$\Cosh_G(X, C) \simeq \underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, C)$
+equivalence (<a class="node-ref" data-node-id="cellular_categories.equivariant_via_functors" href="cellular_categories_equivariant_via_functors.html">Equivalence: G-equivariant (co)sheaves and functors on ]X/G[</a>) this
+gives the first equivalence
+$$\Cosh_G(X, C) \;\simeq\; \underline{\mathrm{Fun}}([X']^{\mathrm{op}}, C)$$
+of Sheaf7 Prop 2.6.3 (<a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a>).</p>
       </div>
     </details>
     
@@ -575,25 +534,12 @@ project-local specialisation is exposed as
   
 
   
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="../depth_zero_reduction/depth_zero_reduction_M_K_orbit_bijection.html">M_{x,0+}\B(M)_d ↔ K_{x,0+}\(K_x B(M))_d bijection</a></li>
-      
-      <li><a href="equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a></li>
-      
-      <li><a href="equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a></li>
-      
-    </ul>
-  </section>
-  
 
   
 
   
   <footer class="tags">
-    <span class="tag">qfd</span><span class="tag">orbits</span>
+    <span class="tag">functor-category</span><span class="tag">equivalence</span><span class="tag">qfd</span>
   </footer>
   
 </article>

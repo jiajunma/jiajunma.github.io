@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 12,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 18,
-    "visible_nodes_with_selected_proof_plans": 18
+    "visible_nodes_without_proof_plans": 19,
+    "visible_nodes_with_selected_proof_plans": 19
   },
   "nodes": [
     {
@@ -263,7 +263,14 @@
       "title": "Equivariant Sheaves",
       "href": "equivariant_sheaves/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 14
+      "node_count": 15
+    },
+    {
+      "id": "equivariant_sheaves.qfd",
+      "title": "Equivariant Sheaves.Qfd",
+      "href": "equivariant_sheaves/qfd/index.html",
+      "role": "dependency",
+      "node_count": 4
     },
     {
       "id": "representations",
@@ -325,16 +332,16 @@
     },
     {
       "from": "topic:equivariant_sheaves",
-      "to": "depth_zero_reduction.M_K_orbit_bijection",
+      "to": "depth_zero_reduction.res_sat_quasi_inverse",
       "kind": "boundary_dependency",
       "topic": "equivariant_sheaves",
       "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
-      "to": "depth_zero_reduction.res_sat_quasi_inverse",
+      "from": "topic:equivariant_sheaves.qfd",
+      "to": "depth_zero_reduction.M_K_orbit_bijection",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.qfd",
       "count": 1
     },
     {

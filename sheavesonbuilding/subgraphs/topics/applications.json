@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 21,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 6,
+    "boundary_topics": 7,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 28,
-    "visible_nodes_with_selected_proof_plans": 28
+    "visible_nodes_without_proof_plans": 29,
+    "visible_nodes_with_selected_proof_plans": 29
   },
   "nodes": [
     {
@@ -351,7 +351,7 @@
       "title": "Cellular Categories",
       "href": "cellular_categories/index.html",
       "role": "dependency",
-      "node_count": 8
+      "node_count": 13
     },
     {
       "id": "coefficient_systems",
@@ -372,7 +372,14 @@
       "title": "Equivariant Sheaves",
       "href": "equivariant_sheaves/index.html",
       "role": "dependency",
-      "node_count": 14
+      "node_count": 15
+    },
+    {
+      "id": "equivariant_sheaves.qfd",
+      "title": "Equivariant Sheaves.Qfd",
+      "href": "equivariant_sheaves/qfd/index.html",
+      "role": "dependency",
+      "node_count": 4
     },
     {
       "id": "references",
@@ -525,16 +532,16 @@
     },
     {
       "from": "topic:equivariant_sheaves",
-      "to": "applications.qfd_from_alcove",
+      "to": "applications.unramified_characters_cosheaf",
       "kind": "boundary_dependency",
       "topic": "equivariant_sheaves",
       "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
-      "to": "applications.unramified_characters_cosheaf",
+      "from": "topic:equivariant_sheaves.qfd",
+      "to": "applications.qfd_from_alcove",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.qfd",
       "count": 1
     },
     {

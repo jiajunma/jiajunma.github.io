@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Universal property of G ×^P X&#39; and induction by stages — Sheaves on Buildings — Knowledge Base</title>
+  <title>Fixator action on the stalk of a G-equivariant cosheaf — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -55,8 +55,15 @@
           <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="equivariant_sheaves">
+            <summary><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -318,6 +325,8 @@
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
+        <li><a href="../keywords/orbit-category.html">orbit-category</a></li>
+      
         <li><a href="../keywords/orbits.html">orbits</a></li>
       
         <li><a href="../keywords/orientation.html">orientation</a></li>
@@ -365,6 +374,8 @@
         <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stalk.html">stalk</a></li>
       
         <li><a href="../keywords/star.html">star</a></li>
       
@@ -414,20 +425,22 @@
   </nav>
   <main>
     
-<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induction_universal_property">
-  <header class="proposition_thmheading thm-heading">
-    <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Universal property of G ×^P X&#39; and induction by stages</span>
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-equivariant_sheaves-2e-stalk_action">
+  <header class="lemma_thmheading thm-heading">
+    <span class="lemma_thmcaption thm-caption">Lemma</span>
+    <span class="lemma_thmtitle thm-title">Fixator action on the stalk of a G-equivariant cosheaf</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-proposition">proposition</span>
+      <span class="badge kind-lemma">lemma</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-equivariant_sheaves-2e-induction_universal_property">#</a>
+      <a class="permalink" href="#node-equivariant_sheaves-2e-stalk_action">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -438,11 +451,9 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
+        <li><a href="../cellular_categories/cellular_categories_equivariant_sheaves.html">G-equivariant sheaves and cosheaves</a></li>
         
-        <li><a href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#39;</a></li>
-        
-        <li><a href="../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a></li>
+        <li><a href="../cellular_categories/cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a></li>
         
       </ul>
     </div>
@@ -450,47 +461,159 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.stalkHom</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.stalkHom_one</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.stalkHom_mul</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.stalkAction</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.kStalkAction</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <code>SheafOnBuilding.StalkAction</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
+      </p>
+      
+    </div>
+  </div>
+  
 
-  <div class="proposition_thmcontent thm-content body">
-    <h1>Universal property of $G \times^P X'$ and induction by stages</h1>
-<h2>Universal property</h2>
-<p>Let $Y$ be a $G$-space, and define
-$$\mathrm{Map}_{G',P}(X', Y) := \{f : X' \to Y \;|\; f \text{ is } G'\text{-equivariant and } P_x \subseteq \Fix_G(f(x)) \text{ for all } x\}.$$</p>
+  <div class="lemma_thmcontent thm-content body">
+    <h1>Fixator action on the stalk</h1>
+<p>Let $V$ be a $G$-equivariant cosheaf on $X$
+(<a class="node-ref" data-node-id="cellular_categories.equivariant_sheaves" href="../cellular_categories/cellular_categories_equivariant_sheaves.html">G-equivariant sheaves and cosheaves</a>) and $E \in X$ a cell.</p>
 <blockquote>
-<p><strong>Proposition.</strong> The assignment $f \longmapsto \widetilde f$
-with $\widetilde f([g,x]) = g \cdot f(x)$ is a natural bijection
-$$\mathrm{Map}_{G',P}(X', Y) \;\xrightarrow{\;\sim\;}\; \mathrm{Map}_G(X, Y).$$</p>
+<p><strong>Lemma.</strong> For each $k \in \Fix_G(E) = \{g : g\cdot E = E\}$, the
+$\mathscr C$-morphism $a^V_{k,E} : V_E \to V_{kE} = V_E$ is an
+endomorphism of $V_E$, and the map
+$$\rho^V_E : \Fix_G(E) \to \mathrm{End}_\mathscr C(V_E), \quad k \mapsto a^V_{k,E}$$
+is a monoid homomorphism.</p>
 </blockquote>
+<p>This is what Sheaf7 line 737-738 calls "$a^V_{g,E}$ induces a $\Fix_G(E)$-action
+on $V_E$" — the K-representation structure that the paper's Prop 2.7.2
+restriction functor extracts from a $G$-equivariant cosheaf.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Well-definedness of $\widetilde f$ uses
-$(g,x) \sim (h,y) \Rightarrow y = nx$ and $g^{-1}hn \in P_x \subseteq
-\Fix_G(f(x))$, hence
-$h \cdot f(y) = h n \cdot f(x) = g \cdot (g^{-1}hn) \cdot f(x) = g \cdot f(x)$.
-Conversely, for $\Phi \in \mathrm{Map}_G(X,Y)$, set $f(x) := \Phi([1,x])$;
-$G'$-equivariance follows because $\Phi$ is $G$-equivariant, and the
-$P_x$-fixing condition follows from $[1,x] = [p,x]$ for $p \in P_x$.</p>
-<h2>Induction by stages</h2>
-<p>Let $G'' \le G' \le G$, and suppose $P$ is a cosheaf of subgroups of $G$
-on a $G''$-space $X''$ satisfying (P1)–(P2) for $G'' \le G$. Set
-$P'_x := P_x \cap G'$ (a cosheaf for $G'$) and $X' := G' \times^{P'} X''$,
-and extend $P$ to $X'$ by $\widetilde P_{g' E} := g' P_E (g')^{-1}$.</p>
-<blockquote>
-<p><strong>Proposition (induction by stages).</strong> There is a canonical $G$-equivariant
-bijection
-$$\Phi \colon G \times^{\widetilde P} (G' \times^{P'} X'') \;\xrightarrow{\;\sim\;}\; G \times^P X'',
-&gt;   \qquad \Phi([g, [g', x]]) = [g g', x].$$</p>
-</blockquote>
-<p><strong>Proof.</strong> Verify that the LHS satisfies the same universal property
-as the RHS. For $f \in \mathrm{Map}_{G'', P}(X'', Y)$, define
-$\widetilde f([g',x]) := g' f(x) \in \mathrm{Map}_{G', P'}(G' \times^{P'} X'', Y)$,
-then extend to $\widetilde{\widetilde f} \in \mathrm{Map}_G(G \times^{\widetilde P}(G' \times^{P'} X''), Y)$.
-The map $f \mapsto \widetilde{\widetilde f}$ is a natural bijection. $\square$</p>
-<p>This stages identity is exactly what extends the generalized-building
-cosheaf $K$ from the apartment $A$ to the full Bruhat–Tits building of $G'$;
-see <a class="node-ref" data-node-id="building.generalized_building_bs" href="../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a>.</p>
+        <p>$\rho^V_E(k)$ is well-typed because $k\cdot E = E$ makes the
+target $V_{kE}$ propositionally equal to $V_E$ (bridged by an <code>eqToHom</code>
+in Lean).  Multiplicativity is the multiplicativity axiom <code>act_mul</code> of
+the equivariant-cosheaf structure applied at the cell $E$, together with
+the <code>eqToHom_naturality</code> shifting <code>act k</code> at the propositionally-equal
+cells $l\cdot E$ and $E$.  Sending $k = 1$ to the identity is the axiom
+<code>act_one</code>. $\square$</p>
+<h2>$K$-restricted variant</h2>
+<p>Given a $K$-cosheaf of subgroups $K$ on $X$ with $K_E \le \Fix_G(E)$
+(the axiom <code>K_le_fix</code> of <a class="node-ref" data-node-id="cellular_categories.orbit_category" href="../cellular_categories/cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a>'s
+input <code>KData</code>), composing with the inclusion $K_E \hookrightarrow
+\Fix_G(E)$ yields</p>
+<p>$$\rho^V_{K,E} : K_E \to \mathrm{End}_\mathscr C(V_E),$$</p>
+<p>the $K_E$-representation structure that appears as Condition (1) of
+Definition 2.7.1 in Sheaf7 (locator <code>Sheaf7.tex §2.7</code>, line 750-761).</p>
+<h2>Lean formalization</h2>
+<p><code>stalkHom W E k hk : W_E ⟶ W_E</code> is the pointwise morphism, defined as
+<code>(W.equiv.act k E).hom ≫ eqToHom(W_{kE} = W_E)</code> using the hypothesis
+<code>hk : k • E = E</code>.  <code>stalkHom_one</code> uses <code>act_one</code> directly.  <code>stalkHom_mul</code>
+combines <code>act_mul</code> with a one-step <code>eqToHom_naturality</code> on the family
+<code>b ↦ (W.equiv.act k b).hom</code> plus a <code>slice_lhs</code> targeted rewrite.  The
+proof structure is analogous to <code>mapOfG_one</code> in
+<a class="node-ref" data-node-id="cellular_categories.orbit_category" href="../cellular_categories/cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a> but simpler because no
+$g^{-1}$ appears.</p>
+<p>The monoid hom <code>stalkAction W E : MulAction.stabilizer G E →* End (W_E)</code>
+packages this as a mathlib <code>MonoidHom</code> (with <code>End</code> from
+<code>CategoryTheory.Endomorphism</code>, whose multiplication convention
+$x \cdot y := y \circ x$ aligns with the composition-order in the paper).
+The K-restricted variant <code>kStalkAction κ W E : κ.K E →* End (W_E)</code>
+composes with <code>Subgroup.inclusion (κ.K_le_fix E)</code>.</p>
       </div>
     </details>
     
@@ -501,10 +624,21 @@ see <a class="node-ref" data-node-id="building.generalized_building_bs" href="..
   
 
   
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></li>
+      
+      <li><a href="../cellular_categories/index.html">Cellular Categories</a></li>
+      
+    </ul>
+  </section>
+  
 
   
   <footer class="tags">
-    <span class="tag">induction</span><span class="tag">universal-property</span><span class="tag">adjunction</span>
+    <span class="tag">stalk</span><span class="tag">stabilizer</span><span class="tag">representation</span>
   </footer>
   
 </article>

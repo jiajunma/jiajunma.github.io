@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recovering the induction data from a quasi-fundamental domain — Sheaves on Buildings — Knowledge Base</title>
+  <title>Keyword: orbit-category — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -55,8 +55,15 @@
           <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        <li class="topic-parent">
+          <details data-topic-root="equivariant_sheaves">
+            <summary><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -318,6 +325,8 @@
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
+        <li><a href="../keywords/orbit-category.html">orbit-category</a></li>
+      
         <li><a href="../keywords/orbits.html">orbits</a></li>
       
         <li><a href="../keywords/orientation.html">orientation</a></li>
@@ -365,6 +374,8 @@
         <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stalk.html">stalk</a></li>
       
         <li><a href="../keywords/star.html">star</a></li>
       
@@ -414,402 +425,35 @@
   </nav>
   <main>
     
-<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induction_data_reverse">
-  <header class="proposition_thmheading thm-heading">
-    <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Recovering the induction data from a quasi-fundamental domain</span>
-    <div class="thm_header_extras">
-      
-      <span class="badge kind-proposition">proposition</span>
+<h1>Keyword: orbit-category</h1>
+
+<div class="blueprint-node-list">
+  
+  <article class="lemma_thmwrapper theorem-style-lemma summary-node">
+    <header class="lemma_thmheading thm-heading">
+      <span class="lemma_thmcaption thm-caption">Lemma</span>
+      <a class="lemma_thmtitle thm-title" href="../cellular_categories/cellular_categories_orbit_end_stabilizer.html">Endomorphisms in ]X/G[ are the stabilizer</a>
       <span class="badge status-staged">staged</span>
-    </div>
-    <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-equivariant_sheaves-2e-induction_data_reverse">#</a>
-      
-      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
-      
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
-      
-    </div>
-  </header>
-
+    </header>
+  </article>
   
-  <div class="modal-container" id="uses-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li><a href="equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
-        
-        <li><a href="equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a></li>
-        
-        <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
-        
-      </ul>
-    </div>
-  </div>
+  <article class="proposition_thmwrapper theorem-style-proposition summary-node">
+    <header class="proposition_thmheading thm-heading">
+      <span class="proposition_thmcaption thm-caption">Proposition</span>
+      <a class="proposition_thmtitle thm-title" href="../cellular_categories/cellular_categories_orbit_subcomplex_equivalence.html">QFD inclusion [X&#39;] ↪ ]X/G[ is a categorical equivalence</a>
+      <span class="badge status-staged">staged</span>
+    </header>
+  </article>
   
-
+  <article class="definition_thmwrapper theorem-style-definition summary-node">
+    <header class="definition_thmheading thm-heading">
+      <span class="definition_thmcaption thm-caption">Definition</span>
+      <a class="definition_thmtitle thm-title" href="../cellular_categories/cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a>
+      <span class="badge status-staged">staged</span>
+    </header>
+  </article>
   
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L162"><code>SheafOnBuilding.IsQuasiFundDomain.natMap</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          <p class="lean-docstring">The **canonical map** `G × S → X`, `(g, E) ↦ g • E`.</p>
-          <pre class="lean-signature"><code>def natMap (S : Subcomplex X) : G × ↥S.carrier → X</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L166"><code>SheafOnBuilding.IsQuasiFundDomain.natMap_surjective</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem natMap_surjective (G&#39; : Subgroup G) (S : Subcomplex X)
-    [IsQuasiFundDomain G&#39; S] :
-    Function.Surjective (natMap (G</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">structure</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L201"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>structure InductionData (G&#39; : Subgroup G) (S : Subcomplex X)
-    [IsQuasiFundDomain G&#39; S] where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L228"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.P2</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem P2 ⦃E : X⦄ (hE : E ∈ S) ⦃m : G⦄ (hP : m ∈ d.P E)
-    (_hG&#39; : m ∈ G&#39;) : m • E = E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L235"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.product_le_stabilizer</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem product_le_stabilizer ⦃E : X⦄ (hE : E ∈ S)
-    {u p : G} (_hu_G&#39; : u ∈ G&#39;) (hu_fix : u • E = E) (hp : p ∈ d.P E) :
-    (u * p) • E = E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L258"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem orbit_eq_iff ⦃E F : X⦄ (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
-    g • E = h • F ↔
-      ∃ n ∈ G&#39;, n • E = F ∧ (g⁻¹ * h * n) ∈ d.P E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L307"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.rel</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def rel : (G × ↥S.carrier) → (G × ↥S.carrier) → Prop</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L370"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.setoid</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          <p class="lean-docstring">The induction relation as a `Setoid` on `G × S.carrier`.</p>
-          <pre class="lean-signature"><code>def setoid : Setoid (G × ↥S.carrier) where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L376"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.Quotient&#39;</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def Quotient&#39; : Type _</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L382"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.toX</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def toX : d.Quotient&#39; → X</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L391"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.toX_injective</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          <p class="lean-docstring">`toX` is **injective**: use `orbit_eq_iff` (→).</p>
-          <pre class="lean-signature"><code>theorem toX_injective : Function.Injective d.toX</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L400"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.toX_surjective</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem toX_surjective : Function.Surjective d.toX</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L411"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.equivX</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>noncomputable def equivX : d.Quotient&#39; ≃ X</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L504"><code>SheafOnBuilding.IsQuasiFundDomain.InductionData.smul_le_smul_of_rel</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.QuasiFundDomain
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem smul_le_smul_of_rel
-    ⦃E F : X⦄ (hE : E ∈ S) (_hF : F ∈ S) (g₁ g₂ : G)
-    (h : ∃ n ∈ G&#39;, n • E ≤ F ∧ (g₁⁻¹ * g₂ * n) ∈ d.P E) :
-    g₁ • E ≤ g₂ • F</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
-      </p>
-      
-    </div>
-  </div>
-  
-
-  <div class="proposition_thmcontent thm-content body">
-    <h1>Recovering the induction data from a quasi-fundamental domain</h1>
-<p>Fix a cellular $G$-action on an abstract cell complex $X$ and a
-[[quasi-fundamental domain|node:equivariant_sheaves.quasi_fundamental_domain]]
-$S \subseteq X$ with associated subgroup $G' \le G$.  When may one
-present $X$ as an induction $G \times^P S$ from data on $S$?</p>
-<p>Suppose we are given a <strong>cell-wise family of subgroups</strong>
-$P = \{P_E\}_{E \in S}$, $P_E \le G$, satisfying:</p>
-<ul>
-<li><strong>(P0) Cosheaf monotonicity.</strong> For $E, F \in S$ with
-  $E \preceq F$, $P_F \le P_E$.</li>
-<li><strong>(P1) $G'$-equivariance.</strong> For $n \in G'$ and $E \in S$,
-  $P_{n \cdot E} = n P_E n^{-1}$.</li>
-<li><strong>(P3) Fix bound.</strong> For $E \in S$, $P_E \le \Fix_G(E)$.</li>
-<li><strong>(P4) Fix factorisation.</strong> For $E \in S$,</li>
-</ul>
-<p>$$
-  \Fix_G(E) = \Fix_{G'}(E) \cdot P_E.
-  $$</p>
-<p>The original forward-direction axiom (P2) — namely
-$P_E \cap G' \subseteq \Fix_{G'}(E)$
-in [[node:equivariant_sheaves.induction_GxP_X]] — is a consequence
-of (P3): if $m \in P_E \cap G'$ then $m \in \Fix_G(E)$ by (P3), so
-$m \cdot E = E$; in particular $m \in \Fix_{G'}(E)$.</p>
-<h2>Reconstruction theorem</h2>
-<p><strong>Theorem.</strong>  Under the assumptions above, the equivalence relation
-on $G \times S$ defined by</p>
-<p>$$
-(g_1, E_1) \sim (g_2, E_2) \ :\iff\
-\exists n \in G',\ n \cdot E_1 = E_2 \ \wedge\ g_1^{-1} g_2 n \in P_{E_1}
-$$</p>
-<p>descends to a bijection</p>
-<p>$$
-(G \times S) / \sim \ \xrightarrow{\ \sim\ } \ X,\qquad
-[(g, E)] \mapsto g \cdot E
-$$</p>
-<p>that is $G$-equivariant, with the action $g' \cdot [(g, E)] := [(g'g, E)]$.</p>
-<p><em>Proof sketch.</em>  Well-definedness of the map on classes reduces to the
-statement that $(g_1, E_1) \sim (g_2, E_2)$ implies
-$g_1 \cdot E_1 = g_2 \cdot E_2$.  Given a witness $n$, axiom (P3)
-gives $g_1^{-1} g_2 n \in \Fix_G(E_1)$, i.e. $g_1 \cdot E_1 =
-(g_2 n) \cdot E_1 = g_2 \cdot (n \cdot E_1) = g_2 \cdot E_2$.</p>
-<p>Surjectivity is the <code>surj</code> clause of the QFD hypothesis.</p>
-<p>For injectivity, suppose $g_1 \cdot E_1 = g_2 \cdot E_2$ with
-$E_1, E_2 \in S$.  The [[QFD orbit lemma|node:equivariant_sheaves.qfd_orbit_lemma]]
-gives $n \in G'$ with $n \cdot E_1 = E_2$ and
-$g_1^{-1} g_2 n \in \Fix_G(E_1)$.  Apply (P4) to write
-$g_1^{-1} g_2 n = u \cdot p$ with $u \in \Fix_{G'}(E_1)$ and
-$p \in P_{E_1}$.  Setting $n' := n u^{-1}$ yields a fresh witness:
-$n' \in G'$ (as $G' \supseteq \{n, u\}$), $n' \cdot E_1 = n \cdot E_1 = E_2$
-(since $u$ fixes $E_1$), and
-$g_1^{-1} g_2 n' = u p u^{-1}$; by (P1) with $u \in \Fix_{G'}(E_1)$,
-$u$ normalises $P_{E_1}$, so $u p u^{-1} \in P_{E_1}$ and
-$(g_1, E_1) \sim (g_2, E_2)$. $\square$</p>
-<h2>Setwise versus pointwise: the (P0) obstruction</h2>
-<p>The most natural candidate cosheaf, $P_E := \Fix_G(E)$, automatically
-satisfies (P1), (P3), and (P4), but (P0) can fail.  Explicitly, take
-$X$ the face poset of a $2$-simplex with $G = \mathbb Z/3$ acting by
-rotation.  Then $\Fix_G$ of the top cell is all of $G$, while
-$\Fix_G$ of any vertex is trivial, so the containment
-$\Fix_G(F) \le \Fix_G(E)$ needed for $E \preceq F$ fails.</p>
-<p>A regular-CW setting avoids this obstruction by taking $\Fix_G(E)$
-to mean the <em>pointwise</em> fixator of the topological interior of the
-cell, which is monotone by continuity.  At the abstract cell-poset
-level no such refinement is available; a suitable $P$ must be
-supplied as external data or extracted from geometric structure.</p>
-<h2>Face relation on the ambient complex</h2>
-<p>Under the same hypotheses, the face relation on $X$ obeys the
-implication</p>
-<p>$$
-\Bigl(\exists n \in G',\ n \cdot E \preceq F,\ g_1^{-1} g_2 n \in P_E\Bigr)
-\ \Longrightarrow\ g_1 \cdot E \preceq g_2 \cdot F.
-$$</p>
-<p>The proof is the same absorption as in the injectivity step, ending in
-$G$-equivariance of $\preceq$ from
-<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>.  The converse is
-<em>not</em> forced by (P0)–(P4); paper §2.8 recovers it using regular-CW
-input that has no abstract analogue.</p>
-<h2>Lean formalization</h2>
-<p>The data $(P, P_0, P_1, P_3, P_4)$ is packaged as a <code>structure</code>
-<code>InductionData</code> parameterised by the ambient QFD instance
-<code>[IsQuasiFundDomain G' S]</code>.  (P2) is exposed as a derived lemma
-<code>InductionData.P2</code>; the injectivity absorption identity as
-<code>InductionData.product_le_stabilizer</code>.</p>
-<p>The relation on $G \times S$ is <code>InductionData.rel</code>, its <code>Setoid</code>
-packaging <code>InductionData.setoid</code>, the quotient type
-<code>InductionData.Quotient'</code>.  The natural map is
-<code>InductionData.toX</code>; <code>toX_injective</code> and <code>toX_surjective</code> package
-the bijection, which is bundled as
-<code>InductionData.equivX : Quotient' ≃ X</code>.</p>
-<p>The forward implication of the face relation is
-<code>InductionData.smul_le_smul_of_rel</code>; the reverse is deliberately
-absent, matching the abstract-level gap discussed above.</p>
-    
-  </div>
-
-  
-
-  
-
-  
-
-  
-  <footer class="tags">
-    <span class="tag">induction</span><span class="tag">qfd</span><span class="tag">reconstruction</span>
-  </footer>
-  
-</article>
+</div>
 
   </main>
   <script src="../graph.js"></script>

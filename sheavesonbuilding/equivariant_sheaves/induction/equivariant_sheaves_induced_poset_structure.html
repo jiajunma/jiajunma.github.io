@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Well-defined poset structure on the induced space G ×^P X&#39; — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../../abstract_cell_complex/index.html">Abstract Cell Complex</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="equivariant_sheaves">
+            <summary><a href="../../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf topic-active">
+          <a href="../../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../../keywords/alexandrov.html">alexandrov</a></li>
+      
+        <li><a href="../../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../../keywords/building.html">building</a></li>
+      
+        <li><a href="../../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../../keywords/category.html">category</a></li>
+      
+        <li><a href="../../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../../keywords/cell-complex.html">cell-complex</a></li>
+      
+        <li><a href="../../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../../keywords/cellular-embedding.html">cellular-embedding</a></li>
+      
+        <li><a href="../../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../../keywords/character.html">character</a></li>
+      
+        <li><a href="../../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../../keywords/dimension.html">dimension</a></li>
+      
+        <li><a href="../../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../../keywords/external.html">external</a></li>
+      
+        <li><a href="../../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../../keywords/fixator.html">fixator</a></li>
+      
+        <li><a href="../../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../../keywords/g-action.html">g-action</a></li>
+      
+        <li><a href="../../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../../keywords/incidence-numbers.html">incidence-numbers</a></li>
+      
+        <li><a href="../../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../../keywords/local-finiteness.html">local-finiteness</a></li>
+      
+        <li><a href="../../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../../keywords/main.html">main</a></li>
+      
+        <li><a href="../../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../../keywords/orbit-category.html">orbit-category</a></li>
+      
+        <li><a href="../../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../../keywords/orientation.html">orientation</a></li>
+      
+        <li><a href="../../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../../keywords/poset.html">poset</a></li>
+      
+        <li><a href="../../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../../keywords/reconstruction.html">reconstruction</a></li>
+      
+        <li><a href="../../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../../keywords/res.html">res</a></li>
+      
+        <li><a href="../../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../../keywords/stalk.html">stalk</a></li>
+      
+        <li><a href="../../keywords/star.html">star</a></li>
+      
+        <li><a href="../../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../../keywords/subcomplex.html">subcomplex</a></li>
+      
+        <li><a href="../../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../../keywords/support.html">support</a></li>
+      
+        <li><a href="../../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../../keywords/type.html">type</a></li>
+      
+        <li><a href="../../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../../keywords/well-definedness.html">well-definedness</a></li>
+      
+        <li><a href="../../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induced_poset_structure">
+  <header class="proposition_thmheading thm-heading">
+    <span class="proposition_thmcaption thm-caption">Proposition</span>
+    <span class="proposition_thmtitle thm-title">Well-defined poset structure on the induced space G ×^P X&#39;</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-proposition">proposition</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-equivariant_sheaves-2e-induced_poset_structure">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
+        
+        <li><a href="../../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.InductionDatum.InductionLe</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.InductionDatum.InductionLe_refl</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_refl</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.InductionDatum.InductionLe_trans</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_trans</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.InductionDatum.InductionLe_left_descends</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_right_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.InductionDatum.InductionLe_right_descends</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_right_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.InductionDatum.InductionLe_antisymm</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.InducedSpace.instPartialOrder</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace</code>, <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+      </p>
+      
+    </div>
+  </div>
+  
+
+  <div class="proposition_thmcontent thm-content body">
+    <h1>Well-defined poset structure on the induced space</h1>
+<p>Fix the induction data $(G', P)$ satisfying (P0)–(P2) and the induced
+space $X = G \times^P X'$ of
+[[node:equivariant_sheaves.induction_GxP_X]], with
+$\iota : X' \hookrightarrow X$, $E \mapsto [(1, E)]$.</p>
+<p>The face relation on $X$ is not automatic from the definition of $X$
+as a set-theoretic quotient — it must be constructed and shown to
+descend to the quotient by $\sim$.</p>
+<h2>Definition (generator + reflexive-transitive closure)</h2>
+<blockquote>
+<p><strong>Definition.</strong> The <strong>face relation</strong> $\preceq$ on $X = G \times^P
+X'$ is the smallest reflexive transitive relation on $X$ satisfying
+the following <strong>generator</strong>:
+$$
+&gt; \text{for every } g \in G \text{ and } F, E \in [\![X']\!]
+&gt; \text{ with } F \preceq E \text{ in } X', \qquad
+&gt; g \cdot \iota F \;\preceq\; g \cdot \iota E.
+&gt; $$</p>
+</blockquote>
+<p>Equivalently, $\preceq$ is the reflexive-transitive closure of the
+generator relation ${(g \cdot \iota F, g \cdot \iota E) : g \in G,\,
+F \preceq E \text{ in } X'}$ on the quotient $X$.  The chain
+condition on $X'$ (strict monotonicity of $\dim$ along proper faces)
+carries over: reflexivity is the $F = E$ case; transitivity is the
+closure axiom.</p>
+<h2>Equivalent characterisation</h2>
+<p>The reflexive-transitive closure form is elegant but not immediately
+usable for calculation.  The following point-wise characterisation
+gives a single-quantifier form used throughout the induction / QFD
+proofs:</p>
+<blockquote>
+<p><strong>Theorem (single-witness characterisation).</strong> For representatives
+$(g_1, E_1), (g_2, E_2) \in G \times X'$,
+$$
+&gt; [(g_1, E_1)] \;\preceq\; [(g_2, E_2)]
+&gt; \;\iff\;
+&gt; \exists\, n \in G',\quad n \cdot E_1 \preceq E_2 \text{ in } X'
+&gt; \;\;\text{and}\;\; g_1^{-1} g_2 n \in P_{E_1}.
+&gt; $$</p>
+</blockquote>
+<p>Note the parallel with the equivalence relation
+$\sim$ of [[node:equivariant_sheaves.induction_GxP_X]]: replacing
+$\preceq$ on $X'$ by $=$ recovers $\sim$ verbatim.</p>
+<p><strong>Proof (theorem).</strong> ($\Leftarrow$) Given $n \in G'$ with the stated
+properties, we exhibit a two-step chain
+$[(g_1, E_1)] \;\sim\; [(g_2, n \cdot E_1)] \;\preceq_{\text{gen}}\;
+[(g_2, E_2)]$:</p>
+<ul>
+<li>Equivalence step. Apply the definition of $\sim$ with witness $m
+  := n \in G'$: $m \cdot E_1 = n \cdot E_1$ (trivially), and
+  $g_1^{-1} g_2 m = g_1^{-1} g_2 n \in P_{E_1}$ by hypothesis. So
+  $(g_1, E_1) \sim (g_2, n \cdot E_1)$.</li>
+<li>Generator step. From $n \cdot E_1 \preceq E_2$ in $X'$ and the
+  generator with $F = n \cdot E_1$, $E = E_2$, $g = g_2$:
+  $g_2 \cdot \iota(n \cdot E_1) \preceq g_2 \cdot \iota E_2$, i.e.
+  $[(g_2, n \cdot E_1)] \preceq [(g_2, E_2)]$.</li>
+</ul>
+<p>Combining: $[(g_1, E_1)] \preceq [(g_2, E_2)]$.</p>
+<p>($\Rightarrow$) The single-witness form is reflexive (take $n = 1$),
+contains all generators (take $n = 1$), and is transitive under
+(P0)+(P1) (see below). Hence it contains the reflexive-transitive
+closure. $\square$</p>
+<p>The single-witness form is precisely the pre-quotient face relation
+$\preceq_{\text{rep}}$ on $G \times X'$:
+$$
+(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)
+\;:\iff\;
+\exists\, n \in G',\;\; n \cdot E_1 \preceq E_2 \;\text{and}\; g_1^{-1} g_2 n \in P_{E_1}.
+$$</p>
+<h2>Proposition: $\preceq_{\text{rep}}$ descends to a partial order</h2>
+<blockquote>
+<p><strong>Proposition.</strong> Under (P0)–(P2), $\preceq_{\text{rep}}$ on
+$G \times X'$ satisfies:</p>
+<ol>
+<li><strong>Reflexivity.</strong> $(g, E) \preceq_{\text{rep}} (g, E)$.</li>
+<li><strong>Transitivity.</strong> $(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and
+   $(g_2, E_2) \preceq_{\text{rep}} (g_3, E_3)$ imply
+   $(g_1, E_1) \preceq_{\text{rep}} (g_3, E_3)$.</li>
+<li><strong>Left descent.</strong> If $(g_1, E_1) \sim (g_1', E_1')$ then
+   $(g_1, E_1) \preceq_{\text{rep}} (h, F) \iff
+    (g_1', E_1') \preceq_{\text{rep}} (h, F)$.</li>
+<li><strong>Right descent.</strong> If $(h, F) \sim (h', F')$ then
+   $(g, E) \preceq_{\text{rep}} (h, F) \iff
+    (g, E) \preceq_{\text{rep}} (h', F')$.</li>
+<li><strong>Antisymmetry modulo $\sim$.</strong> If both
+   $(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and
+   $(g_2, E_2) \preceq_{\text{rep}} (g_1, E_1)$, then
+   $(g_1, E_1) \sim (g_2, E_2)$.</li>
+</ol>
+</blockquote>
+<p>Consequently, $\preceq$ on $X = (G \times X')/{\sim}$ is a
+well-defined partial order and coincides with both the
+reflexive-transitive closure of the generators (by the theorem) and
+the descent of $\preceq_{\text{rep}}$.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>of the proposition</p>
+<p><strong>(1) Reflexivity.</strong> Take $n := 1 \in G'$. Then $1 \cdot E = E \preceq
+E$ and $g^{-1} g \cdot 1 = 1 \in P_E$.</p>
+<p><strong>(2) Transitivity.</strong> Given witnesses $n_1$ for
+$(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and $n_2$ for
+$(g_2, E_2) \preceq_{\text{rep}} (g_3, E_3)$, take $n := n_2 n_1
+\in G'$.</p>
+<p>Face-chain: $(n_2 n_1) \cdot E_1 = n_2 \cdot (n_1 \cdot E_1)
+\preceq n_2 \cdot E_2 \preceq E_3$ using cellularity ($n_2$ preserves
+$\preceq$) and transitivity of $\preceq$ on $X'$.</p>
+<p>Membership: from $g_1^{-1} g_2 n_1 \in P_{E_1}$ and
+$g_2^{-1} g_3 n_2 \in P_{E_2}$:</p>
+<ul>
+<li>By (P0) and $n_1 \cdot E_1 \preceq E_2$: $P_{E_2} \le P_{n_1 \cdot
+  E_1}$, so $g_2^{-1} g_3 n_2 \in P_{n_1 \cdot E_1}$.</li>
+<li>By (P1): $P_{n_1 \cdot E_1} = n_1 P_{E_1} n_1^{-1}$, so there
+  exists $p \in P_{E_1}$ with $n_1 p n_1^{-1} = g_2^{-1} g_3 n_2$.</li>
+<li>Rearranging: $g_1^{-1} g_3 (n_2 n_1) = (g_1^{-1} g_2 n_1) \cdot p
+  \in P_{E_1} \cdot P_{E_1} = P_{E_1}$.</li>
+</ul>
+<p><strong>(3) Left descent.</strong> Suppose $(g_1, E_1) \sim (g_1', E_1')$ with
+witness $m \in G'$: $m \cdot E_1 = E_1'$ and $g_1^{-1} g_1' m \in
+P_{E_1}$. Assume $(g_1, E_1) \preceq_{\text{rep}} (h, F)$ with witness
+$n$. Take $n'' := n m^{-1} \in G'$:</p>
+<ul>
+<li>Face-chain: $n'' \cdot E_1' = n m^{-1} \cdot (m \cdot E_1) =
+  n \cdot E_1 \preceq F$.</li>
+<li>Membership: write $g_1^{-1} g_1' m = \alpha \in P_{E_1}$. Then
+  $(g_1')^{-1} h n'' = m \alpha^{-1} g_1^{-1} h n m^{-1}$; substitute
+  $g_1^{-1} h n \in P_{E_1}$ and use (P1) with $m$ to conclude
+  $m \alpha^{-1} (g_1^{-1} h n) m^{-1} \in m P_{E_1} m^{-1} =
+  P_{m \cdot E_1} = P_{E_1'}$.</li>
+</ul>
+<p>The reverse implication is symmetric via $m^{-1}$.</p>
+<p><strong>(4) Right descent.</strong> Suppose $(h, F) \sim (h', F')$ with witness
+$m$. Assume $(g, E) \preceq_{\text{rep}} (h, F)$ with witness $n$.
+Take $n'' := m n \in G'$:</p>
+<ul>
+<li>Face-chain: $n'' \cdot E = m \cdot (n \cdot E) \preceq m \cdot F =
+  F'$.</li>
+<li>Membership: write $h^{-1} h' m = \alpha \in P_F$. By (P0) with
+  $n \cdot E \preceq F$: $\alpha \in P_F \le P_{n \cdot E}$. By (P1):
+  $\alpha = n p n^{-1}$ for some $p \in P_E$. Compute $g^{-1} h' n'' =
+  (g^{-1} h n) \cdot p$; both factors lie in $P_E$.</li>
+</ul>
+<p><strong>(5) Antisymmetry modulo $\sim$.</strong> From
+$(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ via $n_1$ and the reverse
+via $n_2$, we obtain $(n_2 n_1) \cdot E_1 \preceq E_1$. Because the
+$G$-action is cellular it preserves dimension
+(<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>):
+$\dim((n_2 n_1) \cdot E_1) = \dim E_1$. Strict monotonicity of $\dim$
+along a proper face-chain
+(<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a>) then forces
+$(n_2 n_1) \cdot E_1 = E_1$, hence $n_1 \cdot E_1 = E_2$ (and the
+$P_{E_1}$-membership from the $n_1$-witness is exactly the
+$\sim$-witness).  $\square$</p>
+<h2>Which axioms feed into which clause</h2>
+<table>
+<thead>
+<tr>
+<th>Clause</th>
+<th>Axioms used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definition (generator + refl-trans closure)</td>
+<td>none (structural)</td>
+</tr>
+<tr>
+<td>Theorem (single-witness ⇔ closure)</td>
+<td>(P0), (P1), plus (P2) is <em>not</em> needed</td>
+</tr>
+<tr>
+<td>Reflexivity</td>
+<td>none (unit in $G'$, unit in $P_E$)</td>
+</tr>
+<tr>
+<td>Transitivity</td>
+<td>(P0), (P1)</td>
+</tr>
+<tr>
+<td>Left descent</td>
+<td>(P1)</td>
+</tr>
+<tr>
+<td>Right descent</td>
+<td>(P0), (P1)</td>
+</tr>
+<tr>
+<td>Antisymmetry mod ∼</td>
+<td>dim preservation (cellular action) + strict monotonicity</td>
+</tr>
+</tbody>
+</table>
+<p>Note: (P2) enters the <em>equivalence</em> relation via
+<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (1)
+(injectivity of $\iota$), <em>not</em> the face relation.</p>
+<h2>Consequences</h2>
+<ul>
+<li>The embedding $\iota : X' \to G \times^P X'$, $E \mapsto [(1, E)]$,
+  is order-preserving and order-reflecting; this is
+  <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (2).</li>
+<li>The dimension function $\dim([(g, E)]) := \dim E$ is well-defined
+  because $\sim$ implies dimension-equal (from $n \cdot E_1 = E_2$
+  and dimension-preservation of the $G$-action).</li>
+<li>Together with local finiteness of $X'$ (inherited via $G$-translates),
+  this equips $G \times^P X'$ with the abstract-cell-complex and
+  $G$-cell-complex instances that
+  <a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="../equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a> uses as its
+  poset-level content.</li>
+</ul>
+<h2>Lean formalization</h2>
+<p>The pre-quotient relation is exposed as the single-witness form (the
+name mirrors <code>InductionRel</code> for the equivalence relation):</p>
+<pre><code class="language-lean">def InductionLe (g₁E₁ g₂E₂ : G × X') : Prop :=
+  ∃ n ∈ d.G', n • g₁E₁.2 ≤ g₂E₂.2 ∧
+              g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2
+</code></pre>
+<p>Using the single-witness form as the primary Lean definition (rather
+than a <code>Relation.ReflTransGen</code> over generators) keeps the proofs
+elementary — each of the five clauses of the proposition then has a
+dedicated lemma:</p>
+<table>
+<thead>
+<tr>
+<th>Clause</th>
+<th>Lean lemma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(1) Reflexivity</td>
+<td><code>InductionLe_refl</code></td>
+</tr>
+<tr>
+<td>(2) Transitivity</td>
+<td><code>InductionLe_trans</code></td>
+</tr>
+<tr>
+<td>(3) Left descent</td>
+<td><code>InductionLe_left_descends</code></td>
+</tr>
+<tr>
+<td>(4) Right descent</td>
+<td><code>InductionLe_right_descends</code></td>
+</tr>
+<tr>
+<td>(5) Antisymmetry</td>
+<td><code>InductionLe_antisymm</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>PartialOrder</code> instance on <code>InducedSpace d</code> is built by
+<code>Quotient.lift₂ (InductionLe d)</code> — clauses (3) + (4) discharge the
+well-definedness side condition of <code>Quotient.lift₂</code>; clauses (1) +
+(2) discharge reflexivity and transitivity of the descended <code>le</code>;
+clause (5) discharges antisymmetry.</p>
+<pre><code class="language-lean">instance : PartialOrder (InducedSpace d) where
+  le := Quotient.lift₂ (InductionLe d) ⟨left/right descent⟩
+  le_refl  := ⟨InductionLe_refl⟩
+  le_trans := ⟨InductionLe_trans⟩
+  le_antisymm := ⟨InductionLe_antisymm⟩
+</code></pre>
+<p>The theorem "single-witness form ⇔ reflexive-transitive closure of
+the generator" is <em>not</em> separately formalised in the current library:
+the closure form serves as the mathematical definition, the
+single-witness form as the operational one, and they are known to
+coincide by the elementary two-step chain given above.  An explicit
+<code>Relation.ReflTransGen</code>-based alternative definition plus an
+equivalence lemma is a well-scoped follow-up.</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#39;</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">induction</span><span class="tag">poset</span><span class="tag">well-definedness</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

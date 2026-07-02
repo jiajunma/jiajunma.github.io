@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CW structure and QFD property on G ×^P X&#39; — Sheaves on Buildings — Knowledge Base</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}", "\\xleftarrow": "\\leftarrow", "\\xrightarrow": "\\rightarrow", "\\xrightleftarrows": "\\rightleftarrows", "\\xrightleftharpoons": "\\rightleftharpoons"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../../index.html">Sheaves on Buildings</a>
+    <a class="nav-link" href="../../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../../abstract_cell_complex/index.html">Abstract Cell Complex</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../applications/index.html">Applications</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../building/index.html">Building</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../cellular_categories/index.html">Cellular Categories</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../coefficient_systems/index.html">Coefficient Systems</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../depth_zero_reduction/index.html">Depth Zero Reduction</a>
+        </li>
+      
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="equivariant_sheaves">
+            <summary><a href="../../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf topic-active">
+          <a href="../../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../references/index.html">References</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../../representations/index.html">Representations</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../../keywords/A1.html">A1</a></li>
+      
+        <li><a href="../../keywords/CAT0.html">CAT0</a></li>
+      
+        <li><a href="../../keywords/Cartan-Hadamard.html">Cartan-Hadamard</a></li>
+      
+        <li><a href="../../keywords/E-axioms.html">E-axioms</a></li>
+      
+        <li><a href="../../keywords/F-axioms.html">F-axioms</a></li>
+      
+        <li><a href="../../keywords/F5-F6.html">F5-F6</a></li>
+      
+        <li><a href="../../keywords/HKSS.html">HKSS</a></li>
+      
+        <li><a href="../../keywords/Iwahori.html">Iwahori</a></li>
+      
+        <li><a href="../../keywords/K-axioms.html">K-axioms</a></li>
+      
+        <li><a href="../../keywords/K-condition.html">K-condition</a></li>
+      
+        <li><a href="../../keywords/K-cosheaf.html">K-cosheaf</a></li>
+      
+        <li><a href="../../keywords/K-group.html">K-group</a></li>
+      
+        <li><a href="../../keywords/K-orbit.html">K-orbit</a></li>
+      
+        <li><a href="../../keywords/K1-K3.html">K1-K3</a></li>
+      
+        <li><a href="../../keywords/K3.html">K3</a></li>
+      
+        <li><a href="../../keywords/K4.html">K4</a></li>
+      
+        <li><a href="../../keywords/Levi.html">Levi</a></li>
+      
+        <li><a href="../../keywords/N-equivariant.html">N-equivariant</a></li>
+      
+        <li><a href="../../keywords/PL.html">PL</a></li>
+      
+        <li><a href="../../keywords/T-axioms.html">T-axioms</a></li>
+      
+        <li><a href="../../keywords/acyclicity.html">acyclicity</a></li>
+      
+        <li><a href="../../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../../keywords/afmo.html">afmo</a></li>
+      
+        <li><a href="../../keywords/alcove.html">alcove</a></li>
+      
+        <li><a href="../../keywords/alexandrov.html">alexandrov</a></li>
+      
+        <li><a href="../../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../../keywords/apartment-intersection.html">apartment-intersection</a></li>
+      
+        <li><a href="../../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../../keywords/assembly.html">assembly</a></li>
+      
+        <li><a href="../../keywords/axioms.html">axioms</a></li>
+      
+        <li><a href="../../keywords/bernstein.html">bernstein</a></li>
+      
+        <li><a href="../../keywords/bestvina-savin.html">bestvina-savin</a></li>
+      
+        <li><a href="../../keywords/beta-extension.html">beta-extension</a></li>
+      
+        <li><a href="../../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../../keywords/blocks.html">blocks</a></li>
+      
+        <li><a href="../../keywords/building.html">building</a></li>
+      
+        <li><a href="../../keywords/building-axiom.html">building-axiom</a></li>
+      
+        <li><a href="../../keywords/cartesian.html">cartesian</a></li>
+      
+        <li><a href="../../keywords/category.html">category</a></li>
+      
+        <li><a href="../../keywords/category-theory.html">category-theory</a></li>
+      
+        <li><a href="../../keywords/cell-complex.html">cell-complex</a></li>
+      
+        <li><a href="../../keywords/cellular-action.html">cellular-action</a></li>
+      
+        <li><a href="../../keywords/cellular-embedding.html">cellular-embedding</a></li>
+      
+        <li><a href="../../keywords/cellular-subcomplex.html">cellular-subcomplex</a></li>
+      
+        <li><a href="../../keywords/chain-complex.html">chain-complex</a></li>
+      
+        <li><a href="../../keywords/chain-homotopy.html">chain-homotopy</a></li>
+      
+        <li><a href="../../keywords/character.html">character</a></li>
+      
+        <li><a href="../../keywords/classical.html">classical</a></li>
+      
+        <li><a href="../../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../../keywords/coinvariants.html">coinvariants</a></li>
+      
+        <li><a href="../../keywords/compatible-family.html">compatible-family</a></li>
+      
+        <li><a href="../../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../../keywords/constant.html">constant</a></li>
+      
+        <li><a href="../../keywords/construction.html">construction</a></li>
+      
+        <li><a href="../../keywords/contraction.html">contraction</a></li>
+      
+        <li><a href="../../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../../keywords/correction.html">correction</a></li>
+      
+        <li><a href="../../keywords/cosheaf.html">cosheaf</a></li>
+      
+        <li><a href="../../keywords/cw-complex.html">cw-complex</a></li>
+      
+        <li><a href="../../keywords/cw-structure.html">cw-structure</a></li>
+      
+        <li><a href="../../keywords/dat-fintzen.html">dat-fintzen</a></li>
+      
+        <li><a href="../../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../../keywords/dimension.html">dimension</a></li>
+      
+        <li><a href="../../keywords/dual.html">dual</a></li>
+      
+        <li><a href="../../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../../keywords/equivariance.html">equivariance</a></li>
+      
+        <li><a href="../../keywords/equivariant.html">equivariant</a></li>
+      
+        <li><a href="../../keywords/equivariant-sheaf.html">equivariant-sheaf</a></li>
+      
+        <li><a href="../../keywords/extension.html">extension</a></li>
+      
+        <li><a href="../../keywords/extensions.html">extensions</a></li>
+      
+        <li><a href="../../keywords/external.html">external</a></li>
+      
+        <li><a href="../../keywords/face-poset.html">face-poset</a></li>
+      
+        <li><a href="../../keywords/final-step.html">final-step</a></li>
+      
+        <li><a href="../../keywords/fintzen.html">fintzen</a></li>
+      
+        <li><a href="../../keywords/fixator.html">fixator</a></li>
+      
+        <li><a href="../../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../../keywords/functor-category.html">functor-category</a></li>
+      
+        <li><a href="../../keywords/fundamental-domain.html">fundamental-domain</a></li>
+      
+        <li><a href="../../keywords/g-action.html">g-action</a></li>
+      
+        <li><a href="../../keywords/generalized-building.html">generalized-building</a></li>
+      
+        <li><a href="../../keywords/geodesic.html">geodesic</a></li>
+      
+        <li><a href="../../keywords/geometrization.html">geometrization</a></li>
+      
+        <li><a href="../../keywords/global-existence.html">global-existence</a></li>
+      
+        <li><a href="../../keywords/h0.html">h0</a></li>
+      
+        <li><a href="../../keywords/hecke.html">hecke</a></li>
+      
+        <li><a href="../../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../../keywords/hermitian-form.html">hermitian-form</a></li>
+      
+        <li><a href="../../keywords/hypothesis.html">hypothesis</a></li>
+      
+        <li><a href="../../keywords/idempotents.html">idempotents</a></li>
+      
+        <li><a href="../../keywords/incidence-numbers.html">incidence-numbers</a></li>
+      
+        <li><a href="../../keywords/inclusions.html">inclusions</a></li>
+      
+        <li><a href="../../keywords/induced-space.html">induced-space</a></li>
+      
+        <li><a href="../../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../../keywords/invariants.html">invariants</a></li>
+      
+        <li><a href="../../keywords/isomorphism.html">isomorphism</a></li>
+      
+        <li><a href="../../keywords/isotypic.html">isotypic</a></li>
+      
+        <li><a href="../../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../../keywords/l-modular.html">l-modular</a></li>
+      
+        <li><a href="../../keywords/lanard.html">lanard</a></li>
+      
+        <li><a href="../../keywords/lanard-switch.html">lanard-switch</a></li>
+      
+        <li><a href="../../keywords/local-finiteness.html">local-finiteness</a></li>
+      
+        <li><a href="../../keywords/local-maps.html">local-maps</a></li>
+      
+        <li><a href="../../keywords/localization.html">localization</a></li>
+      
+        <li><a href="../../keywords/main.html">main</a></li>
+      
+        <li><a href="../../keywords/main-input.html">main-input</a></li>
+      
+        <li><a href="../../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../../keywords/metric-structure.html">metric-structure</a></li>
+      
+        <li><a href="../../keywords/meyer-solleveld.html">meyer-solleveld</a></li>
+      
+        <li><a href="../../keywords/mock-exp-isolation.html">mock-exp-isolation</a></li>
+      
+        <li><a href="../../keywords/mock-exponential.html">mock-exponential</a></li>
+      
+        <li><a href="../../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../../keywords/orbit-bijection.html">orbit-bijection</a></li>
+      
+        <li><a href="../../keywords/orbit-category.html">orbit-category</a></li>
+      
+        <li><a href="../../keywords/orbits.html">orbits</a></li>
+      
+        <li><a href="../../keywords/orientation.html">orientation</a></li>
+      
+        <li><a href="../../keywords/parahoric.html">parahoric</a></li>
+      
+        <li><a href="../../keywords/phi-isotypic.html">phi-isotypic</a></li>
+      
+        <li><a href="../../keywords/pi-0.html">pi-0</a></li>
+      
+        <li><a href="../../keywords/poset.html">poset</a></li>
+      
+        <li><a href="../../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../../keywords/qfd.html">qfd</a></li>
+      
+        <li><a href="../../keywords/quaternionic.html">quaternionic</a></li>
+      
+        <li><a href="../../keywords/quotient-category.html">quotient-category</a></li>
+      
+        <li><a href="../../keywords/reconstruction.html">reconstruction</a></li>
+      
+        <li><a href="../../keywords/reduction.html">reduction</a></li>
+      
+        <li><a href="../../keywords/reduction-to-M.html">reduction-to-M</a></li>
+      
+        <li><a href="../../keywords/reductive-group.html">reductive-group</a></li>
+      
+        <li><a href="../../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../../keywords/res.html">res</a></li>
+      
+        <li><a href="../../keywords/resolution.html">resolution</a></li>
+      
+        <li><a href="../../keywords/sat.html">sat</a></li>
+      
+        <li><a href="../../keywords/schneider-stuhler.html">schneider-stuhler</a></li>
+      
+        <li><a href="../../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../../keywords/serre.html">serre</a></li>
+      
+        <li><a href="../../keywords/sheaf.html">sheaf</a></li>
+      
+        <li><a href="../../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
+      
+        <li><a href="../../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../../keywords/stalk.html">stalk</a></li>
+      
+        <li><a href="../../keywords/star.html">star</a></li>
+      
+        <li><a href="../../keywords/stevens.html">stevens</a></li>
+      
+        <li><a href="../../keywords/subcomplex.html">subcomplex</a></li>
+      
+        <li><a href="../../keywords/subgroup-sheaf.html">subgroup-sheaf</a></li>
+      
+        <li><a href="../../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../../keywords/support.html">support</a></li>
+      
+        <li><a href="../../keywords/tame.html">tame</a></li>
+      
+        <li><a href="../../keywords/tame-types.html">tame-types</a></li>
+      
+        <li><a href="../../keywords/taut-paths.html">taut-paths</a></li>
+      
+        <li><a href="../../keywords/transversality.html">transversality</a></li>
+      
+        <li><a href="../../keywords/trivial-isotypic.html">trivial-isotypic</a></li>
+      
+        <li><a href="../../keywords/twist.html">twist</a></li>
+      
+        <li><a href="../../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../../keywords/type.html">type</a></li>
+      
+        <li><a href="../../keywords/unit-iso.html">unit-iso</a></li>
+      
+        <li><a href="../../keywords/universal-property.html">universal-property</a></li>
+      
+        <li><a href="../../keywords/unramified.html">unramified</a></li>
+      
+        <li><a href="../../keywords/verification.html">verification</a></li>
+      
+        <li><a href="../../keywords/wang.html">wang</a></li>
+      
+        <li><a href="../../keywords/well-definedness.html">well-definedness</a></li>
+      
+        <li><a href="../../keywords/yu.html">yu</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induced_cw_structure">
+  <header class="proposition_thmheading thm-heading">
+    <span class="proposition_thmcaption thm-caption">Proposition</span>
+    <span class="proposition_thmtitle thm-title">CW structure and QFD property on G ×^P X&#39;</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-proposition">proposition</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-equivariant_sheaves-2e-induced_cw_structure">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
+        
+        <li><a href="equivariant_sheaves_induced_poset_structure.html">Well-defined poset structure on the induced space G ×^P X&#39;</a></li>
+        
+        <li><a href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#39; → G ×^P X&#39; is a cellular embedding (poset form)</a></li>
+        
+        <li><a href="equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space</a></li>
+        
+        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a></li>
+        
+        <li><a href="../qfd/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ dfd1159, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def dim : InducedSpace d → ℕ</code></pre>
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+      </p>
+      
+    </div>
+  </div>
+  
+
+  <div class="proposition_thmcontent thm-content body">
+    <h1>CW structure and QFD property on $X = G \times^P X'$</h1>
+<p>We assume in addition that:</p>
+<ul>
+<li><strong>(F')</strong> $x \mapsto \Fix_{G'}(x)$ forms a cosheaf of subgroups of $G'$ on
+  $X'$;</li>
+<li>the $G'$-action on $X'$ is smooth (i.e.\ $\Fix_{G'}(E)$ is open compact in
+  $G'$ for every cell $E$);</li>
+<li>$P_E$ is open compact in $G$ for every cell $E$.</li>
+</ul>
+<p>Set $[\![X]\!] := \{gE : g \in G,\ E \in [\![X']\!]\}$.</p>
+<h2>Key intermediate lemmas</h2>
+<p>The proof of the main proposition rests on four combinatorial
+building blocks, each treated as its own node:</p>
+<ul>
+<li>
+<p><strong>Poset structure on $X$</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.induced_poset_structure" href="../equivariant_sheaves_induced_poset_structure.html">Well-defined poset structure on the induced space G ×^P X&#x27;</a>): the face
+  relation descends through the quotient by $\sim$ to a well-defined
+  partial order on $G \times^P X'$, using (P0), (P1), and dimension
+  preservation of the cellular action for antisymmetry.</p>
+</li>
+<li>
+<p><strong>Cell equality on $X$</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (5)):
+  $g_1 \cdot \iota E = g_2 \cdot \iota F$ iff $\exists n \in G'$ with
+  $n \cdot E = F$ and $g_1^{-1} g_2 n \in P_E$. This is the
+  cell-intersection / QFD orbit lemma in the induction context.</p>
+</li>
+<li><strong>Face relation on $X$</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (6)):
+  the analogous statement with $\preceq$.  Together with clauses
+  (1)–(4) this equips $X$ with a $G$-cell-complex structure at the
+  face-poset level.</li>
+<li><strong>Stabiliser formula</strong>
+  (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="../equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a>):
+  $\Fix_G(\iota E) = \Fix_{G'}(E) \cdot P_E$ and
+  $P_E \subseteq \Fix_G(\iota E)$; the second inclusion makes the
+  face relation on $X$ well-defined after descent through $\sim$.</li>
+</ul>
+<p>Additionally the topology-level ingredients (Hausdorffness, closure
+finiteness with characteristic maps, weak topology, regularity) are
+proved directly in the topological setup below and are outside the
+poset-only formalisation.</p>
+<h2>The proposition</h2>
+<blockquote>
+<p><strong>Proposition.</strong> There is a unique regular CW structure
+on $X = G \times^P X'$ for which $\iota : X' \hookrightarrow X$ is a
+cellular embedding inducing a homeomorphism onto its image, and the
+$G$-action is cellular. Moreover, $X'$ is a quasi-fundamental domain of
+the $G$-space $X$.</p>
+</blockquote>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>(full, 9 parts)</p>
+<h3>(a) $X$ is Hausdorff.</h3>
+<p>It suffices to show that the equivalence relation $\sim$ on $G \times X'$
+is closed. Fix $(g, x), (h, y) \in G \times X'$ with $(g, x) \not\sim (h, y)$.
+We exhibit disjoint open neighbourhoods of their classes in $X$.</p>
+<p>Let $E \in [\![X']\!]$ be the cell containing $x$ in its relative
+interior, and pick an open neighbourhood $V(E) \subseteq X'$ of $x$ that
+intersects only those cells $E''$ with $E \preceq E''$ (possible by local
+finiteness of $X'$). Since $P_E$ is open compact in $G$, the set
+$gP_E \times V(E)$ is an open neighbourhood of $(g, x)$.</p>
+<p>The saturation of $gP_E \times V(E)$ under $\sim$ avoids $(h, y)$ provided
+$(g, x) \not\sim (h, y)$: if $(gp, x') \sim (h, y)$ for some $p \in P_E$,
+$x' \in V(E)$, then $\exists n \in G'$ with $n \cdot x' = y$ and
+$(gp)^{-1} h n \in P_{x'} \subseteq P_E$. Letting $x' \to x$ (using
+continuity + closedness of $\Fix_{G'}$-orbits), $(g, x) \sim (h, y)$,
+contradiction. Symmetric construction at $(h, y)$ gives the second neighbourhood.</p>
+<h3>(b) Cell decomposition.</h3>
+<p>Cells are $[\![X]\!] := \{gE : g \in G, E \in [\![X']\!]\}$. For each
+pair $(g, E)$ with $E \in [\![X']\!]$ and characteristic map
+$f_E : \sigma^{\dim E} \to X'$, define
+$\Phi_{g, E} := g \circ \iota \circ f_E$.</p>
+<p>$\Phi_{g, E}$ restricted to $\mathring \sigma^{\dim E}$ is a continuous
+bijection onto $gE$ (using injectivity of $\iota$ + $G$-action by
+homeomorphisms). Image $\Phi_{g, E}(\sigma^{\dim E}) = g \cdot \iota(\overline E)$
+is closed (Hausdorffness + compactness of $\sigma^{\dim E}$), so
+$\Phi_{g, E}$ is a closed map, i.e.\ a characteristic map.</p>
+<h3>(c) Closure-finiteness.</h3>
+<p>Each $\overline{gE} = g \cdot \iota(\overline E)$ meets only finitely
+many cells, since $\overline E \subseteq X'$ does (local finiteness of
+$X'$) and $G$-translates preserve incidence.</p>
+<h3>(d) Weak topology.</h3>
+<p>$U \subseteq X$ open iff each preimage $\Phi_{g, E}^{-1}(U)$ is open in
+$\sigma^{\dim E}$. Forward direction: continuity. Reverse: pull through
+the quotient map $\pi : G \times X' \to X$ ($\pi$ is open since $P_E$
+open in $G$).</p>
+<h3>(e) Regularity.</h3>
+<p>$\Phi_{g, E} |_{\partial \sigma^{\dim E}}$ is a homeomorphism onto
+$g \cdot \iota(\overline E \setminus E)$ (regularity of $X'$ +
+injectivity of $\iota$).</p>
+<h3>(f) $\iota$ is a cellular embedding.</h3>
+<p>Combinatorial content:
+<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clauses (1)–(3).
+Topological content (that $\iota$ is also a topological embedding
+onto its image) follows from (a) + (e).</p>
+<h3>(g) $G$-action cellular.</h3>
+<p>$g \cdot (g' E) = (gg') E$, so $G$ permutes cells. Each cell-wise map
+is a homeomorphism (group action).</p>
+<h3>(h) $X'$ is a QFD.</h3>
+<p>Proved as <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="../equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space</a> with the
+sharp subgroup $G'$ (not the setwise stabiliser of $\iota(X')$).</p>
+<h3>(i) Uniqueness.</h3>
+<p>Any CW structure with $\iota$ cellular + $G$ cellular forces the cell
+set to be $\{gE\}$. So the structure is unique. $\square$</p>
+<h2>Lean formalization</h2>
+<p>The topological content (Hausdorffness, weak topology, regularity,
+characteristic maps for clauses (a)–(e), (i)) is outside the
+abstract poset-level formalisation.  The two poset-level clauses are
+split off:</p>
+<ul>
+<li>Clauses (f) + (g) — the combinatorial embedding + $G$-cellularity —
+  are the content of
+  <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>, which
+  discharges all six <code>iota_*</code> / <code>smul_iota_*</code> lemmas.</li>
+<li>Clause (h) — the QFD structure — is
+  <a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="../equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space</a>, which produces
+  <code>Subcomplex.ofIota</code>, <code>isQuasiFundDomain_subcomplexOfIota</code>, and
+  <code>G'_le_subcomplexOfIota_stabilizer</code>.</li>
+</ul>
+<p>Only the <em>packaging</em> remains here: the <code>PartialOrder</code>,
+<code>AbstractCellComplex</code>, and <code>GCellComplex</code> instances on
+<code>InducedSpace d</code> are all in place, and dimension is available as
+<code>InducedSpace.dim : InducedSpace d → ℕ</code> (this is the only Lean
+declaration whose home is this node rather than one of the
+extractees).</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="../../building/building_A1_axiom_in_component.html">Bruhat–Tits axiom (A1) inside each connected component of B(Σ)</a></li>
+      
+      <li><a href="../../building/building_apartment_intersection.html">g·A ∩ A is a cellular subcomplex of A</a></li>
+      
+      <li><a href="../../building/building_apartments_in_bsigma.html">Apartments of B(Σ): definition, Stab_G(A), and parametrization of apartments through x</a></li>
+      
+      <li><a href="../../building/building_connected_components.html">π₀(X) ≅ G/J for X = G ×^P X&#39; (with applications to B(Σ))</a></li>
+      
+      <li><a href="../../building/building_connected_components_plan_classification.html">Plan: identify each connected component of B(Σ) as K_x · A</a></li>
+      
+      <li><a href="equivariant_sheaves_induction_universal_property.html">Universal property of G ×^P X&#39; and induction by stages</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">induction</span><span class="tag">cw-structure</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

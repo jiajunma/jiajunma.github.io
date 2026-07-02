@@ -1,0 +1,166 @@
+{
+  "id": "cellular_categories.orbit_category",
+  "title": "The orbit category ]X/G[ as a Lean category",
+  "kind": "definition",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_orbit_category.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>The orbit category $\\,]X/G[\\,$</h1>\n<p>Following Sheaf7 §2.7 (the definitions surrounding <code>lem:qfd_equiv</code>).</p>\n<p>The <strong>orbit category</strong> $]X/G[$ has:</p>\n<ul>\n<li>objects: cells of $X$;</li>\n<li>morphisms $E \\to E'$: elements $g \\in G$ such that $g\\cdot E \\preceq E'$\n  (equivalently, $g\\cdot E$ is a face of $E'$);</li>\n<li>composition: for $\\alpha = g_1 : E \\to E'$ and $\\beta = g_2 : E' \\to E''$,\n  the composite is $g_2 g_1 : E \\to E''$; well-typed because\n  $(g_2 g_1)\\cdot E = g_2\\cdot(g_1\\cdot E) \\preceq g_2\\cdot E' \\preceq E''$\n  using cellularity of the $G$-action (<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.g_cell_complex\" href=\"../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html\">Cellular G-action on an abstract cell complex</a>);</li>\n<li>identity: $\\mathbf 1 : E \\to E$ from $\\mathbf 1\\cdot E = E \\preceq E$.</li>\n</ul>\n<p>The opposite category $[X/G] := ]X/G[^{\\mathrm{op}}$ is the more common\ntarget — every \"orbit-category\" statement in the paper is written for\n$[X/G]$ (matching the cosheaf convention).</p>\n<h2>Lean formalization</h2>\n<p>The Lean file uses an <code>abbrev</code>-alias for the type</p>\n<pre><code class=\"language-lean\">abbrev OrbitCat (G X : Type*) : Type _ := X\n</code></pre>\n<p>so that the <code>MulAction G X</code>/<code>PartialOrder X</code>/<code>AbstractCellComplex X</code>\ninstances remain visible without manual transfer.  Morphisms are packaged\nas a <code>Subtype</code></p>\n<pre><code class=\"language-lean\">def Mor (E E' : OrbitCat G X) : Type _ :=\n  {g : G // g • (E : X) ≤ (E' : X)}\n</code></pre>\n<p>(rather than a fresh <code>structure</code>) so that the universe of <code>Mor E E'</code>\nmatches the universe of <code>G</code>, keeping the <code>Category</code> typeclass happy.  The\n<code>Category (OrbitCat G X)</code> instance is declared <code>scoped</code> — activated only\ninside <code>open OrbitCat</code> — so that it does not shadow <code>X</code>'s\nPreorder-derived category structure used by\n<a class=\"node-ref\" data-node-id=\"cellular_categories.sheaves_cosheaves\" href=\"cellular_categories_sheaves_cosheaves.html\">Sheaves and cosheaves on X as functor categories</a>.</p>\n<p>The face-relation composition <code>((g_2 g_1)\\cdot E \\preceq E'')</code> follows from\n<code>GCellComplex.smul_le</code> and transitivity of <code>≤</code>, wrapped as <code>Mor.comp</code>.\nThe three <code>Category</code> axioms (<code>id_comp</code>, <code>comp_id</code>, <code>assoc</code>) collapse to\nthe corresponding facts about group multiplication, wrapped in\n<code>Subtype.ext</code>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "abstract_cell_complex.g_cell_complex",
+      "title": "Cellular G-action on an abstract cell complex",
+      "href": "abstract_cell_complex/abstract_cell_complex_g_cell_complex.html"
+    },
+    {
+      "id": "cellular_categories.quotient_category_jXGk",
+      "title": "The quotient categories ]X/G[ and [X/G]",
+      "href": "cellular_categories/cellular_categories_quotient_category_jXGk.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "cellular_categories.orbit_end_stabilizer",
+      "title": "Endomorphisms in ]X/G[ are the stabilizer",
+      "href": "cellular_categories/cellular_categories_orbit_end_stabilizer.html"
+    },
+    {
+      "id": "cellular_categories.orbit_subcomplex_equivalence",
+      "title": "QFD inclusion [X'] ↪ ]X/G[ is a categorical equivalence",
+      "href": "cellular_categories/cellular_categories_orbit_subcomplex_equivalence.html"
+    },
+    {
+      "id": "equivariant_sheaves.stalk_action",
+      "title": "Fixator action on the stalk of a G-equivariant cosheaf",
+      "href": "equivariant_sheaves/equivariant_sheaves_stalk_action.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.OrbitCat",
+      "display_name": "SheafOnBuilding.OrbitCat",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff",
+        "(module) SheafOnBuilding"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.Mor",
+      "display_name": "SheafOnBuilding.OrbitCat.Mor",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff",
+        "(module) SheafOnBuilding"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.Mor.id",
+      "display_name": "SheafOnBuilding.OrbitCat.Mor.id",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff",
+        "(module) SheafOnBuilding"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.Mor.comp",
+      "display_name": "SheafOnBuilding.OrbitCat.Mor.comp",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.Cn.d_comp_d",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.category",
+      "display_name": "SheafOnBuilding.OrbitCat.category",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff",
+        "(module) SheafOnBuilding"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.OrbitCat",
+      "display_name": "SheafOnBuilding.OrbitCat",
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "status": "unresolved",
+      "reason": "module not found in repository 'sheafonbuilding'"
+    }
+  ]
+}

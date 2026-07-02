@@ -1,0 +1,111 @@
+{
+  "id": "cellular_categories.orbit_end_stabilizer",
+  "title": "Endomorphisms in ]X/G[ are the stabilizer",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_orbit_end_stabilizer.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>Endomorphisms in $\\,]X/G[\\,$ are the stabilizer</h1>\n<p>For a cell $E \\in X$, the endomorphism monoid of $E$ in the orbit\ncategory $]X/G[$ (see <a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_category\" href=\"cellular_categories_orbit_category.html\">The orbit category ]X/G[ as a Lean category</a>) is\ncanonically the stabilizer $\\Fix_G(E) = \\{g \\in G : g\\cdot E = E\\}$.</p>\n<blockquote>\n<p><strong>Lemma.</strong> The map $g \\mapsto g$ induces a bijection\n$$\\Hom_{]X/G[}(E, E) \\;\\xrightarrow{\\sim}\\; \\Fix_G(E).$$\nMoreover this bijection is a monoid isomorphism when the endomorphism\nmonoid uses the standard convention $\\alpha \\cdot \\beta := \\beta \\circ \\alpha$\n(function-composition order).</p>\n</blockquote>",
+  "proof_html": "<p>By definition $\\Hom_{]X/G[}(E, E) = \\{g \\in G : g\\cdot E \\preceq E\\}$.\nFor a cellular action, $\\dim(g\\cdot E) = \\dim E$\n(<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.g_cell_complex\" href=\"../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html\">Cellular G-action on an abstract cell complex</a>).  Since the abstract cell\ncomplex separates proper faces by strict dimension\n(<a class=\"node-ref\" data-node-id=\"abstract_cell_complex.abstract_cell_complex\" href=\"../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html\">Abstract cell complex</a>), $g\\cdot E \\preceq E$\ntogether with equal dimensions forces $g\\cdot E = E$, i.e. $g \\in \\Fix_G(E)$.\nConversely $g \\in \\Fix_G(E)$ trivially gives $g \\cdot E = E \\preceq E$.  The\ntwo constructions are inverse. $\\square$</p>\n<p><strong>Multiplicativity</strong> in the endomorphism-monoid direction: composition\n$\\alpha \\circ \\beta$ in $]X/G[$ has group element $\\alpha \\cdot \\beta$\n(Lean's <code>≫</code> on <code>Mor</code> gives the group product with the right factor first).\nThe mathlib <code>CategoryTheory.End</code> monoid uses <code>x * y := y ≫ x</code>, so\n$\\mathrm{End}(E)\\cdot \\Fix_G(E)$ multiplication conventions align on the\nnose and the map is a <code>MonoidHom</code> / <code>MulEquiv</code>.</p>\n<h2>Lean formalization</h2>\n<p><code>OrbitCat.endMorEquivStabilizer E : Mor E E ≃ MulAction.stabilizer G E</code>\nis the underlying <code>Equiv</code>.  The monoid isomorphism\n<code>OrbitCat.endMulEquivStabilizer E : End E ≃* MulAction.stabilizer G E</code>\nadds <code>map_mul'</code> (proved by <code>rfl</code> — the convention alignment is\ndefinitional).  Its forward direction is packaged as\n<code>OrbitCat.endToStabilizer : End E →* MulAction.stabilizer G E</code> for\ndownstream composition with monoid homs.</p>\n<p>The <code>AbstractCellComplex.dim_lt</code> axiom (a proper face has strictly\nsmaller dimension) together with <code>GCellComplex.smul_dim</code> (the <code>G</code>-action\npreserves dimension) close the surjectivity direction by <code>omega</code>.</p>",
+  "deps": [
+    {
+      "id": "cellular_categories.orbit_category",
+      "title": "The orbit category ]X/G[ as a Lean category",
+      "href": "cellular_categories/cellular_categories_orbit_category.html"
+    },
+    {
+      "id": "abstract_cell_complex.abstract_cell_complex",
+      "title": "Abstract cell complex",
+      "href": "abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html"
+    },
+    {
+      "id": "abstract_cell_complex.g_cell_complex",
+      "title": "Cellular G-action on an abstract cell complex",
+      "href": "abstract_cell_complex/abstract_cell_complex_g_cell_complex.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
+      "display_name": "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
+        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
+      "display_name": "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
+        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.endToStabilizer",
+      "display_name": "SheafOnBuilding.OrbitCat.endToStabilizer",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
+        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.OrbitCat",
+      "display_name": "SheafOnBuilding.OrbitCat",
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "status": "unresolved",
+      "reason": "module not found in repository 'sheafonbuilding'"
+    }
+  ]
+}

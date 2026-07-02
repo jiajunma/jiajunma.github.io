@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reduction of G-equivariant cosheaves to a QFD — Sheaves on Buildings — Knowledge Base</title>
+  <title>Endomorphisms in ]X/G[ are the stabilizer — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -43,7 +43,7 @@
           <a href="../building/index.html">Building</a>
         </li>
       
-        <li class="topic-leaf">
+        <li class="topic-leaf topic-active">
           <a href="../cellular_categories/index.html">Cellular Categories</a>
         </li>
       
@@ -55,8 +55,15 @@
           <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        <li class="topic-parent">
+          <details data-topic-root="equivariant_sheaves">
+            <summary><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -318,6 +325,8 @@
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
+        <li><a href="../keywords/orbit-category.html">orbit-category</a></li>
+      
         <li><a href="../keywords/orbits.html">orbits</a></li>
       
         <li><a href="../keywords/orientation.html">orientation</a></li>
@@ -365,6 +374,8 @@
         <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stalk.html">stalk</a></li>
       
         <li><a href="../keywords/star.html">star</a></li>
       
@@ -414,20 +425,22 @@
   </nav>
   <main>
     
-<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-reduction_to_qfd">
-  <header class="proposition_thmheading thm-heading">
-    <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Reduction of G-equivariant cosheaves to a QFD</span>
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-cellular_categories-2e-orbit_end_stabilizer">
+  <header class="lemma_thmheading thm-heading">
+    <span class="lemma_thmcaption thm-caption">Lemma</span>
+    <span class="lemma_thmtitle thm-title">Endomorphisms in ]X/G[ are the stabilizer</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-proposition">proposition</span>
+      <span class="badge kind-lemma">lemma</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-equivariant_sheaves-2e-reduction_to_qfd">#</a>
+      <a class="permalink" href="#node-cellular_categories-2e-orbit_end_stabilizer">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -438,11 +451,11 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../cellular_categories/cellular_categories_equivariant_sheaves.html">G-equivariant sheaves and cosheaves</a></li>
+        <li><a href="cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a></li>
         
-        <li><a href="equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
+        <li><a href="../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a></li>
         
-        <li><a href="equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a></li>
+        <li><a href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a></li>
         
       </ul>
     </div>
@@ -450,64 +463,130 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>, <code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>, <code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.endToStabilizer</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>, <code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <code>SheafOnBuilding.OrbitCat</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
+      </p>
+      
+    </div>
+  </div>
+  
 
-  <div class="proposition_thmcontent thm-content body">
-    <h1>Reduction of $G$-equivariant cosheaves to a QFD</h1>
-<p>Setting: $X' \subseteq X$ is a QFD for the $G$-action with stabilizing
-subgroup $G'$. Let $\mathscr{C}$ be a category.</p>
-<p>Let $\mathrm{SRep}_G(\mathscr{C})$ be the category whose objects are triples
-$(K, V, a)$ with $K \le G$, $V \in \mathscr{C}$, $a : K \to \Aut_\mathscr{C}(V)$;
-a morphism $(f, r)$ requires an injective $f : K \hookrightarrow L$ and
-$r \in \Hom_\mathscr{C}(V,W)$ intertwining $a, b$.</p>
-<p><strong>Definition.</strong> For a cosheaf $K$ of subgroups of $G$ on $X'$, let
-$\Cosh_{G',K}([\![X']\!], \mathscr{C})$ be the full subcategory of
-$\Cosh_{G'}(X', \mathrm{SRep}_G(\mathscr{C}))$ of those $V$ such that:</p>
-<ul>
-<li>$(V_E, a^{V_E})$ is a $K_E$-representation in $\mathscr{C}$ for each
-  $E \in [\![X']\!]$;</li>
-<li>$r^V_{E,E'} : V_E \to V_{E'}$ is $a^{V_E}_g$-equivariant for $E' \preceq E$;</li>
-<li>$a^V_{g,E} : V_E \to V_{gE}$ intertwines $a^{V_E}$ and $a^{V_{gE}}$:
-  $a^V_{g,E} \circ a^{V_E}_k = a^{V_{gE}}_{gkg^{-1}} \circ a^V_{g,E}$;</li>
-<li>$a^{V_E}_k = a^V_{k,E}$ for $k \in \Fix_G(E) \cap K_E$.</li>
-</ul>
+  <div class="lemma_thmcontent thm-content body">
+    <h1>Endomorphisms in $\,]X/G[\,$ are the stabilizer</h1>
+<p>For a cell $E \in X$, the endomorphism monoid of $E$ in the orbit
+category $]X/G[$ (see <a class="node-ref" data-node-id="cellular_categories.orbit_category" href="cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a>) is
+canonically the stabilizer $\Fix_G(E) = \{g \in G : g\cdot E = E\}$.</p>
 <blockquote>
-<p><strong>Proposition.</strong> Let $K$ be the cosheaf on $X'$ with
-$\Fix_G(E) = \Fix_{G'}(E) K_E$ for all $E$. Then
-$$\Cosh_G(X, \mathscr{C}) \;\simeq\; \underline{\mathrm{Fun}}([X']_{[X/G]}, \mathscr{C})
-&gt;   \;\simeq\; \Cosh_{G', K}(X', \mathscr{C}).$$</p>
+<p><strong>Lemma.</strong> The map $g \mapsto g$ induces a bijection
+$$\Hom_{]X/G[}(E, E) \;\xrightarrow{\sim}\; \Fix_G(E).$$
+Moreover this bijection is a monoid isomorphism when the endomorphism
+monoid uses the standard convention $\alpha \cdot \beta := \beta \circ \alpha$
+(function-composition order).</p>
 </blockquote>
-<p>The first equivalence is essentially the QFD equivalence
-$\iota : [X']_{[X/G]} \to [X/G]$ at the level of categories; the second
-unfolds the $K$-action data. The reverse construction uses the factorization
-$\mathrm{Hom}_{]X/G[}(E,E') = \{kn : k \in K_E,\ n \in G',\ nE \preceq E'\}$.</p>
-<h2>Why it matters</h2>
-<p>This proposition is the keystone for §4 (Heisenberg–Weil equivalence) and §8
-(reduction to depth zero): equivariant data on the <em>full</em> generalized
-building $\BSigma$ can be checked on the apartment $A$. See
-<a class="node-ref" data-node-id="depth_zero_reduction.res_sat_functors" href="../depth_zero_reduction/depth_zero_reduction_res_sat_functors.html">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a>.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>By definition $\Hom_{]X/G[}(E, E) = \{g \in G : g\cdot E \preceq E\}$.
+For a cellular action, $\dim(g\cdot E) = \dim E$
+(<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>).  Since the abstract cell
+complex separates proper faces by strict dimension
+(<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a>), $g\cdot E \preceq E$
+together with equal dimensions forces $g\cdot E = E$, i.e. $g \in \Fix_G(E)$.
+Conversely $g \in \Fix_G(E)$ trivially gives $g \cdot E = E \preceq E$.  The
+two constructions are inverse. $\square$</p>
+<p><strong>Multiplicativity</strong> in the endomorphism-monoid direction: composition
+$\alpha \circ \beta$ in $]X/G[$ has group element $\alpha \cdot \beta$
+(Lean's <code>≫</code> on <code>Mor</code> gives the group product with the right factor first).
+The mathlib <code>CategoryTheory.End</code> monoid uses <code>x * y := y ≫ x</code>, so
+$\mathrm{End}(E)\cdot \Fix_G(E)$ multiplication conventions align on the
+nose and the map is a <code>MonoidHom</code> / <code>MulEquiv</code>.</p>
+<h2>Lean formalization</h2>
+<p><code>OrbitCat.endMorEquivStabilizer E : Mor E E ≃ MulAction.stabilizer G E</code>
+is the underlying <code>Equiv</code>.  The monoid isomorphism
+<code>OrbitCat.endMulEquivStabilizer E : End E ≃* MulAction.stabilizer G E</code>
+adds <code>map_mul'</code> (proved by <code>rfl</code> — the convention alignment is
+definitional).  Its forward direction is packaged as
+<code>OrbitCat.endToStabilizer : End E →* MulAction.stabilizer G E</code> for
+downstream composition with monoid homs.</p>
+<p>The <code>AbstractCellComplex.dim_lt</code> axiom (a proper face has strictly
+smaller dimension) together with <code>GCellComplex.smul_dim</code> (the <code>G</code>-action
+preserves dimension) close the surjectivity direction by <code>omega</code>.</p>
+      </div>
+    </details>
     
   </div>
 
   
 
   
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="../coefficient_systems/coefficient_systems_A_over_K_equivalence.html">Equivalence [A/𝒦] ≃ [B(Σ)/G] (RES theorem)</a></li>
-      
-      <li><a href="equivariant_sheaves_section4_equivalence.html">Cosh_G(X,1_Q) ≃ Cosh_{G&#39;}(X&#39;,1_{Q&#39;}) under induced structure</a></li>
-      
-    </ul>
-  </section>
-  
 
   
 
   
   <footer class="tags">
-    <span class="tag">reduction</span><span class="tag">qfd</span><span class="tag">equivariance</span>
+    <span class="tag">orbit-category</span><span class="tag">stabilizer</span>
   </footer>
   
 </article>

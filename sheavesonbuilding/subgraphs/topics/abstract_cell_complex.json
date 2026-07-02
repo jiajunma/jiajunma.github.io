@@ -91,14 +91,14 @@
       "title": "Cellular Categories",
       "href": "cellular_categories/index.html",
       "role": "dependent",
-      "node_count": 8
+      "node_count": 13
     },
     {
-      "id": "equivariant_sheaves",
-      "title": "Equivariant Sheaves",
-      "href": "equivariant_sheaves/index.html",
+      "id": "equivariant_sheaves.induction",
+      "title": "Equivariant Sheaves.Induction",
+      "href": "equivariant_sheaves/induction/index.html",
       "role": "dependent",
-      "node_count": 14
+      "node_count": 7
     }
   ],
   "boundary_edges": [
@@ -107,14 +107,14 @@
       "to": "topic:cellular_categories",
       "kind": "boundary_dependent",
       "topic": "cellular_categories",
-      "count": 1
+      "count": 2
     },
     {
       "from": "abstract_cell_complex.g_cell_complex",
       "to": "topic:cellular_categories",
       "kind": "boundary_dependent",
       "topic": "cellular_categories",
-      "count": 1
+      "count": 3
     },
     {
       "from": "abstract_cell_complex.is_locally_finite",
@@ -139,9 +139,9 @@
     },
     {
       "from": "abstract_cell_complex.g_cell_complex",
-      "to": "topic:equivariant_sheaves",
+      "to": "topic:equivariant_sheaves.induction",
       "kind": "boundary_dependent",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 3
     }
   ],

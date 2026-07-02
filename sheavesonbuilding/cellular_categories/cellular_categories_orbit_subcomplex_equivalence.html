@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Induced space G ×^P X&#39; along a cosheaf P — Sheaves on Buildings — Knowledge Base</title>
+  <title>QFD inclusion [X&#39;] ↪ ]X/G[ is a categorical equivalence — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -43,7 +43,7 @@
           <a href="../building/index.html">Building</a>
         </li>
       
-        <li class="topic-leaf">
+        <li class="topic-leaf topic-active">
           <a href="../cellular_categories/index.html">Cellular Categories</a>
         </li>
       
@@ -55,8 +55,15 @@
           <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        <li class="topic-parent">
+          <details data-topic-root="equivariant_sheaves">
+            <summary><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -318,6 +325,8 @@
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
+        <li><a href="../keywords/orbit-category.html">orbit-category</a></li>
+      
         <li><a href="../keywords/orbits.html">orbits</a></li>
       
         <li><a href="../keywords/orientation.html">orientation</a></li>
@@ -365,6 +374,8 @@
         <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stalk.html">stalk</a></li>
       
         <li><a href="../keywords/star.html">star</a></li>
       
@@ -414,17 +425,17 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-equivariant_sheaves-2e-induction_GxP_X">
-  <header class="definition_thmheading thm-heading">
-    <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Induced space G ×^P X&#39; along a cosheaf P</span>
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-cellular_categories-2e-orbit_subcomplex_equivalence">
+  <header class="proposition_thmheading thm-heading">
+    <span class="proposition_thmcaption thm-caption">Proposition</span>
+    <span class="proposition_thmtitle thm-title">QFD inclusion [X&#39;] ↪ ]X/G[ is a categorical equivalence</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-definition">definition</span>
+      <span class="badge kind-proposition">proposition</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-equivariant_sheaves-2e-induction_GxP_X">#</a>
+      <a class="permalink" href="#node-cellular_categories-2e-orbit_subcomplex_equivalence">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -440,9 +451,9 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../cellular_categories/cellular_categories_sheaf_of_subgroups.html">G-equivariant (co)sheaf of subgroups and characters</a></li>
+        <li><a href="cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a></li>
         
-        <li><a href="../cellular_categories/cellular_categories_cw_complex_setting.html">Locally finite regular CW complex with cellular G-action</a></li>
+        <li><a href="../equivariant_sheaves/qfd/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a></li>
         
       </ul>
     </div>
@@ -456,220 +467,132 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">structure</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L57"><code>SheafOnBuilding.InductionDatum</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
+          <code>SheafOnBuilding.OrbitCat.OnSubcomplex</code>
           
           
           
-          <pre class="lean-signature"><code>structure InductionDatum (X&#39; : Type*) [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
-    [MulAction G X&#39;] [GCellComplex G X&#39;] where</code></pre>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L75"><code>SheafOnBuilding.InductionRel</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
+          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code>
           
           
           
-          <pre class="lean-signature"><code>def InductionRel (X&#39; : Type*) [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
-    [MulAction G X&#39;] [GCellComplex G X&#39;]
-    (G&#39; : Subgroup G) (P : X&#39; → Subgroup G) :
-    (G × X&#39;) → (G × X&#39;) → Prop</code></pre>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L101"><code>SheafOnBuilding.InductionRel.refl</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
+          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code>
           
           
           
-          <pre class="lean-signature"><code>theorem refl (G&#39; : Subgroup G) (P : X&#39; → Subgroup G) (gE : G × X&#39;) :
-    InductionRel X&#39; G&#39; P gE gE</code></pre>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L111"><code>SheafOnBuilding.InductionRel.symm</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
+          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code>
           
           
           
-          <pre class="lean-signature"><code>theorem symm (d : InductionDatum X&#39;) {gE hF : G × X&#39;}
-    (hyp : InductionRel X&#39; d.G&#39; d.P gE hF) :
-    InductionRel X&#39; d.G&#39; d.P hF gE</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L137"><code>SheafOnBuilding.InductionRel.trans</code></a>
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>, <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>?</span>
           
           
           
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
           
           
-          
-          <pre class="lean-signature"><code>theorem trans (d : InductionDatum X&#39;) {gE hF kK : G × X&#39;}
-    (h12 : InductionRel X&#39; d.G&#39; d.P gE hF)
-    (h23 : InductionRel X&#39; d.G&#39; d.P hF kK) :
-    InductionRel X&#39; d.G&#39; d.P gE kK</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L171"><code>SheafOnBuilding.InductionRel.setoid</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def setoid (d : InductionDatum (G</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L181"><code>SheafOnBuilding.InducedSpace</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def InducedSpace {X&#39; : Type*} [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
-    [MulAction G X&#39;] [GCellComplex G X&#39;]
-    (d : InductionDatum (G</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L194"><code>SheafOnBuilding.InducedSpace.iota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def iota (E : X&#39;) : InducedSpace d</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <code>SheafOnBuilding.OrbitCat</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
       </p>
       
     </div>
   </div>
   
 
-  <div class="definition_thmcontent thm-content body">
-    <h1>Induced space $G \times^P X'$ along a cosheaf $P$</h1>
-<p>Let $G' \le G$ act cellularly on $X'$, and let $P$ be a cosheaf on $X'$ of
-subgroups of $G$, $x \mapsto P_x$, satisfying:</p>
-<ul>
-<li><strong>(P1)</strong> $n P_x n^{-1} = P_{n \cdot x}$ for $n \in G'$;</li>
-<li><strong>(P2)</strong> $P_x \cap G' \subseteq \Fix_{G'}(x)$.</li>
-</ul>
-<p>(P1) implies that $\Fix_{G'}(x)$ normalizes $P_x$.</p>
-<p><strong>Definition.</strong> The <strong>induced space</strong>
-$$X := G \times^P X' \;:=\; (G \times X') / \sim$$
-where
-$$(g,x) \sim (h,y) \iff \exists n \in G' \text{ with } n \cdot x = y \text{ and } g^{-1}hn \in P_x.$$</p>
-<p>The $G$-action is $g \cdot [(h,y)] = [(gh,y)]$ and $X$ carries the
-quotient topology.</p>
-<h2>Properties</h2>
-<ul>
-<li>Taking $P_x = \{e\}$ for all $x$ recovers the standard induced set
-  $\mathrm{ind}_{G'}^G(X')$.</li>
-<li>The construction depends on $P$ only up to the family $\Fix_{G'}(E) P_E$.</li>
-<li>The map $\iota : X' \to X,\ x \mapsto [(1,x)]$ is injective.</li>
-</ul>
-<p>After identifying $X'$ with $\iota(X')$, $X$ inherits a regular CW structure
-in which the $G$-action is cellular and $X'$ is a QFD for it (see
-<a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a>).</p>
-<h2>Stabiliser formula</h2>
-<p>The stabiliser of a cell $\iota(E) \in X$ in $G$ factors as
-$\Fix_{G'}(E) \cdot P_E$, treated as its own node
-<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a>.  In particular
-$P_E \subseteq \Fix_G(E)$ for every cell $E$, which is what makes the
-face relation on $X$ well-defined after the quotient by $\sim$.</p>
+  <div class="proposition_thmcontent thm-content body">
+    <h1>QFD inclusion $[X'] \hookrightarrow \,]X/G[\,$ is an equivalence</h1>
+<p>Following Sheaf7 line 725-728.</p>
+<p>Let $S \subseteq X$ be a QFD for the subgroup $G' \le G$
+(<a class="node-ref" data-node-id="equivariant_sheaves.quasi_fundamental_domain" href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a>).  Denote by
+$[X']_{[X/G]}$ (equivalently $\,]X'[_{]X/G[}\,$) the full subcategory of
+$]X/G[$ on cells of $S$.</p>
+<blockquote>
+<p><strong>Proposition.</strong> The inclusion functor
+$$\iota : \,]X'[_{]X/G[}\; \longrightarrow\; \,]X/G[$$
+is an equivalence of categories.  Dually,
+$$\iota : [X']_{[X/G]}\; \longrightarrow\; [X/G]$$
+is an equivalence.</p>
+</blockquote>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>A full-subcategory inclusion is automatically fully faithful.
+Essential surjectivity is exactly the QFD hypothesis: every cell
+$F \in X$ lies in the $G$-orbit of some cell of $S$
+(<a class="node-ref" data-node-id="equivariant_sheaves.quasi_fundamental_domain" href="../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html">Quasi-fundamental domain</a>).  Concretely,
+given $F \in X$, choose $g \in G$ and $E \in S$ with $g \cdot E = F$; then
+$g : E \to F$ and $g^{-1} : F \to E$ are mutually inverse morphisms in
+$]X/G[$ (both witnesses are $g E = F \preceq F$ resp.\ $g^{-1} F = E \preceq E$;
+composition is $\mathbf 1 = g \cdot g^{-1}$). $\square$</p>
 <h2>Lean formalization</h2>
-<p>The data $(G', P)$ with axioms (P1), (P2) — and additionally (P0)
-cosheaf monotonicity $E \preceq F \Rightarrow P_F \le P_E$, which is
-part of "$P$ is a cosheaf" — is packaged as</p>
-<pre><code class="language-lean">structure InductionDatum (X' : Type*) [PartialOrder X'] [AbstractCellComplex X']
-    [MulAction G X'] [GCellComplex G X'] where
-  G' : Subgroup G
-  P  : X' → Subgroup G
-  P0 : ∀ {E F : X'}, E ≤ F → P F ≤ P E
-  P1 : ∀ (n : G), n ∈ G' → ∀ (E : X'),
-    P (n • E) = (P E).map (MulEquiv.toMonoidHom (MulAut.conj n))
-  P2 : ∀ (E : X') (m : G), m ∈ P E → m ∈ G' → m • E = E
+<p>The full subcategory is defined using mathlib's
+<code>CategoryTheory.ObjectProperty.FullSubcategory</code>:</p>
+<pre><code class="language-lean">abbrev OnSubcomplex (S : Subcomplex X) :=
+  ObjectProperty.FullSubcategory (C := OrbitCat G X) (fun E =&gt; (E : X) ∈ S)
+
+abbrev ιOnSubcomplex (S : Subcomplex X) : OnSubcomplex S ⥤ OrbitCat G X :=
+  ObjectProperty.ι _
 </code></pre>
-<p>The equivalence relation is</p>
-<pre><code class="language-lean">def InductionRel (X' : Type*) [...]
-    (G' : Subgroup G) (P : X' → Subgroup G) :
-    (G × X') → (G × X') → Prop :=
-  fun ⟨g, E⟩ ⟨h, F⟩ =&gt; ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ P E
-</code></pre>
-<p><code>InductionRel.refl</code>, <code>InductionRel.symm</code>, <code>InductionRel.trans</code> verify
-the equivalence-relation axioms; <code>refl</code> needs only unit-membership of
-subgroups; <code>symm</code> and <code>trans</code> both use (P1) to translate
-$P_{n \cdot E}$ back to $P_E$.  The <code>Setoid</code> packaging is
-<code>InductionRel.setoid</code>; the induced space is</p>
-<pre><code class="language-lean">def InducedSpace (d : InductionDatum X') : Type _ :=
-  Quotient (InductionRel.setoid d)
-</code></pre>
-<p>The canonical embedding is <code>InducedSpace.iota</code>, sending $E \mapsto
-[(1, E)]$.  The $G$-action on <code>InducedSpace</code> is by left translation
-on the first factor.</p>
-<p>(P0) does not enter the equivalence-relation axioms; it is needed for
-the face relation on the induced space
-(<a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a>).  (P2) is used
-for the injectivity of $\iota$.</p>
+<p><code>ιOnSubcomplex_essSurj</code> provides the essential surjectivity, using
+<code>IsQuasiFundDomain.surj</code> to obtain the pair $(g, F)$ and constructing the
+iso as <code>Iso.mk</code> with <code>.hom = ⟨g, _⟩</code> and <code>.inv = ⟨g⁻¹, _⟩</code>.</p>
+<p><code>ιOnSubcomplex_isEquivalence</code> then packages <code>Functor.IsEquivalence</code>
+(mathlib gives full + faithful for free from full-subcategory inclusions;
+this file supplies essential surjectivity).  Stated as a <code>theorem</code> (not
+<code>instance</code>) because <code>G'</code> does not appear in the conclusion, so must be
+<code>letI</code>'d at call sites.</p>
+      </div>
+    </details>
     
   </div>
 
@@ -680,27 +603,7 @@ for the injectivity of $\iota$.</p>
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="../building/building_bs_subset_x.html">The K_x-orbit subset B(Σ)_x := K_x · A</a></li>
-      
-      <li><a href="../building/building_connected_components.html">π₀(X) ≅ G/J for X = G ×^P X&#39; (with applications to B(Σ))</a></li>
-      
-      <li><a href="../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a></li>
-      
-      <li><a href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#39;</a></li>
-      
-      <li><a href="equivariant_sheaves_induced_poset_structure.html">Well-defined poset structure on the induced space G ×^P X&#39;</a></li>
-      
-      <li><a href="equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space</a></li>
-      
-      <li><a href="equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a></li>
-      
-      <li><a href="equivariant_sheaves_induction_universal_property.html">Universal property of G ×^P X&#39; and induction by stages</a></li>
-      
-      <li><a href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#39; → G ×^P X&#39; is a cellular embedding (poset form)</a></li>
-      
-      <li><a href="equivariant_sheaves_section4_equivalence.html">Cosh_G(X,1_Q) ≃ Cosh_{G&#39;}(X&#39;,1_{Q&#39;}) under induced structure</a></li>
-      
-      <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a></li>
+      <li><a href="cellular_categories_orbit_functor_cat_equivalence.html">Functor-category equivalence: Fun([X&#39;]^op, C) ≌ Fun(]X/G[^op, C)</a></li>
       
     </ul>
   </section>
@@ -710,7 +613,7 @@ for the injectivity of $\iota$.</p>
 
   
   <footer class="tags">
-    <span class="tag">induction</span><span class="tag">induced-space</span>
+    <span class="tag">orbit-category</span><span class="tag">qfd</span><span class="tag">equivalence</span>
   </footer>
   
 </article>

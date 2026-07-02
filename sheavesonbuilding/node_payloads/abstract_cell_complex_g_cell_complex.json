@@ -24,19 +24,29 @@
       "href": "cellular_categories/cellular_categories_cw_complex_setting.html"
     },
     {
+      "id": "cellular_categories.orbit_category",
+      "title": "The orbit category ]X/G[ as a Lean category",
+      "href": "cellular_categories/cellular_categories_orbit_category.html"
+    },
+    {
+      "id": "cellular_categories.orbit_end_stabilizer",
+      "title": "Endomorphisms in ]X/G[ are the stabilizer",
+      "href": "cellular_categories/cellular_categories_orbit_end_stabilizer.html"
+    },
+    {
       "id": "equivariant_sheaves.induced_poset_structure",
       "title": "Well-defined poset structure on the induced space G ×^P X'",
-      "href": "equivariant_sheaves/equivariant_sheaves_induced_poset_structure.html"
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_poset_structure.html"
     },
     {
       "id": "equivariant_sheaves.iota_cellular_embedding",
       "title": "ι : X' → G ×^P X' is a cellular embedding (poset form)",
-      "href": "equivariant_sheaves/equivariant_sheaves_iota_cellular_embedding.html"
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_iota_cellular_embedding.html"
     },
     {
       "id": "equivariant_sheaves.stabilizer_formula_iota",
       "title": "Cell-stabiliser and fixator formulas on the induced space",
-      "href": "equivariant_sheaves/equivariant_sheaves_stabilizer_formula_iota.html"
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_stabilizer_formula_iota.html"
     }
   ],
   "lean_refs": [
@@ -49,9 +59,9 @@
       "signature": "class GCellComplex (G : Type*) [Group G] (X : Type*)\n    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "2de5d11bfacd64c595ab3b2a1364c49f6ed9200d",
-      "short_revision": "2de5d11",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L139",
+      "revision": "dfd115989e1946bbc9db97bc300482ee304ed59e",
+      "short_revision": "dfd1159",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/GCellComplex.lean#L139",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -64,9 +74,9 @@
       "name": "SheafOnBuilding.GCellComplex",
       "display_name": "SheafOnBuilding.GCellComplex",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "2de5d11bfacd64c595ab3b2a1364c49f6ed9200d",
-      "short_revision": "2de5d11",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GCellComplex.lean#L1",
+      "revision": "dfd115989e1946bbc9db97bc300482ee304ed59e",
+      "short_revision": "dfd1159",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/GCellComplex.lean#L1",
       "status": "resolved",
       "reason": null
     }

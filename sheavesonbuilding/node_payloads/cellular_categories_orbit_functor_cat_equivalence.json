@@ -1,0 +1,57 @@
+{
+  "id": "cellular_categories.orbit_functor_cat_equivalence",
+  "title": "Functor-category equivalence: Fun([X']^op, C) ≌ Fun(]X/G[^op, C)",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_orbit_functor_cat_equivalence.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>$\\underline{\\mathrm{Fun}}([X']^{\\mathrm{op}}, \\mathscr C) \\simeq \\underline{\\mathrm{Fun}}(]X/G[^{\\mathrm{op}}, \\mathscr C)$</h1>\n<p>Corollary of <a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_subcomplex_equivalence\" href=\"cellular_categories_orbit_subcomplex_equivalence.html\">QFD inclusion [X&#x27;] ↪ ]X/G[ is a categorical equivalence</a>.</p>\n<blockquote>\n<p><strong>Corollary.</strong> If $S$ is a QFD for $G' \\le G$, then for any category\n$\\mathscr C$\n$$\\underline{\\mathrm{Fun}}\\bigl([X']^{\\mathrm{op}}, \\mathscr C\\bigr)\n&gt;   \\;\\simeq\\;\n&gt;   \\underline{\\mathrm{Fun}}\\bigl(\\,]X/G[^{\\mathrm{op}},\\,\\mathscr C\\bigr).$$</p>\n</blockquote>",
+  "proof_html": "<p>Full-subcategory inclusion $\\iota : [X'] \\hookrightarrow \\,]X/G[$\nis an equivalence by <a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_subcomplex_equivalence\" href=\"cellular_categories_orbit_subcomplex_equivalence.html\">QFD inclusion [X&#x27;] ↪ ]X/G[ is a categorical equivalence</a>.\nPassing to opposite categories preserves equivalences, and the functor\n<code>Equivalence.congrLeft</code> sends an equivalence $\\mathcal A \\simeq \\mathcal B$\nto an equivalence $\\underline{\\mathrm{Fun}}(\\mathcal A, \\mathscr C) \\simeq\n\\underline{\\mathrm{Fun}}(\\mathcal B, \\mathscr C)$. $\\square$</p>\n<h2>Lean formalization</h2>\n<pre><code class=\"language-lean\">noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S] :\n    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((OrbitCat G X)ᵒᵖ ⥤ C) :=\n  letI := ιOnSubcomplex_isEquivalence G' S\n  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)\n</code></pre>\n<p>Uses <code>Functor.op</code> (preserves <code>IsEquivalence</code>) composed with mathlib's\n<code>Equivalence.congrLeft</code>.  Together with the still-to-be-formalized\n$\\Cosh_G(X, C) \\simeq \\underline{\\mathrm{Fun}}(]X/G[^{\\mathrm{op}}, C)$\nequivalence (<a class=\"node-ref\" data-node-id=\"cellular_categories.equivariant_via_functors\" href=\"cellular_categories_equivariant_via_functors.html\">Equivalence: G-equivariant (co)sheaves and functors on ]X/G[</a>) this\ngives the first equivalence\n$$\\Cosh_G(X, C) \\;\\simeq\\; \\underline{\\mathrm{Fun}}([X']^{\\mathrm{op}}, C)$$\nof Sheaf7 Prop 2.6.3 (<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a>).</p>",
+  "deps": [
+    {
+      "id": "cellular_categories.orbit_subcomplex_equivalence",
+      "title": "QFD inclusion [X'] ↪ ]X/G[ is a categorical equivalence",
+      "href": "cellular_categories/cellular_categories_orbit_subcomplex_equivalence.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
+      "display_name": "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
+        "SheafOnBuilding.InducedSpace.iota_smul_of_mem_G'"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.OrbitFunEquiv",
+      "display_name": "SheafOnBuilding.OrbitFunEquiv",
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "status": "unresolved",
+      "reason": "module not found in repository 'sheafonbuilding'"
+    }
+  ]
+}

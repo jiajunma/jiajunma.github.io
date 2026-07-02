@@ -1,0 +1,151 @@
+{
+  "id": "equivariant_sheaves.stalk_action",
+  "title": "Fixator action on the stalk of a G-equivariant cosheaf",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "equivariant_sheaves/equivariant_sheaves_stalk_action.html",
+  "primary_topic": "equivariant_sheaves",
+  "topics": [
+    "equivariant_sheaves",
+    "cellular_categories"
+  ],
+  "body_html": "<h1>Fixator action on the stalk</h1>\n<p>Let $V$ be a $G$-equivariant cosheaf on $X$\n(<a class=\"node-ref\" data-node-id=\"cellular_categories.equivariant_sheaves\" href=\"../cellular_categories/cellular_categories_equivariant_sheaves.html\">G-equivariant sheaves and cosheaves</a>) and $E \\in X$ a cell.</p>\n<blockquote>\n<p><strong>Lemma.</strong> For each $k \\in \\Fix_G(E) = \\{g : g\\cdot E = E\\}$, the\n$\\mathscr C$-morphism $a^V_{k,E} : V_E \\to V_{kE} = V_E$ is an\nendomorphism of $V_E$, and the map\n$$\\rho^V_E : \\Fix_G(E) \\to \\mathrm{End}_\\mathscr C(V_E), \\quad k \\mapsto a^V_{k,E}$$\nis a monoid homomorphism.</p>\n</blockquote>\n<p>This is what Sheaf7 line 737-738 calls \"$a^V_{g,E}$ induces a $\\Fix_G(E)$-action\non $V_E$\" — the K-representation structure that the paper's Prop 2.7.2\nrestriction functor extracts from a $G$-equivariant cosheaf.</p>",
+  "proof_html": "<p>$\\rho^V_E(k)$ is well-typed because $k\\cdot E = E$ makes the\ntarget $V_{kE}$ propositionally equal to $V_E$ (bridged by an <code>eqToHom</code>\nin Lean).  Multiplicativity is the multiplicativity axiom <code>act_mul</code> of\nthe equivariant-cosheaf structure applied at the cell $E$, together with\nthe <code>eqToHom_naturality</code> shifting <code>act k</code> at the propositionally-equal\ncells $l\\cdot E$ and $E$.  Sending $k = 1$ to the identity is the axiom\n<code>act_one</code>. $\\square$</p>\n<h2>$K$-restricted variant</h2>\n<p>Given a $K$-cosheaf of subgroups $K$ on $X$ with $K_E \\le \\Fix_G(E)$\n(the axiom <code>K_le_fix</code> of <a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_category\" href=\"../cellular_categories/cellular_categories_orbit_category.html\">The orbit category ]X/G[ as a Lean category</a>'s\ninput <code>KData</code>), composing with the inclusion $K_E \\hookrightarrow\n\\Fix_G(E)$ yields</p>\n<p>$$\\rho^V_{K,E} : K_E \\to \\mathrm{End}_\\mathscr C(V_E),$$</p>\n<p>the $K_E$-representation structure that appears as Condition (1) of\nDefinition 2.7.1 in Sheaf7 (locator <code>Sheaf7.tex §2.7</code>, line 750-761).</p>\n<h2>Lean formalization</h2>\n<p><code>stalkHom W E k hk : W_E ⟶ W_E</code> is the pointwise morphism, defined as\n<code>(W.equiv.act k E).hom ≫ eqToHom(W_{kE} = W_E)</code> using the hypothesis\n<code>hk : k • E = E</code>.  <code>stalkHom_one</code> uses <code>act_one</code> directly.  <code>stalkHom_mul</code>\ncombines <code>act_mul</code> with a one-step <code>eqToHom_naturality</code> on the family\n<code>b ↦ (W.equiv.act k b).hom</code> plus a <code>slice_lhs</code> targeted rewrite.  The\nproof structure is analogous to <code>mapOfG_one</code> in\n<a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_category\" href=\"../cellular_categories/cellular_categories_orbit_category.html\">The orbit category ]X/G[ as a Lean category</a> but simpler because no\n$g^{-1}$ appears.</p>\n<p>The monoid hom <code>stalkAction W E : MulAction.stabilizer G E →* End (W_E)</code>\npackages this as a mathlib <code>MonoidHom</code> (with <code>End</code> from\n<code>CategoryTheory.Endomorphism</code>, whose multiplication convention\n$x \\cdot y := y \\circ x$ aligns with the composition-order in the paper).\nThe K-restricted variant <code>kStalkAction κ W E : κ.K E →* End (W_E)</code>\ncomposes with <code>Subgroup.inclusion (κ.K_le_fix E)</code>.</p>",
+  "deps": [
+    {
+      "id": "cellular_categories.equivariant_sheaves",
+      "title": "G-equivariant sheaves and cosheaves",
+      "href": "cellular_categories/cellular_categories_equivariant_sheaves.html"
+    },
+    {
+      "id": "cellular_categories.orbit_category",
+      "title": "The orbit category ]X/G[ as a Lean category",
+      "href": "cellular_categories/cellular_categories_orbit_category.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.GCosheaf.stalkHom",
+      "display_name": "SheafOnBuilding.GCosheaf.stalkHom",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.Cn.hom_ext",
+        "(module) SheafOnBuilding",
+        "(module) SheafOnBuilding.Basic"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf.stalkHom_one",
+      "display_name": "SheafOnBuilding.GCosheaf.stalkHom_one",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.Cn.hom_ext",
+        "(module) SheafOnBuilding",
+        "(module) SheafOnBuilding.Basic"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf.stalkHom_mul",
+      "display_name": "SheafOnBuilding.GCosheaf.stalkHom_mul",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.Cn.hom_ext",
+        "(module) SheafOnBuilding",
+        "(module) SheafOnBuilding.Basic"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf.stalkAction",
+      "display_name": "SheafOnBuilding.GCosheaf.stalkAction",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "(module) SheafOnBuilding",
+        "(module) SheafOnBuilding.Basic",
+        "(module) SheafOnBuilding.ChainComplex"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.GCosheaf.kStalkAction",
+      "display_name": "SheafOnBuilding.GCosheaf.kStalkAction",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "(module) SheafOnBuilding",
+        "(module) SheafOnBuilding.Basic",
+        "(module) SheafOnBuilding.ChainComplex"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.StalkAction",
+      "display_name": "SheafOnBuilding.StalkAction",
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "status": "unresolved",
+      "reason": "module not found in repository 'sheafonbuilding'"
+    }
+  ]
+}

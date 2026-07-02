@@ -4,22 +4,22 @@
     "title": "Equivariant Sheaves",
     "href": "equivariant_sheaves/index.html",
     "parent": null,
-    "node_count": 14,
-    "descendant_node_count": 14
+    "node_count": 4,
+    "descendant_node_count": 15
   },
   "counts": {
-    "internal_nodes": 14,
-    "inlined_nodes": 0,
-    "descendant_nodes": 14,
+    "internal_nodes": 4,
+    "inlined_nodes": 11,
+    "descendant_nodes": 15,
     "child_topics": 0,
-    "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 14,
+    "inlined_child_topics": 2,
+    "non_proof_plan_nodes": 15,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 21,
-    "visible_nodes_with_selected_proof_plans": 21
+    "visible_nodes_without_proof_plans": 22,
+    "visible_nodes_with_selected_proof_plans": 22
   },
   "nodes": [
     {
@@ -35,7 +35,7 @@
       "title": "CW structure and QFD property on G ×^P X'",
       "kind": "proposition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_induced_cw_structure.html",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_cw_structure.html",
       "payload": "node_payloads/equivariant_sheaves_induced_cw_structure.json"
     },
     {
@@ -43,7 +43,7 @@
       "title": "Well-defined poset structure on the induced space G ×^P X'",
       "kind": "proposition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_induced_poset_structure.html",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_poset_structure.html",
       "payload": "node_payloads/equivariant_sheaves_induced_poset_structure.json"
     },
     {
@@ -51,7 +51,7 @@
       "title": "X' is a quasi-fundamental domain of the induced space",
       "kind": "proposition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_induced_qfd_property.html",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induced_qfd_property.html",
       "payload": "node_payloads/equivariant_sheaves_induced_qfd_property.json"
     },
     {
@@ -59,7 +59,7 @@
       "title": "Induced space G ×^P X' along a cosheaf P",
       "kind": "definition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_induction_GxP_X.html",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_GxP_X.html",
       "payload": "node_payloads/equivariant_sheaves_induction_GxP_X.json"
     },
     {
@@ -67,7 +67,7 @@
       "title": "Recovering the induction data from a quasi-fundamental domain",
       "kind": "proposition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_induction_data_reverse.html",
+      "href": "equivariant_sheaves/qfd/equivariant_sheaves_induction_data_reverse.html",
       "payload": "node_payloads/equivariant_sheaves_induction_data_reverse.json"
     },
     {
@@ -75,7 +75,7 @@
       "title": "Universal property of G ×^P X' and induction by stages",
       "kind": "proposition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_induction_universal_property.html",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_induction_universal_property.html",
       "payload": "node_payloads/equivariant_sheaves_induction_universal_property.json"
     },
     {
@@ -91,7 +91,7 @@
       "title": "ι : X' → G ×^P X' is a cellular embedding (poset form)",
       "kind": "lemma",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_iota_cellular_embedding.html",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_iota_cellular_embedding.html",
       "payload": "node_payloads/equivariant_sheaves_iota_cellular_embedding.json"
     },
     {
@@ -99,7 +99,7 @@
       "title": "QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E",
       "kind": "lemma",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_qfd_orbit_lemma.html",
+      "href": "equivariant_sheaves/qfd/equivariant_sheaves_qfd_orbit_lemma.html",
       "payload": "node_payloads/equivariant_sheaves_qfd_orbit_lemma.json"
     },
     {
@@ -107,7 +107,7 @@
       "title": "Quasi-fundamental domain",
       "kind": "definition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html",
+      "href": "equivariant_sheaves/qfd/equivariant_sheaves_quasi_fundamental_domain.html",
       "payload": "node_payloads/equivariant_sheaves_quasi_fundamental_domain.json"
     },
     {
@@ -115,7 +115,7 @@
       "title": "Reduction of G-equivariant cosheaves to a QFD",
       "kind": "proposition",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html",
+      "href": "equivariant_sheaves/qfd/equivariant_sheaves_reduction_to_qfd.html",
       "payload": "node_payloads/equivariant_sheaves_reduction_to_qfd.json"
     },
     {
@@ -131,8 +131,16 @@
       "title": "Cell-stabiliser and fixator formulas on the induced space",
       "kind": "lemma",
       "status": "staged",
-      "href": "equivariant_sheaves/equivariant_sheaves_stabilizer_formula_iota.html",
+      "href": "equivariant_sheaves/induction/equivariant_sheaves_stabilizer_formula_iota.html",
       "payload": "node_payloads/equivariant_sheaves_stabilizer_formula_iota.json"
+    },
+    {
+      "id": "equivariant_sheaves.stalk_action",
+      "title": "Fixator action on the stalk of a G-equivariant cosheaf",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "equivariant_sheaves/equivariant_sheaves_stalk_action.html",
+      "payload": "node_payloads/equivariant_sheaves_stalk_action.json"
     }
   ],
   "edges": [
@@ -283,8 +291,8 @@
       "id": "cellular_categories",
       "title": "Cellular Categories",
       "href": "cellular_categories/index.html",
-      "role": "dependency",
-      "node_count": 8
+      "role": "dependency_and_dependent",
+      "node_count": 13
     },
     {
       "id": "coefficient_systems",
@@ -366,6 +374,13 @@
       "count": 1
     },
     {
+      "from": "topic:cellular_categories",
+      "to": "equivariant_sheaves.stalk_action",
+      "kind": "boundary_dependency",
+      "topic": "cellular_categories",
+      "count": 2
+    },
+    {
       "from": "topic:depth_zero_reduction",
       "to": "equivariant_sheaves.heisenberg_weil_equivalence",
       "kind": "boundary_dependency",
@@ -405,6 +420,13 @@
       "to": "topic:building",
       "kind": "boundary_dependent",
       "topic": "building",
+      "count": 1
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "topic:cellular_categories",
+      "kind": "boundary_dependent",
+      "topic": "cellular_categories",
       "count": 1
     },
     {
@@ -547,9 +569,21 @@
       "count": 1
     },
     {
+      "id": "representation",
+      "title": "representation",
+      "href": "keywords/representation.html",
+      "count": 1
+    },
+    {
       "id": "stabilizer",
       "title": "stabilizer",
       "href": "keywords/stabilizer.html",
+      "count": 2
+    },
+    {
+      "id": "stalk",
+      "title": "stalk",
+      "href": "keywords/stalk.html",
       "count": 1
     },
     {
@@ -586,5 +620,8 @@
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "equivariant_sheaves.induction",
+    "equivariant_sheaves.qfd"
+  ]
 }

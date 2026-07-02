@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cell-stabiliser and fixator formulas on the induced space — Sheaves on Buildings — Knowledge Base</title>
+  <title>Keyword: stalk — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -55,8 +55,15 @@
           <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        <li class="topic-parent">
+          <details data-topic-root="equivariant_sheaves">
+            <summary><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -318,6 +325,8 @@
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
+        <li><a href="../keywords/orbit-category.html">orbit-category</a></li>
+      
         <li><a href="../keywords/orbits.html">orbits</a></li>
       
         <li><a href="../keywords/orientation.html">orientation</a></li>
@@ -365,6 +374,8 @@
         <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stalk.html">stalk</a></li>
       
         <li><a href="../keywords/star.html">star</a></li>
       
@@ -414,249 +425,19 @@
   </nav>
   <main>
     
-<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-equivariant_sheaves-2e-stabilizer_formula_iota">
-  <header class="lemma_thmheading thm-heading">
-    <span class="lemma_thmcaption thm-caption">Lemma</span>
-    <span class="lemma_thmtitle thm-title">Cell-stabiliser and fixator formulas on the induced space</span>
-    <div class="thm_header_extras">
-      
-      <span class="badge kind-lemma">lemma</span>
+<h1>Keyword: stalk</h1>
+
+<div class="blueprint-node-list">
+  
+  <article class="lemma_thmwrapper theorem-style-lemma summary-node">
+    <header class="lemma_thmheading thm-heading">
+      <span class="lemma_thmcaption thm-caption">Lemma</span>
+      <a class="lemma_thmtitle thm-title" href="../equivariant_sheaves/equivariant_sheaves_stalk_action.html">Fixator action on the stalk of a G-equivariant cosheaf</a>
       <span class="badge status-staged">staged</span>
-    </div>
-    <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-equivariant_sheaves-2e-stabilizer_formula_iota">#</a>
-      
-      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
-      
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
-      
-    </div>
-  </header>
-
+    </header>
+  </article>
   
-  <div class="modal-container" id="uses-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
-        
-        <li><a href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a></li>
-        
-      </ul>
-    </div>
-  </div>
-  
-
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L320"><code>SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem mem_stabilizer_iota_iff (E : X&#39;) (m : G) :
-    m • iota d E = iota d E ↔
-      ∃ n ∈ d.G&#39;, n • E = E ∧ ∃ p ∈ d.P E, m = n * p</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L343"><code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem P_le_stabilizer_iota (E : X&#39;) :
-    d.P E ≤ MulAction.stabilizer G (iota d E)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L352"><code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.Induction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem fix_G&#39;_le_stabilizer_iota (E : X&#39;) {n : G}
-    (hn_G&#39; : n ∈ d.G&#39;) (hn_fix : n • E = E) :
-    n • iota d E = iota d E</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
-      </p>
-      
-    </div>
-  </div>
-  
-
-  <div class="lemma_thmcontent thm-content body">
-    <h1>Cell-stabiliser and fixator formulas on the induced space</h1>
-<p>Fix the induction data $(G', P)$ satisfying (P1) $nP_En^{-1} = P_{n
-\cdot E}$ for $n \in G'$ and (P2) $P_E \cap G' \subseteq
-\Fix_{G'}(E)$, and the induced space $X = G \times^P X'$ with
-cellular embedding
-$\iota : X' \to X,\ E \mapsto [(1, E)]$
-(cf.\ [[node:equivariant_sheaves.induction_GxP_X]]).</p>
-<p>Recall the two subgroups attached to a cell
-(<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>):</p>
-<ul>
-<li>$\Stab_G(E) = \{g \in G : g \cdot E = E\}$ — setwise stabiliser;</li>
-<li>$\Fix_G(E) = \bigcap_{F \preceq E} \Stab_G(F)$ — pointwise fixator
-  (fix $E$ and every one of its faces).</li>
-</ul>
-<h2>Setwise formula at the cell level</h2>
-<blockquote>
-<p><strong>Lemma A (setwise cell stabiliser).</strong></p>
-<ol>
-<li>For every cell $E \in [\![X']\!]$ and every $g \in G$,
-   $$\Stab_G(g \cdot \iota E) \;=\; {}^g\!\bigl(\Stab_{G'}(E) \cdot P_E\bigr).$$
-   In particular $\Stab_G(\iota E) = \Stab_{G'}(E) \cdot P_E$.</li>
-<li>$P_E \subseteq \Stab_G(\iota E)$ for every cell $E$.</li>
-</ol>
-</blockquote>
-    
-    <details class="proof-details">
-      <summary>Proof</summary>
-      <div class="proof-body">
-        <p>By $G$-equivariance $\Stab_G(g \cdot \iota E) = g \Stab_G(\iota
-E) g^{-1}$, so treat $g = 1$.</p>
-<p><strong>($\supseteq$).</strong> Let $\hat g = u \cdot p$ with $u \in \Stab_{G'}(E)$,
-$p \in P_E$. Then $[(up, E)]_\sim = [(1, E)]_\sim$: apply the
-$\sim$-relation with witness $n := u \in G'$: $u \cdot E = E$ (since
-$u \in \Stab_{G'}(E)$), and $(up)^{-1} \cdot 1 \cdot u = p^{-1} \in
-P_E$. Hence $\hat g \in \Stab_G(\iota E)$.</p>
-<p><strong>($\subseteq$).</strong> Let $\hat g \in \Stab_G(\iota E)$. From the definition
-of $\sim$ applied to $(1, E)$ and $(\hat g, E)$ there exists $n \in G'$
-with $n \cdot E = E$ (so $n \in \Stab_{G'}(E)$) and $\hat g^{-1} n \in
-P_E$, i.e.\ $\hat g \in n P_E^{-1} = n P_E$. By (P1),
-$\Stab_{G'}(E)$ normalises $P_E$ (as any $m \in \Stab_{G'}(E)$
-conjugates $P_E$ to $P_{m \cdot E} = P_E$), so $n P_E = P_E n
-\subseteq \Stab_{G'}(E) \cdot P_E$.</p>
-<p><strong>Statement (2).</strong> For $p \in P_E$, apply Lemma A(1) with $u = 1$,
-$p = p$: $1 \cdot p = p \in \Stab_G(\iota E)$.  $\square$</p>
-<h2>Pointwise formula on points (paper convention)</h2>
-<p>The setwise formula on cells is the poset shadow of the paper's
-pointwise formula on individual <em>points</em>:</p>
-<blockquote>
-<p><strong>Lemma B (paper's <code>lem:Stab_gx</code>).</strong> For $x \in X'$ identified with
-$\iota(x) \in X$ and $g \in G$,
-$$\Fix_G(g \cdot x) \;=\; {}^g\!\bigl(\Fix_{G'}(x) \cdot P_x\bigr).$$
-Consequently $\hat K_x := \Fix_G(x) = \Fix_{G'}(x) \cdot P_x$.
-Also $P_E \subseteq \Fix_G(E)$ (pointwise) for every cell $E$.</p>
-</blockquote>
-<p>For a point $x$, pointwise fix coincides with setwise stab on $\{x\}$,
-so Lemma B is Lemma A specialised to the singleton $\{x\}$ inside the
-CW closure of the cell containing $x$ — up to identifying $P_x$ with
-the cosheaf constant $P_E$ on the interior of $E$.</p>
-<h2>Pointwise formula at the cell level</h2>
-<p>Combining Lemma A with the definition of $\Fix_G$ as an intersection
-over subfaces:</p>
-<p>$$
-\Fix_G(\iota E) \;=\; \bigcap_{F \preceq E} \Stab_G(\iota F)
-\;=\; \bigcap_{F \preceq E} \Stab_{G'}(F) \cdot P_F.
-$$</p>
-<p>Under the additional hypothesis that $F \mapsto \Fix_{G'}(F)$ is a
-sheaf on $X'$ (i.e.\ $F \preceq F' \Rightarrow \Fix_{G'}(F') \le
-\Fix_{G'}(F)$) and $F \mapsto P_F$ is a cosheaf (P0), the intersection
-telescopes:</p>
-<p>$$
-\Fix_G(\iota E) \;=\; \Fix_{G'}(E) \cdot P_E
-$$</p>
-<p>recovering the paper's <code>lem:Stab_gx</code> at the cell level.  The
-hypothesis $F \mapsto \Fix_{G'}(F)$ sheaf is a geometric input on the
-$G'$-action on $X'$, not automatic from the abstract poset setting.</p>
-<h2>Downstream</h2>
-<p>Lemma A(1) is used in the proof that $X'$ is a QFD of the induced
-space with the <em>sharp</em> subgroup $G'$
-(<a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="equivariant_sheaves_induced_qfd_property.html">X&#x27; is a quasi-fundamental domain of the induced space</a>).  Lemma A(2) is
-used in the descent of the face relation to $\mathrm{InducedSpace}$
-(<a class="node-ref" data-node-id="equivariant_sheaves.induced_poset_structure" href="equivariant_sheaves_induced_poset_structure.html">Well-defined poset structure on the induced space G ×^P X&#x27;</a>,
-<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>).</p>
-<h2>Lean formalization</h2>
-<p>The Lean formalisation is the setwise Lemma A.  In particular the
-<code>MulAction.stabilizer G (iota d E)</code> in the code is
-$\Stab_G(\iota E)$, not the pointwise $\Fix_G(\iota E)$.</p>
-<p>Lemma A(1) specialised to $g = 1$ is <code>InducedSpace.mem_stabilizer_iota_iff</code>:</p>
-<pre><code class="language-lean">theorem mem_stabilizer_iota_iff (E : X') (m : G) :
-    m ∈ MulAction.stabilizer G (iota d E) ↔
-      ∃ u ∈ MulAction.stabilizer d.G' E, ∃ p ∈ d.P E, m = u * p
-</code></pre>
-<p>The two half-inclusions are</p>
-<pre><code class="language-lean">theorem P_le_stabilizer_iota (E : X') :
-    d.P E ≤ MulAction.stabilizer G (iota d E)
-
-theorem fix_G'_le_stabilizer_iota (E : X') {n : G}
-    (hn : n ∈ MulAction.stabilizer d.G' E) :
-    n ∈ MulAction.stabilizer G (iota d E)
-</code></pre>
-<p><code>P_le_stabilizer_iota</code> is Lemma A(2); <code>fix_G'_le_stabilizer_iota</code>
-records $\Stab_{G'}(E) \le \Stab_G(\iota E)$ (the ($\supseteq$)
-direction restricted to $p = 1$).  The generic $g \ne 1$ form is
-obtained via <code>MulAction.stabilizer_smul_eq_stabilizer_map_conj</code>.</p>
-<p>The pointwise cell version and the paper's point-level formula are
-<em>not</em> separately formalised in the current library.  Reconstructing
-them requires either (i) intersecting Lemma A over subfaces
-$F \preceq E$ or (ii) adding a <code>pointwiseFix</code> subgroup and proving
-the telescoping identity above under the sheaf hypothesis on
-$F \mapsto \Fix_{G'}(F)$; see the design note in
-<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>.</p>
-      </div>
-    </details>
-    
-  </div>
-
-  
-
-  
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#39;</a></li>
-      
-      <li><a href="equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space</a></li>
-      
-    </ul>
-  </section>
-  
-
-  
-
-  
-  <footer class="tags">
-    <span class="tag">induction</span><span class="tag">stabilizer</span><span class="tag">fixator</span>
-  </footer>
-  
-</article>
+</div>
 
   </main>
   <script src="../graph.js"></script>

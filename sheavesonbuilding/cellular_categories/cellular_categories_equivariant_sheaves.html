@@ -55,8 +55,15 @@
           <a href="../depth_zero_reduction/index.html">Depth Zero Reduction</a>
         </li>
       
-        <li class="topic-leaf">
-          <a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a>
+        <li class="topic-parent">
+          <details data-topic-root="equivariant_sheaves">
+            <summary><a href="../equivariant_sheaves/index.html">Equivariant Sheaves</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../equivariant_sheaves/induction/index.html">Induction</a>
+        </li><li class="topic-leaf">
+          <a href="../equivariant_sheaves/qfd/index.html">Qfd</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -318,6 +325,8 @@
       
         <li><a href="../keywords/orbit-bijection.html">orbit-bijection</a></li>
       
+        <li><a href="../keywords/orbit-category.html">orbit-category</a></li>
+      
         <li><a href="../keywords/orbits.html">orbits</a></li>
       
         <li><a href="../keywords/orientation.html">orientation</a></li>
@@ -365,6 +374,8 @@
         <li><a href="../keywords/skodlerack-ye.html">skodlerack-ye</a></li>
       
         <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stalk.html">stalk</a></li>
       
         <li><a href="../keywords/star.html">star</a></li>
       
@@ -458,12 +469,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GEquivariant.lean#L78"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/GEquivariant.lean#L78"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ dfd1159, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -474,12 +485,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GEquivariant.lean#L134"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/GEquivariant.lean#L134"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ dfd1159, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -488,14 +499,32 @@
         </li>
         
         <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GEquivariantCosheaf.act_one_inv</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivariantCosheaf.act_map</code>, <code>SheafOnBuilding.GEquivariantCosheaf</code>, <code>SheafOnBuilding.GEquivariantSheaf.act_map</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GEquivariant.lean#L58"><code>SheafOnBuilding.smulFunctor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/GEquivariant.lean#L58"><code>SheafOnBuilding.smulFunctor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 2de5d11, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ dfd1159, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -503,10 +532,46 @@
           <pre class="lean-signature"><code>def smulFunctor (g : G) : X ⥤ X where</code></pre>
         </li>
         
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.category</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/2de5d11bfacd64c595ab3b2a1364c49f6ed9200d/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <code>SheafOnBuilding.GCosheaf</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
       </p>
       
     </div>
@@ -538,6 +603,28 @@ with $g^*V$ obtained by post-composing $V$ with $g : ]X[ \to ]X[$.</p>
 reversed.</p>
 <p><strong>Notation.</strong> We write $\Sh_G(X,R)$ (resp.\ $\Cosh_G(X,R)$) for $G$-equivariant
 $R$-modules; for the trivial group we recover $\Sh(X,R) = \Sh_{\{e\}}(X,R)$.</p>
+<h2>Lean formalization</h2>
+<p>The class <code>GEquivariantCosheaf G X F</code> (typeclass on a <em>single</em> cosheaf <code>F</code>)
+records the pointwise action data</p>
+<p><code>act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))</code></p>
+<p>as a family of <em>isomorphisms</em> (matching the paper's convention "$g_* : V_E
+\xrightarrow{\sim} V_{gE}$"), together with three axioms — <code>act_map</code>
+(naturality with cosheaf restrictions), <code>act_one</code> (identity of $G$ acts as
+$\mathbf 1$ modulo <code>eqToHom</code> for $1 \cdot E = E$), and <code>act_mul</code>
+(multiplicativity modulo <code>eqToHom</code> for $(g\cdot h)\cdot E = g\cdot(h\cdot E)$).</p>
+<p><strong>Why <code>Iso</code> and not just a morphism.</strong> For a Group <code>G</code> invertibility of
+<code>act g</code> follows abstractly, but packaging as <code>Iso</code> from the start gives
+downstream code direct access to <code>.inv</code>, avoiding rewrite-motive
+typechecking failures on <code>rw [inv_one]</code> when <code>g⁻¹</code> appears in an <code>eqToHom</code>
+target type.  The derived lemma <code>GEquivariantCosheaf.act_one_inv</code> records
+that <code>(act 1 E).inv</code> equals the <code>eqToHom</code> bridging <code>W_{1 \cdot E} = W_E</code>.</p>
+<p>For §2.7 (Prop 2.7.2) we need $\Cosh_G(X, C)$ as a <em>category</em> (not just a
+predicate on individual cosheaves): the file <code>GCosheaf.lean</code> supplies the
+bundled type <code>GCosheaf G X C := (base : Cosheaf X C, equiv : GEquivariantCosheaf G X base)</code>
+together with a <code>Category</code> instance whose morphisms are natural
+transformations of the underlying cosheaves commuting with <code>act g E</code> at
+every cell.  See <a class="node-ref" data-node-id="cellular_categories.orbit_category" href="cellular_categories_orbit_category.html">The orbit category ]X/G[ as a Lean category</a> for the
+<code>]X/G[</code>-side of the same story.</p>
     
   </div>
 
@@ -560,7 +647,9 @@ $R$-modules; for the trivial group we recover $\Sh(X,R) = \Sh_{\{e\}}(X,R)$.</p>
       
       <li><a href="../equivariant_sheaves/equivariant_sheaves_invariants_coinvariants.html">Invariants and coinvariants of G-equivariant (co)sheaves</a></li>
       
-      <li><a href="../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a></li>
+      <li><a href="../equivariant_sheaves/qfd/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a></li>
+      
+      <li><a href="../equivariant_sheaves/equivariant_sheaves_stalk_action.html">Fixator action on the stalk of a G-equivariant cosheaf</a></li>
       
       <li><a href="../representations/representations_chain_complex_C_dot.html">Schneider–Stuhler chain complex C_•(V) of a cosheaf</a></li>
       

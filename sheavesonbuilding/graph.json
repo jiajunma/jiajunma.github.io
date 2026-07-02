@@ -22,7 +22,8 @@
         "abstract_cell_complex.is_locally_finite",
         "abstract_cell_complex.star_topology",
         "abstract_cell_complex.subcomplex",
-        "cellular_categories.cw_complex_setting"
+        "cellular_categories.cw_complex_setting",
+        "cellular_categories.orbit_end_stabilizer"
       ]
     },
     {
@@ -47,6 +48,8 @@
       ],
       "used_by": [
         "cellular_categories.cw_complex_setting",
+        "cellular_categories.orbit_category",
+        "cellular_categories.orbit_end_stabilizer",
         "equivariant_sheaves.induced_poset_structure",
         "equivariant_sheaves.iota_cellular_embedding",
         "equivariant_sheaves.stabilizer_formula_iota"
@@ -1161,7 +1164,10 @@
       "lean_declarations": [
         "SheafOnBuilding.GEquivariantSheaf",
         "SheafOnBuilding.GEquivariantCosheaf",
-        "SheafOnBuilding.smulFunctor"
+        "SheafOnBuilding.GEquivariantCosheaf.act_one_inv",
+        "SheafOnBuilding.smulFunctor",
+        "SheafOnBuilding.GCosheaf",
+        "SheafOnBuilding.GCosheaf.category"
       ],
       "topic": "cellular_categories",
       "uses": [
@@ -1176,6 +1182,7 @@
         "coefficient_systems.coeff_phi",
         "equivariant_sheaves.invariants_coinvariants",
         "equivariant_sheaves.reduction_to_qfd",
+        "equivariant_sheaves.stalk_action",
         "representations.chain_complex_C_dot",
         "representations.loc_phi_functor"
       ]
@@ -1197,6 +1204,113 @@
       "uses": [
         "cellular_categories.equivariant_sheaves",
         "cellular_categories.quotient_category_jXGk"
+      ]
+    },
+    {
+      "id": "cellular_categories.orbit_category",
+      "title": "The orbit category ]X/G[ as a Lean category",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "orbit-category",
+        "cellular-action"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.OrbitCat",
+        "SheafOnBuilding.OrbitCat.Mor",
+        "SheafOnBuilding.OrbitCat.Mor.id",
+        "SheafOnBuilding.OrbitCat.Mor.comp",
+        "SheafOnBuilding.OrbitCat.category"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "abstract_cell_complex.g_cell_complex",
+        "cellular_categories.quotient_category_jXGk"
+      ],
+      "used_by": [
+        "cellular_categories.orbit_end_stabilizer",
+        "cellular_categories.orbit_subcomplex_equivalence",
+        "equivariant_sheaves.stalk_action"
+      ]
+    },
+    {
+      "id": "cellular_categories.orbit_end_stabilizer",
+      "title": "Endomorphisms in ]X/G[ are the stabilizer",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "orbit-category",
+        "stabilizer"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endToStabilizer"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "abstract_cell_complex.abstract_cell_complex",
+        "abstract_cell_complex.g_cell_complex",
+        "cellular_categories.orbit_category"
+      ]
+    },
+    {
+      "id": "cellular_categories.orbit_functor_cat_equivalence",
+      "title": "Functor-category equivalence: Fun([X']^op, C) ≌ Fun(]X/G[^op, C)",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "functor-category",
+        "equivalence",
+        "qfd"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.OrbitCat.funCatEquivOfQFD"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.orbit_subcomplex_equivalence"
+      ]
+    },
+    {
+      "id": "cellular_categories.orbit_subcomplex_equivalence",
+      "title": "QFD inclusion [X'] ↪ ]X/G[ is a categorical equivalence",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "orbit-category",
+        "qfd",
+        "equivalence"
+      ],
+      "primary_topic": "cellular_categories",
+      "topics": [
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.OrbitCat.OnSubcomplex",
+        "SheafOnBuilding.OrbitCat.ιOnSubcomplex",
+        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj",
+        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence"
+      ],
+      "topic": "cellular_categories",
+      "uses": [
+        "cellular_categories.orbit_category",
+        "equivariant_sheaves.quasi_fundamental_domain"
+      ],
+      "used_by": [
+        "cellular_categories.orbit_functor_cat_equivalence"
       ]
     },
     {
@@ -1243,6 +1357,7 @@
       ],
       "used_by": [
         "cellular_categories.equivariant_via_functors",
+        "cellular_categories.orbit_category",
         "coefficient_systems.coeff_phi"
       ]
     },
@@ -2189,14 +2304,14 @@
         "induction",
         "cw-structure"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.induction",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
         "SheafOnBuilding.InducedSpace.dim"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "uses": [
         "equivariant_sheaves.induced_poset_structure",
         "equivariant_sheaves.induced_qfd_property",
@@ -2224,20 +2339,20 @@
         "poset",
         "well-definedness"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.induction",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.InductionDatum.leRep",
-        "SheafOnBuilding.InductionDatum.leRep_refl",
-        "SheafOnBuilding.InductionDatum.leRep_trans",
-        "SheafOnBuilding.InductionDatum.leRep_left_descends",
-        "SheafOnBuilding.InductionDatum.leRep_right_descends",
-        "SheafOnBuilding.InductionDatum.leRep_antisymm",
+        "SheafOnBuilding.InductionDatum.InductionLe",
+        "SheafOnBuilding.InductionDatum.InductionLe_refl",
+        "SheafOnBuilding.InductionDatum.InductionLe_trans",
+        "SheafOnBuilding.InductionDatum.InductionLe_left_descends",
+        "SheafOnBuilding.InductionDatum.InductionLe_right_descends",
+        "SheafOnBuilding.InductionDatum.InductionLe_antisymm",
         "SheafOnBuilding.InducedSpace.instPartialOrder"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "uses": [
         "abstract_cell_complex.g_cell_complex",
         "equivariant_sheaves.induction_GxP_X"
@@ -2256,16 +2371,16 @@
         "qfd",
         "subcomplex"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.induction",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
         "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
         "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
         "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "uses": [
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.iota_cellular_embedding",
@@ -2285,9 +2400,9 @@
         "induction",
         "induced-space"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.induction",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
         "SheafOnBuilding.InductionDatum",
@@ -2299,7 +2414,7 @@
         "SheafOnBuilding.InducedSpace",
         "SheafOnBuilding.InducedSpace.iota"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "uses": [
         "cellular_categories.cw_complex_setting",
         "cellular_categories.sheaf_of_subgroups"
@@ -2328,9 +2443,9 @@
         "qfd",
         "reconstruction"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.qfd",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.qfd"
       ],
       "lean_declarations": [
         "SheafOnBuilding.IsQuasiFundDomain.natMap",
@@ -2348,7 +2463,7 @@
         "SheafOnBuilding.IsQuasiFundDomain.InductionData.equivX",
         "SheafOnBuilding.IsQuasiFundDomain.InductionData.smul_le_smul_of_rel"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.qfd",
       "uses": [
         "equivariant_sheaves.induction_GxP_X",
         "equivariant_sheaves.qfd_orbit_lemma",
@@ -2365,11 +2480,11 @@
         "universal-property",
         "adjunction"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.induction",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.induction"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "uses": [
         "building.generalized_building_bs",
         "equivariant_sheaves.induced_cw_structure",
@@ -2404,9 +2519,9 @@
         "induction",
         "cellular-embedding"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.induction",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
         "SheafOnBuilding.InducedSpace.iota_injective",
@@ -2416,7 +2531,7 @@
         "SheafOnBuilding.InducedSpace.smul_iota_eq_smul_iota_iff",
         "SheafOnBuilding.InducedSpace.smul_iota_le_smul_iota_iff"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "uses": [
         "abstract_cell_complex.g_cell_complex",
         "equivariant_sheaves.induction_GxP_X"
@@ -2435,16 +2550,19 @@
         "qfd",
         "orbits"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.qfd",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.qfd"
       ],
       "lean_declarations": [
         "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff",
         "SheafOnBuilding.IsQuasiFundDomain.stabilizer_smul",
-        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff"
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.KData",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K",
+        "SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.qfd",
       "uses": [
         "equivariant_sheaves.quasi_fundamental_domain"
       ],
@@ -2463,21 +2581,22 @@
         "qfd",
         "fundamental-domain"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.qfd",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.qfd"
       ],
       "lean_declarations": [
         "SheafOnBuilding.IsQuasiFundDomain",
         "SheafOnBuilding.Subcomplex.stabilizer"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.qfd",
       "uses": [
         "cellular_categories.cw_complex_setting"
       ],
       "used_by": [
         "applications.qfd_from_alcove",
         "building.apartments_in_bsigma",
+        "cellular_categories.orbit_subcomplex_equivalence",
         "coefficient_systems.cartesian_local_maps",
         "equivariant_sheaves.induced_cw_structure",
         "equivariant_sheaves.induced_qfd_property",
@@ -2496,11 +2615,11 @@
         "qfd",
         "equivariance"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.qfd",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.qfd"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.qfd",
       "uses": [
         "cellular_categories.equivariant_sheaves",
         "equivariant_sheaves.qfd_orbit_lemma",
@@ -2543,16 +2662,16 @@
         "stabilizer",
         "fixator"
       ],
-      "primary_topic": "equivariant_sheaves",
+      "primary_topic": "equivariant_sheaves.induction",
       "topics": [
-        "equivariant_sheaves"
+        "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
         "SheafOnBuilding.InducedSpace.mem_stabilizer_iota_iff",
         "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
         "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota"
       ],
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "uses": [
         "abstract_cell_complex.g_cell_complex",
         "equivariant_sheaves.induction_GxP_X"
@@ -2560,6 +2679,34 @@
       "used_by": [
         "equivariant_sheaves.induced_cw_structure",
         "equivariant_sheaves.induced_qfd_property"
+      ]
+    },
+    {
+      "id": "equivariant_sheaves.stalk_action",
+      "title": "Fixator action on the stalk of a G-equivariant cosheaf",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "stalk",
+        "stabilizer",
+        "representation"
+      ],
+      "primary_topic": "equivariant_sheaves",
+      "topics": [
+        "equivariant_sheaves",
+        "cellular_categories"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.GCosheaf.stalkHom",
+        "SheafOnBuilding.GCosheaf.stalkHom_one",
+        "SheafOnBuilding.GCosheaf.stalkHom_mul",
+        "SheafOnBuilding.GCosheaf.stalkAction",
+        "SheafOnBuilding.GCosheaf.kStalkAction"
+      ],
+      "topic": "equivariant_sheaves",
+      "uses": [
+        "cellular_categories.equivariant_sheaves",
+        "cellular_categories.orbit_category"
       ]
     },
     {
@@ -3452,6 +3599,38 @@
       "to": "cellular_categories.equivariant_via_functors"
     },
     {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "cellular_categories.orbit_category"
+    },
+    {
+      "from": "cellular_categories.quotient_category_jXGk",
+      "to": "cellular_categories.orbit_category"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "cellular_categories.orbit_end_stabilizer"
+    },
+    {
+      "from": "abstract_cell_complex.g_cell_complex",
+      "to": "cellular_categories.orbit_end_stabilizer"
+    },
+    {
+      "from": "cellular_categories.orbit_category",
+      "to": "cellular_categories.orbit_end_stabilizer"
+    },
+    {
+      "from": "cellular_categories.orbit_subcomplex_equivalence",
+      "to": "cellular_categories.orbit_functor_cat_equivalence"
+    },
+    {
+      "from": "cellular_categories.orbit_category",
+      "to": "cellular_categories.orbit_subcomplex_equivalence"
+    },
+    {
+      "from": "equivariant_sheaves.quasi_fundamental_domain",
+      "to": "cellular_categories.orbit_subcomplex_equivalence"
+    },
+    {
       "from": "cellular_categories.cw_complex_setting",
       "to": "cellular_categories.orientation"
     },
@@ -4054,6 +4233,14 @@
     {
       "from": "equivariant_sheaves.induction_GxP_X",
       "to": "equivariant_sheaves.stabilizer_formula_iota"
+    },
+    {
+      "from": "cellular_categories.equivariant_sheaves",
+      "to": "equivariant_sheaves.stalk_action"
+    },
+    {
+      "from": "cellular_categories.orbit_category",
+      "to": "equivariant_sheaves.stalk_action"
     },
     {
       "from": "cellular_categories.equivariant_sheaves",

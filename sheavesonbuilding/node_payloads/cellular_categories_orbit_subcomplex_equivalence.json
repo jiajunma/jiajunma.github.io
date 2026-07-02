@@ -1,0 +1,134 @@
+{
+  "id": "cellular_categories.orbit_subcomplex_equivalence",
+  "title": "QFD inclusion [X'] ↪ ]X/G[ is a categorical equivalence",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "cellular_categories/cellular_categories_orbit_subcomplex_equivalence.html",
+  "primary_topic": "cellular_categories",
+  "topics": [
+    "cellular_categories"
+  ],
+  "body_html": "<h1>QFD inclusion $[X'] \\hookrightarrow \\,]X/G[\\,$ is an equivalence</h1>\n<p>Following Sheaf7 line 725-728.</p>\n<p>Let $S \\subseteq X$ be a QFD for the subgroup $G' \\le G$\n(<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.quasi_fundamental_domain\" href=\"../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html\">Quasi-fundamental domain</a>).  Denote by\n$[X']_{[X/G]}$ (equivalently $\\,]X'[_{]X/G[}\\,$) the full subcategory of\n$]X/G[$ on cells of $S$.</p>\n<blockquote>\n<p><strong>Proposition.</strong> The inclusion functor\n$$\\iota : \\,]X'[_{]X/G[}\\; \\longrightarrow\\; \\,]X/G[$$\nis an equivalence of categories.  Dually,\n$$\\iota : [X']_{[X/G]}\\; \\longrightarrow\\; [X/G]$$\nis an equivalence.</p>\n</blockquote>",
+  "proof_html": "<p>A full-subcategory inclusion is automatically fully faithful.\nEssential surjectivity is exactly the QFD hypothesis: every cell\n$F \\in X$ lies in the $G$-orbit of some cell of $S$\n(<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.quasi_fundamental_domain\" href=\"../equivariant_sheaves/equivariant_sheaves_quasi_fundamental_domain.html\">Quasi-fundamental domain</a>).  Concretely,\ngiven $F \\in X$, choose $g \\in G$ and $E \\in S$ with $g \\cdot E = F$; then\n$g : E \\to F$ and $g^{-1} : F \\to E$ are mutually inverse morphisms in\n$]X/G[$ (both witnesses are $g E = F \\preceq F$ resp.\\ $g^{-1} F = E \\preceq E$;\ncomposition is $\\mathbf 1 = g \\cdot g^{-1}$). $\\square$</p>\n<h2>Lean formalization</h2>\n<p>The full subcategory is defined using mathlib's\n<code>CategoryTheory.ObjectProperty.FullSubcategory</code>:</p>\n<pre><code class=\"language-lean\">abbrev OnSubcomplex (S : Subcomplex X) :=\n  ObjectProperty.FullSubcategory (C := OrbitCat G X) (fun E =&gt; (E : X) ∈ S)\n\nabbrev ιOnSubcomplex (S : Subcomplex X) : OnSubcomplex S ⥤ OrbitCat G X :=\n  ObjectProperty.ι _\n</code></pre>\n<p><code>ιOnSubcomplex_essSurj</code> provides the essential surjectivity, using\n<code>IsQuasiFundDomain.surj</code> to obtain the pair $(g, F)$ and constructing the\niso as <code>Iso.mk</code> with <code>.hom = ⟨g, _⟩</code> and <code>.inv = ⟨g⁻¹, _⟩</code>.</p>\n<p><code>ιOnSubcomplex_isEquivalence</code> then packages <code>Functor.IsEquivalence</code>\n(mathlib gives full + faithful for free from full-subcategory inclusions;\nthis file supplies essential surjectivity).  Stated as a <code>theorem</code> (not\n<code>instance</code>) because <code>G'</code> does not appear in the conclusion, so must be\n<code>letI</code>'d at call sites.</p>",
+  "deps": [
+    {
+      "id": "cellular_categories.orbit_category",
+      "title": "The orbit category ]X/G[ as a Lean category",
+      "href": "cellular_categories/cellular_categories_orbit_category.html"
+    },
+    {
+      "id": "equivariant_sheaves.quasi_fundamental_domain",
+      "title": "Quasi-fundamental domain",
+      "href": "equivariant_sheaves/qfd/equivariant_sheaves_quasi_fundamental_domain.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "cellular_categories.orbit_functor_cat_equivalence",
+      "title": "Functor-category equivalence: Fun([X']^op, C) ≌ Fun(]X/G[^op, C)",
+      "href": "cellular_categories/cellular_categories_orbit_functor_cat_equivalence.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SheafOnBuilding.OrbitCat.OnSubcomplex",
+      "display_name": "SheafOnBuilding.OrbitCat.OnSubcomplex",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
+        "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.ιOnSubcomplex",
+      "display_name": "SheafOnBuilding.OrbitCat.ιOnSubcomplex",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
+        "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj",
+      "display_name": "SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
+        "SheafOnBuilding.InducedSpace.Subcomplex.ofIota",
+        "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota"
+      ]
+    },
+    {
+      "name": "SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence",
+      "display_name": "SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota",
+        "SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "SheafOnBuilding.OrbitCat",
+      "display_name": "SheafOnBuilding.OrbitCat",
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "status": "unresolved",
+      "reason": "module not found in repository 'sheafonbuilding'"
+    }
+  ]
+}

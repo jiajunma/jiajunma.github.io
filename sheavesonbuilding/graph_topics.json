@@ -62,15 +62,16 @@
       "title": "Cellular Categories",
       "depth": 1,
       "parent": null,
-      "node_count": 8,
-      "direct_node_count": 8,
+      "node_count": 13,
+      "direct_node_count": 13,
       "kind_counts": {
-        "definition": 6,
-        "lemma": 1,
+        "definition": 7,
+        "lemma": 4,
+        "proposition": 1,
         "topic": 1
       },
       "status_counts": {
-        "staged": 8
+        "staged": 13
       },
       "href": "cellular_categories/index.html",
       "children": []
@@ -120,18 +121,21 @@
       "title": "Equivariant Sheaves",
       "depth": 1,
       "parent": null,
-      "node_count": 14,
-      "direct_node_count": 14,
+      "node_count": 15,
+      "direct_node_count": 4,
       "kind_counts": {
         "definition": 2,
-        "lemma": 4,
+        "lemma": 5,
         "proposition": 8
       },
       "status_counts": {
-        "staged": 14
+        "staged": 15
       },
       "href": "equivariant_sheaves/index.html",
-      "children": []
+      "children": [
+        "equivariant_sheaves.induction",
+        "equivariant_sheaves.qfd"
+      ]
     },
     {
       "id": "references",
@@ -171,7 +175,7 @@
     {
       "from": "abstract_cell_complex",
       "to": "cellular_categories",
-      "count": 5
+      "count": 8
     },
     {
       "from": "abstract_cell_complex",
@@ -226,7 +230,7 @@
     {
       "from": "cellular_categories",
       "to": "equivariant_sheaves",
-      "count": 7
+      "count": 9
     },
     {
       "from": "cellular_categories",
@@ -272,6 +276,11 @@
       "from": "equivariant_sheaves",
       "to": "building",
       "count": 8
+    },
+    {
+      "from": "equivariant_sheaves",
+      "to": "cellular_categories",
+      "count": 1
     },
     {
       "from": "equivariant_sheaves",

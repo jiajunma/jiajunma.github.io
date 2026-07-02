@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 15,
     "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 6,
     "proof_plan_attachments": 1,
-    "visible_nodes_without_proof_plans": 21,
-    "visible_nodes_with_selected_proof_plans": 21
+    "visible_nodes_without_proof_plans": 22,
+    "visible_nodes_with_selected_proof_plans": 22
   },
   "nodes": [
     {
@@ -398,7 +398,7 @@
       "title": "Cellular Categories",
       "href": "cellular_categories/index.html",
       "role": "dependency",
-      "node_count": 8
+      "node_count": 13
     },
     {
       "id": "coefficient_systems",
@@ -415,11 +415,18 @@
       "node_count": 12
     },
     {
-      "id": "equivariant_sheaves",
-      "title": "Equivariant Sheaves",
-      "href": "equivariant_sheaves/index.html",
+      "id": "equivariant_sheaves.induction",
+      "title": "Equivariant Sheaves.Induction",
+      "href": "equivariant_sheaves/induction/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 14
+      "node_count": 7
+    },
+    {
+      "id": "equivariant_sheaves.qfd",
+      "title": "Equivariant Sheaves.Qfd",
+      "href": "equivariant_sheaves/qfd/index.html",
+      "role": "dependency",
+      "node_count": 4
     }
   ],
   "boundary_edges": [
@@ -445,52 +452,59 @@
       "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
+      "from": "topic:equivariant_sheaves.induction",
       "to": "building.A1_axiom_in_component",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
+      "from": "topic:equivariant_sheaves.induction",
       "to": "building.apartment_intersection",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
+      "from": "topic:equivariant_sheaves.induction",
       "to": "building.apartments_in_bsigma",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
-      "count": 2
+      "topic": "equivariant_sheaves.induction",
+      "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
+      "from": "topic:equivariant_sheaves.induction",
       "to": "building.bs_subset_x",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
+      "from": "topic:equivariant_sheaves.induction",
       "to": "building.connected_components",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 2
     },
     {
-      "from": "topic:equivariant_sheaves",
+      "from": "topic:equivariant_sheaves.induction",
       "to": "building.generalized_building_bs",
       "kind": "boundary_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 1
     },
     {
-      "from": "topic:equivariant_sheaves",
+      "from": "topic:equivariant_sheaves.qfd",
+      "to": "building.apartments_in_bsigma",
+      "kind": "boundary_dependency",
+      "topic": "equivariant_sheaves.qfd",
+      "count": 1
+    },
+    {
+      "from": "topic:equivariant_sheaves.induction",
       "to": "building.connected_components.plan.classification",
       "kind": "boundary_proof_plan_dependency",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 1
     },
     {
@@ -572,9 +586,9 @@
     },
     {
       "from": "building.generalized_building_bs",
-      "to": "topic:equivariant_sheaves",
+      "to": "topic:equivariant_sheaves.induction",
       "kind": "boundary_dependent",
-      "topic": "equivariant_sheaves",
+      "topic": "equivariant_sheaves.induction",
       "count": 1
     },
     {
