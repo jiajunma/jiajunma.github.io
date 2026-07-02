@@ -455,6 +455,8 @@
         
         <li><a href="../../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a></li>
         
+        <li><a href="../../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a></li>
+        
       </ul>
     </div>
   </div>
@@ -467,135 +469,176 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.InductionDatum.InductionLe</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L378"><code>SheafOnBuilding.InducedSpace.InductionLe</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def InductionLe (g₁E₁ g₂E₂ : G × X&#39;) : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.InductionDatum.InductionLe_refl</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_refl</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L382"><code>SheafOnBuilding.InducedSpace.InductionLe_refl</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
           
           
+          <p class="lean-docstring">`InductionLe` is **reflexive** (`n = 1` works).</p>
+          <pre class="lean-signature"><code>theorem InductionLe_refl (gE : G × X&#39;) : InductionLe d gE gE</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.InductionDatum.InductionLe_trans</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_trans</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L393"><code>SheafOnBuilding.InducedSpace.InductionLe_trans</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem InductionLe_trans : ∀ {a b c : G × X&#39;},
+    InductionLe d a b → InductionLe d b c → InductionLe d a c</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.InductionDatum.InductionLe_left_descends</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_right_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L424"><code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem InductionLe_left_descends {a₁ a₂ b : G × X&#39;}
+    (h_rel : (InductionRel.setoid (G</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.InductionDatum.InductionLe_right_descends</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_right_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L452"><code>SheafOnBuilding.InducedSpace.InductionLe_right_descends</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem InductionLe_right_descends {a b₁ b₂ : G × X&#39;}
+    (h_rel : (InductionRel.setoid (G</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.InductionDatum.InductionLe_antisymm</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>, <code>SheafOnBuilding.InducedSpace.InductionLe_left_descends</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L489"><code>SheafOnBuilding.InducedSpace.InductionLe_antisymm</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem InductionLe_antisymm : ∀ {a b : G × X&#39;},
+    InductionLe d a b → InductionLe d b a → (InductionRel.setoid (G</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.InducedSpace.instPartialOrder</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace</code>, <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.InductionLe</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L558"><code>SheafOnBuilding.InducedSpace.dim</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def dim : InducedSpace d → ℕ</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L568"><code>SheafOnBuilding.InducedSpace.dim_iota</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>@[simp] theorem dim_iota (E : X&#39;) :
+    dim d (iota d E) = AbstractCellComplex.dim E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L564"><code>SheafOnBuilding.InducedSpace.dim_mk</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>@[simp] theorem dim_mk (gE : G × X&#39;) :
+    dim d (Quotient.mk (InductionRel.setoid (G</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L574"><code>SheafOnBuilding.InducedSpace.dim_smul</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>@[simp] theorem dim_smul (g : G) (q : InducedSpace d) :
+    dim d (g • q) = dim d q</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8eb9273b96e7f6b1b55ca444234e259e1a60e53e/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -853,66 +896,123 @@ not for the face relation itself.</p>
   instances used by <a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="../equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a>.</li>
 </ul>
 <h2>Lean formalization</h2>
-<p>The pre-quotient relation is exposed as the single-witness form
-(Theorem 1's right-hand side).  The name mirrors <code>InductionRel</code>, the
-pre-quotient equivalence relation from
-[[node:equivariant_sheaves.induction_GxP_X]]: one is the "$=$" case,
-the other the "$\preceq$" case, both with residual in $P_{E_1}$.</p>
+<h3>Bridge between the math body and the Lean definition</h3>
+<p>The math body's <strong>definition</strong> (symmetric same-$g$ form) and the
+Lean library's <strong><code>InductionLe</code></strong> (Theorem 1's single-witness form)
+are two presentations of the same relation on $G \times X'$:</p>
+<ul>
+<li>Body: $[(g_1, E_1)] \preceq [(g_2, E_2)] \iff \exists\, g,\; F \preceq
+  E$ in $X'$ with same-$g$ representatives.</li>
+<li>Lean: <code>InductionLe d (g₁, E₁) (g₂, E₂)</code> $\iff \exists\, n \in G',\;
+  n \cdot E_1 \preceq E_2 \wedge g_1^{-1} g_2 n \in P_{E_1}$.</li>
+</ul>
+<p>Theorem 1 is the equivalence.  Lean takes the single-witness form as
+the <em>operational</em> definition — it makes each well-definedness lemma
+provable by direct group calculation and avoids threading
+existentially-quantified representatives through the descent proof.
+The name mirrors <code>InductionRel</code> (the pre-quotient equivalence
+relation from [[node:equivariant_sheaves.induction_GxP_X]]): same
+syntactic shape, "$=$" replaced by "$\preceq$".</p>
+<h3>Face relation and the five well-definedness lemmas</h3>
 <pre><code class="language-lean">def InductionLe (g₁E₁ g₂E₂ : G × X') : Prop :=
   ∃ n ∈ d.G', n • g₁E₁.2 ≤ g₂E₂.2 ∧
               g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2
 </code></pre>
-<p>Using the single-witness form as the primary Lean definition (rather
-than a <code>Relation.ReflTransGen</code> over the same-$g$ generator) keeps the
-proofs elementary — each of the required properties is a dedicated
-lemma:</p>
+<p>Each theorem of the math body has a dedicated Lean lemma:</p>
 <table>
 <thead>
 <tr>
-<th>Property</th>
+<th>Theorem (body)</th>
 <th>Lean lemma</th>
+<th>Axioms used</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Reflexivity</td>
+<td>Reflexivity of $\preceq$</td>
 <td><code>InductionLe_refl</code></td>
+<td>$1 \in G'$, $1 \in P_E$</td>
 </tr>
 <tr>
-<td>Transitivity (Theorem 2)</td>
+<td>Theorem 2 (transitivity)</td>
 <td><code>InductionLe_trans</code></td>
+<td>(P0), (P1)</td>
 </tr>
 <tr>
-<td>Left descent</td>
+<td>Descent (left)</td>
 <td><code>InductionLe_left_descends</code></td>
+<td>(P1)</td>
 </tr>
 <tr>
-<td>Right descent</td>
+<td>Descent (right)</td>
 <td><code>InductionLe_right_descends</code></td>
+<td>(P0), (P1)</td>
 </tr>
 <tr>
-<td>Antisymmetry (Theorem 3)</td>
+<td>Theorem 3 (antisymmetry mod $\sim$)</td>
 <td><code>InductionLe_antisymm</code></td>
+<td><code>GCellComplex.smul_dim</code> + <code>AbstractCellComplex.dim_lt</code></td>
 </tr>
 </tbody>
 </table>
-<p>The <code>PartialOrder</code> instance on <code>InducedSpace d</code> is built by
-<code>Quotient.lift₂ (InductionLe d)</code>: the descent lemmas discharge the
-well-definedness side condition; reflexivity + transitivity give
-<code>le_refl</code> and <code>le_trans</code>; antisymmetry gives <code>le_antisymm</code>.</p>
+<p>The Theorem 1 (⇒) calculation — combining two $\sim$-witnesses into
+a single <code>InductionLe</code>-witness via $n := n_2^{-1} n_1$ and the
+$p_1 \cdot n_1^{-1}(n_2 p_2^{-1} n_2^{-1}) n_1$ residual identity —
+is not a standalone Lean lemma.  It is instead <strong>the same computation
+that appears inside <code>InductionLe_trans</code> and <code>InductionLe_*_descends</code></strong>:
+those lemmas each take two witnesses (a $\sim$ one and an <code>InductionLe</code>
+one) and produce a single <code>InductionLe</code> witness by the same (P0)+(P1)
+conjugation trick.</p>
+<h3>PartialOrder instance</h3>
 <pre><code class="language-lean">instance : PartialOrder (InducedSpace d) where
-  le := Quotient.lift₂ (InductionLe d) ⟨left/right descent⟩
-  le_refl  := ⟨InductionLe_refl⟩
-  le_trans := ⟨InductionLe_trans⟩
-  le_antisymm := ⟨InductionLe_antisymm⟩
+  le := Quotient.lift₂ (InductionLe d) &lt;descent proof&gt;
+  le_refl q     := Quotient.inductionOn q (InductionLe_refl d)
+  le_trans      := Quotient.inductionOn₃ _ _ _ (fun _ _ _ =&gt; InductionLe_trans d)
+  le_antisymm   := Quotient.inductionOn₂ _ _
+    (fun _ _ h₁ h₂ =&gt; Quotient.sound (InductionLe_antisymm d h₁ h₂))
 </code></pre>
-<p>The equivalence of the paper-side definition (single generator on
-classes, no closure) with the operational single-witness form
-(Theorem 1) is not separately formalised in the current library —
-the single-witness form is the definition of <code>InductionLe</code> and
-Theorem 1 becomes a trivial calculation once written out.  Adding a
-<code>Relation.ReflTransGen</code>-based reformulation and an equivalence
-lemma is a well-scoped follow-up.</p>
+<p>The <code>Quotient.lift₂</code> side condition (that <code>InductionLe</code> respects
+$\sim$ on both arguments) is discharged by
+<code>InductionLe_left_descends</code> + <code>InductionLe_right_descends</code>.
+Reflexivity, transitivity, antisymmetry lift through
+<code>Quotient.inductionOn{,₂,₃}</code> from their representative-level
+counterparts.</p>
+<h3>Dimension and cell-complex instances (the Consequences bullets)</h3>
+<p><code>InducedSpace.dim</code> realises $\dim([(g, E)]) := \dim E$ via
+<code>Quotient.lift</code>; well-definedness comes from
+<code>GCellComplex.smul_dim</code> (the $G$-action on $X'$ is
+dimension-preserving), and the compatibility rewrites are
+<code>dim_iota</code>, <code>dim_smul</code>.</p>
+<pre><code class="language-lean">def dim : InducedSpace d → ℕ :=
+  Quotient.lift (fun gE : G × X' =&gt; AbstractCellComplex.dim gE.2) ...
+</code></pre>
+<p>The <code>AbstractCellComplex (InducedSpace d)</code> instance packages <code>dim</code>
+with:</p>
+<ul>
+<li><strong><code>dim_lt</code></strong> proved by case-splitting on the <code>InductionLe</code> witness:
+  either $n E_1 = E_2$ (giving $\sim$, hence class equality, hence
+  contradiction) or $n E_1 &lt; E_2$ (giving strict dim by
+  <code>AbstractCellComplex.dim_lt</code> on $X'$).  This mirrors Theorem 3.</li>
+<li><strong><code>exists_face_dim_pred</code></strong> lifts the corresponding axiom on $X'$
+  through the same-$g$ generator (take $E' \prec E$ with $\dim E' + 1
+  = \dim E$; then $[(g, E')] \prec [(g, E)]$).</li>
+</ul>
+<p>Finally <code>GCellComplex G (InducedSpace d)</code> is the cellular-action
+compatibility: <code>smul_le</code> is invariance of <code>InductionLe</code> under
+simultaneous left translation (same $n$ witness works), <code>smul_dim</code>
+is <code>dim_smul</code>.</p>
+<p>Together with <code>IsLocallyFinite</code> (inherited via $G$-translates), this
+gives the full poset-level cell-complex structure on the induced
+space that
+<a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="../equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a> uses.</p>
+<h3>Follow-ups</h3>
+<p>A <code>Relation.ReflTransGen</code>-based reformulation of <code>InductionLe</code>
+(using the same-$g$ generator $g \cdot \iota F \preceq g \cdot \iota
+E$ for $F \preceq E$) plus an explicit equivalence lemma
+<code>Relation.ReflTransGen ... ↔ InductionLe</code> would let a reader match
+the body's Definition to a Lean object directly.  Everything needed
+for the proof is already in place (transitivity plus descent), so
+this is a well-scoped follow-up.</p>
       </div>
     </details>
     

@@ -23,7 +23,8 @@
         "abstract_cell_complex.star_topology",
         "abstract_cell_complex.subcomplex",
         "cellular_categories.cw_complex_setting",
-        "cellular_categories.orbit_end_stabilizer"
+        "cellular_categories.orbit_end_stabilizer",
+        "equivariant_sheaves.induced_poset_structure"
       ]
     },
     {
@@ -2344,16 +2345,20 @@
         "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.InductionDatum.InductionLe",
-        "SheafOnBuilding.InductionDatum.InductionLe_refl",
-        "SheafOnBuilding.InductionDatum.InductionLe_trans",
-        "SheafOnBuilding.InductionDatum.InductionLe_left_descends",
-        "SheafOnBuilding.InductionDatum.InductionLe_right_descends",
-        "SheafOnBuilding.InductionDatum.InductionLe_antisymm",
-        "SheafOnBuilding.InducedSpace.instPartialOrder"
+        "SheafOnBuilding.InducedSpace.InductionLe",
+        "SheafOnBuilding.InducedSpace.InductionLe_refl",
+        "SheafOnBuilding.InducedSpace.InductionLe_trans",
+        "SheafOnBuilding.InducedSpace.InductionLe_left_descends",
+        "SheafOnBuilding.InducedSpace.InductionLe_right_descends",
+        "SheafOnBuilding.InducedSpace.InductionLe_antisymm",
+        "SheafOnBuilding.InducedSpace.dim",
+        "SheafOnBuilding.InducedSpace.dim_iota",
+        "SheafOnBuilding.InducedSpace.dim_mk",
+        "SheafOnBuilding.InducedSpace.dim_smul"
       ],
       "topic": "equivariant_sheaves.induction",
       "uses": [
+        "abstract_cell_complex.abstract_cell_complex",
         "abstract_cell_complex.g_cell_complex",
         "equivariant_sheaves.induction_GxP_X"
       ],
@@ -4125,6 +4130,10 @@
     {
       "from": "equivariant_sheaves.stabilizer_formula_iota",
       "to": "equivariant_sheaves.induced_cw_structure"
+    },
+    {
+      "from": "abstract_cell_complex.abstract_cell_complex",
+      "to": "equivariant_sheaves.induced_poset_structure"
     },
     {
       "from": "abstract_cell_complex.g_cell_complex",
