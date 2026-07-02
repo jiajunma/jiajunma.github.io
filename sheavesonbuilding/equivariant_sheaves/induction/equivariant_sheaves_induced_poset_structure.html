@@ -595,7 +595,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/cd793dba82ada2a5a09d60ebd39921fd2ba1c32e/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8eb9273b96e7f6b1b55ca444234e259e1a60e53e/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -613,26 +613,35 @@ a set-theoretic quotient — and then shown to make $X$ a partial
 order.</p>
 <h2>Definition</h2>
 <blockquote>
-<p><strong>Definition (face relation on $X$).</strong> For $x \in X$ and a class
-$[(g, E)] \in X$,
+<p><strong>Definition (face relation on $X$).</strong> For $x, y \in X$,
 $$
-&gt; x \;\preceq\; [(g, E)]
-&gt; \;\iff\;
-&gt; \text{there exists } F \preceq E \text{ in } X'
-&gt; \text{ with } x = [(g, F)].
+&gt; x \;\preceq\; y \iff
+&gt; \exists\, g \in G,\; \exists\, F \preceq E \text{ in } X',\quad
+&gt; x = [(g, F)] \text{ and } y = [(g, E)].
 &gt; $$</p>
 </blockquote>
-<p>In prose: <strong>fix any representative $(g, E)$ of the right-hand class;
-then $x \preceq [(g, E)]$ means $x$ has a representative with the
-same $G$-component $g$ and an $X'$-component that is a subface of
-$E$.</strong>  No reflexive-transitive closure is needed — the ambient
+<p>In prose: <strong>$x \preceq y$ means $x$ and $y$ admit representatives
+$(g, F)$ and $(g, E)$ with the <em>same</em> first coordinate $g$ such that
+$F \preceq E$ in $X'$.</strong>  Both sides of the definition are
+existentially quantified over the representative choice, so the
+definition is manifestly independent of representatives — no
+separate well-definedness proposition needed for the "definition
+level" content.</p>
+<p>This is exactly the <em>generator</em> obtained by pushing the face
+relation of $X'$ into $X$ via a common $G$-orbit:
+$$
+g \cdot \iota F \;\preceq\; g \cdot \iota E \qquad (F \preceq E \text{ in } X').
+$$
+The class of pairs meeting the definition is precisely the image of
+this generator on the quotient.</p>
+<p><strong>No reflexive-transitive closure is needed.</strong> The ambient
 equivalence relation $\sim$ (which lets us shift representatives)
-absorbs all closure steps into a single generator.</p>
-<p>Reflexivity is built in: for any class $[(g, E)]$, take $F := E$;
-then $F \preceq E$ in $X'$ (reflexivity of the base poset) and
-$[(g, F)] = [(g, E)]$.</p>
-<p>Well-definedness of the definition in the choice of representative
-$(g, E)$ of the right-hand class is verified below (Right descent).</p>
+absorbs all closure steps into a single generator on classes; that
+this "single-step generator" is already transitive on classes is
+proved as Theorem 2 below (using (P0), (P1)).</p>
+<p><strong>Reflexivity is built in.</strong> For any class $y = [(g, E)]$, take
+$F := E$; then $F \preceq E$ in $X'$ (reflexivity of the base
+poset), and $x := y = [(g, E)] = [(g, F)]$ witnesses $y \preceq y$.</p>
 <h2>Equivalent characterisation</h2>
 <blockquote>
 <p><strong>Theorem 1 (single-witness form).</strong> For $(g_1, E_1), (g_2, E_2)
@@ -652,16 +661,36 @@ equivalence relation share the same syntactic shape.</p>
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>($\Rightarrow$) Assume the definition: $\exists F \preceq E_2$ with
-$[(g_1, E_1)] = [(g_2, F)]$.  Unpacking $\sim$: $\exists n \in G'$
-with $n \cdot E_1 = F$ and $g_1^{-1} g_2 n \in P_{E_1}$.  Then
-$n \cdot E_1 = F \preceq E_2$ and $g_1^{-1} g_2 n \in P_{E_1}$.</p>
-<p>($\Leftarrow$) Assume the single-witness form with witness $n$.
-Set $F := n \cdot E_1$.  Then $F \preceq E_2$ (given), and
-$[(g_1, E_1)] = [(g_2, F)]$ holds by applying $\sim$ with the same
-witness $m := n$: $m \cdot E_1 = n \cdot E_1 = F$, and
-$g_1^{-1} g_2 n \in P_{E_1}$ (given).  So the definition holds with
-$F$ as chosen.  $\square$</p>
+        <p>($\Rightarrow$) Assume the definition: there exist $g \in G$ and
+$F \preceq E$ in $X'$ with $[(g_1, E_1)] = [(g, F)]$ and
+$[(g_2, E_2)] = [(g, E)]$.  Unpacking the two $\sim$-equalities:
+$\exists n_1 \in G'$, $n_1 E_1 = F$, $g_1^{-1} g n_1 \in P_{E_1}$;
+and $\exists n_2 \in G'$, $n_2 E_2 = E$, $g_2^{-1} g n_2 \in P_{E_2}$.
+Combining $F = n_1 E_1$ with $F \preceq E = n_2 E_2$ gives
+$n_1 E_1 \preceq n_2 E_2$, i.e.\ $n_2^{-1} n_1 E_1 \preceq E_2$.</p>
+<p>Take $n := n_2^{-1} n_1 \in G'$.  The face-chain condition is done.
+For the residual $g_1^{-1} g_2 n \in P_{E_1}$: substituting
+$g = g_1 p_1 n_1^{-1}$ (from the first $\sim$, with $p_1 := g_1^{-1}
+g n_1 \in P_{E_1}$) and $g = g_2 p_2 n_2^{-1}$ (from the second,
+with $p_2 := g_2^{-1} g n_2 \in P_{E_2}$) gives
+$g_1 p_1 n_1^{-1} = g_2 p_2 n_2^{-1}$, so
+$g_1^{-1} g_2 = p_1 n_1^{-1} n_2 p_2^{-1}$, and
+$$
+g_1^{-1} g_2 n = p_1 n_1^{-1} n_2 p_2^{-1} n_2^{-1} n_1
+= p_1 \cdot n_1^{-1} (n_2 p_2^{-1} n_2^{-1}) n_1.
+$$
+Now $n_2 p_2^{-1} n_2^{-1} \in n_2 P_{E_2} n_2^{-1} = P_{n_2 E_2} =
+P_E$ by (P1), and $F \preceq E$ gives $P_E \le P_F = P_{n_1 E_1}$ by
+(P0); finally $n_1^{-1} P_{n_1 E_1} n_1 = P_{E_1}$ by (P1).  So the
+second factor lies in $P_{E_1}$; combined with $p_1 \in P_{E_1}$,
+the product is in $P_{E_1}$.</p>
+<p>($\Leftarrow$) Assume the single-witness form with witness $n \in
+G'$.  Take $g := g_2$, $F := n E_1$, $E := E_2$.  Then $F \preceq E$
+(given).  We must check $[(g_1, E_1)] = [(g_2, F)] = [(g_2, n E_1)]$
+and $[(g_2, E_2)] = [(g_2, E_2)]$.</p>
+<p>The second is trivial.  For the first, apply $\sim$ with witness
+$m := n$: $m E_1 = n E_1 = F$, and $g_1^{-1} g_2 n \in P_{E_1}$
+(given).  So the definition holds with these choices.  $\square$</p>
 <p>The single-witness form is the pre-quotient relation
 $\preceq_{\text{rep}}$ on $G \times X'$:
 $$
