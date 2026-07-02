@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\End": "\\mathrm{End}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\End": "\\mathrm{End}", "\\Fix": "\\mathrm{Fix}", "\\Fun": "\\mathrm{Fun}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -475,116 +475,14 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">structure</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/KData.lean#L44"><code>SheafOnBuilding.KData</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.KData
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>structure KData (G&#39; : Subgroup G) (S : Subcomplex X) where
-  /-- Underlying subgroup family. -/
-  K : X → Subgroup G
-  /-- **Cosheaf functoriality**: `E ≤ F → K_F ≤ K_E` (bigger cell has a
-  smaller subgroup — same direction as `Fix_G`). -/
-  K_mono : ∀ ⦃E F : X⦄, E ≤ F → K F ≤ K E
-  /-- **G&#39;-equivariance**: `K_{n·E} = n · K_E · n⁻¹` for `n ∈ G&#39;`. -/
-  K_equiv : ∀ (n : G&#39;) (E : X),
-    K ((n : G) • E) = (K E).map (MulEquiv.toMonoidHom (MulAut.conj (n : G)))
-  /-- **Fixator dominance**: `K_E ≤ Fix_G(E) = Stab_G(E)`. -/
-  K_le_fix : ∀ (E : X), K E ≤ MulAction.stabilizer G E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/KData.lean#L64"><code>SheafOnBuilding.KData.smul_fix</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.KData
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem smul_fix (E : X) {g : G} (hg : g ∈ κ.K E) : g • E = E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/KData.lean#L70"><code>SheafOnBuilding.KData.K1b</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.KData
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem K1b (E : X) {g : G} (hg : g ∈ κ.K E) (_hg&#39; : g ∈ G&#39;) : g • E = E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/KData.lean#L108"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.KData
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem orbit_iff_K (κ : KData G&#39; S)
-    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
-      ∃ (k : G) (m : G),
-        k ∈ κ.K E ∧ m ∈ G&#39; ∧ m ∈ MulAction.stabilizer G E ∧ f = k * m)
-    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
-    g • E = h • F ↔
-      ∃ n ∈ G&#39;, n • E = F ∧ (g⁻¹ * h * n) ∈ κ.K E</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/KData.lean#L165"><code>SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.KData
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem qfd_equiv_hom (κ : KData G&#39; S)
-    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
-      ∃ (k : G) (m : G),
-        k ∈ κ.K E ∧ m ∈ G&#39; ∧ m ∈ MulAction.stabilizer G E ∧ f = k * m)
-    {E E&#39; : X} (hE : E ∈ S) (hE&#39; : E&#39; ∈ S) (g : G) :
-    g • E ≤ E&#39; ↔
-      ∃ (n k : G), n ∈ G&#39; ∧ k ∈ κ.K E ∧ n • E ≤ E&#39; ∧ g = n * k</code></pre>
-        </li>
-        
-        <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L43"><code>SheafOnBuilding.OrbitCat</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L43"><code>SheafOnBuilding.OrbitCat</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -595,12 +493,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L53"><code>SheafOnBuilding.OrbitCat.Mor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L53"><code>SheafOnBuilding.OrbitCat.Mor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -611,12 +509,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L57"><code>SheafOnBuilding.OrbitCat.Mor.id</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L57"><code>SheafOnBuilding.OrbitCat.Mor.id</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -627,12 +525,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L62"><code>SheafOnBuilding.OrbitCat.Mor.comp</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L62"><code>SheafOnBuilding.OrbitCat.Mor.comp</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -644,12 +542,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L74"><code>SheafOnBuilding.OrbitCat.category</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L74"><code>SheafOnBuilding.OrbitCat.category</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -666,12 +564,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L87"><code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L87"><code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -698,12 +596,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L114"><code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L114"><code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -717,12 +615,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L123"><code>SheafOnBuilding.OrbitCat.endToStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L123"><code>SheafOnBuilding.OrbitCat.endToStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -734,12 +632,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L137"><code>SheafOnBuilding.OrbitCat.OnSubcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L137"><code>SheafOnBuilding.OrbitCat.OnSubcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -750,12 +648,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L142"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L142"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -767,12 +665,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L155"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L155"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -785,12 +683,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L182"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L182"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitCat
           </span>
           
           
@@ -803,12 +701,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitFunEquiv.lean#L33"><code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitFunEquiv.lean#L33"><code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.OrbitFunEquiv
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.OrbitFunEquiv
           </span>
           
           
@@ -821,12 +719,114 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/SRep.lean#L33"><code>SheafOnBuilding.SRep</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/KData.lean#L44"><code>SheafOnBuilding.KData</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.SRep
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.KData
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>structure KData (G&#39; : Subgroup G) (S : Subcomplex X) where
+  /-- Underlying subgroup family. -/
+  K : X → Subgroup G
+  /-- **Cosheaf functoriality**: `E ≤ F → K_F ≤ K_E` (bigger cell has a
+  smaller subgroup — same direction as `Fix_G`). -/
+  K_mono : ∀ ⦃E F : X⦄, E ≤ F → K F ≤ K E
+  /-- **G&#39;-equivariance**: `K_{n·E} = n · K_E · n⁻¹` for `n ∈ G&#39;`. -/
+  K_equiv : ∀ (n : G&#39;) (E : X),
+    K ((n : G) • E) = (K E).map (MulEquiv.toMonoidHom (MulAut.conj (n : G)))
+  /-- **Fixator dominance**: `K_E ≤ Fix_G(E) = Stab_G(E)`. -/
+  K_le_fix : ∀ (E : X), K E ≤ MulAction.stabilizer G E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/KData.lean#L64"><code>SheafOnBuilding.KData.smul_fix</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.KData
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem smul_fix (E : X) {g : G} (hg : g ∈ κ.K E) : g • E = E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/KData.lean#L70"><code>SheafOnBuilding.KData.K1b</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.KData
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem K1b (E : X) {g : G} (hg : g ∈ κ.K E) (_hg&#39; : g ∈ G&#39;) : g • E = E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/KData.lean#L108"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.KData
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem orbit_iff_K (κ : KData G&#39; S)
+    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
+      ∃ (k : G) (m : G),
+        k ∈ κ.K E ∧ m ∈ G&#39; ∧ m ∈ MulAction.stabilizer G E ∧ f = k * m)
+    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
+    g • E = h • F ↔
+      ∃ n ∈ G&#39;, n • E = F ∧ (g⁻¹ * h * n) ∈ κ.K E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/KData.lean#L165"><code>SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.KData
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem qfd_equiv_hom (κ : KData G&#39; S)
+    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
+      ∃ (k : G) (m : G),
+        k ∈ κ.K E ∧ m ∈ G&#39; ∧ m ∈ MulAction.stabilizer G E ∧ f = k * m)
+    {E E&#39; : X} (hE : E ∈ S) (hE&#39; : E&#39; ∈ S) (g : G) :
+    g • E ≤ E&#39; ↔
+      ∃ (n k : G), n ∈ G&#39; ∧ k ∈ κ.K E ∧ n • E ≤ E&#39; ∧ g = n * k</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/SRep.lean#L33"><code>SheafOnBuilding.SRep</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.SRep
           </span>
           
           
@@ -843,12 +843,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/SRep.lean#L48"><code>SheafOnBuilding.SRep.Hom</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/SRep.lean#L48"><code>SheafOnBuilding.SRep.Hom</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.SRep
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.SRep
           </span>
           
           
@@ -868,12 +868,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/GCosheafToFun.lean#L36"><code>SheafOnBuilding.GCosheaf.mapOfG</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/GCosheafToFun.lean#L36"><code>SheafOnBuilding.GCosheaf.mapOfG</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.GCosheafToFun
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.GCosheafToFun
           </span>
           
           
@@ -886,12 +886,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/GCosheafToFun.lean#L49"><code>SheafOnBuilding.GCosheaf.mapOfG_one</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/GCosheafToFun.lean#L49"><code>SheafOnBuilding.GCosheaf.mapOfG_one</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.GCosheafToFun
+            SheafOnBuilding (this repo) @ 896ed48, SheafOnBuilding.GCosheafToFun
           </span>
           
           
@@ -904,7 +904,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/KData.lean#L1"><code>SheafOnBuilding.KData</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/OrbitFunEquiv.lean#L1"><code>SheafOnBuilding.OrbitFunEquiv</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/SRep.lean#L1"><code>SheafOnBuilding.SRep</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/GCosheafToFun.lean#L1"><code>SheafOnBuilding.GCosheafToFun</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/KData.lean#L1"><code>SheafOnBuilding.KData</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/OrbitFunEquiv.lean#L1"><code>SheafOnBuilding.OrbitFunEquiv</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/SRep.lean#L1"><code>SheafOnBuilding.SRep</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/896ed4803d1d30951bcae1b9615eb29654ad1a44/SheafOnBuilding/GCosheafToFun.lean#L1"><code>SheafOnBuilding.GCosheafToFun</code></a>
       </p>
       
     </div>
@@ -913,52 +913,216 @@
 
   <div class="proposition_thmcontent thm-content body">
     <h1>Reduction of $G$-equivariant cosheaves to a QFD</h1>
-<p>Setting: $S \subseteq X$ is a
-[[quasi-fundamental domain|node:equivariant_sheaves.quasi_fundamental_domain]]
-for the $G$-action with distinguished subgroup $G' \le G$; $\mathscr C$
-is a category (with enough structure to house cosheaves — the abstract
-poset framework demands only <code>Category C</code>).  The proposition unfolds
-$G$-equivariant cosheaves on $X$ into $G'$-equivariant cosheaves on
-$S$ carrying additional stabiliser-action data.</p>
-<h2>The K-cosheaf of subgroups</h2>
-<p>The "additional data" on $S$ is a <strong>K-cosheaf</strong>: a family $K =
-{K_E}_{E \in S}$ of subgroups of $G$ (not of $G'$!) satisfying three
-conditions.</p>
+<p>Setting: $G$ acts cellularly on a cell complex $X$, and $S \subseteq X$
+is a [[quasi-fundamental domain|node:equivariant_sheaves.quasi_fundamental_domain]]
+with distinguished subgroup $G' \le G$.  $\mathscr C$ is any category.</p>
+<p>The <strong>reduction theorem</strong> describes $G$-equivariant cosheaves on $X$
+as functors on a small full subcategory of the orbit category $]X/G[$
+supported on cells of $S$.</p>
+<h2>The orbit category $]X/G[$ and the subcategory $[S]$</h2>
+<blockquote>
+<p><strong>Definition (orbit category).</strong> The orbit category $]X/G[$ has:</p>
+<ul>
+<li><strong>objects</strong>: cells of $X$;</li>
+<li><strong>morphisms</strong> $E \to E'$: elements $g \in G$ with $g \cdot E
+  \preceq E'$;</li>
+<li><strong>composition</strong>: $g_2 \circ g_1 := g_2 g_1$ (with the well-typing
+  $g_2 g_1 \cdot E = g_2 \cdot (g_1 \cdot E) \preceq g_2 \cdot E' \preceq E''$).</li>
+</ul>
+</blockquote>
+<p>An endomorphism $g \in \Hom_{]X/G[}(E, E)$ has $g \cdot E \preceq E$,
+which — because the $G$-action preserves dimension and $\dim$ is
+strictly monotone on proper faces — forces $g \cdot E = E$.  Hence
+$\End_{]X/G[}(E) \cong \Stab_G(E)$ as monoids.</p>
+<blockquote>
+<p><strong>Definition ($[S]$).</strong> The full subcategory of $]X/G[$ on cells of
+the QFD $S$:
+$$[S] \;:=\; \{\, E \in ]X/G[ \;:\; E \in S \,\} \;\subseteq\; ]X/G[.$$</p>
+</blockquote>
+<h2>The reduction theorem</h2>
+<blockquote>
+<p><strong>Theorem (reduction of $G$-equivariant cosheaves to a QFD).</strong>  Let
+$G$ act cellularly on $X$ and let $S \subseteq X$ be a QFD with
+distinguished subgroup $G'$.  For any category $\mathscr C$, there
+is a canonical equivalence of categories
+$$
+\boxed{\;\;
+\Cosh_G(X, \mathscr C) \;\simeq\;
+\underline{\mathrm{Fun}}\bigl([S]^{\mathrm{op}},\, \mathscr C\bigr).
+\;\;}
+$$</p>
+</blockquote>
+<p><strong>The theorem's content is that $G$-equivariant cosheaves on $X$ are
+determined by their restriction to cells of $S$ together with the
+data of how those restrictions transform under morphisms in $[S]$.</strong>
+No K-cosheaf is needed for this statement; the only hypothesis is
+that $S$ is a QFD.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Factor the equivalence through the full orbit category:
+$$
+\Cosh_G(X, \mathscr C)
+\;\underset{(1)}{\simeq}\;
+\underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)
+\;\underset{(2)}{\simeq}\;
+\underline{\mathrm{Fun}}([S]^{\mathrm{op}}, \mathscr C).
+$$</p>
+<p><strong>(1)</strong> is the general identification "$G$-equivariant cosheaves on
+$X$ are functors on the opposite of the orbit category" — a
+structural fact about $\Cosh_G$, independent of any QFD.  A functor
+$W : ]X/G[^{\mathrm{op}} \to \mathscr C$ carries, for each cell $E
+\in X$, the stalk $W_E := W(E)$ together with the induced
+endomorphism action $\End_{]X/G[}(E) \cong \Stab_G(E) \to \Aut W_E$
+(the equivariant-structure data), and for each face relation the
+restriction morphism.  The two data lines are exactly what a
+$G$-equivariant cosheaf carries.</p>
+<p><strong>(2)</strong> is the induced-equivalence-of-functor-categories along the
+inclusion $\iota : [S] \hookrightarrow ]X/G[$.  This inclusion is a
+<strong>categorical equivalence</strong> because $S$ is a QFD:</p>
+<ul>
+<li><em>Fully faithful.</em>  Automatic for full-subcategory inclusions.</li>
+<li><em>Essentially surjective.</em>  Given any cell $E \in X$, the QFD's
+  surjectivity axiom yields $g \in G$ and $F \in S$ with $g \cdot F
+  = E$; then $g \in \Hom_{]X/G[}(F, E)$ and $g^{-1} \in
+  \Hom_{]X/G[}(E, F)$ are mutually inverse isomorphisms.</li>
+</ul>
+<p>Precomposition with an equivalence of small categories gives an
+equivalence of functor categories, so (2) holds.</p>
+<p>Combining (1) and (2):
+$\Cosh_G(X, \mathscr C) \simeq \underline{\mathrm{Fun}}([S]^{\mathrm{op}},
+\mathscr C)$.  $\square$</p>
+<h2>Hypotheses used</h2>
+<p>Just the QFD hypothesis, unpacked:</p>
+<ul>
+<li>$S$ is face-closed (built into <code>Subcomplex X</code>);</li>
+<li>$G' \le \Stab_G(S)$ (($G'$-le-stab));</li>
+<li>every $G$-orbit on $X$ meets $S$ ((Surjectivity)) — this is what
+  makes $\iota : [S] \hookrightarrow ]X/G[$ essentially surjective;</li>
+<li>(Orbit relation) is <em>not</em> used for the reduction theorem itself,
+  though it does enter the K-cosheaf unpacking below.</li>
+</ul>
+<p><strong>No K-cosheaf, no main compatibility hypothesis
+$\Stab_G(E) = K_E \cdot \Fix_{G'}(E)$, no $\mathrm{SRep}_G(\mathscr
+C)$ target category</strong> — those enter only when one wants to
+<em>unpack</em> the functor category $\Fun([S]^{\mathrm{op}}, \mathscr C)$
+into a more concrete "cosheaf-with-representation-data" form (see
+below).</p>
+<h2>K-cosheaf unpacking (secondary result)</h2>
+<p>Applications in §4 (Heisenberg–Weil) and §8 (depth zero) prefer a
+different presentation of $\Fun([S]^{\mathrm{op}}, \mathscr C)$ in
+terms of a K-cosheaf of subgroups.  This is a <strong>reformulation of the
+target category</strong>, not a strengthening of the reduction theorem.</p>
+<h3>The K-cosheaf structure</h3>
 <blockquote>
 <p><strong>Definition (K-cosheaf on a QFD).</strong> A <strong>K-cosheaf</strong> on $S$ is a
 map $K : X \to \mathrm{Subgroup}(G)$ (meaningful only on cells of
 $S$; extended arbitrarily elsewhere) with:</p>
 <ul>
-<li><strong>($K$-mono)</strong> <em>Cosheaf functoriality.</em>  For $E \preceq F$ in $S$,
-  $K_F \le K_E$.  (Same direction as $\Fix_G$: bigger cell,
-  smaller subgroup.)</li>
-<li><strong>($K$-eq)</strong> <em>$G'$-equivariance.</em> For $n \in G'$ and $E \in S$,
-  $K_{n \cdot E} = n K_E n^{-1}$.</li>
-<li><strong>($K$-fix)</strong> <em>Fixator dominance.</em> For every $E \in S$, $K_E
-  \le \Stab_G(E)$.</li>
+<li><strong>($K$-mono)</strong> $E \preceq F$ in $S$ $\Rightarrow$ $K_F \le K_E$.</li>
+<li><strong>($K$-eq)</strong> $K_{n \cdot E} = n K_E n^{-1}$ for $n \in G'$ and $E \in S$.</li>
+<li><strong>($K$-fix)</strong> $K_E \le \Stab_G(E)$ for every $E \in S$.</li>
 </ul>
 </blockquote>
-<p>The paper's fourth axiom, $K_E \cap G' \subseteq \Fix_{G'}(E)$,
-is a consequence of ($K$-fix): $k \in K_E \cap G' \Rightarrow k \in
-\Stab_G(E)$ (by fix) $\Rightarrow k \cdot E = E$, hence $k \in
-\Fix_{G'}(E) = G' \cap \Stab_G(E)$.  No separate hypothesis is
-needed.</p>
+<p>Under the additional <strong>main compatibility hypothesis</strong>
+$$
+\Stab_G(E) \;=\; K_E \cdot \Fix_{G'}(E) \qquad \text{for every } E \in S,
+$$
+the K-decomposed QFD orbit lemma (<code>orbit_iff_K</code> in Lean, Sheaf7
+<code>lem:qfd_surj_ext</code>) refines the plain QFD orbit lemma
+(<a class="node-ref" data-node-id="equivariant_sheaves.qfd_orbit_lemma" href="../equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a>):
+$$
+g \cdot E = h \cdot F
+\iff \exists\, n \in G',\;\; n \cdot E = F \wedge g^{-1} h n \in K_E.
+$$
+Applied to $g \cdot E = 1 \cdot (g \cdot E)$, this yields the
+Hom-set decomposition (<code>qfd_equiv_hom</code>, <code>lem:qfd_equiv</code>):
+$$
+g \cdot E \preceq E' \iff \exists\, n, k \in G,\; n \in G',\; k \in K_E,\;
+n \cdot E \preceq E',\; g = n k.
+$$
+Both are the raw material for the reformulation.</p>
+<h3>The reformulation</h3>
+<p>Fixing such a $K$ satisfying the main compatibility hypothesis:</p>
+<blockquote>
+<p><strong>Definition ($\Cosh_{G', K}(S, \mathscr C)$).</strong> The full subcategory
+of $\Cosh_{G'}(S, \mathrm{SRep}_G(\mathscr C))$ whose objects are
+specified by the following data + four compatibility conditions.</p>
+<p><strong>Data.</strong>  For each $E \in S$:</p>
+<ul>
+<li>$V_E \in \mathscr C$ and a group homomorphism $a^{V_E} : K_E \to
+  \Aut_\mathscr{C}(V_E)$;</li>
+<li>for each $E' \preceq E$ in $S$, a morphism $r^V_{E, E'} : V_E \to V_{E'}$;</li>
+<li>for each $g \in G'$ and $E \in S$, an isomorphism $a^V_{g, E} :
+  V_E \to V_{g \cdot E}$.</li>
+</ul>
+<p><strong>Compatibility.</strong></p>
+<ol>
+<li>$(V_E, a^{V_E})$ is a $K_E$-representation.</li>
+<li>$r^V_{E, E'}$ is $a^{V_E}_k$-equivariant for $k \in K_E$,
+   $E' \preceq E$.</li>
+<li>$a^V_{g, E} \circ a^{V_E}<em>k = a^{V</em>{g \cdot E}}<em>{gkg^{-1}} \circ
+   a^V</em>{g, E}$ for $g \in G'$, $k \in K_E$.</li>
+<li><strong>Gluing.</strong>  $a^{V_E}_k = a^V_{k, E}$ for $k \in K_E \cap G'$
+   — the two nominally separate action structures agree on the
+   overlap.</li>
+</ol>
+<p><strong>Proposition (K-cosheaf unpacking).</strong> Under the setup above,
+$$
+\underline{\mathrm{Fun}}([S]^{\mathrm{op}}, \mathscr C)
+\;\simeq\; \Cosh_{G', K}(S, \mathscr C).
+$$</p>
+</blockquote>
+<p><strong>Proof (⇒).</strong>  Given $F : [S]^{\mathrm{op}} \to \mathscr C$, extract
+$V_E := F(E)$ with endomorphism-action factored through $K_E \le
+\Stab_G(E)$; extract $r^V$ from face-relation morphisms; extract
+$a^V_g$ from $g \in G'$-morphisms.  Conditions 1–3 come from
+$F$-functoriality.  Condition 4 comes from $F$-functoriality applied
+to elements of $K_E \cap G'$ (which admit two morphism-in-$[S]$
+representatives, both of which $F$ must send to the same
+morphism).</p>
+<p><strong>Proof (⇐).</strong>  Given $V \in \Cosh_{G', K}(S, \mathscr C)$, define
+$F(g)$ for $g : E \to E'$ in $[S]$ by decomposing $g = n \cdot k$
+via <code>qfd_equiv_hom</code>, then
+$$F(g) := a^V_{n, E} \circ r^V_{n \cdot E, E'} \circ (a^{V_E}_k)^{-1}.$$
+Independence of the choice $(n, k)$ is exactly condition 4 (gluing).
+Functoriality is a direct computation.</p>
+<p>Composing the two equivalences:</p>
+<blockquote>
+<p><strong>Corollary (paper's combined statement).</strong> Under the QFD hypothesis
+plus the K-cosheaf $K$ satisfying the main compatibility hypothesis,
+$$
+\Cosh_G(X, \mathscr C) \;\simeq\; \Cosh_{G', K}(S, \mathscr C).
+$$</p>
+</blockquote>
+<p>This corollary is Sheaf7 <code>prop:res_cosheaf_QFD</code> (Prop 2.6.3 / 2.7.2)
+in its combined form.</p>
+<h2>Downstream</h2>
+<p>The clean reduction $\Cosh_G(X, \mathscr C) \simeq
+\Fun([S]^{\mathrm{op}}, \mathscr C)$ is the keystone for §4
+(Heisenberg–Weil equivalence) and §8 (reduction to depth zero):
+equivariant data on the full generalised building $\BSigma$ is
+determined by its restriction to an apartment $A$.  See
+<a class="node-ref" data-node-id="depth_zero_reduction.res_sat_functors" href="../../depth_zero_reduction/depth_zero_reduction_res_sat_functors.html">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a>.  The K-cosheaf
+presentation is what makes the connection with representation theory
+on the RHS explicit.</p>
 <h2>Relationship between $K$ and $P$</h2>
-<p>The K-cosheaf $K$ on $S$ (this node) and the induction cosheaf $P$ on
-$X'$ ([[node:equivariant_sheaves.induction_GxP_X]]) have the <strong>same
-shape</strong> — both are functions cell $\to$ subgroup of $G$ — but their
-hypotheses differ in strength.</p>
+<p>The K-cosheaf here and the induction cosheaf $P$ on the induction
+base $X'$ (see [[node:equivariant_sheaves.induction_GxP_X]]) have the
+<strong>same shape</strong> — both are functions cell $\to$ subgroup of $G$ —
+but their hypotheses differ.</p>
 <table>
 <thead>
 <tr>
 <th>Hypothesis</th>
-<th>Induction ($P$)</th>
-<th>Reduction ($K$)</th>
+<th>Induction ($P$ on $X'$)</th>
+<th>Reduction ($K$ on $S$)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Cosheaf monotonicity</td>
+<td>Monotonicity</td>
 <td>($P$0) $E \preceq F \Rightarrow P_F \le P_E$</td>
 <td>($K$-mono) $E \preceq F \Rightarrow K_F \le K_E$</td>
 </tr>
@@ -974,282 +1138,36 @@ hypotheses differ in strength.</p>
 </tr>
 </tbody>
 </table>
-<p>The top two rows coincide.  The third differs:</p>
-<ul>
-<li>($P$2) says "the part of $P_E$ lying in $G'$ fixes $E$" — <strong>weak</strong>.</li>
-<li>($K$-fix) says "<strong>every</strong> element of $K_E$ fixes $E$" — <strong>strong</strong>.</li>
-</ul>
-<p><strong>($K$-fix) $\Rightarrow$ ($P$2)</strong>: for $m \in K_E \cap G'$, ($K$-fix)
-gives $m \cdot E = E$, so $m \in \Fix_{G'}(E) = G' \cap \Stab_G(E)$.
-The converse does <strong>not</strong> hold in general — a $P$-cosheaf can carry
-elements outside $G'$ that do not fix $E$, and such a $P$ is not a
-$K$.</p>
+<p>Rows 1–2 coincide; row 3 differs.  ($K$-fix) is <strong>strictly stronger</strong>
+than ($P$2): the former says every $K$-element fixes $E$, the latter
+only says the $G'$-intersection does.  ($K$-fix) $\Rightarrow$ ($P$2)
+but the converse fails in general.</p>
 <p><strong>Coincidence in the induced-space setting.</strong>  When $X = G \times^P
-X'$ is the induced space of an `InductionDatum`, $\iota(X') \subseteq
-X$ is the sharp QFD
+X'$ is the induced space of an
+[[induction datum|node:equivariant_sheaves.induction_GxP_X]], the
+image $S := \iota(X') \subseteq X$ is the sharp QFD
 (<a class="node-ref" data-node-id="equivariant_sheaves.induced_qfd_property" href="../equivariant_sheaves_induced_qfd_property.html">ι(X&#x27;) is a quasi-fundamental domain of the induced space</a>), and the
 stabiliser formula
 (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="../equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a> Lemma A(2))
-gives $P_E \subseteq \Stab_G(\iota E)$ — precisely ($K$-fix) on the
-image of $\iota$.  In this case the induction cosheaf $P$
-<strong>automatically upgrades to a K-cosheaf on $\iota(X')$</strong>, and the
-main compatibility hypothesis $\Stab_G(\iota E) = K_E \cdot
-\Fix_{G'}(E)$ becomes exactly Lemma A(1).  The reduction proposition
-then specialises to a statement purely about $G \times^P X'$.</p>
-<p>The converse — general K-cosheaves on a general QFD $S$ — is
-strictly more permissive: no assumption that $S$ arises from an
-induction is used.</p>
-<h2>The K-decomposed QFD orbit lemma</h2>
-<p>The bridge from the plain QFD orbit lemma
-(<a class="node-ref" data-node-id="equivariant_sheaves.qfd_orbit_lemma" href="../equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a>) to the K-cosheaf
-formalism requires one <strong>extra hypothesis</strong> on $K$ relative to the
-ambient stabiliser data:</p>
-<blockquote>
-<p><strong>Main compatibility hypothesis.</strong> For every $E \in S$,
-$$\Stab_G(E) = K_E \cdot \Fix_{G'}(E).$$
-Equivalently: every $f \in \Stab_G(E)$ factors as $f = k \cdot m$
-with $k \in K_E$ and $m \in \Fix_{G'}(E) = G' \cap \Stab_G(E)$.</p>
-</blockquote>
-<p>Under this hypothesis, the plain QFD orbit lemma refines:</p>
-<blockquote>
-<p><strong>Lemma (K-decomposed QFD orbit lemma).</strong> For $E, F \in S$ and
-$g, h \in G$:
-$$
-g \cdot E = h \cdot F
-\iff
-\exists\, n \in G',\; n \cdot E = F \wedge g^{-1} h n \in K_E.
-$$</p>
-</blockquote>
-    
-    <details class="proof-details">
-      <summary>Proof</summary>
-      <div class="proof-body">
-        <p>($\Rightarrow$) By the plain QFD orbit lemma, $\exists n_0
-\in G'$ with $n_0 E = F$ and $g^{-1} h n_0 \in \Stab_G(E)$.  Apply the
-main compatibility hypothesis: $g^{-1} h n_0 = k \cdot m$ with $k \in
-K_E$ and $m \in \Fix_{G'}(E) = G' \cap \Stab_G(E)$.  Set $n := n_0
-m^{-1} \in G'$.  Then $n \cdot E = n_0 m^{-1} \cdot E = n_0 \cdot E =
-F$ (since $m$ fixes $E$), and $g^{-1} h n = (k m) m^{-1} = k \in K_E$.</p>
-<p>($\Leftarrow$) From $g^{-1} h n \in K_E \subseteq \Stab_G(E)$, $(g^{-1}
-h n) \cdot E = E$, so $g \cdot E = h n \cdot E = h \cdot F$.  $\square$</p>
-<p>A second useful form gives the K-decomposition of the "reachable-by-$G$"
-face relation on $S$:</p>
-<blockquote>
-<p><strong>Lemma (K-decomposed Hom-set for $]X/G[$).</strong> For $E, E' \in S$ and
-$g \in G$:
-$$
-g \cdot E \preceq E'
-\iff
-\exists\, n, k \in G,\; n \in G',\; k \in K_E,\; n \cdot E \preceq E',\; g = n k.
-$$</p>
-</blockquote>
-<p><strong>Proof.</strong>  Apply the K-decomposed orbit lemma to $g \cdot E = 1 \cdot
-(g \cdot E)$ with $F := g \cdot E$: extract $n \in G'$ with $n \cdot
-E = g \cdot E$ and $g^{-1} n \in K_E$; take $k := n^{-1} g$.  The
-($\Leftarrow$) direction uses ($K$-fix) directly.  $\square$</p>
-<h2>The orbit category $]X/G[$ and the first equivalence</h2>
-<blockquote>
-<p><strong>Definition (orbit category $]X/G[$).</strong> Objects: cells of $X$.
-Morphisms $E \to E'$: elements $g \in G$ with $g \cdot E \preceq
-E'$.  Composition is group multiplication in reverse order.</p>
-</blockquote>
-<p>Endomorphisms in $]X/G[$ are exactly the stabiliser: an endomorphism
-$g \in \Hom_{]X/G[}(E, E)$ has $g \cdot E \preceq E$, and dimension
-preservation ($G$-action is cellular) + strict monotonicity of $\dim$
-on proper faces forces $g \cdot E = E$, so $g \in \Stab_G(E)$.  This
-identification is a monoid isomorphism $\End_{]X/G[}(E) \cong
-\Stab_G(E)$.</p>
-<p>The <strong>full subcategory</strong> on cells of $S \subseteq X$ is denoted
-$[S]_{]X/G[}$.</p>
-<blockquote>
-<p><strong>Proposition (first equivalence).</strong> If $S$ is a QFD for $G' \le G$,
-the inclusion functor
-$$
-\iota : [S]_{]X/G[} \;\longrightarrow\; ]X/G[
-$$
-is an equivalence of categories.</p>
-</blockquote>
-<p><strong>Proof.</strong> Full-subcategory inclusions are always fully faithful.
-Essential surjectivity: any cell $E \in X$ has, by QFD surjectivity, a
-$g \in G$ and $F \in S$ with $g \cdot F = E$; then $g \in
-\Hom_{]X/G[}(F, E)$ and $g^{-1} \in \Hom_{]X/G[}(E, F)$ are mutually
-inverse isomorphisms.  $\square$</p>
-<p>Passing to functor categories: for any $\mathscr C$,
-$$
-\underline{\mathrm{Fun}}([S]_{]X/G[}^{\mathrm{op}}, \mathscr C)
-  \;\simeq\;
-\underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C).
-$$</p>
-<h2>The target category $\Cosh_{G', K}(S, \mathscr C)$</h2>
-<p>Before the reduction proposition can be stated, its target category
-must be defined precisely.</p>
-<blockquote>
-<p><strong>Definition ($\Cosh_{G', K}(S, \mathscr C)$).</strong> The <strong>full
-subcategory</strong> of $\Cosh_{G'}(S, \mathrm{SRep}_G(\mathscr C))$ whose
-objects are the $V$ specified by the following data and four
-compatibility conditions.</p>
-<p><strong>Data.</strong>  For each $E \in S$:</p>
-<ul>
-<li>$V_E \in \mathscr C$ and a group homomorphism $a^{V_E} : K_E \to
-  \Aut_\mathscr{C}(V_E)$ (a $K_E$-representation in $\mathscr C$);</li>
-<li>for each $E' \preceq E$ in $S$, a morphism $r^V_{E, E'} : V_E
-  \to V_{E'}$ in $\mathscr C$ (the cosheaf restriction);</li>
-<li>for each $g \in G'$ and $E \in S$, an isomorphism $a^V_{g, E} :
-  V_E \to V_{g \cdot E}$ in $\mathscr C$ (the $G'$-equivariance).</li>
-</ul>
-<p><strong>Compatibility conditions.</strong></p>
-<ol>
-<li><em>$(K_E)$-representation.</em>  $(V_E, a^{V_E})$ is a $K_E$-representation
-   for every $E$.</li>
-<li><em>Restriction is $K_E$-equivariant.</em>  For $E' \preceq E$ and $k
-   \in K_E$ (which acts on $V_E$ via $a^{V_E}_k$ and — by ($K$-mono)
-   $k \in K_E \le K_{E'}$ via the restriction along $E' \preceq E$
-   — on $V_{E'}$ via $a^{V_{E'}}_k$), the diagram commutes:
-   $$
-   r^V_{E, E'} \circ a^{V_E}_k
-   \;=\; a^{V_{E'}}_k \circ r^V_{E, E'}.
-   $$</li>
-<li><em>Equivariance intertwines representations.</em>  For every $g \in G'$,
-   $E \in S$, $k \in K_E$:
-   $$
-   a^V_{g, E} \circ a^{V_E}_k
-   \;=\; a^{V_{g \cdot E}}_{g k g^{-1}} \circ a^V_{g, E}.
-   $$
-   (The subscript $g k g^{-1}$ lies in $K_{g \cdot E}$ by ($K$-eq).)</li>
-<li><em>Gluing condition.</em>  For every $E \in S$ and $k \in \Fix_G(E) \cap
-   K_E = K_E$ (using $K_E \le \Stab_G(E) = \Fix_G(E)$ by
-   ($K$-fix)) with the additional constraint $k \in G'$ (so that
-   $a^V_{k, E}$ is defined),
-   $$
-   a^{V_E}_k \;=\; a^V_{k, E}.
-   $$
-   That is, the $K_E$-representation and the $G'$-equivariance data
-   <strong>agree on $K_E \cap G'$</strong> — the two nominally separate action
-   structures glue.</li>
-</ol>
-</blockquote>
-<p>Condition 4 is the crucial one: it fuses the two nominally separate
-group actions (the $K_E$-representation and the $G'$-equivariance)
-into a single coherent structure on $V_E$.  Without it, the target
-category would carry two independent action datums; condition 4
-forces them to coincide on the overlap $K_E \cap G'$, so the total
-"action" is a single homomorphism from the amalgamated group
-$K_E \cdot \Fix_{G'}(E) = \Stab_G(E)$ (using the main compatibility
-hypothesis).</p>
-<h2>The reduction proposition</h2>
-<blockquote>
-<p><strong>Proposition (Sheaf7 <code>prop:res_cosheaf_QFD</code>).</strong>  Let $S$ be a QFD
-for $G' \le G$, let $K$ be a K-cosheaf on $S$ satisfying the main
-compatibility hypothesis $\Stab_G(E) = K_E \cdot \Fix_{G'}(E)$ for
-every $E \in S$.  Then:</p>
-<p><strong>(a) (Categorical equivalence.)</strong>  Restriction along $\iota : [S] \hookrightarrow ]X/G[$
-gives an equivalence
-$$
-\underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)
-\;\simeq\;
-\underline{\mathrm{Fun}}([S]^{\mathrm{op}}, \mathscr C).
-$$</p>
-<p><strong>(b) (Unpacking equivalence.)</strong>
-$$
-\underline{\mathrm{Fun}}([S]^{\mathrm{op}}, \mathscr C)
-\;\simeq\;
-\Cosh_{G', K}(S, \mathscr C).
-$$</p>
-<p><strong>(c) (Reduction, main result.)</strong>  Combined with the ambient
-identification $\Cosh_G(X, \mathscr C) \simeq
-\underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)$ ("second
-equivalence" of the paper, restrict $G$-equivariant cosheaves to
-functors on the orbit category, and vice versa via the stabiliser
-action on endomorphisms):
-$$
-\boxed{\;\;
-\Cosh_G(X, \mathscr C) \;\simeq\; \Cosh_{G', K}(S, \mathscr C).
-\;\;}
-$$</p>
-</blockquote>
-<p><strong>Proof.</strong></p>
-<p><strong>(a)</strong> is the categorical equivalence
-$[S] \simeq ]X/G[$ (<a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="../equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a> first
-equivalence, formalised as <code>ιOnSubcomplex_isEquivalence</code>) precomposed
-into functor categories; this is <code>funCatEquivOfQFD</code> in Lean.</p>
-<p><strong>(b) (⇒ unpacking).</strong>  Given $F : [S]^{\mathrm{op}} \to \mathscr C$,
-extract:
-- $V_E := F(E)$, endowed with the endomorphism-action $a^{V_E} :
-  \End_{]X/G[}(E) \cong \Stab_G(E) \to \Aut(V_E)$ restricted to
-  $K_E \le \Stab_G(E)$;
-- $r^V_{E, E'} := F(\iota_{E, E'})$ where $\iota_{E, E'}$ is the
-  face-relation morphism in $[S]$ (the $g = 1$ case of the
-  K-decomposed Hom-set);
-- $a^V_{g, E} := F(g)$ for $g \in \Hom_{]X/G[}(E, g \cdot E)$
-  ($g \in G'$).</p>
-<p>Conditions 1–3 are the functoriality of $F$; condition 4 is
-functoriality applied to the two composable morphism representatives
-of the same class (once as $k \in K_E$, once as $k \in G'$) — both
-must give the same $F$-image.</p>
-<p><strong>(b) (⇐ reconstruction).</strong>  Given $V \in \Cosh_{G', K}(S, \mathscr
-C)$, define $F : [S]^{\mathrm{op}} \to \mathscr C$ on morphisms via
-the <strong>K-decomposed Hom-set lemma</strong> <code>qfd_equiv_hom</code>: for $g :
-E \to E'$ in $]X/G[$, decompose $g = n \cdot k$ with $n \in G'$ and
-$k \in K_E$, then set
-$$
-F(g) \;:=\; a^V_{n, E} \circ r^V_{n E, E'} \circ a^{V_E}_k^{-1}.
-$$
-Independence of the choice $(n, k)$ uses condition 4 (gluing) on the
-overlap $K_E \cap G' \subseteq \Fix_{G'}(E)$: two decompositions of
-the same $g$ differ by an element of $K_E \cap G'$, on which the two
-sides agree.</p>
-<p><strong>(c)</strong> is (a) composed with (b) after invoking $\Cosh_G(X, \mathscr
-C) \simeq \underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)$.
-$\square$</p>
-<h2>Downstream</h2>
-<p>This proposition is the keystone for §4 (Heisenberg–Weil equivalence)
-and §8 (reduction to depth zero): equivariant data on the <em>full</em>
-generalised building $\BSigma$ can be checked on the apartment $A$.
-See <a class="node-ref" data-node-id="depth_zero_reduction.res_sat_functors" href="../../depth_zero_reduction/depth_zero_reduction_res_sat_functors.html">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a>.</p>
+gives $P_E \subseteq \Stab_G(\iota E)$ — precisely ($K$-fix) on
+$\iota(X')$.  So the induction cosheaf $P$ <strong>automatically upgrades to
+a K-cosheaf on $S$</strong>, and the main compatibility hypothesis becomes
+Lemma A(1).</p>
 <h2>Lean formalization</h2>
-<p>The reduction is a large body of code split across five modules; the
-pieces are integrated but the outermost equivalence
-$\Cosh_G(X, \mathscr C) \simeq \Cosh_{G', K}(S, \mathscr C)$ is
-<em>partially</em> formalised — the categorical scaffolding (orbit category,
-QFD-driven functor-category equivalence, K-decomposed Hom-set lemma,
-$\mathrm{SRep}_G(\mathscr C)$ target category) is in place; the final
-identification of $\Cosh_G(X, \mathscr C)$ with
-$\mathrm{Fun}(]X/G[^{\mathrm{op}}, \mathscr C)$ is in progress in
-<code>GCosheafToFun</code> and its downstream files.</p>
-<h3>K-cosheaf data (<code>SheafOnBuilding.KData</code>)</h3>
-<pre><code class="language-lean">structure KData (G' : Subgroup G) (S : Subcomplex X) where
-  K : X → Subgroup G
-  K_mono : ∀ ⦃E F : X⦄, E ≤ F → K F ≤ K E              -- (K-mono)
-  K_equiv : ∀ (n : G') (E : X),
-    K ((n : G) • E) = (K E).map (MulEquiv.toMonoidHom (MulAut.conj n))  -- (K-eq)
-  K_le_fix : ∀ (E : X), K E ≤ MulAction.stabilizer G E  -- (K-fix)
-</code></pre>
-<p>Derived lemmas: <code>KData.smul_fix</code> (<code>k ∈ K_E → k • E = E</code>) and
-<code>KData.K1b</code> (paper's (K1b) as a corollary).</p>
-<h3>K-decomposed QFD lemmas (<code>SheafOnBuilding.IsQuasiFundDomain</code>)</h3>
-<p>The two K-decomposed lemmas are the Lean-level statement of the paper's
-<code>lem:qfd_surj_ext</code> (orbit) and <code>lem:qfd_equiv</code> (Hom-set for $]X/G[$):</p>
-<pre><code class="language-lean">theorem orbit_iff_K
-    (κ : KData G' S)
-    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
-      ∃ (k m : G), k ∈ κ.K E ∧ m ∈ G' ∧
-                   m ∈ MulAction.stabilizer G E ∧ f = k * m)
-    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
-    g • E = h • F ↔
-      ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ κ.K E
-
-theorem qfd_equiv_hom
-    (κ : KData G' S) (hFix : ...)
-    {E E' : X} (hE : E ∈ S) (hE' : E' ∈ S) (g : G) :
-    g • E ≤ E' ↔
-      ∃ (n k : G), n ∈ G' ∧ k ∈ κ.K E ∧ n • E ≤ E' ∧ g = n * k
-</code></pre>
-<p>The <code>hFix</code> hypothesis is exactly the paper's main compatibility
-hypothesis $\Stab_G(E) = K_E \cdot \Fix_{G'}(E)$, phrased as an
-existential factorisation.  It stays as a hypothesis rather than
-becoming a <code>KData</code> field — the K-cosheaf data itself does not depend
-on the ambient QFD's stabiliser structure.</p>
-<h3>Orbit category (<code>SheafOnBuilding.OrbitCat</code>)</h3>
+<h3>The reduction theorem in Lean</h3>
+<p>The clean form has two ingredients:</p>
+<ul>
+<li><strong><code>Cosh_G(X, 𝒞) ≃ Fun(]X/G[ᵒᵖ, 𝒞)</code>.</strong> The general functor-versus-
+  cosheaf identification.  In progress in
+  <code>SheafOnBuilding.GCosheafToFun</code>; the current building blocks are
+  <code>GCosheaf.mapOfG</code> and <code>mapOfG_one</code>.</li>
+<li><strong><code>Fun([S]ᵒᵖ, 𝒞) ≃ Fun(]X/G[ᵒᵖ, 𝒞)</code>.</strong> Already formalised as
+  <code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code> (via
+  <code>ιOnSubcomplex_isEquivalence</code>).</li>
+</ul>
+<p>Composing the two once the first is complete gives the reduction
+theorem.</p>
+<h3>The orbit category <code>]X/G[</code> (<code>SheafOnBuilding.OrbitCat</code>)</h3>
 <pre><code class="language-lean">abbrev OrbitCat (G X : Type*) : Type _ := X
 def Mor (E E' : OrbitCat G X) : Type _ :=
   {g : G // g • (E : X) ≤ (E' : X)}
@@ -1257,23 +1175,18 @@ scoped instance category : Category (OrbitCat G X) where
   Hom E E' := Mor E E'
   id  := Mor.id
   comp := Mor.comp
-  ...
 </code></pre>
-<p><code>OrbitCat G X</code> is an <code>abbrev</code> for <code>X</code> so <code>MulAction</code>, <code>PartialOrder</code>,
-<code>AbstractCellComplex</code> are visible without coercion; the <code>Category</code>
-instance is <code>scoped</code> to avoid clashing with <code>X</code>'s built-in
-Preorder-derived category.</p>
-<p>Endomorphism identification:</p>
+<p>Endomorphism identification (three packagings):</p>
 <pre><code class="language-lean">def endMorEquivStabilizer (E : OrbitCat G X) :
-    Mor E E ≃ MulAction.stabilizer G (E : X)          -- Equiv
+    Mor E E ≃ MulAction.stabilizer G (E : X)         -- Equiv
 def endMulEquivStabilizer (E : OrbitCat G X) :
-    End E ≃* MulAction.stabilizer G (E : X)           -- MulEquiv
+    End E ≃* MulAction.stabilizer G (E : X)          -- MulEquiv
 def endToStabilizer (E : OrbitCat G X) :
-    End E →* MulAction.stabilizer G (E : X)           -- MonoidHom
+    End E →* MulAction.stabilizer G (E : X)          -- MonoidHom
 </code></pre>
-<p>The <code>≃*</code> upgrade uses <code>CategoryTheory.End</code>'s convention
-$x * y = y \circ x$, matching subgroup multiplication.</p>
-<h3>First equivalence (<code>SheafOnBuilding.OrbitCat.OnSubcomplex</code>)</h3>
+<p>Full-subcategory-on-$S$ and its equivalence with the full orbit
+category (the "QFD-implies-inclusion-is-an-equivalence" step of the
+reduction proof):</p>
 <pre><code class="language-lean">abbrev OnSubcomplex (S : Subcomplex X) :=
   ObjectProperty.FullSubcategory (fun E =&gt; (E : X) ∈ S)
 abbrev ιOnSubcomplex (S : Subcomplex X) :
@@ -1285,74 +1198,63 @@ theorem ιOnSubcomplex_essSurj (G' : Subgroup G) (S : Subcomplex X)
 theorem ιOnSubcomplex_isEquivalence (G' : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G' S] : (ιOnSubcomplex S).IsEquivalence
 </code></pre>
-<p><code>ess_surj</code> uses <code>IsQuasiFundDomain.surj</code>: any $E : ]X/G[$ receives a
-$g \cdot F = E$ with $F \in S$, and then $g$ and $g^{-1}$ are mutually
-inverse morphisms in $]X/G[$.  Fully-faithful is automatic for full-
-subcategory inclusions.  Combined via
-<code>CategoryTheory.Functor.IsEquivalence.mk</code>.</p>
-<h3>Functor-category equivalence (<code>SheafOnBuilding.OrbitFunEquiv</code>)</h3>
+<p>Precomposition-into-functor-categories, which is the Lean version of
+the second half of the reduction proof:</p>
 <pre><code class="language-lean">noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G' S] :
-    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((OrbitCat G X)ᵒᵖ ⥤ C) :=
-  letI := ιOnSubcomplex_isEquivalence G' S
-  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)
+    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((OrbitCat G X)ᵒᵖ ⥤ C)
 </code></pre>
-<p>This is the categorical form of the paper's "first equivalence"
-$\underline{\mathrm{Fun}}([S]_{]X/G[}^{\mathrm{op}}, \mathscr C)
-\simeq \underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)$.</p>
-<h3>Target category $\mathrm{SRep}_G(\mathscr C)$ (<code>SheafOnBuilding.SRep</code>)</h3>
+<h3>K-cosheaf unpacking side (<code>SheafOnBuilding.KData</code> +</h3>
+<p><code>SheafOnBuilding.SRep</code>)</p>
+<pre><code class="language-lean">structure KData (G' : Subgroup G) (S : Subcomplex X) where
+  K : X → Subgroup G
+  K_mono : ∀ ⦃E F : X⦄, E ≤ F → K F ≤ K E
+  K_equiv : ∀ (n : G') (E : X),
+    K ((n : G) • E) = (K E).map (MulEquiv.toMonoidHom (MulAut.conj n))
+  K_le_fix : ∀ (E : X), K E ≤ MulAction.stabilizer G E
+</code></pre>
+<p>Derived lemmas: <code>KData.smul_fix</code>, <code>KData.K1b</code>.</p>
+<p>The K-decomposed QFD lemmas take the main compatibility hypothesis
+<code>hFix</code> as an explicit argument (it stays outside <code>KData</code> — the
+compatibility is a hypothesis of the <em>reduction context</em>, not of the
+K-cosheaf data itself):</p>
+<pre><code class="language-lean">theorem orbit_iff_K (κ : KData G' S) (hFix : ...)
+    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
+    g • E = h • F ↔
+      ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ κ.K E
+
+theorem qfd_equiv_hom (κ : KData G' S) (hFix : ...)
+    {E E' : X} (hE : E ∈ S) (hE' : E' ∈ S) (g : G) :
+    g • E ≤ E' ↔ ∃ (n k : G), n ∈ G' ∧ k ∈ κ.K E ∧ n • E ≤ E' ∧ g = n * k
+</code></pre>
+<p>Target category $\mathrm{SRep}_G(\mathscr C)$
+(<code>SheafOnBuilding.SRep</code>):</p>
 <pre><code class="language-lean">structure SRep where
   K : Subgroup G
   V : C
   ρ : K →* Aut V
 
-@[ext]
-structure SRep.Hom (X Y : SRep G C) where
+@[ext] structure SRep.Hom (X Y : SRep G C) where
   f : X.K →* Y.K
   ...  -- injectivity of f + intertwining condition
 </code></pre>
-<p>Standalone — no cell-complex machinery required.</p>
-<h3>Cosh ↦ functor on $]X/G[^{\mathrm{op}}$ (in progress:</h3>
-<p><code>SheafOnBuilding.GCosheafToFun</code>)</p>
-<p>Building block for the functor $\Cosh_G(X, \mathscr C) \to
-\underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)$:</p>
-<pre><code class="language-lean">noncomputable def GCosheaf.mapOfG
-    (W : GCosheaf G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :
-    W.base.obj (op E) ⟶ W.base.obj (op E') :=
-  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E').inv
-
-theorem GCosheaf.mapOfG_one (W : GCosheaf G X C) (E : X) :
-    W.mapOfG (1 : G) ... = 𝟙 (W.base.obj (op E))
-</code></pre>
-<p>The full functor and its inverse (the second equivalence of the
-proposition) are not yet packaged; the <code>Basic.lean</code> file header notes
-this as "pending".  Once complete, composing with <code>funCatEquivOfQFD</code>
-delivers the full reduction $\Cosh_G(X, \mathscr C) \simeq
-\Cosh_{G', K}(S, \mathscr C)$ as a chain of category equivalences.</p>
-<h3>K↔P bridge (not yet in Lean)</h3>
-<p>Neither direction of the correspondence between <code>KData</code> and
-<code>InductionDatum</code> is formalised:</p>
-<ul>
-<li><strong><code>InductionDatum → KData</code> (specialisation direction).</strong>  Given
-  <code>d : InductionDatum X'</code>, the pair
-  $(\iota(X'), \mathrm{Subcomplex.ofIota}\ d)$ is a QFD of
-  $\mathrm{InducedSpace}\ d$ (via
-  <code>isQuasiFundDomain_subcomplexOfIota</code>), and $P$ satisfies ($K$-fix)
-  on $\iota(X')$ (via <code>P_le_stabilizer_iota</code>).  So <code>d.P</code> upgrades to
-  a <code>KData d.G' (Subcomplex.ofIota d)</code>.  A <code>def
-  InductionDatum.toKData : ... → KData ...</code> making this explicit
-  would let the induced-space reduction be stated as a corollary of
-  the general <code>reduction_to_qfd</code>.</li>
-<li><strong><code>KData → InductionDatum</code> (weakening direction).</strong>  From any
-  <code>KData</code>, one can form a corresponding <code>InductionDatum</code> by using
-  ($K$-fix) to derive ($P$2) as a consequence — this would witness
-  the fact that every K-cosheaf is also a P-cosheaf.  However, this
-  weakening is only useful if one then wants to <em>induce</em> $X = G
-  \times^K X'$ from the K-cosheaf — a construction the paper does
-  not perform in §2.7.</li>
-</ul>
-<p>Both bridges are natural Lean-side follow-ups; the paper handles the
-$K \leftrightarrow P$ correspondence informally.</p>
+<h3>Lean gaps (all in-scope follow-ups)</h3>
+<ol>
+<li><strong><code>GCosheaf ≃ Fun(]X/G[ᵒᵖ, 𝒞)</code>.</strong>  The direction $\Cosh_G \to
+   \Fun$ is in progress (<code>mapOfG</code>); the inverse and the full
+   equivalence are not yet packaged.  Once done, composed with
+   <code>funCatEquivOfQFD</code>, this delivers the reduction theorem in its
+   clean form.</li>
+<li><strong><code>InductionDatum.toKData</code>.</strong>  From <code>d : InductionDatum X'</code>,
+   construct <code>KData d.G' (Subcomplex.ofIota d)</code> using
+   <code>P_le_stabilizer_iota</code>.  Would let the induced-space reduction be
+   a corollary of the general reduction.</li>
+<li><strong>K-cosheaf unpacking.</strong>  A Lean statement
+   $\Fun([S]^{\mathrm{op}}, \mathscr C) \simeq
+   \Cosh_{G', K}(S, \mathscr C)$ using <code>qfd_equiv_hom</code> for the
+   canonical Hom-decomposition.  This is the missing "second
+   equivalence" of the paper's combined statement.</li>
+</ol>
 <h3>Hypotheses used</h3>
 <table>
 <thead>
@@ -1363,40 +1265,31 @@ $K \leftrightarrow P$ correspondence informally.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>KData.K1b</code></td>
-<td>($K$-fix) alone</td>
-</tr>
-<tr>
-<td><code>orbit_iff_K</code></td>
-<td><code>IsQuasiFundDomain G' S</code> + main compatibility hypothesis</td>
-</tr>
-<tr>
-<td><code>qfd_equiv_hom</code></td>
-<td><code>IsQuasiFundDomain G' S</code> + main compatibility hypothesis</td>
-</tr>
-<tr>
-<td><code>ιOnSubcomplex_essSurj</code></td>
-<td><code>IsQuasiFundDomain G' S</code> (surj)</td>
-</tr>
-<tr>
-<td><code>ιOnSubcomplex_isEquivalence</code></td>
-<td><code>IsQuasiFundDomain G' S</code></td>
+<td><code>ιOnSubcomplex_essSurj</code>, <code>ιOnSubcomplex_isEquivalence</code></td>
+<td><code>IsQuasiFundDomain G' S</code> (Surjectivity clause)</td>
 </tr>
 <tr>
 <td><code>funCatEquivOfQFD</code></td>
 <td><code>IsQuasiFundDomain G' S</code></td>
 </tr>
 <tr>
+<td><code>orbit_iff_K</code>, <code>qfd_equiv_hom</code></td>
+<td><code>IsQuasiFundDomain G' S</code> + main compatibility hypothesis</td>
+</tr>
+<tr>
+<td><code>KData.K1b</code></td>
+<td>($K$-fix) alone</td>
+</tr>
+<tr>
 <td><code>GCosheaf.mapOfG_one</code></td>
-<td><code>GEquivariantCosheaf.act_one_inv</code> (from the <code>GEquivariant</code> module)</td>
+<td><code>GEquivariantCosheaf.act_one_inv</code></td>
 </tr>
 </tbody>
 </table>
-<p>The (P0)–(P2) fields of <code>InductionDatum</code> do <strong>not</strong> enter this node —
-the reduction is about QFDs, not about the induction construction.
-"Hypotheses" here means fields of <code>KData</code>, fields of <code>IsQuasiFundDomain</code>,
-and the main compatibility hypothesis carried as an explicit argument.
-None are Lean-kernel <code>axiom</code> declarations.</p>
+<p>The (P0)–(P2) fields of <code>InductionDatum</code> do <strong>not</strong> enter this node.
+"Hypotheses" here means fields of <code>KData</code>, fields of
+<code>IsQuasiFundDomain</code>, and the main compatibility hypothesis carried
+as an explicit argument.  None are Lean-kernel <code>axiom</code> declarations.</p>
       </div>
     </details>
     
