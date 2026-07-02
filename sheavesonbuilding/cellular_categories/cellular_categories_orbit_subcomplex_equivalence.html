@@ -473,48 +473,48 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L137"><code>SheafOnBuilding.OrbitCat.OnSubcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L137"><code>SheafOnBuilding.TransporterCat.OnSubcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           <p class="lean-docstring">Full subcategory of `]X/G[` supported on cells of a subcomplex `S`.</p>
           <pre class="lean-signature"><code>abbrev OnSubcomplex (S : Subcomplex X) :=
   ObjectProperty.FullSubcategory
-    (C := OrbitCat G X) (fun E =&gt; (E : X) ∈ S)</code></pre>
+    (C := TransporterCat G X) (fun E =&gt; (E : X) ∈ S)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L142"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L142"><code>SheafOnBuilding.TransporterCat.ιOnSubcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           <p class="lean-docstring">The inclusion functor `[X&#39;]_{ι} → ]X/G[`.</p>
           <pre class="lean-signature"><code>abbrev ιOnSubcomplex (S : Subcomplex X) :
-    OnSubcomplex (G := G) (X := X) S ⥤ OrbitCat G X :=
+    OnSubcomplex (G := G) (X := X) S ⥤ TransporterCat G X :=
   ObjectProperty.ι _</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L155"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L155"><code>SheafOnBuilding.TransporterCat.ιOnSubcomplex_essSurj</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
@@ -527,12 +527,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L182"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L182"><code>SheafOnBuilding.TransporterCat.ιOnSubcomplex_isEquivalence</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
@@ -545,7 +545,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
       </p>
       
     </div>
@@ -582,9 +582,9 @@ composition is $\mathbf 1 = g \cdot g^{-1}$). $\square$</p>
 <p>The full subcategory is defined using mathlib's
 <code>CategoryTheory.ObjectProperty.FullSubcategory</code>:</p>
 <pre><code class="language-lean">abbrev OnSubcomplex (S : Subcomplex X) :=
-  ObjectProperty.FullSubcategory (C := OrbitCat G X) (fun E =&gt; (E : X) ∈ S)
+  ObjectProperty.FullSubcategory (C := TransporterCat G X) (fun E =&gt; (E : X) ∈ S)
 
-abbrev ιOnSubcomplex (S : Subcomplex X) : OnSubcomplex S ⥤ OrbitCat G X :=
+abbrev ιOnSubcomplex (S : Subcomplex X) : OnSubcomplex S ⥤ TransporterCat G X :=
   ObjectProperty.ι _
 </code></pre>
 <p><code>ιOnSubcomplex_essSurj</code> provides the essential surjectivity, using

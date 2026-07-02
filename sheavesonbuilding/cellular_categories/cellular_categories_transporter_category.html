@@ -475,84 +475,84 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L43"><code>SheafOnBuilding.OrbitCat</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L43"><code>SheafOnBuilding.TransporterCat</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev OrbitCat (G X : Type*) : Type _ := X</code></pre>
+          <pre class="lean-signature"><code>abbrev TransporterCat (G X : Type*) : Type _ := X</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L53"><code>SheafOnBuilding.OrbitCat.Mor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L53"><code>SheafOnBuilding.TransporterCat.Mor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Mor (E E&#39; : OrbitCat G X) : Type _ :=
+          <pre class="lean-signature"><code>def Mor (E E&#39; : TransporterCat G X) : Type _ :=
   {g : G // g • (E : X) ≤ (E&#39; : X)}</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L57"><code>SheafOnBuilding.OrbitCat.Mor.id</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L57"><code>SheafOnBuilding.TransporterCat.Mor.id</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           <p class="lean-docstring">The identity morphism `1 : E ⟶ E`.</p>
-          <pre class="lean-signature"><code>def Mor.id (E : OrbitCat G X) : Mor E E :=
+          <pre class="lean-signature"><code>def Mor.id (E : TransporterCat G X) : Mor E E :=
   ⟨1, show (1 : G) • (E : X) ≤ (E : X) by rw [one_smul]⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L62"><code>SheafOnBuilding.OrbitCat.Mor.comp</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L62"><code>SheafOnBuilding.TransporterCat.Mor.comp</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Mor.comp {E E&#39; E&#39;&#39; : OrbitCat G X} (α : Mor E E&#39;) (β : Mor E&#39; E&#39;&#39;) :
+          <pre class="lean-signature"><code>def Mor.comp {E E&#39; E&#39;&#39; : TransporterCat G X} (α : Mor E E&#39;) (β : Mor E&#39; E&#39;&#39;) :
     Mor E E&#39;&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L74"><code>SheafOnBuilding.OrbitCat.category</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L74"><code>SheafOnBuilding.TransporterCat.category</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>scoped instance category : Category (OrbitCat G X) where
+          <pre class="lean-signature"><code>scoped instance category : Category (TransporterCat G X) where
   Hom E E&#39; := Mor E E&#39;
   id E := Mor.id E
   comp α β := Mor.comp α β
@@ -564,17 +564,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L87"><code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L87"><code>SheafOnBuilding.TransporterCat.endMorEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endMorEquivStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endMorEquivStabilizer (E : TransporterCat G X) :
     Mor E E ≃ MulAction.stabilizer G (E : X) where
   toFun α := ⟨α.val, by
     show α.val • (E : X) = E
@@ -596,17 +596,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L114"><code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L114"><code>SheafOnBuilding.TransporterCat.endMulEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endMulEquivStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endMulEquivStabilizer (E : TransporterCat G X) :
     End E ≃* MulAction.stabilizer G (E : X) where
   toEquiv := endMorEquivStabilizer E
   map_mul&#39; _ _ := rfl</code></pre>
@@ -615,17 +615,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L123"><code>SheafOnBuilding.OrbitCat.endToStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L123"><code>SheafOnBuilding.TransporterCat.endToStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endToStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endToStabilizer (E : TransporterCat G X) :
     End E →* MulAction.stabilizer G (E : X) :=
   (endMulEquivStabilizer E).toMonoidHom</code></pre>
         </li>
@@ -633,7 +633,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
       </p>
       
     </div>
@@ -698,7 +698,7 @@ $\dots$) the term <strong>orbit category</strong> is reserved for the
 category of coset $G$-sets $G/H$ with $G$-equivariant maps, which
 is a different construction.  Throughout this KB we use
 "transporter category" for $]X/G[$, $[X/G]$ to avoid the clash.
-The Lean identifier <code>SheafOnBuilding.OrbitCat</code> is a naming
+The Lean identifier <code>SheafOnBuilding.TransporterCat</code> is a naming
 holdover from the paper.</p>
 <h2>Endomorphisms are stabilisers</h2>
 <p>An endomorphism $g \in \Hom_{]X/G[}(E, E)$ has $g \cdot E \preceq E$;
@@ -717,18 +717,18 @@ endomorphism identification realises the stalk actions — is
 <a class="node-ref" data-node-id="cellular_categories.equivariant_via_functors" href="cellular_categories_equivariant_via_functors.html">G-equivariant (co)sheaves as functors on ]X/G[ resp. [X/G]</a>.</p>
 <h2>Lean formalization</h2>
 <p>Only $]X/G[$ carries a fresh Lean type; $[X/G]$ is
-<code>(OrbitCat G X)ᵒᵖ</code>.</p>
-<pre><code class="language-lean">abbrev OrbitCat (G X : Type*) : Type _ := X
-def Mor (E E' : OrbitCat G X) : Type _ :=
+<code>(TransporterCat G X)ᵒᵖ</code>.</p>
+<pre><code class="language-lean">abbrev TransporterCat (G X : Type*) : Type _ := X
+def Mor (E E' : TransporterCat G X) : Type _ :=
   {g : G // g • (E : X) ≤ (E' : X)}
-scoped instance category : Category (OrbitCat G X) where
+scoped instance category : Category (TransporterCat G X) where
   Hom := Mor
   id  := Mor.id
   comp := Mor.comp
 </code></pre>
 <p>Design points:</p>
 <ul>
-<li><code>OrbitCat G X</code> is an <code>abbrev</code> for <code>X</code>, keeping all
+<li><code>TransporterCat G X</code> is an <code>abbrev</code> for <code>X</code>, keeping all
   <code>MulAction G X</code> / <code>PartialOrder X</code> / <code>AbstractCellComplex X</code>
   instances visible without transport.</li>
 <li><code>Mor E E'</code> is a <code>Subtype</code> of <code>G</code> (not a bespoke <code>structure</code>) so
@@ -743,11 +743,11 @@ scoped instance category : Category (OrbitCat G X) where
 downstream packaging, not the definition itself.)</p>
 <p>The endomorphism–stabiliser identification comes packaged three ways
 for downstream convenience:</p>
-<pre><code class="language-lean">def endMorEquivStabilizer (E : OrbitCat G X) :
+<pre><code class="language-lean">def endMorEquivStabilizer (E : TransporterCat G X) :
     Mor E E ≃ MulAction.stabilizer G (E : X)         -- Equiv
-def endMulEquivStabilizer (E : OrbitCat G X) :
+def endMulEquivStabilizer (E : TransporterCat G X) :
     End E ≃* MulAction.stabilizer G (E : X)          -- MulEquiv
-def endToStabilizer (E : OrbitCat G X) :
+def endToStabilizer (E : TransporterCat G X) :
     End E →* MulAction.stabilizer G (E : X)          -- MonoidHom
 </code></pre>
 <p>The <code>≃*</code> upgrade needs care with <code>CategoryTheory.End</code>'s convention

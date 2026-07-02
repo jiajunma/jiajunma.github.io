@@ -479,84 +479,84 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L43"><code>SheafOnBuilding.OrbitCat</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L43"><code>SheafOnBuilding.TransporterCat</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev OrbitCat (G X : Type*) : Type _ := X</code></pre>
+          <pre class="lean-signature"><code>abbrev TransporterCat (G X : Type*) : Type _ := X</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L53"><code>SheafOnBuilding.OrbitCat.Mor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L53"><code>SheafOnBuilding.TransporterCat.Mor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Mor (E E&#39; : OrbitCat G X) : Type _ :=
+          <pre class="lean-signature"><code>def Mor (E E&#39; : TransporterCat G X) : Type _ :=
   {g : G // g • (E : X) ≤ (E&#39; : X)}</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L57"><code>SheafOnBuilding.OrbitCat.Mor.id</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L57"><code>SheafOnBuilding.TransporterCat.Mor.id</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           <p class="lean-docstring">The identity morphism `1 : E ⟶ E`.</p>
-          <pre class="lean-signature"><code>def Mor.id (E : OrbitCat G X) : Mor E E :=
+          <pre class="lean-signature"><code>def Mor.id (E : TransporterCat G X) : Mor E E :=
   ⟨1, show (1 : G) • (E : X) ≤ (E : X) by rw [one_smul]⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L62"><code>SheafOnBuilding.OrbitCat.Mor.comp</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L62"><code>SheafOnBuilding.TransporterCat.Mor.comp</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Mor.comp {E E&#39; E&#39;&#39; : OrbitCat G X} (α : Mor E E&#39;) (β : Mor E&#39; E&#39;&#39;) :
+          <pre class="lean-signature"><code>def Mor.comp {E E&#39; E&#39;&#39; : TransporterCat G X} (α : Mor E E&#39;) (β : Mor E&#39; E&#39;&#39;) :
     Mor E E&#39;&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L74"><code>SheafOnBuilding.OrbitCat.category</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L74"><code>SheafOnBuilding.TransporterCat.category</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>scoped instance category : Category (OrbitCat G X) where
+          <pre class="lean-signature"><code>scoped instance category : Category (TransporterCat G X) where
   Hom E E&#39; := Mor E E&#39;
   id E := Mor.id E
   comp α β := Mor.comp α β
@@ -568,17 +568,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L87"><code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L87"><code>SheafOnBuilding.TransporterCat.endMorEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endMorEquivStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endMorEquivStabilizer (E : TransporterCat G X) :
     Mor E E ≃ MulAction.stabilizer G (E : X) where
   toFun α := ⟨α.val, by
     show α.val • (E : X) = E
@@ -600,17 +600,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L114"><code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L114"><code>SheafOnBuilding.TransporterCat.endMulEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endMulEquivStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endMulEquivStabilizer (E : TransporterCat G X) :
     End E ≃* MulAction.stabilizer G (E : X) where
   toEquiv := endMorEquivStabilizer E
   map_mul&#39; _ _ := rfl</code></pre>
@@ -619,17 +619,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L123"><code>SheafOnBuilding.OrbitCat.endToStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L123"><code>SheafOnBuilding.TransporterCat.endToStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endToStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endToStabilizer (E : TransporterCat G X) :
     End E →* MulAction.stabilizer G (E : X) :=
   (endMulEquivStabilizer E).toMonoidHom</code></pre>
         </li>
@@ -637,48 +637,48 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L137"><code>SheafOnBuilding.OrbitCat.OnSubcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L137"><code>SheafOnBuilding.TransporterCat.OnSubcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           <p class="lean-docstring">Full subcategory of `]X/G[` supported on cells of a subcomplex `S`.</p>
           <pre class="lean-signature"><code>abbrev OnSubcomplex (S : Subcomplex X) :=
   ObjectProperty.FullSubcategory
-    (C := OrbitCat G X) (fun E =&gt; (E : X) ∈ S)</code></pre>
+    (C := TransporterCat G X) (fun E =&gt; (E : X) ∈ S)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L142"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L142"><code>SheafOnBuilding.TransporterCat.ιOnSubcomplex</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           <p class="lean-docstring">The inclusion functor `[X&#39;]_{ι} → ]X/G[`.</p>
           <pre class="lean-signature"><code>abbrev ιOnSubcomplex (S : Subcomplex X) :
-    OnSubcomplex (G := G) (X := X) S ⥤ OrbitCat G X :=
+    OnSubcomplex (G := G) (X := X) S ⥤ TransporterCat G X :=
   ObjectProperty.ι _</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L155"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L155"><code>SheafOnBuilding.TransporterCat.ιOnSubcomplex_essSurj</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
@@ -691,12 +691,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L182"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L182"><code>SheafOnBuilding.TransporterCat.ιOnSubcomplex_isEquivalence</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
@@ -709,12 +709,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitFunEquiv.lean#L33"><code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterFunEquiv.lean#L33"><code>SheafOnBuilding.TransporterCat.funCatEquivOfQFD</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitFunEquiv
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterFunEquiv
           </span>
           
           
@@ -722,7 +722,7 @@
           <pre class="lean-signature"><code>noncomputable def funCatEquivOfQFD (G&#39; : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G&#39; S] :
     ((OnSubcomplex (G := G) (X := X) S)ᵒᵖ ⥤ C) ≌
-    ((OrbitCat G X)ᵒᵖ ⥤ C) :=
+    ((TransporterCat G X)ᵒᵖ ⥤ C) :=
   letI := ιOnSubcomplex_isEquivalence G&#39; S
   Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)</code></pre>
         </li>
@@ -730,12 +730,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/KData.lean#L44"><code>SheafOnBuilding.KData</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/KData.lean#L44"><code>SheafOnBuilding.KData</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.KData
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.KData
           </span>
           
           
@@ -756,12 +756,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/KData.lean#L64"><code>SheafOnBuilding.KData.smul_fix</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/KData.lean#L64"><code>SheafOnBuilding.KData.smul_fix</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.KData
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.KData
           </span>
           
           
@@ -772,12 +772,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/KData.lean#L70"><code>SheafOnBuilding.KData.K1b</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/KData.lean#L70"><code>SheafOnBuilding.KData.K1b</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.KData
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.KData
           </span>
           
           
@@ -788,12 +788,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/KData.lean#L108"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/KData.lean#L108"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.KData
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.KData
           </span>
           
           
@@ -810,12 +810,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/KData.lean#L165"><code>SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/KData.lean#L165"><code>SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.KData
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.KData
           </span>
           
           
@@ -832,12 +832,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/SRep.lean#L33"><code>SheafOnBuilding.SRep</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/SRep.lean#L33"><code>SheafOnBuilding.SRep</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.SRep
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.SRep
           </span>
           
           
@@ -854,12 +854,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/SRep.lean#L48"><code>SheafOnBuilding.SRep.Hom</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/SRep.lean#L48"><code>SheafOnBuilding.SRep.Hom</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.SRep
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.SRep
           </span>
           
           
@@ -879,12 +879,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/GCosheafToFun.lean#L36"><code>SheafOnBuilding.GCosheaf.mapOfG</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/GCosheafToFun.lean#L36"><code>SheafOnBuilding.GCosheaf.mapOfG</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.GCosheafToFun
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.GCosheafToFun
           </span>
           
           
@@ -898,12 +898,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/GCosheafToFun.lean#L49"><code>SheafOnBuilding.GCosheaf.mapOfG_one</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/GCosheafToFun.lean#L49"><code>SheafOnBuilding.GCosheaf.mapOfG_one</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.GCosheafToFun
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.GCosheafToFun
           </span>
           
           
@@ -916,7 +916,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/KData.lean#L1"><code>SheafOnBuilding.KData</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitFunEquiv.lean#L1"><code>SheafOnBuilding.OrbitFunEquiv</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/SRep.lean#L1"><code>SheafOnBuilding.SRep</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/GCosheafToFun.lean#L1"><code>SheafOnBuilding.GCosheafToFun</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/KData.lean#L1"><code>SheafOnBuilding.KData</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterFunEquiv.lean#L1"><code>SheafOnBuilding.TransporterFunEquiv</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/SRep.lean#L1"><code>SheafOnBuilding.SRep</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/GCosheafToFun.lean#L1"><code>SheafOnBuilding.GCosheafToFun</code></a>
       </p>
       
     </div>
@@ -1188,26 +1188,26 @@ Lemma A(1).</p>
   <code>SheafOnBuilding.GCosheafToFun</code>; the current building blocks are
   <code>GCosheaf.mapOfG</code> and <code>mapOfG_one</code>.</li>
 <li><strong><code>Fun([S]ᵒᵖ, 𝒞) ≃ Fun(]X/G[ᵒᵖ, 𝒞)</code>.</strong> Already formalised as
-  <code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code> (via
+  <code>SheafOnBuilding.TransporterCat.funCatEquivOfQFD</code> (via
   <code>ιOnSubcomplex_isEquivalence</code>).</li>
 </ul>
 <p>Composing the two once the first is complete gives the reduction
 theorem.</p>
-<h3>The transporter category <code>]X/G[</code> (<code>SheafOnBuilding.OrbitCat</code>)</h3>
-<pre><code class="language-lean">abbrev OrbitCat (G X : Type*) : Type _ := X
-def Mor (E E' : OrbitCat G X) : Type _ :=
+<h3>The transporter category <code>]X/G[</code> (<code>SheafOnBuilding.TransporterCat</code>)</h3>
+<pre><code class="language-lean">abbrev TransporterCat (G X : Type*) : Type _ := X
+def Mor (E E' : TransporterCat G X) : Type _ :=
   {g : G // g • (E : X) ≤ (E' : X)}
-scoped instance category : Category (OrbitCat G X) where
+scoped instance category : Category (TransporterCat G X) where
   Hom E E' := Mor E E'
   id  := Mor.id
   comp := Mor.comp
 </code></pre>
 <p>Endomorphism identification (three packagings):</p>
-<pre><code class="language-lean">def endMorEquivStabilizer (E : OrbitCat G X) :
+<pre><code class="language-lean">def endMorEquivStabilizer (E : TransporterCat G X) :
     Mor E E ≃ MulAction.stabilizer G (E : X)         -- Equiv
-def endMulEquivStabilizer (E : OrbitCat G X) :
+def endMulEquivStabilizer (E : TransporterCat G X) :
     End E ≃* MulAction.stabilizer G (E : X)          -- MulEquiv
-def endToStabilizer (E : OrbitCat G X) :
+def endToStabilizer (E : TransporterCat G X) :
     End E →* MulAction.stabilizer G (E : X)          -- MonoidHom
 </code></pre>
 <p>Full-subcategory-on-$S$ and its equivalence with the full orbit
@@ -1216,7 +1216,7 @@ reduction proof):</p>
 <pre><code class="language-lean">abbrev OnSubcomplex (S : Subcomplex X) :=
   ObjectProperty.FullSubcategory (fun E =&gt; (E : X) ∈ S)
 abbrev ιOnSubcomplex (S : Subcomplex X) :
-    OnSubcomplex S ⥤ OrbitCat G X := ObjectProperty.ι _
+    OnSubcomplex S ⥤ TransporterCat G X := ObjectProperty.ι _
 
 theorem ιOnSubcomplex_essSurj (G' : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G' S] : (ιOnSubcomplex S).EssSurj
@@ -1228,7 +1228,7 @@ theorem ιOnSubcomplex_isEquivalence (G' : Subgroup G) (S : Subcomplex X)
 the second half of the reduction proof:</p>
 <pre><code class="language-lean">noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G' S] :
-    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((OrbitCat G X)ᵒᵖ ⥤ C)
+    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((TransporterCat G X)ᵒᵖ ⥤ C)
 </code></pre>
 <h3>K-cosheaf unpacking side (<code>SheafOnBuilding.KData</code> +</h3>
 <p><code>SheafOnBuilding.SRep</code>)</p>

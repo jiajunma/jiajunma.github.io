@@ -9,7 +9,7 @@
     "cellular_categories"
   ],
   "body_html": "<h1>$\\underline{\\mathrm{Fun}}([X']^{\\mathrm{op}}, \\mathscr C) \\simeq \\underline{\\mathrm{Fun}}(]X/G[^{\\mathrm{op}}, \\mathscr C)$</h1>\n<p>Corollary of <a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_subcomplex_equivalence\" href=\"cellular_categories_orbit_subcomplex_equivalence.html\">QFD inclusion [X&#x27;] ↪ ]X/G[ is a categorical equivalence</a>.</p>\n<blockquote>\n<p><strong>Corollary.</strong> If $S$ is a QFD for $G' \\le G$, then for any category\n$\\mathscr C$\n$$\\underline{\\mathrm{Fun}}\\bigl([X']^{\\mathrm{op}}, \\mathscr C\\bigr)\n  \\;\\simeq\\;\n  \\underline{\\mathrm{Fun}}\\bigl(\\,]X/G[^{\\mathrm{op}},\\,\\mathscr C\\bigr).$$</p>\n</blockquote>",
-  "proof_html": "<p>Full-subcategory inclusion $\\iota : [X'] \\hookrightarrow \\,]X/G[$\nis an equivalence by <a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_subcomplex_equivalence\" href=\"cellular_categories_orbit_subcomplex_equivalence.html\">QFD inclusion [X&#x27;] ↪ ]X/G[ is a categorical equivalence</a>.\nPassing to opposite categories preserves equivalences, and the functor\n<code>Equivalence.congrLeft</code> sends an equivalence $\\mathcal A \\simeq \\mathcal B$\nto an equivalence $\\underline{\\mathrm{Fun}}(\\mathcal A, \\mathscr C) \\simeq\n\\underline{\\mathrm{Fun}}(\\mathcal B, \\mathscr C)$. $\\square$</p>\n<h2>Lean formalization</h2>\n<pre><code class=\"language-lean\">noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S] :\n    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((OrbitCat G X)ᵒᵖ ⥤ C) :=\n  letI := ιOnSubcomplex_isEquivalence G' S\n  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)\n</code></pre>\n<p>Uses <code>Functor.op</code> (preserves <code>IsEquivalence</code>) composed with mathlib's\n<code>Equivalence.congrLeft</code>.  Together with the still-to-be-formalized\n$\\Cosh_G(X, C) \\simeq \\underline{\\mathrm{Fun}}(]X/G[^{\\mathrm{op}}, C)$\nequivalence (<a class=\"node-ref\" data-node-id=\"cellular_categories.equivariant_via_functors\" href=\"cellular_categories_equivariant_via_functors.html\">G-equivariant (co)sheaves as functors on ]X/G[ resp. [X/G]</a>) this\ngives the first equivalence\n$$\\Cosh_G(X, C) \\;\\simeq\\; \\underline{\\mathrm{Fun}}([X']^{\\mathrm{op}}, C)$$\nof Sheaf7 Prop 2.6.3 (<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a>).</p>",
+  "proof_html": "<p>Full-subcategory inclusion $\\iota : [X'] \\hookrightarrow \\,]X/G[$\nis an equivalence by <a class=\"node-ref\" data-node-id=\"cellular_categories.orbit_subcomplex_equivalence\" href=\"cellular_categories_orbit_subcomplex_equivalence.html\">QFD inclusion [X&#x27;] ↪ ]X/G[ is a categorical equivalence</a>.\nPassing to opposite categories preserves equivalences, and the functor\n<code>Equivalence.congrLeft</code> sends an equivalence $\\mathcal A \\simeq \\mathcal B$\nto an equivalence $\\underline{\\mathrm{Fun}}(\\mathcal A, \\mathscr C) \\simeq\n\\underline{\\mathrm{Fun}}(\\mathcal B, \\mathscr C)$. $\\square$</p>\n<h2>Lean formalization</h2>\n<pre><code class=\"language-lean\">noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S] :\n    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((TransporterCat G X)ᵒᵖ ⥤ C) :=\n  letI := ιOnSubcomplex_isEquivalence G' S\n  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)\n</code></pre>\n<p>Uses <code>Functor.op</code> (preserves <code>IsEquivalence</code>) composed with mathlib's\n<code>Equivalence.congrLeft</code>.  Together with the still-to-be-formalized\n$\\Cosh_G(X, C) \\simeq \\underline{\\mathrm{Fun}}(]X/G[^{\\mathrm{op}}, C)$\nequivalence (<a class=\"node-ref\" data-node-id=\"cellular_categories.equivariant_via_functors\" href=\"cellular_categories_equivariant_via_functors.html\">G-equivariant (co)sheaves as functors on ]X/G[ resp. [X/G]</a>) this\ngives the first equivalence\n$$\\Cosh_G(X, C) \\;\\simeq\\; \\underline{\\mathrm{Fun}}([X']^{\\mathrm{op}}, C)$$\nof Sheaf7 Prop 2.6.3 (<a class=\"node-ref\" data-node-id=\"equivariant_sheaves.reduction_to_qfd\" href=\"../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html\">Reduction of G-equivariant cosheaves to a QFD</a>).</p>",
   "deps": [
     {
       "id": "cellular_categories.orbit_subcomplex_equivalence",
@@ -20,17 +20,17 @@
   "dependents": [],
   "lean_refs": [
     {
-      "name": "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
-      "display_name": "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
-      "qualified_name": "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
-      "module": "SheafOnBuilding.OrbitFunEquiv",
+      "name": "SheafOnBuilding.TransporterCat.funCatEquivOfQFD",
+      "display_name": "SheafOnBuilding.TransporterCat.funCatEquivOfQFD",
+      "qualified_name": "SheafOnBuilding.TransporterCat.funCatEquivOfQFD",
+      "module": "SheafOnBuilding.TransporterFunEquiv",
       "kind": "def",
-      "signature": "noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S] :\n    ((OnSubcomplex (G := G) (X := X) S)ᵒᵖ ⥤ C) ≌\n    ((OrbitCat G X)ᵒᵖ ⥤ C) :=\n  letI := ιOnSubcomplex_isEquivalence G' S\n  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)",
+      "signature": "noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S] :\n    ((OnSubcomplex (G := G) (X := X) S)ᵒᵖ ⥤ C) ≌\n    ((TransporterCat G X)ᵒᵖ ⥤ C) :=\n  letI := ιOnSubcomplex_isEquivalence G' S\n  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def",
-      "short_revision": "6aa0f0f",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitFunEquiv.lean#L33",
+      "revision": "50ccfa42e7f680d8b00b4fe5069585bd965fc694",
+      "short_revision": "50ccfa4",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterFunEquiv.lean#L33",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -40,12 +40,12 @@
   ],
   "lean_modules": [
     {
-      "name": "SheafOnBuilding.OrbitFunEquiv",
-      "display_name": "SheafOnBuilding.OrbitFunEquiv",
+      "name": "SheafOnBuilding.TransporterFunEquiv",
+      "display_name": "SheafOnBuilding.TransporterFunEquiv",
       "repository_title": "SheafOnBuilding (this repo)",
-      "revision": "6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def",
-      "short_revision": "6aa0f0f",
-      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitFunEquiv.lean#L1",
+      "revision": "50ccfa42e7f680d8b00b4fe5069585bd965fc694",
+      "short_revision": "50ccfa4",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterFunEquiv.lean#L1",
       "status": "resolved",
       "reason": null
     }

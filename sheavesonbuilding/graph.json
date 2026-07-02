@@ -1211,7 +1211,7 @@
         "SheafOnBuilding.GCosheaf.mapOfG",
         "SheafOnBuilding.GCosheaf.mapOfG_one",
         "SheafOnBuilding.GCosheaf.mapOfG_mul",
-        "SheafOnBuilding.OrbitCat.GCosheaf.toFunctor"
+        "SheafOnBuilding.TransporterCat.GCosheaf.toFunctor"
       ],
       "topic": "cellular_categories",
       "uses": [
@@ -1237,9 +1237,9 @@
         "cellular_categories"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endToStabilizer"
+        "SheafOnBuilding.TransporterCat.endMorEquivStabilizer",
+        "SheafOnBuilding.TransporterCat.endMulEquivStabilizer",
+        "SheafOnBuilding.TransporterCat.endToStabilizer"
       ],
       "topic": "cellular_categories",
       "uses": [
@@ -1263,7 +1263,7 @@
         "cellular_categories"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.OrbitCat.funCatEquivOfQFD"
+        "SheafOnBuilding.TransporterCat.funCatEquivOfQFD"
       ],
       "topic": "cellular_categories",
       "uses": [
@@ -1285,10 +1285,10 @@
         "cellular_categories"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.OrbitCat.OnSubcomplex",
-        "SheafOnBuilding.OrbitCat.ιOnSubcomplex",
-        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj",
-        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence"
+        "SheafOnBuilding.TransporterCat.OnSubcomplex",
+        "SheafOnBuilding.TransporterCat.ιOnSubcomplex",
+        "SheafOnBuilding.TransporterCat.ιOnSubcomplex_essSurj",
+        "SheafOnBuilding.TransporterCat.ιOnSubcomplex_isEquivalence"
       ],
       "topic": "cellular_categories",
       "uses": [
@@ -1392,14 +1392,14 @@
         "cellular_categories"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.OrbitCat",
-        "SheafOnBuilding.OrbitCat.Mor",
-        "SheafOnBuilding.OrbitCat.Mor.id",
-        "SheafOnBuilding.OrbitCat.Mor.comp",
-        "SheafOnBuilding.OrbitCat.category",
-        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endToStabilizer"
+        "SheafOnBuilding.TransporterCat",
+        "SheafOnBuilding.TransporterCat.Mor",
+        "SheafOnBuilding.TransporterCat.Mor.id",
+        "SheafOnBuilding.TransporterCat.Mor.comp",
+        "SheafOnBuilding.TransporterCat.category",
+        "SheafOnBuilding.TransporterCat.endMorEquivStabilizer",
+        "SheafOnBuilding.TransporterCat.endMulEquivStabilizer",
+        "SheafOnBuilding.TransporterCat.endToStabilizer"
       ],
       "topic": "cellular_categories",
       "uses": [
@@ -2343,16 +2343,16 @@
         "equivariant_sheaves.induction"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.PXPrimeOrbitCat",
-        "SheafOnBuilding.PXPrimeOrbitCat.Mor",
-        "SheafOnBuilding.PXPrimeOrbitCat.Mor.id",
-        "SheafOnBuilding.PXPrimeOrbitCat.Mor.comp",
-        "SheafOnBuilding.PXPrimeOrbitCat.category",
-        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat",
-        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_essSurj",
-        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_full",
-        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_faithful",
-        "SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_isEquivalence"
+        "SheafOnBuilding.PXPrimeTransporterCat",
+        "SheafOnBuilding.PXPrimeTransporterCat.Mor",
+        "SheafOnBuilding.PXPrimeTransporterCat.Mor.id",
+        "SheafOnBuilding.PXPrimeTransporterCat.Mor.comp",
+        "SheafOnBuilding.PXPrimeTransporterCat.category",
+        "SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat",
+        "SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_essSurj",
+        "SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_full",
+        "SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_faithful",
+        "SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_isEquivalence"
       ],
       "topic": "equivariant_sheaves.induction",
       "uses": [
@@ -2728,19 +2728,19 @@
         "equivariant_sheaves.qfd"
       ],
       "lean_declarations": [
-        "SheafOnBuilding.OrbitCat",
-        "SheafOnBuilding.OrbitCat.Mor",
-        "SheafOnBuilding.OrbitCat.Mor.id",
-        "SheafOnBuilding.OrbitCat.Mor.comp",
-        "SheafOnBuilding.OrbitCat.category",
-        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
-        "SheafOnBuilding.OrbitCat.endToStabilizer",
-        "SheafOnBuilding.OrbitCat.OnSubcomplex",
-        "SheafOnBuilding.OrbitCat.ιOnSubcomplex",
-        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj",
-        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence",
-        "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
+        "SheafOnBuilding.TransporterCat",
+        "SheafOnBuilding.TransporterCat.Mor",
+        "SheafOnBuilding.TransporterCat.Mor.id",
+        "SheafOnBuilding.TransporterCat.Mor.comp",
+        "SheafOnBuilding.TransporterCat.category",
+        "SheafOnBuilding.TransporterCat.endMorEquivStabilizer",
+        "SheafOnBuilding.TransporterCat.endMulEquivStabilizer",
+        "SheafOnBuilding.TransporterCat.endToStabilizer",
+        "SheafOnBuilding.TransporterCat.OnSubcomplex",
+        "SheafOnBuilding.TransporterCat.ιOnSubcomplex",
+        "SheafOnBuilding.TransporterCat.ιOnSubcomplex_essSurj",
+        "SheafOnBuilding.TransporterCat.ιOnSubcomplex_isEquivalence",
+        "SheafOnBuilding.TransporterCat.funCatEquivOfQFD",
         "SheafOnBuilding.KData",
         "SheafOnBuilding.KData.smul_fix",
         "SheafOnBuilding.KData.K1b",

@@ -475,17 +475,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L87"><code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L87"><code>SheafOnBuilding.TransporterCat.endMorEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endMorEquivStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endMorEquivStabilizer (E : TransporterCat G X) :
     Mor E E ≃ MulAction.stabilizer G (E : X) where
   toFun α := ⟨α.val, by
     show α.val • (E : X) = E
@@ -507,17 +507,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L114"><code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L114"><code>SheafOnBuilding.TransporterCat.endMulEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endMulEquivStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endMulEquivStabilizer (E : TransporterCat G X) :
     End E ≃* MulAction.stabilizer G (E : X) where
   toEquiv := endMorEquivStabilizer E
   map_mul&#39; _ _ := rfl</code></pre>
@@ -526,17 +526,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L123"><code>SheafOnBuilding.OrbitCat.endToStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L123"><code>SheafOnBuilding.TransporterCat.endToStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.OrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.TransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def endToStabilizer (E : OrbitCat G X) :
+          <pre class="lean-signature"><code>def endToStabilizer (E : TransporterCat G X) :
     End E →* MulAction.stabilizer G (E : X) :=
   (endMulEquivStabilizer E).toMonoidHom</code></pre>
         </li>
@@ -544,7 +544,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
       </p>
       
     </div>
@@ -582,12 +582,12 @@ The mathlib <code>CategoryTheory.End</code> monoid uses <code>x * y := y ≫ x</
 $\mathrm{End}(E)\cdot \Fix_G(E)$ multiplication conventions align on the
 nose and the map is a <code>MonoidHom</code> / <code>MulEquiv</code>.</p>
 <h2>Lean formalization</h2>
-<p><code>OrbitCat.endMorEquivStabilizer E : Mor E E ≃ MulAction.stabilizer G E</code>
+<p><code>TransporterCat.endMorEquivStabilizer E : Mor E E ≃ MulAction.stabilizer G E</code>
 is the underlying <code>Equiv</code>.  The monoid isomorphism
-<code>OrbitCat.endMulEquivStabilizer E : End E ≃* MulAction.stabilizer G E</code>
+<code>TransporterCat.endMulEquivStabilizer E : End E ≃* MulAction.stabilizer G E</code>
 adds <code>map_mul'</code> (proved by <code>rfl</code> — the convention alignment is
 definitional).  Its forward direction is packaged as
-<code>OrbitCat.endToStabilizer : End E →* MulAction.stabilizer G E</code> for
+<code>TransporterCat.endToStabilizer : End E →* MulAction.stabilizer G E</code> for
 downstream composition with monoid homs.</p>
 <p>The <code>AbstractCellComplex.dim_lt</code> axiom (a proper face has strictly
 smaller dimension) together with <code>GCellComplex.smul_dim</code> (the <code>G</code>-action

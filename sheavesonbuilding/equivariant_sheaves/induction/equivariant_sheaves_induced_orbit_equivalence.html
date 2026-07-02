@@ -483,17 +483,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L62"><code>SheafOnBuilding.PXPrimeOrbitCat</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L62"><code>SheafOnBuilding.PXPrimeTransporterCat</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure PXPrimeOrbitCat {X&#39; : Type*} [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
+          <pre class="lean-signature"><code>structure PXPrimeTransporterCat {X&#39; : Type*} [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
     [MulAction G X&#39;] [GCellComplex G X&#39;]
     (_d : InductionDatum (G := G) X&#39;) : Type _ where
   /-- The underlying cell of `X&#39;`. -/
@@ -503,34 +503,34 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L76"><code>SheafOnBuilding.PXPrimeOrbitCat.Mor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L76"><code>SheafOnBuilding.PXPrimeTransporterCat.Mor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Mor (E E&#39; : PXPrimeOrbitCat d) : Type _ :=
+          <pre class="lean-signature"><code>def Mor (E E&#39; : PXPrimeTransporterCat d) : Type _ :=
   { g : G // g • InducedSpace.iota d E.cell ≤ InducedSpace.iota d E&#39;.cell }</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L80"><code>SheafOnBuilding.PXPrimeOrbitCat.Mor.id</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L80"><code>SheafOnBuilding.PXPrimeTransporterCat.Mor.id</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           <p class="lean-docstring">Identity morphism.</p>
-          <pre class="lean-signature"><code>def Mor.id (E : PXPrimeOrbitCat d) : Mor d E E :=
+          <pre class="lean-signature"><code>def Mor.id (E : PXPrimeTransporterCat d) : Mor d E E :=
   ⟨1, show (1 : G) • InducedSpace.iota d E.cell ≤ InducedSpace.iota d E.cell by
         rw [one_smul]⟩</code></pre>
         </li>
@@ -538,34 +538,34 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L87"><code>SheafOnBuilding.PXPrimeOrbitCat.Mor.comp</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L87"><code>SheafOnBuilding.PXPrimeTransporterCat.Mor.comp</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Mor.comp {E E&#39; E&#39;&#39; : PXPrimeOrbitCat d}
+          <pre class="lean-signature"><code>def Mor.comp {E E&#39; E&#39;&#39; : PXPrimeTransporterCat d}
     (α : Mor d E E&#39;) (β : Mor d E&#39; E&#39;&#39;) : Mor d E E&#39;&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L95"><code>SheafOnBuilding.PXPrimeOrbitCat.category</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L95"><code>SheafOnBuilding.PXPrimeTransporterCat.category</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
-          <p class="lean-docstring">The category structure on `PXPrimeOrbitCat d`.</p>
-          <pre class="lean-signature"><code>instance category : Category (PXPrimeOrbitCat d) where
+          <p class="lean-docstring">The category structure on `PXPrimeTransporterCat d`.</p>
+          <pre class="lean-signature"><code>instance category : Category (PXPrimeTransporterCat d) where
   Hom E E&#39; := Mor d E E&#39;
   id E := Mor.id d E
   comp α β := Mor.comp d α β
@@ -577,19 +577,19 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L128"><code>SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L128"><code>SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>def PXPrimeOrbitCat.toInducedOrbitCat :
-    PXPrimeOrbitCat d ⥤ OrbitCat G (InducedSpace d) where
-  obj E := (InducedSpace.iota d E.cell : OrbitCat G (InducedSpace d))
+          <pre class="lean-signature"><code>def PXPrimeTransporterCat.toInducedTransporterCat :
+    PXPrimeTransporterCat d ⥤ TransporterCat G (InducedSpace d) where
+  obj E := (InducedSpace.iota d E.cell : TransporterCat G (InducedSpace d))
   map {_ _} f := ⟨f.val, f.property⟩
   map_id _ := rfl
   map_comp _ _ := rfl</code></pre>
@@ -598,35 +598,35 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L141"><code>SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_essSurj</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L141"><code>SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_essSurj</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem PXPrimeOrbitCat.toInducedOrbitCat_essSurj :
-    (PXPrimeOrbitCat.toInducedOrbitCat d).EssSurj where</code></pre>
+          <pre class="lean-signature"><code>theorem PXPrimeTransporterCat.toInducedTransporterCat_essSurj :
+    (PXPrimeTransporterCat.toInducedTransporterCat d).EssSurj where</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L166"><code>SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_full</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L166"><code>SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_full</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>instance PXPrimeOrbitCat.toInducedOrbitCat_full :
-    (PXPrimeOrbitCat.toInducedOrbitCat d).Full where
+          <pre class="lean-signature"><code>instance PXPrimeTransporterCat.toInducedTransporterCat_full :
+    (PXPrimeTransporterCat.toInducedTransporterCat d).Full where
   map_surjective {_ _} f :=
     ⟨⟨f.val, f.property⟩, rfl⟩</code></pre>
         </li>
@@ -634,18 +634,18 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L173"><code>SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_faithful</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L173"><code>SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_faithful</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>instance PXPrimeOrbitCat.toInducedOrbitCat_faithful :
-    (PXPrimeOrbitCat.toInducedOrbitCat d).Faithful where
+          <pre class="lean-signature"><code>instance PXPrimeTransporterCat.toInducedTransporterCat_faithful :
+    (PXPrimeTransporterCat.toInducedTransporterCat d).Faithful where
   map_injective {_ _} {_ _} h :=
     Subtype.ext (congrArg Subtype.val h)</code></pre>
         </li>
@@ -653,24 +653,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L192"><code>SheafOnBuilding.OrbitCat.PXPrimeOrbitCat.toInducedOrbitCat_isEquivalence</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L192"><code>SheafOnBuilding.TransporterCat.PXPrimeTransporterCat.toInducedTransporterCat_isEquivalence</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6aa0f0f, SheafOnBuilding.InducedOrbitCat
+            SheafOnBuilding (this repo) @ 50ccfa4, SheafOnBuilding.InducedTransporterCat
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem PXPrimeOrbitCat.toInducedOrbitCat_isEquivalence :
-    (PXPrimeOrbitCat.toInducedOrbitCat d).IsEquivalence</code></pre>
+          <pre class="lean-signature"><code>theorem PXPrimeTransporterCat.toInducedTransporterCat_isEquivalence :
+    (PXPrimeTransporterCat.toInducedTransporterCat d).IsEquivalence</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/InducedOrbitCat.lean#L1"><code>SheafOnBuilding.InducedOrbitCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6aa0f0fbf3e8697aeac4b9a728cd09f22d3e4def/SheafOnBuilding/KData.lean#L1"><code>SheafOnBuilding.KData</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/InducedTransporterCat.lean#L1"><code>SheafOnBuilding.InducedTransporterCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/50ccfa42e7f680d8b00b4fe5069585bd965fc694/SheafOnBuilding/KData.lean#L1"><code>SheafOnBuilding.KData</code></a>
       </p>
       
     </div>
@@ -811,53 +811,53 @@ induced-space case has an especially clean form:</p>
   induced case.</li>
 </ul>
 <h2>Lean formalization</h2>
-<p><strong>Fully formalized in <code>SheafOnBuilding.InducedOrbitCat</code></strong> as of the
+<p><strong>Fully formalized in <code>SheafOnBuilding.InducedTransporterCat</code></strong> as of the
 current version.  The category $]X'/P[$ and its equivalence with the
 transporter category of the induced space are packaged as:</p>
 <pre><code class="language-lean">/-- Objects are wrapped cells of X'.  Wrapper `structure` — NOT
 `abbrev` — so our Category instance is unambiguous. -/
-structure PXPrimeOrbitCat (d : InductionDatum X') where
+structure PXPrimeTransporterCat (d : InductionDatum X') where
   cell : X'
 
 /-- Morphism = element of G with `g • ι E.cell ≤ ι E'.cell` in
 InducedSpace d.  Equivalent (via `qfd_equiv_hom`) to the paper's
 `{ n * k : n ∈ G', k ∈ P E, n • E ≤ E' }`. -/
-def Mor (E E' : PXPrimeOrbitCat d) : Type _ :=
+def Mor (E E' : PXPrimeTransporterCat d) : Type _ :=
   { g : G // g • InducedSpace.iota d E.cell ≤ InducedSpace.iota d E'.cell }
 
-instance category : Category (PXPrimeOrbitCat d) where ...
+instance category : Category (PXPrimeTransporterCat d) where ...
 
-def toInducedOrbitCat : PXPrimeOrbitCat d ⥤ OrbitCat G (InducedSpace d)
+def toInducedTransporterCat : PXPrimeTransporterCat d ⥤ TransporterCat G (InducedSpace d)
   where
-    obj E := (InducedSpace.iota d E.cell : OrbitCat G (InducedSpace d))
+    obj E := (InducedSpace.iota d E.cell : TransporterCat G (InducedSpace d))
     map f := ⟨f.val, f.property⟩
     ...
 
-theorem toInducedOrbitCat_isEquivalence :
-    toInducedOrbitCat.IsEquivalence
+theorem toInducedTransporterCat_isEquivalence :
+    toInducedTransporterCat.IsEquivalence
 </code></pre>
 <p>The proof of <code>IsEquivalence</code> combines:</p>
 <ul>
-<li><code>PXPrimeOrbitCat.toInducedOrbitCat_essSurj</code> — essentially surjective,
+<li><code>PXPrimeTransporterCat.toInducedTransporterCat_essSurj</code> — essentially surjective,
   built from <code>InducedSpace.exists_eq_smul_iota</code> (every cell of the
   induced space is $G$-related to some $\iota E$) plus a two-morphism
   isomorphism $g \cdot \iota E \cong \iota E$ via $(g, g^{-1})$.</li>
-<li><code>PXPrimeOrbitCat.toInducedOrbitCat_full</code> + <code>_faithful</code> — the <code>Mor</code>
-  subtype and the <code>OrbitCat.Mor</code> subtype coincide on underlying $G$-
+<li><code>PXPrimeTransporterCat.toInducedTransporterCat_full</code> + <code>_faithful</code> — the <code>Mor</code>
+  subtype and the <code>TransporterCat.Mor</code> subtype coincide on underlying $G$-
   elements, so the map on Homs is definitionally the identity.</li>
 </ul>
 <p>Consumed lemmas from earlier: <code>GCellComplex.smul_le</code> (composition),
 <code>InducedSpace.exists_eq_smul_iota</code> (ess. surj.),
 <code>PartialOrder</code>/<code>AbstractCellComplex</code> on <code>InducedSpace d</code> (functor
-target has a category structure — the scoped <code>OrbitCat.category</code>
-takes precedence because <code>toInducedOrbitCat</code> lives inside
-<code>namespace SheafOnBuilding.OrbitCat</code>).</p>
-<p><strong>Design note — why <code>structure</code>, not <code>abbrev</code>.</strong>  <code>OrbitCat</code> uses
-<code>abbrev OrbitCat G X := X</code> with a <code>scoped instance</code> for its category.
-Trying the same pattern for <code>PXPrimeOrbitCat</code> fails: the object
-<code>E : PXPrimeOrbitCat d</code> unfolds to <code>E : X'</code>, which already carries
+target has a category structure — the scoped <code>TransporterCat.category</code>
+takes precedence because <code>toInducedTransporterCat</code> lives inside
+<code>namespace SheafOnBuilding.TransporterCat</code>).</p>
+<p><strong>Design note — why <code>structure</code>, not <code>abbrev</code>.</strong>  <code>TransporterCat</code> uses
+<code>abbrev TransporterCat G X := X</code> with a <code>scoped instance</code> for its category.
+Trying the same pattern for <code>PXPrimeTransporterCat</code> fails: the object
+<code>E : PXPrimeTransporterCat d</code> unfolds to <code>E : X'</code>, which already carries
 <em>two</em> competing <code>Category X'</code> instances — the preorder-derived one and
-<code>OrbitCat.category</code> (from <code>abbrev OrbitCat G X' := X'</code>) — before ours
+<code>TransporterCat.category</code> (from <code>abbrev TransporterCat G X' := X'</code>) — before ours
 is even considered.  Adding a third <code>scoped</code> instance creates
 irresolvable ambiguity, and <code>Hom</code> in <code>f : E ⟶ E'</code> gets resolved to
 the wrong one at random.  Wrapping in a <code>structure</code> gives a
@@ -869,10 +869,10 @@ $\Cosh_G(X, \mathscr C) \simeq \Fun([X'/P]^{op}, \mathscr C)$
 follows by composing:</p>
 <ol>
 <li>the categorical equivalence
-   <code>PXPrimeOrbitCat.toInducedOrbitCat_isEquivalence</code> (<strong>done</strong>),</li>
+   <code>PXPrimeTransporterCat.toInducedTransporterCat_isEquivalence</code> (<strong>done</strong>),</li>
 <li>the scaffolding
    <code>funCatEquivOfQFD</code>
-   (already in <code>SheafOnBuilding.OrbitFunEquiv</code>), and</li>
+   (already in <code>SheafOnBuilding.TransporterFunEquiv</code>), and</li>
 <li>the still-pending forward direction
    $\Cosh_G(X, \mathscr C) \simeq \Fun(]X/G[^{\mathrm{op}}, \mathscr C)$
    of <a class="node-ref" data-node-id="cellular_categories.equivariant_via_functors" href="../../cellular_categories/cellular_categories_equivariant_via_functors.html">G-equivariant (co)sheaves as functors on ]X/G[ resp. [X/G]</a>.</li>
