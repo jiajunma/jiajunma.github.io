@@ -467,12 +467,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/QuasiFundDomain.lean#L76"><code>SheafOnBuilding.IsQuasiFundDomain</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/12f9b9c7d3f61e161102c57b89a485dec35d93c9/SheafOnBuilding/QuasiFundDomain.lean#L76"><code>SheafOnBuilding.IsQuasiFundDomain</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 12f9b9c, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -495,12 +495,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/QuasiFundDomain.lean#L44"><code>SheafOnBuilding.Subcomplex.stabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/12f9b9c7d3f61e161102c57b89a485dec35d93c9/SheafOnBuilding/QuasiFundDomain.lean#L44"><code>SheafOnBuilding.Subcomplex.stabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 8e1009c, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 12f9b9c, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -520,7 +520,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8e1009cc136bda74937c503ff8da5d2e37b36c14/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/12f9b9c7d3f61e161102c57b89a485dec35d93c9/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
       </p>
       
     </div>
@@ -535,12 +535,25 @@
 $[\![X']\!] \to G \backslash [\![X]\!]$ is a bijection.</p>
 <p><strong>Definition (quasi-fundamental domain, QFD).</strong> A subcomplex $X' \subseteq X$
 is a <em>quasi-fundamental domain</em> for the $G$-action if there exists a
-subgroup $G' \le G$ stabilizing $X'$ such that
+subgroup $G' \le G$ (a <em>distinguished subgroup</em>) satisfying:</p>
+<ul>
+<li><strong>(G'-le-stab)</strong> $G' \le \Stab_G(X')$ — $G'$ set-wise stabilises
+  $X'$.</li>
+<li><strong>(Surjectivity)</strong> Every cell of $X$ is in the $G$-orbit of some
+  cell of $X'$: for every $F \in [\![X]\!]$ there exist $g \in G$ and
+  $E \in [\![X']\!]$ with $g \cdot E = F$.</li>
+<li><strong>(Orbit relation)</strong> For $E, F \in [\![X']\!]$ and $g, h \in G$
+  with $g \cdot E = h \cdot F$, there exists $n \in G'$ realising
+  $n \cdot E = F$ and $(g^{-1} h n) \cdot E = E$.</li>
+</ul>
+<p>Equivalently, the natural map
 $$G' \backslash [\![X']\!] \;\xrightarrow{\;\sim\;}\; G \backslash [\![X]\!]$$
 is a bijection. We then say <em>the $G'$-set $X'$ is a QFD of the $G$-set $X$.</em></p>
-<p>From the definition, $G' \le \Stab_G(X')$ and the map factors through
-$G'\backslash[\![X']\!] \to \Stab_G(X')\backslash[\![X']\!]$, so we may always
-take $G' = \Stab_G(X')$.</p>
+<p>The three axioms are the three components of the QFD data.  Choosing
+a smaller $G'$ sharpens the orbit relation; setting
+$G' := \Stab_G(X')$ recovers the coarsest valid QFD, in which case
+the orbit relation reduces to the bijection $\Stab_G(X') \backslash
+[![X']!] \xrightarrow{\sim} G \backslash [![X]!]$.</p>
 <h2>Canonical examples</h2>
 <p>Each item is a QFD of the preceding one:</p>
 <ol>
