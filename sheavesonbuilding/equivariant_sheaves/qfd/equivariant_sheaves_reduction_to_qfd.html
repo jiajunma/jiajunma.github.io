@@ -642,21 +642,25 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.category</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GCosheaf.category</code>, <code>SheafOnBuilding.SRep.category</code>, <code>(module) SheafOnBuilding.OrbitCat</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L74"><code>SheafOnBuilding.OrbitCat.category</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>scoped instance category : Category (OrbitCat G X) where
+  Hom E E&#39; := Mor E E&#39;
+  id E := Mor.id E
+  comp α β := Mor.comp α β
+  id_comp _ := Subtype.ext (mul_one _)
+  comp_id _ := Subtype.ext (one_mul _)
+  assoc _ _ _ := Subtype.ext (mul_assoc _ _ _).symm</code></pre>
         </li>
         
         <li class="lean-ref">
