@@ -478,7 +478,12 @@
           
           
           <pre class="lean-signature"><code>class GCellComplex (G : Type*) [Group G] (X : Type*)
-    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where</code></pre>
+    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where
+  /-- The action preserves the face relation. -/
+  smul_le : ∀ (g : G) {E F : X}, E ≤ F → (g • E) ≤ (g • F)
+  /-- The action preserves dimension (cells map homeomorphically). -/
+  smul_dim : ∀ (g : G) (E : X),
+    AbstractCellComplex.dim (g • E) = AbstractCellComplex.dim E</code></pre>
         </li>
         
       </ul>

@@ -55,7 +55,7 @@
       "qualified_name": "SheafOnBuilding.AbstractCellComplex",
       "module": "SheafOnBuilding.GCellComplex",
       "kind": "class",
-      "signature": "class AbstractCellComplex (X : Type*) [PartialOrder X] where",
+      "signature": "class AbstractCellComplex (X : Type*) [PartialOrder X] where\n  /-- Dimension function. -/\n  dim : X → ℕ\n  /-- Strict monotonicity: a proper face has strictly smaller dimension. -/\n  dim_lt : ∀ {E F : X}, E ≤ F → E ≠ F → dim E < dim F\n  /-- Every cell of positive dimension has a face of dimension one\n  less.  Without this axiom one could have a \"2-cell\" attached\n  directly to a vertex with no edges in between, which is not the\n  face poset of any regular CW complex. -/\n  exists_face_dim_pred :\n    ∀ {F : X}, 0 < dim F → ∃ E : X, E < F ∧ dim E + 1 = dim F",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "8e1009cc136bda74937c503ff8da5d2e37b36c14",

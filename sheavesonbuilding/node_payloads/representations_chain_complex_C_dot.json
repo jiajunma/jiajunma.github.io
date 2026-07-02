@@ -221,7 +221,7 @@
       "qualified_name": "SheafOnBuilding.chainComplexFunctor",
       "module": "SheafOnBuilding.ChainComplex",
       "kind": "def",
-      "signature": "noncomputable def chainComplexFunctor :\n    (Cosheaf X C) ⥤ ChainComplex C ℕ where",
+      "signature": "noncomputable def chainComplexFunctor :\n    (Cosheaf X C) ⥤ ChainComplex C ℕ where\n  obj V := chainComplex V\n  map {V W} α := chainComplex.map (V := V) α\n  map_id V := by\n    apply HomologicalComplex.Hom.ext\n    ext n\n    show cnMap V (𝟙 V) n = 𝟙 (Cn V n)\n    exact cnMap_id V n\n  map_comp {V W₁ W₂} α β := by\n    apply HomologicalComplex.Hom.ext\n    ext n\n    show cnMap V (α ≫ β) n = cnMap V α n ≫ cnMap W₁ β n\n    exact cnMap_comp V α β n",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "8e1009cc136bda74937c503ff8da5d2e37b36c14",

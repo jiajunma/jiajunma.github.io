@@ -646,7 +646,19 @@
           
           
           <pre class="lean-signature"><code>noncomputable def chainComplexFunctor :
-    (Cosheaf X C) ⥤ ChainComplex C ℕ where</code></pre>
+    (Cosheaf X C) ⥤ ChainComplex C ℕ where
+  obj V := chainComplex V
+  map {V W} α := chainComplex.map (V := V) α
+  map_id V := by
+    apply HomologicalComplex.Hom.ext
+    ext n
+    show cnMap V (𝟙 V) n = 𝟙 (Cn V n)
+    exact cnMap_id V n
+  map_comp {V W₁ W₂} α β := by
+    apply HomologicalComplex.Hom.ext
+    ext n
+    show cnMap V (α ≫ β) n = cnMap V α n ≫ cnMap W₁ β n
+    exact cnMap_comp V α β n</code></pre>
         </li>
         
         <li class="lean-ref">

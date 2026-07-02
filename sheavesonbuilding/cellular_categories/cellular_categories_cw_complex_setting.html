@@ -485,7 +485,17 @@
           
           
           
-          <pre class="lean-signature"><code>class AbstractCellComplex (X : Type*) [PartialOrder X] where</code></pre>
+          <pre class="lean-signature"><code>class AbstractCellComplex (X : Type*) [PartialOrder X] where
+  /-- Dimension function. -/
+  dim : X → ℕ
+  /-- Strict monotonicity: a proper face has strictly smaller dimension. -/
+  dim_lt : ∀ {E F : X}, E ≤ F → E ≠ F → dim E &lt; dim F
+  /-- Every cell of positive dimension has a face of dimension one
+  less.  Without this axiom one could have a &#34;2-cell&#34; attached
+  directly to a vertex with no edges in between, which is not the
+  face poset of any regular CW complex. -/
+  exists_face_dim_pred :
+    ∀ {F : X}, 0 &lt; dim F → ∃ E : X, E &lt; F ∧ dim E + 1 = dim F</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -501,7 +511,12 @@
           
           
           
-          <pre class="lean-signature"><code>class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where</code></pre>
+          <pre class="lean-signature"><code>class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where
+  /-- Each cell has only finitely many faces (closure of `E` meets
+  finitely many cells). -/
+  finite_faces : ∀ E : X, Set.Finite {F : X | F ≤ E}
+  /-- Each cell is in the closure of only finitely many cells. -/
+  finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -518,7 +533,12 @@
           
           
           <pre class="lean-signature"><code>class GCellComplex (G : Type*) [Group G] (X : Type*)
-    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where</code></pre>
+    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where
+  /-- The action preserves the face relation. -/
+  smul_le : ∀ (g : G) {E F : X}, E ≤ F → (g • E) ≤ (g • F)
+  /-- The action preserves dimension (cells map homeomorphically). -/
+  smul_dim : ∀ (g : G) (E : X),
+    AbstractCellComplex.dim (g • E) = AbstractCellComplex.dim E</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -534,7 +554,11 @@
           
           
           
-          <pre class="lean-signature"><code>structure Subcomplex (X : Type*) [PartialOrder X] where</code></pre>
+          <pre class="lean-signature"><code>structure Subcomplex (X : Type*) [PartialOrder X] where
+  /-- The underlying set of cells. -/
+  carrier : Set X
+  /-- Closed under taking faces. -/
+  face_closed&#39; : ∀ {E F : X}, E ≤ F → F ∈ carrier → E ∈ carrier</code></pre>
         </li>
         
       </ul>

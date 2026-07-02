@@ -56,7 +56,7 @@
       "qualified_name": "SheafOnBuilding.GCellComplex",
       "module": "SheafOnBuilding.GCellComplex",
       "kind": "class",
-      "signature": "class GCellComplex (G : Type*) [Group G] (X : Type*)\n    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where",
+      "signature": "class GCellComplex (G : Type*) [Group G] (X : Type*)\n    [PartialOrder X] [AbstractCellComplex X] [MulAction G X] : Prop where\n  /-- The action preserves the face relation. -/\n  smul_le : ∀ (g : G) {E F : X}, E ≤ F → (g • E) ≤ (g • F)\n  /-- The action preserves dimension (cells map homeomorphically). -/\n  smul_dim : ∀ (g : G) (E : X),\n    AbstractCellComplex.dim (g • E) = AbstractCellComplex.dim E",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "8e1009cc136bda74937c503ff8da5d2e37b36c14",

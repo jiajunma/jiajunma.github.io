@@ -480,7 +480,18 @@
           
           
           <pre class="lean-signature"><code>structure InductionDatum (X&#39; : Type*) [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
-    [MulAction G X&#39;] [GCellComplex G X&#39;] where</code></pre>
+    [MulAction G X&#39;] [GCellComplex G X&#39;] where
+  /-- The stabilising subgroup G&#39; ≤ G. -/
+  G&#39; : Subgroup G
+  /-- P_E : the subgroup at each cell. -/
+  P : X&#39; → Subgroup G
+  /-- (P0) Cosheaf monotonicity: a smaller cell gets the bigger subgroup. -/
+  P0 : ∀ {E F : X&#39;}, E ≤ F → P F ≤ P E
+  /-- (P1) G&#39;-equivariance. -/
+  P1 : ∀ (n : G), n ∈ G&#39; → ∀ (E : X&#39;),
+    P (n • E) = (P E).map (MulEquiv.toMonoidHom (MulAut.conj n))
+  /-- (P2) `P_E ∩ G&#39; ⊆ Fix_{G&#39;}(E)`. -/
+  P2 : ∀ (E : X&#39;) (m : G), m ∈ P E → m ∈ G&#39; → m • E = E</code></pre>
         </li>
         
         <li class="lean-ref">

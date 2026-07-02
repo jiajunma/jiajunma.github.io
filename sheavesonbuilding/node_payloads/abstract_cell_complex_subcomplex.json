@@ -31,7 +31,7 @@
       "qualified_name": "SheafOnBuilding.Subcomplex",
       "module": "SheafOnBuilding.GCellComplex",
       "kind": "structure",
-      "signature": "structure Subcomplex (X : Type*) [PartialOrder X] where",
+      "signature": "structure Subcomplex (X : Type*) [PartialOrder X] where\n  /-- The underlying set of cells. -/\n  carrier : Set X\n  /-- Closed under taking faces. -/\n  face_closed' : ∀ {E F : X}, E ≤ F → F ∈ carrier → E ∈ carrier",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "8e1009cc136bda74937c503ff8da5d2e37b36c14",

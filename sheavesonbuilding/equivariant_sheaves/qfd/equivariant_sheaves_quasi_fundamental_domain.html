@@ -480,7 +480,16 @@
           <pre class="lean-signature"><code>class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}
     [PartialOrder X] [AbstractCellComplex X]
     [MulAction G X] [GCellComplex G X]
-    (G&#39; : Subgroup G) (S : Subcomplex X) : Prop where</code></pre>
+    (G&#39; : Subgroup G) (S : Subcomplex X) : Prop where
+  /-- `G&#39;` set-wise stabilises `S`. -/
+  G&#39;_le_stab : G&#39; ≤ S.stabilizer
+  /-- Every G-orbit meets `S`. -/
+  surj : ∀ F : X, ∃ (g : G) (E : X), E ∈ S ∧ g • E = F
+  /-- Orbit characterization: if `g • E = h • F` for `E, F ∈ S`, then
+  some `n ∈ G&#39;` realises `n • E = F` and `(g⁻¹ * h * n) • E = E`. -/
+  orbit_iff : ∀ {E F : X}, E ∈ S → F ∈ S → ∀ (g h : G),
+    g • E = h • F →
+    ∃ n ∈ G&#39;, n • E = F ∧ (g⁻¹ * h * n) • E = E</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -496,7 +505,16 @@
           
           
           
-          <pre class="lean-signature"><code>def stabilizer (S : Subcomplex X) : Subgroup G where</code></pre>
+          <pre class="lean-signature"><code>def stabilizer (S : Subcomplex X) : Subgroup G where
+  carrier := {g | ∀ E : X, g • E ∈ S ↔ E ∈ S}
+  one_mem&#39; := fun E =&gt; by simp
+  mul_mem&#39; := fun {a b} ha hb E =&gt; by
+    rw [mul_smul]
+    exact (ha (b • E)).trans (hb E)
+  inv_mem&#39; := fun {a} ha E =&gt; by
+    have h := ha (a⁻¹ • E)
+    rw [smul_inv_smul] at h
+    exact h.symm</code></pre>
         </li>
         
       </ul>

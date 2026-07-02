@@ -479,7 +479,18 @@
           
           
           
-          <pre class="lean-signature"><code>class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where</code></pre>
+          <pre class="lean-signature"><code>class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where
+  /-- The action natural transformation for `g ∈ G`. -/
+  act : ∀ g : G, F ⟶ smulFunctor G X g ⋙ F
+  /-- The identity element acts as the identity natural transformation. -/
+  act_one : ∀ E : X,
+    (act 1).app E ≫ eqToHom (show F.obj (1 • E) = F.obj E by rw [one_smul]) =
+      𝟙 (F.obj E)
+  /-- Multiplicativity of the action. -/
+  act_mul : ∀ (g h : G) (E : X),
+    (act (g * h)).app E ≫
+        eqToHom (show F.obj ((g * h) • E) = F.obj (g • h • E) by rw [mul_smul]) =
+      (act h).app E ≫ (act g).app (h • E)</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -495,7 +506,20 @@
           
           
           
-          <pre class="lean-signature"><code>class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where</code></pre>
+          <pre class="lean-signature"><code>class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where
+  /-- The action natural transformation for `g ∈ G`. -/
+  act : ∀ g : G, F ⟶ (smulFunctor G X g).op ⋙ F
+  /-- The identity element acts as the identity natural transformation. -/
+  act_one : ∀ E : X,
+    (act 1).app (op E) ≫
+        eqToHom (show F.obj (op (1 • E)) = F.obj (op E) by rw [one_smul]) =
+      𝟙 (F.obj (op E))
+  /-- Multiplicativity of the action. -/
+  act_mul : ∀ (g h : G) (E : X),
+    (act (g * h)).app (op E) ≫
+        eqToHom (show F.obj (op ((g * h) • E)) = F.obj (op (g • h • E))
+          by rw [mul_smul]) =
+      (act h).app (op E) ≫ (act g).app (op (h • E))</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -529,7 +553,9 @@
           
           
           
-          <pre class="lean-signature"><code>def smulFunctor (g : G) : X ⥤ X where</code></pre>
+          <pre class="lean-signature"><code>def smulFunctor (g : G) : X ⥤ X where
+  obj E := g • E
+  map h := homOfLE (GCellComplex.smul_le g (leOfHom h))</code></pre>
         </li>
         
         <li class="lean-ref">

@@ -483,7 +483,28 @@
           
           
           
-          <pre class="lean-signature"><code>def Subcomplex.ofIota : SheafOnBuilding.Subcomplex (InducedSpace d) where</code></pre>
+          <pre class="lean-signature"><code>def Subcomplex.ofIota : SheafOnBuilding.Subcomplex (InducedSpace d) where
+  carrier := Set.range (iota d)
+  face_closed&#39; := by
+    rintro q₁ q₂ h_le ⟨F, hF_eq⟩
+    -- q₂ = iota F; h_le : q₁ ≤ iota F.  Need q₁ ∈ range iota.
+    -- Pick rep (g, E) of q₁.  InductionLe (g, E) (1, F) gives n ∈ G&#39; with
+    -- n • E ≤ F and g⁻¹ * 1 * n ∈ P E.  Then (g, E) ~ (1, n • E):
+    -- witness m = n, m • E = n • E (rfl), g⁻¹ * 1 * n ∈ P E.
+    -- Hence q₁ = ⟦(g, E)⟧ = ⟦(1, n • E)⟧ = iota (n • E).
+    revert h_le
+    refine Quotient.inductionOn q₁ ?_
+    rintro ⟨g, E⟩ h_le
+    -- Rewrite q₂ in h_le using hF_eq:
+    rw [← hF_eq] at h_le
+    obtain ⟨n, hn_G, _hn_le, hn_P⟩ := h_le
+    refine ⟨n • E, ?_⟩
+    -- Goal: iota d (n • E) = ⟦(g, E)⟧.
+    -- iota d (n • E) = ⟦(1, n • E)⟧; relate via Quotient.sound.
+    -- We show ⟦(g, E)⟧ = ⟦(1, n • E)⟧ via (g, E) ~ (1, n • E) and take .symm.
+    have hrel : (InductionRel.setoid (G := G) d).r (g, E) ((1 : G), n • E) :=
+      ⟨n, hn_G, rfl, hn_P⟩
+    exact (Quotient.sound hrel).symm</code></pre>
         </li>
         
         <li class="lean-ref">

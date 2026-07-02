@@ -31,7 +31,7 @@
       "qualified_name": "SheafOnBuilding.IsLocallyFinite",
       "module": "SheafOnBuilding.GCellComplex",
       "kind": "class",
-      "signature": "class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where",
+      "signature": "class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where\n  /-- Each cell has only finitely many faces (closure of `E` meets\n  finitely many cells). -/\n  finite_faces : ∀ E : X, Set.Finite {F : X | F ≤ E}\n  /-- Each cell is in the closure of only finitely many cells. -/\n  finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "8e1009cc136bda74937c503ff8da5d2e37b36c14",

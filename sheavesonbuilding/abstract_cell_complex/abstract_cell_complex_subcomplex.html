@@ -477,7 +477,11 @@
           
           
           
-          <pre class="lean-signature"><code>structure Subcomplex (X : Type*) [PartialOrder X] where</code></pre>
+          <pre class="lean-signature"><code>structure Subcomplex (X : Type*) [PartialOrder X] where
+  /-- The underlying set of cells. -/
+  carrier : Set X
+  /-- Closed under taking faces. -/
+  face_closed&#39; : ∀ {E F : X}, E ≤ F → F ∈ carrier → E ∈ carrier</code></pre>
         </li>
         
         <li class="lean-ref">

@@ -477,7 +477,12 @@
           
           
           
-          <pre class="lean-signature"><code>class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where</code></pre>
+          <pre class="lean-signature"><code>class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where
+  /-- Each cell has only finitely many faces (closure of `E` meets
+  finitely many cells). -/
+  finite_faces : ∀ E : X, Set.Finite {F : X | F ≤ E}
+  /-- Each cell is in the closure of only finitely many cells. -/
+  finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}</code></pre>
         </li>
         
       </ul>

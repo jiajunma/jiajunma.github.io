@@ -516,7 +516,22 @@
           
           
           <pre class="lean-signature"><code>structure InductionData (G&#39; : Subgroup G) (S : Subcomplex X)
-    [IsQuasiFundDomain G&#39; S] where</code></pre>
+    [IsQuasiFundDomain G&#39; S] where
+  /-- The cosheaf-of-subgroups on `S`. -/
+  P : X → Subgroup G
+  /-- **(P0)** Cosheaf monotonicity restricted to `S`. -/
+  P0 : ∀ ⦃E F : X⦄, E ∈ S → F ∈ S → E ≤ F → P F ≤ P E
+  /-- **(P1)** `G&#39;`-conjugation equivariance. -/
+  P1 : ∀ (n : G), n ∈ G&#39; → ∀ (E : X), E ∈ S →
+    P (n • E) = (P E).map (MulEquiv.toMonoidHom (MulAut.conj n))
+  /-- **(P3)** `P E` is contained in the `G`-fixator of `E` — makes the
+  natural map `[(g, E)] ↦ g • E` well-defined. -/
+  P3 : ∀ ⦃E : X⦄, E ∈ S → P E ≤ MulAction.stabilizer G E
+  /-- **(P4)** Every `G`-fixator of `E` factorises as
+  `Fix_{G&#39;}(E) · P E` — makes the natural map injective (paper
+  Lemma 2.7 for the &#34;canonical&#34; choice `P E = Fix_G^pt(E)`). -/
+  P4 : ∀ ⦃E : X⦄, E ∈ S → ∀ (m : G), m • E = E →
+    ∃ u ∈ G&#39;, u • E = E ∧ ∃ p ∈ P E, m = u * p</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -601,7 +616,9 @@
           
           
           <p class="lean-docstring">The induction relation as a `Setoid` on `G × S.carrier`.</p>
-          <pre class="lean-signature"><code>def setoid : Setoid (G × ↥S.carrier) where</code></pre>
+          <pre class="lean-signature"><code>def setoid : Setoid (G × ↥S.carrier) where
+  r := d.rel
+  iseqv := ⟨d.rel_refl, d.rel_symm, d.rel_trans⟩</code></pre>
         </li>
         
         <li class="lean-ref">

@@ -478,7 +478,21 @@
           
           
           <pre class="lean-signature"><code>class Orientation (X : Type*) [PartialOrder X] [AbstractCellComplex X]
-    [IsLocallyFinite X] where</code></pre>
+    [IsLocallyFinite X] where
+  /-- Incidence number `[E : F] ∈ ℤ`. -/
+  incidence : X → X → ℤ
+  /-- Vanishes if `E` is not a face of `F`. -/
+  incidence_eq_zero_of_not_le :
+    ∀ {E F : X}, ¬ E ≤ F → incidence E F = 0
+  /-- Vanishes if the codimension is not 1. -/
+  incidence_eq_zero_of_dim_ne :
+    ∀ {E F : X}, AbstractCellComplex.dim F ≠ AbstractCellComplex.dim E + 1 →
+      incidence E F = 0
+  /-- The chain-complex condition `∂² = 0`. -/
+  boundary_sq :
+    ∀ {D F : X}, AbstractCellComplex.dim F = AbstractCellComplex.dim D + 2 →
+      (IsLocallyFinite.finite_faces F).toFinset.sum
+        (fun E =&gt; incidence D E * incidence E F) = 0</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -495,7 +509,11 @@
           
           
           <pre class="lean-signature"><code>class IsRegular (X : Type*) [PartialOrder X] [AbstractCellComplex X]
-    [IsLocallyFinite X] [Orientation X] : Prop where</code></pre>
+    [IsLocallyFinite X] [Orientation X] : Prop where
+  incidence_eq_pm_one :
+    ∀ {E F : X}, E ≤ F →
+      AbstractCellComplex.dim F = AbstractCellComplex.dim E + 1 →
+      Orientation.incidence E F = 1 ∨ Orientation.incidence E F = -1</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -514,7 +532,10 @@
           <pre class="lean-signature"><code>class IsGEquivariantOrientation (G : Type*) [Group G] (X : Type*)
     [PartialOrder X] [AbstractCellComplex X] [IsLocallyFinite X]
     [MulAction G X] [GCellComplex G X]
-    [Orientation X] : Prop where</code></pre>
+    [Orientation X] : Prop where
+  incidence_smul :
+    ∀ (g : G) (E F : X),
+      Orientation.incidence (g • E) (g • F) = Orientation.incidence E F</code></pre>
         </li>
         
       </ul>

@@ -464,7 +464,17 @@
           
           
           
-          <pre class="lean-signature"><code>class AbstractCellComplex (X : Type*) [PartialOrder X] where</code></pre>
+          <pre class="lean-signature"><code>class AbstractCellComplex (X : Type*) [PartialOrder X] where
+  /-- Dimension function. -/
+  dim : X → ℕ
+  /-- Strict monotonicity: a proper face has strictly smaller dimension. -/
+  dim_lt : ∀ {E F : X}, E ≤ F → E ≠ F → dim E &lt; dim F
+  /-- Every cell of positive dimension has a face of dimension one
+  less.  Without this axiom one could have a &#34;2-cell&#34; attached
+  directly to a vertex with no edges in between, which is not the
+  face poset of any regular CW complex. -/
+  exists_face_dim_pred :
+    ∀ {F : X}, 0 &lt; dim F → ∃ E : X, E &lt; F ∧ dim E + 1 = dim F</code></pre>
         </li>
         
       </ul>
