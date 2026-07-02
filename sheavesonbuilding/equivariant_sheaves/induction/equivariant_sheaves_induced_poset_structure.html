@@ -615,10 +615,10 @@ order.</p>
 <blockquote>
 <p><strong>Definition (face relation on $X$).</strong> For $x, y \in X$,
 $$
-&gt; x \;\preceq\; y \iff
-&gt; \exists\, g \in G,\; \exists\, F \preceq E \text{ in } X',\quad
-&gt; x = [(g, F)] \text{ and } y = [(g, E)].
-&gt; $$</p>
+x \;\preceq\; y \iff
+\exists\, g \in G,\; \exists\, F \preceq E \text{ in } X',\quad
+x = [(g, F)] \text{ and } y = [(g, E)].
+$$</p>
 </blockquote>
 <p>In prose: <strong>$x \preceq y$ means $x$ and $y$ admit representatives
 $(g, F)$ and $(g, E)$ with the <em>same</em> first coordinate $g$ such that
@@ -647,11 +647,11 @@ poset), and $x := y = [(g, E)] = [(g, F)]$ witnesses $y \preceq y$.</p>
 <p><strong>Theorem 1 (single-witness form).</strong> For $(g_1, E_1), (g_2, E_2)
 \in G \times X'$,
 $$
-&gt; [(g_1, E_1)] \;\preceq\; [(g_2, E_2)]
-&gt; \;\iff\;
-&gt; \exists\, n \in G',\quad n \cdot E_1 \preceq E_2 \text{ in } X'
-&gt; \;\wedge\; g_1^{-1} g_2 n \in P_{E_1}.
-&gt; $$</p>
+[(g_1, E_1)] \;\preceq\; [(g_2, E_2)]
+\;\iff\;
+\exists\, n \in G',\quad n \cdot E_1 \preceq E_2 \text{ in } X'
+\;\wedge\; g_1^{-1} g_2 n \in P_{E_1}.
+$$</p>
 </blockquote>
 <p>Compare with the equivalence relation $\sim$ of
 [[node:equivariant_sheaves.induction_GxP_X]]: replacing $\preceq$ on
@@ -748,10 +748,10 @@ arguments.</p>
 <p><strong>Proposition (descent).</strong> Under (P0) and (P1), for
 $(g_1, E_1) \sim (g_1', E_1')$ and $(g_2, E_2) \sim (g_2', E_2')$,
 $$
-&gt; (g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)
-&gt; \iff
-&gt; (g_1', E_1') \preceq_{\text{rep}} (g_2', E_2').
-&gt; $$</p>
+(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)
+\iff
+(g_1', E_1') \preceq_{\text{rep}} (g_2', E_2').
+$$</p>
 </blockquote>
 <p><strong>Proof (left descent).</strong>  Take $m \in G'$ with $m \cdot E_1 = E_1'$
 and $\alpha := g_1^{-1} g_1' m \in P_{E_1}$.  Assume $(g_1, E_1)
