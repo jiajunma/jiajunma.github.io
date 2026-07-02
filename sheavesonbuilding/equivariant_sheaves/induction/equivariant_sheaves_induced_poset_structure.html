@@ -533,7 +533,8 @@
           
           
           <pre class="lean-signature"><code>@[simp] theorem dim_mk (gE : G × X&#39;) :
-    dim d (Quotient.mk (InductionRel.setoid (G</code></pre>
+    dim d (Quotient.mk (InductionRel.setoid (G := G) d) gE) =
+      AbstractCellComplex.dim gE.2</code></pre>
         </li>
         
         <li class="lean-ref">

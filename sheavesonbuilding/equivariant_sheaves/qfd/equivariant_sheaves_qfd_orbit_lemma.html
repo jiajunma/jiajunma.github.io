@@ -482,7 +482,11 @@
           
           
           <pre class="lean-signature"><code>theorem orbit_eq_iff (G&#39; : Subgroup G) (S : Subcomplex X)
-    [IsQuasiFundDomain (G</code></pre>
+    [IsQuasiFundDomain (G := G) G&#39; S]
+    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
+    g • E = h • F ↔
+      ∃ n ∈ G&#39;,
+        n • E = F ∧ (g⁻¹ * h * n) ∈ MulAction.stabilizer G E</code></pre>
         </li>
         
         <li class="lean-ref">

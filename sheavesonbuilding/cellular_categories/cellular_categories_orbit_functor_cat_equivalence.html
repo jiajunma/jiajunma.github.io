@@ -483,7 +483,8 @@
           
           <pre class="lean-signature"><code>noncomputable def funCatEquivOfQFD (G&#39; : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G&#39; S] :
-    ((OnSubcomplex (G</code></pre>
+    ((OnSubcomplex (G := G) (X := X) S)ᵒᵖ ⥤ C) ≌
+    ((OrbitCat G X)ᵒᵖ ⥤ C)</code></pre>
         </li>
         
       </ul>

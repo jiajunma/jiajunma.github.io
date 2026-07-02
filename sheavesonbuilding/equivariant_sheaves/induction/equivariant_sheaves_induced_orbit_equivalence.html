@@ -495,7 +495,9 @@
           
           <pre class="lean-signature"><code>structure PXPrimeOrbitCat {X&#39; : Type*} [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
     [MulAction G X&#39;] [GCellComplex G X&#39;]
-    (_d : InductionDatum (G</code></pre>
+    (_d : InductionDatum (G := G) X&#39;) : Type _ where
+  /-- The underlying cell of `X&#39;`. -/
+  cell : X&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -604,26 +606,7 @@
           
           
           <pre class="lean-signature"><code>theorem PXPrimeOrbitCat.toInducedOrbitCat_essSurj :
-    (PXPrimeOrbitCat.toInducedOrbitCat d).EssSurj where
-  mem_essImage q := by
-    obtain ⟨g, E, hq⟩ := InducedSpace.exists_eq_smul_iota d q
-    refine ⟨⟨E⟩, ⟨?_⟩⟩
-    -- q ≅ iota d E in OrbitCat via (g, g⁻¹).
-    refine
-      { hom := ⟨g, ?_⟩
-        inv := ⟨g⁻¹, ?_⟩
-        hom_inv_id := ?_
-        inv_hom_id := ?_ }
-    · show g • InducedSpace.iota d E ≤ q
-      rw [hq]
-    · show g⁻¹ • q ≤ InducedSpace.iota d E
-      rw [hq, ← mul_smul, inv_mul_cancel, one_smul]
-    · apply Subtype.ext
-      show g⁻¹ * g = 1
-      exact inv_mul_cancel g
-    · apply Subtype.ext
-      show g * g⁻¹ = 1
-      exact mul_inv_cancel g</code></pre>
+    (PXPrimeOrbitCat.toInducedOrbitCat d).EssSurj where</code></pre>
         </li>
         
         <li class="lean-ref">

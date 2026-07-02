@@ -25,7 +25,7 @@
       "qualified_name": "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
       "module": "SheafOnBuilding.OrbitFunEquiv",
       "kind": "def",
-      "signature": "noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S] :\n    ((OnSubcomplex (G",
+      "signature": "noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)\n    [IsQuasiFundDomain G' S] :\n    ((OnSubcomplex (G := G) (X := X) S)ᵒᵖ ⥤ C) ≌\n    ((OrbitCat G X)ᵒᵖ ⥤ C)",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",

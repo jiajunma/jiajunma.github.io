@@ -95,7 +95,7 @@
       "qualified_name": "SheafOnBuilding.InducedSpace.dim_mk",
       "module": "SheafOnBuilding.Induction",
       "kind": "theorem",
-      "signature": "@[simp] theorem dim_mk (gE : G × X') :\n    dim d (Quotient.mk (InductionRel.setoid (G",
+      "signature": "@[simp] theorem dim_mk (gE : G × X') :\n    dim d (Quotient.mk (InductionRel.setoid (G := G) d) gE) =\n      AbstractCellComplex.dim gE.2",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",

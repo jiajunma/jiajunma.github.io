@@ -117,7 +117,7 @@
       "qualified_name": "SheafOnBuilding.GEquivariantCosheaf.act_one_inv",
       "module": "SheafOnBuilding.GEquivariant",
       "kind": "theorem",
-      "signature": "theorem act_one_inv (E : X) :\n    (act (G",
+      "signature": "theorem act_one_inv (E : X) :\n    (act (G := G) (1 : G) E).inv =\n      eqToHom (show F.obj (op ((1 : G) • E)) = F.obj (op E) by rw [one_smul])",
       "docstring": "`(act 1 E).inv = eqToHom (W_{1•E} = W_E)`.",
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",

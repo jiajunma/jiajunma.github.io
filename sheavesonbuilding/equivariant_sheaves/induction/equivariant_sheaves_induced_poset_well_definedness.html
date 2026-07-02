@@ -521,7 +521,8 @@
           
           
           <pre class="lean-signature"><code>theorem InductionLe_left_descends {a₁ a₂ b : G × X&#39;}
-    (h_rel : (InductionRel.setoid (G</code></pre>
+    (h_rel : (InductionRel.setoid (G := G) d).r a₁ a₂)
+    (h_le : InductionLe d a₁ b) : InductionLe d a₂ b</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -538,7 +539,8 @@
           
           
           <pre class="lean-signature"><code>theorem InductionLe_right_descends {a b₁ b₂ : G × X&#39;}
-    (h_rel : (InductionRel.setoid (G</code></pre>
+    (h_rel : (InductionRel.setoid (G := G) d).r b₁ b₂)
+    (h_le : InductionLe d a b₁) : InductionLe d a b₂</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -555,7 +557,7 @@
           
           
           <pre class="lean-signature"><code>theorem InductionLe_antisymm : ∀ {a b : G × X&#39;},
-    InductionLe d a b → InductionLe d b a → (InductionRel.setoid (G</code></pre>
+    InductionLe d a b → InductionLe d b a → (InductionRel.setoid (G := G) d).r a b</code></pre>
         </li>
         
       </ul>

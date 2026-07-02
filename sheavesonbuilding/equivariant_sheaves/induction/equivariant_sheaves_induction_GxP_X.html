@@ -584,7 +584,9 @@
           
           
           
-          <pre class="lean-signature"><code>def setoid (d : InductionDatum (G</code></pre>
+          <pre class="lean-signature"><code>def setoid (d : InductionDatum (G := G) X&#39;) : Setoid (G × X&#39;) where
+  r := InductionRel X&#39; d.G&#39; d.P
+  iseqv := ⟨refl d.G&#39; d.P, symm d, trans d⟩</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -602,7 +604,7 @@
           
           <pre class="lean-signature"><code>def InducedSpace {X&#39; : Type*} [PartialOrder X&#39;] [AbstractCellComplex X&#39;]
     [MulAction G X&#39;] [GCellComplex G X&#39;]
-    (d : InductionDatum (G</code></pre>
+    (d : InductionDatum (G := G) X&#39;) : Type _</code></pre>
         </li>
         
         <li class="lean-ref">

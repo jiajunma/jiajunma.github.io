@@ -556,7 +556,8 @@
           
           <p class="lean-docstring">`(act 1 E).inv = eqToHom (W_{1•E} = W_E)`.</p>
           <pre class="lean-signature"><code>theorem act_one_inv (E : X) :
-    (act (G</code></pre>
+    (act (G := G) (1 : G) E).inv =
+      eqToHom (show F.obj (op ((1 : G) • E)) = F.obj (op E) by rw [one_smul])</code></pre>
         </li>
         
         <li class="lean-ref">

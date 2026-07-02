@@ -542,7 +542,20 @@
           
           
           <pre class="lean-signature"><code>instance isQuasiFundDomain_subcomplexOfIota :
-    SheafOnBuilding.IsQuasiFundDomain (G</code></pre>
+    SheafOnBuilding.IsQuasiFundDomain (G := G) d.G&#39; (Subcomplex.ofIota d) where
+  G&#39;_le_stab := G&#39;_le_subcomplexOfIota_stabilizer d
+  surj q := by
+    obtain ⟨g, E, hq_eq⟩ := exists_eq_smul_iota d q
+    exact ⟨g, iota d E, ⟨E, rfl⟩, hq_eq.symm⟩
+  orbit_iff := by
+    rintro q₁ q₂ ⟨E, rfl⟩ ⟨F, rfl⟩ g h h_eq
+    rw [smul_iota_eq_smul_iota_iff] at h_eq
+    obtain ⟨n, hn_G, hn_smul, hn_P⟩ := h_eq
+    refine ⟨n, hn_G, ?_, ?_⟩
+    · -- n • iota E = iota F
+      rw [iota_smul_of_mem_G&#39; d hn_G, hn_smul]
+    · -- (g⁻¹ * h * n) • iota E = iota E
+      exact P_le_stabilizer_iota d E hn_P</code></pre>
         </li>
         
       </ul>

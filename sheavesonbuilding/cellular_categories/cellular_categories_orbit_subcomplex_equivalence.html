@@ -500,7 +500,7 @@
           
           <p class="lean-docstring">The inclusion functor `[X&#39;]_{ι} → ]X/G[`.</p>
           <pre class="lean-signature"><code>abbrev ιOnSubcomplex (S : Subcomplex X) :
-    OnSubcomplex (G</code></pre>
+    OnSubcomplex (G := G) (X := X) S ⥤ OrbitCat G X</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -518,7 +518,7 @@
           
           <pre class="lean-signature"><code>theorem ιOnSubcomplex_essSurj (G&#39; : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G&#39; S] :
-    (ιOnSubcomplex (G</code></pre>
+    (ιOnSubcomplex (G := G) (X := X) S).EssSurj where</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -536,7 +536,7 @@
           
           <pre class="lean-signature"><code>theorem ιOnSubcomplex_isEquivalence (G&#39; : Subgroup G) (S : Subcomplex X)
     [IsQuasiFundDomain G&#39; S] :
-    (ιOnSubcomplex (G</code></pre>
+    (ιOnSubcomplex (G := G) (X := X) S).IsEquivalence</code></pre>
         </li>
         
       </ul>

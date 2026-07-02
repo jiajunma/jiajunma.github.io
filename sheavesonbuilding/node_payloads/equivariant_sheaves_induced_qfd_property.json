@@ -87,7 +87,7 @@
       "qualified_name": "SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota",
       "module": "SheafOnBuilding.Induction",
       "kind": "instance",
-      "signature": "instance isQuasiFundDomain_subcomplexOfIota :\n    SheafOnBuilding.IsQuasiFundDomain (G",
+      "signature": "instance isQuasiFundDomain_subcomplexOfIota :\n    SheafOnBuilding.IsQuasiFundDomain (G := G) d.G' (Subcomplex.ofIota d) where\n  G'_le_stab := G'_le_subcomplexOfIota_stabilizer d\n  surj q := by\n    obtain ⟨g, E, hq_eq⟩ := exists_eq_smul_iota d q\n    exact ⟨g, iota d E, ⟨E, rfl⟩, hq_eq.symm⟩\n  orbit_iff := by\n    rintro q₁ q₂ ⟨E, rfl⟩ ⟨F, rfl⟩ g h h_eq\n    rw [smul_iota_eq_smul_iota_iff] at h_eq\n    obtain ⟨n, hn_G, hn_smul, hn_P⟩ := h_eq\n    refine ⟨n, hn_G, ?_, ?_⟩\n    · -- n • iota E = iota F\n      rw [iota_smul_of_mem_G' d hn_G, hn_smul]\n    · -- (g⁻¹ * h * n) • iota E = iota E\n      exact P_le_stabilizer_iota d E hn_P",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "e884b94fa036e7384803cce4c2f37c8381342871",
