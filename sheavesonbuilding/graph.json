@@ -2519,7 +2519,16 @@
       "topics": [
         "equivariant_sheaves.induction"
       ],
-      "lean_declarations": [],
+      "lean_declarations": [
+        "SheafOnBuilding.InducedSpace.InductionMap",
+        "SheafOnBuilding.InducedSpace.InductionMap.ext",
+        "SheafOnBuilding.InducedSpace.InductionMap.descend",
+        "SheafOnBuilding.InducedSpace.InductionMap.descend_mk",
+        "SheafOnBuilding.InducedSpace.InductionMap.descend_iota",
+        "SheafOnBuilding.InducedSpace.InductionMap.restrict",
+        "SheafOnBuilding.InducedSpace.InductionMap.restrict_toFun",
+        "SheafOnBuilding.InducedSpace.InductionMap.universalProperty"
+      ],
       "topic": "equivariant_sheaves.induction",
       "uses": [
         "building.generalized_building_bs",

@@ -474,10 +474,193 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L801"><code>SheafOnBuilding.InducedSpace.InductionMap</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>structure InductionMap (Y : Type*) [MulAction G Y] where
+  /-- The underlying function. -/
+  toFun : X&#39; → Y
+  /-- `G&#39;`-equivariance: `f (n • E) = n • f E` for `n ∈ G&#39;`. -/
+  equivariant : ∀ {n : G}, n ∈ d.G&#39; → ∀ (E : X&#39;),
+    toFun (n • E) = n • toFun E
+  /-- Each `p ∈ P E` fixes `f E`. -/
+  fix_P : ∀ (E : X&#39;) (p : G), p ∈ d.P E → p • toFun E = toFun E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L817"><code>SheafOnBuilding.InducedSpace.InductionMap.ext</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem ext {f g : InductionMap d Y} (h : f.toFun = g.toFun) : f = g</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L827"><code>SheafOnBuilding.InducedSpace.InductionMap.descend</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def descend (f : InductionMap d Y) : InducedSpace d →[G] Y where
+  toFun := Quotient.lift (fun gE : G × X&#39; =&gt; gE.1 • f.toFun gE.2) &lt;| by
+    rintro ⟨g₁, E₁⟩ ⟨g₂, E₂⟩ ⟨n, hn_G, hn_smul, hn_P⟩
+    show g₁ • f.toFun E₁ = g₂ • f.toFun E₂
+    -- Rewrite f E₂ = f (n • E₁) = n • f E₁.
+    rw [← hn_smul, f.equivariant hn_G E₁, smul_smul]
+    -- Now: g₁ • f E₁ = (g₂ * n) • f E₁.
+    -- Use f.fix_P at residue r := g₁⁻¹ * g₂ * n ∈ P E₁.
+    have h_fix := f.fix_P E₁ (g₁⁻¹ * g₂ * n) hn_P
+    -- h_fix : (g₁⁻¹ * g₂ * n) • f E₁ = f E₁.
+    -- Multiply by g₁ on the left, then simplify.
+    have h_mul : g₁ • ((g₁⁻¹ * g₂ * n) • f.toFun E₁) = g₁ • f.toFun E₁ := by
+      rw [h_fix]
+    rw [smul_smul, show g₁ * (g₁⁻¹ * g₂ * n) = g₂ * n from by group] at h_mul
+    exact h_mul.symm
+  map_smul&#39; g q := by
+    refine Quotient.inductionOn q ?_
+    rintro ⟨h, E⟩
+    -- Both sides descend to (g * h) • f E.
+    show (g * h) • f.toFun E = g • h • f.toFun E
+    rw [mul_smul]</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L849"><code>SheafOnBuilding.InducedSpace.InductionMap.descend_mk</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>@[simp] theorem descend_mk (f : InductionMap d Y) (g : G) (E : X&#39;) :
+    (descend d f).toFun (Quotient.mk _ (g, E)) = g • f.toFun E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L852"><code>SheafOnBuilding.InducedSpace.InductionMap.descend_iota</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>@[simp] theorem descend_iota (f : InductionMap d Y) (E : X&#39;) :
+    (descend d f).toFun (iota d E) = f.toFun E</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L864"><code>SheafOnBuilding.InducedSpace.InductionMap.restrict</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def restrict (Φ : InducedSpace d →[G] Y) : InductionMap d Y where
+  toFun E := Φ (iota d E)
+  equivariant := by
+    intro n hn E
+    show Φ (iota d (n • E)) = n • Φ (iota d E)
+    rw [← iota_smul_of_mem_G&#39; d hn E, MulActionHom.map_smul]
+  fix_P := by
+    intro E p hp
+    show p • Φ (iota d E) = Φ (iota d E)
+    have h_stab : p • iota d E = iota d E := P_le_stabilizer_iota d E hp
+    rw [← MulActionHom.map_smul, h_stab]</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L876"><code>SheafOnBuilding.InducedSpace.InductionMap.restrict_toFun</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>@[simp] theorem restrict_toFun (Φ : InducedSpace d →[G] Y) (E : X&#39;) :
+    (restrict d Φ).toFun E = Φ (iota d E)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L882"><code>SheafOnBuilding.InducedSpace.InductionMap.universalProperty</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ ea19c3b, SheafOnBuilding.Induction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def universalProperty (Y : Type*) [MulAction G Y] :
+    InductionMap d Y ≃ (InducedSpace d →[G] Y) where
+  toFun := descend d
+  invFun := restrict d
+  left_inv f := by
+    ext E
+    exact descend_iota d f E
+  right_inv Φ := by
+    ext q
+    refine Quotient.inductionOn q ?_
+    rintro ⟨g, E⟩
+    -- LHS: (descend (restrict Φ)) ⟦(g, E)⟧ = g • Φ (iota E)
+    -- RHS: Φ ⟦(g, E)⟧
+    -- Use MulActionHom.map_smul on Φ, then smul_iota.
+    show g • Φ (iota d E) = Φ (Quotient.mk _ (g, E))
+    rw [← smul_iota, MulActionHom.map_smul]</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd5b7bb58fac0b7e7ba20094abdc0acfc8d59cab/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/ea19c3baf14113e8acc408c27efcbe9ff79900c0/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -610,11 +793,11 @@ $\Phi([g, [g', E]]) = [g g', E]$.  $\square$</p>
 cosheaf $K$ from an apartment $A$ to the full Bruhat–Tits building of
 $G'$; see <a class="node-ref" data-node-id="building.generalized_building_bs" href="../../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a>.</p>
 <h2>Lean formalization</h2>
-<p>The universal property is not yet formalised in
-<code>SheafOnBuilding.Induction</code>.  The formalisation below is a design
-sketch — one that stays entirely within the abstract poset framework
-and requires no additional cell-complex structure on the target
-$G$-set $Y$.</p>
+<p>The universal property is fully formalised in
+<code>SheafOnBuilding.Induction</code> (namespace
+<code>SheafOnBuilding.InducedSpace.InductionMap</code>).  The formalisation stays
+entirely within the abstract poset framework: <strong>the target $G$-set
+$Y$ needs no cell-complex structure</strong>, only <code>[MulAction G Y]</code>.</p>
 <h3>Target types</h3>
 <p>The category of $(G', P)$-compatible maps is captured by a <code>structure</code>
 paralleling <code>InductionDatum</code>:</p>
@@ -630,39 +813,46 @@ paralleling <code>InductionDatum</code>:</p>
 <p>The category of $G$-equivariant maps $X \to Y$ is Mathlib's
 <code>MulActionHom G X Y</code>, notated <code>X →[G] Y</code>.</p>
 <h3>Forward direction: descend</h3>
-<pre><code class="language-lean">def InductionMap.descend (f : InductionMap d Y) :
-    InducedSpace d →[G] Y where
+<pre><code class="language-lean">def descend (f : InductionMap d Y) : InducedSpace d →[G] Y where
   toFun := Quotient.lift (fun gE : G × X' =&gt; gE.1 • f.toFun gE.2) &lt;| by
     rintro ⟨g₁, E₁⟩ ⟨g₂, E₂⟩ ⟨n, hn_G, hn_smul, hn_P⟩
-    -- Goal: g₁ • f E₁ = g₂ • f E₂
-    -- Use f.equivariant hn_G to rewrite f E₂ = f (n • E₁) = n • f E₁
-    -- Then use f.fix_P E₁ (g₁⁻¹ g₂ n) hn_P to absorb the residual.
-    sorry
+    show g₁ • f.toFun E₁ = g₂ • f.toFun E₂
+    -- Rewrite f E₂ = f (n • E₁) = n • f E₁.
+    rw [← hn_smul, f.equivariant hn_G E₁, smul_smul]
+    -- Absorb the residue g₁⁻¹ g₂ n ∈ P E₁ via f.fix_P.
+    have h_fix := f.fix_P E₁ (g₁⁻¹ * g₂ * n) hn_P
+    have h_mul : g₁ • ((g₁⁻¹ * g₂ * n) • f.toFun E₁) = g₁ • f.toFun E₁ := by
+      rw [h_fix]
+    rw [smul_smul, show g₁ * (g₁⁻¹ * g₂ * n) = g₂ * n from by group] at h_mul
+    exact h_mul.symm
   map_smul' g q := by
     refine Quotient.inductionOn q ?_
     rintro ⟨h, E⟩
-    show (g * h) • f.toFun E = g • (h • f.toFun E)
+    show (g * h) • f.toFun E = g • h • f.toFun E
     rw [mul_smul]
 </code></pre>
-<p>The well-definedness computation is the paper's proof translated to
-Lean: from $g_1^{-1} g_2 n \in P_{E_1}$ (in <code>d.P E₁</code>) and <code>f.fix_P</code>,
-$(g_1^{-1} g_2 n) \cdot f(E_1) = f(E_1)$; multiplying by $g_1$ on the
-left,
-$g_2 \cdot n \cdot f(E_1) = g_1 \cdot f(E_1)$; then apply
-<code>f.equivariant hn_G</code> to replace $n \cdot f(E_1)$ by
-$f(n \cdot E_1) = f(E_2)$.</p>
+<p>Two <code>@[simp]</code> lemmas expose the formula on representatives and on the
+<code>iota</code> embedding:</p>
+<pre><code class="language-lean">@[simp] theorem descend_mk (f : InductionMap d Y) (g : G) (E : X') :
+    (descend d f).toFun (Quotient.mk _ (g, E)) = g • f.toFun E := rfl
+
+@[simp] theorem descend_iota (f : InductionMap d Y) (E : X') :
+    (descend d f).toFun (iota d E) = f.toFun E := by
+  show (1 : G) • f.toFun E = f.toFun E
+  rw [one_smul]
+</code></pre>
 <h3>Backward direction: restrict</h3>
 <pre><code class="language-lean">def restrict (Φ : InducedSpace d →[G] Y) : InductionMap d Y where
   toFun E := Φ (iota d E)
   equivariant := by
     intro n hn E
-    -- f (n • E) = Φ (ι (n • E)) = Φ (n • ι E) = n • Φ (ι E) = n • f E
-    rw [← iota_smul_of_mem_G' d hn E, Φ.map_smul]
+    show Φ (iota d (n • E)) = n • Φ (iota d E)
+    rw [← iota_smul_of_mem_G' d hn E, MulActionHom.map_smul]
   fix_P := by
     intro E p hp
-    -- p • Φ (ι E) = Φ (p • ι E) = Φ (ι E)
-    rw [← Φ.map_smul p (iota d E),
-        MulAction.stabilizer_iff.mp (P_le_stabilizer_iota d E hp)]
+    show p • Φ (iota d E) = Φ (iota d E)
+    have h_stab : p • iota d E = iota d E := P_le_stabilizer_iota d E hp
+    rw [← MulActionHom.map_smul, h_stab]
 </code></pre>
 <p>The <code>G'</code>-equivariance uses <code>iota_smul_of_mem_G'</code>
 (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (3),
@@ -670,24 +860,27 @@ Lean lemma <code>iota_smul_of_mem_G'</code>).  The fix condition uses
 <code>P_le_stabilizer_iota</code>
 (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="../equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a> Lemma A(2)).</p>
 <h3>Assembly: the equivalence</h3>
-<pre><code class="language-lean">def universalProperty : InductionMap d Y ≃ (InducedSpace d →[G] Y) where
-  toFun := InductionMap.descend
-  invFun := restrict
-  left_inv := by intro f; ext E; simp [descend, restrict, iota]
-  right_inv := by
-    intro Φ
+<pre><code class="language-lean">def universalProperty (Y : Type*) [MulAction G Y] :
+    InductionMap d Y ≃ (InducedSpace d →[G] Y) where
+  toFun := descend d
+  invFun := restrict d
+  left_inv f := by
+    ext E
+    exact descend_iota d f E
+  right_inv Φ := by
     ext q
     refine Quotient.inductionOn q ?_
     rintro ⟨g, E⟩
-    -- (descend (restrict Φ)) ⟦(g, E)⟧ = g • Φ (ι E) = Φ (g • ι E) = Φ ⟦(g, E)⟧
-    show g • Φ (iota d E) = Φ ⟦(g, E)⟧
-    rw [← Φ.map_smul]
-    rfl
+    -- LHS: (descend (restrict Φ)) ⟦(g, E)⟧ = g • Φ (iota E)
+    -- RHS: Φ ⟦(g, E)⟧
+    show g • Φ (iota d E) = Φ (Quotient.mk _ (g, E))
+    rw [← smul_iota, MulActionHom.map_smul]
 </code></pre>
-<p>The <code>left_inv</code> check is: <code>(descend f) (ι E) = 1 • f E = f E</code>.
-The <code>right_inv</code> check unfolds representative-wise and uses $g \cdot
-\iota E = [(g, E)]$ (which is by definition of the $G$-action on
-<code>InducedSpace</code>).</p>
+<p>The <code>left_inv</code> reduces to <code>descend_iota</code> (the <code>iota</code> case is the
+<code>g = 1</code> case of <code>descend_mk</code>).  The <code>right_inv</code> uses <code>smul_iota</code>
+(<code>g • iota E = ⟦(g, E)⟧</code>, from
+[[node:equivariant_sheaves.induction_GxP_X]]) together with
+$G$-equivariance of $\Phi$.</p>
 <h3>Axiom cost</h3>
 <table>
 <thead>
@@ -722,14 +915,41 @@ The <code>right_inv</code> check unfolds representative-wise and uses $g \cdot
 <p>(P0) and (P2) are <strong>not needed</strong> for the universal property.  This
 matches the paper: the universal property is a structural fact about
 the quotient by $\sim$, not about the face relation.</p>
-<h3>Induction by stages (further follow-up)</h3>
-<p>The induction-by-stages identity requires setting up the double
-induction $G \times^{\widetilde P}(G' \times^{P'} X'')$ in Lean, which
-is a fresh <code>InductionDatum</code> for the outer step.  The cleanest route
-is to prove it via the universal property (two applications of
-<code>universalProperty</code>), avoiding an explicit combinatorial calculation
-on classes.  Implementing this requires the universal property above
-to be in place first.</p>
+<h3>Induction by stages (Lean status)</h3>
+<p>The proof strategy via universal property is:</p>
+<p>$$
+\mathrm{Map}_G\bigl(\underbrace{G \times^{\widetilde P}(G' \times^{P'} X'')}_{\text{outer}}, Y\bigr)
+\;\underset{\text{UP outer}}{\cong}\;
+\mathrm{Map}_{G', \widetilde P}\bigl(G' \times^{P'} X'', Y\bigr)
+\;\underset{\text{UP inner}}{\cong}\;
+\mathrm{Map}_{G'', P}(X'', Y)
+\;\underset{\text{UP direct}}{\cong}\;
+\mathrm{Map}_G\bigl(\underbrace{G \times^P X''}_{\text{direct}}, Y\bigr).
+$$</p>
+<p>All four sides represent the same functor
+$Y \mapsto \mathrm{Map}_{G'', P}(X'', Y)$, so the two representing
+$G$-sets (outer and direct) are canonically isomorphic.</p>
+<p><strong>Lean status.</strong> Making this a formal Lean theorem requires setting up
+three <code>InductionDatum</code>s that use two different ambient groups
+($G' \le G$ inner-vs.-middle, then $G$ overall):</p>
+<ul>
+<li><code>d_inner : InductionDatum X''</code> with <code>d_inner.G' = G''</code> (subgroup of $G$)</li>
+<li><code>d_outer : InductionDatum (InducedSpace d_inner)</code> with
+  <code>d_outer.G' = G'</code> and a cosheaf $\widetilde P_{[g', E]} := g' P_E (g')^{-1}$
+  on <code>InducedSpace d_inner</code>, whose (P0)–(P2) axioms follow from those
+  of <code>d_inner</code> by direct calculation on representatives.</li>
+<li><code>d_direct : InductionDatum X''</code> with <code>d_direct.G' = G'</code> and cosheaf $P$.</li>
+</ul>
+<p>Each side then instantiates <code>universalProperty</code> at the same target
+$G$-set $Y$, and the resulting bijections compose to a natural
+isomorphism $\mathrm{InducedSpace}\, d_\text{outer} \cong
+\mathrm{InducedSpace}\, d_\text{direct}$ of $G$-sets.</p>
+<p>Constructing <code>d_outer</code> requires proving the three-axiom verifications
+outlined in the paper's stages argument — routine but non-trivial
+Lean bookkeeping.  With <code>universalProperty</code> in place, the iso itself
+is a two-line invocation once <code>d_outer</code> is defined; the combinatorial
+$[g, [g', E]] \mapsto [gg', E]$ calculation is <em>not</em> needed.</p>
+<p>This is the natural next Lean-side step for the induction module.</p>
       </div>
     </details>
     
