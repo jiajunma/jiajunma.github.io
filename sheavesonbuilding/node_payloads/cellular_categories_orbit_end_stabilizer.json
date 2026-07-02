@@ -32,80 +32,68 @@
     {
       "name": "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
       "display_name": "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "qualified_name": "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
+      "module": "SheafOnBuilding.OrbitCat",
+      "kind": "def",
+      "signature": "def endMorEquivStabilizer (E : OrbitCat G X) :\n    Mor E E ≃ MulAction.stabilizer G (E : X) where\n  toFun α := ⟨α.val, by\n    show α.val • (E : X) = E\n    by_contra h_ne\n    have h_lt : AbstractCellComplex.dim (α.val • (E : X)) <\n        AbstractCellComplex.dim (E : X) :=\n      AbstractCellComplex.dim_lt α.property h_ne\n    have h_eq : AbstractCellComplex.dim (α.val • (E : X)) =\n        AbstractCellComplex.dim (E : X) :=\n      GCellComplex.smul_dim α.val E\n    omega⟩\n  invFun k := ⟨k.val, by\n    show k.val • (E : X) ≤ (E : X)\n    rw [(k.property : k.val • (E : X) = E)]⟩\n  left_inv _ := rfl\n  right_inv _ := rfl",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "750261e51890c04dddac760112442ddc1db0557c",
+      "short_revision": "750261e",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L87",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
-        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
-        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
       "display_name": "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "qualified_name": "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
+      "module": "SheafOnBuilding.OrbitCat",
+      "kind": "def",
+      "signature": "def endMulEquivStabilizer (E : OrbitCat G X) :\n    End E ≃* MulAction.stabilizer G (E : X) where\n  toEquiv := endMorEquivStabilizer E\n  map_mul' _ _ := rfl",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "750261e51890c04dddac760112442ddc1db0557c",
+      "short_revision": "750261e",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L114",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
-        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota",
-        "SheafOnBuilding.InducedSpace.fix_G'_le_stabilizer_iota"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "SheafOnBuilding.OrbitCat.endToStabilizer",
       "display_name": "SheafOnBuilding.OrbitCat.endToStabilizer",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "qualified_name": "SheafOnBuilding.OrbitCat.endToStabilizer",
+      "module": "SheafOnBuilding.OrbitCat",
+      "kind": "def",
+      "signature": "def endToStabilizer (E : OrbitCat G X) :\n    End E →* MulAction.stabilizer G (E : X)",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "750261e51890c04dddac760112442ddc1db0557c",
+      "short_revision": "750261e",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L123",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "SheafOnBuilding.InducedSpace.G'_le_subcomplexOfIota_stabilizer",
-        "SheafOnBuilding.InducedSpace.InductionMap.restrict_toFun",
-        "SheafOnBuilding.InducedSpace.P_le_stabilizer_iota"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [
     {
       "name": "SheafOnBuilding.OrbitCat",
       "display_name": "SheafOnBuilding.OrbitCat",
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
-      "status": "unresolved",
-      "reason": "module not found in repository 'sheafonbuilding'"
+      "repository_title": "SheafOnBuilding (this repo)",
+      "revision": "750261e51890c04dddac760112442ddc1db0557c",
+      "short_revision": "750261e",
+      "source_url": "https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L1",
+      "status": "resolved",
+      "reason": null
     }
   ]
 }

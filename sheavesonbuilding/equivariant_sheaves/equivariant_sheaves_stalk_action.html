@@ -473,99 +473,100 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.stalkHom</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/StalkAction.lean#L37"><code>SheafOnBuilding.GCosheaf.stalkHom</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.StalkAction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def stalkHom (W : GCosheaf G X C) (E : X) (k : G) (hk : k • E = E) :
+    W.base.obj (op E) ⟶ W.base.obj (op E)</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.stalkHom_one</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/StalkAction.lean#L43"><code>SheafOnBuilding.GCosheaf.stalkHom_one</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.StalkAction
+          </span>
           
           
+          <p class="lean-docstring">**Identity of the stalk action**: the identity of `G` acts as `𝟙 W_E`.</p>
+          <pre class="lean-signature"><code>theorem stalkHom_one (W : GCosheaf G X C) (E : X) :
+    stalkHom W E 1 (one_smul _ _) = 𝟙 (W.base.obj (op E))</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.stalkHom_mul</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/StalkAction.lean#L54"><code>SheafOnBuilding.GCosheaf.stalkHom_mul</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.StalkAction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem stalkHom_mul (W : GCosheaf G X C) (E : X) (k l : G)
+    (hk : k • E = E) (hl : l • E = E) :
+    stalkHom W E (k * l) (by rw [mul_smul, hl, hk]) =
+      stalkHom W E l hl ≫ stalkHom W E k hk</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.stalkAction</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/StalkAction.lean#L90"><code>SheafOnBuilding.GCosheaf.stalkAction</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.StalkAction
+          </span>
           
           
+          <p class="lean-docstring">**The stalk action as a monoid homomorphism**.</p>
+          <pre class="lean-signature"><code>def stalkAction (W : GCosheaf G X C) (E : X) :
+    MulAction.stabilizer G E →* End (W.base.obj (op E)) where
+  toFun k := stalkHom W E k.val k.property
+  map_one&#39; := stalkHom_one W E
+  map_mul&#39; k l := stalkHom_mul W E k.val l.val k.property l.property</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.kStalkAction</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/StalkAction.lean#L98"><code>SheafOnBuilding.GCosheaf.kStalkAction</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.StalkAction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def kStalkAction {G&#39; : Subgroup G} {S : Subcomplex X}
+    (κ : KData G&#39; S) (W : GCosheaf G X C) (E : X) :
+    κ.K E →* End (W.base.obj (op E))</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <code>SheafOnBuilding.StalkAction</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/StalkAction.lean#L1"><code>SheafOnBuilding.StalkAction</code></a>
       </p>
       
     </div>

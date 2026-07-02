@@ -475,86 +475,101 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3f1df788aa60386c8232c83ffaf5f971a92a1230/SheafOnBuilding/GEquivariant.lean#L78"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 3f1df78, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GEquivariant
           </span>
           
           
           
           <pre class="lean-signature"><code>class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where
-  /-- The action natural transformation for `g ∈ G`. -/
-  act : ∀ g : G, F ⟶ smulFunctor G X g ⋙ F
-  /-- The identity element acts as the identity natural transformation. -/
+  /-- Stalk-level action of `g` at `E` as an iso. -/
+  act : ∀ (g : G) (E : X), F.obj E ≅ F.obj (g • E)
+  /-- Naturality against sheaf restrictions. -/
+  act_map : ∀ (g : G) {E F&#39; : X} (h : E ≤ F&#39;),
+    (act g E).hom ≫ F.map (homOfLE (GCellComplex.smul_le g h)) =
+      F.map (homOfLE h) ≫ (act g F&#39;).hom
+  /-- Identity: `act 1 E = 𝟙`, modulo `eqToHom` for `1 • E = E`. -/
   act_one : ∀ E : X,
-    (act 1).app E ≫ eqToHom (show F.obj (1 • E) = F.obj E by rw [one_smul]) =
+    (act 1 E).hom ≫ eqToHom (show F.obj ((1 : G) • E) = F.obj E by rw [one_smul]) =
       𝟙 (F.obj E)
-  /-- Multiplicativity of the action. -/
+  /-- Multiplicativity. -/
   act_mul : ∀ (g h : G) (E : X),
-    (act (g * h)).app E ≫
+    (act (g * h) E).hom ≫
         eqToHom (show F.obj ((g * h) • E) = F.obj (g • h • E) by rw [mul_smul]) =
-      (act h).app E ≫ (act g).app (h • E)</code></pre>
+      (act h E).hom ≫ (act g (h • E)).hom</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3f1df788aa60386c8232c83ffaf5f971a92a1230/SheafOnBuilding/GEquivariant.lean#L134"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 3f1df78, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GEquivariant
           </span>
           
           
           
           <pre class="lean-signature"><code>class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where
-  /-- The action natural transformation for `g ∈ G`. -/
-  act : ∀ g : G, F ⟶ (smulFunctor G X g).op ⋙ F
-  /-- The identity element acts as the identity natural transformation. -/
+  /-- Stalk-level action of `g` at `E` as an iso. -/
+  act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))
+  /-- Naturality against cosheaf restrictions: for `h : E ≤ F&#39;`,
+  ```
+  F.obj (op F&#39;) ──── F.map (homOfLE h).op ──► F.obj (op E)
+       │                                          │
+       │ (act g F&#39;).hom                           │ (act g E).hom
+       ▼                                          ▼
+  F.obj (op (g•F&#39;)) ─ F.map (...smul_le...).op ► F.obj (op (g•E))
+  ```
+  -/
+  act_map : ∀ (g : G) {E F&#39; : X} (h : E ≤ F&#39;),
+    F.map (homOfLE h).op ≫ (act g E).hom =
+      (act g F&#39;).hom ≫ F.map (homOfLE (GCellComplex.smul_le g h)).op
+  /-- Identity: `(act 1 E).hom = 𝟙`, modulo `eqToHom` for `1 • E = E`. -/
   act_one : ∀ E : X,
-    (act 1).app (op E) ≫
-        eqToHom (show F.obj (op (1 • E)) = F.obj (op E) by rw [one_smul]) =
+    (act 1 E).hom ≫
+        eqToHom (show F.obj (op ((1 : G) • E)) = F.obj (op E) by rw [one_smul]) =
       𝟙 (F.obj (op E))
-  /-- Multiplicativity of the action. -/
+  /-- Multiplicativity. -/
   act_mul : ∀ (g h : G) (E : X),
-    (act (g * h)).app (op E) ≫
+    (act (g * h) E).hom ≫
         eqToHom (show F.obj (op ((g * h) • E)) = F.obj (op (g • h • E))
           by rw [mul_smul]) =
-      (act h).app (op E) ≫ (act g).app (op (h • E))</code></pre>
+      (act h E).hom ≫ (act g (h • E)).hom</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.GEquivariantCosheaf.act_one_inv</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivariantCosheaf.act_map</code>, <code>SheafOnBuilding.GEquivariantCosheaf</code>, <code>SheafOnBuilding.GEquivariantSheaf.act_map</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GEquivariant.lean#L122"><code>SheafOnBuilding.GEquivariantCosheaf.act_one_inv</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GEquivariant
+          </span>
           
           
+          <p class="lean-docstring">`(act 1 E).inv = eqToHom (W_{1•E} = W_E)`.</p>
+          <pre class="lean-signature"><code>theorem act_one_inv (E : X) :
+    (act (G</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3f1df788aa60386c8232c83ffaf5f971a92a1230/SheafOnBuilding/GEquivariant.lean#L58"><code>SheafOnBuilding.smulFunctor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GEquivariant.lean#L52"><code>SheafOnBuilding.smulFunctor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 3f1df78, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -565,45 +580,51 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GCosheaf.lean#L37"><code>SheafOnBuilding.GCosheaf</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GCosheaf
+          </span>
           
           
+          <p class="lean-docstring">Bundled `G`-equivariant cosheaf on `X` with values in `C`.</p>
+          <pre class="lean-signature"><code>structure GCosheaf (C : Type*) [Category C] where
+  /-- Underlying cosheaf `F : Xᵒᵖ ⥤ C`. -/
+  base : Cosheaf X C
+  /-- The equivariant structure witnessing `G`-equivariance. -/
+  equiv : GEquivariantCosheaf G X base</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.category</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GCosheaf.lean#L81"><code>SheafOnBuilding.GCosheaf.category</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GCosheaf
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>instance category : Category (GCosheaf G X C) where
+  Hom F F&#39; := Hom F F&#39;
+  id F := Hom.id F
+  comp α β := Hom.comp α β
+  id_comp _ := Subtype.ext (Category.id_comp _)
+  comp_id _ := Subtype.ext (Category.comp_id _)
+  assoc _ _ _ := Subtype.ext (Category.assoc _ _ _)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3f1df788aa60386c8232c83ffaf5f971a92a1230/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <code>SheafOnBuilding.GCosheaf</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GCosheaf.lean#L1"><code>SheafOnBuilding.GCosheaf</code></a>
       </p>
       
     </div>

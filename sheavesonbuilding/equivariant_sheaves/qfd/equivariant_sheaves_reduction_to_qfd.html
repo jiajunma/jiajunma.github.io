@@ -475,165 +475,170 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          
-          <code>SheafOnBuilding.KData</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/KData.lean#L44"><code>SheafOnBuilding.KData</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.KData
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>structure KData (G&#39; : Subgroup G) (S : Subcomplex X) where
+  /-- Underlying subgroup family. -/
+  K : X → Subgroup G
+  /-- **Cosheaf functoriality**: `E ≤ F → K_F ≤ K_E` (bigger cell has a
+  smaller subgroup — same direction as `Fix_G`). -/
+  K_mono : ∀ ⦃E F : X⦄, E ≤ F → K F ≤ K E
+  /-- **G&#39;-equivariance**: `K_{n·E} = n · K_E · n⁻¹` for `n ∈ G&#39;`. -/
+  K_equiv : ∀ (n : G&#39;) (E : X),
+    K ((n : G) • E) = (K E).map (MulEquiv.toMonoidHom (MulAut.conj (n : G)))
+  /-- **Fixator dominance**: `K_E ≤ Fix_G(E) = Stab_G(E)`. -/
+  K_le_fix : ∀ (E : X), K E ≤ MulAction.stabilizer G E</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.KData.smul_fix</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.smulMorphism</code>, <code>SheafOnBuilding.Cn.ι_smulMorphism</code>, <code>SheafOnBuilding.InducedSpace.dim_smul</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/KData.lean#L64"><code>SheafOnBuilding.KData.smul_fix</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.KData
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem smul_fix (E : X) {g : G} (hg : g ∈ κ.K E) : g • E = E</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.KData.K1b</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/KData.lean#L70"><code>SheafOnBuilding.KData.K1b</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.KData
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem K1b (E : X) {g : G} (hg : g ∈ κ.K E) (_hg&#39; : g ∈ G&#39;) : g • E = E</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/KData.lean#L108"><code>SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.KData
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem orbit_iff_K (κ : KData G&#39; S)
+    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
+      ∃ (k : G) (m : G),
+        k ∈ κ.K E ∧ m ∈ G&#39; ∧ m ∈ MulAction.stabilizer G E ∧ f = k * m)
+    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
+    g • E = h • F ↔
+      ∃ n ∈ G&#39;, n • E = F ∧ (g⁻¹ * h * n) ∈ κ.K E</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.equivX</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>, <code>SheafOnBuilding.IsQuasiFundDomain</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/KData.lean#L165"><code>SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.KData
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem qfd_equiv_hom (κ : KData G&#39; S)
+    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
+      ∃ (k : G) (m : G),
+        k ∈ κ.K E ∧ m ∈ G&#39; ∧ m ∈ MulAction.stabilizer G E ∧ f = k * m)
+    {E E&#39; : X} (hE : E ∈ S) (hE&#39; : E&#39; ∈ S) (g : G) :
+    g • E ≤ E&#39; ↔
+      ∃ (n k : G), n ∈ G&#39; ∧ k ∈ κ.K E ∧ n • E ≤ E&#39; ∧ g = n * k</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>(module) SheafOnBuilding</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L43"><code>SheafOnBuilding.OrbitCat</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev OrbitCat (G X : Type*) : Type _</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.Mor</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>(module) SheafOnBuilding</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L53"><code>SheafOnBuilding.OrbitCat.Mor</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def Mor (E E&#39; : OrbitCat G X) : Type _</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.Mor.id</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>SheafOnBuilding.cnMap_id</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L57"><code>SheafOnBuilding.OrbitCat.Mor.id</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          <p class="lean-docstring">The identity morphism `1 : E ⟶ E`.</p>
+          <pre class="lean-signature"><code>def Mor.id (E : OrbitCat G X) : Mor E E</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.Mor.comp</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.d_comp_d</code>, <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L62"><code>SheafOnBuilding.OrbitCat.Mor.comp</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def Mor.comp {E E&#39; E&#39;&#39; : OrbitCat G X} (α : Mor E E&#39;) (β : Mor E&#39; E&#39;&#39;) :
+    Mor E E&#39;&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -646,7 +651,7 @@
           <span class="badge status-staged">Unresolved</span>
           <span class="lean-source-meta">not found in configured Lean repository</span>
           
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>(module) SheafOnBuilding</code>?</span>
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GCosheaf.category</code>, <code>SheafOnBuilding.SRep.category</code>, <code>(module) SheafOnBuilding.OrbitCat</code>?</span>
           
           
           
@@ -655,225 +660,247 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>, <code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L87"><code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def endMorEquivStabilizer (E : OrbitCat G X) :
+    Mor E E ≃ MulAction.stabilizer G (E : X) where
+  toFun α := ⟨α.val, by
+    show α.val • (E : X) = E
+    by_contra h_ne
+    have h_lt : AbstractCellComplex.dim (α.val • (E : X)) &lt;
+        AbstractCellComplex.dim (E : X) :=
+      AbstractCellComplex.dim_lt α.property h_ne
+    have h_eq : AbstractCellComplex.dim (α.val • (E : X)) =
+        AbstractCellComplex.dim (E : X) :=
+      GCellComplex.smul_dim α.val E
+    omega⟩
+  invFun k := ⟨k.val, by
+    show k.val • (E : X) ≤ (E : X)
+    rw [(k.property : k.val • (E : X) = E)]⟩
+  left_inv _ := rfl
+  right_inv _ := rfl</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>, <code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L114"><code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def endMulEquivStabilizer (E : OrbitCat G X) :
+    End E ≃* MulAction.stabilizer G (E : X) where
+  toEquiv := endMorEquivStabilizer E
+  map_mul&#39; _ _ := rfl</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.endToStabilizer</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.InductionMap.restrict_toFun</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L123"><code>SheafOnBuilding.OrbitCat.endToStabilizer</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def endToStabilizer (E : OrbitCat G X) :
+    End E →* MulAction.stabilizer G (E : X)</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.OnSubcomplex</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L137"><code>SheafOnBuilding.OrbitCat.OnSubcomplex</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          <p class="lean-docstring">Full subcategory of `]X/G[` supported on cells of a subcomplex `S`.</p>
+          <pre class="lean-signature"><code>abbrev OnSubcomplex (S : Subcomplex X)</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L142"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          <p class="lean-docstring">The inclusion functor `[X&#39;]_{ι} → ]X/G[`.</p>
+          <pre class="lean-signature"><code>abbrev ιOnSubcomplex (S : Subcomplex X) :
+    OnSubcomplex (G</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L155"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem ιOnSubcomplex_essSurj (G&#39; : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G&#39; S] :
+    (ιOnSubcomplex (G</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>, <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L182"><code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitCat
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem ιOnSubcomplex_isEquivalence (G&#39; : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G&#39; S] :
+    (ιOnSubcomplex (G</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.InductionMap.restrict_toFun</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitFunEquiv.lean#L33"><code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.OrbitFunEquiv
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def funCatEquivOfQFD (G&#39; : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G&#39; S] :
+    ((OnSubcomplex (G</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          
-          <code>SheafOnBuilding.SRep</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/SRep.lean#L33"><code>SheafOnBuilding.SRep</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.SRep
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>structure SRep where
+  /-- The subgroup of `G`. -/
+  K : Subgroup G
+  /-- The object of `C` on which `K` acts. -/
+  V : C
+  /-- The `K`-action by automorphisms. -/
+  ρ : K →* Aut V</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          
-          <code>SheafOnBuilding.SRep.Hom</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/SRep.lean#L48"><code>SheafOnBuilding.SRep.Hom</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.SRep
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>structure Hom (X Y : SRep G C) where
+  /-- The subgroup homomorphism `X.K →* Y.K`. -/
+  f : X.K →* Y.K
+  /-- Injectivity of `f`.  This axiom is part of the definition of
+  `SRep_G(C)` in Sheaf7 §2.7. -/
+  f_inj : Function.Injective f
+  /-- The `C`-morphism `X.V ⟶ Y.V`. -/
+  r : X.V ⟶ Y.V
+  /-- Intertwining relation: `ρ k ≫ r = r ≫ τ (f k)` for all `k ∈ X.K`. -/
+  intertwines : ∀ k : X.K, (X.ρ k).hom ≫ r = r ≫ (Y.ρ (f k)).hom</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.mapOfG</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.ι_cnMap</code>, <code>SheafOnBuilding.GEquivariantCosheaf.act_map</code>, <code>SheafOnBuilding.GEquivariantSheaf.act_map</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GCosheafToFun.lean#L36"><code>SheafOnBuilding.GCosheaf.mapOfG</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GCosheafToFun
+          </span>
           
           
+          <p class="lean-docstring">The building block of the forward-direction functor&#39;s `.map`.</p>
+          <pre class="lean-signature"><code>noncomputable def GCosheaf.mapOfG
+    (W : GCosheaf G X C) {E E&#39; : X} (g : G) (hg : g • E&#39; ≤ E) :
+    W.base.obj (op E) ⟶ W.base.obj (op E&#39;)</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.GCosheaf.mapOfG_one</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.ι_cnMap</code>, <code>SheafOnBuilding.GEquivariantCosheaf.act_map</code>, <code>SheafOnBuilding.GEquivariantSheaf.act_map</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GCosheafToFun.lean#L49"><code>SheafOnBuilding.GCosheaf.mapOfG_one</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 750261e, SheafOnBuilding.GCosheafToFun
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem GCosheaf.mapOfG_one (W : GCosheaf G X C) (E : X) :
+    W.mapOfG (1 : G) (show (1 : G) • E ≤ E from by rw [one_smul]) =
+      𝟙 (W.base.obj (op E))</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <code>SheafOnBuilding.KData</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.OrbitCat</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.OrbitFunEquiv</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.SRep</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.GCosheafToFun</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/KData.lean#L1"><code>SheafOnBuilding.KData</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitCat.lean#L1"><code>SheafOnBuilding.OrbitCat</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/OrbitFunEquiv.lean#L1"><code>SheafOnBuilding.OrbitFunEquiv</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/SRep.lean#L1"><code>SheafOnBuilding.SRep</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/750261e51890c04dddac760112442ddc1db0557c/SheafOnBuilding/GCosheafToFun.lean#L1"><code>SheafOnBuilding.GCosheafToFun</code></a>
       </p>
       
     </div>
