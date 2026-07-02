@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>X&#39; is a quasi-fundamental domain of the induced space — Sheaves on Buildings — Knowledge Base</title>
+  <title>ι(X&#39;) is a quasi-fundamental domain of the induced space — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -434,7 +434,7 @@
 <article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induced_qfd_property">
   <header class="proposition_thmheading thm-heading">
     <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">X&#39; is a quasi-fundamental domain of the induced space</span>
+    <span class="proposition_thmtitle thm-title">ι(X&#39;) is a quasi-fundamental domain of the induced space</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-proposition">proposition</span>
@@ -479,12 +479,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/de72982eb9b1cdf3940c735ec14f6210a5f50abf/SheafOnBuilding/Induction.lean#L710"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/Induction.lean#L710"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ de72982, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.Induction
           </span>
           
           
@@ -516,12 +516,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/de72982eb9b1cdf3940c735ec14f6210a5f50abf/SheafOnBuilding/Induction.lean#L739"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/Induction.lean#L739"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ de72982, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.Induction
           </span>
           
           
@@ -533,12 +533,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/de72982eb9b1cdf3940c735ec14f6210a5f50abf/SheafOnBuilding/Induction.lean#L771"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/Induction.lean#L771"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ de72982, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.Induction
           </span>
           
           
@@ -550,7 +550,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/de72982eb9b1cdf3940c735ec14f6210a5f50abf/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -558,63 +558,78 @@
   
 
   <div class="proposition_thmcontent thm-content body">
-    <h1>$X'$ is a quasi-fundamental domain of $G \times^P X'$</h1>
+    <h1>$\iota(X')$ is a quasi-fundamental domain of $G \times^P X'$</h1>
 <p>Fix the induction data $(G', P)$ satisfying (P0)–(P2) and the induced
-space $X = G \times^P X'$ (cf.\
-[[node:equivariant_sheaves.induction_GxP_X]]). Identify $X'$ with
-$\iota(X') \subseteq X$.</p>
+space $X = G \times^P X'$
+([[node:equivariant_sheaves.induction_GxP_X]]).  Two different objects
+appear together in this node and must be kept distinct:</p>
+<ul>
+<li><strong>$X'$</strong> — the base of the induction, a $G'$-space in its own right
+  (its own type in Lean: <code>{X' : Type*} [MulAction G X']</code>, though the
+  action <em>seen from inside the induction</em> is restricted to $G' \le
+  G$).</li>
+<li><strong>$S := \iota(X') \subseteq X$</strong> — a <strong>face-closed subcomplex</strong> of
+  $X$, formalised as <code>Subcomplex.ofIota d : Subcomplex (InducedSpace d)</code>.
+  This is the QFD.</li>
+</ul>
+<p>The two are related by the poset bijection $\iota : X' \to S$ (whose
+injectivity is
+<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (1)) but
+they live in different types.</p>
 <blockquote>
 <p><strong>Proposition.</strong></p>
 <ol>
-<li>$\iota(X')$ is a face-closed subcomplex of $X$.</li>
-<li>The pair $(G', \iota(X'))$ makes $\iota(X')$ a
+<li>$S := \iota(X')$ is a face-closed subcomplex of $X$.</li>
+<li>The pair $(G', S)$ makes $S$ a
    [[quasi-fundamental domain|node:equivariant_sheaves.quasi_fundamental_domain]]
    of the $G$-space $X$; equivalently, the natural map
-   $$G' \backslash [\![\iota(X')]\!] \;\xrightarrow{\;\sim\;}\;
-     G \backslash [\![X]\!]$$
+   $$
+   G' \backslash [\![S]\!] \;\xrightarrow{\;\sim\;}\;
+   G \backslash [\![X]\!]
+   $$
    is a bijection.</li>
-<li>Moreover $G' \le \Stab_G(\iota(X'))$; the sharp subgroup $G'$
-   is generally <em>strictly smaller</em> than the setwise stabiliser.</li>
+<li>Moreover $G' \le \Stab_G(S)$; the sharp subgroup $G'$ is
+   generally <em>strictly smaller</em> than the setwise stabiliser of $S$
+   in $G$.</li>
 </ol>
 </blockquote>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p><strong>(1) Subcomplex.</strong> For face closure, take $q \preceq \iota E$ in
-$X$, with $E \in [\![X']\!]$. By clauses (4) and (6) of
+        <p><strong>(1) Subcomplex.</strong>  For face closure, take $q \preceq \iota E$ in
+$X$, with $E \in [\![X']\!]$.  By clauses (4) and (6) of
 <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>, $q = g \cdot
 \iota F$ for some $g \in G$, $F \in [![X']!]$, and there exists
-$n \in G'$ with $n \cdot F \preceq E$ and $g^{-1} n \in P_E$. Then
+$n \in G'$ with $n \cdot F \preceq E$ and $g^{-1} n \in P_E$.  Then
 $g = n \cdot p^{-1}$ for some $p \in P_E$, so
 $q = n \cdot p^{-1} \cdot \iota F = n \cdot \iota F$
 (using $P_E \subseteq \Fix_G(E)$ from
 <a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="../equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a> to see $p^{-1}
-\cdot \iota F = \iota F$ after face-closing to $E$), so
-$q = \iota(n \cdot F)$ by $G'$-equivariance. Thus $q \in \iota(X')$.</p>
-<p><strong>(2) QFD.</strong> Coverage is clause (4) of
-<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>:
-every cell of $X$ is a $G$-translate of some $\iota E$.</p>
+\cdot \iota F = \iota F$ after face-closing to $E$), so $q = \iota(n
+\cdot F) \in S$ by $G'$-equivariance of $\iota$.</p>
+<p><strong>(2) QFD.</strong>  Coverage is clause (4) of
+<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>: every cell of
+$X$ is a $G$-translate of some $\iota E \in S$.</p>
 <p>For injectivity on $G$-orbits, apply clause (5) with $g_1 = 1$: if
-$g \cdot \iota E = \iota F$ (both in $\iota(X')$) then there exists
-$n \in G'$ with $n \cdot E = F$ and $g n \in P_E \subseteq
-\Fix_G(E)$. Hence $E$ and $F$ are $G'$-equivalent through $n$, and
-we recover the orbit statement of the QFD definition.</p>
-<p><strong>(3) $G' \le \Stab_G(\iota(X'))$.</strong> For $n \in G'$ and $E \in
-[![X']!]$, clause (3) of
-<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> gives
-$n \cdot \iota E = \iota(n \cdot E) \in \iota(X')$. The reverse
-inclusion $n^{-1} \cdot \iota(X') \subseteq \iota(X')$ is symmetric.
-Strictness: if $g \in \Stab_G(\iota(X'))$ then $g \cdot \iota E = \iota
-F$ for some $F$, but $g$ need not lie in $G'$ — the residue is
-absorbed by $P_E$ (see (P4) in
+$g \cdot \iota E = \iota F$ (both in $S$) then there exists $n \in G'$
+with $n \cdot E = F$ and $g n \in P_E \subseteq \Fix_G(E)$.  Hence
+$\iota E$ and $\iota F$ are related by an element of $G'$ (through
+$n$), and we recover the orbit statement of the QFD definition.</p>
+<p><strong>(3) $G' \le \Stab_G(S)$.</strong>  For $n \in G'$ and $E \in [\![X']\!]$,
+clause (3) of <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a>
+gives $n \cdot \iota E = \iota(n \cdot E) \in S$.  The reverse
+inclusion $n^{-1} \cdot S \subseteq S$ is symmetric.  Strictness: if
+$g \in \Stab_G(S)$ then $g \cdot \iota E = \iota F$ for some $F \in
+[![X']!]$, but $g$ need not lie in $G'$ — the residue is absorbed
+by $P_E$ (see (P4) in
 <a class="node-ref" data-node-id="equivariant_sheaves.induction_data_reverse" href="../equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a>).  $\square$</p>
 <h2>Downstream</h2>
 <p>Combined with the topological clauses of
 <a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="../equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a> (Hausdorffness,
 weak topology, regularity, characteristic maps — outside the
-abstract poset setting), this node closes the proof that
-$\iota : X' \hookrightarrow X$ is a QFD embedding.</p>
+abstract poset setting), this node closes the proof that $\iota :
+X' \hookrightarrow X$ is a QFD embedding of the induction base.</p>
 <p>The QFD-with-sharp-$G'$ statement is the input to the reverse
 direction of the induction/QFD correspondence
 (<a class="node-ref" data-node-id="equivariant_sheaves.induction_data_reverse" href="../equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a>).</p>
@@ -624,7 +639,9 @@ direction of the induction/QFD correspondence
   carrier := Set.range (iota d)
   face_closed := ...
 </code></pre>
-<p>The auxiliary inclusion $G' \le \Stab_G(\iota(X'))$ (statement (3)) is</p>
+<p>Note the type: <code>Subcomplex (InducedSpace d)</code> — this is a <strong>subcomplex
+of the induced $G$-space</strong>, not the induction base $X'$.</p>
+<p>The auxiliary inclusion $G' \le \Stab_G(S)$ (statement (3)) is</p>
 <pre><code class="language-lean">theorem G'_le_subcomplexOfIota_stabilizer :
     d.G' ≤ (Subcomplex.ofIota d).stabilizer
 </code></pre>

@@ -473,12 +473,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/de72982eb9b1cdf3940c735ec14f6210a5f50abf/SheafOnBuilding/QuasiFundDomain.lean#L76"><code>SheafOnBuilding.IsQuasiFundDomain</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/QuasiFundDomain.lean#L76"><code>SheafOnBuilding.IsQuasiFundDomain</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ de72982, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -501,12 +501,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/de72982eb9b1cdf3940c735ec14f6210a5f50abf/SheafOnBuilding/QuasiFundDomain.lean#L44"><code>SheafOnBuilding.Subcomplex.stabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/QuasiFundDomain.lean#L44"><code>SheafOnBuilding.Subcomplex.stabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ de72982, SheafOnBuilding.QuasiFundDomain
+            SheafOnBuilding (this repo) @ 65f0074, SheafOnBuilding.QuasiFundDomain
           </span>
           
           
@@ -526,7 +526,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/de72982eb9b1cdf3940c735ec14f6210a5f50abf/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/65f0074974817b77b5e639b8bf1d4931f4eb1c24/SheafOnBuilding/QuasiFundDomain.lean#L1"><code>SheafOnBuilding.QuasiFundDomain</code></a>
       </p>
       
     </div>
@@ -536,44 +536,67 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Quasi-fundamental domain</h1>
 <p>Let $G$ act cellularly on a regular CW complex $X$.</p>
-<p><strong>Definition (fundamental domain).</strong> A subcomplex $X' \subseteq X$ is a
-<em>fundamental domain</em> for the $G$-action if the natural map
-$[\![X']\!] \to G \backslash [\![X]\!]$ is a bijection.</p>
-<p><strong>Definition (quasi-fundamental domain, QFD).</strong> A subcomplex $X' \subseteq X$
-is a <em>quasi-fundamental domain</em> for the $G$-action if there exists a
-subgroup $G' \le G$ (a <em>distinguished subgroup</em>) satisfying:</p>
+<p>Throughout this node the <strong>QFD is denoted $S$</strong> — a face-closed
+subcomplex of $X$.  In the induction context
+([[node:equivariant_sheaves.induction_GxP_X]]) the base of the
+induction is a separate $G'$-space typically written $X'$; when that
+$X'$ is embedded into $X = G \times^P X'$ via $\iota$, the resulting
+QFD in $X$ is $S := \iota(X')$ (a subcomplex of $X$, not a space of
+its own).</p>
+<p><strong>Definition (fundamental domain).</strong>  A subcomplex $S \subseteq X$ is
+a <em>fundamental domain</em> for the $G$-action if the natural map
+$[\![S]\!] \to G \backslash [\![X]\!]$ is a bijection.</p>
+<p><strong>Definition (quasi-fundamental domain, QFD).</strong>  A subcomplex
+$S \subseteq X$ is a <em>quasi-fundamental domain</em> for the $G$-action if
+there exists a subgroup $G' \le G$ (a <em>distinguished subgroup</em>)
+satisfying:</p>
 <ul>
-<li><strong>(G'-le-stab)</strong> $G' \le \Stab_G(X')$ — $G'$ set-wise stabilises
-  $X'$.</li>
+<li><strong>(G'-le-stab)</strong> $G' \le \Stab_G(S)$ — $G'$ set-wise stabilises $S$.</li>
 <li><strong>(Surjectivity)</strong> Every cell of $X$ is in the $G$-orbit of some
-  cell of $X'$: for every $F \in [\![X]\!]$ there exist $g \in G$ and
-  $E \in [\![X']\!]$ with $g \cdot E = F$.</li>
-<li><strong>(Orbit relation)</strong> For $E, F \in [\![X']\!]$ and $g, h \in G$
+  cell of $S$: for every $F \in [\![X]\!]$ there exist $g \in G$ and
+  $E \in [\![S]\!]$ with $g \cdot E = F$.</li>
+<li><strong>(Orbit relation)</strong> For $E, F \in [\![S]\!]$ and $g, h \in G$
   with $g \cdot E = h \cdot F$, there exists $n \in G'$ realising
   $n \cdot E = F$ and $(g^{-1} h n) \cdot E = E$.</li>
 </ul>
 <p>Equivalently, the natural map
-$$G' \backslash [\![X']\!] \;\xrightarrow{\;\sim\;}\; G \backslash [\![X]\!]$$
-is a bijection. We then say <em>the $G'$-set $X'$ is a QFD of the $G$-set $X$.</em></p>
+$$G' \backslash [\![S]\!] \;\xrightarrow{\;\sim\;}\; G \backslash [\![X]\!]$$
+is a bijection.  We then say <em>$S$ is a QFD of the $G$-space $X$
+(with distinguished subgroup $G'$).</em></p>
 <p>The three axioms are the three components of the QFD data.  Choosing
-a smaller $G'$ sharpens the orbit relation; setting
-$G' := \Stab_G(X')$ recovers the coarsest valid QFD, in which case
-the orbit relation reduces to the bijection $\Stab_G(X') \backslash
-[![X']!] \xrightarrow{\sim} G \backslash [![X]!]$.</p>
+$G'$ smaller sharpens the orbit relation; setting $G' :=
+\Stab_G(S)$ recovers the coarsest valid QFD, in which case the
+orbit relation reduces to the bijection $\Stab_G(S) \backslash
+[![S]!] \xrightarrow{\sim} G \backslash [![X]!]$.</p>
 <h2>Canonical examples</h2>
 <p>Each item is a QFD of the preceding one:</p>
 <ol>
-<li><strong>The $G$-set $\mathcal{B}(G)$</strong>, the extended Bruhat–Tits building of $G$
-   (with a suitable facet structure).</li>
-<li><strong>The $N$-set $A$</strong>, where $N$ is the normalizer of a maximal split torus
-   $S$ of $G$ and $A \subset \mathcal{B}(G)$ is the corresponding apartment.</li>
-<li><strong>The $\Omega$-set $\bar C$</strong>, where $\bar C := \mathrm{pr}^{-1}_{A,A^{\mathrm{red}}}(\overline{C'})$
-   is the preimage of a closed alcove $C'$ in the reduced apartment and
-   $\Omega := \Stab_N(C')$. Equivalently, $\bar C$ is a fundamental domain
-   for the (non-extended) affine Weyl group $W^{\mathrm{aff}}$ acting on $A$.</li>
+<li><strong>The $G$-set $\mathcal{B}(G)$</strong>, the extended Bruhat–Tits building of
+   $G$ (with a suitable facet structure).</li>
+<li><strong>The $N$-set $A$</strong>, where $N$ is the normalizer of a maximal split
+   torus $T$ of $G$ and $A \subset \mathcal{B}(G)$ is the corresponding
+   apartment.</li>
+<li><strong>The $\Omega$-set $\bar C$</strong>, where $\bar C :=
+   \mathrm{pr}^{-1}_{A, A^{\mathrm{red}}}(\overline{C'})$ is the
+   preimage of a closed alcove $C'$ in the reduced apartment and
+   $\Omega := \Stab_N(C')$.  Equivalently, $\bar C$ is a fundamental
+   domain for the (non-extended) affine Weyl group $W^{\mathrm{aff}}$
+   acting on $A$.</li>
 </ol>
 <p>The third example is developed further in
 <a class="node-ref" data-node-id="applications.qfd_from_alcove" href="../../applications/applications_qfd_from_alcove.html">Quasi-fundamental domain from a closed alcove (App B)</a>.</p>
+<h2>Notation: $S$ vs.\ $X'$</h2>
+<p>The QFD is a <strong>subcomplex of $X$</strong> — a face-closed subset of cells,
+denoted $S$ throughout.  This matches the Lean type <code>S :
+Subcomplex X</code> and keeps the QFD-as-subcomplex point of view clean.</p>
+<p>The notation $X'$ is reserved for a <strong>distinct $G'$-space</strong>: the base
+of an induction $X = G \times^P X'$
+([[node:equivariant_sheaves.induction_GxP_X]]).  In that setting, the
+QFD of the induced $G$-space $X$ is the image $\iota(X') \subseteq X$
+(a subcomplex, formalised as <code>Subcomplex.ofIota d</code> in Lean); it is a
+different type from $X'$ itself, related by the poset bijection
+$\iota : X' \to \iota(X')$.  Nodes referring to $X'$ do so only in the
+induction context.</p>
 <h2>Lean formalization</h2>
 <pre><code class="language-lean">class IsQuasiFundDomain {G : Type*} [Group G] {X : Type*}
     [PartialOrder X] [AbstractCellComplex X]
@@ -588,8 +611,8 @@ the orbit relation reduces to the bijection $\Stab_G(X') \backslash
 <p><code>IsQuasiFundDomain G' S</code> is a <code>Prop</code> class <strong>parameterised by the
 distinguished subgroup <code>G'</code></strong>, not by taking $\Stab_G(S)$ implicitly.
 This is the sharpest form of the QFD hypothesis: choosing <code>G'</code> smaller
-than $\Stab_G(S)$ <em>refines</em> the orbit statement <code>orbit_iff</code> accordingly.
-Setwise-stabiliser instances are recovered by setting
+than $\Stab_G(S)$ <em>refines</em> the orbit statement <code>orbit_iff</code>
+accordingly.  Setwise-stabiliser instances are recovered by setting
 $G' := \mathrm{Subcomplex.stabilizer}\ S$.</p>
 <p>The setwise stabiliser of a subcomplex is exposed as a subgroup:</p>
 <pre><code class="language-lean">def Subcomplex.stabilizer (S : Subcomplex X) : Subgroup G where
@@ -617,7 +640,7 @@ $g^{-1} \cdot S \subseteq S$, which is what makes it a subgroup.</p>
       
       <li><a href="../induction/equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#39;</a></li>
       
-      <li><a href="../induction/equivariant_sheaves_induced_qfd_property.html">X&#39; is a quasi-fundamental domain of the induced space</a></li>
+      <li><a href="../induction/equivariant_sheaves_induced_qfd_property.html">ι(X&#39;) is a quasi-fundamental domain of the induced space</a></li>
       
       <li><a href="equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a></li>
       
