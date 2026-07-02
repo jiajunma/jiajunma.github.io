@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Aut": "\\mathrm{Aut}", "\\BSigma": "\\mathcal{B}(\\Sigma)", "\\Coeff": "\\mathrm{Coeff}", "\\Cosh": "\\mathrm{Cosh}", "\\End": "\\mathrm{End}", "\\Fix": "\\mathrm{Fix}", "\\Gal": "\\mathrm{Gal}", "\\Hom": "\\mathrm{Hom}", "\\Irr": "\\mathrm{Irr}", "\\Loc": "\\mathrm{Loc}", "\\Rep": "\\mathrm{Rep}", "\\Res": "\\mathrm{Res}", "\\Sat": "\\mathrm{Sat}", "\\Sh": "\\mathrm{Sh}", "\\Stab": "\\mathrm{Stab}", "\\Supp": "\\mathrm{Supp}", "\\cA": "\\mathcal{A}", "\\cB": "\\mathcal{B}", "\\cC": "\\mathcal{C}", "\\cD": "\\mathcal{D}", "\\cE": "\\mathcal{E}", "\\cF": "\\mathcal{F}", "\\cI": "\\mathcal{I}", "\\cInd": "\\mathrm{c\\text{-}Ind}", "\\cR": "\\mathcal{R}", "\\cV": "\\mathcal{V}", "\\id": "\\mathrm{id}", "\\rightsquigarrow": "\\to", "\\sF": "\\mathscr{F}", "\\sH": "\\mathscr{H}", "\\sK": "\\mathscr{K}", "\\sR": "\\mathscr{R}", "\\sV": "\\mathscr{V}", "\\sW": "\\mathscr{W}", "\\sX": "\\mathscr{X}", "\\trianglelefteq": "\\mathrel{\\triangleleft}"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -438,13 +438,15 @@
     <div class="thm_header_extras">
       
       <span class="badge kind-proposition">proposition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-equivariant_sheaves-2e-reduction_to_qfd">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -467,41 +469,747 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.KData</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.KData.smul_fix</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.smulMorphism</code>, <code>SheafOnBuilding.Cn.ι_smulMorphism</code>, <code>SheafOnBuilding.InducedSpace.dim_smul</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.KData.K1b</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.equivX</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>, <code>SheafOnBuilding.IsQuasiFundDomain</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>(module) SheafOnBuilding</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.Mor</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>(module) SheafOnBuilding</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.Mor.id</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>SheafOnBuilding.cnMap_id</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.Mor.comp</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.d_comp_d</code>, <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.category</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>, <code>(module) SheafOnBuilding</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.endMorEquivStabilizer</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>, <code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.endMulEquivStabilizer</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>, <code>SheafOnBuilding.InducedSpace.fix_G&#39;_le_stabilizer_iota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.endToStabilizer</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.InductionMap.restrict_toFun</code>, <code>SheafOnBuilding.InducedSpace.P_le_stabilizer_iota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.OnSubcomplex</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>, <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code>, <code>SheafOnBuilding.IsQuasiFundDomain.InductionData.orbit_eq_iff</code>, <code>SheafOnBuilding.IsQuasiFundDomain.orbit_eq_iff</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.OrbitCat.funCatEquivOfQFD</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code>, <code>SheafOnBuilding.InducedSpace.InductionMap.restrict_toFun</code>, <code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.SRep</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>, <code>(module) SheafOnBuilding.ChainComplex</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.SRep.Hom</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.hom_ext</code>, <code>(module) SheafOnBuilding</code>, <code>(module) SheafOnBuilding.Basic</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.mapOfG</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.ι_cnMap</code>, <code>SheafOnBuilding.GEquivariantCosheaf.act_map</code>, <code>SheafOnBuilding.GEquivariantSheaf.act_map</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+        <li class="lean-ref">
+          
+          
+          <code>SheafOnBuilding.GCosheaf.mapOfG_one</code>
+          
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.Cn.ι_cnMap</code>, <code>SheafOnBuilding.GEquivariantCosheaf.act_map</code>, <code>SheafOnBuilding.GEquivariantSheaf.act_map</code>?</span>
+          
+          
+          
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <code>SheafOnBuilding.KData</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.OrbitCat</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.OrbitFunEquiv</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.SRep</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>, <code>SheafOnBuilding.GCosheafToFun</code> <span class="badge status-staged" title="module not found in repository &#39;sheafonbuilding&#39;">Unresolved</span>
+      </p>
+      
+    </div>
+  </div>
+  
 
   <div class="proposition_thmcontent thm-content body">
     <h1>Reduction of $G$-equivariant cosheaves to a QFD</h1>
-<p>Setting: $X' \subseteq X$ is a QFD for the $G$-action with stabilizing
-subgroup $G'$. Let $\mathscr{C}$ be a category.</p>
-<p>Let $\mathrm{SRep}_G(\mathscr{C})$ be the category whose objects are triples
-$(K, V, a)$ with $K \le G$, $V \in \mathscr{C}$, $a : K \to \Aut_\mathscr{C}(V)$;
-a morphism $(f, r)$ requires an injective $f : K \hookrightarrow L$ and
-$r \in \Hom_\mathscr{C}(V,W)$ intertwining $a, b$.</p>
-<p><strong>Definition.</strong> For a cosheaf $K$ of subgroups of $G$ on $X'$, let
-$\Cosh_{G',K}([\![X']\!], \mathscr{C})$ be the full subcategory of
-$\Cosh_{G'}(X', \mathrm{SRep}_G(\mathscr{C}))$ of those $V$ such that:</p>
-<ul>
-<li>$(V_E, a^{V_E})$ is a $K_E$-representation in $\mathscr{C}$ for each
-  $E \in [\![X']\!]$;</li>
-<li>$r^V_{E,E'} : V_E \to V_{E'}$ is $a^{V_E}_g$-equivariant for $E' \preceq E$;</li>
-<li>$a^V_{g,E} : V_E \to V_{gE}$ intertwines $a^{V_E}$ and $a^{V_{gE}}$:
-  $a^V_{g,E} \circ a^{V_E}_k = a^{V_{gE}}_{gkg^{-1}} \circ a^V_{g,E}$;</li>
-<li>$a^{V_E}_k = a^V_{k,E}$ for $k \in \Fix_G(E) \cap K_E$.</li>
-</ul>
+<p>Setting: $S \subseteq X$ is a
+[[quasi-fundamental domain|node:equivariant_sheaves.quasi_fundamental_domain]]
+for the $G$-action with distinguished subgroup $G' \le G$; $\mathscr C$
+is a category (with enough structure to house cosheaves — the abstract
+poset framework demands only <code>Category C</code>).  The proposition unfolds
+$G$-equivariant cosheaves on $X$ into $G'$-equivariant cosheaves on
+$S$ carrying additional stabiliser-action data.</p>
+<h2>The K-cosheaf of subgroups</h2>
+<p>The "additional data" on $S$ is a <strong>K-cosheaf</strong>: a family $K =
+{K_E}_{E \in S}$ of subgroups of $G$ (not of $G'$!) satisfying three
+conditions.</p>
 <blockquote>
-<p><strong>Proposition.</strong> Let $K$ be the cosheaf on $X'$ with
-$\Fix_G(E) = \Fix_{G'}(E) K_E$ for all $E$. Then
-$$\Cosh_G(X, \mathscr{C}) \;\simeq\; \underline{\mathrm{Fun}}([X']_{[X/G]}, \mathscr{C})
-  \;\simeq\; \Cosh_{G', K}(X', \mathscr{C}).$$</p>
+<p><strong>Definition (K-cosheaf on a QFD).</strong> A <strong>K-cosheaf</strong> on $S$ is a
+map $K : X \to \mathrm{Subgroup}(G)$ (meaningful only on cells of
+$S$; extended arbitrarily elsewhere) with:</p>
+<ul>
+<li><strong>($K$-mono)</strong> <em>Cosheaf functoriality.</em>  For $E \preceq F$ in $S$,
+  $K_F \le K_E$.  (Same direction as $\Fix_G$: bigger cell,
+  smaller subgroup.)</li>
+<li><strong>($K$-eq)</strong> <em>$G'$-equivariance.</em> For $n \in G'$ and $E \in S$,
+  $K_{n \cdot E} = n K_E n^{-1}$.</li>
+<li><strong>($K$-fix)</strong> <em>Fixator dominance.</em> For every $E \in S$, $K_E
+  \le \Stab_G(E)$.</li>
+</ul>
 </blockquote>
-<p>The first equivalence is essentially the QFD equivalence
-$\iota : [X']_{[X/G]} \to [X/G]$ at the level of categories; the second
-unfolds the $K$-action data. The reverse construction uses the factorization
-$\mathrm{Hom}_{]X/G[}(E,E') = \{kn : k \in K_E,\ n \in G',\ nE \preceq E'\}$.</p>
-<h2>Why it matters</h2>
-<p>This proposition is the keystone for §4 (Heisenberg–Weil equivalence) and §8
-(reduction to depth zero): equivariant data on the <em>full</em> generalized
-building $\BSigma$ can be checked on the apartment $A$. See
-<a class="node-ref" data-node-id="depth_zero_reduction.res_sat_functors" href="../../depth_zero_reduction/depth_zero_reduction_res_sat_functors.html">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a>.</p>
+<p>The paper's fourth axiom, $K_E \cap G' \subseteq \Fix_{G'}(E)$,
+is a consequence of ($K$-fix): $k \in K_E \cap G' \Rightarrow k \in
+\Stab_G(E)$ (by fix) $\Rightarrow k \cdot E = E$, hence $k \in
+\Fix_{G'}(E) = G' \cap \Stab_G(E)$.  No separate hypothesis is
+needed.</p>
+<h2>The K-decomposed QFD orbit lemma</h2>
+<p>The bridge from the plain QFD orbit lemma
+(<a class="node-ref" data-node-id="equivariant_sheaves.qfd_orbit_lemma" href="../equivariant_sheaves_qfd_orbit_lemma.html">QFD orbit lemma: gE = hF iff there is n with nE=F and g⁻¹hn fixes E</a>) to the K-cosheaf
+formalism requires one <strong>extra hypothesis</strong> on $K$ relative to the
+ambient stabiliser data:</p>
+<blockquote>
+<p><strong>Main compatibility hypothesis.</strong> For every $E \in S$,
+$$\Stab_G(E) = K_E \cdot \Fix_{G'}(E).$$
+Equivalently: every $f \in \Stab_G(E)$ factors as $f = k \cdot m$
+with $k \in K_E$ and $m \in \Fix_{G'}(E) = G' \cap \Stab_G(E)$.</p>
+</blockquote>
+<p>Under this hypothesis, the plain QFD orbit lemma refines:</p>
+<blockquote>
+<p><strong>Lemma (K-decomposed QFD orbit lemma).</strong> For $E, F \in S$ and
+$g, h \in G$:
+$$
+g \cdot E = h \cdot F
+\iff
+\exists\, n \in G',\; n \cdot E = F \wedge g^{-1} h n \in K_E.
+$$</p>
+</blockquote>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>($\Rightarrow$) By the plain QFD orbit lemma, $\exists n_0
+\in G'$ with $n_0 E = F$ and $g^{-1} h n_0 \in \Stab_G(E)$.  Apply the
+main compatibility hypothesis: $g^{-1} h n_0 = k \cdot m$ with $k \in
+K_E$ and $m \in \Fix_{G'}(E) = G' \cap \Stab_G(E)$.  Set $n := n_0
+m^{-1} \in G'$.  Then $n \cdot E = n_0 m^{-1} \cdot E = n_0 \cdot E =
+F$ (since $m$ fixes $E$), and $g^{-1} h n = (k m) m^{-1} = k \in K_E$.</p>
+<p>($\Leftarrow$) From $g^{-1} h n \in K_E \subseteq \Stab_G(E)$, $(g^{-1}
+h n) \cdot E = E$, so $g \cdot E = h n \cdot E = h \cdot F$.  $\square$</p>
+<p>A second useful form gives the K-decomposition of the "reachable-by-$G$"
+face relation on $S$:</p>
+<blockquote>
+<p><strong>Lemma (K-decomposed Hom-set for $]X/G[$).</strong> For $E, E' \in S$ and
+$g \in G$:
+$$
+g \cdot E \preceq E'
+\iff
+\exists\, n, k \in G,\; n \in G',\; k \in K_E,\; n \cdot E \preceq E',\; g = n k.
+$$</p>
+</blockquote>
+<p><strong>Proof.</strong>  Apply the K-decomposed orbit lemma to $g \cdot E = 1 \cdot
+(g \cdot E)$ with $F := g \cdot E$: extract $n \in G'$ with $n \cdot
+E = g \cdot E$ and $g^{-1} n \in K_E$; take $k := n^{-1} g$.  The
+($\Leftarrow$) direction uses ($K$-fix) directly.  $\square$</p>
+<h2>The orbit category $]X/G[$ and the first equivalence</h2>
+<blockquote>
+<p><strong>Definition (orbit category $]X/G[$).</strong> Objects: cells of $X$.
+Morphisms $E \to E'$: elements $g \in G$ with $g \cdot E \preceq
+E'$.  Composition is group multiplication in reverse order.</p>
+</blockquote>
+<p>Endomorphisms in $]X/G[$ are exactly the stabiliser: an endomorphism
+$g \in \Hom_{]X/G[}(E, E)$ has $g \cdot E \preceq E$, and dimension
+preservation ($G$-action is cellular) + strict monotonicity of $\dim$
+on proper faces forces $g \cdot E = E$, so $g \in \Stab_G(E)$.  This
+identification is a monoid isomorphism $\End_{]X/G[}(E) \cong
+\Stab_G(E)$.</p>
+<p>The <strong>full subcategory</strong> on cells of $S \subseteq X$ is denoted
+$[S]_{]X/G[}$.</p>
+<blockquote>
+<p><strong>Proposition (first equivalence).</strong> If $S$ is a QFD for $G' \le G$,
+the inclusion functor
+$$
+\iota : [S]_{]X/G[} \;\longrightarrow\; ]X/G[
+$$
+is an equivalence of categories.</p>
+</blockquote>
+<p><strong>Proof.</strong> Full-subcategory inclusions are always fully faithful.
+Essential surjectivity: any cell $E \in X$ has, by QFD surjectivity, a
+$g \in G$ and $F \in S$ with $g \cdot F = E$; then $g \in
+\Hom_{]X/G[}(F, E)$ and $g^{-1} \in \Hom_{]X/G[}(E, F)$ are mutually
+inverse isomorphisms.  $\square$</p>
+<p>Passing to functor categories: for any $\mathscr C$,
+$$
+\underline{\mathrm{Fun}}([S]_{]X/G[}^{\mathrm{op}}, \mathscr C)
+  \;\simeq\;
+\underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C).
+$$</p>
+<h2>The reduction proposition</h2>
+<p>Combining the categorical equivalence with the K-cosheaf interpretation
+of the extra "action" data on the target side:</p>
+<blockquote>
+<p><strong>Proposition (reduction of equivariant cosheaves to a QFD).</strong> Let
+$K$ be a K-cosheaf on $S$ satisfying the main compatibility
+hypothesis $\Stab_G(E) = K_E \cdot \Fix_{G'}(E)$ for every $E \in
+S$.  Then there are canonical equivalences of categories
+$$
+\Cosh_G(X, \mathscr C)
+\;\simeq\;
+\underline{\mathrm{Fun}}([S]_{]X/G[}^{\mathrm{op}}, \mathscr C)
+\;\simeq\;
+\Cosh_{G', K}(S, \mathscr C),
+$$
+where $\Cosh_{G', K}(S, \mathscr C)$ is the category of $G'$-equivariant
+cosheaves on $S$ valued in the subgroup-representation category
+$\mathrm{SRep}_G(\mathscr C)$, whose $E$-component $(V_E, a^{V_E})$
+is a $K_E$-representation and whose morphism data intertwines the
+action of $\Stab_G(E) \cap K_E$ correctly.</p>
+</blockquote>
+<p><strong>Proof sketch.</strong></p>
+<ul>
+<li>
+<p><strong>First equivalence.</strong>  Equivariant cosheaves on $X$ are functors
+  $]X/G[^{\mathrm{op}} \to \mathscr C$ (with stalk action recorded on
+  endomorphisms via the isomorphism $\End_{]X/G[}(E) \cong \Stab_G(E)$).
+  Restricting along the inclusion $\iota : [S]_{]X/G[} \hookrightarrow
+  ]X/G[$ — an equivalence by the first equivalence proposition —
+  gives an equivalence of functor categories.</p>
+</li>
+<li>
+<p><strong>Second equivalence.</strong>  Unpack the resulting functor
+  $[S]_{]X/G[}^{\mathrm{op}} \to \mathscr C$ into $G'$-cosheaf data on
+  $S$ (the poset-face part) together with a stabiliser action (the
+  $\End(E) \cong \Stab_G(E)$ part).  The stabiliser action factors
+  through $K_E$ (via ($K$-fix): $K_E \le \Stab_G(E)$).  Reconstruction
+  uses the K-decomposed Hom-set: for $g : E \to E'$, canonically
+  decompose $g = n k$ with $n \in G'$ and $k \in K_E$, then set
+  $F(g) = a^{V_{E'}}_k \circ r^V_{n E, E'} \circ a^V_{n, E}$.</p>
+</li>
+</ul>
+<p>The two equivalences compose to give the full reduction.  $\square$</p>
+<h2>Downstream</h2>
+<p>This proposition is the keystone for §4 (Heisenberg–Weil equivalence)
+and §8 (reduction to depth zero): equivariant data on the <em>full</em>
+generalised building $\BSigma$ can be checked on the apartment $A$.
+See <a class="node-ref" data-node-id="depth_zero_reduction.res_sat_functors" href="../../depth_zero_reduction/depth_zero_reduction_res_sat_functors.html">Res and Sat functors between Coeff_G(B(Σ), Φ) and Coeff_M⁰(B(M))</a>.</p>
+<h2>Lean formalization</h2>
+<p>The reduction is a large body of code split across five modules; the
+pieces are integrated but the outermost equivalence
+$\Cosh_G(X, \mathscr C) \simeq \Cosh_{G', K}(S, \mathscr C)$ is
+<em>partially</em> formalised — the categorical scaffolding (orbit category,
+QFD-driven functor-category equivalence, K-decomposed Hom-set lemma,
+$\mathrm{SRep}_G(\mathscr C)$ target category) is in place; the final
+identification of $\Cosh_G(X, \mathscr C)$ with
+$\mathrm{Fun}(]X/G[^{\mathrm{op}}, \mathscr C)$ is in progress in
+<code>GCosheafToFun</code> and its downstream files.</p>
+<h3>K-cosheaf data (<code>SheafOnBuilding.KData</code>)</h3>
+<pre><code class="language-lean">structure KData (G' : Subgroup G) (S : Subcomplex X) where
+  K : X → Subgroup G
+  K_mono : ∀ ⦃E F : X⦄, E ≤ F → K F ≤ K E              -- (K-mono)
+  K_equiv : ∀ (n : G') (E : X),
+    K ((n : G) • E) = (K E).map (MulEquiv.toMonoidHom (MulAut.conj n))  -- (K-eq)
+  K_le_fix : ∀ (E : X), K E ≤ MulAction.stabilizer G E  -- (K-fix)
+</code></pre>
+<p>Derived lemmas: <code>KData.smul_fix</code> (<code>k ∈ K_E → k • E = E</code>) and
+<code>KData.K1b</code> (paper's (K1b) as a corollary).</p>
+<h3>K-decomposed QFD lemmas (<code>SheafOnBuilding.IsQuasiFundDomain</code>)</h3>
+<p>The two K-decomposed lemmas are the Lean-level statement of the paper's
+<code>lem:qfd_surj_ext</code> (orbit) and <code>lem:qfd_equiv</code> (Hom-set for $]X/G[$):</p>
+<pre><code class="language-lean">theorem orbit_iff_K
+    (κ : KData G' S)
+    (hFix : ∀ ⦃E : X⦄, E ∈ S → ∀ ⦃f : G⦄, f ∈ MulAction.stabilizer G E →
+      ∃ (k m : G), k ∈ κ.K E ∧ m ∈ G' ∧
+                   m ∈ MulAction.stabilizer G E ∧ f = k * m)
+    {E F : X} (hE : E ∈ S) (hF : F ∈ S) (g h : G) :
+    g • E = h • F ↔
+      ∃ n ∈ G', n • E = F ∧ (g⁻¹ * h * n) ∈ κ.K E
+
+theorem qfd_equiv_hom
+    (κ : KData G' S) (hFix : ...)
+    {E E' : X} (hE : E ∈ S) (hE' : E' ∈ S) (g : G) :
+    g • E ≤ E' ↔
+      ∃ (n k : G), n ∈ G' ∧ k ∈ κ.K E ∧ n • E ≤ E' ∧ g = n * k
+</code></pre>
+<p>The <code>hFix</code> hypothesis is exactly the paper's main compatibility
+hypothesis $\Stab_G(E) = K_E \cdot \Fix_{G'}(E)$, phrased as an
+existential factorisation.  It stays as a hypothesis rather than
+becoming a <code>KData</code> field — the K-cosheaf data itself does not depend
+on the ambient QFD's stabiliser structure.</p>
+<h3>Orbit category (<code>SheafOnBuilding.OrbitCat</code>)</h3>
+<pre><code class="language-lean">abbrev OrbitCat (G X : Type*) : Type _ := X
+def Mor (E E' : OrbitCat G X) : Type _ :=
+  {g : G // g • (E : X) ≤ (E' : X)}
+scoped instance category : Category (OrbitCat G X) where
+  Hom E E' := Mor E E'
+  id  := Mor.id
+  comp := Mor.comp
+  ...
+</code></pre>
+<p><code>OrbitCat G X</code> is an <code>abbrev</code> for <code>X</code> so <code>MulAction</code>, <code>PartialOrder</code>,
+<code>AbstractCellComplex</code> are visible without coercion; the <code>Category</code>
+instance is <code>scoped</code> to avoid clashing with <code>X</code>'s built-in
+Preorder-derived category.</p>
+<p>Endomorphism identification:</p>
+<pre><code class="language-lean">def endMorEquivStabilizer (E : OrbitCat G X) :
+    Mor E E ≃ MulAction.stabilizer G (E : X)          -- Equiv
+def endMulEquivStabilizer (E : OrbitCat G X) :
+    End E ≃* MulAction.stabilizer G (E : X)           -- MulEquiv
+def endToStabilizer (E : OrbitCat G X) :
+    End E →* MulAction.stabilizer G (E : X)           -- MonoidHom
+</code></pre>
+<p>The <code>≃*</code> upgrade uses <code>CategoryTheory.End</code>'s convention
+$x * y = y \circ x$, matching subgroup multiplication.</p>
+<h3>First equivalence (<code>SheafOnBuilding.OrbitCat.OnSubcomplex</code>)</h3>
+<pre><code class="language-lean">abbrev OnSubcomplex (S : Subcomplex X) :=
+  ObjectProperty.FullSubcategory (fun E =&gt; (E : X) ∈ S)
+abbrev ιOnSubcomplex (S : Subcomplex X) :
+    OnSubcomplex S ⥤ OrbitCat G X := ObjectProperty.ι _
+
+theorem ιOnSubcomplex_essSurj (G' : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G' S] : (ιOnSubcomplex S).EssSurj
+
+theorem ιOnSubcomplex_isEquivalence (G' : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G' S] : (ιOnSubcomplex S).IsEquivalence
+</code></pre>
+<p><code>ess_surj</code> uses <code>IsQuasiFundDomain.surj</code>: any $E : ]X/G[$ receives a
+$g \cdot F = E$ with $F \in S$, and then $g$ and $g^{-1}$ are mutually
+inverse morphisms in $]X/G[$.  Fully-faithful is automatic for full-
+subcategory inclusions.  Combined via
+<code>CategoryTheory.Functor.IsEquivalence.mk</code>.</p>
+<h3>Functor-category equivalence (<code>SheafOnBuilding.OrbitFunEquiv</code>)</h3>
+<pre><code class="language-lean">noncomputable def funCatEquivOfQFD (G' : Subgroup G) (S : Subcomplex X)
+    [IsQuasiFundDomain G' S] :
+    ((OnSubcomplex S)ᵒᵖ ⥤ C) ≌ ((OrbitCat G X)ᵒᵖ ⥤ C) :=
+  letI := ιOnSubcomplex_isEquivalence G' S
+  Equivalence.congrLeft (Functor.asEquivalence (ιOnSubcomplex S).op)
+</code></pre>
+<p>This is the categorical form of the paper's "first equivalence"
+$\underline{\mathrm{Fun}}([S]_{]X/G[}^{\mathrm{op}}, \mathscr C)
+\simeq \underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)$.</p>
+<h3>Target category $\mathrm{SRep}_G(\mathscr C)$ (<code>SheafOnBuilding.SRep</code>)</h3>
+<pre><code class="language-lean">structure SRep where
+  K : Subgroup G
+  V : C
+  ρ : K →* Aut V
+
+@[ext]
+structure SRep.Hom (X Y : SRep G C) where
+  f : X.K →* Y.K
+  ...  -- injectivity of f + intertwining condition
+</code></pre>
+<p>Standalone — no cell-complex machinery required.</p>
+<h3>Cosh ↦ functor on $]X/G[^{\mathrm{op}}$ (in progress:</h3>
+<p><code>SheafOnBuilding.GCosheafToFun</code>)</p>
+<p>Building block for the functor $\Cosh_G(X, \mathscr C) \to
+\underline{\mathrm{Fun}}(]X/G[^{\mathrm{op}}, \mathscr C)$:</p>
+<pre><code class="language-lean">noncomputable def GCosheaf.mapOfG
+    (W : GCosheaf G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :
+    W.base.obj (op E) ⟶ W.base.obj (op E') :=
+  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E').inv
+
+theorem GCosheaf.mapOfG_one (W : GCosheaf G X C) (E : X) :
+    W.mapOfG (1 : G) ... = 𝟙 (W.base.obj (op E))
+</code></pre>
+<p>The full functor and its inverse (the second equivalence of the
+proposition) are not yet packaged; the <code>Basic.lean</code> file header notes
+this as "pending".  Once complete, composing with <code>funCatEquivOfQFD</code>
+delivers the full reduction $\Cosh_G(X, \mathscr C) \simeq
+\Cosh_{G', K}(S, \mathscr C)$ as a chain of category equivalences.</p>
+<h3>Hypotheses used</h3>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Datum / instance hypotheses consumed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KData.K1b</code></td>
+<td>($K$-fix) alone</td>
+</tr>
+<tr>
+<td><code>orbit_iff_K</code></td>
+<td><code>IsQuasiFundDomain G' S</code> + main compatibility hypothesis</td>
+</tr>
+<tr>
+<td><code>qfd_equiv_hom</code></td>
+<td><code>IsQuasiFundDomain G' S</code> + main compatibility hypothesis</td>
+</tr>
+<tr>
+<td><code>ιOnSubcomplex_essSurj</code></td>
+<td><code>IsQuasiFundDomain G' S</code> (surj)</td>
+</tr>
+<tr>
+<td><code>ιOnSubcomplex_isEquivalence</code></td>
+<td><code>IsQuasiFundDomain G' S</code></td>
+</tr>
+<tr>
+<td><code>funCatEquivOfQFD</code></td>
+<td><code>IsQuasiFundDomain G' S</code></td>
+</tr>
+<tr>
+<td><code>GCosheaf.mapOfG_one</code></td>
+<td><code>GEquivariantCosheaf.act_one_inv</code> (from the <code>GEquivariant</code> module)</td>
+</tr>
+</tbody>
+</table>
+<p>The (P0)–(P2) fields of <code>InductionDatum</code> do <strong>not</strong> enter this node —
+the reduction is about QFDs, not about the induction construction.
+"Hypotheses" here means fields of <code>KData</code>, fields of <code>IsQuasiFundDomain</code>,
+and the main compatibility hypothesis carried as an explicit argument.
+None are Lean-kernel <code>axiom</code> declarations.</p>
+      </div>
+    </details>
     
   </div>
 

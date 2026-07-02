@@ -2680,7 +2680,7 @@
       "id": "equivariant_sheaves.reduction_to_qfd",
       "title": "Reduction of G-equivariant cosheaves to a QFD",
       "kind": "proposition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "reduction",
         "qfd",
@@ -2689,6 +2689,30 @@
       "primary_topic": "equivariant_sheaves.qfd",
       "topics": [
         "equivariant_sheaves.qfd"
+      ],
+      "lean_declarations": [
+        "SheafOnBuilding.KData",
+        "SheafOnBuilding.KData.smul_fix",
+        "SheafOnBuilding.KData.K1b",
+        "SheafOnBuilding.IsQuasiFundDomain.orbit_iff_K",
+        "SheafOnBuilding.IsQuasiFundDomain.qfd_equiv_hom",
+        "SheafOnBuilding.OrbitCat",
+        "SheafOnBuilding.OrbitCat.Mor",
+        "SheafOnBuilding.OrbitCat.Mor.id",
+        "SheafOnBuilding.OrbitCat.Mor.comp",
+        "SheafOnBuilding.OrbitCat.category",
+        "SheafOnBuilding.OrbitCat.endMorEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endMulEquivStabilizer",
+        "SheafOnBuilding.OrbitCat.endToStabilizer",
+        "SheafOnBuilding.OrbitCat.OnSubcomplex",
+        "SheafOnBuilding.OrbitCat.ιOnSubcomplex",
+        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_essSurj",
+        "SheafOnBuilding.OrbitCat.ιOnSubcomplex_isEquivalence",
+        "SheafOnBuilding.OrbitCat.funCatEquivOfQFD",
+        "SheafOnBuilding.SRep",
+        "SheafOnBuilding.SRep.Hom",
+        "SheafOnBuilding.GCosheaf.mapOfG",
+        "SheafOnBuilding.GCosheaf.mapOfG_one"
       ],
       "topic": "equivariant_sheaves.qfd",
       "uses": [
