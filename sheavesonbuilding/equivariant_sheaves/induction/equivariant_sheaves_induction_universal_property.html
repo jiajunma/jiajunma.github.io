@@ -442,6 +442,8 @@
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
     </div>
   </header>
 
@@ -453,6 +455,10 @@
         
         <li><a href="equivariant_sheaves_induction_GxP_X.html">Induced space G ×^P X&#39; along a cosheaf P</a></li>
         
+        <li><a href="equivariant_sheaves_iota_cellular_embedding.html">ι : X&#39; → G ×^P X&#39; is a cellular embedding (poset form)</a></li>
+        
+        <li><a href="equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a></li>
+        
         <li><a href="equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#39;</a></li>
         
         <li><a href="../../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a></li>
@@ -463,47 +469,267 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fd5b7bb58fac0b7e7ba20094abdc0acfc8d59cab/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+      </p>
+      
+    </div>
+  </div>
+  
 
   <div class="proposition_thmcontent thm-content body">
     <h1>Universal property of $G \times^P X'$ and induction by stages</h1>
-<h2>Universal property</h2>
-<p>Let $Y$ be a $G$-space, and define
-$$\mathrm{Map}_{G',P}(X', Y) := \{f : X' \to Y \;|\; f \text{ is } G'\text{-equivariant and } P_x \subseteq \Fix_G(f(x)) \text{ for all } x\}.$$</p>
+<p>Fix induction data $(G', P)$ on $X'$ satisfying (P1)–(P2) (P0 not
+needed for this node) and the induced space $X = G \times^P X'$
+of [[node:equivariant_sheaves.induction_GxP_X]].  Let $Y$ be <strong>any</strong>
+$G$-set.  This node characterises $X$ by a universal property: the
+$G$-equivariant maps out of $X$ are exactly the "compatible" maps out
+of $X'$, in a precise sense that pins $X$ down uniquely up to
+canonical isomorphism.</p>
+<h2>Compatible maps</h2>
 <blockquote>
-<p><strong>Proposition.</strong> The assignment $f \longmapsto \widetilde f$
-with $\widetilde f([g,x]) = g \cdot f(x)$ is a natural bijection
-$$\mathrm{Map}_{G',P}(X', Y) \;\xrightarrow{\;\sim\;}\; \mathrm{Map}_G(X, Y).$$</p>
+<p><strong>Definition ($G'$-and-$P$-compatible map).</strong> A map $f : X' \to Y$
+is <strong>$(G', P)$-compatible</strong> if</p>
+<ul>
+<li><strong>($G'$-equivariance)</strong> $f(n \cdot E) = n \cdot f(E)$ for every
+  $n \in G'$ and $E \in X'$; and</li>
+<li><strong>($P$-fix)</strong> $p \cdot f(E) = f(E)$ for every $E \in X'$ and
+  $p \in P_E$, equivalently $P_E \subseteq \Stab_G(f(E))$.</li>
+</ul>
+<p>Write $\mathrm{Map}_{G', P}(X', Y)$ for the set of $(G', P)$-compatible
+maps.</p>
+</blockquote>
+<p>The two conditions coordinate cleanly: $G'$-equivariance says $f$
+respects the $G'$-orbit structure of $X'$; the $P$-fix condition says
+the residual $P_E$-degrees of freedom (which the induction has already
+"quotiented away" in the definition of $\sim$) are killed by $f$ on
+the value side.</p>
+<h2>Universal property</h2>
+<blockquote>
+<p><strong>Proposition.</strong> The assignment $f \longmapsto \widetilde f$ defined
+by
+$$
+\widetilde f \bigl([(g, E)]\bigr) := g \cdot f(E)
+$$
+is a bijection
+$$
+\mathrm{Map}_{G', P}(X', Y) \;\xrightarrow{\;\sim\;}\; \mathrm{Map}_G(X, Y),
+$$
+natural in $Y$.  The inverse sends $\Phi \in \mathrm{Map}_G(X, Y)$ to
+$f(E) := \Phi(\iota E)$.</p>
 </blockquote>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Well-definedness of $\widetilde f$ uses
-$(g,x) \sim (h,y) \Rightarrow y = nx$ and $g^{-1}hn \in P_x \subseteq
-\Fix_G(f(x))$, hence
-$h \cdot f(y) = h n \cdot f(x) = g \cdot (g^{-1}hn) \cdot f(x) = g \cdot f(x)$.
-Conversely, for $\Phi \in \mathrm{Map}_G(X,Y)$, set $f(x) := \Phi([1,x])$;
-$G'$-equivariance follows because $\Phi$ is $G$-equivariant, and the
-$P_x$-fixing condition follows from $[1,x] = [p,x]$ for $p \in P_x$.</p>
+        <p><strong>Forward direction is well-defined.</strong>  Given $f \in \mathrm{Map}<em>{G',
+P}(X', Y)$, we must check that $g \cdot f(E)$ depends only on the
+class $[(g, E)]$.  Suppose $(g_1, E_1) \sim (g_2, E_2)$: witness $n
+\in G'$ with $n \cdot E_1 = E_2$ and $g_1^{-1} g_2 n \in P</em>{E_1}$.
+Then
+$$
+g_2 \cdot f(E_2) \;=\; g_2 \cdot f(n \cdot E_1)
+\;\stackrel{G'\text{-eq.}}{=}\; g_2 n \cdot f(E_1)
+\;=\; g_1 \cdot \bigl(g_1^{-1} g_2 n\bigr) \cdot f(E_1)
+\;\stackrel{P\text{-fix}}{=}\; g_1 \cdot f(E_1).
+$$
+The first equality is $G'$-equivariance of $f$; the last uses
+$g_1^{-1} g_2 n \in P_{E_1}$, i.e.\ $(g_1^{-1} g_2 n) \cdot f(E_1) =
+f(E_1)$.</p>
+<p><strong>Forward direction is $G$-equivariant.</strong>  For $g' \in G$:
+$\widetilde f(g' \cdot [(g, E)]) = \widetilde f([(g' g, E)]) =
+(g' g) \cdot f(E) = g' \cdot \widetilde f([(g, E)])$.</p>
+<p><strong>Backward direction produces a compatible map.</strong>  Given $\Phi \in
+\mathrm{Map}_G(X, Y)$, define $f(E) := \Phi(\iota E)$.</p>
+<ul>
+<li>$G'$-equivariance of $f$: for $n \in G'$,
+  $f(n \cdot E) = \Phi(\iota(n \cdot E)) = \Phi(n \cdot \iota E) =
+  n \cdot \Phi(\iota E) = n \cdot f(E)$, using
+  $\iota(n \cdot E) = n \cdot \iota E$
+  (<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (3),
+  which is (P1)-based) and $G$-equivariance of $\Phi$.</li>
+<li>$P$-fix: for $p \in P_E$,
+  $p \cdot f(E) = p \cdot \Phi(\iota E) = \Phi(p \cdot \iota E) =
+  \Phi(\iota E) = f(E)$, using $p \cdot \iota E = \iota E$
+  (<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="../equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a> Lemma A(2),
+  $P_E \subseteq \Stab_G(\iota E)$) and $G$-equivariance of $\Phi$.</li>
+</ul>
+<p><strong>The two maps are mutual inverses.</strong>  Composing:
+- $(f \mapsto \widetilde f \mapsto \Phi \mapsto f')$: $f'(E) =
+  \widetilde f(\iota E) = \widetilde f([(1, E)]) = 1 \cdot f(E) =
+  f(E)$.
+- $(\Phi \mapsto f \mapsto \widetilde f \mapsto \Phi')$:
+  $\Phi'([(g, E)]) = g \cdot f(E) = g \cdot \Phi(\iota E) =
+  \Phi(g \cdot \iota E) = \Phi([(g, E)])$.</p>
+<p>Naturality in $Y$ is verified by direct calculation on either
+formula.  $\square$</p>
+<h2>Consequence: the induced space is unique up to canonical iso</h2>
+<p>The universal property characterises $G \times^P X'$ up to a unique
+$G$-equivariant isomorphism.  Any other $G$-space $X''$ equipped with
+a $(G', P)$-compatible map $X' \to X''$ satisfying the same universal
+property is canonically identified with $G \times^P X'$ via the pair
+of forward and backward maps.</p>
 <h2>Induction by stages</h2>
-<p>Let $G'' \le G' \le G$, and suppose $P$ is a cosheaf of subgroups of $G$
-on a $G''$-space $X''$ satisfying (P1)–(P2) for $G'' \le G$. Set
-$P'_x := P_x \cap G'$ (a cosheaf for $G'$) and $X' := G' \times^{P'} X''$,
-and extend $P$ to $X'$ by $\widetilde P_{g' E} := g' P_E (g')^{-1}$.</p>
+<p>Let $G'' \le G' \le G$, and suppose $P$ is a cosheaf of subgroups of
+$G$ on a $G''$-space $X''$ satisfying (P1)–(P2) for $G'' \le G$.
+Set $P'_E := P_E \cap G'$ (a cosheaf of subgroups of $G'$ on
+$X''$), and let $X' := G' \times^{P'} X''$.  Extend $P$ to $X'$ by
+$\widetilde P_{[g', E]} := g' P_E (g')^{-1}$; well-definedness on
+$\sim$-classes uses (P1) for $P$.</p>
 <blockquote>
-<p><strong>Proposition (induction by stages).</strong> There is a canonical $G$-equivariant
-bijection
-$$\Phi \colon G \times^{\widetilde P} (G' \times^{P'} X'') \;\xrightarrow{\;\sim\;}\; G \times^P X'',
-  \qquad \Phi([g, [g', x]]) = [g g', x].$$</p>
+<p><strong>Proposition (induction by stages).</strong> There is a canonical
+$G$-equivariant bijection
+$$
+\Phi : G \times^{\widetilde P} \bigl(G' \times^{P'} X''\bigr)
+  \;\xrightarrow{\;\sim\;}\; G \times^P X'',
+  \qquad
+  \Phi\bigl([g,\, [g', E]]\bigr) = [g g', E].
+$$</p>
 </blockquote>
-<p><strong>Proof.</strong> Verify that the LHS satisfies the same universal property
-as the RHS. For $f \in \mathrm{Map}_{G'', P}(X'', Y)$, define
-$\widetilde f([g',x]) := g' f(x) \in \mathrm{Map}_{G', P'}(G' \times^{P'} X'', Y)$,
-then extend to $\widetilde{\widetilde f} \in \mathrm{Map}_G(G \times^{\widetilde P}(G' \times^{P'} X''), Y)$.
-The map $f \mapsto \widetilde{\widetilde f}$ is a natural bijection. $\square$</p>
-<p>This stages identity is exactly what extends the generalized-building
-cosheaf $K$ from the apartment $A$ to the full Bruhat–Tits building of $G'$;
-see <a class="node-ref" data-node-id="building.generalized_building_bs" href="../../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a>.</p>
+<p><strong>Proof sketch.</strong> Apply the universal property twice.  For any
+$G$-set $Y$:
+$$
+\mathrm{Map}_G(G \times^{\widetilde P}(G' \times^{P'} X''),\, Y)
+\;\cong\; \mathrm{Map}_{G', \widetilde P}(G' \times^{P'} X'',\, Y)
+\;\cong\; \mathrm{Map}_{G'', P}(X'',\, Y)
+\;\cong\; \mathrm{Map}_G(G \times^P X'',\, Y).
+$$
+Both sides represent the same functor $Y \mapsto \mathrm{Map}_{G'',
+P}(X'', Y)$, so the corresponding representing objects are
+canonically isomorphic.  Explicit calculation on classes confirms
+$\Phi([g, [g', E]]) = [g g', E]$.  $\square$</p>
+<h2>Downstream</h2>
+<p>The stages identity is exactly what extends the generalised-building
+cosheaf $K$ from an apartment $A$ to the full Bruhat–Tits building of
+$G'$; see <a class="node-ref" data-node-id="building.generalized_building_bs" href="../../building/building_generalized_building_bs.html">Generalized building B(Σ) = G ×^K A</a>.</p>
+<h2>Lean formalization</h2>
+<p>The universal property is not yet formalised in
+<code>SheafOnBuilding.Induction</code>.  The formalisation below is a design
+sketch — one that stays entirely within the abstract poset framework
+and requires no additional cell-complex structure on the target
+$G$-set $Y$.</p>
+<h3>Target types</h3>
+<p>The category of $(G', P)$-compatible maps is captured by a <code>structure</code>
+paralleling <code>InductionDatum</code>:</p>
+<pre><code class="language-lean">structure InductionMap (d : InductionDatum X') (Y : Type*)
+    [MulAction G Y] where
+  toFun : X' → Y
+  /-- G'-equivariance: `f (n • E) = n • f E` for `n ∈ G'`. -/
+  equivariant : ∀ {n : G}, n ∈ d.G' → ∀ (E : X'),
+    toFun (n • E) = n • toFun E
+  /-- Fix condition: every `p ∈ P E` fixes `f E`. -/
+  fix_P : ∀ (E : X') (p : G), p ∈ d.P E → p • toFun E = toFun E
+</code></pre>
+<p>The category of $G$-equivariant maps $X \to Y$ is Mathlib's
+<code>MulActionHom G X Y</code>, notated <code>X →[G] Y</code>.</p>
+<h3>Forward direction: descend</h3>
+<pre><code class="language-lean">def InductionMap.descend (f : InductionMap d Y) :
+    InducedSpace d →[G] Y where
+  toFun := Quotient.lift (fun gE : G × X' =&gt; gE.1 • f.toFun gE.2) &lt;| by
+    rintro ⟨g₁, E₁⟩ ⟨g₂, E₂⟩ ⟨n, hn_G, hn_smul, hn_P⟩
+    -- Goal: g₁ • f E₁ = g₂ • f E₂
+    -- Use f.equivariant hn_G to rewrite f E₂ = f (n • E₁) = n • f E₁
+    -- Then use f.fix_P E₁ (g₁⁻¹ g₂ n) hn_P to absorb the residual.
+    sorry
+  map_smul' g q := by
+    refine Quotient.inductionOn q ?_
+    rintro ⟨h, E⟩
+    show (g * h) • f.toFun E = g • (h • f.toFun E)
+    rw [mul_smul]
+</code></pre>
+<p>The well-definedness computation is the paper's proof translated to
+Lean: from $g_1^{-1} g_2 n \in P_{E_1}$ (in <code>d.P E₁</code>) and <code>f.fix_P</code>,
+$(g_1^{-1} g_2 n) \cdot f(E_1) = f(E_1)$; multiplying by $g_1$ on the
+left,
+$g_2 \cdot n \cdot f(E_1) = g_1 \cdot f(E_1)$; then apply
+<code>f.equivariant hn_G</code> to replace $n \cdot f(E_1)$ by
+$f(n \cdot E_1) = f(E_2)$.</p>
+<h3>Backward direction: restrict</h3>
+<pre><code class="language-lean">def restrict (Φ : InducedSpace d →[G] Y) : InductionMap d Y where
+  toFun E := Φ (iota d E)
+  equivariant := by
+    intro n hn E
+    -- f (n • E) = Φ (ι (n • E)) = Φ (n • ι E) = n • Φ (ι E) = n • f E
+    rw [← iota_smul_of_mem_G' d hn E, Φ.map_smul]
+  fix_P := by
+    intro E p hp
+    -- p • Φ (ι E) = Φ (p • ι E) = Φ (ι E)
+    rw [← Φ.map_smul p (iota d E),
+        MulAction.stabilizer_iff.mp (P_le_stabilizer_iota d E hp)]
+</code></pre>
+<p>The <code>G'</code>-equivariance uses <code>iota_smul_of_mem_G'</code>
+(<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (3),
+Lean lemma <code>iota_smul_of_mem_G'</code>).  The fix condition uses
+<code>P_le_stabilizer_iota</code>
+(<a class="node-ref" data-node-id="equivariant_sheaves.stabilizer_formula_iota" href="../equivariant_sheaves_stabilizer_formula_iota.html">Cell-stabiliser and fixator formulas on the induced space</a> Lemma A(2)).</p>
+<h3>Assembly: the equivalence</h3>
+<pre><code class="language-lean">def universalProperty : InductionMap d Y ≃ (InducedSpace d →[G] Y) where
+  toFun := InductionMap.descend
+  invFun := restrict
+  left_inv := by intro f; ext E; simp [descend, restrict, iota]
+  right_inv := by
+    intro Φ
+    ext q
+    refine Quotient.inductionOn q ?_
+    rintro ⟨g, E⟩
+    -- (descend (restrict Φ)) ⟦(g, E)⟧ = g • Φ (ι E) = Φ (g • ι E) = Φ ⟦(g, E)⟧
+    show g • Φ (iota d E) = Φ ⟦(g, E)⟧
+    rw [← Φ.map_smul]
+    rfl
+</code></pre>
+<p>The <code>left_inv</code> check is: <code>(descend f) (ι E) = 1 • f E = f E</code>.
+The <code>right_inv</code> check unfolds representative-wise and uses $g \cdot
+\iota E = [(g, E)]$ (which is by definition of the $G$-action on
+<code>InducedSpace</code>).</p>
+<h3>Axiom cost</h3>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Axioms used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>descend</code> well-definedness</td>
+<td>(P1) via $f$'s $G'$-equivariance being verifiable on all reps</td>
+</tr>
+<tr>
+<td><code>descend</code> $G$-equivariance</td>
+<td>none (definitional)</td>
+</tr>
+<tr>
+<td><code>restrict</code> $G'$-equivariance</td>
+<td>(P1) via <code>iota_smul_of_mem_G'</code></td>
+</tr>
+<tr>
+<td><code>restrict</code> fix</td>
+<td>Lemma A(2): $P_E \subseteq \Stab_G(\iota E)$ (no extra axiom)</td>
+</tr>
+<tr>
+<td><code>left_inv</code> / <code>right_inv</code></td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p>(P0) and (P2) are <strong>not needed</strong> for the universal property.  This
+matches the paper: the universal property is a structural fact about
+the quotient by $\sim$, not about the face relation.</p>
+<h3>Induction by stages (further follow-up)</h3>
+<p>The induction-by-stages identity requires setting up the double
+induction $G \times^{\widetilde P}(G' \times^{P'} X'')$ in Lean, which
+is a fresh <code>InductionDatum</code> for the outer step.  The cleanest route
+is to prove it via the universal property (two applications of
+<code>universalProperty</code>), avoiding an explicit combinatorial calculation
+on classes.  Implementing this requires the universal property above
+to be in place first.</p>
       </div>
     </details>
     

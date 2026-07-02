@@ -2519,11 +2519,14 @@
       "topics": [
         "equivariant_sheaves.induction"
       ],
+      "lean_declarations": [],
       "topic": "equivariant_sheaves.induction",
       "uses": [
         "building.generalized_building_bs",
         "equivariant_sheaves.induced_cw_structure",
-        "equivariant_sheaves.induction_GxP_X"
+        "equivariant_sheaves.induction_GxP_X",
+        "equivariant_sheaves.iota_cellular_embedding",
+        "equivariant_sheaves.stabilizer_formula_iota"
       ]
     },
     {
@@ -2573,7 +2576,8 @@
       ],
       "used_by": [
         "equivariant_sheaves.induced_cw_structure",
-        "equivariant_sheaves.induced_qfd_property"
+        "equivariant_sheaves.induced_qfd_property",
+        "equivariant_sheaves.induction_universal_property"
       ]
     },
     {
@@ -2713,7 +2717,8 @@
       ],
       "used_by": [
         "equivariant_sheaves.induced_cw_structure",
-        "equivariant_sheaves.induced_qfd_property"
+        "equivariant_sheaves.induced_qfd_property",
+        "equivariant_sheaves.induction_universal_property"
       ]
     },
     {
@@ -4235,6 +4240,14 @@
     },
     {
       "from": "equivariant_sheaves.induction_GxP_X",
+      "to": "equivariant_sheaves.induction_universal_property"
+    },
+    {
+      "from": "equivariant_sheaves.iota_cellular_embedding",
+      "to": "equivariant_sheaves.induction_universal_property"
+    },
+    {
+      "from": "equivariant_sheaves.stabilizer_formula_iota",
       "to": "equivariant_sheaves.induction_universal_property"
     },
     {
