@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Well-defined poset structure on the induced space G ×^P X&#39; — Sheaves on Buildings — Knowledge Base</title>
+  <title>Face relation and poset structure on the induced space G ×^P X&#39; — Sheaves on Buildings — Knowledge Base</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -237,6 +237,8 @@
       
         <li><a href="../../keywords/face-poset.html">face-poset</a></li>
       
+        <li><a href="../../keywords/face-relation.html">face-relation</a></li>
+      
         <li><a href="../../keywords/final-step.html">final-step</a></li>
       
         <li><a href="../../keywords/fintzen.html">fintzen</a></li>
@@ -415,8 +417,6 @@
       
         <li><a href="../../keywords/wang.html">wang</a></li>
       
-        <li><a href="../../keywords/well-definedness.html">well-definedness</a></li>
-      
         <li><a href="../../keywords/yu.html">yu</a></li>
       
       </ul>
@@ -428,7 +428,7 @@
 <article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-equivariant_sheaves-2e-induced_poset_structure">
   <header class="proposition_thmheading thm-heading">
     <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Well-defined poset structure on the induced space G ×^P X&#39;</span>
+    <span class="proposition_thmtitle thm-title">Face relation and poset structure on the induced space G ×^P X&#39;</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-proposition">proposition</span>
@@ -595,7 +595,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/dfd115989e1946bbc9db97bc300482ee304ed59e/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/cd793dba82ada2a5a09d60ebd39921fd2ba1c32e/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -603,275 +603,287 @@
   
 
   <div class="proposition_thmcontent thm-content body">
-    <h1>Well-defined poset structure on the induced space</h1>
+    <h1>Face relation and poset structure on the induced space</h1>
 <p>Fix the induction data $(G', P)$ satisfying (P0)–(P2) and the induced
 space $X = G \times^P X'$ of
 [[node:equivariant_sheaves.induction_GxP_X]], with
 $\iota : X' \hookrightarrow X$, $E \mapsto [(1, E)]$.</p>
-<p>The face relation on $X$ is not automatic from the definition of $X$
-as a set-theoretic quotient — it must be constructed and shown to
-descend to the quotient by $\sim$.</p>
-<h2>Definition (generator + reflexive-transitive closure)</h2>
+<p>The face relation on $X$ has to be introduced by hand — $X$ is only
+a set-theoretic quotient — and then shown to make $X$ a partial
+order.</p>
+<h2>Definition</h2>
 <blockquote>
-<p><strong>Definition.</strong> The <strong>face relation</strong> $\preceq$ on $X = G \times^P
-X'$ is the smallest reflexive transitive relation on $X$ satisfying
-the following <strong>generator</strong>:
+<p><strong>Definition (face relation on $X$).</strong> For $x \in X$ and a class
+$[(g, E)] \in X$,
 $$
-&gt; \text{for every } g \in G \text{ and } F, E \in [\![X']\!]
-&gt; \text{ with } F \preceq E \text{ in } X', \qquad
-&gt; g \cdot \iota F \;\preceq\; g \cdot \iota E.
+&gt; x \;\preceq\; [(g, E)]
+&gt; \;\iff\;
+&gt; \text{there exists } F \preceq E \text{ in } X'
+&gt; \text{ with } x = [(g, F)].
 &gt; $$</p>
 </blockquote>
-<p>Equivalently, $\preceq$ is the reflexive-transitive closure of the
-generator relation ${(g \cdot \iota F, g \cdot \iota E) : g \in G,\,
-F \preceq E \text{ in } X'}$ on the quotient $X$.  The chain
-condition on $X'$ (strict monotonicity of $\dim$ along proper faces)
-carries over: reflexivity is the $F = E$ case; transitivity is the
-closure axiom.</p>
+<p>In prose: <strong>fix any representative $(g, E)$ of the right-hand class;
+then $x \preceq [(g, E)]$ means $x$ has a representative with the
+same $G$-component $g$ and an $X'$-component that is a subface of
+$E$.</strong>  No reflexive-transitive closure is needed — the ambient
+equivalence relation $\sim$ (which lets us shift representatives)
+absorbs all closure steps into a single generator.</p>
+<p>Reflexivity is built in: for any class $[(g, E)]$, take $F := E$;
+then $F \preceq E$ in $X'$ (reflexivity of the base poset) and
+$[(g, F)] = [(g, E)]$.</p>
+<p>Well-definedness of the definition in the choice of representative
+$(g, E)$ of the right-hand class is verified below (Right descent).</p>
 <h2>Equivalent characterisation</h2>
-<p>The reflexive-transitive closure form is elegant but not immediately
-usable for calculation.  The following point-wise characterisation
-gives a single-quantifier form used throughout the induction / QFD
-proofs:</p>
 <blockquote>
-<p><strong>Theorem (single-witness characterisation).</strong> For representatives
-$(g_1, E_1), (g_2, E_2) \in G \times X'$,
+<p><strong>Theorem 1 (single-witness form).</strong> For $(g_1, E_1), (g_2, E_2)
+\in G \times X'$,
 $$
 &gt; [(g_1, E_1)] \;\preceq\; [(g_2, E_2)]
 &gt; \;\iff\;
 &gt; \exists\, n \in G',\quad n \cdot E_1 \preceq E_2 \text{ in } X'
-&gt; \;\;\text{and}\;\; g_1^{-1} g_2 n \in P_{E_1}.
+&gt; \;\wedge\; g_1^{-1} g_2 n \in P_{E_1}.
 &gt; $$</p>
 </blockquote>
-<p>Note the parallel with the equivalence relation
-$\sim$ of [[node:equivariant_sheaves.induction_GxP_X]]: replacing
-$\preceq$ on $X'$ by $=$ recovers $\sim$ verbatim.</p>
-<p><strong>Proof (theorem).</strong> ($\Leftarrow$) Given $n \in G'$ with the stated
-properties, we exhibit a two-step chain
-$[(g_1, E_1)] \;\sim\; [(g_2, n \cdot E_1)] \;\preceq_{\text{gen}}\;
-[(g_2, E_2)]$:</p>
-<ul>
-<li>Equivalence step. Apply the definition of $\sim$ with witness $m
-  := n \in G'$: $m \cdot E_1 = n \cdot E_1$ (trivially), and
-  $g_1^{-1} g_2 m = g_1^{-1} g_2 n \in P_{E_1}$ by hypothesis. So
-  $(g_1, E_1) \sim (g_2, n \cdot E_1)$.</li>
-<li>Generator step. From $n \cdot E_1 \preceq E_2$ in $X'$ and the
-  generator with $F = n \cdot E_1$, $E = E_2$, $g = g_2$:
-  $g_2 \cdot \iota(n \cdot E_1) \preceq g_2 \cdot \iota E_2$, i.e.
-  $[(g_2, n \cdot E_1)] \preceq [(g_2, E_2)]$.</li>
-</ul>
-<p>Combining: $[(g_1, E_1)] \preceq [(g_2, E_2)]$.</p>
-<p>($\Rightarrow$) The single-witness form is reflexive (take $n = 1$),
-contains all generators (take $n = 1$), and is transitive under
-(P0)+(P1) (see below). Hence it contains the reflexive-transitive
-closure. $\square$</p>
-<p>The single-witness form is precisely the pre-quotient face relation
+<p>Compare with the equivalence relation $\sim$ of
+[[node:equivariant_sheaves.induction_GxP_X]]: replacing $\preceq$ on
+$X'$ by $=$ recovers $\sim$ verbatim.  The face relation and the
+equivalence relation share the same syntactic shape.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>($\Rightarrow$) Assume the definition: $\exists F \preceq E_2$ with
+$[(g_1, E_1)] = [(g_2, F)]$.  Unpacking $\sim$: $\exists n \in G'$
+with $n \cdot E_1 = F$ and $g_1^{-1} g_2 n \in P_{E_1}$.  Then
+$n \cdot E_1 = F \preceq E_2$ and $g_1^{-1} g_2 n \in P_{E_1}$.</p>
+<p>($\Leftarrow$) Assume the single-witness form with witness $n$.
+Set $F := n \cdot E_1$.  Then $F \preceq E_2$ (given), and
+$[(g_1, E_1)] = [(g_2, F)]$ holds by applying $\sim$ with the same
+witness $m := n$: $m \cdot E_1 = n \cdot E_1 = F$, and
+$g_1^{-1} g_2 n \in P_{E_1}$ (given).  So the definition holds with
+$F$ as chosen.  $\square$</p>
+<p>The single-witness form is the pre-quotient relation
 $\preceq_{\text{rep}}$ on $G \times X'$:
 $$
 (g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)
 \;:\iff\;
 \exists\, n \in G',\;\; n \cdot E_1 \preceq E_2 \;\text{and}\; g_1^{-1} g_2 n \in P_{E_1}.
-$$</p>
-<h2>Proposition: $\preceq_{\text{rep}}$ descends to a partial order</h2>
+$$
+It is the form used in every downstream calculation.</p>
+<h2>Transitivity</h2>
 <blockquote>
-<p><strong>Proposition.</strong> Under (P0)–(P2), $\preceq_{\text{rep}}$ on
-$G \times X'$ satisfies:</p>
-<ol>
-<li><strong>Reflexivity.</strong> $(g, E) \preceq_{\text{rep}} (g, E)$.</li>
-<li><strong>Transitivity.</strong> $(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and
-   $(g_2, E_2) \preceq_{\text{rep}} (g_3, E_3)$ imply
-   $(g_1, E_1) \preceq_{\text{rep}} (g_3, E_3)$.</li>
-<li><strong>Left descent.</strong> If $(g_1, E_1) \sim (g_1', E_1')$ then
-   $(g_1, E_1) \preceq_{\text{rep}} (h, F) \iff
-    (g_1', E_1') \preceq_{\text{rep}} (h, F)$.</li>
-<li><strong>Right descent.</strong> If $(h, F) \sim (h', F')$ then
-   $(g, E) \preceq_{\text{rep}} (h, F) \iff
-    (g, E) \preceq_{\text{rep}} (h', F')$.</li>
-<li><strong>Antisymmetry modulo $\sim$.</strong> If both
-   $(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and
-   $(g_2, E_2) \preceq_{\text{rep}} (g_1, E_1)$, then
-   $(g_1, E_1) \sim (g_2, E_2)$.</li>
-</ol>
+<p><strong>Theorem 2 (transitivity).</strong> Under (P0) and (P1), $\preceq$ on
+$X$ is transitive.</p>
 </blockquote>
-<p>Consequently, $\preceq$ on $X = (G \times X')/{\sim}$ is a
-well-defined partial order and coincides with both the
-reflexive-transitive closure of the generators (by the theorem) and
-the descent of $\preceq_{\text{rep}}$.</p>
-    
-    <details class="proof-details">
-      <summary>Proof</summary>
-      <div class="proof-body">
-        <p>of the proposition</p>
-<p><strong>(1) Reflexivity.</strong> Take $n := 1 \in G'$. Then $1 \cdot E = E \preceq
-E$ and $g^{-1} g \cdot 1 = 1 \in P_E$.</p>
-<p><strong>(2) Transitivity.</strong> Given witnesses $n_1$ for
+<p>Equivalently, $\preceq_{\text{rep}}$ on $G \times X'$ is transitive.</p>
+<p><strong>Proof.</strong>  Given witnesses $n_1$ for
 $(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ and $n_2$ for
 $(g_2, E_2) \preceq_{\text{rep}} (g_3, E_3)$, take $n := n_2 n_1
 \in G'$.</p>
-<p>Face-chain: $(n_2 n_1) \cdot E_1 = n_2 \cdot (n_1 \cdot E_1)
-\preceq n_2 \cdot E_2 \preceq E_3$ using cellularity ($n_2$ preserves
+<p><strong>Face-chain.</strong> $n \cdot E_1 = n_2 \cdot (n_1 \cdot E_1) \preceq
+n_2 \cdot E_2 \preceq E_3$, using cellularity of $n_2$ (preserves
 $\preceq$) and transitivity of $\preceq$ on $X'$.</p>
-<p>Membership: from $g_1^{-1} g_2 n_1 \in P_{E_1}$ and
-$g_2^{-1} g_3 n_2 \in P_{E_2}$:</p>
+<p><strong>Residual.</strong> Set $p_1 := g_1^{-1} g_2 n_1 \in P_{E_1}$ and
+$p_2 := g_2^{-1} g_3 n_2 \in P_{E_2}$.  Then
+$$
+g_1^{-1} g_3 (n_2 n_1)
+= (g_1^{-1} g_2)(g_2^{-1} g_3 n_2)(n_1)
+= (p_1 n_1^{-1}) p_2 n_1
+= p_1 \cdot \bigl(n_1^{-1} p_2 n_1\bigr).
+$$</p>
+<p>To conclude $g_1^{-1} g_3 n \in P_{E_1}$, we show
+$n_1^{-1} p_2 n_1 \in P_{E_1}$:</p>
 <ul>
-<li>By (P0) and $n_1 \cdot E_1 \preceq E_2$: $P_{E_2} \le P_{n_1 \cdot
-  E_1}$, so $g_2^{-1} g_3 n_2 \in P_{n_1 \cdot E_1}$.</li>
-<li>By (P1): $P_{n_1 \cdot E_1} = n_1 P_{E_1} n_1^{-1}$, so there
-  exists $p \in P_{E_1}$ with $n_1 p n_1^{-1} = g_2^{-1} g_3 n_2$.</li>
-<li>Rearranging: $g_1^{-1} g_3 (n_2 n_1) = (g_1^{-1} g_2 n_1) \cdot p
-  \in P_{E_1} \cdot P_{E_1} = P_{E_1}$.</li>
+<li>$p_2 \in P_{E_2}$.</li>
+<li>From $n_1 \cdot E_1 \preceq E_2$ and (P0):
+  $P_{E_2} \le P_{n_1 \cdot E_1}$, so $p_2 \in P_{n_1 \cdot E_1}$.</li>
+<li>From (P1): $P_{n_1 \cdot E_1} = n_1 P_{E_1} n_1^{-1}$, i.e.\
+  $n_1^{-1} P_{n_1 \cdot E_1} n_1 = P_{E_1}$.  Applying to $p_2$:
+  $n_1^{-1} p_2 n_1 \in P_{E_1}$.</li>
 </ul>
-<p><strong>(3) Left descent.</strong> Suppose $(g_1, E_1) \sim (g_1', E_1')$ with
-witness $m \in G'$: $m \cdot E_1 = E_1'$ and $g_1^{-1} g_1' m \in
-P_{E_1}$. Assume $(g_1, E_1) \preceq_{\text{rep}} (h, F)$ with witness
-$n$. Take $n'' := n m^{-1} \in G'$:</p>
+<p>Hence $g_1^{-1} g_3 n = p_1 \cdot (n_1^{-1} p_2 n_1) \in P_{E_1}
+\cdot P_{E_1} = P_{E_1}$.  $\square$</p>
+<p><strong>Where each axiom enters.</strong> (P0) lifts $p_2$ from $P_{E_2}$ into
+the larger $P_{n_1 \cdot E_1}$ along the face relation $n_1 E_1
+\preceq E_2$.  (P1) conjugates $P_{n_1 \cdot E_1}$ back to $P_{E_1}$
+via $n_1 \in G'$.  Neither can be dispensed with — a $P$ without
+cosheaf monotonicity or without $G'$-equivariance already breaks
+transitivity of the induced face relation.</p>
+<h2>Well-definedness on classes (descent of $\preceq_{\text{rep}}$)</h2>
+<p>The definition above uses a representative $(g, E)$ of the
+right-hand class; we now verify that the resulting relation on
+classes is independent of this choice.  Equivalently:
+$\preceq_{\text{rep}}$ on $G \times X'$ is $\sim$-invariant on both
+arguments.</p>
+<blockquote>
+<p><strong>Proposition (descent).</strong> Under (P0) and (P1), for
+$(g_1, E_1) \sim (g_1', E_1')$ and $(g_2, E_2) \sim (g_2', E_2')$,
+$$
+&gt; (g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)
+&gt; \iff
+&gt; (g_1', E_1') \preceq_{\text{rep}} (g_2', E_2').
+&gt; $$</p>
+</blockquote>
+<p><strong>Proof (left descent).</strong>  Take $m \in G'$ with $m \cdot E_1 = E_1'$
+and $\alpha := g_1^{-1} g_1' m \in P_{E_1}$.  Assume $(g_1, E_1)
+\preceq_{\text{rep}} (g_2, E_2)$ with witness $n$.  Take $n'' :=
+n m^{-1}$:</p>
 <ul>
 <li>Face-chain: $n'' \cdot E_1' = n m^{-1} \cdot (m \cdot E_1) =
-  n \cdot E_1 \preceq F$.</li>
-<li>Membership: write $g_1^{-1} g_1' m = \alpha \in P_{E_1}$. Then
-  $(g_1')^{-1} h n'' = m \alpha^{-1} g_1^{-1} h n m^{-1}$; substitute
-  $g_1^{-1} h n \in P_{E_1}$ and use (P1) with $m$ to conclude
-  $m \alpha^{-1} (g_1^{-1} h n) m^{-1} \in m P_{E_1} m^{-1} =
+  n \cdot E_1 \preceq E_2$.</li>
+<li>Membership: $(g_1')^{-1} g_2 n'' = m \alpha^{-1} g_1^{-1} g_2 n
+  m^{-1}$; substitute $g_1^{-1} g_2 n \in P_{E_1}$ and use (P1)
+  with $m$ to conclude
+  $m \alpha^{-1} (g_1^{-1} g_2 n) m^{-1} \in m P_{E_1} m^{-1} =
   P_{m \cdot E_1} = P_{E_1'}$.</li>
 </ul>
-<p>The reverse implication is symmetric via $m^{-1}$.</p>
-<p><strong>(4) Right descent.</strong> Suppose $(h, F) \sim (h', F')$ with witness
-$m$. Assume $(g, E) \preceq_{\text{rep}} (h, F)$ with witness $n$.
-Take $n'' := m n \in G'$:</p>
+<p>Reverse direction: symmetric via $m^{-1}$.</p>
+<p><strong>Proof (right descent).</strong>  Take $m \in G'$ with $m \cdot E_2 =
+E_2'$ and $\beta := g_2^{-1} g_2' m \in P_{E_2}$.  Assume $(g_1,
+E_1) \preceq_{\text{rep}} (g_2, E_2)$ with witness $n$.  Take
+$n'' := m n$:</p>
 <ul>
-<li>Face-chain: $n'' \cdot E = m \cdot (n \cdot E) \preceq m \cdot F =
-  F'$.</li>
-<li>Membership: write $h^{-1} h' m = \alpha \in P_F$. By (P0) with
-  $n \cdot E \preceq F$: $\alpha \in P_F \le P_{n \cdot E}$. By (P1):
-  $\alpha = n p n^{-1}$ for some $p \in P_E$. Compute $g^{-1} h' n'' =
-  (g^{-1} h n) \cdot p$; both factors lie in $P_E$.</li>
+<li>Face-chain: $n'' \cdot E_1 = m \cdot (n \cdot E_1) \preceq m
+  \cdot E_2 = E_2'$.</li>
+<li>Membership: $\beta \in P_{E_2}$, and by (P0) with $n \cdot E_1
+  \preceq E_2$: $\beta \in P_{n \cdot E_1}$.  By (P1): $\beta =
+  n p n^{-1}$ for some $p \in P_{E_1}$.  Compute $g_1^{-1} g_2'
+  n'' = (g_1^{-1} g_2 n) \cdot p \in P_{E_1} \cdot P_{E_1} =
+  P_{E_1}$.</li>
 </ul>
-<p><strong>(5) Antisymmetry modulo $\sim$.</strong> From
-$(g_1, E_1) \preceq_{\text{rep}} (g_2, E_2)$ via $n_1$ and the reverse
-via $n_2$, we obtain $(n_2 n_1) \cdot E_1 \preceq E_1$. Because the
-$G$-action is cellular it preserves dimension
-(<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>):
-$\dim((n_2 n_1) \cdot E_1) = \dim E_1$. Strict monotonicity of $\dim$
-along a proper face-chain
-(<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a>) then forces
-$(n_2 n_1) \cdot E_1 = E_1$, hence $n_1 \cdot E_1 = E_2$ (and the
+<p>$\square$</p>
+<h2>Antisymmetry and partial-order structure</h2>
+<blockquote>
+<p><strong>Theorem 3 (antisymmetry mod $\sim$).</strong> If $(g_1, E_1)
+\preceq_{\text{rep}} (g_2, E_2)$ and $(g_2, E_2)
+\preceq_{\text{rep}} (g_1, E_1)$, then $(g_1, E_1) \sim
+(g_2, E_2)$.</p>
+</blockquote>
+<p><strong>Proof.</strong> From witnesses $n_1$ and $n_2$ respectively, we get
+$(n_2 n_1) \cdot E_1 \preceq E_1$.  The $G$-action is cellular
+(<a class="node-ref" data-node-id="abstract_cell_complex.g_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_g_cell_complex.html">Cellular G-action on an abstract cell complex</a>), hence dimension
+preserving: $\dim((n_2 n_1) \cdot E_1) = \dim E_1$.  Strict
+monotonicity of $\dim$ along a proper face-chain
+(<a class="node-ref" data-node-id="abstract_cell_complex.abstract_cell_complex" href="../../abstract_cell_complex/abstract_cell_complex_abstract_cell_complex.html">Abstract cell complex</a>) forces
+$(n_2 n_1) \cdot E_1 = E_1$, so $n_1 \cdot E_1 = E_2$, and the
 $P_{E_1}$-membership from the $n_1$-witness is exactly the
-$\sim$-witness).  $\square$</p>
-<h2>Which axioms feed into which clause</h2>
+$\sim$-witness.  $\square$</p>
+<p>Assembling Theorems 1–3 with the descent proposition:</p>
+<blockquote>
+<p><strong>Corollary.</strong>  $\preceq$ is a partial order on $X$, and the
+definition coincides with the descended single-witness form
+$\preceq_{\text{rep}}$.</p>
+</blockquote>
+<h2>Which axioms enter which theorem</h2>
 <table>
 <thead>
 <tr>
-<th>Clause</th>
+<th>Theorem</th>
 <th>Axioms used</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Definition (generator + refl-trans closure)</td>
-<td>none (structural)</td>
+<td>Definition + reflexivity</td>
+<td>none (reflexivity of $X'$'s $\preceq$)</td>
 </tr>
 <tr>
-<td>Theorem (single-witness ⇔ closure)</td>
-<td>(P0), (P1), plus (P2) is <em>not</em> needed</td>
+<td>Theorem 1 (definition ⇔ single-witness)</td>
+<td>none beyond the definition of $\sim$</td>
 </tr>
 <tr>
-<td>Reflexivity</td>
-<td>none (unit in $G'$, unit in $P_E$)</td>
-</tr>
-<tr>
-<td>Transitivity</td>
+<td>Theorem 2 (transitivity)</td>
 <td>(P0), (P1)</td>
 </tr>
 <tr>
-<td>Left descent</td>
-<td>(P1)</td>
-</tr>
-<tr>
-<td>Right descent</td>
+<td>Descent proposition</td>
 <td>(P0), (P1)</td>
 </tr>
 <tr>
-<td>Antisymmetry mod ∼</td>
-<td>dim preservation (cellular action) + strict monotonicity</td>
+<td>Theorem 3 (antisymmetry mod $\sim$)</td>
+<td>dim preservation (cellular action) + strict monotonicity of $\dim$</td>
 </tr>
 </tbody>
 </table>
-<p>Note: (P2) enters the <em>equivalence</em> relation via
-<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (1)
-(injectivity of $\iota$), <em>not</em> the face relation.</p>
+<p>Note: (P2) does not enter this node.  It is the axiom needed for
+injectivity of $\iota$, i.e.\ for $\iota$ to be <em>order-reflecting</em>
+(<a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (1)),
+not for the face relation itself.</p>
 <h2>Consequences</h2>
 <ul>
-<li>The embedding $\iota : X' \to G \times^P X'$, $E \mapsto [(1, E)]$,
-  is order-preserving and order-reflecting; this is
+<li>The embedding $\iota : X' \to X$, $E \mapsto [(1, E)]$, is
+  order-preserving: for $F \preceq E$ in $X'$, the definition with
+  $g := 1$ gives $\iota F \preceq \iota E$ immediately.</li>
+<li>Order-reflection of $\iota$ requires (P2); see
   <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (2).</li>
 <li>The dimension function $\dim([(g, E)]) := \dim E$ is well-defined
-  because $\sim$ implies dimension-equal (from $n \cdot E_1 = E_2$
-  and dimension-preservation of the $G$-action).</li>
+  because $\sim$ forces $E_2 = n \cdot E_1$ for some $n \in G'$,
+  and the $G$-action is dimension-preserving.</li>
 <li>Together with local finiteness of $X'$ (inherited via $G$-translates),
-  this equips $G \times^P X'$ with the abstract-cell-complex and
-  $G$-cell-complex instances that
-  <a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="../equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a> uses as its
-  poset-level content.</li>
+  this equips $X$ with the abstract-cell-complex and $G$-cell-complex
+  instances used by <a class="node-ref" data-node-id="equivariant_sheaves.induced_cw_structure" href="../equivariant_sheaves_induced_cw_structure.html">CW structure and QFD property on G ×^P X&#x27;</a>.</li>
 </ul>
 <h2>Lean formalization</h2>
-<p>The pre-quotient relation is exposed as the single-witness form (the
-name mirrors <code>InductionRel</code> for the equivalence relation):</p>
+<p>The pre-quotient relation is exposed as the single-witness form
+(Theorem 1's right-hand side).  The name mirrors <code>InductionRel</code>, the
+pre-quotient equivalence relation from
+[[node:equivariant_sheaves.induction_GxP_X]]: one is the "$=$" case,
+the other the "$\preceq$" case, both with residual in $P_{E_1}$.</p>
 <pre><code class="language-lean">def InductionLe (g₁E₁ g₂E₂ : G × X') : Prop :=
   ∃ n ∈ d.G', n • g₁E₁.2 ≤ g₂E₂.2 ∧
               g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2
 </code></pre>
 <p>Using the single-witness form as the primary Lean definition (rather
-than a <code>Relation.ReflTransGen</code> over generators) keeps the proofs
-elementary — each of the five clauses of the proposition then has a
-dedicated lemma:</p>
+than a <code>Relation.ReflTransGen</code> over the same-$g$ generator) keeps the
+proofs elementary — each of the required properties is a dedicated
+lemma:</p>
 <table>
 <thead>
 <tr>
-<th>Clause</th>
+<th>Property</th>
 <th>Lean lemma</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>(1) Reflexivity</td>
+<td>Reflexivity</td>
 <td><code>InductionLe_refl</code></td>
 </tr>
 <tr>
-<td>(2) Transitivity</td>
+<td>Transitivity (Theorem 2)</td>
 <td><code>InductionLe_trans</code></td>
 </tr>
 <tr>
-<td>(3) Left descent</td>
+<td>Left descent</td>
 <td><code>InductionLe_left_descends</code></td>
 </tr>
 <tr>
-<td>(4) Right descent</td>
+<td>Right descent</td>
 <td><code>InductionLe_right_descends</code></td>
 </tr>
 <tr>
-<td>(5) Antisymmetry</td>
+<td>Antisymmetry (Theorem 3)</td>
 <td><code>InductionLe_antisymm</code></td>
 </tr>
 </tbody>
 </table>
 <p>The <code>PartialOrder</code> instance on <code>InducedSpace d</code> is built by
-<code>Quotient.lift₂ (InductionLe d)</code> — clauses (3) + (4) discharge the
-well-definedness side condition of <code>Quotient.lift₂</code>; clauses (1) +
-(2) discharge reflexivity and transitivity of the descended <code>le</code>;
-clause (5) discharges antisymmetry.</p>
+<code>Quotient.lift₂ (InductionLe d)</code>: the descent lemmas discharge the
+well-definedness side condition; reflexivity + transitivity give
+<code>le_refl</code> and <code>le_trans</code>; antisymmetry gives <code>le_antisymm</code>.</p>
 <pre><code class="language-lean">instance : PartialOrder (InducedSpace d) where
   le := Quotient.lift₂ (InductionLe d) ⟨left/right descent⟩
   le_refl  := ⟨InductionLe_refl⟩
   le_trans := ⟨InductionLe_trans⟩
   le_antisymm := ⟨InductionLe_antisymm⟩
 </code></pre>
-<p>The theorem "single-witness form ⇔ reflexive-transitive closure of
-the generator" is <em>not</em> separately formalised in the current library:
-the closure form serves as the mathematical definition, the
-single-witness form as the operational one, and they are known to
-coincide by the elementary two-step chain given above.  An explicit
-<code>Relation.ReflTransGen</code>-based alternative definition plus an
-equivalence lemma is a well-scoped follow-up.</p>
+<p>The equivalence of the paper-side definition (single generator on
+classes, no closure) with the operational single-witness form
+(Theorem 1) is not separately formalised in the current library —
+the single-witness form is the definition of <code>InductionLe</code> and
+Theorem 1 becomes a trivial calculation once written out.  Adding a
+<code>Relation.ReflTransGen</code>-based reformulation and an equivalence
+lemma is a well-scoped follow-up.</p>
       </div>
     </details>
     
@@ -894,7 +906,7 @@ equivalence lemma is a well-scoped follow-up.</p>
 
   
   <footer class="tags">
-    <span class="tag">induction</span><span class="tag">poset</span><span class="tag">well-definedness</span>
+    <span class="tag">induction</span><span class="tag">poset</span><span class="tag">face-relation</span>
   </footer>
   
 </article>
