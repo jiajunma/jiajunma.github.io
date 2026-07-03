@@ -942,7 +942,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheaf.lean#L37"><code>SheafOnBuilding.GEquivCosheaf&#39;</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheaf.lean#L60"><code>SheafOnBuilding.GEquivCosheaf&#39;</code></a>
           
           
           
@@ -951,18 +951,29 @@
           </span>
           
           
-          <p class="lean-docstring">Bundled `G`-equivariant cosheaf on `X` with values in `C`.</p>
-          <pre class="lean-signature"><code>structure GEquivCosheaf&#39; (C : Type*) [Category C] where
-  /-- Underlying cosheaf `F : Xᵒᵖ ⥤ C`. -/
-  base : Cosheaf X C
-  /-- The equivariant structure witnessing `G`-equivariance. -/
-  equiv : GEquivariantCosheaf G X base</code></pre>
+          
+          <pre class="lean-signature"><code>structure GEquivCosheaf&#39; (C : Type*) [Category C] extends Cosheaf&#39; X C where
+  /-- Stalk-level action of `g` at `E` as an iso. -/
+  act : ∀ (g : G) (E : X), obj E ≅ obj (g • E)
+  /-- Naturality against cosheaf **corestriction** (map direction is
+  `E ≤ E&#39; → obj E&#39; ⟶ obj E`).  Swap of sides compared to `GEquivSheaf&#39;`. -/
+  act_map : ∀ (g : G) {E E&#39; : X} (h : E ≤ E&#39;),
+    map h ≫ (act g E).hom = (act g E&#39;).hom ≫ map (GCellComplex.smul_le g h)
+  /-- Identity: `act 1 E = 𝟙`, modulo `eqToHom` for `1 • E = E`. -/
+  act_one : ∀ E : X,
+    (act 1 E).hom ≫ eqToHom (show obj ((1 : G) • E) = obj E by rw [one_smul]) =
+      𝟙 (obj E)
+  /-- Multiplicativity. -/
+  act_mul : ∀ (g h : G) (E : X),
+    (act (g * h) E).hom ≫
+        eqToHom (show obj ((g * h) • E) = obj (g • h • E) by rw [mul_smul]) =
+      (act h E).hom ≫ (act g (h • E)).hom</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheaf.lean#L81"><code>SheafOnBuilding.GEquivCosheaf&#39;.category</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheaf.lean#L137"><code>SheafOnBuilding.GEquivCosheaf&#39;.category</code></a>
           
           
           
@@ -976,15 +987,25 @@
   Hom F F&#39; := Hom F F&#39;
   id F := Hom.id F
   comp α β := Hom.comp α β
-  id_comp _ := Subtype.ext (Category.id_comp _)
-  comp_id _ := Subtype.ext (Category.comp_id _)
-  assoc _ _ _ := Subtype.ext (Category.assoc _ _ _)</code></pre>
+  id_comp α := by
+    cases α with
+    | mk toHom _ =&gt;
+      show Hom.comp (Hom.id _) ⟨toHom, _⟩ = ⟨toHom, _⟩
+      simp [Hom.comp, Hom.id]
+  comp_id α := by
+    cases α with
+    | mk toHom _ =&gt;
+      show Hom.comp ⟨toHom, _⟩ (Hom.id _) = ⟨toHom, _⟩
+      simp [Hom.comp, Hom.id]
+  assoc α β γ := by
+    show Hom.comp (Hom.comp α β) γ = Hom.comp α (Hom.comp β γ)
+    simp [Hom.comp, Category.assoc]</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivSheaf.lean#L48"><code>SheafOnBuilding.GEquivSheaf&#39;</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivSheaf.lean#L45"><code>SheafOnBuilding.GEquivSheaf&#39;</code></a>
           
           
           
@@ -1148,42 +1169,42 @@
     GEquivCosheaf&#39; G X C ⥤ (TransporterCat G X)ᵒᵖ ⥤ C where
   obj W := TransporterCat.GEquivCosheaf&#39;.toFunctor W
   map {W W&#39;} α :=
-    { app := fun E =&gt; (GEquivCosheaf&#39;.homNT α).app (op E.unop.cell)
+    { app := fun E =&gt; (GEquivCosheaf&#39;.homNT α).app E.unop.cell
       naturality := by
         intro E E&#39; β
         show (TransporterCat.GEquivCosheaf&#39;.toFunctor W).map β ≫
-            (homNT α).app (op E&#39;.unop.cell) =
-          (homNT α).app (op E.unop.cell) ≫
+            (homNT α).app E&#39;.unop.cell =
+          (homNT α).app E.unop.cell ≫
             (TransporterCat.GEquivCosheaf&#39;.toFunctor W&#39;).map β
-        change (W.base.map (homOfLE β.unop.property).op ≫
-            (W.equiv.act β.unop.val E&#39;.unop.cell).inv) ≫ _ =
-          _ ≫ (W&#39;.base.map (homOfLE β.unop.property).op ≫
-            (W&#39;.equiv.act β.unop.val E&#39;.unop.cell).inv)
-        -- LHS = base.map ≫ (act).inv ≫ (homNT α).app
-        -- RHS = (homNT α).app ≫ base.map ≫ (act).inv
-        -- Strategy: use (homNT α).naturality to move .app past base.map on the LHS,
+        change (W.map β.unop.property ≫
+            (W.act β.unop.val E&#39;.unop.cell).inv) ≫ _ =
+          _ ≫ (W&#39;.map β.unop.property ≫
+            (W&#39;.act β.unop.val E&#39;.unop.cell).inv)
+        -- LHS = W.map ≫ (act).inv ≫ (homNT α).app
+        -- RHS = (homNT α).app ≫ W&#39;.map ≫ (act).inv
+        -- Strategy: use (homNT α).naturality to move .app past W.map on the LHS,
         -- then use homNT_comm to swap past (act).inv.
-        have hnat := (homNT α).naturality (homOfLE β.unop.property).op
-        -- hnat: W.base.map _ ≫ (homNT α).app _ = (homNT α).app _ ≫ W&#39;.base.map _
+        have hnat := (homNT α).naturality β.unop.property
+        -- hnat: W.map _ ≫ (homNT α).app _ = (homNT α).app _ ≫ W&#39;.map _
         have hcomm := homNT_comm α β.unop.val E&#39;.unop.cell
-        -- hcomm: (homNT α).app (op E) ≫ (W&#39;.act g E).hom = (W.act g E).hom ≫ (homNT α).app (op (g•E))
-        -- We use Iso.inv_comp_eq / Iso.eq_comp_inv on the .inv side.
-        -- Rewrite hcomm to: (homNT α).app (op (g•E)) ≫ (W&#39;.act g E).inv = (W.act g E).inv ≫ (homNT α).app (op E)
-        -- Wait, hcomm is (α at E) ≫ W&#39;.act.hom = W.act.hom ≫ (α at (g•E)).
-        -- Multiplying both sides by (W&#39;.act).inv on right: (α at E) = W.act.hom ≫ (α at (g•E)) ≫ (W&#39;.act).inv
-        -- Then by (W.act).inv on left: (W.act).inv ≫ (α at E) = (α at (g•E)) ≫ (W&#39;.act).inv
-        -- That&#39;s the form we need!
-        have hcomm&#39; : (W.equiv.act β.unop.val E&#39;.unop.cell).inv ≫
-            (homNT α).app (op E&#39;.unop.cell) =
-            (homNT α).app (op (β.unop.val • E&#39;.unop.cell)) ≫
-              (W&#39;.equiv.act β.unop.val E&#39;.unop.cell).inv := by
+        -- hcomm: (homNT α).app E ≫ (W&#39;.act g E).hom = (W.act g E).hom ≫ (homNT α).app (g•E)
+        have hcomm&#39; : (W.act β.unop.val E&#39;.unop.cell).inv ≫
+            (homNT α).app E&#39;.unop.cell =
+            (homNT α).app (β.unop.val • E&#39;.unop.cell) ≫
+              (W&#39;.act β.unop.val E&#39;.unop.cell).inv := by
           rw [Iso.inv_comp_eq, ← Category.assoc, ← hcomm,
               Category.assoc, Iso.hom_inv_id, Category.comp_id]
         -- Now rewrite the LHS: goal is (A ≫ B) ≫ C = D ≫ E ≫ F
         --   A ≫ (B ≫ C) then swap B ≫ C via hcomm&#39;.
         rw [Category.assoc]
         rw [hcomm&#39;]
-        -- Now LHS: A ≫ (α at (g•E)) ≫ B&#39;</code></pre>
+        -- Now LHS: A ≫ (α at (g•E)) ≫ B&#39;
+        -- Reassoc and apply hnat.
+        rw [← Category.assoc]
+        rw [hnat]
+        rw [Category.assoc] }
+  map_id W := by
+    ext E</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -1207,7 +1228,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheafEquiv.lean#L243"><code>SheafOnBuilding.toGEquivCosheafFunctor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheafEquiv.lean#L227"><code>SheafOnBuilding.toGEquivCosheafFunctor</code></a>
           
           
           
@@ -1221,26 +1242,29 @@
     ((TransporterCat G X)ᵒᵖ ⥤ C) ⥤ GEquivCosheaf&#39; G X C where
   obj F := Functor.toGEquivCosheaf&#39; F
   map {F F&#39;} α :=
-    ⟨{ app := fun E =&gt; α.app (op ⟨E.unop⟩)
-       naturality := fun E E&#39; h =&gt; α.naturality _ },
-     fun g E =&gt; by
-       show α.app (op ⟨E⟩) ≫ F&#39;.map (Functor.toGEquivCosheaf&#39;AuxHom g E).op =
-         F.map (Functor.toGEquivCosheaf&#39;AuxHom g E).op ≫ α.app (op ⟨g • E⟩)
-       exact (α.naturality _).symm⟩
+    { toHom :=
+        { app := fun E =&gt; α.app (op ⟨E⟩)
+          naturality := fun E E&#39; h =&gt; α.naturality _ }
+      act_comm := fun g E =&gt; by
+        show α.app (op ⟨E⟩) ≫ F&#39;.map (Functor.toGEquivCosheaf&#39;AuxHom g E).op =
+          F.map (Functor.toGEquivCosheaf&#39;AuxHom g E).op ≫ α.app (op ⟨g • E⟩)
+        exact (α.naturality _).symm }
   map_id F := by
     apply GEquivCosheaf&#39;.hom_ext
-    ext E
+    apply Cosheaf&#39;.Hom.ext
+    funext E
     rfl
   map_comp α β := by
     apply GEquivCosheaf&#39;.hom_ext
-    ext E
+    apply Cosheaf&#39;.Hom.ext
+    funext E
     rfl</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheafEquiv.lean#L461"><code>SheafOnBuilding.GEquivCosheaf&#39;.equivFunctor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheafEquiv.lean#L384"><code>SheafOnBuilding.GEquivCosheaf&#39;.equivFunctor</code></a>
           
           
           
@@ -1257,17 +1281,11 @@
   unitIso := NatIso.ofComponents unitIsoAt (by
     intro W W&#39; α
     apply GEquivCosheaf&#39;.hom_ext
-    ext E
-    -- LHS: (𝟭.map α ≫ (unitIsoAt W&#39;).hom).homNT.app _
-    --    = homNT α .app _ ≫ 𝟙 _
-    -- RHS: ((unitIsoAt W).hom ≫ (toFunctorFunctor ⋙ toGEquivCosheafFunctor).map α).homNT.app _
-    --    = 𝟙 _ ≫ (recovered map of α).app _
-    -- recovered map of α is: (fun E =&gt; homNT α .app (op E.unop))
-    -- So LHS.app (op E) = homNT α .app (op E)
-    -- RHS.app (op E) = homNT α .app (op ⟨E⟩.cell) = homNT α .app (op E). Same!
+    apply Cosheaf&#39;.Hom.ext
+    funext E
     simp only [homNT_comp]
-    show (GEquivCosheaf&#39;.homNT α).app (op E.unop) ≫ 𝟙 _ =
-      𝟙 _ ≫ (GEquivCosheaf&#39;.homNT α).app (op E.unop)
+    show (GEquivCosheaf&#39;.homNT α).app E ≫ 𝟙 _ =
+      𝟙 _ ≫ (GEquivCosheaf&#39;.homNT α).app E
     rw [Category.id_comp, Category.comp_id])
   counitIso := NatIso.ofComponents (fun F =&gt;
     { hom := { app := fun E =&gt; 𝟙 _
@@ -1289,7 +1307,9 @@
   functor_unitIso_comp := by
     intro W
     ext E
-    -- Goal: functor.map (unitIso.hom.app W) ≫ counitIso.hom.app (functor.obj W) = 𝟙</code></pre>
+    show (GEquivCosheaf&#39;.toFunctorFunctor.map (unitHom W)).app E ≫ 𝟙 _ = 𝟙 _
+    rw [Category.comp_id]
+    rfl</code></pre>
         </li>
         
       </ul>
@@ -1385,12 +1405,15 @@ typechecking failures on <code>rw [inv_one]</code> when <code>g⁻¹</code> appe
 target type.  The derived lemma <code>GEquivariantCosheaf.act_one_inv</code> records
 that <code>(act 1 E).inv</code> equals the <code>eqToHom</code> bridging <code>W_{1 \cdot E} = W_E</code>.</p>
 <p>For §2.7 (Prop 2.7.2) we need $\Cosh_G(X, C)$ as a <em>category</em> (not just a
-predicate on individual cosheaves): the file <code>GEquivCosheaf.lean</code> supplies the
-bundled type <code>GEquivCosheaf' G X C := (base : Cosheaf X C, equiv : GEquivariantCosheaf G X base)</code>
-together with a <code>Category</code> instance whose morphisms are natural
-transformations of the underlying cosheaves commuting with <code>act g E</code> at
-every cell.  See <a class="node-ref" data-node-id="cellular_categories.transporter_category" href="cellular_categories_transporter_category.html">The transporter categories ]X/G[ and [X/G]</a> for the
-<code>]X/G[</code>-side of the same story.</p>
+predicate on individual cosheaves): the file <code>GEquivCosheaf.lean</code> supplies
+the bundled type <code>GEquivCosheaf' G X C</code> <strong>symmetric to <code>GEquivSheaf'</code></strong>
+(both extend the primed base type — <code>Sheaf'</code> or <code>Cosheaf'</code> — and
+inline the pointwise-iso equivariance fields <code>act</code>, <code>act_map</code>,
+<code>act_one</code>, <code>act_mul</code>).  A <code>Category</code> instance is provided whose
+morphisms are structure homs (<code>Cosheaf'.Hom</code> component + <code>act_comm</code>
+equivariance-commuting axiom).  See
+<a class="node-ref" data-node-id="cellular_categories.transporter_category" href="cellular_categories_transporter_category.html">The transporter categories ]X/G[ and [X/G]</a> for the <code>]X/G[</code>-side of
+the same story.</p>
     
   </div>
 

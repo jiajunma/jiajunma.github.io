@@ -473,7 +473,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L37"><code>SheafOnBuilding.GEquivCosheaf.stalkHom</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L36"><code>SheafOnBuilding.GEquivCosheaf.stalkHom</code></a>
           
           
           
@@ -484,15 +484,15 @@
           
           
           <pre class="lean-signature"><code>def stalkHom (W : GEquivCosheaf&#39; G X C) (E : X) (k : G) (hk : k • E = E) :
-    W.base.obj (op E) ⟶ W.base.obj (op E) :=
-  (W.equiv.act k E).hom ≫
-    eqToHom (show W.base.obj (op (k • E)) = W.base.obj (op E) by rw [hk])</code></pre>
+    W.obj E ⟶ W.obj E :=
+  (W.act k E).hom ≫
+    eqToHom (show W.obj (k • E) = W.obj E by rw [hk])</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L43"><code>SheafOnBuilding.GEquivCosheaf.stalkHom_one</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L42"><code>SheafOnBuilding.GEquivCosheaf.stalkHom_one</code></a>
           
           
           
@@ -503,13 +503,13 @@
           
           <p class="lean-docstring">**Identity of the stalk action**: the identity of `G` acts as `𝟙 W_E`.</p>
           <pre class="lean-signature"><code>theorem stalkHom_one (W : GEquivCosheaf&#39; G X C) (E : X) :
-    stalkHom W E 1 (one_smul _ _) = 𝟙 (W.base.obj (op E))</code></pre>
+    stalkHom W E 1 (one_smul _ _) = 𝟙 (W.obj E)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L54"><code>SheafOnBuilding.GEquivCosheaf.stalkHom_mul</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L53"><code>SheafOnBuilding.GEquivCosheaf.stalkHom_mul</code></a>
           
           
           
@@ -528,7 +528,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L90"><code>SheafOnBuilding.GEquivCosheaf.stalkAction</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L89"><code>SheafOnBuilding.GEquivCosheaf.stalkAction</code></a>
           
           
           
@@ -539,7 +539,7 @@
           
           <p class="lean-docstring">**The stalk action as a monoid homomorphism**.</p>
           <pre class="lean-signature"><code>def stalkAction (W : GEquivCosheaf&#39; G X C) (E : X) :
-    MulAction.stabilizer G E →* End (W.base.obj (op E)) where
+    MulAction.stabilizer G E →* End (W.obj E) where
   toFun k := stalkHom W E k.val k.property
   map_one&#39; := stalkHom_one W E
   map_mul&#39; k l := stalkHom_mul W E k.val l.val k.property l.property</code></pre>
@@ -548,7 +548,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L98"><code>SheafOnBuilding.GEquivCosheaf.kStalkAction</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/StalkAction.lean#L97"><code>SheafOnBuilding.GEquivCosheaf.kStalkAction</code></a>
           
           
           
@@ -560,7 +560,7 @@
           
           <pre class="lean-signature"><code>def kStalkAction {G&#39; : Subgroup G} {S : Subcomplex X}
     (κ : KData G&#39; S) (W : GEquivCosheaf&#39; G X C) (E : X) :
-    κ.K E →* End (W.base.obj (op E)) :=
+    κ.K E →* End (W.obj E) :=
   (stalkAction W E).comp (Subgroup.inclusion (κ.K_le_fix E))</code></pre>
         </li>
         

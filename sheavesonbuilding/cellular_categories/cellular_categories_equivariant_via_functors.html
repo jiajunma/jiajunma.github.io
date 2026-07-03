@@ -635,7 +635,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheafToFun.lean#L244"><code>SheafOnBuilding.TransporterCat.GEquivCosheaf&#39;.toFunctor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GEquivCosheafToFun.lean#L200"><code>SheafOnBuilding.TransporterCat.GEquivCosheaf&#39;.toFunctor</code></a>
           
           
           
@@ -647,7 +647,7 @@
           
           <pre class="lean-signature"><code>noncomputable def GEquivCosheaf&#39;.toFunctor (W : GEquivCosheaf&#39; G X C) :
     (TransporterCat G X)ᵒᵖ ⥤ C where
-  obj E := W.base.obj (op E.unop.cell)
+  obj E := W.obj E.unop.cell
   map {E E&#39;} β :=
     let β&#39; : TransporterCat.Mor E&#39;.unop E.unop := β.unop
     W.mapOfG β&#39;.val β&#39;.property
@@ -715,28 +715,34 @@ $\End_{]X/G[}(E) \cong \Stab_G(E)$ on $F(E)$
 <p><strong>What is done.</strong>  The two-sided packaging of $G$-equivariant
 (co)sheaves is fully in place:</p>
 <pre><code class="language-lean">class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where
-  act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))
+  act : ∀ (g : G) (E : X), F.obj E ≅ F.obj (g • E)
   act_map : ...    -- naturality with restriction
   act_one : ...    -- unit
   act_mul : ...    -- multiplicativity
 class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where
-  ...              -- analogous
-structure GEquivCosheaf' (C : Type*) [Category C] where
-  base : Cosheaf X C
-  equiv : GEquivariantCosheaf G X base
+  ...              -- analogous, on Cosheaf-restriction direction
+
+structure GEquivSheaf' (G X C ...) extends Sheaf' X C where
+  act, act_map, act_one, act_mul : ...
+
+structure GEquivCosheaf' (G X C ...) extends Cosheaf' X C where
+  act, act_map, act_one, act_mul : ...   -- symmetric to GEquivSheaf'
+                                          -- (act_map uses corestriction direction)
+
 instance : Category (GEquivCosheaf' G X C) := ...
 </code></pre>
-<p>$G$-equivariant cosheaves are bundled as <code>GEquivCosheaf' G X C</code> with a
-<code>Category</code> instance (natural transformations commuting with <code>act</code>
-at every cell).  This is what the reduction node
-<a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a> uses as its LHS.</p>
+<p><strong>Design symmetry.</strong> Both <code>GEquivSheaf'</code> and <code>GEquivCosheaf'</code>
+<code>extend</code> the primed (object-form) base type and inline the
+pointwise-iso equivariance data.  Field access is uniform:
+<code>W.obj E</code>, <code>W.map h</code>, <code>W.act g E</code> on either side (no more
+<code>W.base.obj (op E)</code> / <code>W.equiv.act g E</code> legacy).</p>
 <p><strong>Cosheaf side (done).</strong>  The forward direction
 $\Cosh_G(X, \mathscr C) \to \Fun(\,]X/G[^{\mathrm{op}}, \mathscr C)$
 is fully formalised in <code>SheafOnBuilding.GEquivCosheafToFun</code>:</p>
 <pre><code class="language-lean">noncomputable def GEquivCosheaf'.mapOfG
     (W : GEquivCosheaf' G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :
-    W.base.obj (op E) ⟶ W.base.obj (op E') :=
-  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E').inv
+    W.obj E ⟶ W.obj E' :=
+  W.map hg ≫ (W.act g E').inv
 
 theorem GEquivCosheaf'.mapOfG_one : W.mapOfG (1 : G) _ = 𝟙 _         -- proved
 
@@ -746,7 +752,7 @@ theorem GEquivCosheaf'.mapOfG_mul
 
 noncomputable def GEquivCosheaf'.toFunctor (W : GEquivCosheaf' G X C) :
     (TransporterCat G X)ᵒᵖ ⥤ C where
-  obj E := W.base.obj (op E.unop.cell)
+  obj E := W.obj E.unop.cell
   map β := W.mapOfG β.unop.val β.unop.property
   map_id E := W.mapOfG_one E.unop.cell
   map_comp β γ := W.mapOfG_mul β.unop.val γ.unop.val
