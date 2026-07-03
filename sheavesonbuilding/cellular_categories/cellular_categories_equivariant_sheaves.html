@@ -832,117 +832,27 @@
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 8adb99e, SheafOnBuilding.GEquivariant
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>class GEquivariantSheaf {C : Type*} [Category C] (F : Sheaf X C) where
-  /-- Stalk-level action of `g` at `E` as an iso. -/
-  act : ∀ (g : G) (E : X), F.obj E ≅ F.obj (g • E)
-  /-- Naturality against sheaf restrictions. -/
-  act_map : ∀ (g : G) {E F&#39; : X} (h : E ≤ F&#39;),
-    (act g E).hom ≫ F.map (homOfLE (GCellComplex.smul_le g h)) =
-      F.map (homOfLE h) ≫ (act g F&#39;).hom
-  /-- Identity: `act 1 E = 𝟙`, modulo `eqToHom` for `1 • E = E`. -/
-  act_one : ∀ E : X,
-    (act 1 E).hom ≫ eqToHom (show F.obj ((1 : G) • E) = F.obj E by rw [one_smul]) =
-      𝟙 (F.obj E)
-  /-- Multiplicativity. -/
-  act_mul : ∀ (g h : G) (E : X),
-    (act (g * h) E).hom ≫
-        eqToHom (show F.obj ((g * h) • E) = F.obj (g • h • E) by rw [mul_smul]) =
-      (act h E).hom ≫ (act g (h • E)).hom</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 8adb99e, SheafOnBuilding.GEquivariant
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where
-  /-- Stalk-level action of `g` at `E` as an iso. -/
-  act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))
-  /-- Naturality against cosheaf restrictions: for `h : E ≤ F&#39;`,
-  ```
-  F.obj (op F&#39;) ──── F.map (homOfLE h).op ──► F.obj (op E)
-       │                                          │
-       │ (act g F&#39;).hom                           │ (act g E).hom
-       ▼                                          ▼
-  F.obj (op (g•F&#39;)) ─ F.map (...smul_le...).op ► F.obj (op (g•E))
-  ```
-  -/
-  act_map : ∀ (g : G) {E F&#39; : X} (h : E ≤ F&#39;),
-    F.map (homOfLE h).op ≫ (act g E).hom =
-      (act g F&#39;).hom ≫ F.map (homOfLE (GCellComplex.smul_le g h)).op
-  /-- Identity: `(act 1 E).hom = 𝟙`, modulo `eqToHom` for `1 • E = E`. -/
-  act_one : ∀ E : X,
-    (act 1 E).hom ≫
-        eqToHom (show F.obj (op ((1 : G) • E)) = F.obj (op E) by rw [one_smul]) =
-      𝟙 (F.obj (op E))
-  /-- Multiplicativity. -/
-  act_mul : ∀ (g h : G) (E : X),
-    (act (g * h) E).hom ≫
-        eqToHom (show F.obj (op ((g * h) • E)) = F.obj (op (g • h • E))
-          by rw [mul_smul]) =
-      (act h E).hom ≫ (act g (h • E)).hom</code></pre>
-        </li>
-        
-        <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivariant.lean#L122"><code>SheafOnBuilding.GEquivariantCosheaf.act_one_inv</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivCosheaf.lean#L81"><code>SheafOnBuilding.GEquivCosheaf&#39;.act_one_inv</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 8adb99e, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ 8adb99e, SheafOnBuilding.GEquivCosheaf
           </span>
           
           
-          <p class="lean-docstring">`(act 1 E).inv = eqToHom (W_{1•E} = W_E)`.</p>
-          <pre class="lean-signature"><code>theorem act_one_inv (E : X) :
-    (act (G := G) (1 : G) E).inv =
-      eqToHom (show F.obj (op ((1 : G) • E)) = F.obj (op E) by rw [one_smul])</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivariant.lean#L52"><code>SheafOnBuilding.smulFunctor</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 8adb99e, SheafOnBuilding.GEquivariant
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def smulFunctor (g : G) : X ⥤ X where
-  obj E := g • E
-  map h := homOfLE (GCellComplex.smul_le g (leOfHom h))</code></pre>
+          <p class="lean-docstring">`(act 1 E).inv = eqToHom (obj (1•E) = obj E)`.</p>
+          <pre class="lean-signature"><code>theorem act_one_inv (W : GEquivCosheaf&#39; G X C) (E : X) :
+    (W.act (1 : G) E).inv =
+      eqToHom (show W.obj ((1 : G) • E) = W.obj E by rw [one_smul])</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivCosheaf.lean#L60"><code>SheafOnBuilding.GEquivCosheaf&#39;</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivCosheaf.lean#L56"><code>SheafOnBuilding.GEquivCosheaf&#39;</code></a>
           
           
           
@@ -973,7 +883,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivCosheaf.lean#L137"><code>SheafOnBuilding.GEquivCosheaf&#39;.category</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivCosheaf.lean#L151"><code>SheafOnBuilding.GEquivCosheaf&#39;.category</code></a>
           
           
           
@@ -1005,7 +915,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivSheaf.lean#L45"><code>SheafOnBuilding.GEquivSheaf&#39;</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivSheaf.lean#L41"><code>SheafOnBuilding.GEquivSheaf&#39;</code></a>
           
           
           
@@ -1349,7 +1259,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/SheafCosheaf.lean#L1"><code>SheafOnBuilding.SheafCosheaf</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivCosheaf.lean#L1"><code>SheafOnBuilding.GEquivCosheaf</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/SheafCosheaf.lean#L1"><code>SheafOnBuilding.SheafCosheaf</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/GEquivCosheaf.lean#L1"><code>SheafOnBuilding.GEquivCosheaf</code></a>
       </p>
       
     </div>
@@ -1392,8 +1302,7 @@ distinct names:</p>
   <code>X ⥤ C</code> and <code>Xᵒᵖ ⥤ C</code>, introduced as <code>abbrev</code>s.  All of Mathlib's
   <code>CategoryTheory.Functor</code> API applies directly with no wrapping.
   <strong>This is the canonical form</strong> used throughout the library —
-  <code>GEquivariantSheaf</code>, <code>GEquivariantCosheaf</code>, <code>GEquivCosheaf'</code>,
-  <code>GEquivCosheaf'.toFunctor</code>, and the reduction chain
+  <code>GEquivSheaf</code>, <code>GEquivCosheaf</code>, and the reduction chain
   (<a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a>) all sit on top of it.</p>
 </li>
 <li>
@@ -1424,19 +1333,20 @@ form exists to bridge the paper's presentation for readers whose
 mental model is object-oriented.  Any theorem stated for one form
 transports to the other along the categorical equivalence.</p>
 <h3>Equivariance data</h3>
-<p>The class <code>GEquivariantCosheaf G X F</code> (typeclass on a <em>single</em> cosheaf <code>F</code>)
-records the pointwise action data</p>
-<p><code>act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))</code></p>
+<p>The bundled structures <code>GEquivSheaf'</code> / <code>GEquivCosheaf'</code> inline the
+pointwise action data as fields (see the auto-extracted signatures
+in the <em>Lean declarations</em> section for exact types):</p>
+<p><code>act : ∀ (g : G) (E : X), obj E ≅ obj (g • E)</code></p>
 <p>as a family of <em>isomorphisms</em> (matching the paper's convention "$g_* : V_E
 \xrightarrow{\sim} V_{gE}$"), together with three axioms — <code>act_map</code>
-(naturality with cosheaf restrictions), <code>act_one</code> (identity of $G$ acts as
+(naturality with (co)sheaf restrictions), <code>act_one</code> (identity of $G$ acts as
 $\mathbf 1$ modulo <code>eqToHom</code> for $1 \cdot E = E$), and <code>act_mul</code>
 (multiplicativity modulo <code>eqToHom</code> for $(g\cdot h)\cdot E = g\cdot(h\cdot E)$).</p>
 <p><strong>Why <code>Iso</code> and not just a morphism.</strong> For a Group <code>G</code> invertibility of
 <code>act g</code> follows abstractly, but packaging as <code>Iso</code> from the start gives
 downstream code direct access to <code>.inv</code>, avoiding rewrite-motive
 typechecking failures on <code>rw [inv_one]</code> when <code>g⁻¹</code> appears in an <code>eqToHom</code>
-target type.  The derived lemma <code>GEquivariantCosheaf.act_one_inv</code> records
+target type.  The derived lemma <code>GEquivCosheaf'.act_one_inv</code> records
 that <code>(act 1 E).inv</code> equals the <code>eqToHom</code> bridging <code>W_{1 \cdot E} = W_E</code>.</p>
 <p>For §2.7 (Prop 2.7.2) we need $\Cosh_G(X, C)$ as a <em>category</em> (not just a
 predicate on individual cosheaves): the file <code>GEquivCosheaf.lean</code> supplies

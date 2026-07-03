@@ -730,7 +730,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/EquivariantChainComplex.lean#L47"><code>SheafOnBuilding.weightedRestriction_smul</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/EquivariantChainComplex.lean#L48"><code>SheafOnBuilding.weightedRestriction_smul</code></a>
           
           
           
@@ -741,14 +741,14 @@
           
           
           <pre class="lean-signature"><code>theorem weightedRestriction_smul (g : G) (E F : X) :
-    weightedRestriction V E F ≫ (GEquivariantCosheaf.act g E).hom =
-      (GEquivariantCosheaf.act g F).hom ≫ weightedRestriction V (g • E) (g • F)</code></pre>
+    weightedRestriction W.asFunctor E F ≫ (W.act g E).hom =
+      (W.act g F).hom ≫ weightedRestriction W.asFunctor (g • E) (g • F)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/EquivariantChainComplex.lean#L77"><code>SheafOnBuilding.Cn.smulMorphism</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/8adb99efa8de60f00479a8f3d517e7a4bac750c1/SheafOnBuilding/EquivariantChainComplex.lean#L78"><code>SheafOnBuilding.Cn.smulMorphism</code></a>
           
           
           
@@ -758,10 +758,10 @@
           
           
           
-          <pre class="lean-signature"><code>noncomputable def Cn.smulMorphism (g : G) (n : ℕ) : Cn V n ⟶ Cn V n :=
+          <pre class="lean-signature"><code>noncomputable def Cn.smulMorphism (g : G) (n : ℕ) : Cn W.asFunctor n ⟶ Cn W.asFunctor n :=
   Limits.Sigma.desc (fun E : dimCells X n =&gt;
-    (GEquivariantCosheaf.act g E.val).hom ≫
-      Cn.ι V ⟨g • E.val, by rw [GCellComplex.smul_dim]; exact E.property⟩)</code></pre>
+    (W.act g E.val).hom ≫
+      Cn.ι W.asFunctor ⟨g • E.val, by rw [GCellComplex.smul_dim]; exact E.property⟩)</code></pre>
         </li>
         
       </ul>
