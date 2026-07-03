@@ -588,7 +588,7 @@
           
           <pre class="lean-signature"><code>def ofObject {C : Type*} [Category C] (F : Sheaf&#39; X C) : Sheaf X C where
   obj := F.obj
-  map {E E&#39;} h := F.map (leOfHom h)
+  map {_ _} h := F.map (leOfHom h)
   map_id := F.map_id
   map_comp _ _ := F.map_comp _ _</code></pre>
         </li>

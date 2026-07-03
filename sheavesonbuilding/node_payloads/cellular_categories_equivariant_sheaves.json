@@ -171,7 +171,7 @@
       "qualified_name": "SheafOnBuilding.Sheaf.ofObject",
       "module": "SheafOnBuilding.SheafCosheaf",
       "kind": "def",
-      "signature": "def ofObject {C : Type*} [Category C] (F : Sheaf' X C) : Sheaf X C where\n  obj := F.obj\n  map {E E'} h := F.map (leOfHom h)\n  map_id := F.map_id\n  map_comp _ _ := F.map_comp _ _",
+      "signature": "def ofObject {C : Type*} [Category C] (F : Sheaf' X C) : Sheaf X C where\n  obj := F.obj\n  map {_ _} h := F.map (leOfHom h)\n  map_id := F.map_id\n  map_comp _ _ := F.map_comp _ _",
       "docstring": null,
       "repository_title": "SheafOnBuilding (this repo)",
       "revision": "db99966db164a6eac462b74ba5b32521f96d0c5c",
