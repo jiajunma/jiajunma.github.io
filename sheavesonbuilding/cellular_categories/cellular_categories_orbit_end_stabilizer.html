@@ -475,31 +475,31 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6c19c34994c7efa4581569ed065330097ee0d97c/SheafOnBuilding/TransporterCat.lean#L87"><code>SheafOnBuilding.TransporterCat.endMorEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/TransporterCat.lean#L85"><code>SheafOnBuilding.TransporterCat.endMorEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6c19c34, SheafOnBuilding.TransporterCat
+            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.TransporterCat
           </span>
           
           
           
           <pre class="lean-signature"><code>def endMorEquivStabilizer (E : TransporterCat G X) :
-    Mor E E ≃ MulAction.stabilizer G (E : X) where
+    Mor E E ≃ MulAction.stabilizer G E.cell where
   toFun α := ⟨α.val, by
-    show α.val • (E : X) = E
+    show α.val • E.cell = E.cell
     by_contra h_ne
-    have h_lt : AbstractCellComplex.dim (α.val • (E : X)) &lt;
-        AbstractCellComplex.dim (E : X) :=
+    have h_lt : AbstractCellComplex.dim (α.val • E.cell) &lt;
+        AbstractCellComplex.dim E.cell :=
       AbstractCellComplex.dim_lt α.property h_ne
-    have h_eq : AbstractCellComplex.dim (α.val • (E : X)) =
-        AbstractCellComplex.dim (E : X) :=
-      GCellComplex.smul_dim α.val E
+    have h_eq : AbstractCellComplex.dim (α.val • E.cell) =
+        AbstractCellComplex.dim E.cell :=
+      GCellComplex.smul_dim α.val E.cell
     omega⟩
   invFun k := ⟨k.val, by
-    show k.val • (E : X) ≤ (E : X)
-    rw [(k.property : k.val • (E : X) = E)]⟩
+    show k.val • E.cell ≤ E.cell
+    rw [(k.property : k.val • E.cell = E.cell)]⟩
   left_inv _ := rfl
   right_inv _ := rfl</code></pre>
         </li>
@@ -507,18 +507,18 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6c19c34994c7efa4581569ed065330097ee0d97c/SheafOnBuilding/TransporterCat.lean#L114"><code>SheafOnBuilding.TransporterCat.endMulEquivStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/TransporterCat.lean#L112"><code>SheafOnBuilding.TransporterCat.endMulEquivStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6c19c34, SheafOnBuilding.TransporterCat
+            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.TransporterCat
           </span>
           
           
           
           <pre class="lean-signature"><code>def endMulEquivStabilizer (E : TransporterCat G X) :
-    End E ≃* MulAction.stabilizer G (E : X) where
+    End E ≃* MulAction.stabilizer G E.cell where
   toEquiv := endMorEquivStabilizer E
   map_mul&#39; _ _ := rfl</code></pre>
         </li>
@@ -526,25 +526,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6c19c34994c7efa4581569ed065330097ee0d97c/SheafOnBuilding/TransporterCat.lean#L123"><code>SheafOnBuilding.TransporterCat.endToStabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/TransporterCat.lean#L121"><code>SheafOnBuilding.TransporterCat.endToStabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 6c19c34, SheafOnBuilding.TransporterCat
+            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.TransporterCat
           </span>
           
           
           
           <pre class="lean-signature"><code>def endToStabilizer (E : TransporterCat G X) :
-    End E →* MulAction.stabilizer G (E : X) :=
+    End E →* MulAction.stabilizer G E.cell :=
   (endMulEquivStabilizer E).toMonoidHom</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/6c19c34994c7efa4581569ed065330097ee0d97c/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
       </p>
       
     </div>
