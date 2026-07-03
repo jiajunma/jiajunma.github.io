@@ -473,12 +473,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -504,12 +504,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -543,120 +543,109 @@
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">structure</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheaf.lean#L37"><code>SheafOnBuilding.GCosheaf</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GCosheaf
-          </span>
+          <code>SheafOnBuilding.GEquivCosheaf</code>
           
           
-          <p class="lean-docstring">Bundled `G`-equivariant cosheaf on `X` with values in `C`.</p>
-          <pre class="lean-signature"><code>structure GCosheaf (C : Type*) [Category C] where
-  /-- Underlying cosheaf `F : Xᵒᵖ ⥤ C`. -/
-  base : Cosheaf X C
-  /-- The equivariant structure witnessing `G`-equivariance. -/
-  equiv : GEquivariantCosheaf G X base</code></pre>
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.TransporterCat.GEquivCosheaf</code>, <code>(module) SheafOnBuilding.GEquivCosheaf</code>, <code>(module) SheafOnBuilding.GEquivCosheafToFun</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">instance</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheaf.lean#L81"><code>SheafOnBuilding.GCosheaf.category</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GCosheaf
-          </span>
+          <code>SheafOnBuilding.GEquivCosheaf.category</code>
           
           
           
-          <pre class="lean-signature"><code>instance category : Category (GCosheaf G X C) where
-  Hom F F&#39; := Hom F F&#39;
-  id F := Hom.id F
-  comp α β := Hom.comp α β
-  id_comp _ := Subtype.ext (Category.id_comp _)
-  comp_id _ := Subtype.ext (Category.comp_id _)
-  assoc _ _ _ := Subtype.ext (Category.assoc _ _ _)</code></pre>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.category</code>, <code>SheafOnBuilding.PXPrimeTransporterCat.category</code>, <code>SheafOnBuilding.SRep.category</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheafToFun.lean#L36"><code>SheafOnBuilding.GCosheaf.mapOfG</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GCosheafToFun
-          </span>
+          <code>SheafOnBuilding.GEquivCosheaf.mapOfG</code>
           
           
-          <p class="lean-docstring">The building block of the forward-direction functor&#39;s `.map`.</p>
-          <pre class="lean-signature"><code>noncomputable def GCosheaf.mapOfG
-    (W : GCosheaf G X C) {E E&#39; : X} (g : G) (hg : g • E&#39; ≤ E) :
-    W.base.obj (op E) ⟶ W.base.obj (op E&#39;) :=
-  W.base.map (homOfLE hg).op ≫ (W.equiv.act g E&#39;).inv</code></pre>
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_mul</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_one</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheafToFun.lean#L49"><code>SheafOnBuilding.GCosheaf.mapOfG_one</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GCosheafToFun
-          </span>
+          <code>SheafOnBuilding.GEquivCosheaf.mapOfG_one</code>
           
           
           
-          <pre class="lean-signature"><code>theorem GCosheaf.mapOfG_one (W : GCosheaf G X C) (E : X) :
-    W.mapOfG (1 : G) (show (1 : G) • E ≤ E from by rw [one_smul]) =
-      𝟙 (W.base.obj (op E))</code></pre>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_one</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_mul</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheafToFun.lean#L84"><code>SheafOnBuilding.GCosheaf.mapOfG_mul</code></a>
           
           
-          
-          <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GCosheafToFun
-          </span>
+          <code>SheafOnBuilding.GEquivCosheaf.mapOfG_mul</code>
           
           
           
-          <pre class="lean-signature"><code>theorem GCosheaf.mapOfG_mul (W : GCosheaf G X C)
-    {E E&#39; E&#39;&#39; : X} (g₂ g₁ : G)
-    (h₂ : g₂ • E&#39; ≤ E) (h₁ : g₁ • E&#39;&#39; ≤ E&#39;) :
-    W.mapOfG (g₂ * g₁)
-        (show (g₂ * g₁) • E&#39;&#39; ≤ E by
-          rw [mul_smul]; exact le_trans (GCellComplex.smul_le g₂ h₁) h₂) =
-      W.mapOfG g₂ h₂ ≫ W.mapOfG g₁ h₁</code></pre>
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_mul</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_one</code>?</span>
+          
+          
+          
+          
+          
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheafToFun.lean#L244"><code>SheafOnBuilding.TransporterCat.GCosheaf.toFunctor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/GEquivCosheafToFun.lean#L244"><code>SheafOnBuilding.TransporterCat.GEquivCosheaf&#39;.toFunctor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.GCosheafToFun
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.GEquivCosheafToFun
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def GCosheaf.toFunctor (W : GCosheaf G X C) :
+          <pre class="lean-signature"><code>noncomputable def GEquivCosheaf&#39;.toFunctor (W : GEquivCosheaf&#39; G X C) :
     (TransporterCat G X)ᵒᵖ ⥤ C where
   obj E := W.base.obj (op E.unop.cell)
   map {E E&#39;} β :=
@@ -670,7 +659,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheaf.lean#L1"><code>SheafOnBuilding.GCosheaf</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/GCosheafToFun.lean#L1"><code>SheafOnBuilding.GCosheafToFun</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/GEquivCosheaf.lean#L1"><code>SheafOnBuilding.GEquivCosheaf</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/GEquivCosheafToFun.lean#L1"><code>SheafOnBuilding.GEquivCosheafToFun</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
       </p>
       
     </div>
@@ -732,30 +721,30 @@ $\End_{]X/G[}(E) \cong \Stab_G(E)$ on $F(E)$
   act_mul : ...    -- multiplicativity
 class GEquivariantCosheaf {C : Type*} [Category C] (F : Cosheaf X C) where
   ...              -- analogous
-structure GCosheaf (C : Type*) [Category C] where
+structure GEquivCosheaf' (C : Type*) [Category C] where
   base : Cosheaf X C
   equiv : GEquivariantCosheaf G X base
-instance : Category (GCosheaf G X C) := ...
+instance : Category (GEquivCosheaf' G X C) := ...
 </code></pre>
-<p>$G$-equivariant cosheaves are bundled as <code>GCosheaf G X C</code> with a
+<p>$G$-equivariant cosheaves are bundled as <code>GEquivCosheaf' G X C</code> with a
 <code>Category</code> instance (natural transformations commuting with <code>act</code>
 at every cell).  This is what the reduction node
 <a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a> uses as its LHS.</p>
 <p><strong>Cosheaf side (done).</strong>  The forward direction
 $\Cosh_G(X, \mathscr C) \to \Fun(\,]X/G[^{\mathrm{op}}, \mathscr C)$
-is fully formalised in <code>SheafOnBuilding.GCosheafToFun</code>:</p>
-<pre><code class="language-lean">noncomputable def GCosheaf.mapOfG
-    (W : GCosheaf G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :
+is fully formalised in <code>SheafOnBuilding.GEquivCosheafToFun</code>:</p>
+<pre><code class="language-lean">noncomputable def GEquivCosheaf'.mapOfG
+    (W : GEquivCosheaf' G X C) {E E' : X} (g : G) (hg : g • E' ≤ E) :
     W.base.obj (op E) ⟶ W.base.obj (op E') :=
   W.base.map (homOfLE hg).op ≫ (W.equiv.act g E').inv
 
-theorem GCosheaf.mapOfG_one : W.mapOfG (1 : G) _ = 𝟙 _         -- proved
+theorem GEquivCosheaf'.mapOfG_one : W.mapOfG (1 : G) _ = 𝟙 _         -- proved
 
-theorem GCosheaf.mapOfG_mul
+theorem GEquivCosheaf'.mapOfG_mul
     (g₂ g₁ : G) (h₂ : g₂ • E' ≤ E) (h₁ : g₁ • E'' ≤ E') :
     W.mapOfG (g₂ * g₁) _ = W.mapOfG g₂ h₂ ≫ W.mapOfG g₁ h₁    -- proved
 
-noncomputable def GCosheaf.toFunctor (W : GCosheaf G X C) :
+noncomputable def GEquivCosheaf'.toFunctor (W : GEquivCosheaf' G X C) :
     (TransporterCat G X)ᵒᵖ ⥤ C where
   obj E := W.base.obj (op E.unop.cell)
   map β := W.mapOfG β.unop.val β.unop.property
@@ -787,14 +776,14 @@ directions into <code>CategoryTheory.Equivalence</code>:</p>
 <li>
 <p><a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a> combines
   <code>funCatEquivOfQFD</code> (from <code>SheafOnBuilding.TransporterFunEquiv</code>)
-  with <code>GCosheaf.toFunctor</code> to give the forward direction of
+  with <code>GEquivCosheaf'.toFunctor</code> to give the forward direction of
   $\Cosh_G(X, \mathscr C) \simeq \Fun([S]^{\mathrm{op}}, \mathscr C)$.</p>
 </li>
 <li>
 <p><a class="node-ref" data-node-id="equivariant_sheaves.induced_orbit_equivalence" href="../equivariant_sheaves/equivariant_sheaves_induced_orbit_equivalence.html">The category [X&#x27;/P] and its equivalence with the transporter category of G ×^P X&#x27;</a>'s
   intrinsic equivalence
   <code>PXPrimeTransporterCat.toInducedTransporterCat_isEquivalence</code>
-  composes with <code>GCosheaf.toFunctor</code> via
+  composes with <code>GEquivCosheaf'.toFunctor</code> via
   <code>Equivalence.congrLeft</code> on $\iota_*^{\mathrm{op}}$ to give the
   induced-space form $\Cosh_G(G \times^P X', \mathscr C) \simeq
   \Fun([X'/P]^{\mathrm{op}}, \mathscr C)$.</p>

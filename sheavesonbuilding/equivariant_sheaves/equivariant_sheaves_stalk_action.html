@@ -473,17 +473,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/StalkAction.lean#L37"><code>SheafOnBuilding.GCosheaf.stalkHom</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/StalkAction.lean#L37"><code>SheafOnBuilding.GEquivCosheaf.stalkHom</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.StalkAction
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.StalkAction
           </span>
           
           
           
-          <pre class="lean-signature"><code>def stalkHom (W : GCosheaf G X C) (E : X) (k : G) (hk : k • E = E) :
+          <pre class="lean-signature"><code>def stalkHom (W : GEquivCosheaf&#39; G X C) (E : X) (k : G) (hk : k • E = E) :
     W.base.obj (op E) ⟶ W.base.obj (op E) :=
   (W.equiv.act k E).hom ≫
     eqToHom (show W.base.obj (op (k • E)) = W.base.obj (op E) by rw [hk])</code></pre>
@@ -492,34 +492,34 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/StalkAction.lean#L43"><code>SheafOnBuilding.GCosheaf.stalkHom_one</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/StalkAction.lean#L43"><code>SheafOnBuilding.GEquivCosheaf.stalkHom_one</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.StalkAction
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.StalkAction
           </span>
           
           
           <p class="lean-docstring">**Identity of the stalk action**: the identity of `G` acts as `𝟙 W_E`.</p>
-          <pre class="lean-signature"><code>theorem stalkHom_one (W : GCosheaf G X C) (E : X) :
+          <pre class="lean-signature"><code>theorem stalkHom_one (W : GEquivCosheaf&#39; G X C) (E : X) :
     stalkHom W E 1 (one_smul _ _) = 𝟙 (W.base.obj (op E))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/StalkAction.lean#L54"><code>SheafOnBuilding.GCosheaf.stalkHom_mul</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/StalkAction.lean#L54"><code>SheafOnBuilding.GEquivCosheaf.stalkHom_mul</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.StalkAction
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.StalkAction
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem stalkHom_mul (W : GCosheaf G X C) (E : X) (k l : G)
+          <pre class="lean-signature"><code>theorem stalkHom_mul (W : GEquivCosheaf&#39; G X C) (E : X) (k l : G)
     (hk : k • E = E) (hl : l • E = E) :
     stalkHom W E (k * l) (by rw [mul_smul, hl, hk]) =
       stalkHom W E l hl ≫ stalkHom W E k hk</code></pre>
@@ -528,17 +528,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/StalkAction.lean#L90"><code>SheafOnBuilding.GCosheaf.stalkAction</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/StalkAction.lean#L90"><code>SheafOnBuilding.GEquivCosheaf.stalkAction</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.StalkAction
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.StalkAction
           </span>
           
           
           <p class="lean-docstring">**The stalk action as a monoid homomorphism**.</p>
-          <pre class="lean-signature"><code>def stalkAction (W : GCosheaf G X C) (E : X) :
+          <pre class="lean-signature"><code>def stalkAction (W : GEquivCosheaf&#39; G X C) (E : X) :
     MulAction.stabilizer G E →* End (W.base.obj (op E)) where
   toFun k := stalkHom W E k.val k.property
   map_one&#39; := stalkHom_one W E
@@ -548,18 +548,18 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/StalkAction.lean#L98"><code>SheafOnBuilding.GCosheaf.kStalkAction</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/StalkAction.lean#L98"><code>SheafOnBuilding.GEquivCosheaf.kStalkAction</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ fa6f38e, SheafOnBuilding.StalkAction
+            SheafOnBuilding (this repo) @ a235d18, SheafOnBuilding.StalkAction
           </span>
           
           
           
           <pre class="lean-signature"><code>def kStalkAction {G&#39; : Subgroup G} {S : Subcomplex X}
-    (κ : KData G&#39; S) (W : GCosheaf G X C) (E : X) :
+    (κ : KData G&#39; S) (W : GEquivCosheaf&#39; G X C) (E : X) :
     κ.K E →* End (W.base.obj (op E)) :=
   (stalkAction W E).comp (Subgroup.inclusion (κ.K_le_fix E))</code></pre>
         </li>
@@ -567,7 +567,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/fa6f38ed7d15b8bfc68093d797c6b31574a15622/SheafOnBuilding/StalkAction.lean#L1"><code>SheafOnBuilding.StalkAction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/a235d181e2b9f7b21fa4826ae01da3ef6239ad71/SheafOnBuilding/StalkAction.lean#L1"><code>SheafOnBuilding.StalkAction</code></a>
       </p>
       
     </div>
