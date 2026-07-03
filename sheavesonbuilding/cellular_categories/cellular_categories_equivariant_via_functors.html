@@ -473,12 +473,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 3ebad80, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -504,12 +504,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 3ebad80, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -545,12 +545,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/TransporterCat.lean#L220"><code>SheafOnBuilding.GEquivCosheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/TransporterCat.lean#L220"><code>SheafOnBuilding.GEquivCosheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 3ebad80, SheafOnBuilding.TransporterCat
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.TransporterCat
           </span>
           
           
@@ -562,99 +562,124 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
           
-          
-          <code>SheafOnBuilding.GEquivCosheaf.category</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.category</code>, <code>SheafOnBuilding.PXPrimeTransporterCat.category</code>, <code>SheafOnBuilding.SRep.category</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheaf.lean#L137"><code>SheafOnBuilding.GEquivCosheaf&#39;.category</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.GEquivCosheaf
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>instance category : Category (GEquivCosheaf&#39; G X C) where
+  Hom F F&#39; := Hom F F&#39;
+  id F := Hom.id F
+  comp α β := Hom.comp α β
+  id_comp α := by
+    cases α with
+    | mk toHom _ =&gt;
+      show Hom.comp (Hom.id _) ⟨toHom, _⟩ = ⟨toHom, _⟩
+      simp [Hom.comp, Hom.id]
+  comp_id α := by
+    cases α with
+    | mk toHom _ =&gt;
+      show Hom.comp ⟨toHom, _⟩ (Hom.id _) = ⟨toHom, _⟩
+      simp [Hom.comp, Hom.id]
+  assoc α β γ := by
+    show Hom.comp (Hom.comp α β) γ = Hom.comp α (Hom.comp β γ)
+    simp [Hom.comp, Category.assoc]</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.GEquivCosheaf.mapOfG</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.base_map_eq_mapOfG_one</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_inv_eq_act</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheafToFun.lean#L36"><code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.GEquivCosheafToFun
+          </span>
           
           
+          <p class="lean-docstring">The building block of the forward-direction functor&#39;s `.map`.</p>
+          <pre class="lean-signature"><code>noncomputable def GEquivCosheaf&#39;.mapOfG
+    (W : GEquivCosheaf&#39; G X C) {E E&#39; : X} (g : G) (hg : g • E&#39; ≤ E) :
+    W.obj E ⟶ W.obj E&#39; :=
+  W.map hg ≫ (W.act g E&#39;).inv</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.GEquivCosheaf.mapOfG_one</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_one</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.base_map_eq_mapOfG_one</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.act_hom_of_eq_one</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheafToFun.lean#L49"><code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_one</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.GEquivCosheafToFun
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem GEquivCosheaf&#39;.mapOfG_one (W : GEquivCosheaf&#39; G X C) (E : X) :
+    W.mapOfG (1 : G) (show (1 : G) • E ≤ E from by rw [one_smul]) =
+      𝟙 (W.obj E)</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SheafOnBuilding.GEquivCosheaf.mapOfG_mul</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_mul</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.base_map_eq_mapOfG_one</code>, <code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheafToFun.lean#L90"><code>SheafOnBuilding.GEquivCosheaf&#39;.mapOfG_mul</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.GEquivCosheafToFun
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem GEquivCosheaf&#39;.mapOfG_mul (W : GEquivCosheaf&#39; G X C)
+    {E E&#39; E&#39;&#39; : X} (g₂ g₁ : G)
+    (h₂ : g₂ • E&#39; ≤ E) (h₁ : g₁ • E&#39;&#39; ≤ E&#39;) :
+    W.mapOfG (g₂ * g₁)
+        (show (g₂ * g₁) • E&#39;&#39; ≤ E by
+          rw [mul_smul]; exact le_trans (GCellComplex.smul_le g₂ h₁) h₂) =
+      W.mapOfG g₂ h₂ ≫ W.mapOfG g₁ h₁</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SheafOnBuilding.GEquivCosheaf.toFunctor</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SheafOnBuilding.TransporterCat.GEquivCosheaf&#39;.toFunctor</code>, <code>SheafOnBuilding.Functor.toGEquivCosheaf&#39;</code>, <code>SheafOnBuilding.Functor.toGEquivCosheaf&#39;AuxHom</code>?</span>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheafToFun.lean#L200"><code>SheafOnBuilding.TransporterCat.GEquivCosheaf&#39;.toFunctor</code></a>
           
           
           
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ 974c420, SheafOnBuilding.GEquivCosheafToFun
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def GEquivCosheaf&#39;.toFunctor (W : GEquivCosheaf&#39; G X C) :
+    (TransporterCat G X)ᵒᵖ ⥤ C where
+  obj E := W.obj E.unop.cell
+  map {E E&#39;} β :=
+    let β&#39; : TransporterCat.Mor E&#39;.unop E.unop := β.unop
+    W.mapOfG β&#39;.val β&#39;.property
+  map_id E := W.mapOfG_one E.unop.cell
+  map_comp β γ :=
+    W.mapOfG_mul β.unop.val γ.unop.val β.unop.property γ.unop.property</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/GEquivCosheaf.lean#L1"><code>SheafOnBuilding.GEquivCosheaf</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/GEquivCosheafToFun.lean#L1"><code>SheafOnBuilding.GEquivCosheafToFun</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/GEquivCosheafEquiv.lean#L1"><code>SheafOnBuilding.GEquivCosheafEquiv</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/3ebad80bf560cb58a23a145ebd58a4da95ec7bb9/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheaf.lean#L1"><code>SheafOnBuilding.GEquivCosheaf</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheafToFun.lean#L1"><code>SheafOnBuilding.GEquivCosheafToFun</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/GEquivCosheafEquiv.lean#L1"><code>SheafOnBuilding.GEquivCosheafEquiv</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/974c420bc42c526c0013e70b10fe3145c29ea789/SheafOnBuilding/TransporterCat.lean#L1"><code>SheafOnBuilding.TransporterCat</code></a>
       </p>
       
     </div>
