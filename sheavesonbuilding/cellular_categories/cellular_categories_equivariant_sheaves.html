@@ -471,14 +471,177 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">class</span>
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L92"><code>SheafOnBuilding.Sheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>abbrev Sheaf (C : Type*) [Category C] : Type _ := X ⥤ C</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L101"><code>SheafOnBuilding.Cosheaf</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>abbrev Cosheaf (C : Type*) [Category C] : Type _ := Xᵒᵖ ⥤ C</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L123"><code>SheafOnBuilding.Sheaf&#39;</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>structure Sheaf&#39; (C : Type*) [Category C] where
+  /-- Object at each cell. -/
+  obj : X → C
+  /-- Restriction morphism for a face relation. -/
+  map : ∀ {E E&#39; : X}, E ≤ E&#39; → (obj E ⟶ obj E&#39;)
+  /-- Restriction along the identity face is the identity morphism. -/
+  map_id : ∀ E, map (le_refl E) = 𝟙 (obj E) := by aesop_cat
+  /-- Restriction is compatible with composition of face relations. -/
+  map_comp : ∀ {E E&#39; E&#39;&#39; : X} (h : E ≤ E&#39;) (h&#39; : E&#39; ≤ E&#39;&#39;),
+    map (le_trans h h&#39;) = map h ≫ map h&#39; := by aesop_cat</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L142"><code>SheafOnBuilding.Cosheaf&#39;</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>structure Cosheaf&#39; (C : Type*) [Category C] where
+  /-- Object at each cell. -/
+  obj : X → C
+  /-- Corestriction morphism for a face relation (note the reversed
+  arrow direction compared to `Sheaf&#39;`). -/
+  map : ∀ {E E&#39; : X}, E ≤ E&#39; → (obj E&#39; ⟶ obj E)
+  /-- Corestriction along the identity face is the identity morphism. -/
+  map_id : ∀ E, map (le_refl E) = 𝟙 (obj E) := by aesop_cat
+  /-- Corestriction is compatible with composition of face relations. -/
+  map_comp : ∀ {E E&#39; E&#39;&#39; : X} (h : E ≤ E&#39;) (h&#39; : E&#39; ≤ E&#39;&#39;),
+    map (le_trans h h&#39;) = map h&#39; ≫ map h := by aesop_cat</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L161"><code>SheafOnBuilding.Sheaf.toObject</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def toObject {C : Type*} [Category C] (F : Sheaf X C) : Sheaf&#39; X C where
+  obj := F.obj
+  map h := F.map (homOfLE h)
+  map_id E := F.map_id E
+  map_comp _ _ := F.map_comp _ _</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L171"><code>SheafOnBuilding.Sheaf.ofObject</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def ofObject {C : Type*} [Category C] (F : Sheaf&#39; X C) : Sheaf X C where
+  obj := F.obj
+  map {E E&#39;} h := F.map (leOfHom h)
+  map_id := F.map_id
+  map_comp _ _ := F.map_comp _ _</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L186"><code>SheafOnBuilding.Cosheaf.toObject</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def toObject {C : Type*} [Category C] (F : Cosheaf X C) : Cosheaf&#39; X C where
+  obj E := F.obj (op E)
+  map h := F.map (homOfLE h).op
+  map_id E := F.map_id (op E)
+  map_comp _ _ := F.map_comp _ _</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L194"><code>SheafOnBuilding.Cosheaf.ofObject</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.SheafCosheaf
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def ofObject {C : Type*} [Category C] (F : Cosheaf&#39; X C) : Cosheaf X C where
+  obj E := F.obj E.unop
+  map {_ _} h := F.map (leOfHom h.unop)
+  map_id _ := F.map_id _
+  map_comp _ _ := F.map_comp _ _</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">class</span>
+          
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GEquivariant.lean#L61"><code>SheafOnBuilding.GEquivariantSheaf</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -504,12 +667,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GEquivariant.lean#L83"><code>SheafOnBuilding.GEquivariantCosheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -545,12 +708,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GEquivariant.lean#L122"><code>SheafOnBuilding.GEquivariantCosheaf.act_one_inv</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GEquivariant.lean#L122"><code>SheafOnBuilding.GEquivariantCosheaf.act_one_inv</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -563,12 +726,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GEquivariant.lean#L52"><code>SheafOnBuilding.smulFunctor</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GEquivariant.lean#L52"><code>SheafOnBuilding.smulFunctor</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.GEquivariant
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.GEquivariant
           </span>
           
           
@@ -581,12 +744,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GCosheaf.lean#L37"><code>SheafOnBuilding.GCosheaf</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GCosheaf.lean#L37"><code>SheafOnBuilding.GCosheaf</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.GCosheaf
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.GCosheaf
           </span>
           
           
@@ -601,12 +764,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GCosheaf.lean#L81"><code>SheafOnBuilding.GCosheaf.category</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GCosheaf.lean#L81"><code>SheafOnBuilding.GCosheaf.category</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ 09a1874, SheafOnBuilding.GCosheaf
+            SheafOnBuilding (this repo) @ db99966, SheafOnBuilding.GCosheaf
           </span>
           
           
@@ -623,7 +786,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/09a1874539381a706f2dbb2efe46faa78596f8f3/SheafOnBuilding/GCosheaf.lean#L1"><code>SheafOnBuilding.GCosheaf</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/SheafCosheaf.lean#L1"><code>SheafOnBuilding.SheafCosheaf</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GEquivariant.lean#L1"><code>SheafOnBuilding.GEquivariant</code></a>, <a href="https://github.com/jiajunma/sheavesonbuilding/blob/db99966db164a6eac462b74ba5b32521f96d0c5c/SheafOnBuilding/GCosheaf.lean#L1"><code>SheafOnBuilding.GCosheaf</code></a>
       </p>
       
     </div>
@@ -656,6 +819,36 @@ reversed.</p>
 <p><strong>Notation.</strong> We write $\Sh_G(X,R)$ (resp.\ $\Cosh_G(X,R)$) for $G$-equivariant
 $R$-modules; for the trivial group we recover $\Sh(X,R) = \Sh_{\{e\}}(X,R)$.</p>
 <h2>Lean formalization</h2>
+<h3>Naming convention: functor form (<code>Sheaf</code>, <code>Cosheaf</code>) vs object form (<code>Sheaf'</code>, <code>Cosheaf'</code>)</h3>
+<p>Two equivalent presentations of the underlying (non-equivariant)
+(co)sheaf exist in the paper, and the Lean library encodes both under
+distinct names:</p>
+<ul>
+<li>
+<p><strong><code>Sheaf X C</code>, <code>Cosheaf X C</code> (no prime) — functor form.</strong>  Literal
+  <code>X ⥤ C</code> and <code>Xᵒᵖ ⥤ C</code>, introduced as <code>abbrev</code>s.  All of Mathlib's
+  <code>CategoryTheory.Functor</code> API applies directly with no wrapping.
+  <strong>This is the canonical form</strong> used throughout the library —
+  <code>GEquivariantSheaf</code>, <code>GEquivariantCosheaf</code>, <code>GCosheaf</code>,
+  <code>GCosheaf.toFunctor</code>, and the reduction chain
+  (<a class="node-ref" data-node-id="equivariant_sheaves.reduction_to_qfd" href="../equivariant_sheaves/equivariant_sheaves_reduction_to_qfd.html">Reduction of G-equivariant cosheaves to a QFD</a>) all sit on top of it.</p>
+</li>
+<li>
+<p><strong><code>Sheaf' X C</code>, <code>Cosheaf' X C</code> (with prime) — object form.</strong>
+  Sheaf7 §2.2's classical $(V, r)$-pair form as a <code>structure</code> with
+  fields <code>obj : X → C</code> and (co)restriction morphisms
+  <code>map : E ≤ E' → …</code> plus functoriality axioms.  Kept as a concrete
+  surface for constructions that read more clearly with explicit
+  field access than with functor destructuring.</p>
+</li>
+</ul>
+<p>The two forms are <strong>provably equivalent</strong> via <code>Sheaf.toObject</code>,
+<code>Sheaf.ofObject</code>, <code>Cosheaf.toObject</code>, <code>Cosheaf.ofObject</code> (all four in
+<code>SheafOnBuilding.SheafCosheaf</code>).  Downstream code should PREFER the
+no-prime (functor) form — it composes with Mathlib's functor-category
+API for free; the primed form exists to bridge the paper's
+presentation for readers whose mental model is object-oriented.</p>
+<h3>Equivariance data</h3>
 <p>The class <code>GEquivariantCosheaf G X F</code> (typeclass on a <em>single</em> cosheaf <code>F</code>)
 records the pointwise action data</p>
 <p><code>act : ∀ (g : G) (E : X), F.obj (op E) ≅ F.obj (op (g • E))</code></p>
