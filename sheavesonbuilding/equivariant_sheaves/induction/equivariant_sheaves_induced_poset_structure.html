@@ -473,12 +473,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L379"><code>SheafOnBuilding.InducedSpace.InductionLe</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L379"><code>SheafOnBuilding.InducedSpace.InductionLe</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -490,12 +490,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L559"><code>SheafOnBuilding.InducedSpace.dim</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L559"><code>SheafOnBuilding.InducedSpace.dim</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -506,12 +506,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L569"><code>SheafOnBuilding.InducedSpace.dim_iota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L569"><code>SheafOnBuilding.InducedSpace.dim_iota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -523,12 +523,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L565"><code>SheafOnBuilding.InducedSpace.dim_mk</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L565"><code>SheafOnBuilding.InducedSpace.dim_mk</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -541,12 +541,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L575"><code>SheafOnBuilding.InducedSpace.dim_smul</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L575"><code>SheafOnBuilding.InducedSpace.dim_smul</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -558,7 +558,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -688,10 +688,6 @@ group calculation.  The name mirrors <code>InductionRel</code> (the pre-quotient
 equivalence relation from
 [[node:equivariant_sheaves.induction_GxP_X]]): same syntactic shape,
 "$=$" replaced by "$\preceq$".</p>
-<pre><code class="language-lean">def InductionLe (g₁E₁ g₂E₂ : G × X') : Prop :=
-  ∃ n ∈ d.G', n • g₁E₁.2 ≤ g₂E₂.2 ∧
-              g₁E₁.1⁻¹ * g₂E₂.1 * n ∈ d.P g₁E₁.2
-</code></pre>
 <h3>Well-definedness lemmas</h3>
 <p>The five well-definedness lemmas (reflexivity, transitivity, left
 descent, right descent, antisymmetry) and the assembled
@@ -703,9 +699,6 @@ formalization section of
 <code>Quotient.lift</code>; well-definedness comes from <code>GCellComplex.smul_dim</code>
 (the $G$-action on $X'$ is dimension-preserving), and the compatibility
 rewrites are <code>dim_iota</code>, <code>dim_smul</code>.</p>
-<pre><code class="language-lean">def dim : InducedSpace d → ℕ :=
-  Quotient.lift (fun gE : G × X' =&gt; AbstractCellComplex.dim gE.2) ...
-</code></pre>
 <p>The <code>AbstractCellComplex (InducedSpace d)</code> instance packages <code>dim</code> with
 <code>dim_lt</code> (proved by case-splitting on the <code>InductionLe</code> witness) and
 <code>exists_face_dim_pred</code> (lifted from $X'$ through the same-$g$

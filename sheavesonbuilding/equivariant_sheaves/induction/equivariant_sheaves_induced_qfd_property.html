@@ -477,12 +477,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L710"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L710"><code>SheafOnBuilding.InducedSpace.Subcomplex.ofIota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -514,12 +514,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L739"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L739"><code>SheafOnBuilding.InducedSpace.G&#39;_le_subcomplexOfIota_stabilizer</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -531,12 +531,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L771"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L771"><code>SheafOnBuilding.InducedSpace.isQuasiFundDomain_subcomplexOfIota</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.Induction
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.Induction
           </span>
           
           
@@ -561,7 +561,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/Induction.lean#L1"><code>SheafOnBuilding.Induction</code></a>
       </p>
       
     </div>
@@ -646,20 +646,10 @@ direction of the induction/QFD correspondence
 (<a class="node-ref" data-node-id="equivariant_sheaves.induction_data_reverse" href="../equivariant_sheaves_induction_data_reverse.html">Recovering the induction data from a quasi-fundamental domain</a>).</p>
 <h2>Lean formalization</h2>
 <p>The image of $\iota$ as a face-closed subcomplex is</p>
-<pre><code class="language-lean">def Subcomplex.ofIota : SheafOnBuilding.Subcomplex (InducedSpace d) where
-  carrier := Set.range (iota d)
-  face_closed := ...
-</code></pre>
 <p>Note the type: <code>Subcomplex (InducedSpace d)</code> — this is a <strong>subcomplex
 of the induced $G$-space</strong>, not the induction base $X'$.</p>
 <p>The auxiliary inclusion $G' \le \Stab_G(S)$ (statement (3)) is</p>
-<pre><code class="language-lean">theorem G'_le_subcomplexOfIota_stabilizer :
-    d.G' ≤ (Subcomplex.ofIota d).stabilizer
-</code></pre>
 <p>The main QFD statement (2) is the class instance</p>
-<pre><code class="language-lean">instance isQuasiFundDomain_subcomplexOfIota :
-    IsQuasiFundDomain d.G' (Subcomplex.ofIota d)
-</code></pre>
 <p>using the sharp subgroup <code>d.G'</code> (not <code>(Subcomplex.ofIota d).stabilizer</code>).
 The <code>orbit_iff</code> field is discharged using
 <a class="node-ref" data-node-id="equivariant_sheaves.iota_cellular_embedding" href="../equivariant_sheaves_iota_cellular_embedding.html">ι : X&#x27; → G ×^P X&#x27; is a cellular embedding (poset form)</a> clause (5) and

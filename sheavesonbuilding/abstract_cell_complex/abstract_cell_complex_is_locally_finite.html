@@ -471,12 +471,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
+          <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/GCellComplex.lean#L82"><code>SheafOnBuilding.IsLocallyFinite</code></a>
           
           
           
           <span class="lean-source-meta">
-            SheafOnBuilding (this repo) @ e3d9c0c, SheafOnBuilding.GCellComplex
+            SheafOnBuilding (this repo) @ 74c7973, SheafOnBuilding.GCellComplex
           </span>
           
           
@@ -492,7 +492,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/e3d9c0c5517f3c8c8ea21f78e11c460270ce1ec5/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
+        <a href="https://github.com/jiajunma/sheavesonbuilding/blob/74c7973f20b21875ae4395a3f5d856b49a3555d7/SheafOnBuilding/GCellComplex.lean#L1"><code>SheafOnBuilding.GCellComplex</code></a>
       </p>
       
     </div>
@@ -530,10 +530,6 @@ unavoidable — most prominently the boundary of the cellular chain
 complex ([[node:representations.chain_complex_C_dot]]) — does local
 finiteness enter.</p>
 <h2>Lean formalization</h2>
-<pre><code class="language-lean">class IsLocallyFinite (X : Type*) [PartialOrder X] : Prop where
-  finite_faces   : ∀ E : X, Set.Finite {F : X | F ≤ E}
-  finite_cofaces : ∀ E : X, Set.Finite {F : X | E ≤ F}
-</code></pre>
 <p><code>IsLocallyFinite</code> is a <code>Prop</code> mixin, kept separate from
 <code>AbstractCellComplex</code> so lemmas that need only the poset and dimension
 do not depend on finiteness.  It takes only <code>[PartialOrder X]</code> (not
