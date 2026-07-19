@@ -4,22 +4,22 @@
     "title": "Reductive Structure",
     "href": "reductive_structure/index.html",
     "parent": null,
-    "node_count": 52,
-    "descendant_node_count": 52
+    "node_count": 51,
+    "descendant_node_count": 51
   },
   "counts": {
-    "internal_nodes": 52,
+    "internal_nodes": 51,
     "inlined_nodes": 0,
-    "descendant_nodes": 52,
+    "descendant_nodes": 51,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 52,
+    "non_proof_plan_nodes": 51,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 9,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 62,
-    "visible_nodes_with_selected_proof_plans": 62
+    "visible_nodes_without_proof_plans": 61,
+    "visible_nodes_with_selected_proof_plans": 61
   },
   "nodes": [
     {
@@ -45,14 +45,6 @@
       "status": "admitted",
       "href": "conjugacy_classes/conjugacy_classes_unipotent_elements.html",
       "payload": "node_payloads/conjugacy_classes_unipotent_elements.json"
-    },
-    {
-      "id": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
-      "title": "Unipotent Subgroups Are Triangularizable",
-      "kind": "theorem",
-      "status": "admitted",
-      "href": "reductive_structure/linear_algebraic_groups_unipotent_subgroups_are_triangularizable.html",
-      "payload": "node_payloads/linear_algebraic_groups_unipotent_subgroups_are_triangularizable.json"
     },
     {
       "id": "reductive_structure.algebraic_tori",
@@ -179,7 +171,7 @@
       "title": "Levi Decomposition of Parabolic Subgroups",
       "kind": "theorem",
       "status": "admitted",
-      "href": "root_data_and_duality/reductive_structure_levi_decomposition_of_parabolics.html",
+      "href": "reductive_structure/reductive_structure_levi_decomposition_of_parabolics.html",
       "payload": "node_payloads/reductive_structure_levi_decomposition_of_parabolics.json"
     },
     {
@@ -235,7 +227,7 @@
       "title": "Levi Decomposition for Parabolic F-Subgroups",
       "kind": "theorem",
       "status": "admitted",
-      "href": "root_data_and_duality/reductive_structure_parabolic_f_subgroups_levi_decomposition.html",
+      "href": "reductive_structure/reductive_structure_parabolic_f_subgroups_levi_decomposition.html",
       "payload": "node_payloads/reductive_structure_parabolic_f_subgroups_levi_decomposition.json"
     },
     {
@@ -291,7 +283,7 @@
       "title": "Standard Parabolics Are Classified by Simple Roots",
       "kind": "theorem",
       "status": "admitted",
-      "href": "root_data_and_duality/reductive_structure_standard_parabolic_classification.html",
+      "href": "reductive_structure/reductive_structure_standard_parabolic_classification.html",
       "payload": "node_payloads/reductive_structure_standard_parabolic_classification.json"
     },
     {
@@ -347,7 +339,7 @@
       "title": "Chevalley Isomorphism Theorem for F-Split Groups",
       "kind": "theorem",
       "status": "admitted",
-      "href": "descent_and_forms/root_data_and_duality_f_split_chevalley_isomorphism_theorem.html",
+      "href": "root_data_and_duality/root_data_and_duality_f_split_chevalley_isomorphism_theorem.html",
       "payload": "node_payloads/root_data_and_duality_f_split_chevalley_isomorphism_theorem.json"
     },
     {
@@ -355,7 +347,7 @@
       "title": "Indexed Root Datum of an F-Reductive Group",
       "kind": "definition",
       "status": "admitted",
-      "href": "descent_and_forms/root_data_and_duality_indexed_root_datum_of_f_reductive_group.html",
+      "href": "root_data_and_duality/root_data_and_duality_indexed_root_datum_of_f_reductive_group.html",
       "payload": "node_payloads/root_data_and_duality_indexed_root_datum_of_f_reductive_group.json"
     },
     {
@@ -371,7 +363,7 @@
       "title": "Quasi-Split and Anisotropic Groups via the Indexed Root Datum",
       "kind": "theorem",
       "status": "admitted",
-      "href": "descent_and_forms/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html",
+      "href": "root_data_and_duality/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html",
       "payload": "node_payloads/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.json"
     },
     {
@@ -468,11 +460,6 @@
     {
       "from": "reductive_structure.reductive_groups",
       "to": "conjugacy_classes.unipotent_elements",
-      "kind": "uses"
-    },
-    {
-      "from": "reductive_structure.unipotent_groups",
-      "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
       "kind": "uses"
     },
     {
@@ -1064,7 +1051,7 @@
       "id": "linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "href": "linear_algebraic_groups/index.html",
-      "role": "dependency",
+      "role": "dependency_and_dependent",
       "node_count": 31
     },
     {
@@ -1113,17 +1100,38 @@
     },
     {
       "from": "topic:affine_group_schemes",
-      "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
-      "kind": "boundary_dependency",
-      "topic": "affine_group_schemes",
-      "count": 1
-    },
-    {
-      "from": "topic:affine_group_schemes",
       "to": "root_data_and_duality.chevalley_group_construction",
       "kind": "boundary_dependency",
       "topic": "affine_group_schemes",
       "count": 2
+    },
+    {
+      "from": "topic:descent_and_forms",
+      "to": "reductive_structure.f_split_solvable_fixed_point_theorem",
+      "kind": "boundary_dependency",
+      "topic": "descent_and_forms",
+      "count": 1
+    },
+    {
+      "from": "topic:descent_and_forms",
+      "to": "reductive_structure.f_tori_galois_module_classification",
+      "kind": "boundary_dependency",
+      "topic": "descent_and_forms",
+      "count": 2
+    },
+    {
+      "from": "topic:descent_and_forms",
+      "to": "reductive_structure.maximal_f_tori_exist",
+      "kind": "boundary_dependency",
+      "topic": "descent_and_forms",
+      "count": 1
+    },
+    {
+      "from": "topic:descent_and_forms",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "kind": "boundary_dependency",
+      "topic": "descent_and_forms",
+      "count": 1
     },
     {
       "from": "topic:descent_and_forms",
@@ -1137,13 +1145,6 @@
       "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
       "kind": "boundary_dependency",
       "topic": "descent_and_forms",
-      "count": 1
-    },
-    {
-      "from": "topic:linear_algebraic_groups",
-      "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
-      "kind": "boundary_dependency",
-      "topic": "linear_algebraic_groups",
       "count": 1
     },
     {
@@ -1183,35 +1184,7 @@
     },
     {
       "from": "topic:linear_algebraic_groups",
-      "to": "reductive_structure.f_split_solvable_fixed_point_theorem",
-      "kind": "boundary_dependency",
-      "topic": "linear_algebraic_groups",
-      "count": 1
-    },
-    {
-      "from": "topic:linear_algebraic_groups",
-      "to": "reductive_structure.f_tori_galois_module_classification",
-      "kind": "boundary_dependency",
-      "topic": "linear_algebraic_groups",
-      "count": 2
-    },
-    {
-      "from": "topic:linear_algebraic_groups",
       "to": "reductive_structure.lie_kolchin_theorem",
-      "kind": "boundary_dependency",
-      "topic": "linear_algebraic_groups",
-      "count": 1
-    },
-    {
-      "from": "topic:linear_algebraic_groups",
-      "to": "reductive_structure.maximal_f_tori_exist",
-      "kind": "boundary_dependency",
-      "topic": "linear_algebraic_groups",
-      "count": 1
-    },
-    {
-      "from": "topic:linear_algebraic_groups",
-      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
       "kind": "boundary_dependency",
       "topic": "linear_algebraic_groups",
       "count": 1
@@ -1396,6 +1369,13 @@
       "to": "topic:descent_and_forms",
       "kind": "boundary_dependent",
       "topic": "descent_and_forms",
+      "count": 1
+    },
+    {
+      "from": "reductive_structure.unipotent_groups",
+      "to": "topic:linear_algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "linear_algebraic_groups",
       "count": 1
     },
     {
@@ -1703,12 +1683,6 @@
       "count": 1
     },
     {
-      "id": "linear-algebraic-groups",
-      "title": "linear-algebraic-groups",
-      "href": "keywords/linear-algebraic-groups.html",
-      "count": 1
-    },
-    {
       "id": "maximal-tori",
       "title": "maximal-tori",
       "href": "keywords/maximal-tori.html",
@@ -1904,13 +1878,13 @@
       "id": "springer",
       "title": "springer",
       "href": "keywords/springer.html",
-      "count": 31
+      "count": 30
     },
     {
       "id": "theorem",
       "title": "theorem",
       "href": "keywords/theorem.html",
-      "count": 29
+      "count": 28
     },
     {
       "id": "tits-index",
@@ -1934,13 +1908,13 @@
       "id": "triangularization",
       "title": "triangularization",
       "href": "keywords/triangularization.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "unipotent",
       "title": "unipotent",
       "href": "keywords/unipotent.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "unipotent-elements",

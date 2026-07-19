@@ -1088,7 +1088,6 @@
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
         "affine_group_schemes.hopf_spec_functor",
         "affine_group_schemes.spec_representability_via_global_sections",
-        "linear_algebraic_groups.linear_algebraic_group_definition",
         "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
       ]
     },
@@ -1687,7 +1686,6 @@
       "used_by": [
         "affine_group_schemes.base_change",
         "descent_and_forms.galois_groups_and_descent_data",
-        "linear_algebraic_groups.linear_algebraic_group_definition",
         "number_theory.global_fields_adeles_and_reciprocity_symbols",
         "number_theory.local_fields"
       ]
@@ -1719,8 +1717,7 @@
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
         "affine_group_schemes.hopf_spec_functor",
         "affine_group_schemes.multiplication_is_coalgebra_hom",
-        "bd_covers.central_extensions_of_algebraic_groups",
-        "linear_algebraic_groups.linear_algebraic_group_definition"
+        "bd_covers.central_extensions_of_algebraic_groups"
       ]
     },
     {
@@ -2215,11 +2212,11 @@
         "cocycles",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.nonabelian_h1",
         "descent_and_forms.torsors",
@@ -2266,12 +2263,12 @@
         "descent",
         "theorem"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms",
         "linear_algebraic_groups"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.galois_groups_and_descent_data",
         "descent_and_forms.rational_forms_of_linear_algebraic_groups",
@@ -2294,11 +2291,11 @@
         "algebraic-groups",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
         "affine_group_schemes.base_change",
@@ -2319,11 +2316,11 @@
         "forms",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.galois_groups_and_descent_data",
         "linear_algebraic_groups.automorphism_groups"
@@ -2341,11 +2338,11 @@
         "galois-cohomology",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.galois_groups_and_descent_data"
       ],
@@ -2368,11 +2365,11 @@
         "galois-descent",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "commutative_algebra.fields_and_field_extensions"
       ],
@@ -2465,11 +2462,11 @@
         "nonabelian-h1",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.galois_cohomology"
       ],
@@ -2551,11 +2548,11 @@
         "linear-algebraic-groups",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.forms_of_algebraic_groups",
         "linear_algebraic_groups.linear_algebraic_groups"
@@ -2720,11 +2717,11 @@
         "torsors",
         "descent-and-forms"
       ],
-      "primary_topic": "linear_algebraic_groups",
+      "primary_topic": "descent_and_forms",
       "topics": [
         "descent_and_forms"
       ],
-      "topic": "linear_algebraic_groups",
+      "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.nonabelian_h1"
       ],
@@ -3333,27 +3330,6 @@
       ]
     },
     {
-      "id": "linear_algebraic_groups.linear_algebraic_group_definition",
-      "title": "Definition of Linear Algebraic Groups",
-      "kind": "definition",
-      "status": "needs_definition_review",
-      "tags": [
-        "linear-algebraic-groups",
-        "affine-group-schemes",
-        "definitions"
-      ],
-      "primary_topic": "linear_algebraic_groups",
-      "topics": [
-        "linear_algebraic_groups"
-      ],
-      "topic": "linear_algebraic_groups",
-      "uses": [
-        "algebraic_geometry.affine_schemes",
-        "commutative_algebra.fields_and_field_extensions",
-        "commutative_algebra.hopf_algebras"
-      ]
-    },
-    {
       "id": "linear_algebraic_groups.linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "kind": "topic",
@@ -3538,12 +3514,11 @@
         "theorem",
         "linear-algebraic-groups"
       ],
-      "primary_topic": "reductive_structure",
+      "primary_topic": "linear_algebraic_groups",
       "topics": [
-        "reductive_structure",
-        "reductive_structure"
+        "linear_algebraic_groups"
       ],
-      "topic": "reductive_structure",
+      "topic": "linear_algebraic_groups",
       "uses": [
         "affine_group_schemes.algebraic_group_definition",
         "linear_algebraic_groups.embedding_theorem",
@@ -4042,12 +4017,12 @@
         "theorem",
         "reductive-structure"
       ],
-      "primary_topic": "root_data_and_duality",
+      "primary_topic": "reductive_structure",
       "topics": [
         "reductive_structure",
         "root_data_and_duality"
       ],
-      "topic": "root_data_and_duality",
+      "topic": "reductive_structure",
       "uses": [
         "reductive_structure.levi_subgroups_and_unipotent_radicals",
         "reductive_structure.standard_parabolic_classification",
@@ -4241,12 +4216,12 @@
         "theorem",
         "reductive-structure"
       ],
-      "primary_topic": "root_data_and_duality",
+      "primary_topic": "reductive_structure",
       "topics": [
         "reductive_structure",
         "descent_and_forms"
       ],
-      "topic": "root_data_and_duality",
+      "topic": "reductive_structure",
       "uses": [
         "descent_and_forms.f_subgroup_field_of_definition",
         "reductive_structure.levi_decomposition_of_parabolics",
@@ -4443,12 +4418,12 @@
         "theorem",
         "reductive-structure"
       ],
-      "primary_topic": "root_data_and_duality",
+      "primary_topic": "reductive_structure",
       "topics": [
         "reductive_structure",
         "root_data_and_duality"
       ],
-      "topic": "root_data_and_duality",
+      "topic": "reductive_structure",
       "uses": [
         "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
         "reductive_structure.parabolic_subgroups",
@@ -4852,7 +4827,7 @@
       "id": "root_data_and_duality.crystallographic_and_reduced",
       "title": "Crystallographic and Reduced Root Systems",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "primary_topic": "root_data_and_duality",
       "topics": [
         "root_data_and_duality"
@@ -4945,12 +4920,12 @@
         "theorem",
         "root-data-and-duality"
       ],
-      "primary_topic": "descent_and_forms",
+      "primary_topic": "root_data_and_duality",
       "topics": [
         "root_data_and_duality",
         "reductive_structure"
       ],
-      "topic": "descent_and_forms",
+      "topic": "root_data_and_duality",
       "uses": [
         "root_data_and_duality.chevalley_isomorphism_theorem",
         "root_data_and_duality.classification_of_split_reductive_groups",
@@ -5023,13 +4998,13 @@
         "definition",
         "root-data-and-duality"
       ],
-      "primary_topic": "descent_and_forms",
+      "primary_topic": "root_data_and_duality",
       "topics": [
         "root_data_and_duality",
         "reductive_structure",
         "descent_and_forms"
       ],
-      "topic": "descent_and_forms",
+      "topic": "root_data_and_duality",
       "uses": [
         "descent_and_forms.rational_forms_of_reductive_groups",
         "root_data_and_duality.galois_action_on_root_data",
@@ -5198,13 +5173,13 @@
         "theorem",
         "root-data-and-duality"
       ],
-      "primary_topic": "descent_and_forms",
+      "primary_topic": "root_data_and_duality",
       "topics": [
         "root_data_and_duality",
         "reductive_structure",
         "descent_and_forms"
       ],
-      "topic": "descent_and_forms",
+      "topic": "root_data_and_duality",
       "uses": [
         "descent_and_forms.quasi_split_forms",
         "reductive_structure.parabolic_f_subgroups_levi_decomposition",
@@ -5326,7 +5301,7 @@
       "id": "root_data_and_duality.root_chains",
       "title": "Root Chains and the String Property",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "admitted",
       "primary_topic": "root_data_and_duality",
       "topics": [
         "root_data_and_duality"
@@ -5341,7 +5316,7 @@
       "id": "root_data_and_duality.root_data",
       "title": "Root Data",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "tags": [
         "root-data",
         "root-data-and-duality"
@@ -5415,7 +5390,7 @@
       "id": "root_data_and_duality.root_form_and_positive_definiteness",
       "title": "Root Form and Positive Definiteness",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "admitted",
       "primary_topic": "root_data_and_duality",
       "topics": [
         "root_data_and_duality"
@@ -5433,7 +5408,7 @@
       "id": "root_data_and_duality.root_pairing",
       "title": "Root Pairings (Unified Framework)",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "primary_topic": "root_data_and_duality",
       "topics": [
         "root_data_and_duality"
@@ -5481,7 +5456,7 @@
       "id": "root_data_and_duality.root_systems",
       "title": "Root Systems",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "tags": [
         "root-systems",
         "root-data-and-duality"
@@ -6848,18 +6823,6 @@
     {
       "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
       "to": "linear_algebraic_groups.lie_algebra_of_algebraic_group"
-    },
-    {
-      "from": "algebraic_geometry.affine_schemes",
-      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
-    },
-    {
-      "from": "commutative_algebra.fields_and_field_extensions",
-      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
-    },
-    {
-      "from": "commutative_algebra.hopf_algebras",
-      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
     },
     {
       "from": "affine_group_schemes.affine_algebraic_groups",

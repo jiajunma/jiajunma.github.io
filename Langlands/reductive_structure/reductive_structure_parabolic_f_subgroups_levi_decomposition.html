@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unipotent Subgroups Are Triangularizable — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>Levi Decomposition for Parabolic F-Subgroups — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -111,8 +111,6 @@
         <li><a href="../keywords/affine-algebraic-groups.html">affine-algebraic-groups</a></li>
       
         <li><a href="../keywords/affine-group-scheme.html">affine-group-scheme</a></li>
-      
-        <li><a href="../keywords/affine-group-schemes.html">affine-group-schemes</a></li>
       
         <li><a href="../keywords/affine-root-systems.html">affine-root-systems</a></li>
       
@@ -251,8 +249,6 @@
         <li><a href="../keywords/cuspidal.html">cuspidal</a></li>
       
         <li><a href="../keywords/definition.html">definition</a></li>
-      
-        <li><a href="../keywords/definitions.html">definitions</a></li>
       
         <li><a href="../keywords/deligne-lusztig.html">deligne-lusztig</a></li>
       
@@ -684,17 +680,17 @@
   </nav>
   <main>
     
-<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-linear_algebraic_groups-2e-unipotent_subgroups_are_triangularizable">
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-reductive_structure-2e-parabolic_f_subgroups_levi_decomposition">
   <header class="theorem_thmheading thm-heading">
     <span class="theorem_thmcaption thm-caption">Theorem</span>
-    <span class="theorem_thmtitle thm-title">Unipotent Subgroups Are Triangularizable</span>
+    <span class="theorem_thmtitle thm-title">Levi Decomposition for Parabolic F-Subgroups</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-theorem">theorem</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-linear_algebraic_groups-2e-unipotent_subgroups_are_triangularizable">#</a>
+      <a class="permalink" href="#node-reductive_structure-2e-parabolic_f_subgroups_levi_decomposition">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -708,11 +704,13 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../affine_group_schemes/affine_group_schemes_algebraic_group_definition.html">Algebraic Group over a Base</a></li>
+        <li><a href="reductive_structure_levi_decomposition_of_parabolics.html">Levi Decomposition of Parabolic Subgroups</a></li>
         
-        <li><a href="../linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html">Embedding Theorem for Algebraic Groups</a></li>
+        <li><a href="reductive_structure_maximal_f_split_tori_are_conjugate.html">Maximal F-Split Tori Are G(F)-Conjugate</a></li>
         
-        <li><a href="reductive_structure_unipotent_groups.html">Unipotent Groups</a></li>
+        <li><a href="reductive_structure_reductive_groups.html">Reductive Groups</a></li>
+        
+        <li><a href="../descent_and_forms/descent_and_forms_f_subgroup_field_of_definition.html">Field of Definition for Subgroups of F-Groups</a></li>
         
       </ul>
     </div>
@@ -722,29 +720,42 @@
   
 
   <div class="theorem_thmcontent thm-content body">
-    <h1>Unipotent Subgroups Are Triangularizable</h1>
-<p>Let \(U\) be a unipotent algebraic subgroup of \(\operatorname{GL}(V)\) over
-an algebraically closed field. Then \(V\) has a complete flag
-\[
-0=V_0\subset V_1\subset \cdots \subset V_n=V
-\]
-stable under \(U\), and \(U\) acts trivially on each quotient
-\(V_i/V_{i-1}\). Equivalently, after choosing a suitable basis, \(U\) is a
-closed subgroup of the upper unitriangular group.</p>
-<p>Consequently every unipotent algebraic group is nilpotent, hence solvable.</p>
+    <h1>Levi Decomposition for Parabolic F-Subgroups</h1>
+<p>Let \(G\) be a connected reductive \(F\)-group and let \(P\subseteq G\) be a
+parabolic \(F\)-subgroup. Then:</p>
+<ol>
+<li>The unipotent radical \(R_u(P)\) is defined over \(F\) and is \(F\)-split.</li>
+<li>\(P\) has Levi subgroups defined over \(F\).</li>
+<li>Any two \(F\)-defined Levi subgroups of \(P\) are conjugate by a unique
+   element of \(R_u(P)(F)\).</li>
+<li>\(P\) contains a maximal \(F\)-split \(F\)-subtorus of \(G\).</li>
+</ol>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>A unipotent family of linear transformations has a common fixed vector. One
-way to see this is to use the Lie-Kolchin fixed-vector argument on the
-closed subgroup generated by the family: every element has only the
-eigenvalue \(1\), and a minimal nonzero stable subspace must therefore be
-one-dimensional with trivial action. This gives \(V_1\).</p>
-<p>Apply the same argument to \(V/V_1\) and continue by induction. The resulting
-stable complete flag puts the group inside the upper unitriangular group.
-The upper unitriangular group has a central series by superdiagonal length,
-so any closed subgroup is nilpotent; nilpotent groups are solvable.</p>
+        <p>A parabolic \(F\)-subgroup of a reductive group is of the form \(P(\lambda)\)
+for an \(F\)-defined cocharacter \(\lambda:\mathbb{G}_m\to G\). The group
+\[
+Z_G(\lambda)=C_G(\operatorname{im}\lambda)
+\]
+is a connected reductive \(F\)-subgroup, while the contracting subgroup
+\[
+U(\lambda)=\{g:\lim_{t\to 0}\lambda(t)g\lambda(t)^{-1}=e\}
+\]
+is connected unipotent and \(F\)-split. The product map
+\[
+Z_G(\lambda)\ltimes U(\lambda)\to P(\lambda)
+\]
+is an isomorphism of varieties and groups, so \(U(\lambda)=R_u(P)\) and
+\(Z_G(\lambda)\) is an \(F\)-Levi subgroup.</p>
+<p>If \(L\) is another \(F\)-defined Levi subgroup, it is the centralizer of an
+\(F\)-defined torus in \(P\). Geometric Levi conjugacy gives a unique element
+of \(R_u(P)\) carrying \(Z_G(\lambda)\) to \(L\). The transporter is
+\(F\)-defined and consists of one point, hence that point lies in
+\(R_u(P)(F)\). The maximal \(F\)-split torus statement follows by choosing a
+minimal parabolic \(F\)-subgroup inside \(P\) and applying the conjugacy of
+maximal \(F\)-split tori.</p>
       </div>
     </details>
     
@@ -752,6 +763,17 @@ so any closed subgroup is nilpotent; nilpotent groups are solvable.</p>
 
   
 
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="../root_data_and_duality/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html">Quasi-Split and Anisotropic Groups via the Indexed Root Datum</a></li>
+      
+      <li><a href="../root_data_and_duality/root_data_and_duality_rational_bruhat_decomposition.html">Rational Bruhat Decomposition</a></li>
+      
+    </ul>
+  </section>
   
 
   
@@ -761,7 +783,7 @@ so any closed subgroup is nilpotent; nilpotent groups are solvable.</p>
       
       <li><a href="../reductive_structure/index.html">Reductive Structure</a></li>
       
-      <li><a href="../reductive_structure/index.html">Reductive Structure</a></li>
+      <li><a href="../descent_and_forms/index.html">Descent And Forms</a></li>
       
     </ul>
   </section>
@@ -769,7 +791,7 @@ so any closed subgroup is nilpotent; nilpotent groups are solvable.</p>
 
   
   <footer class="tags">
-    <span class="tag">springer</span><span class="tag">unipotent</span><span class="tag">triangularization</span><span class="tag">theorem</span><span class="tag">linear-algebraic-groups</span>
+    <span class="tag">springer</span><span class="tag">parabolic</span><span class="tag">levi-decomposition</span><span class="tag">f-group</span><span class="tag">theorem</span><span class="tag">reductive-structure</span>
   </footer>
   
 </article>

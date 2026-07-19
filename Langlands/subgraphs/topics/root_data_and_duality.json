@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 64,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 9,
+    "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 74,
-    "visible_nodes_with_selected_proof_plans": 74
+    "visible_nodes_without_proof_plans": 73,
+    "visible_nodes_with_selected_proof_plans": 73
   },
   "nodes": [
     {
@@ -155,7 +155,7 @@
       "title": "Levi Decomposition of Parabolic Subgroups",
       "kind": "theorem",
       "status": "admitted",
-      "href": "root_data_and_duality/reductive_structure_levi_decomposition_of_parabolics.html",
+      "href": "reductive_structure/reductive_structure_levi_decomposition_of_parabolics.html",
       "payload": "node_payloads/reductive_structure_levi_decomposition_of_parabolics.json"
     },
     {
@@ -171,7 +171,7 @@
       "title": "Standard Parabolics Are Classified by Simple Roots",
       "kind": "theorem",
       "status": "admitted",
-      "href": "root_data_and_duality/reductive_structure_standard_parabolic_classification.html",
+      "href": "reductive_structure/reductive_structure_standard_parabolic_classification.html",
       "payload": "node_payloads/reductive_structure_standard_parabolic_classification.json"
     },
     {
@@ -290,7 +290,7 @@
       "id": "root_data_and_duality.crystallographic_and_reduced",
       "title": "Crystallographic and Reduced Root Systems",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "href": "root_data_and_duality/root_data_and_duality_crystallographic_and_reduced.html",
       "payload": "node_payloads/root_data_and_duality_crystallographic_and_reduced.json"
     },
@@ -323,7 +323,7 @@
       "title": "Chevalley Isomorphism Theorem for F-Split Groups",
       "kind": "theorem",
       "status": "admitted",
-      "href": "descent_and_forms/root_data_and_duality_f_split_chevalley_isomorphism_theorem.html",
+      "href": "root_data_and_duality/root_data_and_duality_f_split_chevalley_isomorphism_theorem.html",
       "payload": "node_payloads/root_data_and_duality_f_split_chevalley_isomorphism_theorem.json"
     },
     {
@@ -347,7 +347,7 @@
       "title": "Indexed Root Datum of an F-Reductive Group",
       "kind": "definition",
       "status": "admitted",
-      "href": "descent_and_forms/root_data_and_duality_indexed_root_datum_of_f_reductive_group.html",
+      "href": "root_data_and_duality/root_data_and_duality_indexed_root_datum_of_f_reductive_group.html",
       "payload": "node_payloads/root_data_and_duality_indexed_root_datum_of_f_reductive_group.json"
     },
     {
@@ -403,7 +403,7 @@
       "title": "Quasi-Split and Anisotropic Groups via the Indexed Root Datum",
       "kind": "theorem",
       "status": "admitted",
-      "href": "descent_and_forms/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html",
+      "href": "root_data_and_duality/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html",
       "payload": "node_payloads/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.json"
     },
     {
@@ -442,7 +442,7 @@
       "id": "root_data_and_duality.root_chains",
       "title": "Root Chains and the String Property",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "admitted",
       "href": "root_data_and_duality/root_data_and_duality_root_chains.html",
       "payload": "node_payloads/root_data_and_duality_root_chains.json"
     },
@@ -450,7 +450,7 @@
       "id": "root_data_and_duality.root_data",
       "title": "Root Data",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "href": "root_data_and_duality/root_data_and_duality_root_data.html",
       "payload": "node_payloads/root_data_and_duality_root_data.json"
     },
@@ -466,7 +466,7 @@
       "id": "root_data_and_duality.root_form_and_positive_definiteness",
       "title": "Root Form and Positive Definiteness",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "admitted",
       "href": "root_data_and_duality/root_data_and_duality_root_form_and_positive_definiteness.html",
       "payload": "node_payloads/root_data_and_duality_root_form_and_positive_definiteness.json"
     },
@@ -474,7 +474,7 @@
       "id": "root_data_and_duality.root_pairing",
       "title": "Root Pairings (Unified Framework)",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "href": "root_data_and_duality/root_data_and_duality_root_pairing.html",
       "payload": "node_payloads/root_data_and_duality_root_pairing.json"
     },
@@ -490,7 +490,7 @@
       "id": "root_data_and_duality.root_systems",
       "title": "Root Systems",
       "kind": "definition",
-      "status": "formalized",
+      "status": "admitted",
       "href": "root_data_and_duality/root_data_and_duality_root_systems.html",
       "payload": "node_payloads/root_data_and_duality_root_systems.json"
     },
@@ -1222,14 +1222,7 @@
       "title": "Reductive Structure",
       "href": "reductive_structure/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 52
-    },
-    {
-      "id": "root_data_and_duality",
-      "title": "Root Data And Duality",
-      "href": "root_data_and_duality/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 64
+      "node_count": 51
     }
   ],
   "boundary_edges": [
@@ -1396,10 +1389,24 @@
     },
     {
       "from": "topic:reductive_structure",
+      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+      "kind": "boundary_dependency",
+      "topic": "reductive_structure",
+      "count": 1
+    },
+    {
+      "from": "topic:reductive_structure",
       "to": "root_data_and_duality.rank_one_subgroups_sl2_embeddings",
       "kind": "boundary_dependency",
       "topic": "reductive_structure",
       "count": 2
+    },
+    {
+      "from": "topic:reductive_structure",
+      "to": "root_data_and_duality.rational_bruhat_decomposition",
+      "kind": "boundary_dependency",
+      "topic": "reductive_structure",
+      "count": 1
     },
     {
       "from": "topic:reductive_structure",
@@ -1449,20 +1456,6 @@
       "kind": "boundary_dependency",
       "topic": "reductive_structure",
       "count": 2
-    },
-    {
-      "from": "topic:root_data_and_duality",
-      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
-      "kind": "boundary_dependency",
-      "topic": "root_data_and_duality",
-      "count": 1
-    },
-    {
-      "from": "topic:root_data_and_duality",
-      "to": "root_data_and_duality.rational_bruhat_decomposition",
-      "kind": "boundary_dependency",
-      "topic": "root_data_and_duality",
-      "count": 1
     },
     {
       "from": "root_data_and_duality.coxeter_systems_and_bruhat_order",
@@ -1599,9 +1592,9 @@
     },
     {
       "from": "reductive_structure.levi_decomposition_of_parabolics",
-      "to": "topic:root_data_and_duality",
+      "to": "topic:reductive_structure",
       "kind": "boundary_dependent",
-      "topic": "root_data_and_duality",
+      "topic": "reductive_structure",
       "count": 1
     }
   ],

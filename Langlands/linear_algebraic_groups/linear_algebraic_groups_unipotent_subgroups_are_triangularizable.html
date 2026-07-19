@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indexed Root Datum of an F-Reductive Group — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>Unipotent Subgroups Are Triangularizable — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -51,12 +51,12 @@
           <a href="../conjugacy_classes/index.html">Conjugacy Classes</a>
         </li>
       
-        <li class="topic-leaf topic-active">
+        <li class="topic-leaf">
           <a href="../descent_and_forms/index.html">Descent And Forms</a>
         </li>
       
-        <li class="topic-parent">
-          <details data-topic-root="linear_algebraic_groups">
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="linear_algebraic_groups">
             <summary><a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../linear_algebraic_groups/classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
@@ -111,8 +111,6 @@
         <li><a href="../keywords/affine-algebraic-groups.html">affine-algebraic-groups</a></li>
       
         <li><a href="../keywords/affine-group-scheme.html">affine-group-scheme</a></li>
-      
-        <li><a href="../keywords/affine-group-schemes.html">affine-group-schemes</a></li>
       
         <li><a href="../keywords/affine-root-systems.html">affine-root-systems</a></li>
       
@@ -251,8 +249,6 @@
         <li><a href="../keywords/cuspidal.html">cuspidal</a></li>
       
         <li><a href="../keywords/definition.html">definition</a></li>
-      
-        <li><a href="../keywords/definitions.html">definitions</a></li>
       
         <li><a href="../keywords/deligne-lusztig.html">deligne-lusztig</a></li>
       
@@ -684,17 +680,17 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-root_data_and_duality-2e-indexed_root_datum_of_f_reductive_group">
-  <header class="definition_thmheading thm-heading">
-    <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Indexed Root Datum of an F-Reductive Group</span>
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-linear_algebraic_groups-2e-unipotent_subgroups_are_triangularizable">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Unipotent Subgroups Are Triangularizable</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-definition">definition</span>
+      <span class="badge kind-theorem">theorem</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-root_data_and_duality-2e-indexed_root_datum_of_f_reductive_group">#</a>
+      <a class="permalink" href="#node-linear_algebraic_groups-2e-unipotent_subgroups_are_triangularizable">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -708,13 +704,11 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../root_data_and_duality/root_data_and_duality_root_datum_from_reductive_group.html">Root Datum of a Reductive Group</a></li>
+        <li><a href="../affine_group_schemes/affine_group_schemes_algebraic_group_definition.html">Algebraic Group over a Base</a></li>
         
-        <li><a href="../root_data_and_duality/root_data_and_duality_galois_action_on_root_data.html">Galois Action on Root Data</a></li>
+        <li><a href="linear_algebraic_groups_embedding_theorem.html">Embedding Theorem for Algebraic Groups</a></li>
         
-        <li><a href="../root_data_and_duality/root_data_and_duality_relative_root_datum_of_f_reductive_group.html">Relative Root Datum of an F-Reductive Group</a></li>
-        
-        <li><a href="descent_and_forms_rational_forms_of_reductive_groups.html">Rational Forms of Reductive Groups</a></li>
+        <li><a href="../reductive_structure/reductive_structure_unipotent_groups.html">Unipotent Groups</a></li>
         
       </ul>
     </div>
@@ -723,67 +717,44 @@
 
   
 
-  <div class="definition_thmcontent thm-content body">
-    <h1>Indexed Root Datum of an F-Reductive Group</h1>
-<p>An <strong>indexed root datum over \(F\)</strong> is a tuple
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Unipotent Subgroups Are Triangularizable</h1>
+<p>Let \(U\) be a unipotent algebraic subgroup of \(\operatorname{GL}(V)\) over
+an algebraically closed field. Then \(V\) has a complete flag
 \[
-(X,D,X^\vee,D^\vee,D_0,\Gamma)
+0=V_0\subset V_1\subset \cdots \subset V_n=V
 \]
-where:</p>
-<ul>
-<li>\((X,D,X^\vee,D^\vee)\) is a based root datum;</li>
-<li>\(D_0\subseteq D\) is the distinguished subset, recording the anisotropic
-  kernel;</li>
-<li>the absolute Galois group \(\Gamma_F=\operatorname{Gal}(F_s/F)\) acts
-  continuously on \(X\), preserving \(D\) and \(D_0\), and dually on
-  \(X^\vee\).</li>
-</ul>
-<p>For a connected reductive \(F\)-group \(G\), choose a maximal \(F\)-split
-torus \(S\), a maximal \(F\)-torus \(T\supseteq S\), and a compatible basis
-\(D\) of the absolute roots. The resulting indexed root datum
-\[
-{}_{F}\Psi(G)=(X,D,X^\vee,D^\vee,D_0,\Gamma_F)
-\]
-is independent of the choices up to isomorphism.</p>
-<p>The group \(G\) is \(F\)-split exactly when \(D_0=\emptyset\) and the Galois
-action on the based root datum is trivial. It is quasi-split exactly when
-\(D_0=\emptyset\). It is anisotropic exactly when \(D_0=D\).</p>
+stable under \(U\), and \(U\) acts trivially on each quotient
+\(V_i/V_{i-1}\). Equivalently, after choosing a suitable basis, \(U\) is a
+closed subgroup of the upper unitriangular group.</p>
+<p>Consequently every unipotent algebraic group is nilpotent, hence solvable.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>A unipotent family of linear transformations has a common fixed vector. One
+way to see this is to use the Lie-Kolchin fixed-vector argument on the
+closed subgroup generated by the family: every element has only the
+eigenvalue \(1\), and a minimal nonzero stable subspace must therefore be
+one-dimensional with trivial action. This gives \(V_1\).</p>
+<p>Apply the same argument to \(V/V_1\) and continue by induction. The resulting
+stable complete flag puts the group inside the upper unitriangular group.
+The upper unitriangular group has a central series by superdiagonal length,
+so any closed subgroup is nilpotent; nilpotent groups are solvable.</p>
+      </div>
+    </details>
     
   </div>
 
   
 
   
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="root_data_and_duality_f_split_chevalley_isomorphism_theorem.html">Chevalley Isomorphism Theorem for F-Split Groups</a></li>
-      
-      <li><a href="root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html">Quasi-Split and Anisotropic Groups via the Indexed Root Datum</a></li>
-      
-    </ul>
-  </section>
-  
 
-  
-  <section class="topic-memberships">
-    <h2>Also in</h2>
-    <ul>
-      
-      <li><a href="../root_data_and_duality/index.html">Root Data And Duality</a></li>
-      
-      <li><a href="../reductive_structure/index.html">Reductive Structure</a></li>
-      
-      <li><a href="../descent_and_forms/index.html">Descent And Forms</a></li>
-      
-    </ul>
-  </section>
   
 
   
   <footer class="tags">
-    <span class="tag">springer</span><span class="tag">indexed-root-datum</span><span class="tag">tits-index</span><span class="tag">f-reductive-group</span><span class="tag">definition</span><span class="tag">root-data-and-duality</span>
+    <span class="tag">springer</span><span class="tag">unipotent</span><span class="tag">triangularization</span><span class="tag">theorem</span><span class="tag">linear-algebraic-groups</span>
   </footer>
   
 </article>

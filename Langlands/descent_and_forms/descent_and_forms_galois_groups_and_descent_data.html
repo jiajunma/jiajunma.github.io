@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keyword: definitions — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>Galois Groups and Descent Data — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -51,7 +51,7 @@
           <a href="../conjugacy_classes/index.html">Conjugacy Classes</a>
         </li>
       
-        <li class="topic-leaf">
+        <li class="topic-leaf topic-active">
           <a href="../descent_and_forms/index.html">Descent And Forms</a>
         </li>
       
@@ -111,8 +111,6 @@
         <li><a href="../keywords/affine-algebraic-groups.html">affine-algebraic-groups</a></li>
       
         <li><a href="../keywords/affine-group-scheme.html">affine-group-scheme</a></li>
-      
-        <li><a href="../keywords/affine-group-schemes.html">affine-group-schemes</a></li>
       
         <li><a href="../keywords/affine-root-systems.html">affine-root-systems</a></li>
       
@@ -251,8 +249,6 @@
         <li><a href="../keywords/cuspidal.html">cuspidal</a></li>
       
         <li><a href="../keywords/definition.html">definition</a></li>
-      
-        <li><a href="../keywords/definitions.html">definitions</a></li>
       
         <li><a href="../keywords/deligne-lusztig.html">deligne-lusztig</a></li>
       
@@ -684,19 +680,182 @@
   </nav>
   <main>
     
-<h1>Keyword: definitions</h1>
+<article class="topic_thmwrapper theorem-style-topic node-page" id="node-descent_and_forms-2e-galois_groups_and_descent_data">
+  <header class="topic_thmheading thm-heading">
+    <span class="topic_thmcaption thm-caption">Topic</span>
+    <span class="topic_thmtitle thm-title">Galois Groups and Descent Data</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-topic">topic</span>
+      <span class="badge status-admitted">admitted</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-descent_and_forms-2e-galois_groups_and_descent_data">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
 
-<div class="blueprint-node-list">
   
-  <article class="definition_thmwrapper theorem-style-definition summary-node">
-    <header class="definition_thmheading thm-heading">
-      <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="../linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html">Definition of Linear Algebraic Groups</a>
-      <span class="badge status-needs_definition_review">needs_definition_review</span>
-    </header>
-  </article>
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="../commutative_algebra/commutative_algebra_fields_and_field_extensions.html">Fields and Field Extensions</a></li>
+        
+      </ul>
+    </div>
+  </div>
   
-</div>
+
+  
+
+  <div class="topic_thmcontent thm-content body">
+    <h1>Galois Groups and Descent Data</h1>
+<p><strong>Galois descent</strong> is the technique of constructing \(k\)-objects
+from \(\bar k\)-objects with Galois-equivariant data. It is the
+elementary version of the more general descent theory (faithfully
+flat, étale) and the foundation of the theory of forms.</p>
+<h2>Setup</h2>
+<p>Let \(k\) be a field with separable closure \(\bar k\) and absolute
+Galois group \(\Gamma = \mathrm{Gal}(\bar k / k)\) (a profinite
+group).</p>
+<p>For a category of "objects with field of definition" (e.g.\ vector
+spaces, algebras, varieties, group schemes):
+- \(\mathcal{C}(k)\) = \(k\)-objects;
+- \(\mathcal{C}(\bar k)\) = \(\bar k\)-objects, with \(\Gamma\)-action.</p>
+<h2>Galois descent for vector spaces</h2>
+<p><strong>Theorem (Hilbert-Speiser).</strong> For \(V\) a finite-dimensional
+\(\bar k\)-vector space with a continuous semi-linear \(\Gamma\)-action,
+the <strong>\(\Gamma\)-invariants</strong>
+\[
+V^\Gamma \;\subseteq\; V
+\]
+form a \(k\)-vector space \(V^\Gamma \otimes_k \bar k \;\stackrel{\sim}{\to}\; V\)
+(canonical isomorphism).</p>
+<p><strong>Semi-linear</strong> action: \(\sigma(\lambda v) = \sigma(\lambda) \cdot \sigma(v)\)
+for \(\lambda \in \bar k, v \in V, \sigma \in \Gamma\).</p>
+<p>This gives an equivalence:
+\[
+\{k\text{-vector spaces}\} \;\stackrel{\sim}{\to}\; \{\bar k\text{-vector spaces with continuous semi-linear } \Gamma\text{-action}\}.
+\]</p>
+<h2>Descent data</h2>
+<p>A <strong>descent datum</strong> on a \(\bar k\)-object \(X_{\bar k}\) is a
+collection of isomorphisms
+\[
+\phi_\sigma : X_{\bar k} \;\xrightarrow{\sim}\; \sigma^* X_{\bar k}, \qquad \sigma \in \Gamma,
+\]
+satisfying the <strong>cocycle condition</strong>:
+\[
+\phi_{\sigma\tau} \;=\; \sigma^*(\phi_\tau) \circ \phi_\sigma.
+\]</p>
+<p><strong>Theorem.</strong> Descent data on \(X_{\bar k}\) up to equivalence are in
+bijection with \(k\)-forms of \(X_{\bar k}\). The trivial descent
+datum (\(\phi_\sigma = \mathrm{id}\)) corresponds to \(X_{\bar k}\)
+itself if it is defined over \(k\).</p>
+<h2>Examples</h2>
+<h3>Vector spaces</h3>
+<p>For \(V_{\bar k}\) with \(\Gamma\)-action, the \(k\)-form is
+\(V_{\bar k}^\Gamma\).</p>
+<h3>Algebraic varieties</h3>
+<p>For \(X_{\bar k}\) with a descent datum (= a "form" of a \(k\)-variety):
+the \(k\)-form is constructed as the closed subscheme of \(X\) cut
+out by Galois-equivariant equations.</p>
+<p>Equivalently: \(X = \mathrm{Spec}(\mathcal{O}(X)^\Gamma)\) where
+\(\Gamma\) acts on the coordinate ring via the descent datum.</p>
+<h3>Algebraic groups</h3>
+<p>A descent datum on a \(\bar k\)-group \(G_{\bar k}\) is a
+\(\Gamma\)-equivariant collection of group isomorphisms; the
+resulting \(k\)-form \(G\) has \(G(\bar k) = G_{\bar k}\) with
+the new \(\Gamma\)-action.</p>
+<h3>Forms of \(\mathrm{GL}_n\)</h3>
+<p>For a 1-cocycle \(c : \Gamma \to \mathrm{PGL}_n(\bar k)\) corresponding
+to a central simple \(k\)-algebra \(D\) of degree \(n\):
+- Descent datum: \(\phi_\sigma = \mathrm{conj}(c_\sigma)\).
+- \(k\)-form: \(D^\times\) (the algebraic group of units of \(D\)).
+- Original \(\bar k\)-form: \(D^\times \otimes \bar k = \mathrm{GL}_n(\bar k)\).</p>
+<h2>Non-Galois descent (sketch)</h2>
+<p>Galois descent extends to:
+- <strong>fpqc descent</strong>: faithfully flat quasi-compact (most general).
+- <strong>fppf descent</strong>: faithfully flat finite presentation.
+- <strong>Étale descent</strong>: cover by étale morphisms.</p>
+<p>These are the technical foundation for working with non-reduced
+schemes, stacks, and characteristic-\(p\) phenomena. SGA1 (Grothendieck)
+gives the general formalism.</p>
+<h2>Continuous vs.\ discrete</h2>
+<p>For Galois descent: the \(\Gamma\)-action on \(X_{\bar k}\) must be
+<strong>continuous</strong> with respect to the natural discrete topology on
+\(X_{\bar k}(\bar k')\) for finite extensions \(\bar k' / k\).
+Equivalently, \(X_{\bar k}\) descends through a finite Galois
+sub-extension.</p>
+<p>For most objects (finite type, locally of finite type): this is
+automatic.</p>
+<h2>Connection to Galois cohomology</h2>
+<p>A descent datum on \(X_{\bar k}\) is equivalent to a 1-cocycle
+\(c : \Gamma \to \mathrm{Aut}(X_{\bar k})\); equivalence of descent
+data corresponds to cocycle cohomology. So:
+\[
+\{k\text{-forms of } X_{\bar k}\}/\cong \;\stackrel{\sim}{\longleftrightarrow}\; H^1(k, \mathrm{Aut}(X_{\bar k})).
+\]</p>
+<p>This is the bridge to <a class="node-ref" data-node-id="descent_and_forms.galois_cohomology" href="descent_and_forms_galois_cohomology.html">Galois cohomology</a>.</p>
+<h2>Role in Langlands</h2>
+<ul>
+<li><strong>Forms of reductive groups</strong>: classified by descent data on the
+  Chevalley split form.</li>
+<li><strong>Adelic descent</strong>: global objects (Shimura varieties, automorphic
+  representations) are constructed via local-global descent.</li>
+<li><strong>Galois representations</strong>: \(\ell\)-adic Galois representations
+  are descent data on certain cohomology groups; the global Langlands
+  programme is largely about understanding these.</li>
+</ul>
+<h2>Mathlib</h2>
+<p>Not yet formalised. Galois descent for vector spaces / fields is
+implicit in <code>Mathlib.FieldTheory.Galois</code>.</p>
+<h2>References</h2>
+<ul>
+<li>Borel–Serre, <em>Sur les sous-groupes d'algèbres de Lie</em> (Toulouse
+  1958).</li>
+<li>Serre, <em>Local Fields</em> (1979), §X.</li>
+<li>Borel, <em>Linear Algebraic Groups</em> (1991), §24.</li>
+<li>SGA 1 (Grothendieck, 1971): general descent formalism.</li>
+</ul>
+<h2>Prerequisite Topics</h2>
+<ul>
+<li><a class="node-ref" data-node-id="commutative_algebra.fields_and_field_extensions" href="../commutative_algebra/commutative_algebra_fields_and_field_extensions.html">Fields and Field Extensions</a></li>
+</ul>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="descent_and_forms_f_subgroup_field_of_definition.html">Field of Definition for Subgroups of F-Groups</a></li>
+      
+      <li><a href="descent_and_forms_forms_of_algebraic_objects.html">Forms of Algebraic Objects</a></li>
+      
+      <li><a href="descent_and_forms_galois_cohomology.html">Galois Cohomology</a></li>
+      
+      <li><a href="../reductive_structure/reductive_structure_f_tori_galois_module_classification.html">F-Tori Are Classified by Galois Modules</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">galois-descent</span><span class="tag">descent-and-forms</span>
+  </footer>
+  
+</article>
 
   </main>
   <script src="../graph.js"></script>

@@ -674,18 +674,18 @@
       "node_count": 20
     },
     {
+      "id": "descent_and_forms",
+      "title": "Descent And Forms",
+      "href": "descent_and_forms/index.html",
+      "role": "dependent",
+      "node_count": 32
+    },
+    {
       "id": "linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "href": "linear_algebraic_groups/index.html",
       "role": "dependent",
       "node_count": 31
-    },
-    {
-      "id": "reductive_structure",
-      "title": "Reductive Structure",
-      "href": "reductive_structure/index.html",
-      "role": "dependent",
-      "node_count": 52
     },
     {
       "id": "root_data_and_duality",
@@ -817,24 +817,31 @@
     },
     {
       "from": "affine_group_schemes.affine_algebraic_groups",
+      "to": "topic:descent_and_forms",
+      "kind": "boundary_dependent",
+      "topic": "descent_and_forms",
+      "count": 1
+    },
+    {
+      "from": "affine_group_schemes.base_change",
+      "to": "topic:descent_and_forms",
+      "kind": "boundary_dependent",
+      "topic": "descent_and_forms",
+      "count": 1
+    },
+    {
+      "from": "affine_group_schemes.affine_algebraic_groups",
       "to": "topic:linear_algebraic_groups",
       "kind": "boundary_dependent",
       "topic": "linear_algebraic_groups",
-      "count": 5
+      "count": 4
     },
     {
       "from": "affine_group_schemes.algebraic_group_definition",
       "to": "topic:linear_algebraic_groups",
       "kind": "boundary_dependent",
       "topic": "linear_algebraic_groups",
-      "count": 9
-    },
-    {
-      "from": "affine_group_schemes.base_change",
-      "to": "topic:linear_algebraic_groups",
-      "kind": "boundary_dependent",
-      "topic": "linear_algebraic_groups",
-      "count": 1
+      "count": 10
     },
     {
       "from": "affine_group_schemes.faithful_linear_representation_definition",
@@ -877,13 +884,6 @@
       "kind": "boundary_dependent",
       "topic": "linear_algebraic_groups",
       "count": 2
-    },
-    {
-      "from": "affine_group_schemes.algebraic_group_definition",
-      "to": "topic:reductive_structure",
-      "kind": "boundary_dependent",
-      "topic": "reductive_structure",
-      "count": 1
     },
     {
       "from": "affine_group_schemes.affine_group_scheme_definition",

@@ -112,14 +112,13 @@
       "node_count": 31,
       "direct_node_count": 26,
       "kind_counts": {
-        "definition": 7,
-        "theorem": 14,
+        "definition": 6,
+        "theorem": 15,
         "topic": 10
       },
       "status_counts": {
-        "admitted": 29,
-        "formalized": 1,
-        "needs_definition_review": 1
+        "admitted": 30,
+        "formalized": 1
       },
       "href": "linear_algebraic_groups/index.html",
       "children": [
@@ -147,15 +146,15 @@
       "title": "Reductive Structure",
       "depth": 1,
       "parent": null,
-      "node_count": 52,
-      "direct_node_count": 52,
+      "node_count": 51,
+      "direct_node_count": 51,
       "kind_counts": {
         "definition": 8,
-        "theorem": 31,
+        "theorem": 30,
         "topic": 13
       },
       "status_counts": {
-        "admitted": 52
+        "admitted": 51
       },
       "href": "reductive_structure/index.html",
       "children": []
@@ -173,8 +172,7 @@
         "topic": 34
       },
       "status_counts": {
-        "admitted": 58,
-        "formalized": 6
+        "admitted": 64
       },
       "href": "root_data_and_duality/index.html",
       "children": [
@@ -196,13 +194,13 @@
     },
     {
       "from": "affine_group_schemes",
-      "to": "linear_algebraic_groups",
-      "count": 25
+      "to": "descent_and_forms",
+      "count": 2
     },
     {
       "from": "affine_group_schemes",
-      "to": "reductive_structure",
-      "count": 1
+      "to": "linear_algebraic_groups",
+      "count": 24
     },
     {
       "from": "affine_group_schemes",
@@ -217,7 +215,7 @@
     {
       "from": "algebraic_geometry",
       "to": "linear_algebraic_groups",
-      "count": 2
+      "count": 1
     },
     {
       "from": "buildings_and_parahorics",
@@ -236,8 +234,8 @@
     },
     {
       "from": "commutative_algebra",
-      "to": "linear_algebraic_groups",
-      "count": 3
+      "to": "descent_and_forms",
+      "count": 1
     },
     {
       "from": "commutative_algebra",
@@ -252,6 +250,16 @@
     {
       "from": "descent_and_forms",
       "to": "conjugacy_classes",
+      "count": 4
+    },
+    {
+      "from": "descent_and_forms",
+      "to": "reductive_structure",
+      "count": 5
+    },
+    {
+      "from": "descent_and_forms",
+      "to": "root_data_and_duality",
       "count": 2
     },
     {
@@ -262,22 +270,17 @@
     {
       "from": "linear_algebraic_groups",
       "to": "conjugacy_classes",
-      "count": 3
+      "count": 1
     },
     {
       "from": "linear_algebraic_groups",
       "to": "descent_and_forms",
-      "count": 11
+      "count": 10
     },
     {
       "from": "linear_algebraic_groups",
       "to": "reductive_structure",
-      "count": 14
-    },
-    {
-      "from": "linear_algebraic_groups",
-      "to": "root_data_and_duality",
-      "count": 1
+      "count": 9
     },
     {
       "from": "number_theory",
@@ -307,12 +310,12 @@
     {
       "from": "reductive_structure",
       "to": "linear_algebraic_groups",
-      "count": 1
+      "count": 2
     },
     {
       "from": "reductive_structure",
       "to": "root_data_and_duality",
-      "count": 25
+      "count": 22
     },
     {
       "from": "root_data_and_duality",
@@ -327,12 +330,17 @@
     {
       "from": "root_data_and_duality",
       "to": "descent_and_forms",
-      "count": 14
+      "count": 7
     },
     {
       "from": "root_data_and_duality",
       "to": "linear_algebraic_groups",
       "count": 5
+    },
+    {
+      "from": "root_data_and_duality",
+      "to": "reductive_structure",
+      "count": 3
     }
   ]
 }
