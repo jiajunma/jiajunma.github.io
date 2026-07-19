@@ -1,0 +1,68 @@
+{
+  "id": "affine_group_schemes.convolution_of_algebra_homs_is_algebra_hom",
+  "title": "Convolution of Algebra Homomorphisms Is an Algebra Homomorphism",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_convolution_of_algebra_homs_is_algebra_hom.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Convolution of Algebra Homomorphisms Is an Algebra Homomorphism</h1>\n<p>Let \\(R\\) be a commutative ring, \\(A\\) an \\(R\\)-bialgebra, and \\(B\\) a\ncommutative \\(R\\)-algebra. For any two \\(R\\)-algebra homomorphisms\n\\(f, g : A \\to B\\), their\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebra_hom_convolution\" href=\"linear_algebraic_groups_algebra_hom_convolution.html\">convolution</a>\n\\(f * g : A \\to B\\) is again an \\(R\\)-algebra homomorphism.</p>",
+  "proof_html": "<p>We check that \\(f * g\\) preserves multiplication, the identity\n\\(1_A\\), and is \\(R\\)-linear (the last is automatic from the definition\n\\(f * g = m_B \\circ (f \\otimes g) \\circ \\Delta\\) being a composition of\nlinear maps).</p>\n<p><em>Identity.</em> By the unit axiom of the bialgebra,\n\\(\\Delta(1_A) = 1_A \\otimes 1_A\\). Hence\n\\((f * g)(1_A) = m_B(f(1_A) \\otimes g(1_A)) = 1_B \\cdot 1_B = 1_B\\)\nsince \\(f, g\\) are algebra homs.</p>\n<p><em>Multiplication.</em> For \\(a, b \\in A\\), the <strong>bialgebra axiom</strong>\n\\(\\Delta(ab) = \\Delta(a) \\cdot \\Delta(b)\\) (i.e., \\(\\Delta\\) is an\nalgebra homomorphism with respect to the standard algebra structure on\n\\(A \\otimes A\\)) gives</p>\n<p>\\[\n\\Delta(ab) \\;=\\; \\sum_{(a),(b)} (a_{(1)} b_{(1)}) \\otimes (a_{(2)} b_{(2)}).\n\\]</p>\n<p>Applying \\((f * g)\\):</p>\n<p>\\[\n(f * g)(ab)\n  \\;=\\; \\sum_{(a),(b)} f(a_{(1)} b_{(1)}) \\cdot g(a_{(2)} b_{(2)})\n  \\;=\\; \\sum_{(a),(b)} f(a_{(1)})\\,f(b_{(1)})\\,g(a_{(2)})\\,g(b_{(2)}),\n\\]</p>\n<p>using that \\(f, g\\) are algebra homs. Now use the\n<strong>commutativity of \\(B\\)</strong> to rearrange:\n\\(f(b_{(1)})\\,g(a_{(2)}) = g(a_{(2)})\\,f(b_{(1)})\\). This regroups the\nsum into</p>\n<p>\\[\n\\biggl(\\sum_{(a)} f(a_{(1)}) g(a_{(2)})\\biggr) \\cdot \\biggl(\\sum_{(b)} f(b_{(1)}) g(b_{(2)})\\biggr)\n  \\;=\\; (f * g)(a) \\cdot (f * g)(b).\n\\]</p>\n<p>Hence \\(f * g\\) preserves multiplication and is therefore an algebra\nhomomorphism.<br />\n\\(\\square\\)</p>\n<p><strong>Remark.</strong> Without the commutativity of \\(B\\), the rearrangement step\nfails, and \\(f * g\\) is only an \\(R\\)-linear map in general. This is why\nthe construction of the affine group scheme \\(\\operatorname{Spec} A\\)\n(for \\(A\\) a commutative Hopf algebra) is meaningful only when one\nrestricts to <strong>commutative</strong> target algebras \\(B\\), and the resulting\ngroup is generally non-commutative as a group (but the underlying\nalgebras \\(A\\) and \\(B\\) remain commutative).</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.algebra_hom_convolution",
+      "title": "Convolution of Algebra Homomorphisms",
+      "href": "affine_group_schemes/affine_group_schemes_algebra_hom_convolution.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.algebra_homs_form_group_under_convolution",
+      "title": "Algebra Homomorphisms Form a Group Under Convolution",
+      "href": "affine_group_schemes/affine_group_schemes_algebra_homs_form_group_under_convolution.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg",
+      "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L98",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_toLinearMap",
+      "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_toLinearMap",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_toLinearMap",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L105",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_apply",
+      "display_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_apply",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfConvolution.convAlg_apply",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfConvolution",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfConvolution.lean#L114",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "affine_group_schemes.hopf_spec_fully_faithful",
+  "title": "Spec Functor on Hopf Algebras Is Fully Faithful",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_hopf_spec_fully_faithful.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Spec Functor on Hopf Algebras Is Fully Faithful</h1>\n<p>The functor</p>\n<p>\\[\n\\operatorname{hopfSpec}_R : \\mathsf{Grp}((\\mathsf{CommAlgCat}\\,R)^{\\mathrm{op}})\n  \\longrightarrow \\mathsf{Grp}(\\mathsf{Over}(\\operatorname{Spec} R))\n\\]</p>\n<p>is fully faithful.</p>\n<p><em>Proof sketch.</em><br />\nThe classical Spec functor\n\\(\\operatorname{Spec} : \\mathsf{CommRingCat}^{\\mathrm{op}} \\to\n\\mathsf{Scheme}\\) is fully faithful (Stacks 01HU). Restricting to\n\\(R\\)-algebras and composing with the slice-category equivalences yields\nthat \\(\\operatorname{algSpec}_R\\) is fully faithful.</p>\n<p>Hopf-level full-faithfulness then follows because a morphism of group\nobjects is uniquely determined by its underlying morphism on the\nunderlying objects (this is a general fact about group objects in any\nCartesian monoidal category: the group-hom axioms are a property, not\nextra data). Concretely: given Hopf algebras \\(A, A'\\) and a morphism\nof underlying schemes \\(\\varphi : \\operatorname{Spec} A' \\to \\operatorname{Spec} A\\)\nin \\(\\mathsf{Over}(\\operatorname{Spec} R)\\), if \\(\\varphi\\) is a group\nobject morphism then by \\(\\operatorname{algSpec}_R\\) full-faithfulness\n\\(\\varphi = \\operatorname{algSpec}_R(f)\\) for a unique\n\\(R\\)-algebra hom \\(f : A \\to A'\\); the group-hom property of\n\\(\\varphi\\) translates to \\(f\\) preserving the Hopf structure\n(comultiplication, counit, antipode), via the Yoneda determination\nof the group object structures in\n[[node:affine_group_schemes.hopf_spec_grpobj_via_yoneda|the Yoneda\nconstruction]].<br />\n\\(\\square\\)</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.hopf_spec_functor",
+      "title": "Spec Functor on Hopf Algebras",
+      "href": "affine_group_schemes/affine_group_schemes_hopf_spec_functor.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

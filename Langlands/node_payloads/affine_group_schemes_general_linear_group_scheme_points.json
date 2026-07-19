@@ -1,0 +1,27 @@
+{
+  "id": "affine_group_schemes.general_linear_group_scheme_points",
+  "title": "Points of GL_n Are Invertible n×n Matrices over R",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_general_linear_group_scheme_points.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Points of \\(\\operatorname{GL}_n\\) Are Invertible \\(n \\times n\\) Matrices over \\(R\\)</h1>\n<p>Let \\(k\\) be a field, \\(n\\) a positive integer, and \\(R\\) a commutative\n\\(k\\)-algebra. There is a natural isomorphism of groups</p>\n<p>\\[\n\\operatorname{GL}_{n, \\operatorname{Spec} k}(R) \\;\\cong\\; \\operatorname{GL}_n(R),\n\\]</p>\n<p>where the right-hand side is the group of \\(n \\times n\\) matrices over\n\\(R\\) with invertible determinant under multiplication.</p>",
+  "proof_html": "<p>The\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.points_functor_definition\" href=\"linear_algebraic_groups_points_functor_definition.html\">\\(R\\)-points of \\(\\operatorname{GL}_n\\) over \\(\\operatorname{Spec} k\\)</a>\nare \\(k\\)-algebra homomorphisms\n\\(k[x_{ij}][\\det^{-1}] \\to R\\). Such a homomorphism is determined by the\nimages \\(r_{ij} \\in R\\) of the indeterminates \\(x_{ij}\\), subject to the\ncondition that the image of \\(\\det^{-1}\\) is the multiplicative inverse\nof \\(\\det(r_{ij})\\); equivalently, the matrix \\((r_{ij}) \\in M_n(R)\\)\nmust have an invertible determinant in \\(R\\). Hence</p>\n<p>\\[\n\\operatorname{GL}_n(R) \\;\\cong\\; \\{(r_{ij}) \\in M_n(R) \\,:\\, \\det(r_{ij}) \\in R^\\times\\} \\;=\\; \\operatorname{GL}_n(R).\n\\]</p>\n<p>To verify the bijection is a group isomorphism, compute the product of\ntwo matrix points \\((r_{ij}), (s_{ij}) \\in \\operatorname{GL}_n(R)\\)\nunder the comultiplication\n\\(\\Delta(x_{ij}) = \\sum_k x_{ik} \\otimes x_{kj}\\). The image of\n\\(x_{ij}\\) under the composed hom is \\(\\sum_k r_{ik} \\cdot s_{kj}\\),\nwhich is the \\((i, j)\\)-entry of the matrix product \\((r_{ij})(s_{ij})\\).\nThe identity corresponds to \\(\\varepsilon(x_{ij}) = \\delta_{ij}\\),\ngiving the identity matrix; the inverse to \\(S(x_{ij}) = \\det^{-1} \\cdot\nC_{ji}\\), giving the matrix inverse. All three match the standard group\nstructure on \\(\\operatorname{GL}_n(R)\\).<br />\n\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.general_linear_group_scheme",
+      "title": "General Linear Group Scheme GL_n",
+      "href": "affine_group_schemes/affine_group_schemes_general_linear_group_scheme.html"
+    },
+    {
+      "id": "affine_group_schemes.points_functor_definition",
+      "title": "Functor of Points of a Group Scheme",
+      "href": "affine_group_schemes/affine_group_schemes_points_functor_definition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

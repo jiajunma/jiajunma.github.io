@@ -1,0 +1,41 @@
+{
+  "id": "affine_group_schemes.base_change_preserves_algebraic_group",
+  "title": "Base Change Preserves Algebraic Group Structure",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_base_change_preserves_algebraic_group.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Base Change Preserves Algebraic Group Structure</h1>\n<p>Let \\(f : T \\to S\\) be a morphism of schemes, and let \\(G\\) be an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(S\\). Then the pullback scheme</p>\n<p>\\[\nG_T \\;=\\; G \\times_S T\n\\]</p>\n<p>is an algebraic group over \\(T\\), with structure morphism the\nsecond projection \\(G_T \\to T\\) and group object structure obtained by\nbase change of the group object structure on \\(G\\).</p>",
+  "proof_html": "<p>We verify the three constituents of\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">the algebraic group definition</a>\nin turn.</p>\n<p><em>Group object structure.</em> The base-change functor\n\\(\\mathsf{Over}(S) \\to \\mathsf{Over}(T)\\) along \\(f\\) preserves binary\nproducts and the terminal object (it is a right adjoint to the\npost-composition functor), hence sends group objects to group objects.\nConcretely, the multiplication, identity, and inverse morphisms of \\(G\\)\nin \\(\\mathsf{Over}(S)\\) pull back to morphisms of \\(G_T\\) in\n\\(\\mathsf{Over}(T)\\) satisfying the same axioms. In the Lean\ndevelopment this is encoded by Mathlib's\n\\(\\texttt{Scheme.GrpObjAsOverPullback}\\).</p>\n<p><em>Affineness.</em> The class of affine morphisms is stable under arbitrary\nbase change. Hence \\(G_T \\to T\\), being the pullback of the affine\nmorphism \\(G \\to S\\) along \\(f\\), is affine.</p>\n<p><em>Locally of finite type.</em> This class is also stable under arbitrary\nbase change.</p>\n<p>Combining the three, \\(G_T\\) is an algebraic group over \\(T\\). In Lean\nthe conclusion is \\(\\texttt{isAlgebraicGroup\\_pullback}\\), which\ncombines the three preservation lemmas through the Phase A2 aggregator\nforwarder.<br />\n\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.base_change",
+      "title": "Base Change",
+      "href": "affine_group_schemes/affine_group_schemes_base_change.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.isAlgebraicGroup_pullback",
+      "display_name": "Langlands.AlgebraicGeometry.isAlgebraicGroup_pullback",
+      "qualified_name": "Langlands.AlgebraicGeometry.isAlgebraicGroup_pullback",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L85",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "affine_group_schemes.regular_representation_example",
+  "title": "Regular Representation as a Comodule",
+  "kind": "example",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_regular_representation_example.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Regular Representation as a Comodule</h1>\n<p>Let \\(R\\) be a commutative ring and \\(A\\) a Hopf \\(R\\)-algebra with\ncomultiplication \\(\\Delta : A \\to A \\otimes_R A\\) and counit\n\\(\\varepsilon : A \\to R\\). The pair\n\\((A, \\Delta)\\) is an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.comodule_definition\" href=\"linear_algebraic_groups_comodule_definition.html\">$A$-comodule</a>: the\ncoaction is \\(\\Delta\\) itself.</p>\n<p>Coassociativity follows from the coassociativity axiom of \\(\\Delta\\);\nthe counit axiom follows from the counit axiom of \\(A\\) as a coalgebra.</p>\n<p>This is called the <strong>regular representation</strong> (or <strong>regular comodule</strong>)\nof \\(A\\). Geometrically, if \\(A = \\mathcal{O}(G)\\) is the coordinate Hopf\nalgebra of an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\n\\(G\\), the regular representation corresponds to the action of \\(G\\) on\nits own coordinate ring by right translation. The regular representation\nis generally infinite-dimensional; finding finite-dimensional sub-comodules\ninside it is the subject of\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.finite_dim_subcomodule_lemma\" href=\"linear_algebraic_groups_finite_dim_subcomodule_lemma.html\">the finite generation lemma</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.comodule_definition",
+      "title": "Comodule over a Coalgebra",
+      "href": "affine_group_schemes/affine_group_schemes_comodule_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "affine_group_schemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    },
+    {
+      "id": "affine_group_schemes.finite_dim_subcomodule_lemma",
+      "title": "Finite-Dimensional Subspace in a Sub-Comodule",
+      "href": "affine_group_schemes/affine_group_schemes_finite_dim_subcomodule_lemma.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.regularComodule",
+      "display_name": "Langlands.AlgebraicGeometry.regularComodule",
+      "qualified_name": "Langlands.AlgebraicGeometry.regularComodule",
+      "module": "LanglandsLean.AlgebraicGeometry.Comodule",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Comodule.lean#L79",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

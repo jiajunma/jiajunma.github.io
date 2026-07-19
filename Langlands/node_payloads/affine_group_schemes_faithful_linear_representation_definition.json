@@ -1,0 +1,60 @@
+{
+  "id": "affine_group_schemes.faithful_linear_representation_definition",
+  "title": "Faithful Linear Representation",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_faithful_linear_representation_definition.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Faithful Linear Representation</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(\\operatorname{Spec} k\\). A <strong>faithful finite-dimensional\nrepresentation</strong> of \\(G\\) consists of:</p>\n<ol>\n<li>a finite-dimensional \\(k\\)-vector space \\(V\\);</li>\n<li>a scheme-theoretic model of the general linear group\n   \\(\\operatorname{GL}(V)\\), namely a scheme over \\(\\operatorname{Spec}\n   k\\) equipped with a group object structure realizing the functor\n   \\(R \\mapsto \\operatorname{GL}_R(V \\otimes_k R)\\);</li>\n<li>a morphism of group schemes \\(\\rho : G \\to \\operatorname{GL}(V)\\) over\n   \\(\\operatorname{Spec} k\\);</li>\n<li>the requirement that the underlying morphism of schemes \\(\\rho\\) is a\n   closed immersion.</li>\n</ol>\n<p>Equivalently, a faithful finite-dimensional representation exhibits \\(G\\)\nas a closed subgroup scheme of some scheme-theoretic\n\\(\\operatorname{GL}_n\\).</p>\n<p>In the project's Lean development the data above is packaged as the\nstructure \\(\\texttt{FaithfulLinearRepresentation}\\,G\\), with the\nscheme-theoretic \\(\\operatorname{GL}(V)\\) abstracted as\n\\(\\texttt{GeneralLinearGroupSchemeModel}\\,k\\,V\\) (an interface to be\nrealized concretely in Phase D4). The existence statement\n(<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.affine_finite_type_faithful_representation\" href=\"linear_algebraic_groups_affine_finite_type_faithful_representation.html\">embedding theorem</a>)\nis recorded as a separate node; its proof is the subject of Phase B.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html"
+    },
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.FaithfulLinearRepresentation",
+      "display_name": "Langlands.AlgebraicGeometry.FaithfulLinearRepresentation",
+      "qualified_name": "Langlands.AlgebraicGeometry.FaithfulLinearRepresentation",
+      "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L71",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
+      "display_name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
+      "qualified_name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
+      "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L50",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "affine_group_schemes.algebra_homs_form_group_under_convolution",
+  "title": "Algebra Homomorphisms Form a Group Under Convolution",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_algebra_homs_form_group_under_convolution.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Algebra Homomorphisms Form a Group Under Convolution</h1>\n<p>Let \\(R\\) be a commutative ring, \\(A\\) an \\(R\\)-Hopf algebra with\ncounit \\(\\varepsilon : A \\to R\\) and antipode \\(S : A \\to A\\), and \\(B\\)\na commutative \\(R\\)-algebra. The set\n\\(\\operatorname{Hom}_{R\\text{-Alg}}(A, B)\\) of \\(R\\)-algebra\nhomomorphisms forms a group under\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebra_hom_convolution\" href=\"linear_algebraic_groups_algebra_hom_convolution.html\">convolution</a>,\nwith:</p>\n<ul>\n<li><strong>identity element</strong> the composition\n  \\(\\eta_B \\circ \\varepsilon : A \\to B\\), where\n  \\(\\eta_B : R \\to B\\) is the structure map of \\(B\\) as an\n  \\(R\\)-algebra;</li>\n<li><strong>inverse</strong> of \\(f : A \\to B\\) the composition \\(f \\circ S : A \\to B\\).</li>\n</ul>",
+  "proof_html": "<p>That the convolution lands in algebra homs is\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.convolution_of_algebra_homs_is_algebra_hom\" href=\"linear_algebraic_groups_convolution_of_algebra_homs_is_algebra_hom.html\">the preceding theorem</a>.\nThat \\(\\eta_B \\circ \\varepsilon\\) and \\(f \\circ S\\) are algebra homs is\ndirect (counit and antipode are coalgebra/anti-algebra maps; combined\nwith the commutativity of \\(B\\), the antipode composed with \\(f\\)\nremains an algebra hom — the antipode-is-anti-algebra-hom and\ncommutativity-of-\\(B\\) cancel).</p>\n<p><em>Identity.</em> For any \\(f \\in \\operatorname{Hom}_{R\\text{-Alg}}(A, B)\\)\nand \\(a \\in A\\),</p>\n<p>\\[\n((\\eta_B \\varepsilon) * f)(a)\n  \\;=\\; \\sum_{(a)} \\eta_B(\\varepsilon(a_{(1)})) \\cdot f(a_{(2)})\n  \\;=\\; \\sum_{(a)} f\\bigl(\\varepsilon(a_{(1)})\\, a_{(2)}\\bigr)\n  \\;=\\; f(a)\n\\]</p>\n<p>by the <strong>counit axiom</strong>\n\\(\\sum_{(a)} \\varepsilon(a_{(1)})\\, a_{(2)} = a\\) of the coalgebra\n\\(A\\) (and \\(f\\) being \\(R\\)-linear). Similarly\n\\(f * (\\eta_B \\varepsilon) = f\\).</p>\n<p><em>Inverse.</em> For \\(f \\in \\operatorname{Hom}_{R\\text{-Alg}}(A, B)\\) and\n\\(a \\in A\\),</p>\n<p>\\[\n(f * (f \\circ S))(a)\n  \\;=\\; \\sum_{(a)} f(a_{(1)}) \\cdot f(S(a_{(2)}))\n  \\;=\\; f\\bigl(\\sum_{(a)} a_{(1)} S(a_{(2)})\\bigr)\n  \\;=\\; f(\\eta_A \\varepsilon(a))\n  \\;=\\; \\eta_B \\varepsilon(a)\n\\]</p>\n<p>by the <strong>antipode axiom</strong>\n\\(\\sum_{(a)} a_{(1)} S(a_{(2)}) = \\eta_A \\varepsilon(a)\\), where\n\\(\\eta_A : R \\to A\\) is the unit. Hence \\(f * (f \\circ S) = \\eta_B \\varepsilon\\),\nthe identity element. Symmetrically \\((f \\circ S) * f = \\eta_B \\varepsilon\\).</p>\n<p><em>Associativity.</em> Follows from the coassociativity of \\(\\Delta\\) and the\nassociativity of the multiplication of \\(B\\) by a direct computation\nwith Sweedler notation.</p>\n<p>Hence \\((\\operatorname{Hom}_{R\\text{-Alg}}(A, B), *)\\) is a group.<br />\n\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.convolution_of_algebra_homs_is_algebra_hom",
+      "title": "Convolution of Algebra Homomorphisms Is an Algebra Homomorphism",
+      "href": "affine_group_schemes/affine_group_schemes_convolution_of_algebra_homs_is_algebra_hom.html"
+    },
+    {
+      "id": "affine_group_schemes.algebra_hom_composed_with_antipode_is_algebra_hom",
+      "title": "Composition of an Algebra Hom with the Antipode Is an Algebra Hom",
+      "href": "affine_group_schemes/affine_group_schemes_algebra_hom_composed_with_antipode_is_algebra_hom.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
+      "title": "Group Object Structure on Spec A via Yoneda",
+      "href": "affine_group_schemes/affine_group_schemes_hopf_spec_grpobj_via_yoneda.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.AlgHomGroup.instGroup",
+      "display_name": "Langlands.AlgebraicGeometry.AlgHomGroup.instGroup",
+      "qualified_name": "Langlands.AlgebraicGeometry.AlgHomGroup.instGroup",
+      "module": "LanglandsLean.AlgebraicGeometry.AlgHomGroup",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomGroup.lean#L152",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

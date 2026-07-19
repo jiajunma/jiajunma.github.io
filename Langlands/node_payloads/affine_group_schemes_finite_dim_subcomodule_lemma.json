@@ -1,0 +1,38 @@
+{
+  "id": "affine_group_schemes.finite_dim_subcomodule_lemma",
+  "title": "Finite-Dimensional Subspace in a Sub-Comodule",
+  "kind": "lemma",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_finite_dim_subcomodule_lemma.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Finite-Dimensional Subspace in a Sub-Comodule</h1>\n<p>Let \\(k\\) be a field, \\(A\\) a \\(k\\)-coalgebra, and \\(V\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.comodule_definition\" href=\"linear_algebraic_groups_comodule_definition.html\">$A$-comodule</a> with\ncoaction \\(\\rho : V \\to V \\otimes_k A\\). Then every finite-dimensional\n\\(k\\)-subspace \\(V_0 \\subseteq V\\) is contained in a finite-dimensional\nsub-comodule \\(V_0 \\subseteq W \\subseteq V\\).</p>",
+  "proof_html": "<p>Pick a basis \\(e_1, \\dots, e_n\\) of \\(V_0\\). Extend each \\(\\rho(e_i)\\)\nin the form</p>\n<p>\\[\n\\rho(e_i) \\;=\\; \\sum_{j=1}^{N} f_{ij} \\otimes a_{ij},\n\\]</p>\n<p>where \\(\\{f_{ij}\\}_{i,j}\\) is a finite subset of \\(V\\) and\n\\(\\{a_{ij}\\}_{i,j}\\) is a finite subset of \\(A\\) (such an expansion\nexists because \\(V \\otimes_k A\\) is spanned by elementary tensors and\n\\(\\rho(e_i)\\) has only finitely many nonzero terms in any chosen basis\nof \\(A\\)). Let</p>\n<p>\\[\nW \\;=\\; \\operatorname{span}_k\\bigl(\\, \\{e_1, \\dots, e_n\\} \\cup \\{f_{ij}\\}_{i,j} \\,\\bigr) \\;\\subseteq\\; V.\n\\]</p>\n<p>Then \\(W\\) is finite-dimensional and contains \\(V_0\\). We check that\n\\(W\\) is a sub-comodule, i.e.\\ \\(\\rho(W) \\subseteq W \\otimes_k A\\).</p>\n<p>For \\(\\rho(e_i)\\) this holds by construction: \\(\\rho(e_i) = \\sum f_{ij}\n\\otimes a_{ij}\\) and each \\(f_{ij} \\in W\\), so \\(\\rho(e_i) \\in W \\otimes\nA\\).</p>\n<p>For \\(\\rho(f_{ij})\\), apply coassociativity:</p>\n<p>\\[\n(\\operatorname{id}_V \\otimes \\Delta) \\circ \\rho \\;=\\; (\\rho \\otimes \\operatorname{id}_A) \\circ \\rho.\n\\]</p>\n<p>Applied to \\(e_i\\), the left side gives \\(\\sum_j f_{ij} \\otimes \\Delta(a_{ij})\\)\nand the right side gives \\(\\sum_j \\rho(f_{ij}) \\otimes a_{ij}\\). The\nlinear independence of \\(\\{a_{ij}\\}_j\\) (after refining the family to a\nlinearly independent subset, replacing the \\(f_{ij}\\) by linear\ncombinations) implies that each \\(\\rho(f_{ij})\\) is a linear combination\nof elements \\(f_{i\\ell} \\otimes \\text{(coefficient in } A\\text{)}\\),\nhence lies in \\(W \\otimes A\\). Concluding, \\(W\\) is a sub-comodule.<br />\n\\(\\square\\)</p>\n<p><strong>Corollary.</strong> Let \\(A\\) be a finitely generated commutative Hopf\n\\(k\\)-algebra and let \\(a_1, \\dots, a_m \\in A\\) be a finite set of\n\\(k\\)-algebra generators. There exists a finite-dimensional sub-comodule\n\\(W \\subseteq A\\) of the\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.regular_representation_example\" href=\"linear_algebraic_groups_regular_representation_example.html\">regular representation</a>\ncontaining each \\(a_i\\); in particular, \\(W\\) generates \\(A\\) as a\n\\(k\\)-algebra.</p>\n<p><em>Proof of corollary.</em> Apply the lemma to\n\\(V = A\\), \\(\\rho = \\Delta\\), and\n\\(V_0 = \\operatorname{span}_k\\{a_1, \\dots, a_m\\}\\).<br />\n\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.comodule_definition",
+      "title": "Comodule over a Coalgebra",
+      "href": "affine_group_schemes/affine_group_schemes_comodule_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.regular_representation_example",
+      "title": "Regular Representation as a Comodule",
+      "href": "affine_group_schemes/affine_group_schemes_regular_representation_example.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html"
+    },
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

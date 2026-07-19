@@ -1,0 +1,42 @@
+{
+  "id": "affine_group_schemes.algebra_hom_composed_with_antipode_is_algebra_hom",
+  "title": "Composition of an Algebra Hom with the Antipode Is an Algebra Hom",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_algebra_hom_composed_with_antipode_is_algebra_hom.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Composition of an Algebra Hom with the Antipode Is an Algebra Hom</h1>\n<p>Let \\(R\\) be a commutative ring, \\(A\\) an \\(R\\)-Hopf algebra with\nantipode \\(S : A \\to A\\), and \\(B\\) a <strong>commutative</strong> \\(R\\)-algebra.\nFor any \\(R\\)-algebra homomorphism \\(f : A \\to B\\), the composition</p>\n<p>\\[\nf \\circ S : A \\to B\n\\]</p>\n<p>is again an \\(R\\)-algebra homomorphism.</p>\n<p>This is the technical fact that makes the inverse of the convolution\ngroup structure on \\(<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebra_homs_form_group_under_convolution\" href=\"linear_algebraic_groups_algebra_homs_form_group_under_convolution.html\">\\operatorname{Hom}_{R\\text{-Alg}}(A, B)</a>\\)\nwell-defined.</p>",
+  "proof_html": "<p>\\(R\\)-linearity of \\(f \\circ S\\) is automatic. Preservation of the\nunit:</p>\n<p>\\[\n(f \\circ S)(1_A) \\;=\\; f(S(1_A)) \\;=\\; f(1_A) \\;=\\; 1_B,\n\\]</p>\n<p>where the middle equality uses \\(S(1_A) = 1_A\\) (antipode preserves\nunit).</p>\n<p>Preservation of multiplication. By\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.antipode_anti_multiplicativity\" href=\"linear_algebraic_groups_antipode_anti_multiplicativity.html\">antipode anti-multiplicativity</a>,\n\\(S(a \\cdot b) = S(b) \\cdot S(a)\\). Applying \\(f\\) (an algebra hom),</p>\n<p>\\[\n(f \\circ S)(a \\cdot b) \\;=\\; f(S(b) \\cdot S(a)) \\;=\\; f(S(b)) \\cdot f(S(a)) \\;=\\; (f \\circ S)(b) \\cdot (f \\circ S)(a).\n\\]</p>\n<p>By <strong>commutativity of \\(B\\)</strong>, \\((f \\circ S)(b) \\cdot (f \\circ S)(a) = (f \\circ S)(a) \\cdot (f \\circ S)(b)\\),\nhence</p>\n<p>\\[\n(f \\circ S)(a \\cdot b) \\;=\\; (f \\circ S)(a) \\cdot (f \\circ S)(b).\n\\]</p>\n<p>\\(\\square\\)</p>\n<p><strong>Remark.</strong> \\(A\\) need not be commutative for this result. The\ncommutativity of \\(B\\) alone is enough to \"fix\" the anti-multiplicativity\nof \\(S\\) into ordinary multiplicativity of \\(f \\circ S\\).</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.antipode_anti_multiplicativity",
+      "title": "Antipode of a Hopf Algebra Is Anti-Multiplicative",
+      "href": "affine_group_schemes/affine_group_schemes_antipode_anti_multiplicativity.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.algebra_homs_form_group_under_convolution",
+      "title": "Algebra Homomorphisms Form a Group Under Convolution",
+      "href": "affine_group_schemes/affine_group_schemes_algebra_homs_form_group_under_convolution.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L310",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

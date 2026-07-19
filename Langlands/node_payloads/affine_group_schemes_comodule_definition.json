@@ -1,0 +1,70 @@
+{
+  "id": "affine_group_schemes.comodule_definition",
+  "title": "Comodule over a Coalgebra",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_comodule_definition.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Comodule over a Coalgebra</h1>\n<p>Let \\(R\\) be a commutative semiring and let \\(A\\) be a coalgebra over\n\\(R\\), with comultiplication\n\\(\\Delta : A \\to A \\otimes_R A\\) and counit \\(\\varepsilon : A \\to R\\).\nA <strong>(right) \\(A\\)-comodule</strong> is an \\(R\\)-module \\(V\\) together with an\n\\(R\\)-linear map (the <strong>coaction</strong>)</p>\n<p>\\[\n\\rho : V \\to V \\otimes_R A\n\\]</p>\n<p>satisfying:</p>\n<ol>\n<li><strong>Coassociativity.</strong> The two paths from \\(V\\) to\n   \\(V \\otimes_R A \\otimes_R A\\) agree:</li>\n</ol>\n<p>\\[\n   (\\rho \\otimes \\operatorname{id}_A) \\circ \\rho\n   \\;=\\;\n   (\\operatorname{id}_V \\otimes \\Delta) \\circ \\rho,\n   \\]</p>\n<p>after the canonical identification\n   \\((V \\otimes A) \\otimes A \\simeq V \\otimes (A \\otimes A)\\).</p>\n<ol>\n<li><strong>Counit.</strong> The composition</li>\n</ol>\n<p>\\[\n   V \\to V \\otimes_R A \\to V \\otimes_R R \\cong V,\n   \\]</p>\n<p>where the first arrow is \\(\\rho\\) and the second is\n   \\(\\operatorname{id}_V \\otimes \\varepsilon\\), is the identity map of \\(V\\).</p>\n<p>A morphism of \\(A\\)-comodules is an \\(R\\)-linear map of underlying modules\ncommuting with the coactions.</p>\n<p>When \\(A\\) is a Hopf algebra, \\(A\\)-comodules play the role of\nrepresentations of the dual group scheme; see\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.representation_equals_comodule\" href=\"linear_algebraic_groups_representation_equals_comodule.html\">representations equal comodules</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+      "title": "Coordinate Rings and Hopf Algebras",
+      "href": "affine_group_schemes/affine_group_schemes_coordinate_rings_and_hopf_algebras.html"
+    },
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "foundational_inputs/foundational_inputs_hopf_algebras.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.finite_dim_subcomodule_lemma",
+      "title": "Finite-Dimensional Subspace in a Sub-Comodule",
+      "href": "affine_group_schemes/affine_group_schemes_finite_dim_subcomodule_lemma.html"
+    },
+    {
+      "id": "affine_group_schemes.regular_representation_example",
+      "title": "Regular Representation as a Comodule",
+      "href": "affine_group_schemes/affine_group_schemes_regular_representation_example.html"
+    },
+    {
+      "id": "affine_group_schemes.representation_equals_comodule",
+      "title": "G-Representations Are A-Comodules",
+      "href": "affine_group_schemes/affine_group_schemes_representation_equals_comodule.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.Comodule",
+      "display_name": "Langlands.AlgebraicGeometry.Comodule",
+      "qualified_name": "Langlands.AlgebraicGeometry.Comodule",
+      "module": "LanglandsLean.AlgebraicGeometry.Comodule",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Comodule.lean#L32",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Comodule.Hom",
+      "display_name": "Langlands.AlgebraicGeometry.Comodule.Hom",
+      "qualified_name": "Langlands.AlgebraicGeometry.Comodule.Hom",
+      "module": "LanglandsLean.AlgebraicGeometry.Comodule",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Comodule.lean#L60",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

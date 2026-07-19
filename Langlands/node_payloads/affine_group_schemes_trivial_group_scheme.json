@@ -1,0 +1,49 @@
+{
+  "id": "affine_group_schemes.trivial_group_scheme",
+  "title": "Trivial Group Scheme over a Base",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_trivial_group_scheme.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Trivial Group Scheme over a Base</h1>\n<p>For any scheme \\(S\\), the <strong>trivial group scheme over \\(S\\)</strong>, denoted\n\\(\\mathbf{1}_S\\), is \\(S\\) itself, regarded as an object of\n\\(\\mathsf{Over}(S)\\) via the identity structure morphism\n\\(\\operatorname{id}_S : S \\to S\\), equipped with the unique group object\nstructure: multiplication, identity, and inverse are all the identity\nmorphism of \\(S\\) (after suitable identifications via the unit\nisomorphism of the Cartesian monoidal structure on \\(\\mathsf{Over}(S)\\)).</p>\n<p>Equivalently, \\(\\mathbf{1}_S\\) is the unit object of the Cartesian\nmonoidal category \\(\\mathsf{Over}(S)\\), which automatically carries a\ntrivial group object structure.</p>\n<p>The trivial group scheme is an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(S\\): the identity morphism is both affine and locally of finite\ntype.</p>\n<p>In the project's Lean development, the underlying\n\\(\\texttt{Scheme.Over}\\) instance is\n\\(\\texttt{schemeOverSelf}\\,S\\), and the group object structure is\n\\(\\texttt{trivialGrpObj}\\,S\\), transported from the unit of\n\\(\\mathsf{Over}(S)\\) via \\(\\texttt{inferInstanceAs}\\). The\n\\(\\texttt{IsAlgebraicGroup}\\,S\\,S\\) instance is then synthesized\nautomatically.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.schemeOverSelf",
+      "display_name": "Langlands.AlgebraicGeometry.schemeOverSelf",
+      "qualified_name": "Langlands.AlgebraicGeometry.schemeOverSelf",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L36",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.trivialGrpObj",
+      "display_name": "Langlands.AlgebraicGeometry.trivialGrpObj",
+      "qualified_name": "Langlands.AlgebraicGeometry.trivialGrpObj",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.Trivial",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L40",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

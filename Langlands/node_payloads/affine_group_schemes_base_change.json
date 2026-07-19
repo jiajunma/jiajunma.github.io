@@ -1,0 +1,38 @@
+{
+  "id": "affine_group_schemes.base_change",
+  "title": "Base Change",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_base_change.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Base Change</h1>\n<p><strong>Base change</strong> is the operation that transports a group scheme \\(G/S\\)\nalong a morphism \\(f : T \\to S\\) to a group scheme \\(G_T/T\\) over the\nnew base \\(T\\). Concretely \\(G_T = G \\times_S T\\), the fibre product\n\\(T\\)-scheme.</p>\n<h2>Definition</h2>\n<p>Given:</p>\n<ul>\n<li>an algebraic group \\(G \\to S\\) with structure morphism \\(G \\downarrow_S\\);</li>\n<li>a morphism of base schemes \\(f : T \\to S\\);</li>\n</ul>\n<p>the <strong>base change of \\(G\\) along \\(f\\)</strong> is</p>\n<p>\\[\nG_T \\;=\\; G \\times_S T,\n\\]</p>\n<p>with structure morphism the second projection \\(G_T \\to T\\). The group\nstructure on \\(G_T\\) is induced from that on \\(G\\) via the universal\nproperty of the fibre product.</p>\n<h2>What is preserved</h2>\n<p>Many properties of algebraic groups are preserved by base change:</p>\n<table>\n<thead>\n<tr>\n<th>property of \\(G/S\\)</th>\n<th>property of \\(G_T/T\\)</th>\n<th>proof technique</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>affine</td>\n<td>affine</td>\n<td>pullback of affine is affine</td>\n</tr>\n<tr>\n<td>locally of finite type</td>\n<td>locally of finite type</td>\n<td>finite type stable under pullback</td>\n</tr>\n<tr>\n<td>smooth</td>\n<td>smooth</td>\n<td>smooth stable under pullback</td>\n</tr>\n<tr>\n<td>affine group scheme</td>\n<td>affine group scheme</td>\n<td>combine affine + GrpObj pullback</td>\n</tr>\n<tr>\n<td>algebraic group</td>\n<td>algebraic group</td>\n<td>combine affine + LFT + GrpObj</td>\n</tr>\n<tr>\n<td>commutative</td>\n<td>commutative</td>\n<td>symmetry of multiplication preserved</td>\n</tr>\n</tbody>\n</table>\n<p>The project's\n[[node:affine_group_schemes.base_change_preserves_algebraic_group|base\nchange preservation lemma]] packages the algebraic-group preservation as\na Lean theorem, reusing Mathlib's <code>Scheme.GrpObjAsOverPullback</code>\ncombined with the base-change-stability lemmas for <code>IsAffineHom</code> and\n<code>LocallyOfFiniteType</code>.</p>\n<h2>Key examples</h2>\n<ul>\n<li><strong>Field extension.</strong> For \\(k \\to K\\) a field extension, the base\n  change \\(G_K = G \\otimes_k K\\) recovers the classical\n  \"extension-of-scalars\" construction.</li>\n<li><strong>Algebraic closure.</strong> \\(G_{\\bar{k}}\\) brings the geometric picture\n  into view: connected components of \\(G_{\\bar{k}}\\) (as a topological\n  space) carry intrinsic information about \\(G/k\\).</li>\n<li><strong>Localisation at a prime.</strong> For \\(\\mathfrak{p} \\subseteq R\\),\n  \\(G_{R_\\mathfrak{p}}\\) gives the local picture at \\(\\mathfrak{p}\\).</li>\n<li><strong>Reduction modulo \\(p\\).</strong> For \\(G/\\mathbb{Z}\\), \\(G_{\\mathbb{F}_p}\\)\n  is the special fibre at the prime \\(p\\).</li>\n<li><strong>Galois descent.</strong> For a Galois extension \\(K/k\\), the Galois group\n  acts on \\(G_K\\), and \\(G\\) is determined by \\((G_K, \\text{Galois\n  action})\\) via <a class=\"node-ref\" data-node-id=\"descent_and_forms.forms_of_algebraic_groups\" href=\"../descent_and_forms/descent_and_forms_forms_of_algebraic_groups.html\">descent</a>.</li>\n</ul>\n<h2>On the algebraic side</h2>\n<p>In coordinate-ring terms, base change \\(G \\mapsto G_T\\) is the\n<strong>extension of scalars</strong> on the Hopf algebra:</p>\n<p>\\[\nA \\;\\to\\; A \\otimes_R R'\n\\]</p>\n<p>where \\(R' = \\Gamma(T, \\mathcal{O}_T)\\) (and we restrict to the affine\nbase case \\(S = \\operatorname{Spec} R\\), \\(T = \\operatorname{Spec} R'\\)).\nThe new Hopf structure is</p>\n<ul>\n<li>\\(\\Delta_{A \\otimes R'}(a \\otimes r') = \\Delta_A(a) \\otimes r'\\),</li>\n<li>\\(\\varepsilon_{A \\otimes R'}(a \\otimes r') = \\varepsilon_A(a) \\cdot r'\\),</li>\n<li>\\(S_{A \\otimes R'}(a \\otimes r') = S_A(a) \\otimes r'\\).</li>\n</ul>\n<h2>Examples of base change in this project</h2>\n<ul>\n<li><code>Examples.Trivial</code>: smoke tests that\n  <code>[IsAlgebraicGroup M S] [f : T ⟶ S] → IsAlgebraicGroup (M ×_S T) T</code>.</li>\n<li>The same pattern lifts to <code>G_a × T</code>, <code>G_m × T</code>, <code>μ_n × T</code>, etc.</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"foundational_inputs.fields_and_field_extensions\" href=\"../foundational_inputs/foundational_inputs_fields_and_field_extensions.html\">Fields and Field Extensions</a></li>\n<li><a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_algebraic_groups\" href=\"linear_algebraic_groups_affine_algebraic_groups.html\">Affine Algebraic Groups</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "foundational_inputs.fields_and_field_extensions",
+      "title": "Fields and Field Extensions",
+      "href": "foundational_inputs/foundational_inputs_fields_and_field_extensions.html"
+    },
+    {
+      "id": "affine_group_schemes.affine_algebraic_groups",
+      "title": "Affine Algebraic Groups",
+      "href": "affine_group_schemes/affine_group_schemes_affine_algebraic_groups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "descent_and_forms.forms_of_algebraic_groups",
+      "title": "Forms of Algebraic Groups",
+      "href": "descent_and_forms/descent_and_forms_forms_of_algebraic_groups.html"
+    },
+    {
+      "id": "affine_group_schemes.base_change_preserves_algebraic_group",
+      "title": "Base Change Preserves Algebraic Group Structure",
+      "href": "affine_group_schemes/affine_group_schemes_base_change_preserves_algebraic_group.html"
+    }
+  ],
+  "lean_refs": []
+}

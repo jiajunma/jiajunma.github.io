@@ -1,0 +1,38 @@
+{
+  "id": "affine_group_schemes.hopf_spec_essential_image_affine",
+  "title": "Essential Image of Spec Is Affine Group Schemes",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_hopf_spec_essential_image_affine.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Essential Image of Spec Is Affine Group Schemes</h1>\n<p>The essential image of the\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_functor\" href=\"linear_algebraic_groups_hopf_spec_functor.html\">Spec functor on Hopf algebras</a></p>\n<p>\\[\n\\operatorname{hopfSpec}_R : \\mathsf{Grp}((\\mathsf{CommAlgCat}\\,R)^{\\mathrm{op}})\n  \\longrightarrow \\mathsf{Grp}(\\mathsf{Over}(\\operatorname{Spec} R))\n\\]</p>\n<p>consists exactly of the\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group schemes</a>\nover \\(\\operatorname{Spec} R\\) — equivalently, those group objects \\(G\\)\nin \\(\\mathsf{Over}(\\operatorname{Spec} R)\\) whose underlying scheme\n\\(G\\) is affine. Combined with\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_fully_faithful\" href=\"linear_algebraic_groups_hopf_spec_fully_faithful.html\">full faithfulness</a>,\nthis yields an equivalence of categories</p>\n<p>\\[\n\\mathsf{Grp}((\\mathsf{CommAlgCat}\\,R)^{\\mathrm{op}})\n  \\;\\;\\simeq\\;\\;\n\\bigl\\{\\, G \\in \\mathsf{Grp}(\\mathsf{Over}(\\operatorname{Spec} R)) \\,:\\, G \\text{ is affine} \\,\\bigr\\}.\n\\]</p>\n<p><em>Proof sketch.</em><br />\nThe corresponding statement at the algebra level: the essential image\nof \\(\\operatorname{algSpec}_R\\) is the affine schemes over\n\\(\\operatorname{Spec} R\\). This follows from the standard equivalence\nbetween commutative \\(R\\)-algebras and affine schemes over\n\\(\\operatorname{Spec} R\\) (one direction by global sections, the other\nby \\(\\operatorname{Spec}\\)).</p>\n<p>To lift to the Hopf level: given an affine group object \\(G\\) in\n\\(\\mathsf{Over}(\\operatorname{Spec} R)\\), the underlying scheme is\n\\(\\operatorname{algSpec}_R(A)\\) for the commutative \\(R\\)-algebra\n\\(A = \\Gamma(G, \\mathcal{O}_G)\\) (<a class=\"node-ref\" data-node-id=\"affine_group_schemes.coordinate_hopf_algebra_of_group_scheme\" href=\"linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html\">the coordinate algebra</a>).\nThe group object structure on \\(G\\) endows \\(A\\) with comultiplication,\ncounit, and antipode (each is the pullback of the corresponding\nscheme-level morphism), making \\(A\\) a commutative \\(R\\)-Hopf algebra.\nUnder [[node:affine_group_schemes.hopf_spec_grpobj_via_yoneda|the\nYoneda construction]] of \\(\\operatorname{hopfSpec}_R\\), the\n\\(\\operatorname{GrpObj}\\) it produces on \\(\\operatorname{algSpec}_R(A)\\)\nmatches the original \\(\\operatorname{GrpObj}\\) on \\(G\\) (because both\nare uniquely determined by the convolution group structure on\n\\(\\operatorname{Hom}_{R\\text{-Alg}}(A, -)\\)).</p>\n<p>The inverse functor at the algebra level is the global-sections functor\n\\(\\Gamma : G \\mapsto \\mathcal{O}(G)\\); see\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.coordinate_hopf_algebra_of_group_scheme\" href=\"linear_algebraic_groups_coordinate_hopf_algebra_of_group_scheme.html\">the coordinate Hopf algebra</a>.<br />\n\\(\\square\\)</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.hopf_spec_functor",
+      "title": "Spec Functor on Hopf Algebras",
+      "href": "affine_group_schemes/affine_group_schemes_hopf_spec_functor.html"
+    },
+    {
+      "id": "affine_group_schemes.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html"
+    },
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

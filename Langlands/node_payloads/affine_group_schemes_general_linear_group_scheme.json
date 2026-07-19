@@ -1,0 +1,104 @@
+{
+  "id": "affine_group_schemes.general_linear_group_scheme",
+  "title": "General Linear Group Scheme GL_n",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_general_linear_group_scheme.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>General Linear Group Scheme \\(\\operatorname{GL}_n\\)</h1>\n<p>Let \\(n\\) be a positive integer and \\(S\\) a scheme. The <strong>general\nlinear group scheme of rank \\(n\\) over \\(S\\)</strong>, denoted\n\\(\\operatorname{GL}_{n,S}\\), is defined by base change:</p>\n<p>\\[\n\\operatorname{GL}_{n,S} \\;=\\; S \\,\\times_{\\operatorname{Spec} \\mathbb{Z}}\\, \\operatorname{Spec} \\mathbb{Z}[x_{ij}\\colon 1 \\le i,j \\le n]\\bigl[\\det(x_{ij})^{-1}\\bigr],\n\\]</p>\n<p>where \\(\\mathbb{Z}[x_{ij}]\\) is the polynomial ring in the \\(n^2\\)\nindeterminates \\(x_{ij}\\) and the localization inverts the determinant\nof the formal \\(n \\times n\\) matrix \\((x_{ij})\\). Its coordinate Hopf\nalgebra is generated over the base by the entries \\(x_{ij}\\) and by\n\\(\\det^{-1}\\), with the <strong>matrix-multiplication Hopf structure</strong>:</p>\n<p>\\[\n\\Delta(x_{ij}) \\;=\\; \\sum_{k=1}^{n} x_{ik} \\otimes x_{kj}, \\qquad\n\\varepsilon(x_{ij}) \\;=\\; \\delta_{ij}, \\qquad\nS(x_{ij}) \\;=\\; (\\det)^{-1} \\cdot C_{ji},\n\\]</p>\n<p>where \\(C_{ji}\\) is the \\((j, i)\\)-cofactor of \\((x_{ij})\\) (so that\n\\((S(x_{ij}))\\) is the formal matrix inverse of \\((x_{ij})\\)).</p>\n<p>The structure morphism \\(\\operatorname{GL}_{n,S} \\to S\\) is affine and\nlocally of finite type. Hence \\(\\operatorname{GL}_{n,S}\\) is an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(S\\); it is smooth of relative dimension \\(n^2\\) and is, for\n\\(n \\ge 2\\), non-commutative. Its functor of points is identified by\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.general_linear_group_scheme_points\" href=\"linear_algebraic_groups_general_linear_group_scheme_points.html\">the GL_n points formula</a>.</p>\n<p>The group scheme \\(\\operatorname{GL}_n\\) is the target of the\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">embedding theorem</a>:\nevery algebraic group over a field is a closed subgroup of some\n\\(\\operatorname{GL}_n\\). The closed subgroup\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.basic_examples\" href=\"linear_algebraic_groups_basic_examples.html\">\\(\\operatorname{SL}_n = \\ker(\\det)\\)</a>,\ntogether with subgroups of \\(\\operatorname{GL}_n\\) cut out by symmetry\nconditions, gives rise to the classical group schemes.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.basic_examples",
+      "title": "Basic Examples",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_basic_examples.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "affine_group_schemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.general_linear_group_scheme_points",
+      "title": "Points of GL_n Are Invertible n×n Matrices over R",
+      "href": "affine_group_schemes/affine_group_schemes_general_linear_group_scheme_points.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.GLn.universalMatrix",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.universalMatrix",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.universalMatrix",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L75",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.GLn.det",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.det",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.det",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L81",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L86",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.GLn.over",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.GLn.over",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLn.over",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.GLn",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLn.lean#L99",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.GLnSch",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.GLnSch",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository"
+    }
+  ]
+}

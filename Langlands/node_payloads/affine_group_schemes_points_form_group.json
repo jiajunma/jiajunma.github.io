@@ -1,0 +1,36 @@
+{
+  "id": "affine_group_schemes.points_form_group",
+  "title": "R-Points of a Group Scheme Form a Group",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_points_form_group.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>R-Points of a Group Scheme Form a Group</h1>\n<p>Let \\(k\\) be a field, \\(G\\) an affine group scheme over\n\\(\\operatorname{Spec} k\\), and \\(R\\) a commutative \\(k\\)-algebra. Then\nthe set of \\(R\\)-points\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.points_functor_definition\" href=\"linear_algebraic_groups_points_functor_definition.html\">$G(R)$</a>\ncarries a canonical group structure, with multiplication, identity, and\ninverse defined pointwise from the group object structure of \\(G\\) in\n\\(\\mathsf{Over}(\\operatorname{Spec} k)\\).</p>\n<p>Furthermore, for any \\(k\\)-algebra homomorphism \\(f : R \\to R'\\), the\ninduced map \\(G(R) \\to G(R')\\) (sending a \\(\\operatorname{Spec} k\\)-morphism\n\\(\\operatorname{Spec} R \\to G\\) to its precomposition with\n\\(\\operatorname{Spec}(f) : \\operatorname{Spec} R' \\to \\operatorname{Spec} R\\))\nis a group homomorphism.</p>",
+  "proof_html": "<p>The category \\(\\mathsf{Over}(\\operatorname{Spec} k)\\) is Cartesian\nmonoidal (it has all binary products and a terminal object), so for any\ngroup object \\(G\\) in it and any object \\(X\\), the hom set\n\\(\\operatorname{Hom}(X, G)\\) inherits a group structure: multiplication\nis the composition\n\\(\\operatorname{Hom}(X, G) \\times \\operatorname{Hom}(X, G) \\to \\operatorname{Hom}(X, G \\times G) \\to \\operatorname{Hom}(X, G)\\)\nwhere the second arrow is induced by the multiplication \\(G \\times G \\to G\\).\nThe identity element is the constant map at \\(e : 1 \\to G\\), and the\ninverse is post-composition with \\(i : G \\to G\\). The group axioms on\n\\(\\operatorname{Hom}(X, G)\\) follow from the group object axioms on\n\\(G\\). Taking \\(X = \\operatorname{Spec} R\\) (canonically over\n\\(\\operatorname{Spec} k\\) via the algebra map) gives the group structure\non \\(G(R)\\). Functoriality in \\(R\\) reduces to compatibility of\ncomposition with the group operations, which is automatic.<br />\n\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.points_functor_definition",
+      "title": "Functor of Points of a Group Scheme",
+      "href": "affine_group_schemes/affine_group_schemes_points_functor_definition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.points.instGroup",
+      "display_name": "Langlands.AlgebraicGeometry.points.instGroup",
+      "qualified_name": "Langlands.AlgebraicGeometry.points.instGroup",
+      "module": "LanglandsLean.AlgebraicGeometry.Points",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L59",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

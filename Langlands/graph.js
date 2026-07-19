@@ -59,9 +59,9 @@
   function topicOverviewToDot(data) {
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent];",
-      '\tnode [label="\\N", penwidth=1.8, shape=box];',
-      "\tedge [arrowhead=vee];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.4, nodesep=0.7, splines=curved, concentrate=true];",
+      '\tnode [label="\\N", penwidth=1.8, shape=box, fontname="Helvetica", fontsize=13, margin="0.3,0.18"];',
+      "\tedge [arrowhead=vee, arrowsize=0.9];",
     ];
     (data.topics || []).forEach((topic) => {
       const attrs = [
@@ -72,7 +72,9 @@
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${attrs.map(([key, value]) => `${key}=${dotQuote(value)}`).join(", ")}];`);
     });
     (data.edges || []).forEach((edge) => {
-      lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [style=dashed];`);
+      const weight = Math.min(edge.count || 1, 8);
+      const penwidth = (Math.min((edge.count || 1) * 0.35 + 0.7, 2.5)).toFixed(1);
+      lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [style=dashed, weight=${weight}, penwidth=${penwidth}];`);
     });
     lines.push("}");
     return lines.join("\n");

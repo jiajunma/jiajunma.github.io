@@ -1,0 +1,67 @@
+{
+  "id": "affine_group_schemes.affine_group_scheme_definition",
+  "title": "Affine Group Scheme over a Base",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Affine Group Scheme over a Base</h1>\n<p>Let \\(S\\) be a scheme. An <strong>affine group scheme over \\(S\\)</strong> is a scheme \\(G\\)\ntogether with:</p>\n<ol>\n<li>a structure morphism \\(G \\to S\\), making \\(G\\) an object of the slice\n   category \\(\\mathsf{Over}(S)\\);</li>\n<li>a group object structure on \\(G\\) in \\(\\mathsf{Over}(S)\\), supplied by\n   morphisms</li>\n</ol>\n<p>\\[\nm : G \\times_S G \\to G, \\qquad\ne : S \\to G, \\qquad\ni : G \\to G,\n\\]</p>\n<p>subject to the standard associativity, unit, and inverse axioms for\n   group objects in a cartesian category;\n3. an affineness assumption: the structure morphism \\(G \\to S\\) is affine\n   (the preimage of any affine open of \\(S\\) is an affine scheme).</p>\n<p>In the project's Lean development this is the typeclass aggregator\n\\(\\texttt{IsAffineGroupScheme}\\,G\\,S\\), which extends\n\\(\\texttt{GrpObj}(\\operatorname{asOver}\\,G\\,S)\\) and\n\\(\\texttt{IsAffineHom}\\,(G \\downarrow S)\\). No smoothness or finite-type\nassumption is imposed; those are added separately via additional typeclasses\nwhen the theory requires them.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.affine_algebraic_groups",
+      "title": "Affine Algebraic Groups",
+      "href": "affine_group_schemes/affine_group_schemes_affine_algebraic_groups.html"
+    },
+    {
+      "id": "foundational_inputs.affine_schemes",
+      "title": "Affine Schemes",
+      "href": "foundational_inputs/foundational_inputs_affine_schemes.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "affine_group_schemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html"
+    },
+    {
+      "id": "affine_group_schemes.hopf_spec_essential_image_affine",
+      "title": "Essential Image of Spec Is Affine Group Schemes",
+      "href": "affine_group_schemes/affine_group_schemes_hopf_spec_essential_image_affine.html"
+    },
+    {
+      "id": "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
+      "title": "Group Object Structure on Spec A via Yoneda",
+      "href": "affine_group_schemes/affine_group_schemes_hopf_spec_grpobj_via_yoneda.html"
+    },
+    {
+      "id": "affine_group_schemes.points_functor_definition",
+      "title": "Functor of Points of a Group Scheme",
+      "href": "affine_group_schemes/affine_group_schemes_points_functor_definition.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.IsAffineGroupScheme",
+      "display_name": "Langlands.AlgebraicGeometry.IsAffineGroupScheme",
+      "qualified_name": "Langlands.AlgebraicGeometry.IsAffineGroupScheme",
+      "module": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L64",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

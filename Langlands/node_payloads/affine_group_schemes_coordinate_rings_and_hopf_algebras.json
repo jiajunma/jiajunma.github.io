@@ -1,0 +1,68 @@
+{
+  "id": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+  "title": "Coordinate Rings and Hopf Algebras",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_coordinate_rings_and_hopf_algebras.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Coordinate Rings and Hopf Algebras</h1>\n<p>The foundational duality of this topic is the equivalence between two\nways of presenting the same data:</p>\n<table>\n<thead>\n<tr>\n<th>Geometric side</th>\n<th>Algebraic side</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>affine group scheme \\(G \\to \\operatorname{Spec} R\\)</td>\n<td>commutative \\(R\\)-Hopf algebra \\(A\\)</td>\n</tr>\n<tr>\n<td>group structure on \\(G\\)</td>\n<td>comultiplication, counit, antipode on \\(A\\)</td>\n</tr>\n<tr>\n<td>morphisms \\(G \\to G'\\) over \\(R\\)</td>\n<td>Hopf-algebra homomorphisms \\(A' \\to A\\)</td>\n</tr>\n</tbody>\n</table>\n<p>The bridge is <code>Spec ⊣ Γ</code> (affine schemes ↔ commutative algebras),\nupgraded to group objects on both sides.</p>\n<h2>The dictionary</h2>\n<p>For an affine \\(R\\)-Hopf algebra \\(A\\), the affine group scheme is\n\\(G = \\operatorname{Spec} A\\), with structure maps:</p>\n<ul>\n<li><strong>multiplication</strong> \\(\\mu_G : G \\times_R G \\to G\\) corresponds to the\n  <strong>comultiplication</strong> \\(\\Delta : A \\to A \\otimes_R A\\);</li>\n<li><strong>identity</strong> \\(e : \\operatorname{Spec} R \\to G\\) corresponds to the\n  <strong>counit</strong> \\(\\varepsilon : A \\to R\\);</li>\n<li><strong>inverse</strong> \\(\\iota : G \\to G\\) corresponds to the <strong>antipode</strong>\n  \\(S : A \\to A\\).</li>\n</ul>\n<p>The group axioms on \\(G\\) translate to the Hopf algebra axioms on \\(A\\):\nassociativity ↔ coassociativity, identity ↔ counit axioms, inverse ↔\nantipode axioms.</p>\n<h2>Categorical formulation</h2>\n<p>Inverting Spec gives an equivalence of categories</p>\n<p>\\[\n\\mathsf{Grp}\\bigl((\\mathsf{CommAlg}_R)^{\\mathrm{op}}\\bigr)\n  \\;\\simeq\\;\n\\bigl\\{ G \\in \\mathsf{Grp}(\\mathsf{Over}(\\operatorname{Spec} R)) :\n        G \\text{ is affine}\\bigr\\}.\n\\]</p>\n<p>The left side is realised in this project as group objects in\n\\((\\mathsf{CommAlgCat}\\,R)^{\\mathrm{op}}\\), which by\n<a class=\"node-ref\" data-node-id=\"foundational_inputs.hopf_algebras\" href=\"../foundational_inputs/foundational_inputs_hopf_algebras.html\">Hopf algebras</a> is the\nring-theoretic notion of a commutative \\(R\\)-Hopf algebra.</p>\n<p>The right side is captured by the\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">&lt;code&gt;IsAffineGroupScheme&lt;/code&gt;</a>\npredicate plus the\n[[node:affine_group_schemes.hopf_spec_essential_image_affine|essential\nimage]] characterisation of <code>hopfSpec</code>.</p>\n<h2>In this project</h2>\n<p>The Lean formalisation realises the dictionary via:</p>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_functor\" href=\"linear_algebraic_groups_hopf_spec_functor.html\">&lt;code&gt;hopfSpec&lt;/code&gt;</a> — the\n  functor <code>Spec</code> lifted to Hopf algebras and group schemes.</li>\n<li>[[node:affine_group_schemes.hopf_spec_grpobj_via_yoneda|Yoneda\n  construction]] — the actual implementation, bypassing\n  monoidal-functor synthesis blockers in Mathlib master.</li>\n<li>[[node:affine_group_schemes.coordinate_hopf_algebra_of_group_scheme|coordinate\n  Hopf algebra]] — the inverse direction, \\(G \\mapsto \\Gamma(G, \\mathcal{O}_G)\\).</li>\n<li>[[node:affine_group_schemes.hopf_spec_fully_faithful|fully\n  faithful]] +\n  [[node:affine_group_schemes.hopf_spec_essential_image_affine|essential\n  image]] — the equivalence.</li>\n</ul>\n<h2>Why \"commutative\" on the Hopf side</h2>\n<p>This project specifically formalises <strong>commutative</strong> affine group\nschemes — those whose coordinate ring is a <em>commutative</em> Hopf algebra.\nGeneral Hopf algebras (e.g. group algebras of nonabelian groups,\nuniversal enveloping algebras) correspond to \"quantum groups\" /\nnoncommutative geometry and lie outside the present scope.</p>\n<p>The commutativity of \\(G\\) (the group law) is independent of the\ncommutativity of \\(A\\) (the algebra structure):\n- \\(A\\) commutative \\(\\iff\\) \\(G\\) is affine over Spec(commutative ring).\n- \\(G\\) commutative as a group \\(\\iff\\) \\(A\\) is <strong>cocommutative</strong>\n  (\\(\\Delta\\) symmetric).</p>\n<p>\\(\\mathbb{G}_a\\), \\(\\mathbb{G}_m\\), \\(\\mu_n\\), tori are all\ncommutative groups (cocommutative Hopf algebras);\n\\(\\operatorname{GL}_n\\) and \\(\\operatorname{SL}_n\\) for \\(n \\ge 2\\) are\nnon-commutative groups (non-cocommutative Hopf algebras).</p>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"foundational_inputs.commutative_algebra\" href=\"../foundational_inputs/foundational_inputs_commutative_algebra.html\">Commutative Algebra</a></li>\n<li><a class=\"node-ref\" data-node-id=\"foundational_inputs.affine_schemes\" href=\"../foundational_inputs/foundational_inputs_affine_schemes.html\">Affine Schemes</a></li>\n<li><a class=\"node-ref\" data-node-id=\"foundational_inputs.hopf_algebras\" href=\"../foundational_inputs/foundational_inputs_hopf_algebras.html\">Hopf Algebras</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "foundational_inputs.commutative_algebra",
+      "title": "Commutative Algebra",
+      "href": "foundational_inputs/foundational_inputs_commutative_algebra.html"
+    },
+    {
+      "id": "foundational_inputs.affine_schemes",
+      "title": "Affine Schemes",
+      "href": "foundational_inputs/foundational_inputs_affine_schemes.html"
+    },
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "foundational_inputs/foundational_inputs_hopf_algebras.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.affine_algebraic_groups",
+      "title": "Affine Algebraic Groups",
+      "href": "affine_group_schemes/affine_group_schemes_affine_algebraic_groups.html"
+    },
+    {
+      "id": "affine_group_schemes.algebra_hom_convolution",
+      "title": "Convolution of Algebra Homomorphisms",
+      "href": "affine_group_schemes/affine_group_schemes_algebra_hom_convolution.html"
+    },
+    {
+      "id": "affine_group_schemes.antipode_anti_multiplicativity",
+      "title": "Antipode of a Hopf Algebra Is Anti-Multiplicative",
+      "href": "affine_group_schemes/affine_group_schemes_antipode_anti_multiplicativity.html"
+    },
+    {
+      "id": "affine_group_schemes.comodule_definition",
+      "title": "Comodule over a Coalgebra",
+      "href": "affine_group_schemes/affine_group_schemes_comodule_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "affine_group_schemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "title": "Definition of Linear Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.spec_representability_via_global_sections",
+      "title": "Hom Into Spec via Global Sections (Spec ⊣ Γ Adjunction)",
+      "href": "affine_group_schemes/affine_group_schemes_spec_representability_via_global_sections.html"
+    }
+  ],
+  "lean_refs": []
+}

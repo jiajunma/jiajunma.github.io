@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finite-Dimensional Subspace in a Sub-Comodule — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Sha": "\\unicode{x0428}", "\\rightsquigarrow": "\\leadsto", "\\xleftarrow": "\\overset{#1}{\\longleftarrow}", "\\xleftrightarrow": "\\overset{#1}{\\longleftrightarrow}", "\\xrightarrow": "\\overset{#1}{\\longrightarrow}"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">Reductive Groups</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../bd_covers/index.html">Bd Covers</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../buildings_and_parahorics/index.html">Buildings And Parahorics</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../descent_and_forms/index.html">Descent And Forms</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../affine_group_schemes/index.html">Affine Group Schemes</a>
+        </li>
+
+        <li class="topic-leaf">
+          <a href="../foundational_inputs/index.html">Foundational Inputs</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../kottwitz_structures/index.html">Kottwitz Structures</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../nilpotent_orbits/index.html">Nilpotent Orbits</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../reductive_structure/index.html">Reductive Structure</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../root_data_and_duality/index.html">Root Data And Duality</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/abv.html">abv</a></li>
+      
+        <li><a href="../keywords/additive-group.html">additive-group</a></li>
+      
+        <li><a href="../keywords/adeles.html">adeles</a></li>
+      
+        <li><a href="../keywords/adjoint-action.html">adjoint-action</a></li>
+      
+        <li><a href="../keywords/adjoint-group.html">adjoint-group</a></li>
+      
+        <li><a href="../keywords/adjunction.html">adjunction</a></li>
+      
+        <li><a href="../keywords/admissible-sets.html">admissible-sets</a></li>
+      
+        <li><a href="../keywords/affine-algebraic-groups.html">affine-algebraic-groups</a></li>
+      
+        <li><a href="../keywords/affine-group-scheme.html">affine-group-scheme</a></li>
+      
+        <li><a href="../keywords/affine-group-schemes.html">affine-group-schemes</a></li>
+      
+        <li><a href="../keywords/affine-root-systems.html">affine-root-systems</a></li>
+      
+        <li><a href="../keywords/affine-schemes.html">affine-schemes</a></li>
+      
+        <li><a href="../keywords/affine-weyl-groups.html">affine-weyl-groups</a></li>
+      
+        <li><a href="../keywords/algebra-hom.html">algebra-hom</a></li>
+      
+        <li><a href="../keywords/algebraic-fundamental-group.html">algebraic-fundamental-group</a></li>
+      
+        <li><a href="../keywords/algebraic-group.html">algebraic-group</a></li>
+      
+        <li><a href="../keywords/algebraic-groups.html">algebraic-groups</a></li>
+      
+        <li><a href="../keywords/antipode.html">antipode</a></li>
+      
+        <li><a href="../keywords/apartments.html">apartments</a></li>
+      
+        <li><a href="../keywords/automorphisms.html">automorphisms</a></li>
+      
+        <li><a href="../keywords/b-g.html">b-g</a></li>
+      
+        <li><a href="../keywords/bala-carter.html">bala-carter</a></li>
+      
+        <li><a href="../keywords/base-change.html">base-change</a></li>
+      
+        <li><a href="../keywords/based-root-data.html">based-root-data</a></li>
+      
+        <li><a href="../keywords/basic-elements.html">basic-elements</a></li>
+      
+        <li><a href="../keywords/bd-covers.html">bd-covers</a></li>
+      
+        <li><a href="../keywords/bialgebra.html">bialgebra</a></li>
+      
+        <li><a href="../keywords/bn-pairs.html">bn-pairs</a></li>
+      
+        <li><a href="../keywords/borel-subgroups.html">borel-subgroups</a></li>
+      
+        <li><a href="../keywords/bruhat-order.html">bruhat-order</a></li>
+      
+        <li><a href="../keywords/bruhat-tits.html">bruhat-tits</a></li>
+      
+        <li><a href="../keywords/bruhat-tits-buildings.html">bruhat-tits-buildings</a></li>
+      
+        <li><a href="../keywords/brylinski-deligne.html">brylinski-deligne</a></li>
+      
+        <li><a href="../keywords/buildings-and-parahorics.html">buildings-and-parahorics</a></li>
+      
+        <li><a href="../keywords/cartan-matrices.html">cartan-matrices</a></li>
+      
+        <li><a href="../keywords/center.html">center</a></li>
+      
+        <li><a href="../keywords/centers.html">centers</a></li>
+      
+        <li><a href="../keywords/central-extensions.html">central-extensions</a></li>
+      
+        <li><a href="../keywords/central-isogenies.html">central-isogenies</a></li>
+      
+        <li><a href="../keywords/characters.html">characters</a></li>
+      
+        <li><a href="../keywords/classical-and-exceptional-groups.html">classical-and-exceptional-groups</a></li>
+      
+        <li><a href="../keywords/classical-groups.html">classical-groups</a></li>
+      
+        <li><a href="../keywords/classification.html">classification</a></li>
+      
+        <li><a href="../keywords/closed-subgroups.html">closed-subgroups</a></li>
+      
+        <li><a href="../keywords/coalgebra.html">coalgebra</a></li>
+      
+        <li><a href="../keywords/cocharacters.html">cocharacters</a></li>
+      
+        <li><a href="../keywords/cocycles.html">cocycles</a></li>
+      
+        <li><a href="../keywords/combinatorics.html">combinatorics</a></li>
+      
+        <li><a href="../keywords/commutative-algebra.html">commutative-algebra</a></li>
+      
+        <li><a href="../keywords/comodule.html">comodule</a></li>
+      
+        <li><a href="../keywords/conjugacy.html">conjugacy</a></li>
+      
+        <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/convolution.html">convolution</a></li>
+      
+        <li><a href="../keywords/coordinate-ring.html">coordinate-ring</a></li>
+      
+        <li><a href="../keywords/coordinate-rings.html">coordinate-rings</a></li>
+      
+        <li><a href="../keywords/corollary.html">corollary</a></li>
+      
+        <li><a href="../keywords/coroots.html">coroots</a></li>
+      
+        <li><a href="../keywords/covers.html">covers</a></li>
+      
+        <li><a href="../keywords/coxeter-complexes.html">coxeter-complexes</a></li>
+      
+        <li><a href="../keywords/coxeter-groups.html">coxeter-groups</a></li>
+      
+        <li><a href="../keywords/definition.html">definition</a></li>
+      
+        <li><a href="../keywords/definitions.html">definitions</a></li>
+      
+        <li><a href="../keywords/derived-group.html">derived-group</a></li>
+      
+        <li><a href="../keywords/descent-and-forms.html">descent-and-forms</a></li>
+      
+        <li><a href="../keywords/diagonalizable-groups.html">diagonalizable-groups</a></li>
+      
+        <li><a href="../keywords/dual-groups.html">dual-groups</a></li>
+      
+        <li><a href="../keywords/dual-root-data.html">dual-root-data</a></li>
+      
+        <li><a href="../keywords/dual-root-systems.html">dual-root-systems</a></li>
+      
+        <li><a href="../keywords/duality.html">duality</a></li>
+      
+        <li><a href="../keywords/dynkin-diagrams.html">dynkin-diagrams</a></li>
+      
+        <li><a href="../keywords/embedding-theorem.html">embedding-theorem</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/example.html">example</a></li>
+      
+        <li><a href="../keywords/examples.html">examples</a></li>
+      
+        <li><a href="../keywords/exceptional-groups.html">exceptional-groups</a></li>
+      
+        <li><a href="../keywords/extended-groups.html">extended-groups</a></li>
+      
+        <li><a href="../keywords/external-background.html">external-background</a></li>
+      
+        <li><a href="../keywords/facets.html">facets</a></li>
+      
+        <li><a href="../keywords/fields.html">fields</a></li>
+      
+        <li><a href="../keywords/forms.html">forms</a></li>
+      
+        <li><a href="../keywords/foundational-inputs.html">foundational-inputs</a></li>
+      
+        <li><a href="../keywords/functor.html">functor</a></li>
+      
+        <li><a href="../keywords/functor-of-points.html">functor-of-points</a></li>
+      
+        <li><a href="../keywords/fundamental-group.html">fundamental-group</a></li>
+      
+        <li><a href="../keywords/g-structure.html">g-structure</a></li>
+      
+        <li><a href="../keywords/galois-action.html">galois-action</a></li>
+      
+        <li><a href="../keywords/galois-cohomology.html">galois-cohomology</a></li>
+      
+        <li><a href="../keywords/galois-descent.html">galois-descent</a></li>
+      
+        <li><a href="../keywords/general-linear-group.html">general-linear-group</a></li>
+      
+        <li><a href="../keywords/global-fields.html">global-fields</a></li>
+      
+        <li><a href="../keywords/group-schemes.html">group-schemes</a></li>
+      
+        <li><a href="../keywords/hopf-algebra.html">hopf-algebra</a></li>
+      
+        <li><a href="../keywords/hopf-algebras.html">hopf-algebras</a></li>
+      
+        <li><a href="../keywords/hopf-spec.html">hopf-spec</a></li>
+      
+        <li><a href="../keywords/identity-component.html">identity-component</a></li>
+      
+        <li><a href="../keywords/images.html">images</a></li>
+      
+        <li><a href="../keywords/inner-forms.html">inner-forms</a></li>
+      
+        <li><a href="../keywords/isocrystals.html">isocrystals</a></li>
+      
+        <li><a href="../keywords/jacobson-morozov.html">jacobson-morozov</a></li>
+      
+        <li><a href="../keywords/k-theory.html">k-theory</a></li>
+      
+        <li><a href="../keywords/k2.html">k2</a></li>
+      
+        <li><a href="../keywords/kaletha.html">kaletha</a></li>
+      
+        <li><a href="../keywords/kernels.html">kernels</a></li>
+      
+        <li><a href="../keywords/kottwitz.html">kottwitz</a></li>
+      
+        <li><a href="../keywords/kottwitz-homomorphism.html">kottwitz-homomorphism</a></li>
+      
+        <li><a href="../keywords/kottwitz-map.html">kottwitz-map</a></li>
+      
+        <li><a href="../keywords/kottwitz-structures.html">kottwitz-structures</a></li>
+      
+        <li><a href="../keywords/l-groups.html">l-groups</a></li>
+      
+        <li><a href="../keywords/l-morphisms.html">l-morphisms</a></li>
+      
+        <li><a href="../keywords/langlands-dual-groups.html">langlands-dual-groups</a></li>
+      
+        <li><a href="../keywords/lemma.html">lemma</a></li>
+      
+        <li><a href="../keywords/levi-subgroups.html">levi-subgroups</a></li>
+      
+        <li><a href="../keywords/lie-algebras.html">lie-algebras</a></li>
+      
+        <li><a href="../keywords/linear-algebraic-groups.html">linear-algebraic-groups</a></li>
+      
+        <li><a href="../keywords/local-fields.html">local-fields</a></li>
+      
+        <li><a href="../keywords/maximal-tori.html">maximal-tori</a></li>
+      
+        <li><a href="../keywords/metaplectic-covers.html">metaplectic-covers</a></li>
+      
+        <li><a href="../keywords/morphisms.html">morphisms</a></li>
+      
+        <li><a href="../keywords/moy-prasad-filtrations.html">moy-prasad-filtrations</a></li>
+      
+        <li><a href="../keywords/multiplicative-group.html">multiplicative-group</a></li>
+      
+        <li><a href="../keywords/newton-map.html">newton-map</a></li>
+      
+        <li><a href="../keywords/nilpotent-cone.html">nilpotent-cone</a></li>
+      
+        <li><a href="../keywords/nilpotent-elements.html">nilpotent-elements</a></li>
+      
+        <li><a href="../keywords/nilpotent-orbits.html">nilpotent-orbits</a></li>
+      
+        <li><a href="../keywords/nonabelian-h1.html">nonabelian-h1</a></li>
+      
+        <li><a href="../keywords/outer-forms.html">outer-forms</a></li>
+      
+        <li><a href="../keywords/parabolic-subgroups.html">parabolic-subgroups</a></li>
+      
+        <li><a href="../keywords/parahoric-group-schemes.html">parahoric-group-schemes</a></li>
+      
+        <li><a href="../keywords/parahoric-subgroups.html">parahoric-subgroups</a></li>
+      
+        <li><a href="../keywords/pinned-dual-groups.html">pinned-dual-groups</a></li>
+      
+        <li><a href="../keywords/pinnings.html">pinnings</a></li>
+      
+        <li><a href="../keywords/pure-inner-twists.html">pure-inner-twists</a></li>
+      
+        <li><a href="../keywords/quasi-split-forms.html">quasi-split-forms</a></li>
+      
+        <li><a href="../keywords/quotients.html">quotients</a></li>
+      
+        <li><a href="../keywords/rational-forms.html">rational-forms</a></li>
+      
+        <li><a href="../keywords/rational-nilpotent-orbits.html">rational-nilpotent-orbits</a></li>
+      
+        <li><a href="../keywords/real-forms.html">real-forms</a></li>
+      
+        <li><a href="../keywords/reductive-groups.html">reductive-groups</a></li>
+      
+        <li><a href="../keywords/reductive-quotients.html">reductive-quotients</a></li>
+      
+        <li><a href="../keywords/reductive-structure.html">reductive-structure</a></li>
+      
+        <li><a href="../keywords/representation.html">representation</a></li>
+      
+        <li><a href="../keywords/rigid-inner-forms.html">rigid-inner-forms</a></li>
+      
+        <li><a href="../keywords/rigid-inner-twists.html">rigid-inner-twists</a></li>
+      
+        <li><a href="../keywords/root-data.html">root-data</a></li>
+      
+        <li><a href="../keywords/root-data-and-duality.html">root-data-and-duality</a></li>
+      
+        <li><a href="../keywords/root-data-automorphisms.html">root-data-automorphisms</a></li>
+      
+        <li><a href="../keywords/root-datum.html">root-datum</a></li>
+      
+        <li><a href="../keywords/root-subgroups.html">root-subgroups</a></li>
+      
+        <li><a href="../keywords/root-systems.html">root-systems</a></li>
+      
+        <li><a href="../keywords/roots.html">roots</a></li>
+      
+        <li><a href="../keywords/roots-of-unity.html">roots-of-unity</a></li>
+      
+        <li><a href="../keywords/semisimple-groups.html">semisimple-groups</a></li>
+      
+        <li><a href="../keywords/sigma-conjugacy.html">sigma-conjugacy</a></li>
+      
+        <li><a href="../keywords/simply-connected-cover.html">simply-connected-cover</a></li>
+      
+        <li><a href="../keywords/sl2-triples.html">sl2-triples</a></li>
+      
+        <li><a href="../keywords/smoothness.html">smoothness</a></li>
+      
+        <li><a href="../keywords/solvable-groups.html">solvable-groups</a></li>
+      
+        <li><a href="../keywords/spec.html">spec</a></li>
+      
+        <li><a href="../keywords/spherical-buildings.html">spherical-buildings</a></li>
+      
+        <li><a href="../keywords/split-reductive-groups.html">split-reductive-groups</a></li>
+      
+        <li><a href="../keywords/splittings.html">splittings</a></li>
+      
+        <li><a href="../keywords/strong-inner-forms.html">strong-inner-forms</a></li>
+      
+        <li><a href="../keywords/strong-real-forms.html">strong-real-forms</a></li>
+      
+        <li><a href="../keywords/tangent-space.html">tangent-space</a></li>
+      
+        <li><a href="../keywords/theorem.html">theorem</a></li>
+      
+        <li><a href="../keywords/tits-buildings.html">tits-buildings</a></li>
+      
+        <li><a href="../keywords/tits-systems.html">tits-systems</a></li>
+      
+        <li><a href="../keywords/tori.html">tori</a></li>
+      
+        <li><a href="../keywords/torsors.html">torsors</a></li>
+      
+        <li><a href="../keywords/twisted-conjugacy.html">twisted-conjugacy</a></li>
+      
+        <li><a href="../keywords/twisting.html">twisting</a></li>
+      
+        <li><a href="../keywords/unipotent-groups.html">unipotent-groups</a></li>
+      
+        <li><a href="../keywords/unipotent-radicals.html">unipotent-radicals</a></li>
+      
+        <li><a href="../keywords/valuation-rings.html">valuation-rings</a></li>
+      
+        <li><a href="../keywords/valued-root-data.html">valued-root-data</a></li>
+      
+        <li><a href="../keywords/vogan-diagrams.html">vogan-diagrams</a></li>
+      
+        <li><a href="../keywords/weighted-dynkin-diagrams.html">weighted-dynkin-diagrams</a></li>
+      
+        <li><a href="../keywords/weyl-groups.html">weyl-groups</a></li>
+      
+        <li><a href="../keywords/yoneda.html">yoneda</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-affine_group_schemes-2e-finite_dim_subcomodule_lemma">
+  <header class="lemma_thmheading thm-heading">
+    <span class="lemma_thmcaption thm-caption">Lemma</span>
+    <span class="lemma_thmtitle thm-title">Finite-Dimensional Subspace in a Sub-Comodule</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-lemma">lemma</span>
+      <span class="badge status-admitted">admitted</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-affine_group_schemes-2e-finite_dim_subcomodule_lemma">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="affine_group_schemes_comodule_definition.html">Comodule over a Coalgebra</a></li>
+        
+        <li><a href="affine_group_schemes_regular_representation_example.html">Regular Representation as a Comodule</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="lemma_thmcontent thm-content body">
+    <h1>Finite-Dimensional Subspace in a Sub-Comodule</h1>
+<p>Let \(k\) be a field, \(A\) a \(k\)-coalgebra, and \(V\) an
+<a class="node-ref" data-node-id="linear_algebraic_groups.comodule_definition" href="affine_group_schemes_comodule_definition.html">$A$-comodule</a> with
+coaction \(\rho : V \to V \otimes_k A\). Then every finite-dimensional
+\(k\)-subspace \(V_0 \subseteq V\) is contained in a finite-dimensional
+sub-comodule \(V_0 \subseteq W \subseteq V\).</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Pick a basis \(e_1, \dots, e_n\) of \(V_0\). Extend each \(\rho(e_i)\)
+in the form</p>
+<p>\[
+\rho(e_i) \;=\; \sum_{j=1}^{N} f_{ij} \otimes a_{ij},
+\]</p>
+<p>where \(\{f_{ij}\}_{i,j}\) is a finite subset of \(V\) and
+\(\{a_{ij}\}_{i,j}\) is a finite subset of \(A\) (such an expansion
+exists because \(V \otimes_k A\) is spanned by elementary tensors and
+\(\rho(e_i)\) has only finitely many nonzero terms in any chosen basis
+of \(A\)). Let</p>
+<p>\[
+W \;=\; \operatorname{span}_k\bigl(\, \{e_1, \dots, e_n\} \cup \{f_{ij}\}_{i,j} \,\bigr) \;\subseteq\; V.
+\]</p>
+<p>Then \(W\) is finite-dimensional and contains \(V_0\). We check that
+\(W\) is a sub-comodule, i.e.\ \(\rho(W) \subseteq W \otimes_k A\).</p>
+<p>For \(\rho(e_i)\) this holds by construction: \(\rho(e_i) = \sum f_{ij}
+\otimes a_{ij}\) and each \(f_{ij} \in W\), so \(\rho(e_i) \in W \otimes
+A\).</p>
+<p>For \(\rho(f_{ij})\), apply coassociativity:</p>
+<p>\[
+(\operatorname{id}_V \otimes \Delta) \circ \rho \;=\; (\rho \otimes \operatorname{id}_A) \circ \rho.
+\]</p>
+<p>Applied to \(e_i\), the left side gives \(\sum_j f_{ij} \otimes \Delta(a_{ij})\)
+and the right side gives \(\sum_j \rho(f_{ij}) \otimes a_{ij}\). The
+linear independence of \(\{a_{ij}\}_j\) (after refining the family to a
+linearly independent subset, replacing the \(f_{ij}\) by linear
+combinations) implies that each \(\rho(f_{ij})\) is a linear combination
+of elements \(f_{i\ell} \otimes \text{(coefficient in } A\text{)}\),
+hence lies in \(W \otimes A\). Concluding, \(W\) is a sub-comodule.<br />
+\(\square\)</p>
+<p><strong>Corollary.</strong> Let \(A\) be a finitely generated commutative Hopf
+\(k\)-algebra and let \(a_1, \dots, a_m \in A\) be a finite set of
+\(k\)-algebra generators. There exists a finite-dimensional sub-comodule
+\(W \subseteq A\) of the
+<a class="node-ref" data-node-id="linear_algebraic_groups.regular_representation_example" href="affine_group_schemes_regular_representation_example.html">regular representation</a>
+containing each \(a_i\); in particular, \(W\) generates \(A\) as a
+\(k\)-algebra.</p>
+<p><em>Proof of corollary.</em> Apply the lemma to
+\(V = A\), \(\rho = \Delta\), and
+\(V_0 = \operatorname{span}_k\{a_1, \dots, a_m\}\).<br />
+\(\square\)</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="../linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html">Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations</a></li>
+      
+      <li><a href="../linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html">Embedding Theorem for Algebraic Groups</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">comodule</span><span class="tag">lemma</span><span class="tag">linear-algebraic-groups</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

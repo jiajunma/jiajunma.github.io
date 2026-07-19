@@ -1,0 +1,68 @@
+{
+  "id": "affine_group_schemes.affine_algebraic_groups",
+  "title": "Affine Algebraic Groups",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_affine_algebraic_groups.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Affine Algebraic Groups</h1>\n<p>An <strong>affine algebraic group over a scheme \\(S\\)</strong> is an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\n\\(G/S\\) whose structure morphism \\(G \\to S\\) is locally of finite type.\nThe Path-4 + Level-1 typeclass form recorded by this project is</p>\n<p><code>(G : Scheme) [G.Over S]\n  [GrpObj (Scheme.asOver G S)]\n  [IsAffineHom (G ↘ S)]\n  [LocallyOfFiniteType (G ↘ S)]</code></p>\n<p>which the aggregator\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">&lt;code&gt;IsAlgebraicGroup&lt;/code&gt;</a>\npackages as a single typeclass.</p>\n<h2>Why \"affine\"</h2>\n<p>The word <strong>affine</strong> records that the structure morphism is an affine\nmorphism: locally on \\(S\\), \\(G\\) is the spectrum of a (commutative)\n\\(\\mathcal{O}_S\\)-algebra. Equivalently, the global-sections sheaf\n\\(\\Gamma(G, \\mathcal{O}_G)\\) determines \\(G\\) entirely (see\n[[node:affine_group_schemes.coordinate_hopf_algebra_of_group_scheme|the\ncoordinate Hopf algebra]]).</p>\n<h2>Why \"algebraic\"</h2>\n<p>The condition <strong>locally of finite type</strong> is the right finiteness\nhypothesis for the theory:</p>\n<ul>\n<li>It excludes pathological group schemes like the formal group\n  \\(\\operatorname{Spf} R[[T]]\\) (not locally of finite type) and\n  pro-objects assembled from infinitely many factors.</li>\n<li>It includes all classical examples\n  (<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.basic_examples\" href=\"linear_algebraic_groups_basic_examples.html\">basic examples</a>):\n  \\(\\mathbb{G}_a\\), \\(\\mathbb{G}_m\\), \\(\\mu_n\\),\n  \\(\\operatorname{GL}_n\\), \\(\\operatorname{SL}_n\\), tori, finite étale\n  group schemes.</li>\n<li>It is preserved by closed subgroup schemes, fibre products, and\n  quotients by closed normal subgroups (when these exist as schemes).</li>\n</ul>\n<h2>Coordinate-ring equivalence</h2>\n<p>Over a base ring \\(R\\) (i.e. \\(S = \\operatorname{Spec} R\\)), an affine\nalgebraic group \\(G/S\\) is the same data as a finitely-generated\ncommutative \\(R\\)-Hopf algebra\n\\(A = \\Gamma(G, \\mathcal{O}_G)\\). The\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_functor\" href=\"linear_algebraic_groups_hopf_spec_functor.html\">&lt;code&gt;hopfSpec&lt;/code&gt; functor</a>\nimplements one direction; the\n[[node:affine_group_schemes.coordinate_hopf_algebra_of_group_scheme|coordinate\nHopf algebra]] construction implements the other; together they assemble\nthe equivalence\n[[node:affine_group_schemes.hopf_spec_essential_image_affine|stated\non the essential image]].</p>\n<h2>Canonical structure theorems</h2>\n<p>The subject is organised around the following structural results, each\nof which has a dedicated node in this DAG once it enters the\nformalisation roadmap:</p>\n<ol>\n<li><strong>Embedding into \\(\\operatorname{GL}_n\\).</strong> Every affine algebraic\n   group over a field embeds as a closed subgroup of some\n   \\(\\operatorname{GL}_n\\)\n   (<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">embedding theorem</a>).</li>\n<li><strong>Representations as comodules.</strong> \\(G\\)-representations on a\n   \\(k\\)-vector space \\(V\\) correspond to\n   \\(A\\)-comodule structures on \\(V\\)\n   ([[node:affine_group_schemes.representation_equals_comodule|representation\n   equals comodule]]).</li>\n<li><strong>Faithful representations exist</strong> (over a field): the\n   [[node:affine_group_schemes.faithful_linear_representation_definition|regular\n   representation]] of \\(G\\) on \\(A\\) restricts to a faithful\n   finite-dimensional sub-representation\n   ([[node:linear_algebraic_groups.affine_finite_type_faithful_representation|finite-type\n   faithful representation]]).</li>\n<li><strong>Smoothness vs étaleness.</strong> In characteristic zero every algebraic\n   group is smooth; in positive characteristic this fails (e.g.\n   \\(\\mu_p\\), \\(\\alpha_p\\) are non-smooth).</li>\n</ol>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"affine_group_schemes.coordinate_rings_and_hopf_algebras\" href=\"linear_algebraic_groups_coordinate_rings_and_hopf_algebras.html\">Coordinate Rings and Hopf Algebras</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+      "title": "Coordinate Rings and Hopf Algebras",
+      "href": "affine_group_schemes/affine_group_schemes_coordinate_rings_and_hopf_algebras.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "bd_covers.central_extensions_of_algebraic_groups",
+      "title": "Central Extensions of Algebraic Groups",
+      "href": "bd_covers/bd_covers_central_extensions_of_algebraic_groups.html"
+    },
+    {
+      "id": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+      "title": "Smooth Affine Group Schemes over Valuation Rings",
+      "href": "buildings_and_parahorics/buildings_and_parahorics_smooth_affine_group_schemes_over_valuation_rings.html"
+    },
+    {
+      "id": "descent_and_forms.forms_of_algebraic_groups",
+      "title": "Forms of Algebraic Groups",
+      "href": "descent_and_forms/descent_and_forms_forms_of_algebraic_groups.html"
+    },
+    {
+      "id": "affine_group_schemes.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.automorphism_groups",
+      "title": "Automorphism Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_automorphism_groups.html"
+    },
+    {
+      "id": "affine_group_schemes.base_change",
+      "title": "Base Change",
+      "href": "affine_group_schemes/affine_group_schemes_base_change.html"
+    },
+    {
+      "id": "linear_algebraic_groups.linear_algebraic_groups",
+      "title": "Linear Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_groups.html"
+    },
+    {
+      "id": "linear_algebraic_groups.morphisms_and_closed_subgroups",
+      "title": "Morphisms and Closed Subgroups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_morphisms_and_closed_subgroups.html"
+    },
+    {
+      "id": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "title": "Smoothness, Tangent Spaces, and Lie Algebras",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_smoothness_tangent_spaces_lie_algebras.html"
+    }
+  ],
+  "lean_refs": []
+}
