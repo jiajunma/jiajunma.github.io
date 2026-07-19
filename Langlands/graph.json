@@ -1234,7 +1234,7 @@
     {
       "id": "buildings_and_parahorics.affine_root_systems",
       "title": "Affine Root Systems",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "affine-root-systems",
@@ -1250,13 +1250,14 @@
         "root_data_and_duality.root_systems"
       ],
       "used_by": [
-        "buildings_and_parahorics.affine_weyl_groups"
+        "buildings_and_parahorics.affine_weyl_groups",
+        "buildings_and_parahorics.concave_functions_and_subgroups"
       ]
     },
     {
       "id": "buildings_and_parahorics.affine_weyl_groups",
       "title": "Affine Weyl Groups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "affine-weyl-groups",
@@ -1273,13 +1274,14 @@
       ],
       "used_by": [
         "buildings_and_parahorics.bruhat_tits_apartments",
+        "buildings_and_parahorics.iwahori_weyl_group",
         "kottwitz_structures.admissible_sets"
       ]
     },
     {
       "id": "buildings_and_parahorics.bn_pairs_and_tits_systems",
       "title": "BN-Pairs and Tits Systems",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "bn-pairs",
@@ -1301,9 +1303,30 @@
       ]
     },
     {
+      "id": "buildings_and_parahorics.bounded_subgroups_of_reductive_groups",
+      "title": "Bounded Subgroups of Reductive Groups over Local Fields",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "bounded-subgroups",
+        "compact-open-subgroups",
+        "local-fields",
+        "bruhat-tits"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "number_theory.local_fields"
+      ]
+    },
+    {
       "id": "buildings_and_parahorics.bruhat_tits_apartments",
       "title": "Bruhat-Tits Apartments",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "bruhat-tits",
@@ -1328,7 +1351,7 @@
     {
       "id": "buildings_and_parahorics.bruhat_tits_buildings",
       "title": "Bruhat-Tits Buildings",
-      "kind": "topic",
+      "kind": "theorem",
       "status": "admitted",
       "tags": [
         "bruhat-tits-buildings",
@@ -1344,13 +1367,37 @@
         "buildings_and_parahorics.bruhat_tits_apartments"
       ],
       "used_by": [
-        "buildings_and_parahorics.facets_in_bruhat_tits_buildings"
+        "buildings_and_parahorics.facets_in_bruhat_tits_buildings",
+        "buildings_and_parahorics.special_and_hyperspecial_points"
+      ]
+    },
+    {
+      "id": "buildings_and_parahorics.concave_functions_and_subgroups",
+      "title": "Concave Functions and Filtration Subgroups",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "concave-functions",
+        "filtration-subgroups",
+        "affine-root-system",
+        "bruhat-tits"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.affine_root_systems",
+        "buildings_and_parahorics.moy_prasad_filtrations",
+        "buildings_and_parahorics.parahoric_subgroups",
+        "buildings_and_parahorics.valued_root_data"
       ]
     },
     {
       "id": "buildings_and_parahorics.coxeter_complexes",
       "title": "Coxeter Complexes",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "coxeter-complexes",
@@ -1371,7 +1418,7 @@
     {
       "id": "buildings_and_parahorics.facets_in_bruhat_tits_buildings",
       "title": "Facets in Bruhat-Tits Buildings",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "facets",
@@ -1390,9 +1437,32 @@
       ]
     },
     {
+      "id": "buildings_and_parahorics.iwahori_weyl_group",
+      "title": "Iwahori-Weyl Group",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "iwahori-weyl-group",
+        "affine-weyl-group",
+        "bruhat-decomposition",
+        "iwahori-subgroup"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.affine_weyl_groups",
+        "buildings_and_parahorics.parahoric_subgroups",
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "root_data_and_duality.root_data"
+      ]
+    },
+    {
       "id": "buildings_and_parahorics.moy_prasad_filtrations",
       "title": "Moy-Prasad Filtrations",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "moy-prasad-filtrations",
@@ -1406,12 +1476,15 @@
       "uses": [
         "buildings_and_parahorics.parahoric_subgroups",
         "reductive_structure.reductive_groups"
+      ],
+      "used_by": [
+        "buildings_and_parahorics.concave_functions_and_subgroups"
       ]
     },
     {
       "id": "buildings_and_parahorics.parahoric_group_schemes",
       "title": "Parahoric Group Schemes",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "parahoric-group-schemes",
@@ -1427,13 +1500,14 @@
         "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
       ],
       "used_by": [
-        "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes"
+        "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes",
+        "buildings_and_parahorics.special_and_hyperspecial_points"
       ]
     },
     {
       "id": "buildings_and_parahorics.parahoric_subgroups",
       "title": "Parahoric Subgroups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "parahoric-subgroups",
@@ -1450,14 +1524,17 @@
       ],
       "used_by": [
         "bd_covers.splittings_over_integral_and_parahoric_subgroups",
+        "buildings_and_parahorics.concave_functions_and_subgroups",
+        "buildings_and_parahorics.iwahori_weyl_group",
         "buildings_and_parahorics.moy_prasad_filtrations",
-        "buildings_and_parahorics.parahoric_group_schemes"
+        "buildings_and_parahorics.parahoric_group_schemes",
+        "buildings_and_parahorics.special_and_hyperspecial_points"
       ]
     },
     {
       "id": "buildings_and_parahorics.reductive_groups_over_local_fields",
       "title": "Reductive Groups over Local Fields",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "local-fields",
@@ -1475,8 +1552,11 @@
         "root_data_and_duality.galois_action_on_root_data"
       ],
       "used_by": [
+        "buildings_and_parahorics.bounded_subgroups_of_reductive_groups",
         "buildings_and_parahorics.bruhat_tits_apartments",
+        "buildings_and_parahorics.iwahori_weyl_group",
         "buildings_and_parahorics.parahoric_subgroups",
+        "buildings_and_parahorics.special_and_hyperspecial_points",
         "buildings_and_parahorics.valued_root_data",
         "kottwitz_structures.sigma_conjugacy_classes"
       ]
@@ -1484,7 +1564,7 @@
     {
       "id": "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes",
       "title": "Reductive Quotients of Parahoric Group Schemes",
-      "kind": "topic",
+      "kind": "theorem",
       "status": "admitted",
       "tags": [
         "reductive-quotients",
@@ -1503,7 +1583,7 @@
     {
       "id": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
       "title": "Smooth Affine Group Schemes over Valuation Rings",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "group-schemes",
@@ -1525,9 +1605,34 @@
       ]
     },
     {
+      "id": "buildings_and_parahorics.special_and_hyperspecial_points",
+      "title": "Special and Hyperspecial Points in the Bruhat-Tits Building",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "hyperspecial",
+        "special-vertex",
+        "superspecial",
+        "parahoric",
+        "bruhat-tits-building"
+      ],
+      "primary_topic": "buildings_and_parahorics",
+      "topics": [
+        "buildings_and_parahorics"
+      ],
+      "topic": "buildings_and_parahorics",
+      "uses": [
+        "buildings_and_parahorics.bruhat_tits_buildings",
+        "buildings_and_parahorics.parahoric_group_schemes",
+        "buildings_and_parahorics.parahoric_subgroups",
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "descent_and_forms.quasi_split_forms"
+      ]
+    },
+    {
       "id": "buildings_and_parahorics.spherical_buildings",
       "title": "Spherical Buildings",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "spherical-buildings",
@@ -1548,7 +1653,7 @@
     {
       "id": "buildings_and_parahorics.tits_buildings",
       "title": "Tits Buildings",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "tits-buildings",
@@ -1568,7 +1673,7 @@
     {
       "id": "buildings_and_parahorics.valued_root_data",
       "title": "Valued Root Data",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "valued-root-data",
@@ -1587,7 +1692,8 @@
       ],
       "used_by": [
         "buildings_and_parahorics.affine_root_systems",
-        "buildings_and_parahorics.bruhat_tits_apartments"
+        "buildings_and_parahorics.bruhat_tits_apartments",
+        "buildings_and_parahorics.concave_functions_and_subgroups"
       ]
     },
     {
@@ -2540,6 +2646,7 @@
         "descent_and_forms.rational_forms_of_reductive_groups"
       ],
       "used_by": [
+        "buildings_and_parahorics.special_and_hyperspecial_points",
         "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum"
       ]
     },
@@ -3597,6 +3704,7 @@
       ],
       "used_by": [
         "bd_covers.local_and_global_metaplectic_covers",
+        "buildings_and_parahorics.bounded_subgroups_of_reductive_groups",
         "buildings_and_parahorics.bruhat_tits_apartments",
         "buildings_and_parahorics.reductive_groups_over_local_fields",
         "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
@@ -3609,7 +3717,7 @@
     {
       "id": "reductive_structure.algebraic_tori",
       "title": "Algebraic Tori",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "tori",
@@ -3667,7 +3775,7 @@
     {
       "id": "reductive_structure.borel_subgroups",
       "title": "Borel Subgroups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "borel-subgroups",
@@ -3748,7 +3856,7 @@
     {
       "id": "reductive_structure.central_isogenies",
       "title": "Central Isogenies",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "central-isogenies",
@@ -3771,7 +3879,7 @@
     {
       "id": "reductive_structure.character_and_cocharacter_lattices",
       "title": "Character and Cocharacter Lattices",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "characters",
@@ -3790,6 +3898,7 @@
         "reductive_structure.diagonalizable_group_characterization",
         "reductive_structure.diagonalizable_groups",
         "reductive_structure.diagonalizable_groups_antiequivalence",
+        "reductive_structure.dynamic_method",
         "reductive_structure.f_tori_galois_module_classification",
         "reductive_structure.split_reductive_groups",
         "root_data_and_duality.root_data"
@@ -3852,7 +3961,7 @@
     {
       "id": "reductive_structure.derived_group_center_adjoint_sc_cover",
       "title": "Derived Group, Center, Adjoint Group, and Simply Connected Cover",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "derived-group",
@@ -3902,7 +4011,7 @@
     {
       "id": "reductive_structure.diagonalizable_groups",
       "title": "Diagonalizable Groups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "diagonalizable-groups",
@@ -3948,6 +4057,29 @@
       ],
       "used_by": [
         "reductive_structure.f_tori_galois_module_classification"
+      ]
+    },
+    {
+      "id": "reductive_structure.dynamic_method",
+      "title": "The Dynamic Method",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "dynamic-method",
+        "parabolic-subgroups",
+        "cocharacter",
+        "levi-decomposition"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.character_and_cocharacter_lattices",
+        "reductive_structure.levi_subgroups_and_unipotent_radicals",
+        "reductive_structure.parabolic_subgroups",
+        "reductive_structure.reductive_groups"
       ]
     },
     {
@@ -4040,7 +4172,7 @@
     {
       "id": "reductive_structure.levi_subgroups_and_unipotent_radicals",
       "title": "Levi Subgroups and Unipotent Radicals",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "levi-subgroups",
@@ -4058,6 +4190,7 @@
       ],
       "used_by": [
         "conjugacy_classes.bala_carter_classification",
+        "reductive_structure.dynamic_method",
         "reductive_structure.levi_decomposition_of_parabolics",
         "reductive_structure.reductive_groups",
         "root_data_and_duality.unipotent_radical_and_positive_roots"
@@ -4154,7 +4287,7 @@
     {
       "id": "reductive_structure.maximal_tori",
       "title": "Maximal Tori",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "maximal-tori",
@@ -4241,7 +4374,7 @@
     {
       "id": "reductive_structure.parabolic_subgroups",
       "title": "Parabolic Subgroups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "parabolic-subgroups",
@@ -4260,6 +4393,7 @@
         "buildings_and_parahorics.tits_buildings",
         "conjugacy_classes.bala_carter_classification",
         "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+        "reductive_structure.dynamic_method",
         "reductive_structure.levi_subgroups_and_unipotent_radicals",
         "reductive_structure.maximal_f_split_tori_are_conjugate",
         "reductive_structure.standard_parabolic_classification"
@@ -4293,7 +4427,7 @@
     {
       "id": "reductive_structure.reductive_groups",
       "title": "Reductive Groups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "reductive-groups",
@@ -4327,6 +4461,7 @@
         "kottwitz_structures.algebraic_fundamental_group",
         "reductive_structure.central_isogenies",
         "reductive_structure.derived_group_center_adjoint_sc_cover",
+        "reductive_structure.dynamic_method",
         "reductive_structure.maximal_tori",
         "reductive_structure.parabolic_f_subgroups_levi_decomposition",
         "reductive_structure.reductive_group_radical_and_derived_group",
@@ -4342,7 +4477,7 @@
     {
       "id": "reductive_structure.semisimple_groups",
       "title": "Semisimple Groups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "semisimple-groups",
@@ -4363,7 +4498,7 @@
     {
       "id": "reductive_structure.solvable_groups",
       "title": "Solvable Groups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "solvable-groups",
@@ -4442,7 +4577,7 @@
     {
       "id": "reductive_structure.unipotent_groups",
       "title": "Unipotent Groups",
-      "kind": "topic",
+      "kind": "definition",
       "status": "admitted",
       "tags": [
         "unipotent-groups",
@@ -5338,6 +5473,7 @@
       ],
       "used_by": [
         "bd_covers.brylinski_deligne_k2_extensions",
+        "buildings_and_parahorics.iwahori_weyl_group",
         "buildings_and_parahorics.valued_root_data",
         "classical_and_exceptional_groups.classical_groups",
         "descent_and_forms.rational_forms_of_reductive_groups",
@@ -6022,6 +6158,14 @@
       "to": "buildings_and_parahorics.bn_pairs_and_tits_systems"
     },
     {
+      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "to": "buildings_and_parahorics.bounded_subgroups_of_reductive_groups"
+    },
+    {
+      "from": "number_theory.local_fields",
+      "to": "buildings_and_parahorics.bounded_subgroups_of_reductive_groups"
+    },
+    {
       "from": "buildings_and_parahorics.affine_weyl_groups",
       "to": "buildings_and_parahorics.bruhat_tits_apartments"
     },
@@ -6046,12 +6190,44 @@
       "to": "buildings_and_parahorics.bruhat_tits_buildings"
     },
     {
+      "from": "buildings_and_parahorics.affine_root_systems",
+      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
+    },
+    {
+      "from": "buildings_and_parahorics.moy_prasad_filtrations",
+      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
+    },
+    {
+      "from": "buildings_and_parahorics.parahoric_subgroups",
+      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
+    },
+    {
+      "from": "buildings_and_parahorics.valued_root_data",
+      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
+    },
+    {
       "from": "root_data_and_duality.coxeter_systems_and_bruhat_order",
       "to": "buildings_and_parahorics.coxeter_complexes"
     },
     {
       "from": "buildings_and_parahorics.bruhat_tits_buildings",
       "to": "buildings_and_parahorics.facets_in_bruhat_tits_buildings"
+    },
+    {
+      "from": "buildings_and_parahorics.affine_weyl_groups",
+      "to": "buildings_and_parahorics.iwahori_weyl_group"
+    },
+    {
+      "from": "buildings_and_parahorics.parahoric_subgroups",
+      "to": "buildings_and_parahorics.iwahori_weyl_group"
+    },
+    {
+      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "to": "buildings_and_parahorics.iwahori_weyl_group"
+    },
+    {
+      "from": "root_data_and_duality.root_data",
+      "to": "buildings_and_parahorics.iwahori_weyl_group"
     },
     {
       "from": "buildings_and_parahorics.parahoric_subgroups",
@@ -6104,6 +6280,26 @@
     {
       "from": "number_theory.local_fields",
       "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
+    },
+    {
+      "from": "buildings_and_parahorics.bruhat_tits_buildings",
+      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
+    },
+    {
+      "from": "buildings_and_parahorics.parahoric_group_schemes",
+      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
+    },
+    {
+      "from": "buildings_and_parahorics.parahoric_subgroups",
+      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
+    },
+    {
+      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
+    },
+    {
+      "from": "descent_and_forms.quasi_split_forms",
+      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
     },
     {
       "from": "buildings_and_parahorics.bn_pairs_and_tits_systems",
@@ -7040,6 +7236,22 @@
     {
       "from": "reductive_structure.diagonalizable_group_characterization",
       "to": "reductive_structure.diagonalizable_groups_antiequivalence"
+    },
+    {
+      "from": "reductive_structure.character_and_cocharacter_lattices",
+      "to": "reductive_structure.dynamic_method"
+    },
+    {
+      "from": "reductive_structure.levi_subgroups_and_unipotent_radicals",
+      "to": "reductive_structure.dynamic_method"
+    },
+    {
+      "from": "reductive_structure.parabolic_subgroups",
+      "to": "reductive_structure.dynamic_method"
+    },
+    {
+      "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.dynamic_method"
     },
     {
       "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",

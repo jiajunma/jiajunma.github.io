@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 32,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 7,
+    "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 40,
-    "visible_nodes_with_selected_proof_plans": 40
+    "visible_nodes_without_proof_plans": 41,
+    "visible_nodes_with_selected_proof_plans": 41
   },
   "nodes": [
     {
@@ -550,6 +550,13 @@
       "node_count": 38
     },
     {
+      "id": "buildings_and_parahorics",
+      "title": "Buildings And Parahorics",
+      "href": "buildings_and_parahorics/index.html",
+      "role": "dependent",
+      "node_count": 20
+    },
+    {
       "id": "commutative_algebra",
       "title": "Commutative Algebra",
       "href": "commutative_algebra/index.html",
@@ -575,7 +582,7 @@
       "title": "Reductive Structure",
       "href": "reductive_structure/index.html",
       "role": "dependency",
-      "node_count": 51
+      "node_count": 52
     },
     {
       "id": "root_data_and_duality",
@@ -739,6 +746,13 @@
       "kind": "boundary_dependency",
       "topic": "root_data_and_duality.kottwitz_structures",
       "count": 2
+    },
+    {
+      "from": "descent_and_forms.quasi_split_forms",
+      "to": "topic:buildings_and_parahorics",
+      "kind": "boundary_dependent",
+      "topic": "buildings_and_parahorics",
+      "count": 1
     },
     {
       "from": "conjugacy_classes.stable_conjugacy_classes",
