@@ -270,11 +270,34 @@ span.node-ref.unresolved::before { content: "?"; font-size: 0.75em; vertical-ali
 .dep-graph {
   background: var(--panel);
   border: 1px solid var(--border);
-  height: min(78vh, 900px);
-  min-height: 560px;
+  border-radius: 4px;
+  height: min(82vh, 1000px);
+  min-height: 620px;
   overflow: hidden;
   resize: both;
   width: 100%;
+}
+
+/* SVG graph text anti-aliasing */
+.dep-graph svg text {
+  -webkit-font-smoothing: antialiased;
+  paint-order: stroke fill;
+}
+
+/* Smooth node hover */
+#graph .node {
+  transition: opacity 0.15s;
+}
+#graph .node:hover {
+  opacity: 0.82;
+}
+
+/* Edge hover highlight */
+#graph .edge path {
+  transition: stroke-width 0.1s;
+}
+#graph .edge:hover path {
+  stroke-width: 2.5px;
 }
 
 .graph-controls {
@@ -478,7 +501,9 @@ span.node-ref.unresolved::before { content: "?"; font-size: 0.75em; vertical-ali
 
 #graph .node {
   cursor: pointer;
+  transition: opacity 0.15s;
 }
+#graph .node:hover { opacity: 0.82; }
 
 .thm-heading {
   align-items: baseline;

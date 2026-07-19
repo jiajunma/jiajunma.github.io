@@ -56,25 +56,38 @@
   let graphZoomBehavior = null;
   let graphZoomSelection = null;
 
+  // Per-topic color palette for the overview graph
+  const TOPIC_PALETTE = {
+    foundational_inputs:          { fillcolor: "#f5f0e8", color: "#8b7355" },
+    linear_algebraic_groups:      { fillcolor: "#dce8f5", color: "#2b6cb0" },
+    affine_group_schemes:         { fillcolor: "#e6eef8", color: "#4a85c4" },
+    descent_and_forms:            { fillcolor: "#d5ece8", color: "#276d5e" },
+    reductive_structure:          { fillcolor: "#d5ecd8", color: "#2a7a3f" },
+    root_data_and_duality:        { fillcolor: "#ead5ec", color: "#7d2d7d" },
+    classical_and_exceptional_groups: { fillcolor: "#f5e8d5", color: "#c07020" },
+    buildings_and_parahorics:     { fillcolor: "#eee0cc", color: "#8b5a3c" },
+    kottwitz_structures:          { fillcolor: "#d5dff0", color: "#2d4d8b" },
+    conjugacy_classes:            { fillcolor: "#f0d5d5", color: "#8b2d2d" },
+    bd_covers:                    { fillcolor: "#ddd5ec", color: "#4d2d8b" },
+  };
+
   function topicOverviewToDot(data) {
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.4, nodesep=0.7, splines=curved, concentrate=true];",
-      '\tnode [label="\\N", penwidth=1.8, shape=box, fontname="Helvetica", fontsize=13, margin="0.3,0.18"];',
-      "\tedge [arrowhead=vee, arrowsize=0.9];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.8, nodesep=1.0, splines=polyline, pad=0.4];",
+      '\tnode [label="\\N", penwidth=2.0, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=14, margin="0.4,0.22", style=filled, fillcolor="white"];',
+      "\tedge [arrowhead=normal, arrowsize=0.8, color=\"#555555\"];",
     ];
     (data.topics || []).forEach((topic) => {
-      const attrs = [
-        ["label", topic.title],
-        ["shape", "box"],
-        ["URL", `#${topicGraphId(topic.id)}`],
-      ];
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${attrs.map(([key, value]) => `${key}=${dotQuote(value)}`).join(", ")}];`);
+      const palette = TOPIC_PALETTE[topic.id] || { fillcolor: "#f0f0f0", color: "#555555" };
+      const count = topic.node_count || 0;
+      const label = count ? `${topic.title}\\n(${count} nodes)` : topic.title;
+      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(label)}, shape=box, style=filled, fillcolor=${dotQuote(palette.fillcolor)}, color=${dotQuote(palette.color)}, penwidth=2.2, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
     });
     (data.edges || []).forEach((edge) => {
       const weight = Math.min(edge.count || 1, 8);
-      const penwidth = (Math.min((edge.count || 1) * 0.35 + 0.7, 2.5)).toFixed(1);
-      lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [style=dashed, weight=${weight}, penwidth=${penwidth}];`);
+      const penwidth = (Math.min((edge.count || 1) * 0.4 + 0.8, 2.8)).toFixed(1);
+      lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [weight=${weight}, penwidth=${penwidth}, color="#666666"];`);
     });
     lines.push("}");
     return lines.join("\n");
@@ -93,9 +106,10 @@
       return { color: "#2e7d32", fillcolor: "#c8e6c9", filled: true };
     }
     if (status === "admitted") {
-      return { color: "#1f6feb", fillcolor: "#d6e4ff", filled: true };
+      return { color: "#1565c0", fillcolor: "#bbdefb", filled: true };
     }
-    return { color: null, fillcolor: null, filled: false };
+    // stub / needs_review / etc — light gray so it's visible but clearly incomplete
+    return { color: "#666666", fillcolor: "#f0f0f0", filled: true };
   }
 
   function nodeStyleAttr(node, statusFilled) {
@@ -139,14 +153,14 @@
         style: "dotted",
       };
     }
-    return { style: "dashed" };
+    return { color: "#444444", style: "solid" };
   }
 
   function boundaryEdgeDisplayAttributes(edge) {
     const isProofPlanRoute = edge.kind === "boundary_proof_plan_dependency"
       || edge.kind === "boundary_proof_plan_dependent";
     return {
-      color: isProofPlanRoute ? "#7a4aa0" : "#777777",
+      color: isProofPlanRoute ? "#7a4aa0" : "#999999",
       label: isProofPlanRoute ? "proof route" : "",
       style: isProofPlanRoute ? "dotted" : "dashed",
     };
@@ -156,34 +170,47 @@
     const visibleNodes = visibleSubgraphNodes(data);
     const visibleNodeIds = new Set(visibleNodes.map((node) => node.id));
     const endpointVisible = (nodeId) => nodeId.startsWith("topic:") || visibleNodeIds.has(nodeId);
+    const topicId = data.topic?.id || "";
+    const palette = TOPIC_PALETTE[topicId] || { fillcolor: "#e8e8e8", color: "#444444" };
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent];",
-      '\tnode [label="\\N", penwidth=1.8];',
-      "\tedge [arrowhead=vee];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.2, nodesep=0.5, splines=ortho, pad=0.3, fontname=\"Helvetica Neue,Helvetica,Arial,sans-serif\"];",
+      '\tnode [label="\\N", penwidth=1.6, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=11, margin="0.25,0.14"];',
+      "\tedge [arrowhead=normal, arrowsize=0.7, color=\"#444444\"];",
     ];
     if (data.topic) {
       lines.push(`\t${dotQuote(topicGraphId(data.topic.id))} [${dotAttributes({
-        color: "blue",
+        color: palette.color,
+        fillcolor: palette.fillcolor,
+        fontsize: "13",
         label: data.topic.title,
-        penwidth: "2.4",
+        penwidth: "2.6",
         shape: "box",
+        style: "filled,bold",
         URL: `#${topicGraphId(data.topic.id)}`,
       })}];`);
     }
     (data.child_topic_nodes || []).forEach((topic) => {
+      const cp = TOPIC_PALETTE[topic.id] || { fillcolor: "#e8e8e8", color: "#444444" };
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
+        color: cp.color,
+        fillcolor: cp.fillcolor,
         label: topic.title,
         shape: "box",
+        style: "filled",
         URL: `#${topicGraphId(topic.id)}`,
       })}];`);
     });
     (data.boundary_topics || []).forEach((topic) => {
+      const bp = TOPIC_PALETTE[topic.id] || { fillcolor: "#f4f4f4", color: "#aaaaaa" };
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
-        color: "#777777",
+        color: bp.color,
+        fillcolor: bp.fillcolor,
+        fontcolor: "#888888",
         label: topic.title,
+        penwidth: "1.2",
         shape: "box",
-        style: "dashed",
+        style: "filled,dashed",
         URL: `#${topicGraphId(topic.id)}`,
       })}];`);
     });
