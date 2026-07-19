@@ -722,21 +722,46 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
           
-          
-          <code>Langlands.AlgebraicGeometry.instIsAffineGroupScheme - Langlands.AlgebraicGeometry.IsAffineGroupScheme</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.IsAffineGroupScheme</code>, <code>Langlands.AlgebraicGeometry.instIsAffineGroupScheme</code>, <code>Langlands.AlgebraicGeometry.instIsAlgebraicGroup</code>?</span>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L80"><code>Langlands.AlgebraicGeometry.instIsAffineGroupScheme</code></a>
           
           
           
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>instance instIsAffineGroupScheme (G S : Scheme) [G.Over S]
+    [GrpObj (Scheme.asOver G S)] [IsAffineHom (G ↘ S)] :
+    IsAffineGroupScheme G S where</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">class</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L64"><code>Langlands.AlgebraicGeometry.IsAffineGroupScheme</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>class IsAffineGroupScheme (G S : Scheme) [G.Over S]
+    extends GrpObj (Scheme.asOver G S), IsAffineHom (G ↘ S)
+
+/-- `G` is an (affine) algebraic group over `S`: an affine group scheme that
+is locally of finite type. Following Milne / SGA 3, no smoothness assumed;
+smoothness is added separately as `[Smooth (G ↘ S)]` where needed.
+
+This is the Level-1 sugar aggregator over the Mathlib stack
+`GrpObj (Scheme.asOver G S)` + `IsAffineHom (G ↘ S)` +
+`LocallyOfFiniteType (G ↘ S)`. -/</code></pre>
         </li>
         
       </ul>

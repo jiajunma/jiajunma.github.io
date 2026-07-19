@@ -722,21 +722,41 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative - Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.antipode_mul_of_commutative</code>?</span>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L298"><code>Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative</code></a>
           
           
           
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfObjectBridge
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem antipode_anti_multiplicativity_commutative (a b : A) :
+    HopfAlgebraStruct.antipode (R := R) (a * b) =
+      HopfAlgebraStruct.antipode (R := R) b *
+        HopfAlgebraStruct.antipode (R := R) a</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L58"><code>Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfObjectBridge
+          </span>
+          
+          
+          <p class="lean-docstring">The antipode is anti-multiplicative: `S(a · b) = S(b) · S(a)`.</p>
+          <pre class="lean-signature"><code>theorem antipode_anti_multiplicativity (a b : A) :
+    HopfAlgebraStruct.antipode (R := R) (a * b) =
+      HopfAlgebraStruct.antipode (R := R) b *
+        HopfAlgebraStruct.antipode (R := R) a</code></pre>
         </li>
         
       </ul>

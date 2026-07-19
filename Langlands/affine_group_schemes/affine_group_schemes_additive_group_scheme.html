@@ -722,9 +722,27 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">lemma</span>
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L83"><code>Polynomial.gaAntipode_X</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L173"><code>Langlands.AlgebraicGeometry.Examples.additiveGroup</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Examples.Ga
+          </span>
+          
+          
+          <p class="lean-docstring">The additive group scheme `G_{a,R} = Spec R[X]` over `Spec R`.</p>
+          <pre class="lean-signature"><code>noncomputable def additiveGroup :
+    Over (Scheme.Spec.obj (op R)) :=
+  specObjOver R (Polynomial R)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L179"><code>Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj</code></a>
           
           
           
@@ -734,44 +752,9 @@
           
           
           
-          <pre class="lean-signature"><code>@[simp] lemma gaAntipode_X : gaAntipode R (X : R[X]) = -(X : R[X])</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">lemma</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Ga.lean#L75"><code>Polynomial.gaComul_X</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Examples.Ga
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>@[simp] lemma gaComul_X :
-    gaComul R (X : Polynomial R) =
-      (X : Polynomial R) ⊗ₜ[R] (1 : Polynomial R) +
-        (1 : Polynomial R) ⊗ₜ[R] (X : Polynomial R)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          
-          
-          <code>Polynomial.gaCounit_X - Polynomial.gaComul - Polynomial.gaCounit - Polynomial.gaAntipode - Polynomial.instBialgebra - Polynomial.instHopfAlgebra - Langlands.AlgebraicGeometry.Examples.additiveGroup - Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj</code>, <code>Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj</code>, <code>Langlands.AlgebraicGeometry.Examples.muN.instGrpObj</code>?</span>
-          
-          
-          
-          
-          
+          <pre class="lean-signature"><code>noncomputable instance additiveGroup.instGrpObj :
+    GrpObj (additiveGroup R) :=
+  hopfSpecGrpObj R (Polynomial R)</code></pre>
         </li>
         
       </ul>

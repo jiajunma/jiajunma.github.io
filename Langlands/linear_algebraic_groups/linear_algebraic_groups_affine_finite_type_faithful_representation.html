@@ -746,21 +746,43 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation - Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation</code>, <code>Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation</code>, <code>Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear</code>?</span>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L130"><code>Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation</code></a>
           
           
           
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.FaithfulRepresentation
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation
+    (k : Type u) [Field k] (G : Scheme.{u})
+    [G.Over (Spec (.of k))]
+    [IsAlgebraicGroup G (Spec (.of k))] :
+    HasFaithfulLinearRepresentation k G →
+      existsClosedImmersionToGeneralLinear k G</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L113"><code>Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.FaithfulRepresentation
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def HasFaithfulLinearRepresentation (k : Type u) [Field k] (G : Scheme.{u})
+    [G.Over (Spec (.of k))]
+    [IsAlgebraicGroup G (Spec (.of k))] : Prop :=
+  Nonempty (FaithfulLinearRepresentation (k := k) G)</code></pre>
         </li>
         
       </ul>

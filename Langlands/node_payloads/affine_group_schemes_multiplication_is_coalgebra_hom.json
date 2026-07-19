@@ -26,50 +26,6 @@
   ],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode",
-      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
-      "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
-      "doc_url": null,
-      "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode_mul_convId",
-        "Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul",
-        "Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode"
-      ]
-    },
-    {
-      "name": "Langlands.AlgebraicGeometry.HopfAntipode.convId",
-      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.convId",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
-      "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
-      "doc_url": null,
-      "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode_mul_convId",
-        "Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode",
-        "Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul"
-      ]
-    },
-    {
       "name": "Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode",
       "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode",
       "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode",
@@ -124,26 +80,22 @@
       "suggestions": []
     },
     {
-      "name": "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor - Langlands.AlgebraicGeometry.HopfAntipode.mulCoalgHom",
-      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor - Langlands.AlgebraicGeometry.HopfAntipode.mulCoalgHom",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "lemma",
+      "signature": "lemma mul_map_twist_eq_lTensor_smul_lTensor (c₁ c₂ : A ⊗[R] A) :\n    LinearMap.mul' R A\n      ((TensorProduct.map (LinearMap.mul' R A)\n        ((LinearMap.mul' R A) ∘ₗ TensorProduct.map\n          (HopfAlgebraStruct.antipode (R := R))\n          (HopfAlgebraStruct.antipode (R := R))))\n        ((TensorProduct.AlgebraTensorModule.tensorTensorTensorComm R R R R A A A A)\n          (c₁ ⊗ₜ c₂))) =\n      LinearMap.mul' R A\n        ((LinearMap.lTensor A (HopfAlgebraStruct.antipode (R := R))) c₁) *\n      LinearMap.mul' R A\n        ((LinearMap.lTensor A (HopfAlgebraStruct.antipode (R := R))) c₂)",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L209",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.mulCoalgHom",
-        "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor",
-        "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [

@@ -16,9 +16,8 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Polynomial.gaAntipode_X",
-        "Polynomial.gaComul_X",
-        "Polynomial.gaCounit_X - Polynomial.gaComul - Polynomial.gaCounit - Polynomial.gaAntipode - Polynomial.instBialgebra - Polynomial.instHopfAlgebra - Langlands.AlgebraicGeometry.Examples.additiveGroup - Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj"
+        "Langlands.AlgebraicGeometry.Examples.additiveGroup",
+        "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -95,7 +94,8 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.instIsAffineGroupScheme - Langlands.AlgebraicGeometry.IsAffineGroupScheme"
+        "Langlands.AlgebraicGeometry.instIsAffineGroupScheme",
+        "Langlands.AlgebraicGeometry.IsAffineGroupScheme"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -131,7 +131,8 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply - Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode"
+        "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply",
+        "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -220,7 +221,8 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.instIsAlgebraicGroup - Langlands.AlgebraicGeometry.IsAlgebraicGroup"
+        "Langlands.AlgebraicGeometry.instIsAlgebraicGroup",
+        "Langlands.AlgebraicGeometry.IsAlgebraicGroup"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -262,7 +264,8 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative - Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity"
+        "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative",
+        "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -710,12 +713,10 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode",
-        "Langlands.AlgebraicGeometry.HopfAntipode.convId",
         "Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode",
         "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode_mul_convId",
         "Langlands.AlgebraicGeometry.HopfAntipode.convMul_mul_convMulCompSSTensor",
-        "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor - Langlands.AlgebraicGeometry.HopfAntipode.mulCoalgHom"
+        "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -741,7 +742,7 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.hopfAlg - Langlands.AlgebraicGeometry.Examples.multiplicativeGroup - Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj"
+        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -900,7 +901,7 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg - Langlands.AlgebraicGeometry.Examples.muN - Langlands.AlgebraicGeometry.Examples.muN.instGrpObj"
+        "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -1035,7 +1036,9 @@
       "lean_declarations": [
         "Langlands.AlgebraicGeometry.schemeOverSelf_hom",
         "Langlands.AlgebraicGeometry.trivialIsAffineHom",
-        "Langlands.AlgebraicGeometry.trivialLocallyOfFiniteType - Langlands.AlgebraicGeometry.schemeOverSelf - Langlands.AlgebraicGeometry.trivialGrpObj"
+        "Langlands.AlgebraicGeometry.trivialLocallyOfFiniteType",
+        "Langlands.AlgebraicGeometry.schemeOverSelf",
+        "Langlands.AlgebraicGeometry.trivialGrpObj"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -1058,7 +1061,9 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.trivialCoaction_apply - Langlands.AlgebraicGeometry.trivialCoaction - Langlands.AlgebraicGeometry.trivialComodule"
+        "Langlands.AlgebraicGeometry.trivialCoaction_apply",
+        "Langlands.AlgebraicGeometry.trivialCoaction",
+        "Langlands.AlgebraicGeometry.trivialComodule"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -2994,7 +2999,8 @@
       ],
       "lean_declarations": [
         "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear",
-        "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation - Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation"
+        "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation",
+        "Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -3221,8 +3227,7 @@
         "linear_algebraic_groups"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.Examples.GLV",
-        "Langlands.AlgebraicGeometry.Examples.GLVSch"
+        "Langlands.AlgebraicGeometry.Examples.GLV"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [

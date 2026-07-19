@@ -25,26 +25,40 @@
   "dependents": [],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative - Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity",
-      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative - Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "theorem",
+      "signature": "theorem antipode_anti_multiplicativity_commutative (a b : A) :\n    HopfAlgebraStruct.antipode (R := R) (a * b) =\n      HopfAlgebraStruct.antipode (R := R) b *\n        HopfAlgebraStruct.antipode (R := R) a",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L298",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity",
-        "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity_commutative",
-        "Langlands.AlgebraicGeometry.HopfAntipode.antipode_mul_of_commutative"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "theorem",
+      "signature": "theorem antipode_anti_multiplicativity (a b : A) :\n    HopfAlgebraStruct.antipode (R := R) (a * b) =\n      HopfAlgebraStruct.antipode (R := R) b *\n        HopfAlgebraStruct.antipode (R := R) a",
+      "docstring": "The antipode is anti-multiplicative: `S(a · b) = S(b) · S(a)`.",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L58",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [

@@ -720,42 +720,6 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          
-          
-          <code>Langlands.AlgebraicGeometry.HopfAntipode.convAntipode</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.HopfAntipode.convAntipode_mul_convId</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode</code>?</span>
-          
-          
-          
-          
-          
-        </li>
-        
-        <li class="lean-ref">
-          
-          
-          <code>Langlands.AlgebraicGeometry.HopfAntipode.convId</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.HopfAntipode.convAntipode_mul_convId</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.convCompAntipode_mul_convMul</code>?</span>
-          
-          
-          
-          
-          
-        </li>
-        
-        <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
           <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L124"><code>Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode</code></a>
@@ -808,21 +772,30 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          
-          <code>Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor - Langlands.AlgebraicGeometry.HopfAntipode.mulCoalgHom</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.HopfAntipode.mulCoalgHom</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode</code>?</span>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L209"><code>Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor</code></a>
           
           
           
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfObjectBridge
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma mul_map_twist_eq_lTensor_smul_lTensor (c₁ c₂ : A ⊗[R] A) :
+    LinearMap.mul&#39; R A
+      ((TensorProduct.map (LinearMap.mul&#39; R A)
+        ((LinearMap.mul&#39; R A) ∘ₗ TensorProduct.map
+          (HopfAlgebraStruct.antipode (R := R))
+          (HopfAlgebraStruct.antipode (R := R))))
+        ((TensorProduct.AlgebraTensorModule.tensorTensorTensorComm R R R R A A A A)
+          (c₁ ⊗ₜ c₂))) =
+      LinearMap.mul&#39; R A
+        ((LinearMap.lTensor A (HopfAlgebraStruct.antipode (R := R))) c₁) *
+      LinearMap.mul&#39; R A
+        ((LinearMap.lTensor A (HopfAlgebraStruct.antipode (R := R))) c₂)</code></pre>
         </li>
         
       </ul>

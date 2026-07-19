@@ -753,21 +753,55 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
           
-          
-          <code>Langlands.AlgebraicGeometry.trivialLocallyOfFiniteType - Langlands.AlgebraicGeometry.schemeOverSelf - Langlands.AlgebraicGeometry.trivialGrpObj</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.trivialGrpObj</code>, <code>Langlands.AlgebraicGeometry.trivialLocallyOfFiniteType</code>, <code>Langlands.AlgebraicGeometry.schemeOverSelf</code>?</span>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L53"><code>Langlands.AlgebraicGeometry.trivialLocallyOfFiniteType</code></a>
           
           
           
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Examples.Trivial
+          </span>
           
           
+          <p class="lean-docstring">The identity structure morphism is locally of finite type.</p>
+          <pre class="lean-signature"><code>instance trivialLocallyOfFiniteType (S : Scheme) :
+    LocallyOfFiniteType (S ↘ S) := by
+  rw [schemeOverSelf_hom]; infer_instance</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L36"><code>Langlands.AlgebraicGeometry.schemeOverSelf</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Examples.Trivial
+          </span>
+          
+          
+          <p class="lean-docstring">Every scheme `S` is canonically over itself via the identity morphism.</p>
+          <pre class="lean-signature"><code>instance schemeOverSelf (S : Scheme) : S.Over S := ⟨𝟙 S⟩</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Trivial.lean#L40"><code>Langlands.AlgebraicGeometry.trivialGrpObj</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Examples.Trivial
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable instance trivialGrpObj (S : Scheme) :
+    GrpObj (Scheme.asOver S S) :=
+  inferInstanceAs (GrpObj (𝟙_ (Over S)))</code></pre>
         </li>
         
       </ul>

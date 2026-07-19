@@ -26,26 +26,40 @@
   ],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply - Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
-      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply - Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "lemma",
+      "signature": "lemma algHomCompAntipode_apply (f : A →ₐ[R] B) (a : A) :\n    algHomCompAntipode f a = f (HopfAlgebraStruct.antipode (R := R) a)",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L345",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
-        "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply",
-        "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomCompAntipode_postcomp"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
+      "display_name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
+      "qualified_name": "Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode",
+      "module": "LanglandsLean.AlgebraicGeometry.HopfObjectBridge",
+      "kind": "def",
+      "signature": "noncomputable def algHomCompAntipode (f : A →ₐ[R] B) : A →ₐ[R] B where\n  toFun a := f (HopfAlgebraStruct.antipode (R := R) a)\n  map_one' := by\n    show f (HopfAlgebraStruct.antipode (R := R) 1) = 1\n    rw [HopfAlgebra.antipode_one, map_one]\n  map_mul' a b := by\n    show f (HopfAlgebraStruct.antipode (R := R) (a * b)) =\n      f (HopfAlgebraStruct.antipode (R := R) a) *\n        f (HopfAlgebraStruct.antipode (R := R) b)\n    rw [antipode_mul_of_commutative, map_mul]\n  map_zero' := by\n    show f (HopfAlgebraStruct.antipode (R := R) 0) = 0\n    rw [map_zero, map_zero]\n  map_add' a b := by\n    show f (HopfAlgebraStruct.antipode (R := R) (a + b)) =\n      f (HopfAlgebraStruct.antipode (R := R) a) +\n        f (HopfAlgebraStruct.antipode (R := R) b)\n    rw [map_add, map_add]\n  commutes' r := by\n    show f (HopfAlgebraStruct.antipode (R := R) (algebraMap R A r)) = algebraMap R B r\n    rw [Algebra.algebraMap_eq_smul_one (R := R) (A := A), map_smul,\n        HopfAlgebra.antipode_one, map_smul, map_one,\n        ← Algebra.algebraMap_eq_smul_one (R := R) (A := B)]",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L320",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [

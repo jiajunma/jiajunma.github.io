@@ -58,26 +58,40 @@
       "suggestions": []
     },
     {
-      "name": "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation - Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
-      "display_name": "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation - Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation",
+      "display_name": "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation",
+      "qualified_name": "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation",
+      "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "kind": "theorem",
+      "signature": "theorem existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation\n    (k : Type u) [Field k] (G : Scheme.{u})\n    [G.Over (Spec (.of k))]\n    [IsAlgebraicGroup G (Spec (.of k))] :\n    HasFaithfulLinearRepresentation k G →\n      existsClosedImmersionToGeneralLinear k G",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L130",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
-        "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear_of_hasFaithfulLinearRepresentation",
-        "Langlands.AlgebraicGeometry.existsClosedImmersionToGeneralLinear"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
+      "display_name": "Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
+      "qualified_name": "Langlands.AlgebraicGeometry.HasFaithfulLinearRepresentation",
+      "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "kind": "def",
+      "signature": "def HasFaithfulLinearRepresentation (k : Type u) [Field k] (G : Scheme.{u})\n    [G.Over (Spec (.of k))]\n    [IsAlgebraicGroup G (Spec (.of k))] : Prop :=\n  Nonempty (FaithfulLinearRepresentation (k := k) G)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L113",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [

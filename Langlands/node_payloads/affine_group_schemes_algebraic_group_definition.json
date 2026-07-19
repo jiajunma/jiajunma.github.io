@@ -106,26 +106,40 @@
   ],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.instIsAlgebraicGroup - Langlands.AlgebraicGeometry.IsAlgebraicGroup",
-      "display_name": "Langlands.AlgebraicGeometry.instIsAlgebraicGroup - Langlands.AlgebraicGeometry.IsAlgebraicGroup",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "Langlands.AlgebraicGeometry.instIsAlgebraicGroup",
+      "display_name": "Langlands.AlgebraicGeometry.instIsAlgebraicGroup",
+      "qualified_name": "Langlands.AlgebraicGeometry.instIsAlgebraicGroup",
+      "module": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
+      "kind": "instance",
+      "signature": "instance instIsAlgebraicGroup (G S : Scheme) [G.Over S]\n    [IsAffineGroupScheme G S] [LocallyOfFiniteType (G ↘ S)] :\n    IsAlgebraicGroup G S where",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L86",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
-        "Langlands.AlgebraicGeometry.instIsAffineGroupScheme",
-        "Langlands.AlgebraicGeometry.instIsAlgebraicGroup"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+      "display_name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+      "qualified_name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+      "module": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
+      "kind": "class",
+      "signature": "class IsAlgebraicGroup (G S : Scheme) [G.Over S]\n    extends IsAffineGroupScheme G S, LocallyOfFiniteType (G ↘ S)\n\n/-- Reverse synthesis: an `IsAffineGroupScheme G S` instance is built from a\n`GrpObj` on `Scheme.asOver G S` together with an `IsAffineHom` on\n`G ↘ S`. -/",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L74",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [

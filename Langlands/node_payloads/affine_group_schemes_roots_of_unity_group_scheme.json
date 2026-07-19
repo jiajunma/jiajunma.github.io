@@ -30,26 +30,22 @@
   "dependents": [],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg - Langlands.AlgebraicGeometry.Examples.muN - Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
-      "display_name": "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg - Langlands.AlgebraicGeometry.Examples.muN - Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.MuN",
+      "kind": "instance",
+      "signature": "noncomputable instance muN.instGrpObj :\n    GrpObj (muN R n) :=\n  hopfSpecGrpObj R (muN.hopfAlg R n)",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/MuN.lean#L73",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj",
-        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj",
-        "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [

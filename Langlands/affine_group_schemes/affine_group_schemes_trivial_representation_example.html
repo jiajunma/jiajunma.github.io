@@ -720,21 +720,60 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>Langlands.AlgebraicGeometry.trivialCoaction_apply - Langlands.AlgebraicGeometry.trivialCoaction - Langlands.AlgebraicGeometry.trivialComodule</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.trivialComodule</code>, <code>Langlands.AlgebraicGeometry.trivialCoaction_apply</code>, <code>Langlands.AlgebraicGeometry.trivialCoaction</code>?</span>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Comodule.lean#L82"><code>Langlands.AlgebraicGeometry.trivialCoaction_apply</code></a>
           
           
           
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Comodule
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem trivialCoaction_apply (v : V) :
+    trivialCoaction R B V v = v ⊗ₜ[R] (1 : B)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Comodule.lean#L78"><code>Langlands.AlgebraicGeometry.trivialCoaction</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Comodule
+          </span>
+          
+          
+          <p class="lean-docstring">The coaction of the **trivial comodule**: `v ↦ v ⊗ 1`.</p>
+          <pre class="lean-signature"><code>def trivialCoaction : V →ₗ[R] V ⊗[R] B :=
+  (TensorProduct.mk R V B).flip 1</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Comodule.lean#L90"><code>Langlands.AlgebraicGeometry.trivialComodule</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.Comodule
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def trivialComodule : Comodule R B V where
+  coaction := trivialCoaction R B V
+  coassoc := by
+    ext v
+    simp [trivialCoaction, Algebra.TensorProduct.one_def]
+  counit := by
+    ext v
+    simp [trivialCoaction]</code></pre>
         </li>
         
       </ul>

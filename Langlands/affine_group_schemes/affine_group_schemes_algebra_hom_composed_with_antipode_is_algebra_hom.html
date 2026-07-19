@@ -720,21 +720,58 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          
-          <code>Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply - Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode</code>, <code>Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply</code>, <code>Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomCompAntipode_postcomp</code>?</span>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L345"><code>Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode_apply</code></a>
           
           
           
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfObjectBridge
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma algHomCompAntipode_apply (f : A →ₐ[R] B) (a : A) :
+    algHomCompAntipode f a = f (HopfAlgebraStruct.antipode (R := R) a)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L320"><code>Langlands.AlgebraicGeometry.HopfAntipode.algHomCompAntipode</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGeometry.HopfObjectBridge
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def algHomCompAntipode (f : A →ₐ[R] B) : A →ₐ[R] B where
+  toFun a := f (HopfAlgebraStruct.antipode (R := R) a)
+  map_one&#39; := by
+    show f (HopfAlgebraStruct.antipode (R := R) 1) = 1
+    rw [HopfAlgebra.antipode_one, map_one]
+  map_mul&#39; a b := by
+    show f (HopfAlgebraStruct.antipode (R := R) (a * b)) =
+      f (HopfAlgebraStruct.antipode (R := R) a) *
+        f (HopfAlgebraStruct.antipode (R := R) b)
+    rw [antipode_mul_of_commutative, map_mul]
+  map_zero&#39; := by
+    show f (HopfAlgebraStruct.antipode (R := R) 0) = 0
+    rw [map_zero, map_zero]
+  map_add&#39; a b := by
+    show f (HopfAlgebraStruct.antipode (R := R) (a + b)) =
+      f (HopfAlgebraStruct.antipode (R := R) a) +
+        f (HopfAlgebraStruct.antipode (R := R) b)
+    rw [map_add, map_add]
+  commutes&#39; r := by
+    show f (HopfAlgebraStruct.antipode (R := R) (algebraMap R A r)) = algebraMap R B r
+    rw [Algebra.algebraMap_eq_smul_one (R := R) (A := A), map_smul,
+        HopfAlgebra.antipode_one, map_smul, map_one,
+        ← Algebra.algebraMap_eq_smul_one (R := R) (A := B)]</code></pre>
         </li>
         
       </ul>
