@@ -80,9 +80,7 @@
     ];
     (data.topics || []).forEach((topic) => {
       const palette = TOPIC_PALETTE[topic.id] || { fillcolor: "#f0f0f0", color: "#555555" };
-      const count = topic.node_count || 0;
-      const label = count ? `${topic.title}\\n(${count} nodes)` : topic.title;
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(label)}, shape=box, style=filled, fillcolor=${dotQuote(palette.fillcolor)}, color=${dotQuote(palette.color)}, penwidth=2.2, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
+      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(topic.title)}, shape=box, style=filled, fillcolor=${dotQuote(palette.fillcolor)}, color=${dotQuote(palette.color)}, penwidth=2.2, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
     });
     (data.edges || []).forEach((edge) => {
       const weight = Math.min(edge.count || 1, 8);
