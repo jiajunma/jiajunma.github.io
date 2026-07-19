@@ -56,36 +56,61 @@
   let graphZoomBehavior = null;
   let graphZoomSelection = null;
 
-  // Per-topic color palette for the overview graph
+  // Per-topic color palette for the overview graph.
+  // label: short two-line display label (undefined = use topic.title as-is)
   const TOPIC_PALETTE = {
-    foundational_inputs:          { fillcolor: "#f5f0e8", color: "#8b7355" },
-    linear_algebraic_groups:      { fillcolor: "#dce8f5", color: "#2b6cb0" },
-    affine_group_schemes:         { fillcolor: "#e6eef8", color: "#4a85c4" },
-    descent_and_forms:            { fillcolor: "#d5ece8", color: "#276d5e" },
-    reductive_structure:          { fillcolor: "#d5ecd8", color: "#2a7a3f" },
-    root_data_and_duality:        { fillcolor: "#ead5ec", color: "#7d2d7d" },
-    classical_and_exceptional_groups: { fillcolor: "#f5e8d5", color: "#c07020" },
-    buildings_and_parahorics:     { fillcolor: "#eee0cc", color: "#8b5a3c" },
-    kottwitz_structures:          { fillcolor: "#d5dff0", color: "#2d4d8b" },
-    conjugacy_classes:            { fillcolor: "#f0d5d5", color: "#8b2d2d" },
-    bd_covers:                    { fillcolor: "#ddd5ec", color: "#4d2d8b" },
+    foundational_inputs:          { fillcolor: "#f5f0e8", color: "#8b7355",
+                                    label: "Foundational\nInputs" },
+    linear_algebraic_groups:      { fillcolor: "#dce8f5", color: "#2b6cb0",
+                                    label: "Linear Algebraic\nGroups" },
+    affine_group_schemes:         { fillcolor: "#e6eef8", color: "#4a85c4",
+                                    label: "Affine Group\nSchemes" },
+    descent_and_forms:            { fillcolor: "#d5ece8", color: "#276d5e",
+                                    label: "Galois Descent\n& Forms" },
+    reductive_structure:          { fillcolor: "#d5ecd8", color: "#2a7a3f",
+                                    label: "Reductive Group\nStructure" },
+    root_data_and_duality:        { fillcolor: "#ead5ec", color: "#7d2d7d",
+                                    label: "Root Data\n& Duality" },
+    classical_and_exceptional_groups: { fillcolor: "#f5e8d5", color: "#c07020",
+                                    label: "Classical &\nExceptional Groups" },
+    buildings_and_parahorics:     { fillcolor: "#eee0cc", color: "#8b5a3c",
+                                    label: "Buildings &\nParahorics" },
+    kottwitz_structures:          { fillcolor: "#d5dff0", color: "#2d4d8b",
+                                    label: "Kottwitz\nStructures" },
+    conjugacy_classes:            { fillcolor: "#f0d5d5", color: "#8b2d2d",
+                                    label: "Conjugacy\nClasses" },
+    bd_covers:                    { fillcolor: "#ddd5ec", color: "#4d2d8b",
+                                    label: "BD & Metaplectic\nCovers" },
   };
 
   function topicOverviewToDot(data) {
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.8, nodesep=1.0, splines=polyline, pad=0.4];",
-      '\tnode [label="\\N", penwidth=2.0, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=14, margin="0.4,0.22", style=filled, fillcolor="white"];',
-      "\tedge [arrowhead=normal, arrowsize=0.8, color=\"#555555\"];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.2, nodesep=0.7, splines=curved, concentrate=true, pad=0.5];",
+      '\tnode [label="\\N", penwidth=2.0, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=13, margin="0.35,0.20", style=filled, fillcolor="white"];',
+      "\tedge [arrowhead=normal, arrowsize=0.7];",
     ];
     (data.topics || []).forEach((topic) => {
       const palette = TOPIC_PALETTE[topic.id] || { fillcolor: "#f0f0f0", color: "#555555" };
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(topic.title)}, shape=box, style=filled, fillcolor=${dotQuote(palette.fillcolor)}, color=${dotQuote(palette.color)}, penwidth=2.2, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
+      const label = palette.label || topic.title;
+      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(label)}, shape=box, style=filled, fillcolor=${dotQuote(palette.fillcolor)}, color=${dotQuote(palette.color)}, penwidth=2.2, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
     });
     (data.edges || []).forEach((edge) => {
-      const weight = Math.min(edge.count || 1, 8);
-      const penwidth = (Math.min((edge.count || 1) * 0.4 + 0.8, 2.8)).toFixed(1);
-      lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [weight=${weight}, penwidth=${penwidth}, color="#666666"];`);
+      const count = edge.count || 1;
+      // Skip very rare cross-topic edges to reduce visual noise in the overview
+      if (count < 2) return;
+      const weight = Math.min(count, 10);
+      let penwidth, color;
+      if (count >= 15) {
+        penwidth = "2.4"; color = "#333333";
+      } else if (count >= 8) {
+        penwidth = "1.8"; color = "#555555";
+      } else if (count >= 4) {
+        penwidth = "1.2"; color = "#777777";
+      } else {
+        penwidth = "0.8"; color = "#aaaaaa";
+      }
+      lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [weight=${weight}, penwidth=${penwidth}, color=${dotQuote(color)}];`);
     });
     lines.push("}");
     return lines.join("\n");
@@ -172,7 +197,7 @@
     const palette = TOPIC_PALETTE[topicId] || { fillcolor: "#e8e8e8", color: "#444444" };
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.2, nodesep=0.5, splines=ortho, pad=0.3, fontname=\"Helvetica Neue,Helvetica,Arial,sans-serif\"];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.0, nodesep=0.5, splines=spline, pad=0.3, fontname=\"Helvetica Neue,Helvetica,Arial,sans-serif\"];",
       '\tnode [label="\\N", penwidth=1.6, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=11, margin="0.25,0.14"];',
       "\tedge [arrowhead=normal, arrowsize=0.7, color=\"#444444\"];",
     ];
