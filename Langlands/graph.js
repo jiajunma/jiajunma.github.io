@@ -118,7 +118,7 @@
 
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.6, nodesep=1.0, splines=curved, pad=0.5];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=2.0, nodesep=1.2, splines=ortho, pad=0.6];",
       '\tnode [label="\\N", penwidth=1.8, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=13, margin="0.38,0.22", style=filled];',
       "\tedge [arrowhead=normal, arrowsize=0.7];",
     ];
@@ -243,7 +243,7 @@
     const endpointVisible = (nodeId) => nodeId.startsWith("topic:") || visibleNodeIds.has(nodeId);
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.0, nodesep=0.5, splines=spline, pad=0.3, fontname=\"Helvetica Neue,Helvetica,Arial,sans-serif\"];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.8, nodesep=0.8, splines=spline, pad=0.5, fontname=\"Helvetica Neue,Helvetica,Arial,sans-serif\"];",
       '\tnode [label="\\N", penwidth=1.6, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=11, margin="0.25,0.14"];',
       "\tedge [arrowhead=normal, arrowsize=0.7, color=\"#444444\"];",
     ];
