@@ -56,80 +56,29 @@
   let graphZoomBehavior = null;
   let graphZoomSelection = null;
 
-  // Per-topic color palette for the overview graph.
-  // Colors span the full hue wheel so each topic is immediately distinct.
-  // fillcolor: 40-50% saturation pastel (readable dark text on top)
-  // color: dark saturated border of same hue
-  // label: two-line display label for consistent node sizing
-  const TOPIC_PALETTE = {
-    // warm neutral — the conceptual "foundation"
-    foundational_inputs: {
-      fillcolor: "#ede8e0", color: "#6a5840",
-      label: "Foundational\nInputs",
-    },
-    // cobalt blue — core algebraic groups
-    linear_algebraic_groups: {
-      fillcolor: "#b8d8f8", color: "#1060b0",
-      label: "Linear Algebraic\nGroups",
-    },
-    // aqua / teal-cyan — schemes, geometry
-    affine_group_schemes: {
-      fillcolor: "#a8e8f2", color: "#0c7890",
-      label: "Affine Group\nSchemes",
-    },
-    // yellow-green / lime — descent & cohomology
-    descent_and_forms: {
-      fillcolor: "#d8f0a8", color: "#587818",
-      label: "Galois Descent\n& Forms",
-    },
-    // forest green — reductive structure
-    reductive_structure: {
-      fillcolor: "#b8e8b8", color: "#1e7828",
-      label: "Reductive Group\nStructure",
-    },
-    // violet — root data & Langlands duality
-    root_data_and_duality: {
-      fillcolor: "#dcc0f2", color: "#6e28a0",
-      label: "Root Data\n& Duality",
-    },
-    // amber / golden orange — classical groups
-    classical_and_exceptional_groups: {
-      fillcolor: "#ffe4a8", color: "#c06008",
-      label: "Classical &\nExceptional Groups",
-    },
-    // sienna / brick — buildings
-    buildings_and_parahorics: {
-      fillcolor: "#f0c8a8", color: "#884020",
-      label: "Buildings &\nParahorics",
-    },
-    // deep indigo — Kottwitz / p-adic
-    kottwitz_structures: {
-      fillcolor: "#b8b8f8", color: "#2828b0",
-      label: "Kottwitz\nStructures",
-    },
-    // crimson / rose — conjugacy classes
-    conjugacy_classes: {
-      fillcolor: "#f2b8b8", color: "#b02020",
-      label: "Conjugacy\nClasses",
-    },
-    // magenta — BD / metaplectic covers
-    bd_covers: {
-      fillcolor: "#f2b8e0", color: "#a01878",
-      label: "BD & Metaplectic\nCovers",
-    },
+  // Topic node style — uniform for all topics in both overview and subgraph.
+  // Color encodes status/kind, NOT topic identity.
+  const TOPIC_NODE_STYLE = {
+    fillcolor: "#e8f0f8",
+    color: "#2d5a8e",
+    fontcolor: "#1a2d42",
+  };
+  // Boundary topic nodes (other topics shown at the edge of a subgraph)
+  const BOUNDARY_TOPIC_STYLE = {
+    fillcolor: "#f0f4f8",
+    color: "#8aaac8",
+    fontcolor: "#6688aa",
   };
 
   function topicOverviewToDot(data) {
     const lines = [
       'strict digraph "" {',
       "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.4, nodesep=0.8, splines=curved, pad=0.5];",
-      '\tnode [label="\\N", penwidth=2.0, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=13, margin="0.38,0.22", style=filled, fillcolor="white"];',
+      '\tnode [label="\\N", penwidth=1.8, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=13, margin="0.38,0.22", style=filled];',
       "\tedge [arrowhead=normal, arrowsize=0.7];",
     ];
     (data.topics || []).forEach((topic) => {
-      const palette = TOPIC_PALETTE[topic.id] || { fillcolor: "#f0f0f0", color: "#555555" };
-      const label = palette.label || topic.title;
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(label)}, shape=box, style=filled, fillcolor=${dotQuote(palette.fillcolor)}, color=${dotQuote(palette.color)}, penwidth=2.2, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
+      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(topic.title)}, fillcolor=${dotQuote(TOPIC_NODE_STYLE.fillcolor)}, color=${dotQuote(TOPIC_NODE_STYLE.color)}, fontcolor=${dotQuote(TOPIC_NODE_STYLE.fontcolor)}, penwidth=2.0, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
     });
     (data.edges || []).forEach((edge) => {
       const count = edge.count || 1;
@@ -138,13 +87,13 @@
       const weight = Math.min(count, 10);
       let penwidth, color;
       if (count >= 15) {
-        penwidth = "2.4"; color = "#333333";
+        penwidth = "2.4"; color = "#334455";
       } else if (count >= 8) {
-        penwidth = "1.8"; color = "#555555";
+        penwidth = "1.8"; color = "#556677";
       } else if (count >= 4) {
-        penwidth = "1.2"; color = "#777777";
+        penwidth = "1.2"; color = "#778899";
       } else {
-        penwidth = "0.8"; color = "#aaaaaa";
+        penwidth = "0.8"; color = "#aabbcc";
       }
       lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [weight=${weight}, penwidth=${penwidth}, color=${dotQuote(color)}];`);
     });
@@ -229,8 +178,6 @@
     const visibleNodes = visibleSubgraphNodes(data);
     const visibleNodeIds = new Set(visibleNodes.map((node) => node.id));
     const endpointVisible = (nodeId) => nodeId.startsWith("topic:") || visibleNodeIds.has(nodeId);
-    const topicId = data.topic?.id || "";
-    const palette = TOPIC_PALETTE[topicId] || { fillcolor: "#e8e8e8", color: "#444444" };
     const lines = [
       'strict digraph "" {',
       "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.0, nodesep=0.5, splines=spline, pad=0.3, fontname=\"Helvetica Neue,Helvetica,Arial,sans-serif\"];",
@@ -239,8 +186,9 @@
     ];
     if (data.topic) {
       lines.push(`\t${dotQuote(topicGraphId(data.topic.id))} [${dotAttributes({
-        color: palette.color,
-        fillcolor: palette.fillcolor,
+        color: TOPIC_NODE_STYLE.color,
+        fillcolor: TOPIC_NODE_STYLE.fillcolor,
+        fontcolor: TOPIC_NODE_STYLE.fontcolor,
         fontsize: "13",
         label: data.topic.title,
         penwidth: "2.6",
@@ -250,10 +198,10 @@
       })}];`);
     }
     (data.child_topic_nodes || []).forEach((topic) => {
-      const cp = TOPIC_PALETTE[topic.id] || { fillcolor: "#e8e8e8", color: "#444444" };
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
-        color: cp.color,
-        fillcolor: cp.fillcolor,
+        color: TOPIC_NODE_STYLE.color,
+        fillcolor: TOPIC_NODE_STYLE.fillcolor,
+        fontcolor: TOPIC_NODE_STYLE.fontcolor,
         label: topic.title,
         shape: "box",
         style: "filled",
@@ -261,11 +209,10 @@
       })}];`);
     });
     (data.boundary_topics || []).forEach((topic) => {
-      const bp = TOPIC_PALETTE[topic.id] || { fillcolor: "#f4f4f4", color: "#aaaaaa" };
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
-        color: bp.color,
-        fillcolor: bp.fillcolor,
-        fontcolor: "#888888",
+        color: BOUNDARY_TOPIC_STYLE.color,
+        fillcolor: BOUNDARY_TOPIC_STYLE.fillcolor,
+        fontcolor: BOUNDARY_TOPIC_STYLE.fontcolor,
         label: topic.title,
         penwidth: "1.2",
         shape: "box",
