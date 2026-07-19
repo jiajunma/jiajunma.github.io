@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commutative Algebra — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>Affine Schemes — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -35,8 +35,16 @@
           <a href="../affine_group_schemes/index.html">Affine Group Schemes</a>
         </li>
       
+        <li class="topic-leaf topic-active">
+          <a href="../algebraic_geometry/index.html">Algebraic Geometry</a>
+        </li>
+      
         <li class="topic-leaf">
           <a href="../buildings_and_parahorics/index.html">Buildings And Parahorics</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../commutative_algebra/index.html">Commutative Algebra</a>
         </li>
       
         <li class="topic-leaf">
@@ -47,10 +55,6 @@
           <a href="../descent_and_forms/index.html">Descent And Forms</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../foundational_inputs/index.html">Foundational Inputs</a>
-        </li>
-      
         <li class="topic-parent">
           <details data-topic-root="linear_algebraic_groups">
             <summary><a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a></summary>
@@ -58,6 +62,10 @@
           <a href="../linear_algebraic_groups/classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
         </li></ul>
           </details>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../number_theory/index.html">Number Theory</a>
         </li>
       
         <li class="topic-leaf">
@@ -676,107 +684,140 @@
   </nav>
   <main>
     
-<article class="topic_thmwrapper theorem-style-topic node-page" id="node-foundational_inputs-2e-commutative_algebra">
+<article class="topic_thmwrapper theorem-style-topic node-page" id="node-algebraic_geometry-2e-affine_schemes">
   <header class="topic_thmheading thm-heading">
     <span class="topic_thmcaption thm-caption">Topic</span>
-    <span class="topic_thmtitle thm-title">Commutative Algebra</span>
+    <span class="topic_thmtitle thm-title">Affine Schemes</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-topic">topic</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-foundational_inputs-2e-commutative_algebra">#</a>
+      <a class="permalink" href="#node-algebraic_geometry-2e-affine_schemes">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
     </div>
   </header>
 
   
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="../commutative_algebra/commutative_algebra_commutative_algebra.html">Commutative Algebra</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
 
   
 
   <div class="topic_thmcontent thm-content body">
-    <h1>Commutative Algebra</h1>
-<p>This is the foundational layer: the language and toolkit of commutative
-rings, modules, ideals, and their geometric counterpart via
-<a class="node-ref" data-node-id="foundational_inputs.affine_schemes" href="foundational_inputs_affine_schemes.html">Spec</a>.</p>
-<h2>Scope</h2>
-<p>The Langlands roadmap draws on the following commutative-algebra
-inputs:</p>
-<h3>Rings and ideals</h3>
+    <h1>Affine Schemes</h1>
+<p>The category of <strong>affine schemes</strong> is the opposite of the category of
+commutative rings:</p>
+<p>\[
+\mathsf{AffSch} \;\simeq\; \mathsf{CommRing}^{\mathrm{op}}, \qquad
+R \;\longleftrightarrow\; \operatorname{Spec} R.
+\]</p>
+<p>This duality is the bridge between commutative algebra and algebraic
+geometry, and the foundation on which the entire Langlands roadmap is
+built.</p>
+<h2>Definition</h2>
+<p>An <strong>affine scheme</strong> is a locally ringed space \(X = \operatorname{Spec} R\)
+where \(R\) is a commutative ring, the underlying topological space is
+the prime spectrum (set of prime ideals with the Zariski topology), and
+the structure sheaf \(\mathcal{O}_X\) localises to \(R_\mathfrak{p}\) at
+each prime \(\mathfrak{p}\).</p>
+<h2>The Spec functor</h2>
+<p>\(\operatorname{Spec} : \mathsf{CommRing}^{\mathrm{op}} \to \mathsf{Scheme}\)
+is fully faithful. Its essential image is the full subcategory of
+affine schemes. The left adjoint is the <strong>global sections</strong> functor
+\(\Gamma : \mathsf{Scheme}^{\mathrm{op}} \to \mathsf{CommRing}\),
+\(X \mapsto \Gamma(X, \mathcal{O}_X)\).</p>
+<p>The unit of the adjunction \(X \to \operatorname{Spec} \Gamma(X, \mathcal{O}_X)\)
+is an isomorphism iff \(X\) is affine.</p>
+<h2>Why affine schemes are central</h2>
 <ul>
-<li>Commutative rings, ideals (prime, maximal, primary), quotient rings.</li>
-<li>The prime spectrum \(\operatorname{Spec} R\) and the Zariski topology.</li>
-<li>Localisation: \(R[S^{-1}]\), \(R_{\mathfrak{p}}\), \(R[f^{-1}]\).</li>
-<li>Noetherian hypotheses: Hilbert basis theorem, ACC on ideals.</li>
+<li>They form the basic open cover of any scheme.</li>
+<li>Many properties (affine, finite type, smooth) reduce locally to
+  ring-theoretic conditions.</li>
+<li>Group schemes that are affine over a base ring are exactly Hopf
+  algebras (see
+  <a class="node-ref" data-node-id="commutative_algebra.hopf_algebras" href="../commutative_algebra/commutative_algebra_hopf_algebras.html">Hopf algebras</a>
+  and [[node:affine_group_schemes.coordinate_rings_and_hopf_algebras|coordinate
+  rings and Hopf algebras]]).</li>
 </ul>
-<h3>Modules</h3>
+<h2>Basic examples</h2>
+<table>
+<thead>
+<tr>
+<th>Affine scheme</th>
+<th>Ring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(\operatorname{Spec} \mathbb{Z}\)</td>
+<td>\(\mathbb{Z}\)</td>
+</tr>
+<tr>
+<td>\(\operatorname{Spec} \mathbb{Z}[T] = \mathbb{A}^1_{\mathbb{Z}}\)</td>
+<td>polynomial ring</td>
+</tr>
+<tr>
+<td>\(\operatorname{Spec} \mathbb{Z}[T_1, \dots, T_n] = \mathbb{A}^n_{\mathbb{Z}}\)</td>
+<td>multi-variable polynomial</td>
+</tr>
+<tr>
+<td>\(\operatorname{Spec} \mathbb{Z}[T, T^{-1}] = \mathbb{A}^1 \setminus \{0\}\)</td>
+<td>Laurent polynomials</td>
+</tr>
+<tr>
+<td>\(\operatorname{Spec} R/I\)</td>
+<td>quotient ring → closed subscheme of \(\operatorname{Spec} R\)</td>
+</tr>
+</tbody>
+</table>
+<h2>Properties preserved by Spec</h2>
 <ul>
-<li>\(R\)-modules: free, projective, flat, finitely generated, finitely
-  presented.</li>
-<li>Tensor products \(M \otimes_R N\).</li>
-<li>Module-finite vs. algebra-finite (finite vs. finite type).</li>
+<li>Ring homomorphism injective ↔ Spec dominant</li>
+<li>Ring hom surjective ↔ Spec closed immersion</li>
+<li>Ring hom finite type ↔ Spec locally of finite type</li>
+<li>Ring is Noetherian ↔ Spec locally Noetherian</li>
+<li>Ring is reduced/integral ↔ Spec reduced/integral</li>
 </ul>
-<h3>Algebras</h3>
+<h2>Over a base</h2>
+<p>For a fixed base ring \(R\), an <strong>\(R\)-affine scheme</strong> is an affine
+scheme \(X = \operatorname{Spec} A\) with a chosen ring homomorphism
+\(R \to A\) (equivalently, a chosen morphism
+\(\operatorname{Spec} A \to \operatorname{Spec} R\)). The category of
+such is</p>
+<p>\[
+\mathsf{AffSch}_R \;\simeq\; (\mathsf{CommAlg}_R)^{\mathrm{op}}.
+\]</p>
+<p>This is the setting in which group schemes over \(\operatorname{Spec} R\)
+are formalised in this project.</p>
+<h2>Mathlib formalisation</h2>
 <ul>
-<li>\(R\)-algebras as ring maps \(R \to A\).</li>
-<li>Finitely generated \(R\)-algebras (= \(R[X_1, \dots, X_n]/I\)).</li>
-<li>Polynomial rings, Laurent polynomial rings, multivariate polynomials.</li>
+<li><code>Mathlib.AlgebraicGeometry.Scheme</code> — Schemes as locally ringed
+  spaces.</li>
+<li><code>Mathlib.AlgebraicGeometry.AffineScheme</code> — Affine schemes.</li>
+<li><code>Mathlib.AlgebraicGeometry.GammaSpecAdjunction</code> — The <code>Γ ⊣ Spec</code>
+  adjunction.</li>
+<li><code>Mathlib.CategoryTheory.Comma.Over</code> — Over-categories for "over a
+  base".</li>
 </ul>
-<h3>Hilbert's Nullstellensatz</h3>
-<p>For an algebraically closed field \(k\) and a finitely generated
-\(k\)-algebra \(A\):</p>
+<p>In this project, <a class="node-ref" data-node-id="affine_group_schemes.hopf_spec_functor" href="../affine_group_schemes/affine_group_schemes_hopf_spec_functor.html">&lt;code&gt;hopfSpec&lt;/code&gt;</a>
+is the lift of <code>Spec</code> to Hopf algebras, producing affine group schemes.</p>
+<h2>Prerequisite Topics</h2>
 <ul>
-<li>the maximal ideals of \(A\) are in bijection with the
-  \(k\)-rational points of \(\operatorname{Spec} A\);</li>
-<li>if \(A\) is a domain, \(\dim A\) (Krull) equals the transcendence
-  degree of \(\operatorname{Frac}(A)\) over \(k\).</li>
-</ul>
-<h3>Dimension theory</h3>
-<ul>
-<li>Krull dimension, transcendence degree, height of primes.</li>
-<li>For Noetherian rings: dimension formulas, dimension equals
-  transcendence degree for finitely generated \(k\)-algebras.</li>
-</ul>
-<h3>Going up / going down</h3>
-<ul>
-<li>Cohen–Seidenberg theorems for integral extensions.</li>
-<li>Properties of integral / faithfully flat / smooth ring maps.</li>
-</ul>
-<h2>Smoothness and étale morphisms</h2>
-<p>For affine group schemes, we need:</p>
-<ul>
-<li><strong>Smooth</strong> ring maps: locally of finite presentation, formally smooth.</li>
-<li><strong>Étale</strong> ring maps: smooth + unramified, equivalently
-  locally-of-finite-presentation + flat + unramified.</li>
-<li><strong>Faithfully flat</strong>: flat + the map is surjective on Spec.</li>
-</ul>
-<p>These translate into smooth/étale/faithfully-flat morphisms of schemes
-under Spec.</p>
-<h2>Tensor products and base change</h2>
-<p>For \(R \to R'\) a ring map and \(A\) an \(R\)-algebra,
-\(A \otimes_R R'\) is the <strong>base change</strong> of \(A\) along \(R'\). On
-Spec: \(\operatorname{Spec}(A \otimes_R R') = \operatorname{Spec} A \times_{\operatorname{Spec} R} \operatorname{Spec} R'\).</p>
-<p>This is the algebraic shadow of the
-<a class="node-ref" data-node-id="affine_group_schemes.base_change" href="../affine_group_schemes/affine_group_schemes_base_change.html">base change</a> of schemes.</p>
-<h2>Mathlib</h2>
-<p>The relevant Mathlib namespaces:</p>
-<ul>
-<li><code>Mathlib.Algebra.*</code> — algebra typeclasses (CommRing, CommSemiring, Module, Algebra).</li>
-<li><code>Mathlib.RingTheory.*</code> — ring theory (Ideal, Spec, Localization, MvPolynomial).</li>
-<li><code>Mathlib.LinearAlgebra.*</code> — modules, tensor products.</li>
-<li><code>Mathlib.RingTheory.FiniteType</code> — finite-type algebras (FG of finite-type).</li>
-</ul>
-<p>Everything in this DAG that touches commutative algebra reduces to
-Mathlib API calls; the project does NOT redevelop commutative algebra
-from scratch.</p>
-<h2>References</h2>
-<ul>
-<li>Atiyah–Macdonald, <em>Introduction to Commutative Algebra</em> (1969).</li>
-<li>Eisenbud, <em>Commutative Algebra with a View Toward Algebraic Geometry</em>
-  (GTM 150, 1995).</li>
-<li>Stacks Project (online) — comprehensive reference.</li>
+<li><a class="node-ref" data-node-id="commutative_algebra.commutative_algebra" href="../commutative_algebra/commutative_algebra_commutative_algebra.html">Commutative Algebra</a></li>
 </ul>
     
   </div>
@@ -788,15 +829,17 @@ from scratch.</p>
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="../affine_group_schemes/affine_group_schemes_algebra_hom_convolution.html">Convolution of Algebra Homomorphisms</a></li>
+      <li><a href="../affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html">Affine Group Scheme over a Base</a></li>
       
       <li><a href="../affine_group_schemes/affine_group_schemes_coordinate_rings_and_hopf_algebras.html">Coordinate Rings and Hopf Algebras</a></li>
       
-      <li><a href="foundational_inputs_affine_schemes.html">Affine Schemes</a></li>
+      <li><a href="../affine_group_schemes/affine_group_schemes_hopf_spec_functor.html">Spec Functor on Hopf Algebras</a></li>
       
-      <li><a href="foundational_inputs_algebraic_k_theory_and_k2.html">Algebraic K-Theory and K2</a></li>
+      <li><a href="../affine_group_schemes/affine_group_schemes_spec_representability_via_global_sections.html">Hom Into Spec via Global Sections (Spec ⊣ Γ Adjunction)</a></li>
       
-      <li><a href="foundational_inputs_hopf_algebras.html">Hopf Algebras</a></li>
+      <li><a href="../linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html">Definition of Linear Algebraic Groups</a></li>
+      
+      <li><a href="../linear_algebraic_groups/linear_algebraic_groups_smoothness_tangent_spaces_lie_algebras.html">Smoothness, Tangent Spaces, and Lie Algebras</a></li>
       
     </ul>
   </section>
@@ -806,7 +849,7 @@ from scratch.</p>
 
   
   <footer class="tags">
-    <span class="tag">external-background</span><span class="tag">commutative-algebra</span><span class="tag">foundational-inputs</span>
+    <span class="tag">external-background</span><span class="tag">affine-schemes</span><span class="tag">foundational-inputs</span>
   </footer>
   
 </article>

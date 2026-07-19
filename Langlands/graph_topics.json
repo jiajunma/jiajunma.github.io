@@ -21,6 +21,22 @@
       "children": []
     },
     {
+      "id": "algebraic_geometry",
+      "title": "Algebraic Geometry",
+      "depth": 1,
+      "parent": null,
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "topic": 1
+      },
+      "status_counts": {
+        "admitted": 1
+      },
+      "href": "algebraic_geometry/index.html",
+      "children": []
+    },
+    {
       "id": "buildings_and_parahorics",
       "title": "Buildings And Parahorics",
       "depth": 1,
@@ -34,6 +50,22 @@
         "admitted": 16
       },
       "href": "buildings_and_parahorics/index.html",
+      "children": []
+    },
+    {
+      "id": "commutative_algebra",
+      "title": "Commutative Algebra",
+      "depth": 1,
+      "parent": null,
+      "node_count": 4,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "topic": 4
+      },
+      "status_counts": {
+        "admitted": 4
+      },
+      "href": "commutative_algebra/index.html",
       "children": []
     },
     {
@@ -73,22 +105,6 @@
       "children": []
     },
     {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
-      "depth": 1,
-      "parent": null,
-      "node_count": 8,
-      "direct_node_count": 8,
-      "kind_counts": {
-        "topic": 8
-      },
-      "status_counts": {
-        "admitted": 8
-      },
-      "href": "foundational_inputs/index.html",
-      "children": []
-    },
-    {
       "id": "linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "depth": 1,
@@ -109,6 +125,22 @@
       "children": [
         "linear_algebraic_groups.classical_and_exceptional_groups"
       ]
+    },
+    {
+      "id": "number_theory",
+      "title": "Number Theory",
+      "depth": 1,
+      "parent": null,
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "topic": 3
+      },
+      "status_counts": {
+        "admitted": 3
+      },
+      "href": "number_theory/index.html",
+      "children": []
     },
     {
       "id": "reductive_structure",
@@ -178,34 +210,49 @@
       "count": 3
     },
     {
+      "from": "algebraic_geometry",
+      "to": "affine_group_schemes",
+      "count": 4
+    },
+    {
+      "from": "algebraic_geometry",
+      "to": "linear_algebraic_groups",
+      "count": 2
+    },
+    {
       "from": "buildings_and_parahorics",
       "to": "root_data_and_duality",
       "count": 3
     },
     {
-      "from": "descent_and_forms",
-      "to": "conjugacy_classes",
+      "from": "commutative_algebra",
+      "to": "affine_group_schemes",
+      "count": 11
+    },
+    {
+      "from": "commutative_algebra",
+      "to": "algebraic_geometry",
+      "count": 1
+    },
+    {
+      "from": "commutative_algebra",
+      "to": "linear_algebraic_groups",
+      "count": 3
+    },
+    {
+      "from": "commutative_algebra",
+      "to": "number_theory",
+      "count": 3
+    },
+    {
+      "from": "commutative_algebra",
+      "to": "root_data_and_duality",
       "count": 2
     },
     {
-      "from": "foundational_inputs",
-      "to": "affine_group_schemes",
-      "count": 15
-    },
-    {
-      "from": "foundational_inputs",
-      "to": "buildings_and_parahorics",
-      "count": 4
-    },
-    {
-      "from": "foundational_inputs",
-      "to": "linear_algebraic_groups",
-      "count": 5
-    },
-    {
-      "from": "foundational_inputs",
-      "to": "root_data_and_duality",
-      "count": 7
+      "from": "descent_and_forms",
+      "to": "conjugacy_classes",
+      "count": 2
     },
     {
       "from": "linear_algebraic_groups",
@@ -231,6 +278,16 @@
       "from": "linear_algebraic_groups",
       "to": "root_data_and_duality",
       "count": 1
+    },
+    {
+      "from": "number_theory",
+      "to": "buildings_and_parahorics",
+      "count": 4
+    },
+    {
+      "from": "number_theory",
+      "to": "root_data_and_duality",
+      "count": 5
     },
     {
       "from": "reductive_structure",

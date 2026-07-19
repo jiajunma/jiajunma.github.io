@@ -1,0 +1,223 @@
+{
+  "topic": {
+    "id": "commutative_algebra",
+    "title": "Commutative Algebra",
+    "href": "commutative_algebra/index.html",
+    "parent": null,
+    "node_count": 4,
+    "descendant_node_count": 4
+  },
+  "counts": {
+    "internal_nodes": 4,
+    "inlined_nodes": 0,
+    "descendant_nodes": 4,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 6,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
+  },
+  "nodes": [
+    {
+      "id": "commutative_algebra.basic_combinatorics",
+      "title": "Basic Combinatorics",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "commutative_algebra/commutative_algebra_basic_combinatorics.html",
+      "payload": "node_payloads/commutative_algebra_basic_combinatorics.json"
+    },
+    {
+      "id": "commutative_algebra.commutative_algebra",
+      "title": "Commutative Algebra",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "commutative_algebra/commutative_algebra_commutative_algebra.html",
+      "payload": "node_payloads/commutative_algebra_commutative_algebra.json"
+    },
+    {
+      "id": "commutative_algebra.fields_and_field_extensions",
+      "title": "Fields and Field Extensions",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "commutative_algebra/commutative_algebra_fields_and_field_extensions.html",
+      "payload": "node_payloads/commutative_algebra_fields_and_field_extensions.json"
+    },
+    {
+      "id": "commutative_algebra.hopf_algebras",
+      "title": "Hopf Algebras",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "commutative_algebra/commutative_algebra_hopf_algebras.html",
+      "payload": "node_payloads/commutative_algebra_hopf_algebras.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "commutative_algebra.commutative_algebra",
+      "to": "commutative_algebra.hopf_algebras",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "affine_group_schemes",
+      "title": "Affine Group Schemes",
+      "href": "affine_group_schemes/index.html",
+      "role": "dependent",
+      "node_count": 38
+    },
+    {
+      "id": "algebraic_geometry",
+      "title": "Algebraic Geometry",
+      "href": "algebraic_geometry/index.html",
+      "role": "dependent",
+      "node_count": 1
+    },
+    {
+      "id": "linear_algebraic_groups",
+      "title": "Linear Algebraic Groups",
+      "href": "linear_algebraic_groups/index.html",
+      "role": "dependent",
+      "node_count": 31
+    },
+    {
+      "id": "number_theory",
+      "title": "Number Theory",
+      "href": "number_theory/index.html",
+      "role": "dependent",
+      "node_count": 3
+    },
+    {
+      "id": "root_data_and_duality",
+      "title": "Root Data And Duality",
+      "href": "root_data_and_duality/index.html",
+      "role": "dependent",
+      "node_count": 64
+    },
+    {
+      "id": "root_data_and_duality.bd_covers",
+      "title": "Root Data And Duality.Bd Covers",
+      "href": "root_data_and_duality/bd_covers/index.html",
+      "role": "dependent",
+      "node_count": 6
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "commutative_algebra.commutative_algebra",
+      "to": "topic:affine_group_schemes",
+      "kind": "boundary_dependent",
+      "topic": "affine_group_schemes",
+      "count": 2
+    },
+    {
+      "from": "commutative_algebra.fields_and_field_extensions",
+      "to": "topic:affine_group_schemes",
+      "kind": "boundary_dependent",
+      "topic": "affine_group_schemes",
+      "count": 1
+    },
+    {
+      "from": "commutative_algebra.hopf_algebras",
+      "to": "topic:affine_group_schemes",
+      "kind": "boundary_dependent",
+      "topic": "affine_group_schemes",
+      "count": 8
+    },
+    {
+      "from": "commutative_algebra.commutative_algebra",
+      "to": "topic:algebraic_geometry",
+      "kind": "boundary_dependent",
+      "topic": "algebraic_geometry",
+      "count": 1
+    },
+    {
+      "from": "commutative_algebra.fields_and_field_extensions",
+      "to": "topic:linear_algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "linear_algebraic_groups",
+      "count": 2
+    },
+    {
+      "from": "commutative_algebra.hopf_algebras",
+      "to": "topic:linear_algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "linear_algebraic_groups",
+      "count": 1
+    },
+    {
+      "from": "commutative_algebra.commutative_algebra",
+      "to": "topic:number_theory",
+      "kind": "boundary_dependent",
+      "topic": "number_theory",
+      "count": 1
+    },
+    {
+      "from": "commutative_algebra.fields_and_field_extensions",
+      "to": "topic:number_theory",
+      "kind": "boundary_dependent",
+      "topic": "number_theory",
+      "count": 2
+    },
+    {
+      "from": "commutative_algebra.basic_combinatorics",
+      "to": "topic:root_data_and_duality",
+      "kind": "boundary_dependent",
+      "topic": "root_data_and_duality",
+      "count": 1
+    },
+    {
+      "from": "commutative_algebra.hopf_algebras",
+      "to": "topic:root_data_and_duality.bd_covers",
+      "kind": "boundary_dependent",
+      "topic": "root_data_and_duality.bd_covers",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "combinatorics",
+      "title": "combinatorics",
+      "href": "keywords/combinatorics.html",
+      "count": 1
+    },
+    {
+      "id": "commutative-algebra",
+      "title": "commutative-algebra",
+      "href": "keywords/commutative-algebra.html",
+      "count": 1
+    },
+    {
+      "id": "external-background",
+      "title": "external-background",
+      "href": "keywords/external-background.html",
+      "count": 4
+    },
+    {
+      "id": "fields",
+      "title": "fields",
+      "href": "keywords/fields.html",
+      "count": 1
+    },
+    {
+      "id": "foundational-inputs",
+      "title": "foundational-inputs",
+      "href": "keywords/foundational-inputs.html",
+      "count": 4
+    },
+    {
+      "id": "hopf-algebras",
+      "title": "hopf-algebras",
+      "href": "keywords/hopf-algebras.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

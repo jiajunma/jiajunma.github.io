@@ -99,7 +99,7 @@
   // Tiers are matched by topic-id substring — order matters, first match wins.
   // Unknown topics fall to the bottom tier automatically.
   const OVERVIEW_TIER_GROUPS = [
-    ["foundational_inputs"],
+    ["commutative_algebra", "algebraic_geometry", "number_theory"],
     ["affine_group_schemes"],
     ["linear_algebraic_groups"],
     ["reductive_structure"],

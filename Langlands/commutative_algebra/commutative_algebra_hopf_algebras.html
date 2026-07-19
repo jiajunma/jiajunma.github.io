@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Fields, Adeles, and Reciprocity Symbols — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>Hopf Algebras — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -36,7 +36,15 @@
         </li>
       
         <li class="topic-leaf">
+          <a href="../algebraic_geometry/index.html">Algebraic Geometry</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../buildings_and_parahorics/index.html">Buildings And Parahorics</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../commutative_algebra/index.html">Commutative Algebra</a>
         </li>
       
         <li class="topic-leaf">
@@ -47,10 +55,6 @@
           <a href="../descent_and_forms/index.html">Descent And Forms</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../foundational_inputs/index.html">Foundational Inputs</a>
-        </li>
-      
         <li class="topic-parent">
           <details data-topic-root="linear_algebraic_groups">
             <summary><a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a></summary>
@@ -58,6 +62,10 @@
           <a href="../linear_algebraic_groups/classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
         </li></ul>
           </details>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../number_theory/index.html">Number Theory</a>
         </li>
       
         <li class="topic-leaf">
@@ -676,17 +684,17 @@
   </nav>
   <main>
     
-<article class="topic_thmwrapper theorem-style-topic node-page" id="node-foundational_inputs-2e-global_fields_adeles_and_reciprocity_symbols">
+<article class="topic_thmwrapper theorem-style-topic node-page" id="node-commutative_algebra-2e-hopf_algebras">
   <header class="topic_thmheading thm-heading">
     <span class="topic_thmcaption thm-caption">Topic</span>
-    <span class="topic_thmtitle thm-title">Global Fields, Adeles, and Reciprocity Symbols</span>
+    <span class="topic_thmtitle thm-title">Hopf Algebras</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-topic">topic</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-foundational_inputs-2e-global_fields_adeles_and_reciprocity_symbols">#</a>
+      <a class="permalink" href="#node-commutative_algebra-2e-hopf_algebras">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -700,9 +708,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="foundational_inputs_fields_and_field_extensions.html">Fields and Field Extensions</a></li>
-        
-        <li><a href="foundational_inputs_local_fields.html">Local Fields</a></li>
+        <li><a href="commutative_algebra_commutative_algebra.html">Commutative Algebra</a></li>
         
       </ul>
     </div>
@@ -712,95 +718,189 @@
   
 
   <div class="topic_thmcontent thm-content body">
-    <h1>Global Fields, Adeles, and Reciprocity Symbols</h1>
-<p>A <strong>global field</strong> is either:</p>
-<ul>
-<li>a <strong>number field</strong>: a finite extension of \(\mathbb{Q}\); or</li>
-<li>a <strong>function field</strong>: a finite extension of \(\mathbb{F}_p(t)\)
-  (equivalently, the function field of a smooth projective curve over a
-  finite field).</li>
-</ul>
-<p>This is the setting for the <em>global</em> Langlands programme.</p>
-<h2>Places of a global field</h2>
-<p>A <strong>place</strong> of \(F\) is an equivalence class of absolute values on \(F\).
-For a number field, places are:</p>
-<ul>
-<li><strong>archimedean places</strong> (real, complex), corresponding to embeddings
-  \(F \hookrightarrow \mathbb{R}\) or \(F \hookrightarrow \mathbb{C}\);</li>
-<li><strong>non-archimedean places</strong>, corresponding to prime ideals of the
-  ring of integers \(\mathcal{O}_F\).</li>
-</ul>
-<p>For a function field over \(\mathbb{F}_q\), all places are
-non-archimedean and correspond to closed points of the underlying
-curve.</p>
-<p>At each place \(v\), the completion \(F_v\) is a
-<a class="node-ref" data-node-id="foundational_inputs.local_fields" href="foundational_inputs_local_fields.html">local field</a> with ring of
-integers \(\mathcal{O}_{F_v}\) (when non-archimedean).</p>
-<h2>The adele ring</h2>
-<p>The <strong>adele ring</strong> is the restricted product</p>
+    <h1>Hopf Algebras</h1>
+<p>A <strong>Hopf algebra</strong> is the algebra structure on the coordinate ring of
+an affine group scheme. The five-fold definition consists of an
+\(R\)-module \(A\) equipped with:</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>multiplication \(\mu\)</td>
+<td>\(A \otimes_R A \to A\)</td>
+<td>algebra product</td>
+</tr>
+<tr>
+<td>unit \(\eta\)</td>
+<td>\(R \to A\)</td>
+<td>algebra unit</td>
+</tr>
+<tr>
+<td>comultiplication \(\Delta\)</td>
+<td>\(A \to A \otimes_R A\)</td>
+<td>coalgebra coproduct</td>
+</tr>
+<tr>
+<td>counit \(\varepsilon\)</td>
+<td>\(A \to R\)</td>
+<td>coalgebra counit</td>
+</tr>
+<tr>
+<td>antipode \(S\)</td>
+<td>\(A \to A\)</td>
+<td>inverse map</td>
+</tr>
+</tbody>
+</table>
+<p>subject to associativity, unit, coassociativity, counit, <strong>bialgebra
+compatibility</strong> (\(\Delta\) and \(\varepsilon\) are algebra maps), and
+the <strong>antipode axiom</strong></p>
 <p>\[
-\mathbb{A}_F \;=\; \prod_{v}^{'} F_v
-  \;=\; \{(x_v) \in \prod_v F_v : x_v \in \mathcal{O}_{F_v} \text{ for almost all } v\}.
+\mu \circ (S \otimes \operatorname{id}_A) \circ \Delta
+  \;=\;
+\mu \circ (\operatorname{id}_A \otimes S) \circ \Delta
+  \;=\;
+\eta \circ \varepsilon.
 \]</p>
-<p>It is a locally compact topological ring containing \(F\) discretely.
-The <strong>idele group</strong> is \(\mathbb{A}_F^\times\), the units of
-\(\mathbb{A}_F\).</p>
-<p>For a reductive group \(G/F\), the <strong>adelic group</strong>
-\(G(\mathbb{A}_F)\) carries the natural topology making it a locally
-compact topological group; the quotient \(G(F) \backslash G(\mathbb{A}_F)\)
-(or \(G(F) \backslash G(\mathbb{A}_F) / G(\mathbb{A}_F)_{\mathrm{cpt}}\))
-is the setting for automorphic forms.</p>
-<h2>Class field theory (sketch)</h2>
-<p>For an abelian extension \(L/F\) of global fields, there is a canonical
-isomorphism (the <strong>reciprocity isomorphism</strong>)</p>
-<p>\[
-\operatorname{Gal}(L/F) \;\to\; \pi_0\bigl(\mathbb{A}_F^\times / F^\times \cdot N_{L/F}(\mathbb{A}_L^\times)\bigr).
-\]</p>
-<p>The full statement extends to non-abelian extensions via the Langlands
-correspondence.</p>
-<h2>Reciprocity laws and symbols</h2>
-<p>For each place \(v\), local reciprocity gives a map</p>
-<p>\[
-F_v^\times \to \operatorname{Gal}(F_v^{\mathrm{ab}}/F_v),
-\]</p>
-<p>and global reciprocity is the assembly of these via the adelic
-exponential sequence. The relevant <strong>reciprocity symbols</strong> include:</p>
+<p>The geometric content of the antipode axiom is the group-axiom
+\(g \cdot g^{-1} = e\).</p>
+<h2>Hierarchy of structures</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Structure</th>
+<th>Adds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Algebra</td>
+<td>\(\mu, \eta\)</td>
+<td>associativity, unit</td>
+</tr>
+<tr>
+<td>Coalgebra</td>
+<td>\(\Delta, \varepsilon\)</td>
+<td>coassociativity, counit</td>
+</tr>
+<tr>
+<td>Bialgebra</td>
+<td>both</td>
+<td>bialgebra compatibility</td>
+</tr>
+<tr>
+<td>Hopf algebra</td>
+<td>bialgebra + \(S\)</td>
+<td>antipode axiom</td>
+</tr>
+</tbody>
+</table>
+<p>A Hopf algebra is <strong>commutative</strong> if \(\mu \circ \tau = \mu\) (algebra
+multiplication is commutative), and <strong>cocommutative</strong> if
+\(\tau \circ \Delta = \Delta\) (comul is symmetric).</p>
+<p>The dictionary with group schemes:</p>
+<table>
+<thead>
+<tr>
+<th>Hopf algebra over \(R\)</th>
+<th>Affine group scheme over \(\operatorname{Spec} R\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commutative</td>
+<td>affine</td>
+</tr>
+<tr>
+<td>cocommutative</td>
+<td>abelian (commutative group law)</td>
+</tr>
+</tbody>
+</table>
+<h2>Canonical examples</h2>
+<ol>
+<li>
+<p><strong>Group algebra \(R[G]\)</strong> for a group \(G\): group-like Hopf
+   structure \(\Delta(g) = g \otimes g\), \(\varepsilon(g) = 1\),
+   \(S(g) = g^{-1}\). Corresponds to the constant group scheme
+   \(\underline{G}\) (or to the diagonalisable group of which \(G\) is
+   the character group, depending on convention).</p>
+</li>
+<li>
+<p><strong>Polynomial Hopf algebra \(R[T]\)</strong> with primitive structure:
+   \(\Delta(T) = T \otimes 1 + 1 \otimes T\), \(\varepsilon(T) = 0\),
+   \(S(T) = -T\). Corresponds to
+   <a class="node-ref" data-node-id="affine_group_schemes.additive_group_scheme" href="../affine_group_schemes/affine_group_schemes_additive_group_scheme.html">\(\mathbb{G}_a\)</a>.</p>
+</li>
+<li>
+<p><strong>Laurent polynomial Hopf algebra \(R[T, T^{-1}]\)</strong> with group-like
+   structure: \(\Delta(T) = T \otimes T\), \(\varepsilon(T) = 1\),
+   \(S(T) = T^{-1}\). Corresponds to
+   <a class="node-ref" data-node-id="affine_group_schemes.multiplicative_group_scheme" href="../affine_group_schemes/affine_group_schemes_multiplicative_group_scheme.html">\(\mathbb{G}_m\)</a>.</p>
+</li>
+<li>
+<p><strong>Coordinate Hopf algebra \(R[X_{ij}, \det^{-1}]\)</strong> of
+   \(\operatorname{GL}_n\) with matrix-multiplication coproduct
+   \(\Delta(X_{ij}) = \sum_k X_{ik} \otimes X_{kj}\).</p>
+</li>
+<li>
+<p><strong>Universal enveloping algebra \(U(\mathfrak{g})\)</strong> of a Lie algebra:
+   cocommutative non-commutative Hopf algebra; primitive elements are
+   the Lie algebra.</p>
+</li>
+</ol>
+<h2>Key constructions</h2>
 <ul>
-<li><strong>Hilbert symbol</strong> \((a, b)_v \in \{\pm 1\}\) for a local field
-  containing \(\sqrt{-1}\) or for archimedean places (quadratic).</li>
-<li><strong>Tame symbol</strong> at a non-archimedean place — see
-  <a class="node-ref" data-node-id="foundational_inputs.algebraic_k_theory_and_k2" href="foundational_inputs_algebraic_k_theory_and_k2.html">\(K_2\)</a> for
-  the \(K\)-theoretic interpretation.</li>
-<li><strong>Power residue symbols</strong> \((a, b)_v^{1/n}\) for \(n\)-th powers in
-  fields containing \(\mu_n\).</li>
+<li><strong>Tensor product</strong>: \(A \otimes_R B\) of two Hopf algebras is a Hopf
+  algebra (with diagonal structure).</li>
+<li><strong>Restriction of scalars</strong>: for a ring map \(R \to R'\), an \(R'\)-Hopf
+  algebra restricts to an \(R\)-Hopf algebra.</li>
+<li><strong>Base change</strong>: \(A \otimes_R R'\) is an \(R'\)-Hopf algebra.</li>
+<li><strong>Quotients by Hopf ideals</strong>: ideals closed under comul and antipode
+  give quotient Hopf algebras (corresponding to closed subgroups).</li>
 </ul>
-<p>These symbols satisfy a <strong>product formula</strong>: for fixed \(a, b \in F^\times\),
-the product \(\prod_v (a, b)_v = 1\) over all places.</p>
-<h2>Why this matters for Langlands</h2>
-<ul>
-<li>The local-global principle reduces (some) global statements to
-  compatibility of local statements at each place.</li>
-<li>Automorphic forms on \(G(\mathbb{A}_F)\) decompose (at each place)
-  into local components — the <strong>factorisation</strong> of automorphic
-  representations.</li>
-<li>The metaplectic groups
-  (<a class="node-ref" data-node-id="bd_covers.local_and_global_metaplectic_covers" href="../bd_covers/bd_covers_local_and_global_metaplectic_covers.html">BD covers</a>)
-  are constructed via reciprocity / tame symbols at each place.</li>
-</ul>
+<h2>Antipode anti-multiplicativity</h2>
+<p>For ANY Hopf algebra \(A\) (commutative or not),
+\(S(a \cdot b) = S(b) \cdot S(a)\): the antipode is an
+<strong>anti-homomorphism</strong> for the multiplication. For commutative \(A\),
+this reduces to \(S(ab) = S(a) S(b)\), making \(S\) an algebra
+homomorphism — see
+[[node:affine_group_schemes.antipode_multiplicativity_commutative_hopf|the
+commutative version]].</p>
 <h2>Mathlib formalisation</h2>
 <ul>
-<li><code>Mathlib.NumberTheory.NumberField.*</code> — Number fields, ring of
-  integers, places.</li>
-<li><code>Mathlib.NumberTheory.Padics.*</code> — \(p\)-adic local fields.</li>
-<li><code>Mathlib.NumberTheory.AdeleRing</code> — Adele ring (when available).</li>
+<li><code>Mathlib.RingTheory.HopfAlgebra.Basic</code> — the typeclass + antipode
+  axioms.</li>
+<li><code>Mathlib.RingTheory.Bialgebra.Basic</code> — the Bialgebra layer.</li>
+<li><code>Mathlib.RingTheory.Coalgebra.Basic</code> — the Coalgebra layer.</li>
+<li><code>Mathlib.RingTheory.HopfAlgebra.TensorProduct</code>,
+  <code>MonoidAlgebra</code>, etc. — specific instances.</li>
+<li><code>Mathlib.RingTheory.Coalgebra.Convolution</code> — the convolution
+  semiring structure on linear maps, used to formulate the antipode
+  axiom and study convolution inverses.</li>
 </ul>
-<p>Significant infrastructure here is still in development upstream;
-many later Langlands-roadmap nodes are blocked on Mathlib gaps in this
-area.</p>
+<p>In this project,
+<a class="node-ref" data-node-id="affine_group_schemes.hopf_spec_functor" href="../affine_group_schemes/affine_group_schemes_hopf_spec_functor.html">&lt;code&gt;hopfSpec&lt;/code&gt;</a> makes
+Hopf algebras into affine group schemes via Spec; the inverse direction
+(coordinate Hopf algebra of a given affine group scheme) is the content
+of [[node:affine_group_schemes.coordinate_hopf_algebra_of_group_scheme|the
+coordinate Hopf algebra]] node.</p>
+<h2>References</h2>
+<ul>
+<li>Sweedler, <em>Hopf Algebras</em> (1969).</li>
+<li>Montgomery, <em>Hopf Algebras and Their Actions on Rings</em> (CBMS, 1993).</li>
+<li>Underwood, <em>Fundamentals of Hopf Algebras</em> (Universitext, 2015).</li>
+</ul>
 <h2>Prerequisite Topics</h2>
 <ul>
-<li><a class="node-ref" data-node-id="foundational_inputs.fields_and_field_extensions" href="foundational_inputs_fields_and_field_extensions.html">Fields and Field Extensions</a></li>
-<li><a class="node-ref" data-node-id="foundational_inputs.local_fields" href="foundational_inputs_local_fields.html">Local Fields</a></li>
+<li><a class="node-ref" data-node-id="commutative_algebra.commutative_algebra" href="commutative_algebra_commutative_algebra.html">Commutative Algebra</a></li>
 </ul>
     
   </div>
@@ -812,7 +912,25 @@ area.</p>
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="../root_data_and_duality/bd_covers/bd_covers_local_and_global_metaplectic_covers.html">Local and Global Metaplectic Covers</a></li>
+      <li><a href="../affine_group_schemes/affine_group_schemes_algebra_hom_convolution.html">Convolution of Algebra Homomorphisms</a></li>
+      
+      <li><a href="../affine_group_schemes/affine_group_schemes_antipode_anti_multiplicativity.html">Antipode of a Hopf Algebra Is Anti-Multiplicative</a></li>
+      
+      <li><a href="../affine_group_schemes/affine_group_schemes_antipode_multiplicativity_commutative_hopf.html">Antipode of a Commutative Hopf Algebra Is Multiplicative</a></li>
+      
+      <li><a href="../affine_group_schemes/affine_group_schemes_comodule_definition.html">Comodule over a Coalgebra</a></li>
+      
+      <li><a href="../affine_group_schemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html">Coordinate Hopf Algebra of an Affine Group Scheme</a></li>
+      
+      <li><a href="../affine_group_schemes/affine_group_schemes_coordinate_rings_and_hopf_algebras.html">Coordinate Rings and Hopf Algebras</a></li>
+      
+      <li><a href="../affine_group_schemes/affine_group_schemes_hopf_spec_functor.html">Spec Functor on Hopf Algebras</a></li>
+      
+      <li><a href="../affine_group_schemes/affine_group_schemes_multiplication_is_coalgebra_hom.html">Multiplication of a Commutative Bialgebra Is a Coalgebra Hom</a></li>
+      
+      <li><a href="../root_data_and_duality/bd_covers/bd_covers_central_extensions_of_algebraic_groups.html">Central Extensions of Algebraic Groups</a></li>
+      
+      <li><a href="../linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html">Definition of Linear Algebraic Groups</a></li>
       
     </ul>
   </section>
@@ -822,7 +940,7 @@ area.</p>
 
   
   <footer class="tags">
-    <span class="tag">external-background</span><span class="tag">global-fields</span><span class="tag">adeles</span><span class="tag">foundational-inputs</span>
+    <span class="tag">external-background</span><span class="tag">hopf-algebras</span><span class="tag">foundational-inputs</span>
   </footer>
   
 </article>

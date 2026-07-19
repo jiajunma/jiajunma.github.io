@@ -252,18 +252,18 @@
       "node_count": 38
     },
     {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
-      "href": "foundational_inputs/index.html",
-      "role": "dependency",
-      "node_count": 8
-    },
-    {
       "id": "linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "href": "linear_algebraic_groups/index.html",
       "role": "dependency",
       "node_count": 31
+    },
+    {
+      "id": "number_theory",
+      "title": "Number Theory",
+      "href": "number_theory/index.html",
+      "role": "dependency",
+      "node_count": 3
     },
     {
       "id": "reductive_structure",
@@ -303,38 +303,38 @@
       "count": 1
     },
     {
-      "from": "topic:foundational_inputs",
-      "to": "buildings_and_parahorics.bruhat_tits_apartments",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
-    },
-    {
-      "from": "topic:foundational_inputs",
-      "to": "buildings_and_parahorics.reductive_groups_over_local_fields",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
-    },
-    {
-      "from": "topic:foundational_inputs",
-      "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
-    },
-    {
-      "from": "topic:foundational_inputs",
-      "to": "buildings_and_parahorics.valued_root_data",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
-    },
-    {
       "from": "topic:linear_algebraic_groups",
       "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
       "kind": "boundary_dependency",
       "topic": "linear_algebraic_groups",
+      "count": 1
+    },
+    {
+      "from": "topic:number_theory",
+      "to": "buildings_and_parahorics.bruhat_tits_apartments",
+      "kind": "boundary_dependency",
+      "topic": "number_theory",
+      "count": 1
+    },
+    {
+      "from": "topic:number_theory",
+      "to": "buildings_and_parahorics.reductive_groups_over_local_fields",
+      "kind": "boundary_dependency",
+      "topic": "number_theory",
+      "count": 1
+    },
+    {
+      "from": "topic:number_theory",
+      "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+      "kind": "boundary_dependency",
+      "topic": "number_theory",
+      "count": 1
+    },
+    {
+      "from": "topic:number_theory",
+      "to": "buildings_and_parahorics.valued_root_data",
+      "kind": "boundary_dependency",
+      "topic": "number_theory",
       "count": 1
     },
     {

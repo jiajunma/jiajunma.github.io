@@ -100,7 +100,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "foundational_inputs.affine_schemes"
+        "algebraic_geometry.affine_schemes"
       ],
       "used_by": [
         "affine_group_schemes.algebraic_group_definition",
@@ -163,8 +163,8 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "foundational_inputs.commutative_algebra",
-        "foundational_inputs.hopf_algebras"
+        "commutative_algebra.commutative_algebra",
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.convolution_of_algebra_homs_is_algebra_hom"
@@ -267,7 +267,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "foundational_inputs.hopf_algebras"
+        "commutative_algebra.hopf_algebras"
       ]
     },
     {
@@ -293,7 +293,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.multiplication_is_coalgebra_hom",
-        "foundational_inputs.hopf_algebras"
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.algebra_hom_composed_with_antipode_is_algebra_hom"
@@ -315,7 +315,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "foundational_inputs.fields_and_field_extensions"
+        "commutative_algebra.fields_and_field_extensions"
       ],
       "used_by": [
         "affine_group_schemes.base_change_preserves_algebraic_group",
@@ -366,7 +366,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "foundational_inputs.hopf_algebras"
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.finite_dim_subcomodule_lemma",
@@ -422,7 +422,7 @@
       "uses": [
         "affine_group_schemes.affine_group_scheme_definition",
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "foundational_inputs.hopf_algebras"
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.additive_group_scheme",
@@ -453,9 +453,9 @@
       ],
       "topic": "affine_group_schemes",
       "uses": [
-        "foundational_inputs.affine_schemes",
-        "foundational_inputs.commutative_algebra",
-        "foundational_inputs.hopf_algebras"
+        "algebraic_geometry.affine_schemes",
+        "commutative_algebra.commutative_algebra",
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.affine_algebraic_groups",
@@ -649,8 +649,8 @@
       "uses": [
         "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
         "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
-        "foundational_inputs.affine_schemes",
-        "foundational_inputs.hopf_algebras"
+        "algebraic_geometry.affine_schemes",
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.hopf_spec_essential_image_affine",
@@ -719,7 +719,7 @@
       ],
       "topic": "affine_group_schemes",
       "uses": [
-        "foundational_inputs.hopf_algebras"
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.antipode_multiplicativity_commutative_hopf"
@@ -933,7 +933,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "foundational_inputs.affine_schemes"
+        "algebraic_geometry.affine_schemes"
       ],
       "used_by": [
         "affine_group_schemes.hopf_spec_grpobj_via_yoneda"
@@ -1066,6 +1066,33 @@
       ]
     },
     {
+      "id": "algebraic_geometry.affine_schemes",
+      "title": "Affine Schemes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "affine-schemes",
+        "foundational-inputs"
+      ],
+      "primary_topic": "algebraic_geometry",
+      "topics": [
+        "algebraic_geometry"
+      ],
+      "topic": "algebraic_geometry",
+      "uses": [
+        "commutative_algebra.commutative_algebra"
+      ],
+      "used_by": [
+        "affine_group_schemes.affine_group_scheme_definition",
+        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "affine_group_schemes.hopf_spec_functor",
+        "affine_group_schemes.spec_representability_via_global_sections",
+        "linear_algebraic_groups.linear_algebraic_group_definition",
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
+      ]
+    },
+    {
       "id": "bd_covers.brylinski_deligne_k2_extensions",
       "title": "Brylinski-Deligne K2-Extensions",
       "kind": "topic",
@@ -1082,7 +1109,7 @@
       "topic": "root_data_and_duality.bd_covers",
       "uses": [
         "bd_covers.central_extensions_of_algebraic_groups",
-        "foundational_inputs.algebraic_k_theory_and_k2",
+        "number_theory.algebraic_k_theory_and_k2",
         "reductive_structure.reductive_groups",
         "root_data_and_duality.root_data"
       ],
@@ -1107,7 +1134,7 @@
       "topic": "root_data_and_duality.bd_covers",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "foundational_inputs.hopf_algebras"
+        "commutative_algebra.hopf_algebras"
       ],
       "used_by": [
         "bd_covers.brylinski_deligne_k2_extensions"
@@ -1173,8 +1200,8 @@
       "topic": "root_data_and_duality.bd_covers",
       "uses": [
         "bd_covers.brylinski_deligne_k2_extensions",
-        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
-        "foundational_inputs.local_fields"
+        "number_theory.global_fields_adeles_and_reciprocity_symbols",
+        "number_theory.local_fields"
       ],
       "used_by": [
         "bd_covers.splittings_over_integral_and_parahoric_subgroups"
@@ -1288,7 +1315,7 @@
         "buildings_and_parahorics.affine_weyl_groups",
         "buildings_and_parahorics.reductive_groups_over_local_fields",
         "buildings_and_parahorics.valued_root_data",
-        "foundational_inputs.local_fields"
+        "number_theory.local_fields"
       ],
       "used_by": [
         "buildings_and_parahorics.bruhat_tits_buildings"
@@ -1439,7 +1466,7 @@
       ],
       "topic": "buildings_and_parahorics",
       "uses": [
-        "foundational_inputs.local_fields",
+        "number_theory.local_fields",
         "reductive_structure.reductive_groups",
         "root_data_and_duality.galois_action_on_root_data"
       ],
@@ -1486,8 +1513,8 @@
       "topic": "buildings_and_parahorics",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "foundational_inputs.local_fields",
-        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+        "number_theory.local_fields"
       ],
       "used_by": [
         "buildings_and_parahorics.parahoric_group_schemes"
@@ -1550,7 +1577,7 @@
       "topic": "buildings_and_parahorics",
       "uses": [
         "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "foundational_inputs.local_fields",
+        "number_theory.local_fields",
         "root_data_and_duality.galois_action_on_root_data",
         "root_data_and_duality.root_data"
       ],
@@ -1598,6 +1625,102 @@
         "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
         "root_data_and_duality.classification_of_split_reductive_groups",
         "root_data_and_duality.root_systems"
+      ]
+    },
+    {
+      "id": "commutative_algebra.basic_combinatorics",
+      "title": "Basic Combinatorics",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "combinatorics",
+        "foundational-inputs"
+      ],
+      "primary_topic": "commutative_algebra",
+      "topics": [
+        "commutative_algebra"
+      ],
+      "topic": "commutative_algebra",
+      "used_by": [
+        "root_data_and_duality.coxeter_systems_and_bruhat_order"
+      ]
+    },
+    {
+      "id": "commutative_algebra.commutative_algebra",
+      "title": "Commutative Algebra",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "commutative-algebra",
+        "foundational-inputs"
+      ],
+      "primary_topic": "commutative_algebra",
+      "topics": [
+        "commutative_algebra"
+      ],
+      "topic": "commutative_algebra",
+      "used_by": [
+        "affine_group_schemes.algebra_hom_convolution",
+        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "algebraic_geometry.affine_schemes",
+        "commutative_algebra.hopf_algebras",
+        "number_theory.algebraic_k_theory_and_k2"
+      ]
+    },
+    {
+      "id": "commutative_algebra.fields_and_field_extensions",
+      "title": "Fields and Field Extensions",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "fields",
+        "foundational-inputs"
+      ],
+      "primary_topic": "commutative_algebra",
+      "topics": [
+        "commutative_algebra"
+      ],
+      "topic": "commutative_algebra",
+      "used_by": [
+        "affine_group_schemes.base_change",
+        "descent_and_forms.galois_groups_and_descent_data",
+        "linear_algebraic_groups.linear_algebraic_group_definition",
+        "number_theory.global_fields_adeles_and_reciprocity_symbols",
+        "number_theory.local_fields"
+      ]
+    },
+    {
+      "id": "commutative_algebra.hopf_algebras",
+      "title": "Hopf Algebras",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "hopf-algebras",
+        "foundational-inputs"
+      ],
+      "primary_topic": "commutative_algebra",
+      "topics": [
+        "commutative_algebra"
+      ],
+      "topic": "commutative_algebra",
+      "uses": [
+        "commutative_algebra.commutative_algebra"
+      ],
+      "used_by": [
+        "affine_group_schemes.algebra_hom_convolution",
+        "affine_group_schemes.antipode_anti_multiplicativity",
+        "affine_group_schemes.antipode_multiplicativity_commutative_hopf",
+        "affine_group_schemes.comodule_definition",
+        "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "affine_group_schemes.hopf_spec_functor",
+        "affine_group_schemes.multiplication_is_coalgebra_hom",
+        "bd_covers.central_extensions_of_algebraic_groups",
+        "linear_algebraic_groups.linear_algebraic_group_definition"
       ]
     },
     {
@@ -2251,7 +2374,7 @@
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
-        "foundational_inputs.fields_and_field_extensions"
+        "commutative_algebra.fields_and_field_extensions"
       ],
       "used_by": [
         "descent_and_forms.f_subgroup_field_of_definition",
@@ -2652,205 +2775,6 @@
       ]
     },
     {
-      "id": "foundational_inputs.affine_schemes",
-      "title": "Affine Schemes",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "affine-schemes",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "uses": [
-        "foundational_inputs.commutative_algebra"
-      ],
-      "used_by": [
-        "affine_group_schemes.affine_group_scheme_definition",
-        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "affine_group_schemes.hopf_spec_functor",
-        "affine_group_schemes.spec_representability_via_global_sections",
-        "linear_algebraic_groups.linear_algebraic_group_definition",
-        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
-      ]
-    },
-    {
-      "id": "foundational_inputs.algebraic_k_theory_and_k2",
-      "title": "Algebraic K-Theory and K2",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "k-theory",
-        "k2",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "uses": [
-        "foundational_inputs.commutative_algebra"
-      ],
-      "used_by": [
-        "bd_covers.brylinski_deligne_k2_extensions"
-      ]
-    },
-    {
-      "id": "foundational_inputs.basic_combinatorics",
-      "title": "Basic Combinatorics",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "combinatorics",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "used_by": [
-        "root_data_and_duality.coxeter_systems_and_bruhat_order"
-      ]
-    },
-    {
-      "id": "foundational_inputs.commutative_algebra",
-      "title": "Commutative Algebra",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "commutative-algebra",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "used_by": [
-        "affine_group_schemes.algebra_hom_convolution",
-        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "foundational_inputs.affine_schemes",
-        "foundational_inputs.algebraic_k_theory_and_k2",
-        "foundational_inputs.hopf_algebras"
-      ]
-    },
-    {
-      "id": "foundational_inputs.fields_and_field_extensions",
-      "title": "Fields and Field Extensions",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "fields",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "used_by": [
-        "affine_group_schemes.base_change",
-        "descent_and_forms.galois_groups_and_descent_data",
-        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
-        "foundational_inputs.local_fields",
-        "linear_algebraic_groups.linear_algebraic_group_definition"
-      ]
-    },
-    {
-      "id": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
-      "title": "Global Fields, Adeles, and Reciprocity Symbols",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "global-fields",
-        "adeles",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "uses": [
-        "foundational_inputs.fields_and_field_extensions",
-        "foundational_inputs.local_fields"
-      ],
-      "used_by": [
-        "bd_covers.local_and_global_metaplectic_covers"
-      ]
-    },
-    {
-      "id": "foundational_inputs.hopf_algebras",
-      "title": "Hopf Algebras",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "hopf-algebras",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "uses": [
-        "foundational_inputs.commutative_algebra"
-      ],
-      "used_by": [
-        "affine_group_schemes.algebra_hom_convolution",
-        "affine_group_schemes.antipode_anti_multiplicativity",
-        "affine_group_schemes.antipode_multiplicativity_commutative_hopf",
-        "affine_group_schemes.comodule_definition",
-        "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
-        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "affine_group_schemes.hopf_spec_functor",
-        "affine_group_schemes.multiplication_is_coalgebra_hom",
-        "bd_covers.central_extensions_of_algebraic_groups",
-        "linear_algebraic_groups.linear_algebraic_group_definition"
-      ]
-    },
-    {
-      "id": "foundational_inputs.local_fields",
-      "title": "Local Fields",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "local-fields",
-        "foundational-inputs"
-      ],
-      "primary_topic": "foundational_inputs",
-      "topics": [
-        "foundational_inputs"
-      ],
-      "topic": "foundational_inputs",
-      "uses": [
-        "foundational_inputs.fields_and_field_extensions"
-      ],
-      "used_by": [
-        "bd_covers.local_and_global_metaplectic_covers",
-        "buildings_and_parahorics.bruhat_tits_apartments",
-        "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
-        "buildings_and_parahorics.valued_root_data",
-        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
-        "kottwitz_structures.kottwitz_homomorphism",
-        "kottwitz_structures.sigma_conjugacy_classes"
-      ]
-    },
-    {
       "id": "kottwitz_structures.admissible_sets",
       "title": "Admissible Sets",
       "kind": "topic",
@@ -2979,8 +2903,8 @@
       ],
       "topic": "root_data_and_duality.kottwitz_structures",
       "uses": [
-        "foundational_inputs.local_fields",
         "kottwitz_structures.algebraic_fundamental_group",
+        "number_theory.local_fields",
         "root_data_and_duality.galois_action_on_root_data"
       ],
       "used_by": [
@@ -3050,7 +2974,7 @@
       "topic": "root_data_and_duality.kottwitz_structures",
       "uses": [
         "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "foundational_inputs.local_fields"
+        "number_theory.local_fields"
       ],
       "used_by": [
         "kottwitz_structures.b_of_g",
@@ -3424,9 +3348,9 @@
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
-        "foundational_inputs.affine_schemes",
-        "foundational_inputs.fields_and_field_extensions",
-        "foundational_inputs.hopf_algebras"
+        "algebraic_geometry.affine_schemes",
+        "commutative_algebra.fields_and_field_extensions",
+        "commutative_algebra.hopf_algebras"
       ]
     },
     {
@@ -3570,7 +3494,7 @@
       "topic": "linear_algebraic_groups",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "foundational_inputs.affine_schemes"
+        "algebraic_geometry.affine_schemes"
       ],
       "used_by": [
         "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
@@ -3624,6 +3548,82 @@
         "affine_group_schemes.algebraic_group_definition",
         "linear_algebraic_groups.embedding_theorem",
         "reductive_structure.unipotent_groups"
+      ]
+    },
+    {
+      "id": "number_theory.algebraic_k_theory_and_k2",
+      "title": "Algebraic K-Theory and K2",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "k-theory",
+        "k2",
+        "foundational-inputs"
+      ],
+      "primary_topic": "number_theory",
+      "topics": [
+        "number_theory"
+      ],
+      "topic": "number_theory",
+      "uses": [
+        "commutative_algebra.commutative_algebra"
+      ],
+      "used_by": [
+        "bd_covers.brylinski_deligne_k2_extensions"
+      ]
+    },
+    {
+      "id": "number_theory.global_fields_adeles_and_reciprocity_symbols",
+      "title": "Global Fields, Adeles, and Reciprocity Symbols",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "global-fields",
+        "adeles",
+        "foundational-inputs"
+      ],
+      "primary_topic": "number_theory",
+      "topics": [
+        "number_theory"
+      ],
+      "topic": "number_theory",
+      "uses": [
+        "commutative_algebra.fields_and_field_extensions",
+        "number_theory.local_fields"
+      ],
+      "used_by": [
+        "bd_covers.local_and_global_metaplectic_covers"
+      ]
+    },
+    {
+      "id": "number_theory.local_fields",
+      "title": "Local Fields",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "local-fields",
+        "foundational-inputs"
+      ],
+      "primary_topic": "number_theory",
+      "topics": [
+        "number_theory"
+      ],
+      "topic": "number_theory",
+      "uses": [
+        "commutative_algebra.fields_and_field_extensions"
+      ],
+      "used_by": [
+        "bd_covers.local_and_global_metaplectic_covers",
+        "buildings_and_parahorics.bruhat_tits_apartments",
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+        "buildings_and_parahorics.valued_root_data",
+        "kottwitz_structures.kottwitz_homomorphism",
+        "kottwitz_structures.sigma_conjugacy_classes",
+        "number_theory.global_fields_adeles_and_reciprocity_symbols"
       ]
     },
     {
@@ -4845,7 +4845,7 @@
       ],
       "topic": "root_data_and_duality",
       "uses": [
-        "foundational_inputs.basic_combinatorics",
+        "commutative_algebra.basic_combinatorics",
         "root_data_and_duality.weyl_groups"
       ],
       "used_by": [
@@ -5682,7 +5682,7 @@
       "to": "affine_group_schemes.affine_group_scheme_definition"
     },
     {
-      "from": "foundational_inputs.affine_schemes",
+      "from": "algebraic_geometry.affine_schemes",
       "to": "affine_group_schemes.affine_group_scheme_definition"
     },
     {
@@ -5694,11 +5694,11 @@
       "to": "affine_group_schemes.algebra_hom_convolution"
     },
     {
-      "from": "foundational_inputs.commutative_algebra",
+      "from": "commutative_algebra.commutative_algebra",
       "to": "affine_group_schemes.algebra_hom_convolution"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.algebra_hom_convolution"
     },
     {
@@ -5718,7 +5718,7 @@
       "to": "affine_group_schemes.antipode_anti_multiplicativity"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.antipode_anti_multiplicativity"
     },
     {
@@ -5726,7 +5726,7 @@
       "to": "affine_group_schemes.antipode_multiplicativity_commutative_hopf"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.antipode_multiplicativity_commutative_hopf"
     },
     {
@@ -5734,7 +5734,7 @@
       "to": "affine_group_schemes.base_change"
     },
     {
-      "from": "foundational_inputs.fields_and_field_extensions",
+      "from": "commutative_algebra.fields_and_field_extensions",
       "to": "affine_group_schemes.base_change"
     },
     {
@@ -5750,7 +5750,7 @@
       "to": "affine_group_schemes.comodule_definition"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.comodule_definition"
     },
     {
@@ -5766,19 +5766,19 @@
       "to": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme"
     },
     {
-      "from": "foundational_inputs.affine_schemes",
+      "from": "algebraic_geometry.affine_schemes",
       "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras"
     },
     {
-      "from": "foundational_inputs.commutative_algebra",
+      "from": "commutative_algebra.commutative_algebra",
       "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras"
     },
     {
@@ -5830,11 +5830,11 @@
       "to": "affine_group_schemes.hopf_spec_functor"
     },
     {
-      "from": "foundational_inputs.affine_schemes",
+      "from": "algebraic_geometry.affine_schemes",
       "to": "affine_group_schemes.hopf_spec_functor"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.hopf_spec_functor"
     },
     {
@@ -5850,7 +5850,7 @@
       "to": "affine_group_schemes.hopf_spec_grpobj_via_yoneda"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "affine_group_schemes.multiplication_is_coalgebra_hom"
     },
     {
@@ -5914,7 +5914,7 @@
       "to": "affine_group_schemes.spec_representability_via_global_sections"
     },
     {
-      "from": "foundational_inputs.affine_schemes",
+      "from": "algebraic_geometry.affine_schemes",
       "to": "affine_group_schemes.spec_representability_via_global_sections"
     },
     {
@@ -5970,11 +5970,15 @@
       "to": "affine_group_schemes.trivial_representation_example"
     },
     {
+      "from": "commutative_algebra.commutative_algebra",
+      "to": "algebraic_geometry.affine_schemes"
+    },
+    {
       "from": "bd_covers.central_extensions_of_algebraic_groups",
       "to": "bd_covers.brylinski_deligne_k2_extensions"
     },
     {
-      "from": "foundational_inputs.algebraic_k_theory_and_k2",
+      "from": "number_theory.algebraic_k_theory_and_k2",
       "to": "bd_covers.brylinski_deligne_k2_extensions"
     },
     {
@@ -5990,7 +5994,7 @@
       "to": "bd_covers.central_extensions_of_algebraic_groups"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "bd_covers.central_extensions_of_algebraic_groups"
     },
     {
@@ -6018,11 +6022,11 @@
       "to": "bd_covers.local_and_global_metaplectic_covers"
     },
     {
-      "from": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+      "from": "number_theory.global_fields_adeles_and_reciprocity_symbols",
       "to": "bd_covers.local_and_global_metaplectic_covers"
     },
     {
-      "from": "foundational_inputs.local_fields",
+      "from": "number_theory.local_fields",
       "to": "bd_covers.local_and_global_metaplectic_covers"
     },
     {
@@ -6070,7 +6074,7 @@
       "to": "buildings_and_parahorics.bruhat_tits_apartments"
     },
     {
-      "from": "foundational_inputs.local_fields",
+      "from": "number_theory.local_fields",
       "to": "buildings_and_parahorics.bruhat_tits_apartments"
     },
     {
@@ -6114,7 +6118,7 @@
       "to": "buildings_and_parahorics.parahoric_subgroups"
     },
     {
-      "from": "foundational_inputs.local_fields",
+      "from": "number_theory.local_fields",
       "to": "buildings_and_parahorics.reductive_groups_over_local_fields"
     },
     {
@@ -6134,11 +6138,11 @@
       "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
     },
     {
-      "from": "foundational_inputs.local_fields",
+      "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
       "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
     },
     {
-      "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "from": "number_theory.local_fields",
       "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
     },
     {
@@ -6162,7 +6166,7 @@
       "to": "buildings_and_parahorics.valued_root_data"
     },
     {
-      "from": "foundational_inputs.local_fields",
+      "from": "number_theory.local_fields",
       "to": "buildings_and_parahorics.valued_root_data"
     },
     {
@@ -6200,6 +6204,10 @@
     {
       "from": "root_data_and_duality.root_systems",
       "to": "classical_and_exceptional_groups.exceptional_groups"
+    },
+    {
+      "from": "commutative_algebra.commutative_algebra",
+      "to": "commutative_algebra.hopf_algebras"
     },
     {
       "from": "conjugacy_classes.lie_algebras_of_reductive_groups",
@@ -6498,7 +6506,7 @@
       "to": "descent_and_forms.galois_cohomology"
     },
     {
-      "from": "foundational_inputs.fields_and_field_extensions",
+      "from": "commutative_algebra.fields_and_field_extensions",
       "to": "descent_and_forms.galois_groups_and_descent_data"
     },
     {
@@ -6654,30 +6662,6 @@
       "to": "descent_and_forms.vogan_diagrams"
     },
     {
-      "from": "foundational_inputs.commutative_algebra",
-      "to": "foundational_inputs.affine_schemes"
-    },
-    {
-      "from": "foundational_inputs.commutative_algebra",
-      "to": "foundational_inputs.algebraic_k_theory_and_k2"
-    },
-    {
-      "from": "foundational_inputs.fields_and_field_extensions",
-      "to": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols"
-    },
-    {
-      "from": "foundational_inputs.local_fields",
-      "to": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols"
-    },
-    {
-      "from": "foundational_inputs.commutative_algebra",
-      "to": "foundational_inputs.hopf_algebras"
-    },
-    {
-      "from": "foundational_inputs.fields_and_field_extensions",
-      "to": "foundational_inputs.local_fields"
-    },
-    {
       "from": "buildings_and_parahorics.affine_weyl_groups",
       "to": "kottwitz_structures.admissible_sets"
     },
@@ -6726,11 +6710,11 @@
       "to": "kottwitz_structures.isocrystals_with_g_structure"
     },
     {
-      "from": "foundational_inputs.local_fields",
+      "from": "kottwitz_structures.algebraic_fundamental_group",
       "to": "kottwitz_structures.kottwitz_homomorphism"
     },
     {
-      "from": "kottwitz_structures.algebraic_fundamental_group",
+      "from": "number_theory.local_fields",
       "to": "kottwitz_structures.kottwitz_homomorphism"
     },
     {
@@ -6758,7 +6742,7 @@
       "to": "kottwitz_structures.sigma_conjugacy_classes"
     },
     {
-      "from": "foundational_inputs.local_fields",
+      "from": "number_theory.local_fields",
       "to": "kottwitz_structures.sigma_conjugacy_classes"
     },
     {
@@ -6886,15 +6870,15 @@
       "to": "linear_algebraic_groups.lie_algebra_of_algebraic_group"
     },
     {
-      "from": "foundational_inputs.affine_schemes",
+      "from": "algebraic_geometry.affine_schemes",
       "to": "linear_algebraic_groups.linear_algebraic_group_definition"
     },
     {
-      "from": "foundational_inputs.fields_and_field_extensions",
+      "from": "commutative_algebra.fields_and_field_extensions",
       "to": "linear_algebraic_groups.linear_algebraic_group_definition"
     },
     {
-      "from": "foundational_inputs.hopf_algebras",
+      "from": "commutative_algebra.hopf_algebras",
       "to": "linear_algebraic_groups.linear_algebraic_group_definition"
     },
     {
@@ -6942,7 +6926,7 @@
       "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
     },
     {
-      "from": "foundational_inputs.affine_schemes",
+      "from": "algebraic_geometry.affine_schemes",
       "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
     },
     {
@@ -6968,6 +6952,22 @@
     {
       "from": "reductive_structure.unipotent_groups",
       "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable"
+    },
+    {
+      "from": "commutative_algebra.commutative_algebra",
+      "to": "number_theory.algebraic_k_theory_and_k2"
+    },
+    {
+      "from": "commutative_algebra.fields_and_field_extensions",
+      "to": "number_theory.global_fields_adeles_and_reciprocity_symbols"
+    },
+    {
+      "from": "number_theory.local_fields",
+      "to": "number_theory.global_fields_adeles_and_reciprocity_symbols"
+    },
+    {
+      "from": "commutative_algebra.fields_and_field_extensions",
+      "to": "number_theory.local_fields"
     },
     {
       "from": "linear_algebraic_groups.linear_algebraic_groups",
@@ -7478,7 +7478,7 @@
       "to": "root_data_and_duality.classification_of_split_reductive_groups"
     },
     {
-      "from": "foundational_inputs.basic_combinatorics",
+      "from": "commutative_algebra.basic_combinatorics",
       "to": "root_data_and_duality.coxeter_systems_and_bruhat_order"
     },
     {

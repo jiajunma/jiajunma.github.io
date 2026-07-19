@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 64,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 8,
+    "boundary_topics": 9,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 73,
-    "visible_nodes_with_selected_proof_plans": 73
+    "visible_nodes_without_proof_plans": 74,
+    "visible_nodes_with_selected_proof_plans": 74
   },
   "nodes": [
     {
@@ -1218,6 +1218,13 @@
       "node_count": 16
     },
     {
+      "id": "commutative_algebra",
+      "title": "Commutative Algebra",
+      "href": "commutative_algebra/index.html",
+      "role": "dependency",
+      "node_count": 4
+    },
+    {
       "id": "conjugacy_classes",
       "title": "Conjugacy Classes",
       "href": "conjugacy_classes/index.html",
@@ -1232,18 +1239,18 @@
       "node_count": 32
     },
     {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
-      "href": "foundational_inputs/index.html",
-      "role": "dependency",
-      "node_count": 8
-    },
-    {
       "id": "linear_algebraic_groups.classical_and_exceptional_groups",
       "title": "Linear Algebraic Groups.Classical And Exceptional Groups",
       "href": "linear_algebraic_groups/classical_and_exceptional_groups/index.html",
       "role": "dependent",
       "node_count": 5
+    },
+    {
+      "id": "number_theory",
+      "title": "Number Theory",
+      "href": "number_theory/index.html",
+      "role": "dependency",
+      "node_count": 3
     },
     {
       "id": "reductive_structure",
@@ -1297,6 +1304,20 @@
       "count": 1
     },
     {
+      "from": "topic:commutative_algebra",
+      "to": "bd_covers.central_extensions_of_algebraic_groups",
+      "kind": "boundary_dependency",
+      "topic": "commutative_algebra",
+      "count": 1
+    },
+    {
+      "from": "topic:commutative_algebra",
+      "to": "root_data_and_duality.coxeter_systems_and_bruhat_order",
+      "kind": "boundary_dependency",
+      "topic": "commutative_algebra",
+      "count": 1
+    },
+    {
       "from": "topic:descent_and_forms",
       "to": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
       "kind": "boundary_dependency",
@@ -1311,45 +1332,31 @@
       "count": 1
     },
     {
-      "from": "topic:foundational_inputs",
+      "from": "topic:number_theory",
       "to": "bd_covers.brylinski_deligne_k2_extensions",
       "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
+      "topic": "number_theory",
       "count": 1
     },
     {
-      "from": "topic:foundational_inputs",
-      "to": "bd_covers.central_extensions_of_algebraic_groups",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
-    },
-    {
-      "from": "topic:foundational_inputs",
+      "from": "topic:number_theory",
       "to": "bd_covers.local_and_global_metaplectic_covers",
       "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
+      "topic": "number_theory",
       "count": 2
     },
     {
-      "from": "topic:foundational_inputs",
+      "from": "topic:number_theory",
       "to": "kottwitz_structures.kottwitz_homomorphism",
       "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
+      "topic": "number_theory",
       "count": 1
     },
     {
-      "from": "topic:foundational_inputs",
+      "from": "topic:number_theory",
       "to": "kottwitz_structures.sigma_conjugacy_classes",
       "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
-    },
-    {
-      "from": "topic:foundational_inputs",
-      "to": "root_data_and_duality.coxeter_systems_and_bruhat_order",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
+      "topic": "number_theory",
       "count": 1
     },
     {

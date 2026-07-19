@@ -1,0 +1,54 @@
+{
+  "id": "algebraic_geometry.affine_schemes",
+  "title": "Affine Schemes",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "algebraic_geometry/algebraic_geometry_affine_schemes.html",
+  "primary_topic": "algebraic_geometry",
+  "topics": [
+    "algebraic_geometry"
+  ],
+  "body_html": "<h1>Affine Schemes</h1>\n<p>The category of <strong>affine schemes</strong> is the opposite of the category of\ncommutative rings:</p>\n<p>\\[\n\\mathsf{AffSch} \\;\\simeq\\; \\mathsf{CommRing}^{\\mathrm{op}}, \\qquad\nR \\;\\longleftrightarrow\\; \\operatorname{Spec} R.\n\\]</p>\n<p>This duality is the bridge between commutative algebra and algebraic\ngeometry, and the foundation on which the entire Langlands roadmap is\nbuilt.</p>\n<h2>Definition</h2>\n<p>An <strong>affine scheme</strong> is a locally ringed space \\(X = \\operatorname{Spec} R\\)\nwhere \\(R\\) is a commutative ring, the underlying topological space is\nthe prime spectrum (set of prime ideals with the Zariski topology), and\nthe structure sheaf \\(\\mathcal{O}_X\\) localises to \\(R_\\mathfrak{p}\\) at\neach prime \\(\\mathfrak{p}\\).</p>\n<h2>The Spec functor</h2>\n<p>\\(\\operatorname{Spec} : \\mathsf{CommRing}^{\\mathrm{op}} \\to \\mathsf{Scheme}\\)\nis fully faithful. Its essential image is the full subcategory of\naffine schemes. The left adjoint is the <strong>global sections</strong> functor\n\\(\\Gamma : \\mathsf{Scheme}^{\\mathrm{op}} \\to \\mathsf{CommRing}\\),\n\\(X \\mapsto \\Gamma(X, \\mathcal{O}_X)\\).</p>\n<p>The unit of the adjunction \\(X \\to \\operatorname{Spec} \\Gamma(X, \\mathcal{O}_X)\\)\nis an isomorphism iff \\(X\\) is affine.</p>\n<h2>Why affine schemes are central</h2>\n<ul>\n<li>They form the basic open cover of any scheme.</li>\n<li>Many properties (affine, finite type, smooth) reduce locally to\n  ring-theoretic conditions.</li>\n<li>Group schemes that are affine over a base ring are exactly Hopf\n  algebras (see\n  <a class=\"node-ref\" data-node-id=\"commutative_algebra.hopf_algebras\" href=\"../commutative_algebra/commutative_algebra_hopf_algebras.html\">Hopf algebras</a>\n  and [[node:affine_group_schemes.coordinate_rings_and_hopf_algebras|coordinate\n  rings and Hopf algebras]]).</li>\n</ul>\n<h2>Basic examples</h2>\n<table>\n<thead>\n<tr>\n<th>Affine scheme</th>\n<th>Ring</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\\(\\operatorname{Spec} \\mathbb{Z}\\)</td>\n<td>\\(\\mathbb{Z}\\)</td>\n</tr>\n<tr>\n<td>\\(\\operatorname{Spec} \\mathbb{Z}[T] = \\mathbb{A}^1_{\\mathbb{Z}}\\)</td>\n<td>polynomial ring</td>\n</tr>\n<tr>\n<td>\\(\\operatorname{Spec} \\mathbb{Z}[T_1, \\dots, T_n] = \\mathbb{A}^n_{\\mathbb{Z}}\\)</td>\n<td>multi-variable polynomial</td>\n</tr>\n<tr>\n<td>\\(\\operatorname{Spec} \\mathbb{Z}[T, T^{-1}] = \\mathbb{A}^1 \\setminus \\{0\\}\\)</td>\n<td>Laurent polynomials</td>\n</tr>\n<tr>\n<td>\\(\\operatorname{Spec} R/I\\)</td>\n<td>quotient ring → closed subscheme of \\(\\operatorname{Spec} R\\)</td>\n</tr>\n</tbody>\n</table>\n<h2>Properties preserved by Spec</h2>\n<ul>\n<li>Ring homomorphism injective ↔ Spec dominant</li>\n<li>Ring hom surjective ↔ Spec closed immersion</li>\n<li>Ring hom finite type ↔ Spec locally of finite type</li>\n<li>Ring is Noetherian ↔ Spec locally Noetherian</li>\n<li>Ring is reduced/integral ↔ Spec reduced/integral</li>\n</ul>\n<h2>Over a base</h2>\n<p>For a fixed base ring \\(R\\), an <strong>\\(R\\)-affine scheme</strong> is an affine\nscheme \\(X = \\operatorname{Spec} A\\) with a chosen ring homomorphism\n\\(R \\to A\\) (equivalently, a chosen morphism\n\\(\\operatorname{Spec} A \\to \\operatorname{Spec} R\\)). The category of\nsuch is</p>\n<p>\\[\n\\mathsf{AffSch}_R \\;\\simeq\\; (\\mathsf{CommAlg}_R)^{\\mathrm{op}}.\n\\]</p>\n<p>This is the setting in which group schemes over \\(\\operatorname{Spec} R\\)\nare formalised in this project.</p>\n<h2>Mathlib formalisation</h2>\n<ul>\n<li><code>Mathlib.AlgebraicGeometry.Scheme</code> — Schemes as locally ringed\n  spaces.</li>\n<li><code>Mathlib.AlgebraicGeometry.AffineScheme</code> — Affine schemes.</li>\n<li><code>Mathlib.AlgebraicGeometry.GammaSpecAdjunction</code> — The <code>Γ ⊣ Spec</code>\n  adjunction.</li>\n<li><code>Mathlib.CategoryTheory.Comma.Over</code> — Over-categories for \"over a\n  base\".</li>\n</ul>\n<p>In this project, <a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_functor\" href=\"../affine_group_schemes/affine_group_schemes_hopf_spec_functor.html\">&lt;code&gt;hopfSpec&lt;/code&gt;</a>\nis the lift of <code>Spec</code> to Hopf algebras, producing affine group schemes.</p>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"commutative_algebra.commutative_algebra\" href=\"../commutative_algebra/commutative_algebra_commutative_algebra.html\">Commutative Algebra</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "commutative_algebra.commutative_algebra",
+      "title": "Commutative Algebra",
+      "href": "commutative_algebra/commutative_algebra_commutative_algebra.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "affine_group_schemes.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+      "title": "Coordinate Rings and Hopf Algebras",
+      "href": "affine_group_schemes/affine_group_schemes_coordinate_rings_and_hopf_algebras.html"
+    },
+    {
+      "id": "affine_group_schemes.hopf_spec_functor",
+      "title": "Spec Functor on Hopf Algebras",
+      "href": "affine_group_schemes/affine_group_schemes_hopf_spec_functor.html"
+    },
+    {
+      "id": "affine_group_schemes.spec_representability_via_global_sections",
+      "title": "Hom Into Spec via Global Sections (Spec ⊣ Γ Adjunction)",
+      "href": "affine_group_schemes/affine_group_schemes_spec_representability_via_global_sections.html"
+    },
+    {
+      "id": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "title": "Definition of Linear Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "title": "Smoothness, Tangent Spaces, and Lie Algebras",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_smoothness_tangent_spaces_lie_algebras.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

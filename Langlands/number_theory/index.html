@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic Combinatorics — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>number_theory — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -36,7 +36,15 @@
         </li>
       
         <li class="topic-leaf">
+          <a href="../algebraic_geometry/index.html">Algebraic Geometry</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../buildings_and_parahorics/index.html">Buildings And Parahorics</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../commutative_algebra/index.html">Commutative Algebra</a>
         </li>
       
         <li class="topic-leaf">
@@ -47,10 +55,6 @@
           <a href="../descent_and_forms/index.html">Descent And Forms</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../foundational_inputs/index.html">Foundational Inputs</a>
-        </li>
-      
         <li class="topic-parent">
           <details data-topic-root="linear_algebraic_groups">
             <summary><a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a></summary>
@@ -58,6 +62,10 @@
           <a href="../linear_algebraic_groups/classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
         </li></ul>
           </details>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../number_theory/index.html">Number Theory</a>
         </li>
       
         <li class="topic-leaf">
@@ -676,121 +684,47 @@
   </nav>
   <main>
     
-<article class="topic_thmwrapper theorem-style-topic node-page" id="node-foundational_inputs-2e-basic_combinatorics">
-  <header class="topic_thmheading thm-heading">
-    <span class="topic_thmcaption thm-caption">Topic</span>
-    <span class="topic_thmtitle thm-title">Basic Combinatorics</span>
-    <div class="thm_header_extras">
-      
-      <span class="badge kind-topic">topic</span>
-      <span class="badge status-admitted">admitted</span>
-    </div>
-    <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-foundational_inputs-2e-basic_combinatorics">#</a>
-      
-      
-    </div>
-  </header>
+<h1>Number Theory</h1>
 
-  
-
-  
-
-  <div class="topic_thmcontent thm-content body">
-    <h1>Basic Combinatorics</h1>
-<p>Several pieces of elementary combinatorics underpin the structure
-theory of reductive groups and the classification of their
-representations. This topic collects what is needed without
-duplicating Mathlib's <code>Combinatorics.*</code> directory.</p>
-<h2>Finite sets, multisets, sequences</h2>
-<ul>
-<li>Cardinality, bijections, finite group actions on finite sets.</li>
-<li>Multisets and partitions of integers.</li>
-<li>Sequences and tuples; the symmetric group \(S_n\) acting on
-  \([n]\)-indexed structures.</li>
-</ul>
-<h2>Partitions and Young diagrams</h2>
-<p>A <strong>partition</strong> of \(n\) is a non-increasing sequence
-\(\lambda = (\lambda_1, \lambda_2, \dots)\) of non-negative integers
-summing to \(n\). Pictorially: a <strong>Young diagram</strong> with \(\lambda_i\)
-boxes in row \(i\).</p>
-<p>Partitions parametrise:</p>
-<ul>
-<li>conjugacy classes of \(S_n\) (cycle types);</li>
-<li>irreducible representations of \(S_n\) (Specht modules);</li>
-<li>nilpotent conjugacy classes of \(\mathfrak{gl}_n\) (and via Jordan
-  blocks, of \(\operatorname{GL}_n\));</li>
-<li>via the Bala–Carter labels, nilpotent classes in exceptional Lie
-  algebras (see
-  [[node:conjugacy_classes.bala_carter_classification|Bala–Carter
-  classification]]).</li>
-</ul>
-<h2>Coxeter groups and Bruhat order</h2>
-<p>A <strong>Coxeter group</strong> is a group presented by reflection-type generators
-satisfying braid relations:</p>
-<p>\[
-W \;=\; \langle s_1, \dots, s_n \mid (s_i s_j)^{m_{ij}} = 1 \rangle.
-\]</p>
-<p>For a Coxeter system \((W, S)\):</p>
-<ul>
-<li><strong>Length function</strong> \(\ell : W \to \mathbb{N}\) (minimal word length
-  in generators);</li>
-<li><strong>Bruhat order</strong>: \(u \le v\) iff a reduced word for \(u\) is a
-  subword of some reduced word for \(v\);</li>
-<li><strong>Weak orders</strong> (left and right);</li>
-<li><strong>Exchange and deletion properties</strong>.</li>
-</ul>
-<p>The Weyl group of a reductive group is naturally a Coxeter group, and
-the Bruhat decomposition of \(G\) is indexed by \(W\).</p>
-<h2>Posets and lattices</h2>
-<p>The character lattice \(X^*(T)\) and cocharacter lattice \(X_*(T)\) of
-a torus \(T\) are free abelian groups; under the perfect pairing
-\(X^*(T) \otimes X_*(T) \to \mathbb{Z}\), they are dual as
-\(\mathbb{Z}\)-modules. The pair carries combinatorial structure
-(coroots, dominant weights, fundamental Weyl chamber).</p>
-<h2>Graphs and Dynkin diagrams</h2>
-<p>A <strong>Dynkin diagram</strong> is a finite graph (with extra edge data: simple,
-double, triple, or directed) encoding a Cartan matrix. The classification
-\(A_n, B_n, C_n, D_n, E_6, E_7, E_8, F_4, G_2\) is one of the most
-celebrated combinatorial results in mathematics; see
-<a class="node-ref" data-node-id="root_data_and_duality.based_root_data" href="../root_data_and_duality/root_data_and_duality_based_root_data.html">based root data</a>.</p>
-<h2>Mathlib formalisation</h2>
-<ul>
-<li><code>Mathlib.Combinatorics.*</code> — General combinatorics.</li>
-<li><code>Mathlib.GroupTheory.Coxeter.*</code> — Coxeter groups.</li>
-<li><code>Mathlib.Combinatorics.Young.*</code> — Young diagrams.</li>
-</ul>
-<h2>References</h2>
-<ul>
-<li>Stanley, <em>Enumerative Combinatorics</em> (vols. 1–2).</li>
-<li>Humphreys, <em>Reflection Groups and Coxeter Groups</em> (CUP, 1990).</li>
-<li>Björner–Brenti, <em>Combinatorics of Coxeter Groups</em> (Springer GTM 231,
-  2005).</li>
-</ul>
+<div class="topic-meta">
+  <div class="topic-stats">
+    <span class="topic-node-count">3 nodes</span>
+    
+    <span class="badge status-admitted">3 admitted</span>
     
   </div>
+  
+</div>
 
-  
 
-  
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="../root_data_and_duality/root_data_and_duality_coxeter_systems_and_bruhat_order.html">Coxeter Systems and Bruhat Order</a></li>
-      
-    </ul>
-  </section>
-  
 
+<div class="blueprint-node-list">
   
-
+  <article class="topic_thmwrapper theorem-style-topic summary-node">
+    <header class="topic_thmheading thm-heading">
+      <span class="topic_thmcaption thm-caption">Topic</span>
+      <a class="topic_thmtitle thm-title" href="number_theory_algebraic_k_theory_and_k2.html">Algebraic K-Theory and K2</a>
+      <span class="badge status-admitted">admitted</span>
+    </header>
+  </article>
   
-  <footer class="tags">
-    <span class="tag">external-background</span><span class="tag">combinatorics</span><span class="tag">foundational-inputs</span>
-  </footer>
+  <article class="topic_thmwrapper theorem-style-topic summary-node">
+    <header class="topic_thmheading thm-heading">
+      <span class="topic_thmcaption thm-caption">Topic</span>
+      <a class="topic_thmtitle thm-title" href="number_theory_global_fields_adeles_and_reciprocity_symbols.html">Global Fields, Adeles, and Reciprocity Symbols</a>
+      <span class="badge status-admitted">admitted</span>
+    </header>
+  </article>
   
-</article>
+  <article class="topic_thmwrapper theorem-style-topic summary-node">
+    <header class="topic_thmheading thm-heading">
+      <span class="topic_thmcaption thm-caption">Topic</span>
+      <a class="topic_thmtitle thm-title" href="number_theory_local_fields.html">Local Fields</a>
+      <span class="badge status-admitted">admitted</span>
+    </header>
+  </article>
+  
+</div>
 
   </main>
   <script src="../graph.js"></script>

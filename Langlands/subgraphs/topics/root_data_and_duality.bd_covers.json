@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 12,
-    "visible_nodes_with_selected_proof_plans": 12
+    "visible_nodes_without_proof_plans": 13,
+    "visible_nodes_with_selected_proof_plans": 13
   },
   "nodes": [
     {
@@ -114,11 +114,18 @@
       "node_count": 16
     },
     {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
-      "href": "foundational_inputs/index.html",
+      "id": "commutative_algebra",
+      "title": "Commutative Algebra",
+      "href": "commutative_algebra/index.html",
       "role": "dependency",
-      "node_count": 8
+      "node_count": 4
+    },
+    {
+      "id": "number_theory",
+      "title": "Number Theory",
+      "href": "number_theory/index.html",
+      "role": "dependency",
+      "node_count": 3
     },
     {
       "id": "reductive_structure",
@@ -151,24 +158,24 @@
       "count": 1
     },
     {
-      "from": "topic:foundational_inputs",
-      "to": "bd_covers.brylinski_deligne_k2_extensions",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
-    },
-    {
-      "from": "topic:foundational_inputs",
+      "from": "topic:commutative_algebra",
       "to": "bd_covers.central_extensions_of_algebraic_groups",
       "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
+      "topic": "commutative_algebra",
       "count": 1
     },
     {
-      "from": "topic:foundational_inputs",
+      "from": "topic:number_theory",
+      "to": "bd_covers.brylinski_deligne_k2_extensions",
+      "kind": "boundary_dependency",
+      "topic": "number_theory",
+      "count": 1
+    },
+    {
+      "from": "topic:number_theory",
       "to": "bd_covers.local_and_global_metaplectic_covers",
       "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
+      "topic": "number_theory",
       "count": 2
     },
     {

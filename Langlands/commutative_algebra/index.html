@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Affine Schemes — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>commutative_algebra — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -36,7 +36,15 @@
         </li>
       
         <li class="topic-leaf">
+          <a href="../algebraic_geometry/index.html">Algebraic Geometry</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../buildings_and_parahorics/index.html">Buildings And Parahorics</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../commutative_algebra/index.html">Commutative Algebra</a>
         </li>
       
         <li class="topic-leaf">
@@ -47,10 +55,6 @@
           <a href="../descent_and_forms/index.html">Descent And Forms</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../foundational_inputs/index.html">Foundational Inputs</a>
-        </li>
-      
         <li class="topic-parent">
           <details data-topic-root="linear_algebraic_groups">
             <summary><a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a></summary>
@@ -58,6 +62,10 @@
           <a href="../linear_algebraic_groups/classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
         </li></ul>
           </details>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../number_theory/index.html">Number Theory</a>
         </li>
       
         <li class="topic-leaf">
@@ -676,175 +684,55 @@
   </nav>
   <main>
     
-<article class="topic_thmwrapper theorem-style-topic node-page" id="node-foundational_inputs-2e-affine_schemes">
-  <header class="topic_thmheading thm-heading">
-    <span class="topic_thmcaption thm-caption">Topic</span>
-    <span class="topic_thmtitle thm-title">Affine Schemes</span>
-    <div class="thm_header_extras">
-      
-      <span class="badge kind-topic">topic</span>
-      <span class="badge status-admitted">admitted</span>
-    </div>
-    <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-foundational_inputs-2e-affine_schemes">#</a>
-      
-      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
-      
-      
-    </div>
-  </header>
+<h1>Commutative Algebra</h1>
 
-  
-  <div class="modal-container" id="uses-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li><a href="foundational_inputs_commutative_algebra.html">Commutative Algebra</a></li>
-        
-      </ul>
-    </div>
-  </div>
-  
-
-  
-
-  <div class="topic_thmcontent thm-content body">
-    <h1>Affine Schemes</h1>
-<p>The category of <strong>affine schemes</strong> is the opposite of the category of
-commutative rings:</p>
-<p>\[
-\mathsf{AffSch} \;\simeq\; \mathsf{CommRing}^{\mathrm{op}}, \qquad
-R \;\longleftrightarrow\; \operatorname{Spec} R.
-\]</p>
-<p>This duality is the bridge between commutative algebra and algebraic
-geometry, and the foundation on which the entire Langlands roadmap is
-built.</p>
-<h2>Definition</h2>
-<p>An <strong>affine scheme</strong> is a locally ringed space \(X = \operatorname{Spec} R\)
-where \(R\) is a commutative ring, the underlying topological space is
-the prime spectrum (set of prime ideals with the Zariski topology), and
-the structure sheaf \(\mathcal{O}_X\) localises to \(R_\mathfrak{p}\) at
-each prime \(\mathfrak{p}\).</p>
-<h2>The Spec functor</h2>
-<p>\(\operatorname{Spec} : \mathsf{CommRing}^{\mathrm{op}} \to \mathsf{Scheme}\)
-is fully faithful. Its essential image is the full subcategory of
-affine schemes. The left adjoint is the <strong>global sections</strong> functor
-\(\Gamma : \mathsf{Scheme}^{\mathrm{op}} \to \mathsf{CommRing}\),
-\(X \mapsto \Gamma(X, \mathcal{O}_X)\).</p>
-<p>The unit of the adjunction \(X \to \operatorname{Spec} \Gamma(X, \mathcal{O}_X)\)
-is an isomorphism iff \(X\) is affine.</p>
-<h2>Why affine schemes are central</h2>
-<ul>
-<li>They form the basic open cover of any scheme.</li>
-<li>Many properties (affine, finite type, smooth) reduce locally to
-  ring-theoretic conditions.</li>
-<li>Group schemes that are affine over a base ring are exactly Hopf
-  algebras (see
-  <a class="node-ref" data-node-id="foundational_inputs.hopf_algebras" href="foundational_inputs_hopf_algebras.html">Hopf algebras</a>
-  and [[node:affine_group_schemes.coordinate_rings_and_hopf_algebras|coordinate
-  rings and Hopf algebras]]).</li>
-</ul>
-<h2>Basic examples</h2>
-<table>
-<thead>
-<tr>
-<th>Affine scheme</th>
-<th>Ring</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\(\operatorname{Spec} \mathbb{Z}\)</td>
-<td>\(\mathbb{Z}\)</td>
-</tr>
-<tr>
-<td>\(\operatorname{Spec} \mathbb{Z}[T] = \mathbb{A}^1_{\mathbb{Z}}\)</td>
-<td>polynomial ring</td>
-</tr>
-<tr>
-<td>\(\operatorname{Spec} \mathbb{Z}[T_1, \dots, T_n] = \mathbb{A}^n_{\mathbb{Z}}\)</td>
-<td>multi-variable polynomial</td>
-</tr>
-<tr>
-<td>\(\operatorname{Spec} \mathbb{Z}[T, T^{-1}] = \mathbb{A}^1 \setminus \{0\}\)</td>
-<td>Laurent polynomials</td>
-</tr>
-<tr>
-<td>\(\operatorname{Spec} R/I\)</td>
-<td>quotient ring → closed subscheme of \(\operatorname{Spec} R\)</td>
-</tr>
-</tbody>
-</table>
-<h2>Properties preserved by Spec</h2>
-<ul>
-<li>Ring homomorphism injective ↔ Spec dominant</li>
-<li>Ring hom surjective ↔ Spec closed immersion</li>
-<li>Ring hom finite type ↔ Spec locally of finite type</li>
-<li>Ring is Noetherian ↔ Spec locally Noetherian</li>
-<li>Ring is reduced/integral ↔ Spec reduced/integral</li>
-</ul>
-<h2>Over a base</h2>
-<p>For a fixed base ring \(R\), an <strong>\(R\)-affine scheme</strong> is an affine
-scheme \(X = \operatorname{Spec} A\) with a chosen ring homomorphism
-\(R \to A\) (equivalently, a chosen morphism
-\(\operatorname{Spec} A \to \operatorname{Spec} R\)). The category of
-such is</p>
-<p>\[
-\mathsf{AffSch}_R \;\simeq\; (\mathsf{CommAlg}_R)^{\mathrm{op}}.
-\]</p>
-<p>This is the setting in which group schemes over \(\operatorname{Spec} R\)
-are formalised in this project.</p>
-<h2>Mathlib formalisation</h2>
-<ul>
-<li><code>Mathlib.AlgebraicGeometry.Scheme</code> — Schemes as locally ringed
-  spaces.</li>
-<li><code>Mathlib.AlgebraicGeometry.AffineScheme</code> — Affine schemes.</li>
-<li><code>Mathlib.AlgebraicGeometry.GammaSpecAdjunction</code> — The <code>Γ ⊣ Spec</code>
-  adjunction.</li>
-<li><code>Mathlib.CategoryTheory.Comma.Over</code> — Over-categories for "over a
-  base".</li>
-</ul>
-<p>In this project, <a class="node-ref" data-node-id="affine_group_schemes.hopf_spec_functor" href="../affine_group_schemes/affine_group_schemes_hopf_spec_functor.html">&lt;code&gt;hopfSpec&lt;/code&gt;</a>
-is the lift of <code>Spec</code> to Hopf algebras, producing affine group schemes.</p>
-<h2>Prerequisite Topics</h2>
-<ul>
-<li><a class="node-ref" data-node-id="foundational_inputs.commutative_algebra" href="foundational_inputs_commutative_algebra.html">Commutative Algebra</a></li>
-</ul>
+<div class="topic-meta">
+  <div class="topic-stats">
+    <span class="topic-node-count">4 nodes</span>
+    
+    <span class="badge status-admitted">4 admitted</span>
     
   </div>
+  
+</div>
 
-  
 
-  
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="../affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html">Affine Group Scheme over a Base</a></li>
-      
-      <li><a href="../affine_group_schemes/affine_group_schemes_coordinate_rings_and_hopf_algebras.html">Coordinate Rings and Hopf Algebras</a></li>
-      
-      <li><a href="../affine_group_schemes/affine_group_schemes_hopf_spec_functor.html">Spec Functor on Hopf Algebras</a></li>
-      
-      <li><a href="../affine_group_schemes/affine_group_schemes_spec_representability_via_global_sections.html">Hom Into Spec via Global Sections (Spec ⊣ Γ Adjunction)</a></li>
-      
-      <li><a href="../linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html">Definition of Linear Algebraic Groups</a></li>
-      
-      <li><a href="../linear_algebraic_groups/linear_algebraic_groups_smoothness_tangent_spaces_lie_algebras.html">Smoothness, Tangent Spaces, and Lie Algebras</a></li>
-      
-    </ul>
-  </section>
-  
 
+<div class="blueprint-node-list">
   
-
+  <article class="topic_thmwrapper theorem-style-topic summary-node">
+    <header class="topic_thmheading thm-heading">
+      <span class="topic_thmcaption thm-caption">Topic</span>
+      <a class="topic_thmtitle thm-title" href="commutative_algebra_basic_combinatorics.html">Basic Combinatorics</a>
+      <span class="badge status-admitted">admitted</span>
+    </header>
+  </article>
   
-  <footer class="tags">
-    <span class="tag">external-background</span><span class="tag">affine-schemes</span><span class="tag">foundational-inputs</span>
-  </footer>
+  <article class="topic_thmwrapper theorem-style-topic summary-node">
+    <header class="topic_thmheading thm-heading">
+      <span class="topic_thmcaption thm-caption">Topic</span>
+      <a class="topic_thmtitle thm-title" href="commutative_algebra_commutative_algebra.html">Commutative Algebra</a>
+      <span class="badge status-admitted">admitted</span>
+    </header>
+  </article>
   
-</article>
+  <article class="topic_thmwrapper theorem-style-topic summary-node">
+    <header class="topic_thmheading thm-heading">
+      <span class="topic_thmcaption thm-caption">Topic</span>
+      <a class="topic_thmtitle thm-title" href="commutative_algebra_fields_and_field_extensions.html">Fields and Field Extensions</a>
+      <span class="badge status-admitted">admitted</span>
+    </header>
+  </article>
+  
+  <article class="topic_thmwrapper theorem-style-topic summary-node">
+    <header class="topic_thmheading thm-heading">
+      <span class="topic_thmcaption thm-caption">Topic</span>
+      <a class="topic_thmtitle thm-title" href="commutative_algebra_hopf_algebras.html">Hopf Algebras</a>
+      <span class="badge status-admitted">admitted</span>
+    </header>
+  </article>
+  
+</div>
 
   </main>
   <script src="../graph.js"></script>

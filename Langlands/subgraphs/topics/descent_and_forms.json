@@ -550,6 +550,13 @@
       "node_count": 38
     },
     {
+      "id": "commutative_algebra",
+      "title": "Commutative Algebra",
+      "href": "commutative_algebra/index.html",
+      "role": "dependency",
+      "node_count": 4
+    },
+    {
       "id": "conjugacy_classes",
       "title": "Conjugacy Classes",
       "href": "conjugacy_classes/index.html",
@@ -562,13 +569,6 @@
       "href": "descent_and_forms/index.html",
       "role": "dependent",
       "node_count": 32
-    },
-    {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
-      "href": "foundational_inputs/index.html",
-      "role": "dependency",
-      "node_count": 8
     },
     {
       "id": "linear_algebraic_groups",
@@ -608,18 +608,18 @@
       "count": 2
     },
     {
+      "from": "topic:commutative_algebra",
+      "to": "descent_and_forms.galois_groups_and_descent_data",
+      "kind": "boundary_dependency",
+      "topic": "commutative_algebra",
+      "count": 1
+    },
+    {
       "from": "topic:conjugacy_classes",
       "to": "conjugacy_classes.stable_conjugacy_classes",
       "kind": "boundary_dependency",
       "topic": "conjugacy_classes",
       "count": 3
-    },
-    {
-      "from": "topic:foundational_inputs",
-      "to": "descent_and_forms.galois_groups_and_descent_data",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 1
     },
     {
       "from": "topic:linear_algebraic_groups",

@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 31,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 8,
+    "boundary_topics": 9,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 40,
-    "visible_nodes_with_selected_proof_plans": 40
+    "visible_nodes_without_proof_plans": 41,
+    "visible_nodes_with_selected_proof_plans": 41
   },
   "nodes": [
     {
@@ -437,11 +437,25 @@
       "node_count": 38
     },
     {
+      "id": "algebraic_geometry",
+      "title": "Algebraic Geometry",
+      "href": "algebraic_geometry/index.html",
+      "role": "dependency",
+      "node_count": 1
+    },
+    {
       "id": "buildings_and_parahorics",
       "title": "Buildings And Parahorics",
       "href": "buildings_and_parahorics/index.html",
       "role": "dependent",
       "node_count": 16
+    },
+    {
+      "id": "commutative_algebra",
+      "title": "Commutative Algebra",
+      "href": "commutative_algebra/index.html",
+      "role": "dependency",
+      "node_count": 4
     },
     {
       "id": "conjugacy_classes",
@@ -456,13 +470,6 @@
       "href": "descent_and_forms/index.html",
       "role": "dependency_and_dependent",
       "node_count": 32
-    },
-    {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
-      "href": "foundational_inputs/index.html",
-      "role": "dependency",
-      "node_count": 8
     },
     {
       "id": "linear_algebraic_groups",
@@ -614,24 +621,31 @@
       "count": 1
     },
     {
+      "from": "topic:algebraic_geometry",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "kind": "boundary_dependency",
+      "topic": "algebraic_geometry",
+      "count": 1
+    },
+    {
+      "from": "topic:algebraic_geometry",
+      "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "kind": "boundary_dependency",
+      "topic": "algebraic_geometry",
+      "count": 1
+    },
+    {
+      "from": "topic:commutative_algebra",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "kind": "boundary_dependency",
+      "topic": "commutative_algebra",
+      "count": 2
+    },
+    {
       "from": "topic:descent_and_forms",
       "to": "descent_and_forms.lang_theorem_finite_fields",
       "kind": "boundary_dependency",
       "topic": "descent_and_forms",
-      "count": 1
-    },
-    {
-      "from": "topic:foundational_inputs",
-      "to": "linear_algebraic_groups.linear_algebraic_group_definition",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
-      "count": 3
-    },
-    {
-      "from": "topic:foundational_inputs",
-      "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
-      "kind": "boundary_dependency",
-      "topic": "foundational_inputs",
       "count": 1
     },
     {

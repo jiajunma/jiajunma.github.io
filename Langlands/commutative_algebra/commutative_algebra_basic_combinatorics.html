@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Fields — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>Basic Combinatorics — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -36,7 +36,15 @@
         </li>
       
         <li class="topic-leaf">
+          <a href="../algebraic_geometry/index.html">Algebraic Geometry</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../buildings_and_parahorics/index.html">Buildings And Parahorics</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../commutative_algebra/index.html">Commutative Algebra</a>
         </li>
       
         <li class="topic-leaf">
@@ -47,10 +55,6 @@
           <a href="../descent_and_forms/index.html">Descent And Forms</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../foundational_inputs/index.html">Foundational Inputs</a>
-        </li>
-      
         <li class="topic-parent">
           <details data-topic-root="linear_algebraic_groups">
             <summary><a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a></summary>
@@ -58,6 +62,10 @@
           <a href="../linear_algebraic_groups/classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
         </li></ul>
           </details>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../number_theory/index.html">Number Theory</a>
         </li>
       
         <li class="topic-leaf">
@@ -676,156 +684,96 @@
   </nav>
   <main>
     
-<article class="topic_thmwrapper theorem-style-topic node-page" id="node-foundational_inputs-2e-local_fields">
+<article class="topic_thmwrapper theorem-style-topic node-page" id="node-commutative_algebra-2e-basic_combinatorics">
   <header class="topic_thmheading thm-heading">
     <span class="topic_thmcaption thm-caption">Topic</span>
-    <span class="topic_thmtitle thm-title">Local Fields</span>
+    <span class="topic_thmtitle thm-title">Basic Combinatorics</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-topic">topic</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-foundational_inputs-2e-local_fields">#</a>
-      
-      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      <a class="permalink" href="#node-commutative_algebra-2e-basic_combinatorics">#</a>
       
       
     </div>
   </header>
 
   
-  <div class="modal-container" id="uses-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li><a href="foundational_inputs_fields_and_field_extensions.html">Fields and Field Extensions</a></li>
-        
-      </ul>
-    </div>
-  </div>
-  
 
   
 
   <div class="topic_thmcontent thm-content body">
-    <h1>Local Fields</h1>
-<p>A <strong>local field</strong> is a non-discrete locally compact topological field
-of characteristic zero or positive characteristic. Up to isomorphism
-they fall into the classification:</p>
-<table>
-<thead>
-<tr>
-<th>Local field</th>
-<th>Description</th>
-<th>Characteristic</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\(\mathbb{R}\)</td>
-<td>reals</td>
-<td>\(0\), archimedean</td>
-</tr>
-<tr>
-<td>\(\mathbb{C}\)</td>
-<td>complexes</td>
-<td>\(0\), archimedean</td>
-</tr>
-<tr>
-<td>\(\mathbb{Q}_p\)</td>
-<td>\(p\)-adic numbers</td>
-<td>\(0\), non-archimedean</td>
-</tr>
-<tr>
-<td>Finite ext. of \(\mathbb{Q}_p\)</td>
-<td>\(p\)-adic number fields</td>
-<td>\(0\), non-arch.</td>
-</tr>
-<tr>
-<td>\(\mathbb{F}_q((t))\)</td>
-<td>Laurent series over \(\mathbb{F}_q\)</td>
-<td>\(p\), non-arch.</td>
-</tr>
-<tr>
-<td>Finite ext. of \(\mathbb{F}_q((t))\)</td>
-<td>function fields of curves</td>
-<td>\(p\), non-arch.</td>
-</tr>
-</tbody>
-</table>
-<p>The non-archimedean case is what enters the Langlands programme for
-\(p\)-adic groups, buildings, and parahoric subgroups.</p>
-<h2>Non-archimedean structure</h2>
-<p>A <strong>non-archimedean local field</strong> \(F\) carries:</p>
+    <h1>Basic Combinatorics</h1>
+<p>Several pieces of elementary combinatorics underpin the structure
+theory of reductive groups and the classification of their
+representations. This topic collects what is needed without
+duplicating Mathlib's <code>Combinatorics.*</code> directory.</p>
+<h2>Finite sets, multisets, sequences</h2>
 <ul>
-<li>a <strong>discrete valuation</strong> \(v : F^\times \twoheadrightarrow \mathbb{Z}\);</li>
-<li>a <strong>ring of integers</strong> \(\mathcal{O} = \{x \in F : v(x) \ge 0\}\),
-  a discrete valuation ring;</li>
-<li>a <strong>maximal ideal</strong> \(\mathfrak{m} = \{x : v(x) &gt; 0\}\);</li>
-<li>a <strong>residue field</strong> \(k = \mathcal{O}/\mathfrak{m}\), which is
-  finite of size \(q = |k|\);</li>
-<li>a <strong>uniformiser</strong> \(\varpi\) generating \(\mathfrak{m}\).</li>
+<li>Cardinality, bijections, finite group actions on finite sets.</li>
+<li>Multisets and partitions of integers.</li>
+<li>Sequences and tuples; the symmetric group \(S_n\) acting on
+  \([n]\)-indexed structures.</li>
 </ul>
-<p>The completion of \(F\) at the valuation is \(F\) itself (the
-"local" property).</p>
-<h2>Mixed vs.\ equal characteristic</h2>
+<h2>Partitions and Young diagrams</h2>
+<p>A <strong>partition</strong> of \(n\) is a non-increasing sequence
+\(\lambda = (\lambda_1, \lambda_2, \dots)\) of non-negative integers
+summing to \(n\). Pictorially: a <strong>Young diagram</strong> with \(\lambda_i\)
+boxes in row \(i\).</p>
+<p>Partitions parametrise:</p>
 <ul>
-<li><strong>Mixed characteristic</strong>: \(\operatorname{char}(F) = 0\),
-  \(\operatorname{char}(k) = p &gt; 0\). Examples: \(\mathbb{Q}_p\), finite
-  extensions.</li>
-<li><strong>Equal characteristic</strong>: \(\operatorname{char}(F) = \operatorname{char}(k) = p &gt; 0\).
-  Examples: \(\mathbb{F}_q((t))\), function fields.</li>
+<li>conjugacy classes of \(S_n\) (cycle types);</li>
+<li>irreducible representations of \(S_n\) (Specht modules);</li>
+<li>nilpotent conjugacy classes of \(\mathfrak{gl}_n\) (and via Jordan
+  blocks, of \(\operatorname{GL}_n\));</li>
+<li>via the Bala–Carter labels, nilpotent classes in exceptional Lie
+  algebras (see
+  [[node:conjugacy_classes.bala_carter_classification|Bala–Carter
+  classification]]).</li>
 </ul>
-<p>The dichotomy reflects two qualitatively different worlds; for many
-Langlands-theoretic statements they are treated uniformly, but their
-detailed structure (in particular ramification, Galois representations)
-differs.</p>
-<h2>Galois theory of local fields</h2>
-<p>For a non-archimedean local field \(F\) with residue field \(k\):</p>
+<h2>Coxeter groups and Bruhat order</h2>
+<p>A <strong>Coxeter group</strong> is a group presented by reflection-type generators
+satisfying braid relations:</p>
+<p>\[
+W \;=\; \langle s_1, \dots, s_n \mid (s_i s_j)^{m_{ij}} = 1 \rangle.
+\]</p>
+<p>For a Coxeter system \((W, S)\):</p>
 <ul>
-<li>\(\operatorname{Gal}(F^{\mathrm{unr}}/F) \cong \operatorname{Gal}(\bar{k}/k) \cong \hat{\mathbb{Z}}\),
-  topologically generated by Frobenius.</li>
-<li>The full absolute Galois group fits in an extension
-  \(1 \to I_F \to \operatorname{Gal}(\bar{F}/F) \to \hat{\mathbb{Z}} \to 1\)
-  with inertia group \(I_F\).</li>
-<li>Inertia further filters into wild inertia + tame inertia, giving the
-  ramification filtration.</li>
+<li><strong>Length function</strong> \(\ell : W \to \mathbb{N}\) (minimal word length
+  in generators);</li>
+<li><strong>Bruhat order</strong>: \(u \le v\) iff a reduced word for \(u\) is a
+  subword of some reduced word for \(v\);</li>
+<li><strong>Weak orders</strong> (left and right);</li>
+<li><strong>Exchange and deletion properties</strong>.</li>
 </ul>
-<h2>Why local fields matter for Langlands</h2>
-<ul>
-<li><strong>Local Langlands correspondence</strong>: representations of \(G(F)\)
-  for \(G\) a reductive group over \(F\) ↔ certain Galois
-  representations of \(\operatorname{Gal}(\bar{F}/F)\).</li>
-<li><strong>Local-global principle</strong>: global statements (over a number field
-  \(K\)) reduce, in many cases, to compatibility of local
-  statements at each completion.</li>
-<li><strong>Buildings</strong>: the
-  [[node:buildings_and_parahorics.bn_pairs_and_tits_systems|Bruhat-Tits
-  building]] of \(G(F)\) is the geometric object that organises the
-  representation theory.</li>
-<li><strong>Parahoric subgroups</strong>: compact open subgroups arising from facets
-  of the Bruhat–Tits building; central to the integral structure
-  theory.</li>
-</ul>
+<p>The Weyl group of a reductive group is naturally a Coxeter group, and
+the Bruhat decomposition of \(G\) is indexed by \(W\).</p>
+<h2>Posets and lattices</h2>
+<p>The character lattice \(X^*(T)\) and cocharacter lattice \(X_*(T)\) of
+a torus \(T\) are free abelian groups; under the perfect pairing
+\(X^*(T) \otimes X_*(T) \to \mathbb{Z}\), they are dual as
+\(\mathbb{Z}\)-modules. The pair carries combinatorial structure
+(coroots, dominant weights, fundamental Weyl chamber).</p>
+<h2>Graphs and Dynkin diagrams</h2>
+<p>A <strong>Dynkin diagram</strong> is a finite graph (with extra edge data: simple,
+double, triple, or directed) encoding a Cartan matrix. The classification
+\(A_n, B_n, C_n, D_n, E_6, E_7, E_8, F_4, G_2\) is one of the most
+celebrated combinatorial results in mathematics; see
+<a class="node-ref" data-node-id="root_data_and_duality.based_root_data" href="../root_data_and_duality/root_data_and_duality_based_root_data.html">based root data</a>.</p>
 <h2>Mathlib formalisation</h2>
 <ul>
-<li><code>Mathlib.NumberTheory.Padics.*</code> — \(p\)-adic numbers and their
-  extensions.</li>
-<li><code>Mathlib.RingTheory.DiscreteValuationRing.*</code> — DVRs and uniformisers.</li>
-<li><code>Mathlib.NumberTheory.LocalField</code> — Local field axiomatics (when
-  available).</li>
+<li><code>Mathlib.Combinatorics.*</code> — General combinatorics.</li>
+<li><code>Mathlib.GroupTheory.Coxeter.*</code> — Coxeter groups.</li>
+<li><code>Mathlib.Combinatorics.Young.*</code> — Young diagrams.</li>
 </ul>
 <h2>References</h2>
 <ul>
-<li>Serre, <em>Local Fields</em> (Springer GTM 67, 1979).</li>
-<li>Neukirch, <em>Algebraic Number Theory</em> (Springer, 1999), ch. II.</li>
-<li>Cassels–Fröhlich, <em>Algebraic Number Theory</em> (1967).</li>
-</ul>
-<h2>Prerequisite Topics</h2>
-<ul>
-<li><a class="node-ref" data-node-id="foundational_inputs.fields_and_field_extensions" href="foundational_inputs_fields_and_field_extensions.html">Fields and Field Extensions</a></li>
+<li>Stanley, <em>Enumerative Combinatorics</em> (vols. 1–2).</li>
+<li>Humphreys, <em>Reflection Groups and Coxeter Groups</em> (CUP, 1990).</li>
+<li>Björner–Brenti, <em>Combinatorics of Coxeter Groups</em> (Springer GTM 231,
+  2005).</li>
 </ul>
     
   </div>
@@ -837,21 +785,7 @@ differs.</p>
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="../root_data_and_duality/bd_covers/bd_covers_local_and_global_metaplectic_covers.html">Local and Global Metaplectic Covers</a></li>
-      
-      <li><a href="../buildings_and_parahorics/buildings_and_parahorics_bruhat_tits_apartments.html">Bruhat-Tits Apartments</a></li>
-      
-      <li><a href="../buildings_and_parahorics/buildings_and_parahorics_reductive_groups_over_local_fields.html">Reductive Groups over Local Fields</a></li>
-      
-      <li><a href="../buildings_and_parahorics/buildings_and_parahorics_smooth_affine_group_schemes_over_valuation_rings.html">Smooth Affine Group Schemes over Valuation Rings</a></li>
-      
-      <li><a href="../buildings_and_parahorics/buildings_and_parahorics_valued_root_data.html">Valued Root Data</a></li>
-      
-      <li><a href="foundational_inputs_global_fields_adeles_and_reciprocity_symbols.html">Global Fields, Adeles, and Reciprocity Symbols</a></li>
-      
-      <li><a href="../root_data_and_duality/kottwitz_structures/kottwitz_structures_kottwitz_homomorphism.html">Kottwitz Homomorphism</a></li>
-      
-      <li><a href="../root_data_and_duality/kottwitz_structures/kottwitz_structures_sigma_conjugacy_classes.html">Sigma-Conjugacy Classes</a></li>
+      <li><a href="../root_data_and_duality/root_data_and_duality_coxeter_systems_and_bruhat_order.html">Coxeter Systems and Bruhat Order</a></li>
       
     </ul>
   </section>
@@ -861,7 +795,7 @@ differs.</p>
 
   
   <footer class="tags">
-    <span class="tag">external-background</span><span class="tag">local-fields</span><span class="tag">foundational-inputs</span>
+    <span class="tag">external-background</span><span class="tag">combinatorics</span><span class="tag">foundational-inputs</span>
   </footer>
   
 </article>
