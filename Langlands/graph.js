@@ -56,14 +56,39 @@
   let graphZoomBehavior = null;
   let graphZoomSelection = null;
 
-  // Topic node style — uniform for all topics in both overview and subgraph.
-  // Color encodes status/kind, NOT topic identity.
-  const TOPIC_NODE_STYLE = {
-    fillcolor: "#e8f0f8",
-    color: "#2d5a8e",
-    fontcolor: "#1a2d42",
+  // Per-status fill and border RGB values — the only colors that encode meaning.
+  // Topic boxes blend these proportionally to show overall maturity at a glance.
+  const STATUS_RGB = {
+    formalized: { fill: [200, 230, 201], border: [46, 125, 50] },
+    proved:     { fill: [200, 230, 201], border: [46, 125, 50] },
+    admitted:   { fill: [187, 222, 251], border: [21, 101, 192] },
   };
-  // Boundary topic nodes (other topics shown at the edge of a subgraph)
+  const STATUS_RGB_FALLBACK = { fill: [236, 236, 236], border: [130, 130, 130] };
+
+  function _toHex(v) {
+    return Math.round(Math.max(0, Math.min(255, v))).toString(16).padStart(2, "0");
+  }
+
+  // Returns {fillcolor, color} for a topic box based on the mix of node statuses.
+  // Colors are a weighted RGB blend of the status fill/border colors.
+  function topicMaturityColor(statusCounts) {
+    const sc = statusCounts || {};
+    const total = Object.values(sc).reduce((a, b) => a + b, 0);
+    if (!total) return { fillcolor: "#ececec", color: "#828282" };
+    let fr = 0, fg = 0, fb = 0, br = 0, bg = 0, bb = 0;
+    for (const [status, count] of Object.entries(sc)) {
+      const col = STATUS_RGB[status] || STATUS_RGB_FALLBACK;
+      const w = count / total;
+      fr += col.fill[0] * w;   fg += col.fill[1] * w;   fb += col.fill[2] * w;
+      br += col.border[0] * w; bg += col.border[1] * w; bb += col.border[2] * w;
+    }
+    return {
+      fillcolor: `#${_toHex(fr)}${_toHex(fg)}${_toHex(fb)}`,
+      color:     `#${_toHex(br)}${_toHex(bg)}${_toHex(bb)}`,
+    };
+  }
+
+  // Boundary topic nodes (other topics shown at the edge of a subgraph) — neutral style.
   const BOUNDARY_TOPIC_STYLE = {
     fillcolor: "#f0f4f8",
     color: "#8aaac8",
@@ -78,7 +103,8 @@
       "\tedge [arrowhead=normal, arrowsize=0.7];",
     ];
     (data.topics || []).forEach((topic) => {
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(topic.title)}, fillcolor=${dotQuote(TOPIC_NODE_STYLE.fillcolor)}, color=${dotQuote(TOPIC_NODE_STYLE.color)}, fontcolor=${dotQuote(TOPIC_NODE_STYLE.fontcolor)}, penwidth=2.0, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
+      const mc = topicMaturityColor(topic.status_counts);
+      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(topic.title)}, fillcolor=${dotQuote(mc.fillcolor)}, color=${dotQuote(mc.color)}, penwidth=2.0, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
     });
     (data.edges || []).forEach((edge) => {
       const count = edge.count || 1;
@@ -185,10 +211,10 @@
       "\tedge [arrowhead=normal, arrowsize=0.7, color=\"#444444\"];",
     ];
     if (data.topic) {
+      const mc = topicMaturityColor(data.topic.status_counts);
       lines.push(`\t${dotQuote(topicGraphId(data.topic.id))} [${dotAttributes({
-        color: TOPIC_NODE_STYLE.color,
-        fillcolor: TOPIC_NODE_STYLE.fillcolor,
-        fontcolor: TOPIC_NODE_STYLE.fontcolor,
+        color: mc.color,
+        fillcolor: mc.fillcolor,
         fontsize: "13",
         label: data.topic.title,
         penwidth: "2.6",
@@ -198,10 +224,10 @@
       })}];`);
     }
     (data.child_topic_nodes || []).forEach((topic) => {
+      const mc = topicMaturityColor(topic.status_counts);
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
-        color: TOPIC_NODE_STYLE.color,
-        fillcolor: TOPIC_NODE_STYLE.fillcolor,
-        fontcolor: TOPIC_NODE_STYLE.fontcolor,
+        color: mc.color,
+        fillcolor: mc.fillcolor,
         label: topic.title,
         shape: "box",
         style: "filled",
