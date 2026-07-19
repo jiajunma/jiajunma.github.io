@@ -102,9 +102,9 @@
     ["commutative_algebra", "algebraic_geometry", "number_theory"],
     ["affine_group_schemes"],
     ["linear_algebraic_groups"],
-    ["reductive_structure"],
-    ["root_data_and_duality"],
-    ["conjugacy_classes", "descent_and_forms", "buildings_and_parahorics"],
+    ["descent_and_forms", "reductive_structure"],
+    ["root_data_and_duality", "conjugacy_classes"],
+    ["buildings_and_parahorics"],
   ];
 
   function topicOverviewToDot(data) {
