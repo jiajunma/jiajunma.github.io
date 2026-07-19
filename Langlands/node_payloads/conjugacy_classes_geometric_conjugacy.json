@@ -1,0 +1,38 @@
+{
+  "id": "conjugacy_classes.geometric_conjugacy",
+  "title": "Geometric Conjugacy and Deligne–Lusztig Theory",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "conjugacy_classes/conjugacy_classes_geometric_conjugacy.html",
+  "primary_topic": "conjugacy_classes",
+  "topics": [
+    "conjugacy_classes"
+  ],
+  "body_html": "<h1>Geometric Conjugacy and Deligne–Lusztig Theory</h1>\n<h2>Setting</h2>\n<p>Let $G$ be a connected reductive group over $\\mathbb{F}_q$ with Frobenius\nendomorphism $F : G \\to G$. Write $G^F = G(\\mathbb{F}_q)$ for the finite group\nof rational points. Let $G^*$ be the <strong>Langlands dual</strong> (or Deligne–Lusztig\ndual) group over $\\mathbb{F}_q$ with dual Frobenius $F^*$.</p>\n<h2>Pairs $(T, \\theta)$</h2>\n<p>A <strong>character datum</strong> is a pair $(T, \\theta)$ where:\n- $T \\subset G$ is an $F$-stable maximal torus.\n- $\\theta : T^F \\to \\mathbb{C}^\\times$ is a character of the finite group $T^F = T(\\mathbb{F}_q)$.</p>\n<p>Each such pair gives a <strong>Deligne–Lusztig virtual character</strong>\n$R_T^\\theta \\in \\mathrm{class\\ functions}(G^F)$.</p>\n<h2>Geometric conjugacy</h2>\n<p>Two pairs $(T_1, \\theta_1)$ and $(T_2, \\theta_2)$ are <strong>geometrically conjugate</strong>\nif there exists $g \\in G(\\bar{\\mathbb{F}}_q)$ such that $g T_1 g^{-1} = T_2$\nand $\\theta_2 = \\theta_1 \\circ \\mathrm{Ad}(g^{-1})$ (as characters on $T_2^F$).</p>\n<p>This is coarser than $G^F$-conjugacy of pairs: it uses elements from\n$G(\\bar{\\mathbb{F}}_q)$, not just $G(\\mathbb{F}_q)$.</p>\n<h2>Parametrisation via $G^*$</h2>\n<p>The geometric conjugacy classes of pairs $(T, \\theta)$ are in bijection with\n<strong>$F^*$-stable semisimple conjugacy classes</strong> $[s]$ in $G^*$:\n$$\\{(T, \\theta)\\}/\\text{geom. conj.} \\xleftrightarrow{\\;\\sim\\;}\n\\{[s] : s \\in G^*, F^*(s) \\sim_{\\mathrm{conj}} s\\}/G^*(\\bar{\\mathbb{F}}_q).$$</p>\n<p>For $G = \\mathrm{GL}_n$, this bijects with conjugacy classes of semisimple\nelements in $\\mathrm{GL}_n(\\bar{\\mathbb{F}}_q)$.</p>\n<h2>Lusztig series</h2>\n<p>The <strong>Lusztig series</strong> $\\mathcal{E}(G^F, [s])$ is the set of irreducible\ncharacters of $G^F$ that appear as constituents of some $R_T^\\theta$ with\n$(T, \\theta)$ geometrically conjugate to the class corresponding to $[s]$.</p>\n<p><strong>Lusztig's theorem:</strong> The sets $\\mathcal{E}(G^F, [s])$ (for $[s]$ ranging\nover semisimple classes in $G^*$) partition the irreducible characters of $G^F$:\n$$\\mathrm{Irr}(G^F) = \\bigsqcup_{[s] \\in G^{*F^*}_{\\mathrm{ss}}/\\sim}\n\\mathcal{E}(G^F, [s]).$$</p>\n<p>The series $\\mathcal{E}(G^F, [1])$ (for $s = 1$) consists of the <strong>unipotent\ncharacters</strong> and is the most important; its classification reduces to the\ncase $G = G^*$ and involves the theory of character sheaves.</p>\n<h2>Connection to the Langlands programme</h2>\n<p>Geometric conjugacy classes of $(T, \\theta)$ are the finite-field analogue of\n<strong>unramified Langlands parameters</strong>: a semisimple element $s \\in G^*$ gives,\nvia the local Langlands correspondence for unramified representations, a\nFrobenius-semisimple Weil-Deligne parameter $\\varphi_s$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "conjugacy_classes.semisimple_conjugacy_classes",
+      "title": "Semisimple Conjugacy Classes",
+      "href": "conjugacy_classes/conjugacy_classes_semisimple_conjugacy_classes.html"
+    },
+    {
+      "id": "conjugacy_classes.stable_conjugacy_classes",
+      "title": "Stable Conjugacy Classes",
+      "href": "conjugacy_classes/conjugacy_classes_stable_conjugacy_classes.html"
+    },
+    {
+      "id": "root_data_and_duality.dual_reductive_groups",
+      "title": "Dual Reductive Groups",
+      "href": "root_data_and_duality/root_data_and_duality_dual_reductive_groups.html"
+    },
+    {
+      "id": "root_data_and_duality.langlands_dual_groups",
+      "title": "Langlands Dual Groups",
+      "href": "root_data_and_duality/root_data_and_duality_langlands_dual_groups.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

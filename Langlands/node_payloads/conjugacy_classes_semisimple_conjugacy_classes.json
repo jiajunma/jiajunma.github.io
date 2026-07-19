@@ -1,0 +1,50 @@
+{
+  "id": "conjugacy_classes.semisimple_conjugacy_classes",
+  "title": "Semisimple Conjugacy Classes",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "conjugacy_classes/conjugacy_classes_semisimple_conjugacy_classes.html",
+  "primary_topic": "conjugacy_classes",
+  "topics": [
+    "conjugacy_classes",
+    "reductive_structure"
+  ],
+  "body_html": "<h1>Semisimple Conjugacy Classes</h1>\n<h2>Setup</h2>\n<p>Let \\(G\\) be a connected reductive group over an algebraically closed field\n\\(k\\), with maximal torus \\(T \\subset G\\) and Weyl group \\(W = N_G(T)/T\\).</p>\n<h2>Parametrisation theorem</h2>\n<p><strong>Theorem.</strong> Every semisimple element of \\(G(k)\\) is conjugate to an element\nof \\(T(k)\\), and two elements \\(t, t' \\in T(k)\\) are \\(G(k)\\)-conjugate if\nand only if \\(t' = w \\cdot t\\) for some \\(w \\in W\\). Hence:\n\\[\n\\{\\text{semisimple conjugacy classes in }G\\} \\xleftrightarrow{\\;\\sim\\;}\nT(k)/W.\n\\]</p>\n<p>This is the group-theoretic analogue of the fact that semisimple matrices are\ndiagonalisable and are conjugate iff they have the same eigenvalues.</p>\n<h2>Structure of the centraliser</h2>\n<p>For a semisimple element \\(s \\in T(k)\\), the identity component of its\ncentraliser\n\\[\nC_G(s)^\\circ\n\\]\nis a <strong>connected reductive group</strong> (a theorem of Steinberg in characteristic\n\\(p\\), and classical otherwise). Its root system is the sub-root-system\n\\(\\{\\alpha \\in \\Phi : \\alpha(s) = 1\\}\\).</p>\n<h2>Density of semisimple elements</h2>\n<p>The set of semisimple elements is <strong>dense</strong> in \\(G\\) (in the Zariski topology).\nEquivalently, unipotent elements form a closed nowhere-dense subset (the\nunipotent variety) of positive codimension \\(\\mathrm{rank}(G)\\).</p>\n<h2>Over non-algebraically-closed fields</h2>\n<p>Over a non-closed field \\(F\\), semisimple conjugacy classes in \\(G(F)\\) are\nno longer parametrised simply by \\(T(F)/W\\): one must consider all maximal\n\\(F\\)-tori (not just one split torus), and the parametrisation involves Galois\ncohomology. For the Langlands correspondence, semisimple conjugacy classes in\nthe dual group \\({}^L G\\) parametrise unramified principal series\nrepresentations.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "conjugacy_classes.jordan_decomposition",
+      "title": "Jordan Decomposition in Algebraic Groups",
+      "href": "conjugacy_classes/conjugacy_classes_jordan_decomposition.html"
+    },
+    {
+      "id": "reductive_structure.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "reductive_structure/reductive_structure_reductive_groups.html"
+    },
+    {
+      "id": "reductive_structure.maximal_tori",
+      "title": "Maximal Tori",
+      "href": "reductive_structure/reductive_structure_maximal_tori.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "conjugacy_classes.geometric_conjugacy",
+      "title": "Geometric Conjugacy and Deligne–Lusztig Theory",
+      "href": "conjugacy_classes/conjugacy_classes_geometric_conjugacy.html"
+    },
+    {
+      "id": "conjugacy_classes.regular_elements",
+      "title": "Regular Elements",
+      "href": "conjugacy_classes/conjugacy_classes_regular_elements.html"
+    },
+    {
+      "id": "conjugacy_classes.stable_conjugacy_classes",
+      "title": "Stable Conjugacy Classes",
+      "href": "conjugacy_classes/conjugacy_classes_stable_conjugacy_classes.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

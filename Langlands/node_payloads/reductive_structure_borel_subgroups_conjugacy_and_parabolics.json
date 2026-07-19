@@ -1,0 +1,49 @@
+{
+  "id": "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+  "title": "Borel Subgroups Are Conjugate and Control Parabolics",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "reductive_structure/reductive_structure_borel_subgroups_conjugacy_and_parabolics.html",
+  "primary_topic": "reductive_structure",
+  "topics": [
+    "reductive_structure"
+  ],
+  "body_html": "<h1>Borel Subgroups Are Conjugate and Control Parabolics</h1>\n<p>Let \\(G\\) be a connected linear algebraic group over an algebraically closed\nfield.</p>\n<p>Every Borel subgroup of \\(G\\) is parabolic, any two Borel subgroups are\nconjugate by an element of \\(G\\), and a closed subgroup \\(P\\subseteq G\\) is\nparabolic if and only if it contains a Borel subgroup.</p>",
+  "proof_html": "<p>Let \\(B\\) be a Borel subgroup. The quotient \\(G/B\\) is complete by the\nstandard projective embedding attached to a maximal connected solvable\nsubgroup, hence \\(B\\) is parabolic.</p>\n<p>If \\(B_1\\) and \\(B_2\\) are Borel subgroups, let \\(B_1\\) act on the complete\nvariety \\(G/B_2\\) by left translation. The Borel fixed point theorem gives\na fixed coset \\(gB_2\\), which means \\(B_1\\subseteq gB_2g^{-1}\\). Maximality\namong connected solvable subgroups forces equality, so the two Borel\nsubgroups are conjugate.</p>\n<p>If \\(P\\) is parabolic, then \\(G/P\\) is complete. A Borel subgroup \\(B\\)\nacting on \\(G/P\\) fixes some point, so \\(B\\) is contained in a conjugate of\n\\(P\\); after conjugating, \\(P\\) contains a Borel. Conversely, any closed\nsubgroup containing a Borel has quotient dominated by the complete variety\n\\(G/B\\), hence is parabolic.</p>",
+  "deps": [
+    {
+      "id": "reductive_structure.borel_subgroups",
+      "title": "Borel Subgroups",
+      "href": "reductive_structure/reductive_structure_borel_subgroups.html"
+    },
+    {
+      "id": "reductive_structure.parabolic_subgroups",
+      "title": "Parabolic Subgroups",
+      "href": "reductive_structure/reductive_structure_parabolic_subgroups.html"
+    },
+    {
+      "id": "reductive_structure.borel_fixed_point_theorem",
+      "title": "Borel Fixed Point Theorem",
+      "href": "reductive_structure/reductive_structure_borel_fixed_point_theorem.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "reductive_structure.maximal_tori_are_conjugate",
+      "title": "Maximal Tori Are Conjugate",
+      "href": "reductive_structure/reductive_structure_maximal_tori_are_conjugate.html"
+    },
+    {
+      "id": "reductive_structure.standard_parabolic_classification",
+      "title": "Standard Parabolics Are Classified by Simple Roots",
+      "href": "root_data_and_duality/reductive_structure_standard_parabolic_classification.html"
+    },
+    {
+      "id": "root_data_and_duality.bruhat_decomposition",
+      "title": "Bruhat Decomposition",
+      "href": "root_data_and_duality/root_data_and_duality_bruhat_decomposition.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

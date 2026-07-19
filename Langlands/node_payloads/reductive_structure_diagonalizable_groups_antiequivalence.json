@@ -1,0 +1,40 @@
+{
+  "id": "reductive_structure.diagonalizable_groups_antiequivalence",
+  "title": "Diagonalizable Groups Are Dual to Character Groups",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "reductive_structure/reductive_structure_diagonalizable_groups_antiequivalence.html",
+  "primary_topic": "reductive_structure",
+  "topics": [
+    "reductive_structure",
+    "root_data_and_duality"
+  ],
+  "body_html": "<h1>Diagonalizable Groups Are Dual to Character Groups</h1>\n<p>The functor\n\\[\nD \\longmapsto X(D)=\\operatorname{Hom}(D,\\mathbb{G}_m)\n\\]\ngives an anti-equivalence between diagonalizable algebraic groups over an\nalgebraically closed field and finitely generated abelian character groups\nof the allowed type in the given characteristic. Under this correspondence,\na torus corresponds exactly to a free abelian group of finite rank.</p>\n<p>For a finitely generated abelian group \\(M\\), the associated diagonalizable\ngroup is\n\\[\nD(M)=\\operatorname{Spec} k[M],\n\\]\nwhere \\(k[M]\\) is the group algebra with Hopf structure\n\\(\\Delta(e^m)=e^m\\otimes e^m\\).</p>",
+  "proof_html": "<p>For diagonalizable \\(D\\), the character decomposition of \\(k[D]\\) identifies\nthe coordinate Hopf algebra with the group algebra \\(k[X(D)]\\). A morphism\n\\(D_1\\to D_2\\) pulls characters back, giving a homomorphism\n\\(X(D_2)\\to X(D_1)\\).</p>\n<p>Conversely, any finitely generated abelian group \\(M\\) defines the Hopf\nalgebra \\(k[M]\\), hence the diagonalizable group \\(D(M)\\). Its characters\nare exactly the basis elements indexed by \\(M\\). These two constructions are\ninverse to each other. Connected diagonalizable groups are precisely those\nwith torsion-free character group, hence precisely tori.</p>",
+  "deps": [
+    {
+      "id": "reductive_structure.diagonalizable_group_characterization",
+      "title": "Characterization of Diagonalizable Groups",
+      "href": "reductive_structure/reductive_structure_diagonalizable_group_characterization.html"
+    },
+    {
+      "id": "reductive_structure.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "href": "reductive_structure/reductive_structure_character_and_cocharacter_lattices.html"
+    },
+    {
+      "id": "reductive_structure.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "reductive_structure/reductive_structure_algebraic_tori.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "reductive_structure.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "reductive_structure/reductive_structure_f_tori_galois_module_classification.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

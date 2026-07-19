@@ -1,0 +1,50 @@
+{
+  "id": "reductive_structure.f_tori_galois_module_classification",
+  "title": "F-Tori Are Classified by Galois Modules",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "reductive_structure/reductive_structure_f_tori_galois_module_classification.html",
+  "primary_topic": "reductive_structure",
+  "topics": [
+    "reductive_structure",
+    "descent_and_forms"
+  ],
+  "body_html": "<h1>F-Tori Are Classified by Galois Modules</h1>\n<p>Let \\(F_s/F\\) be a separable closure with Galois group\n\\(\\Gamma=\\operatorname{Gal}(F_s/F)\\). The functor\n\\[\nT\\longmapsto X^*(T_{F_s})\n\\]\ngives an anti-equivalence between \\(F\\)-tori and finite-rank free abelian\ngroups with continuous \\(\\Gamma\\)-action.</p>\n<p>Under this correspondence:</p>\n<ul>\n<li>\\(T\\) is \\(F\\)-split if and only if \\(\\Gamma\\) acts trivially on\n  \\(X^*(T_{F_s})\\), equivalently on \\(X_*(T_{F_s})\\);</li>\n<li>\\(T\\) is anisotropic if and only if \\(X^*(T_{F_s})^\\Gamma=0\\),\n  equivalently \\(X_*(T_{F_s})^\\Gamma=0\\);</li>\n<li>every \\(F\\)-torus is split over \\(F_s\\);</li>\n<li>every \\(F\\)-subtorus has an almost complementary \\(F\\)-subtorus: if\n  \\(T_1\\subseteq T\\), then there is \\(T_2\\subseteq T\\) with\n  \\(T=T_1T_2\\) and \\(T_1\\cap T_2\\) finite.</li>\n</ul>",
+  "proof_html": "<p>For a torus \\(T\\), all characters of \\(T_{F_s}\\) are defined over \\(F_s\\), and\nthe natural Galois action on \\(F_s[T]\\) preserves the character basis. Thus\n\\(X^*(T_{F_s})\\) is a continuous \\(\\Gamma\\)-module.</p>\n<p>Conversely, for such a module \\(M\\), the group algebra \\(F_s[M]\\) has its\nstandard Hopf algebra structure and the semilinear \\(\\Gamma\\)-action\n\\[\n\\gamma(ae^m)=\\gamma(a)e^{\\gamma m}.\n\\]\nThe fixed algebra descends this Hopf algebra to \\(F\\), giving an\n\\(F\\)-torus with character module \\(M\\). These constructions are inverse.</p>\n<p>The split criterion follows because an \\(F\\)-split torus has a basis of\n\\(F\\)-defined characters, exactly a trivial Galois action. An \\(F\\)-split\nsubtorus corresponds to a nonzero fixed cocharacter; hence anisotropy is\nequivalent to the absence of nonzero Galois-fixed cocharacters, and by duality\nto the absence of nonzero Galois-fixed characters. The complement statement is\nMaschke's theorem over \\(\\mathbb{Q}\\) applied to the finite quotient through\nwhich \\(\\Gamma\\) acts.</p>",
+  "deps": [
+    {
+      "id": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "title": "Diagonalizable Groups Are Dual to Character Groups",
+      "href": "reductive_structure/reductive_structure_diagonalizable_groups_antiequivalence.html"
+    },
+    {
+      "id": "reductive_structure.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "href": "reductive_structure/reductive_structure_character_and_cocharacter_lattices.html"
+    },
+    {
+      "id": "descent_and_forms.galois_groups_and_descent_data",
+      "title": "Galois Groups and Descent Data",
+      "href": "linear_algebraic_groups/descent_and_forms_galois_groups_and_descent_data.html"
+    },
+    {
+      "id": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "title": "Rational Forms of Linear Algebraic Groups",
+      "href": "linear_algebraic_groups/descent_and_forms_rational_forms_of_linear_algebraic_groups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "title": "Maximal F-Split Tori Are G(F)-Conjugate",
+      "href": "reductive_structure/reductive_structure_maximal_f_split_tori_are_conjugate.html"
+    },
+    {
+      "id": "reductive_structure.maximal_f_tori_exist",
+      "title": "Maximal F-Tori Exist in Connected F-Groups",
+      "href": "reductive_structure/reductive_structure_maximal_f_tori_exist.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

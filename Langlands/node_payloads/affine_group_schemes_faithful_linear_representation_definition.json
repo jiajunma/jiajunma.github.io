@@ -4,11 +4,11 @@
   "kind": "definition",
   "status": "admitted",
   "href": "affine_group_schemes/affine_group_schemes_faithful_linear_representation_definition.html",
-  "primary_topic": "linear_algebraic_groups",
+  "primary_topic": "affine_group_schemes",
   "topics": [
-    "linear_algebraic_groups"
+    "affine_group_schemes"
   ],
-  "body_html": "<h1>Faithful Linear Representation</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"linear_algebraic_groups_algebraic_group_definition.html\">algebraic group</a>\nover \\(\\operatorname{Spec} k\\). A <strong>faithful finite-dimensional\nrepresentation</strong> of \\(G\\) consists of:</p>\n<ol>\n<li>a finite-dimensional \\(k\\)-vector space \\(V\\);</li>\n<li>a scheme-theoretic model of the general linear group\n   \\(\\operatorname{GL}(V)\\), namely a scheme over \\(\\operatorname{Spec}\n   k\\) equipped with a group object structure realizing the functor\n   \\(R \\mapsto \\operatorname{GL}_R(V \\otimes_k R)\\);</li>\n<li>a morphism of group schemes \\(\\rho : G \\to \\operatorname{GL}(V)\\) over\n   \\(\\operatorname{Spec} k\\);</li>\n<li>the requirement that the underlying morphism of schemes \\(\\rho\\) is a\n   closed immersion.</li>\n</ol>\n<p>Equivalently, a faithful finite-dimensional representation exhibits \\(G\\)\nas a closed subgroup scheme of some scheme-theoretic\n\\(\\operatorname{GL}_n\\).</p>\n<p>In the project's Lean development the data above is packaged as the\nstructure \\(\\texttt{FaithfulLinearRepresentation}\\,G\\), with the\nscheme-theoretic \\(\\operatorname{GL}(V)\\) abstracted as\n\\(\\texttt{GeneralLinearGroupSchemeModel}\\,k\\,V\\) (an interface to be\nrealized concretely in Phase D4). The existence statement\n(<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.affine_finite_type_faithful_representation\" href=\"linear_algebraic_groups_affine_finite_type_faithful_representation.html\">embedding theorem</a>)\nis recorded as a separate node; its proof is the subject of Phase B.</p>",
+  "body_html": "<h1>Faithful Linear Representation</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"affine_group_schemes_algebraic_group_definition.html\">algebraic group</a>\nover \\(\\operatorname{Spec} k\\). A <strong>faithful finite-dimensional\nrepresentation</strong> of \\(G\\) consists of:</p>\n<ol>\n<li>a finite-dimensional \\(k\\)-vector space \\(V\\);</li>\n<li>a scheme-theoretic model of the general linear group\n   \\(\\operatorname{GL}(V)\\), namely a scheme over \\(\\operatorname{Spec}\n   k\\) equipped with a group object structure realizing the functor\n   \\(R \\mapsto \\operatorname{GL}_R(V \\otimes_k R)\\);</li>\n<li>a morphism of group schemes \\(\\rho : G \\to \\operatorname{GL}(V)\\) over\n   \\(\\operatorname{Spec} k\\);</li>\n<li>the requirement that the underlying morphism of schemes \\(\\rho\\) is a\n   closed immersion.</li>\n</ol>\n<p>Equivalently, a faithful finite-dimensional representation exhibits \\(G\\)\nas a closed subgroup scheme of some scheme-theoretic\n\\(\\operatorname{GL}_n\\).</p>\n<p>In the project's Lean development the data above is packaged as the\nstructure \\(\\texttt{FaithfulLinearRepresentation}\\,G\\), with the\nscheme-theoretic \\(\\operatorname{GL}(V)\\) abstracted as\n\\(\\texttt{GeneralLinearGroupSchemeModel}\\,k\\,V\\) (an interface to be\nrealized concretely in Phase D4). The existence statement\n(<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.affine_finite_type_faithful_representation\" href=\"../linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html\">embedding theorem</a>)\nis recorded as a separate node; its proof is the subject of Phase B.</p>",
   "proof_html": null,
   "deps": [
     {
@@ -35,24 +35,46 @@
       "display_name": "Langlands.AlgebraicGeometry.FaithfulLinearRepresentation",
       "qualified_name": "Langlands.AlgebraicGeometry.FaithfulLinearRepresentation",
       "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "kind": "structure",
+      "signature": "structure FaithfulLinearRepresentation\n    {k : Type u} [Field k] (G : Scheme.{u})\n    [G.Over (Spec (.of k))]\n    [IsAlgebraicGroup G (Spec (.of k))] where\n  /-- The representation space. -/\n  V : Type u\n  [addCommGroup : AddCommGroup V]\n  [module : Module k V]\n  [finiteDimensional : FiniteDimensional k V]\n  /-- The scheme-theoretic `GL(V)` target. -/\n  generalLinear : GeneralLinearGroupSchemeModel k V\n  /-- The representation morphism. -/\n  rho : G ⟶ generalLinear.carrier\n  /-- The morphism is over `Spec k`. -/\n  rhoIsOver : rho.IsOver (Spec (.of k))\n  /-- The morphism is a homomorphism of group objects in `Over (Spec k)`.\n\n  The `IsMonObj`/`MonObj` instances come from the `GrpObj` structures on\n  `G` (via `IsAlgebraicGroup`) and on `generalLinear.carrier`. -/\n  rhoIsMonHom : letI := rhoIsOver; IsMonHom (rho.asOver (Spec (.of k)))\n  /-- Faithfulness: the underlying morphism of schemes is a closed immersion. -/\n  isClosedImmersion_rho : IsClosedImmersion rho",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L71",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
       "display_name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
       "qualified_name": "Langlands.AlgebraicGeometry.GeneralLinearGroupSchemeModel",
       "module": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "kind": "structure",
+      "signature": "structure GeneralLinearGroupSchemeModel (k : Type u) [Field k] (V : Type v)\n    [AddCommGroup V] [Module k V] [FiniteDimensional k V] where\n  /-- The scheme modelling `GL(V)`. -/\n  carrier : Scheme.{u}\n  /-- The structure morphism to `Spec k`. -/\n  over : carrier.Over (Spec (.of k))\n  /-- The group object structure on `GL(V)`. -/\n  grpObj : GrpObj (Scheme.asOver carrier (Spec (.of k)))",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L50",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "display_name": "LanglandsLean.AlgebraicGeometry.FaithfulRepresentation",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/FaithfulRepresentation.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -1,0 +1,45 @@
+{
+  "id": "reductive_structure.f_split_solvable_fixed_point_theorem",
+  "title": "Fixed Point Theorem for F-Split Solvable Groups",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "reductive_structure/reductive_structure_f_split_solvable_fixed_point_theorem.html",
+  "primary_topic": "reductive_structure",
+  "topics": [
+    "reductive_structure",
+    "descent_and_forms"
+  ],
+  "body_html": "<h1>Fixed Point Theorem for F-Split Solvable Groups</h1>\n<p>Let \\(H\\) be a connected solvable \\(F\\)-group that is \\(F\\)-split. Let \\(X\\)\nbe a projective \\(F\\)-variety with an \\(F\\)-defined action of \\(H\\). If\n\\(X(F)\\neq\\emptyset\\), then there exists a point \\(x\\in X(F)\\) fixed by all\nelements of \\(H\\).</p>",
+  "proof_html": "<p>Choose an \\(F\\)-split composition series\n\\[\n\\{e\\}=H_0\\subset H_1\\subset \\cdots \\subset H_n=H\n\\]\nwhose successive quotients are \\(F\\)-isomorphic to \\(\\mathbb{G}_a\\) or\n\\(\\mathbb{G}_m\\). Starting from an \\(F\\)-point \\(x_0\\in X(F)\\), construct\ninductively an \\(F\\)-point \\(x_i\\) fixed by \\(H_i\\).</p>\n<p>If \\(H_i\\) already fixes \\(x_{i-1}\\), set \\(x_i=x_{i-1}\\). Otherwise the orbit\nmap of \\(H_i/H_{i-1}\\) through \\(x_{i-1}\\) gives an \\(F\\)-morphism from\n\\(\\mathbb{G}_a\\) or \\(\\mathbb{G}_m\\) into \\(X\\). Since \\(X\\) is projective,\nthis morphism extends to \\(\\mathbb{P}^1\\). The point at infinity is\n\\(F\\)-rational and fixed by the quotient action, giving \\(x_i\\). At the end,\n\\(x_n\\) is fixed by \\(H\\).</p>",
+  "deps": [
+    {
+      "id": "reductive_structure.lie_kolchin_theorem",
+      "title": "Lie-Kolchin Theorem",
+      "href": "reductive_structure/reductive_structure_lie_kolchin_theorem.html"
+    },
+    {
+      "id": "reductive_structure.connected_solvable_group_structure",
+      "title": "Structure of Connected Solvable Algebraic Groups",
+      "href": "reductive_structure/reductive_structure_connected_solvable_group_structure.html"
+    },
+    {
+      "id": "reductive_structure.borel_fixed_point_theorem",
+      "title": "Borel Fixed Point Theorem",
+      "href": "reductive_structure/reductive_structure_borel_fixed_point_theorem.html"
+    },
+    {
+      "id": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "title": "Rational Forms of Linear Algebraic Groups",
+      "href": "linear_algebraic_groups/descent_and_forms_rational_forms_of_linear_algebraic_groups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "title": "Maximal F-Split Tori Are G(F)-Conjugate",
+      "href": "reductive_structure/reductive_structure_maximal_f_split_tori_are_conjugate.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

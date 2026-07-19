@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weyl Groups as Coxeter Groups</title>
+  <title>Weyl Groups as Coxeter Groups — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Sha": "\\unicode{x0428}", "\\rightsquigarrow": "\\leadsto", "\\xleftarrow": "\\overset{#1}{\\longleftarrow}", "\\xleftrightarrow": "\\overset{#1}{\\longleftrightarrow}", "\\xrightarrow": "\\overset{#1}{\\longrightarrow}"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\Sha": "\\unicode{x0428}", "\\rightsquigarrow": "\\leadsto"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -32,7 +32,7 @@
       </button>
       <ul id="topic-list" class="topic-list nav-list">
         <li class="topic-leaf">
-          <a href="../bd_covers/index.html">Bd Covers</a>
+          <a href="../affine_group_schemes/index.html">Affine Group Schemes</a>
         </li>
       
         <li class="topic-leaf">
@@ -40,7 +40,7 @@
         </li>
       
         <li class="topic-leaf">
-          <a href="../classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
+          <a href="../conjugacy_classes/index.html">Conjugacy Classes</a>
         </li>
       
         <li class="topic-leaf">
@@ -48,31 +48,31 @@
         </li>
       
         <li class="topic-leaf">
-          <a href="../affine_group_schemes/index.html">Affine Group Schemes</a>
-        </li>
-
-        <li class="topic-leaf">
           <a href="../foundational_inputs/index.html">Foundational Inputs</a>
         </li>
       
-        <li class="topic-leaf">
-          <a href="../kottwitz_structures/index.html">Kottwitz Structures</a>
-        </li>
-      
-        <li class="topic-leaf">
-          <a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a>
-        </li>
-      
-        <li class="topic-leaf">
-          <a href="../nilpotent_orbits/index.html">Nilpotent Orbits</a>
+        <li class="topic-parent">
+          <details data-topic-root="linear_algebraic_groups">
+            <summary><a href="../linear_algebraic_groups/index.html">Linear Algebraic Groups</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../linear_algebraic_groups/classical_and_exceptional_groups/index.html">Classical And Exceptional Groups</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
           <a href="../reductive_structure/index.html">Reductive Structure</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../root_data_and_duality/index.html">Root Data And Duality</a>
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="root_data_and_duality">
+            <summary><a href="../root_data_and_duality/index.html">Root Data And Duality</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../root_data_and_duality/bd_covers/index.html">Bd Covers</a>
+        </li><li class="topic-leaf">
+          <a href="../root_data_and_duality/kottwitz_structures/index.html">Kottwitz Structures</a>
+        </li></ul>
+          </details>
         </li>
       
       </ul>
@@ -89,6 +89,8 @@
         <li><a href="../keywords/additive-group.html">additive-group</a></li>
       
         <li><a href="../keywords/adeles.html">adeles</a></li>
+      
+        <li><a href="../keywords/adjoint.html">adjoint</a></li>
       
         <li><a href="../keywords/adjoint-action.html">adjoint-action</a></li>
       
@@ -108,6 +110,8 @@
       
         <li><a href="../keywords/affine-schemes.html">affine-schemes</a></li>
       
+        <li><a href="../keywords/affine-variety.html">affine-variety</a></li>
+      
         <li><a href="../keywords/affine-weyl-groups.html">affine-weyl-groups</a></li>
       
         <li><a href="../keywords/algebra-hom.html">algebra-hom</a></li>
@@ -117,6 +121,8 @@
         <li><a href="../keywords/algebraic-group.html">algebraic-group</a></li>
       
         <li><a href="../keywords/algebraic-groups.html">algebraic-groups</a></li>
+      
+        <li><a href="../keywords/anisotropic.html">anisotropic</a></li>
       
         <li><a href="../keywords/antipode.html">antipode</a></li>
       
@@ -140,7 +146,13 @@
       
         <li><a href="../keywords/bn-pairs.html">bn-pairs</a></li>
       
+        <li><a href="../keywords/borel.html">borel</a></li>
+      
+        <li><a href="../keywords/borel-subgroup.html">borel-subgroup</a></li>
+      
         <li><a href="../keywords/borel-subgroups.html">borel-subgroups</a></li>
+      
+        <li><a href="../keywords/bruhat-decomposition.html">bruhat-decomposition</a></li>
       
         <li><a href="../keywords/bruhat-order.html">bruhat-order</a></li>
       
@@ -154,6 +166,8 @@
       
         <li><a href="../keywords/cartan-matrices.html">cartan-matrices</a></li>
       
+        <li><a href="../keywords/cartan-subgroup.html">cartan-subgroup</a></li>
+      
         <li><a href="../keywords/center.html">center</a></li>
       
         <li><a href="../keywords/centers.html">centers</a></li>
@@ -162,13 +176,25 @@
       
         <li><a href="../keywords/central-isogenies.html">central-isogenies</a></li>
       
+        <li><a href="../keywords/centralizer.html">centralizer</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/character-lattice.html">character-lattice</a></li>
+      
         <li><a href="../keywords/characters.html">characters</a></li>
+      
+        <li><a href="../keywords/chevalley.html">chevalley</a></li>
+      
+        <li><a href="../keywords/chevalley-basis.html">chevalley-basis</a></li>
       
         <li><a href="../keywords/classical-and-exceptional-groups.html">classical-and-exceptional-groups</a></li>
       
         <li><a href="../keywords/classical-groups.html">classical-groups</a></li>
       
         <li><a href="../keywords/classification.html">classification</a></li>
+      
+        <li><a href="../keywords/closed-subgroup.html">closed-subgroup</a></li>
       
         <li><a href="../keywords/closed-subgroups.html">closed-subgroups</a></li>
       
@@ -182,11 +208,19 @@
       
         <li><a href="../keywords/commutative-algebra.html">commutative-algebra</a></li>
       
+        <li><a href="../keywords/commutative-group.html">commutative-group</a></li>
+      
         <li><a href="../keywords/comodule.html">comodule</a></li>
       
         <li><a href="../keywords/conjugacy.html">conjugacy</a></li>
       
+        <li><a href="../keywords/connected-component.html">connected-component</a></li>
+      
         <li><a href="../keywords/connected-components.html">connected-components</a></li>
+      
+        <li><a href="../keywords/connected-group.html">connected-group</a></li>
+      
+        <li><a href="../keywords/construction.html">construction</a></li>
       
         <li><a href="../keywords/convolution.html">convolution</a></li>
       
@@ -196,6 +230,8 @@
       
         <li><a href="../keywords/corollary.html">corollary</a></li>
       
+        <li><a href="../keywords/coroot.html">coroot</a></li>
+      
         <li><a href="../keywords/coroots.html">coroots</a></li>
       
         <li><a href="../keywords/covers.html">covers</a></li>
@@ -204,15 +240,27 @@
       
         <li><a href="../keywords/coxeter-groups.html">coxeter-groups</a></li>
       
+        <li><a href="../keywords/cuspidal.html">cuspidal</a></li>
+      
         <li><a href="../keywords/definition.html">definition</a></li>
       
         <li><a href="../keywords/definitions.html">definitions</a></li>
       
+        <li><a href="../keywords/deligne-lusztig.html">deligne-lusztig</a></li>
+      
         <li><a href="../keywords/derived-group.html">derived-group</a></li>
+      
+        <li><a href="../keywords/descent.html">descent</a></li>
       
         <li><a href="../keywords/descent-and-forms.html">descent-and-forms</a></li>
       
+        <li><a href="../keywords/determinant.html">determinant</a></li>
+      
+        <li><a href="../keywords/diagonalizable-group.html">diagonalizable-group</a></li>
+      
         <li><a href="../keywords/diagonalizable-groups.html">diagonalizable-groups</a></li>
+      
+        <li><a href="../keywords/dual-group.html">dual-group</a></li>
       
         <li><a href="../keywords/dual-groups.html">dual-groups</a></li>
       
@@ -224,9 +272,15 @@
       
         <li><a href="../keywords/dynkin-diagrams.html">dynkin-diagrams</a></li>
       
+        <li><a href="../keywords/elliptic-elements.html">elliptic-elements</a></li>
+      
         <li><a href="../keywords/embedding-theorem.html">embedding-theorem</a></li>
       
+        <li><a href="../keywords/endoscopy.html">endoscopy</a></li>
+      
         <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/equivariant-embedding.html">equivariant-embedding</a></li>
       
         <li><a href="../keywords/example.html">example</a></li>
       
@@ -234,17 +288,39 @@
       
         <li><a href="../keywords/exceptional-groups.html">exceptional-groups</a></li>
       
+        <li><a href="../keywords/existence-theorem.html">existence-theorem</a></li>
+      
         <li><a href="../keywords/extended-groups.html">extended-groups</a></li>
       
         <li><a href="../keywords/external-background.html">external-background</a></li>
       
+        <li><a href="../keywords/f-group.html">f-group</a></li>
+      
+        <li><a href="../keywords/f-reductive-group.html">f-reductive-group</a></li>
+      
+        <li><a href="../keywords/f-split.html">f-split</a></li>
+      
+        <li><a href="../keywords/f-split-torus.html">f-split-torus</a></li>
+      
+        <li><a href="../keywords/f-torus.html">f-torus</a></li>
+      
         <li><a href="../keywords/facets.html">facets</a></li>
       
+        <li><a href="../keywords/field-of-definition.html">field-of-definition</a></li>
+      
         <li><a href="../keywords/fields.html">fields</a></li>
+      
+        <li><a href="../keywords/finite-field.html">finite-field</a></li>
+      
+        <li><a href="../keywords/finite-groups-lie-type.html">finite-groups-lie-type</a></li>
+      
+        <li><a href="../keywords/fixed-point.html">fixed-point</a></li>
       
         <li><a href="../keywords/forms.html">forms</a></li>
       
         <li><a href="../keywords/foundational-inputs.html">foundational-inputs</a></li>
+      
+        <li><a href="../keywords/frobenius.html">frobenius</a></li>
       
         <li><a href="../keywords/functor.html">functor</a></li>
       
@@ -260,11 +336,29 @@
       
         <li><a href="../keywords/galois-descent.html">galois-descent</a></li>
       
+        <li><a href="../keywords/galois-module.html">galois-module</a></li>
+      
         <li><a href="../keywords/general-linear-group.html">general-linear-group</a></li>
+      
+        <li><a href="../keywords/generated-subgroup.html">generated-subgroup</a></li>
+      
+        <li><a href="../keywords/geometric-conjugacy.html">geometric-conjugacy</a></li>
+      
+        <li><a href="../keywords/gl-v.html">gl-v</a></li>
       
         <li><a href="../keywords/global-fields.html">global-fields</a></li>
       
+        <li><a href="../keywords/group-action.html">group-action</a></li>
+      
+        <li><a href="../keywords/group-scheme.html">group-scheme</a></li>
+      
         <li><a href="../keywords/group-schemes.html">group-schemes</a></li>
+      
+        <li><a href="../keywords/harish-chandra.html">harish-chandra</a></li>
+      
+        <li><a href="../keywords/homogeneous-space.html">homogeneous-space</a></li>
+      
+        <li><a href="../keywords/homomorphism.html">homomorphism</a></li>
       
         <li><a href="../keywords/hopf-algebra.html">hopf-algebra</a></li>
       
@@ -276,11 +370,21 @@
       
         <li><a href="../keywords/images.html">images</a></li>
       
+        <li><a href="../keywords/indexed-root-datum.html">indexed-root-datum</a></li>
+      
         <li><a href="../keywords/inner-forms.html">inner-forms</a></li>
+      
+        <li><a href="../keywords/integral-form.html">integral-form</a></li>
       
         <li><a href="../keywords/isocrystals.html">isocrystals</a></li>
       
+        <li><a href="../keywords/isogeny-type.html">isogeny-type</a></li>
+      
+        <li><a href="../keywords/isomorphism-theorem.html">isomorphism-theorem</a></li>
+      
         <li><a href="../keywords/jacobson-morozov.html">jacobson-morozov</a></li>
+      
+        <li><a href="../keywords/jordan-decomposition.html">jordan-decomposition</a></li>
       
         <li><a href="../keywords/k-theory.html">k-theory</a></li>
       
@@ -302,19 +406,35 @@
       
         <li><a href="../keywords/l-morphisms.html">l-morphisms</a></li>
       
+        <li><a href="../keywords/lang-theorem.html">lang-theorem</a></li>
+      
+        <li><a href="../keywords/langlands.html">langlands</a></li>
+      
         <li><a href="../keywords/langlands-dual-groups.html">langlands-dual-groups</a></li>
       
         <li><a href="../keywords/lemma.html">lemma</a></li>
       
+        <li><a href="../keywords/levi-decomposition.html">levi-decomposition</a></li>
+      
         <li><a href="../keywords/levi-subgroups.html">levi-subgroups</a></li>
       
+        <li><a href="../keywords/lie-algebra.html">lie-algebra</a></li>
+      
         <li><a href="../keywords/lie-algebras.html">lie-algebras</a></li>
+      
+        <li><a href="../keywords/lie-kolchin.html">lie-kolchin</a></li>
       
         <li><a href="../keywords/linear-algebraic-groups.html">linear-algebraic-groups</a></li>
       
         <li><a href="../keywords/local-fields.html">local-fields</a></li>
       
+        <li><a href="../keywords/locally-closed.html">locally-closed</a></li>
+      
+        <li><a href="../keywords/lusztig-series.html">lusztig-series</a></li>
+      
         <li><a href="../keywords/maximal-tori.html">maximal-tori</a></li>
+      
+        <li><a href="../keywords/maximal-torus.html">maximal-torus</a></li>
       
         <li><a href="../keywords/metaplectic-covers.html">metaplectic-covers</a></li>
       
@@ -334,7 +454,15 @@
       
         <li><a href="../keywords/nonabelian-h1.html">nonabelian-h1</a></li>
       
+        <li><a href="../keywords/orbit.html">orbit</a></li>
+      
+        <li><a href="../keywords/orbital-integrals.html">orbital-integrals</a></li>
+      
+        <li><a href="../keywords/orthogonal.html">orthogonal</a></li>
+      
         <li><a href="../keywords/outer-forms.html">outer-forms</a></li>
+      
+        <li><a href="../keywords/parabolic.html">parabolic</a></li>
       
         <li><a href="../keywords/parabolic-subgroups.html">parabolic-subgroups</a></li>
       
@@ -342,27 +470,55 @@
       
         <li><a href="../keywords/parahoric-subgroups.html">parahoric-subgroups</a></li>
       
+        <li><a href="../keywords/perverse-sheaves.html">perverse-sheaves</a></li>
+      
         <li><a href="../keywords/pinned-dual-groups.html">pinned-dual-groups</a></li>
       
         <li><a href="../keywords/pinnings.html">pinnings</a></li>
       
+        <li><a href="../keywords/positive-roots.html">positive-roots</a></li>
+      
         <li><a href="../keywords/pure-inner-twists.html">pure-inner-twists</a></li>
+      
+        <li><a href="../keywords/quasi-split.html">quasi-split</a></li>
       
         <li><a href="../keywords/quasi-split-forms.html">quasi-split-forms</a></li>
       
+        <li><a href="../keywords/quotient.html">quotient</a></li>
+      
         <li><a href="../keywords/quotients.html">quotients</a></li>
+      
+        <li><a href="../keywords/radical.html">radical</a></li>
+      
+        <li><a href="../keywords/rank-one-subgroup.html">rank-one-subgroup</a></li>
       
         <li><a href="../keywords/rational-forms.html">rational-forms</a></li>
       
         <li><a href="../keywords/rational-nilpotent-orbits.html">rational-nilpotent-orbits</a></li>
       
+        <li><a href="../keywords/rational-points.html">rational-points</a></li>
+      
         <li><a href="../keywords/real-forms.html">real-forms</a></li>
+      
+        <li><a href="../keywords/reductive-group.html">reductive-group</a></li>
       
         <li><a href="../keywords/reductive-groups.html">reductive-groups</a></li>
       
         <li><a href="../keywords/reductive-quotients.html">reductive-quotients</a></li>
       
         <li><a href="../keywords/reductive-structure.html">reductive-structure</a></li>
+      
+        <li><a href="../keywords/reflection.html">reflection</a></li>
+      
+        <li><a href="../keywords/regular-elements.html">regular-elements</a></li>
+      
+        <li><a href="../keywords/regular-semisimple.html">regular-semisimple</a></li>
+      
+        <li><a href="../keywords/regular-unipotent.html">regular-unipotent</a></li>
+      
+        <li><a href="../keywords/relative-root-datum.html">relative-root-datum</a></li>
+      
+        <li><a href="../keywords/relative-weyl-group.html">relative-weyl-group</a></li>
       
         <li><a href="../keywords/representation.html">representation</a></li>
       
@@ -378,7 +534,13 @@
       
         <li><a href="../keywords/root-datum.html">root-datum</a></li>
       
+        <li><a href="../keywords/root-lattice.html">root-lattice</a></li>
+      
+        <li><a href="../keywords/root-subgroup.html">root-subgroup</a></li>
+      
         <li><a href="../keywords/root-subgroups.html">root-subgroups</a></li>
+      
+        <li><a href="../keywords/root-system.html">root-system</a></li>
       
         <li><a href="../keywords/root-systems.html">root-systems</a></li>
       
@@ -386,29 +548,67 @@
       
         <li><a href="../keywords/roots-of-unity.html">roots-of-unity</a></li>
       
+        <li><a href="../keywords/schubert-variety.html">schubert-variety</a></li>
+      
+        <li><a href="../keywords/semisimple.html">semisimple</a></li>
+      
+        <li><a href="../keywords/semisimple-elements.html">semisimple-elements</a></li>
+      
         <li><a href="../keywords/semisimple-groups.html">semisimple-groups</a></li>
+      
+        <li><a href="../keywords/semisimple-lie-algebra.html">semisimple-lie-algebra</a></li>
       
         <li><a href="../keywords/sigma-conjugacy.html">sigma-conjugacy</a></li>
       
+        <li><a href="../keywords/simple-roots.html">simple-roots</a></li>
+      
+        <li><a href="../keywords/simply-connected.html">simply-connected</a></li>
+      
         <li><a href="../keywords/simply-connected-cover.html">simply-connected-cover</a></li>
+      
+        <li><a href="../keywords/sl2-embedding.html">sl2-embedding</a></li>
       
         <li><a href="../keywords/sl2-triples.html">sl2-triples</a></li>
       
         <li><a href="../keywords/smoothness.html">smoothness</a></li>
       
+        <li><a href="../keywords/solvable-group.html">solvable-group</a></li>
+      
         <li><a href="../keywords/solvable-groups.html">solvable-groups</a></li>
       
         <li><a href="../keywords/spec.html">spec</a></li>
       
+        <li><a href="../keywords/special-linear.html">special-linear</a></li>
+      
+        <li><a href="../keywords/special-orthogonal.html">special-orthogonal</a></li>
+      
         <li><a href="../keywords/spherical-buildings.html">spherical-buildings</a></li>
+      
+        <li><a href="../keywords/split-reductive-group.html">split-reductive-group</a></li>
       
         <li><a href="../keywords/split-reductive-groups.html">split-reductive-groups</a></li>
       
+        <li><a href="../keywords/split-torus.html">split-torus</a></li>
+      
         <li><a href="../keywords/splittings.html">splittings</a></li>
+      
+        <li><a href="../keywords/springer.html">springer</a></li>
+      
+        <li><a href="../keywords/springer-correspondence.html">springer-correspondence</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stable-conjugacy.html">stable-conjugacy</a></li>
       
         <li><a href="../keywords/strong-inner-forms.html">strong-inner-forms</a></li>
       
         <li><a href="../keywords/strong-real-forms.html">strong-real-forms</a></li>
+      
+        <li><a href="../keywords/strongly-regular.html">strongly-regular</a></li>
+      
+        <li><a href="../keywords/structure-constants.html">structure-constants</a></li>
+      
+        <li><a href="../keywords/symplectic.html">symplectic</a></li>
       
         <li><a href="../keywords/tangent-space.html">tangent-space</a></li>
       
@@ -416,19 +616,43 @@
       
         <li><a href="../keywords/tits-buildings.html">tits-buildings</a></li>
       
+        <li><a href="../keywords/tits-index.html">tits-index</a></li>
+      
         <li><a href="../keywords/tits-systems.html">tits-systems</a></li>
       
         <li><a href="../keywords/tori.html">tori</a></li>
       
         <li><a href="../keywords/torsors.html">torsors</a></li>
       
+        <li><a href="../keywords/torus.html">torus</a></li>
+      
+        <li><a href="../keywords/trace-formula.html">trace-formula</a></li>
+      
+        <li><a href="../keywords/triangularization.html">triangularization</a></li>
+      
         <li><a href="../keywords/twisted-conjugacy.html">twisted-conjugacy</a></li>
       
         <li><a href="../keywords/twisting.html">twisting</a></li>
       
+        <li><a href="../keywords/type-B.html">type-B</a></li>
+      
+        <li><a href="../keywords/type-C.html">type-C</a></li>
+      
+        <li><a href="../keywords/type-D.html">type-D</a></li>
+      
+        <li><a href="../keywords/unipotent.html">unipotent</a></li>
+      
+        <li><a href="../keywords/unipotent-elements.html">unipotent-elements</a></li>
+      
         <li><a href="../keywords/unipotent-groups.html">unipotent-groups</a></li>
       
+        <li><a href="../keywords/unipotent-orbits.html">unipotent-orbits</a></li>
+      
+        <li><a href="../keywords/unipotent-radical.html">unipotent-radical</a></li>
+      
         <li><a href="../keywords/unipotent-radicals.html">unipotent-radicals</a></li>
+      
+        <li><a href="../keywords/unipotent-variety.html">unipotent-variety</a></li>
       
         <li><a href="../keywords/valuation-rings.html">valuation-rings</a></li>
       
@@ -436,7 +660,11 @@
       
         <li><a href="../keywords/vogan-diagrams.html">vogan-diagrams</a></li>
       
+        <li><a href="../keywords/weight-lattice.html">weight-lattice</a></li>
+      
         <li><a href="../keywords/weighted-dynkin-diagrams.html">weighted-dynkin-diagrams</a></li>
+      
+        <li><a href="../keywords/weyl-group.html">weyl-group</a></li>
       
         <li><a href="../keywords/weyl-groups.html">weyl-groups</a></li>
       
@@ -448,17 +676,17 @@
   </nav>
   <main>
     
-<article class="topic_thmwrapper theorem-style-topic node-page" id="node-root_data_and_duality-2e-root_systems">
-  <header class="topic_thmheading thm-heading">
-    <span class="topic_thmcaption thm-caption">Topic</span>
-    <span class="topic_thmtitle thm-title">Root Systems</span>
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-root_data_and_duality-2e-weyl_group_coxeter_structure">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Weyl Groups as Coxeter Groups</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-topic">topic</span>
+      <span class="badge kind-theorem">theorem</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-root_data_and_duality-2e-root_systems">#</a>
+      <a class="permalink" href="#node-root_data_and_duality-2e-weyl_group_coxeter_structure">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -472,9 +700,11 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="root_data_and_duality_roots_coroots_and_root_subgroups.html">Roots, Coroots, and Root Subgroups</a></li>
-        
         <li><a href="root_data_and_duality_weyl_groups.html">Weyl Groups</a></li>
+        
+        <li><a href="root_data_and_duality_based_root_data.html">Based Root Data</a></li>
+        
+        <li><a href="root_data_and_duality_classification_of_root_systems.html">Classification of Irreducible Root Systems</a></li>
         
       </ul>
     </div>
@@ -483,120 +713,136 @@
 
   
 
-  <div class="topic_thmcontent thm-content body">
-    <h1>Root Systems</h1>
-<p>A <strong>root system</strong> is a finite subset of a Euclidean vector space
-satisfying reflection-stability axioms. Root systems are the
-combinatorial backbone of Lie theory: they classify finite-dimensional
-semisimple Lie algebras, simply connected simple algebraic groups, and
-compact Lie groups.</p>
-<h2>Definition</h2>
-<p>A <strong>root system</strong> in a finite-dimensional real Euclidean space \(V\)
-(with inner product \((-, -)\)) is a finite subset \(\Phi \subseteq V\)
-satisfying:</p>
-<p>(R1) \(\Phi\) spans \(V\) and \(0 \notin \Phi\);</p>
-<p>(R2) For each \(\alpha \in \Phi\), the only scalar multiples of
-\(\alpha\) in \(\Phi\) are \(\pm \alpha\);</p>
-<p>(R3) For each \(\alpha \in \Phi\), the reflection
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Weyl Groups as Coxeter Groups</h1>
+<p>The Weyl group of a finite root system, generated by simple reflections, satisfies
+the Coxeter presentation. This connects the concrete definition (reflections in a
+Euclidean space) with the abstract combinatorial structure of Coxeter groups.</p>
+<h2>The Coxeter presentation theorem</h2>
+<p><strong>Theorem.</strong> Let \(\Phi\) be a finite root system with simple roots
+\(\Delta = \{\alpha_1, \dots, \alpha_n\}\) and simple reflections
+\(s_i = s_{\alpha_i}\). The Weyl group \(W\) is isomorphic, as an abstract group,
+to the <strong>Coxeter group</strong> with generators \(\{s_1, \dots, s_n\}\) and relations
 \[
-s_\alpha(x) \;=\; x - \frac{2(x, \alpha)}{(\alpha, \alpha)} \alpha
+  (s_i s_j)^{m_{ij}} = 1,
 \]
-permutes \(\Phi\);</p>
-<p>(R4) For all \(\alpha, \beta \in \Phi\):
-\(\frac{2(\alpha, \beta)}{(\beta, \beta)} \in \mathbb{Z}\).</p>
-<p>A root system is <strong>reduced</strong> if (R2) holds; some sources allow
-non-reduced root systems (e.g.\ \(BC_n\), with both \(\alpha\) and
-\(2\alpha\) appearing).</p>
-<h2>The Weyl group</h2>
-<p>The group \(W \subseteq O(V)\) generated by \(\{s_\alpha : \alpha \in \Phi\}\)
-is the <strong>Weyl group</strong> of \(\Phi\) — a finite reflection group. It
-acts simply transitively on the chambers of the complement of the
-hyperplane arrangement \(\bigcup_\alpha \alpha^\perp\).</p>
-<h2>Bases and positivity</h2>
-<p>A <strong>base</strong> (or <strong>simple system</strong>) is a subset \(\Delta \subseteq \Phi\)
-such that:
-- \(\Delta\) is a basis of \(V\);
-- Every \(\alpha \in \Phi\) is a non-negative or non-positive integer
-  combination of \(\Delta\).</p>
-<p>Choosing a base is equivalent to choosing a Weyl chamber.</p>
-<p>Given \(\Delta\), the <strong>positive roots</strong> \(\Phi^+\) are the non-negative
-combinations; \(\Phi^- = -\Phi^+\). Every base gives a decomposition
-\(\Phi = \Phi^+ \sqcup \Phi^-\).</p>
-<h2>Cartan matrix</h2>
-<p>For a base \(\Delta = \{\alpha_1, \dots, \alpha_r\}\), the
-<strong>Cartan matrix</strong> is
+where the <strong>Coxeter exponents</strong> \(m_{ij}\) are determined by the Cartan integers
+\(\langle \alpha_i, \alpha_j^\vee \rangle \cdot \langle \alpha_j, \alpha_i^\vee \rangle\):</p>
+<table>
+<thead>
+<tr>
+<th>Coxeter weight</th>
+<th>Bond type</th>
+<th>\(m_{ij}\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No bond (orthogonal)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Single bond</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Double bond (\(B/C\))</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Triple bond (\(G_2\))</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Here \(m_{ii} = 1\) (so \(s_i^2 = 1\)) is included in the convention. The
+Coxeter matrix \((m_{ij})\) is symmetric with \(m_{ij} \ge 2\) for \(i \ne j\).</p>
+<p>This theorem asserts two things: (1) the listed relations hold in \(W\) (easy,
+follows from the geometry of reflections), and (2) these are <strong>all</strong> relations —
+i.e., the natural map from the abstract Coxeter group to \(W\) is an isomorphism
+(the hard part, requiring analysis of reduced expressions).</p>
+<h2>Matsumoto's theorem</h2>
+<p><strong>Theorem (Matsumoto 1964).</strong> Any two reduced expressions for the same element
+\(w \in W\) are related by a finite sequence of <strong>braid relations</strong>:
 \[
-C \;=\; (c_{ij}), \qquad c_{ij} = \frac{2(\alpha_i, \alpha_j)}{(\alpha_j, \alpha_j)}.
+  s_i s_j s_i \cdots = s_j s_i s_j \cdots \qquad (m_{ij} \text{ factors on each side}).
 \]</p>
-<p>It encodes the angles and length ratios of simple roots; the off-diagonal
-entries are in \(\{0, -1, -2, -3\}\).</p>
-<h2>Dynkin diagrams</h2>
-<p>The <strong>Dynkin diagram</strong> of a root system is a graph with:
-- vertices = simple roots;
-- edges connecting \(\alpha_i, \alpha_j\) labelled by \(c_{ij} c_{ji} \in \{0, 1, 2, 3\}\)
-  (no edge if \(0\), single if \(1\), double if \(2\), triple if \(3\));
-- arrows pointing from long roots to short roots (in non-simply-laced
-  types).</p>
-<h2>Classification</h2>
-<p><strong>Theorem (Killing-Cartan, completed by Dynkin).</strong> Connected Dynkin
-diagrams of finite-type root systems are:
+<p>Equivalently, the <strong>length function</strong> \(\ell: W \to \mathbb{Z}_{\ge 0}\), defined
+as the minimum number of simple reflections in any expression for \(w\), is
+well-defined and satisfies:
 \[
-A_n \;(n \ge 1), \quad B_n \;(n \ge 2), \quad C_n \;(n \ge 3), \quad D_n \;(n \ge 4),
+  \ell(w) \;=\; |\mathrm{Inv}(w)| \;=\; \#\{\alpha \in \Phi^+ : w(\alpha) \in \Phi^-\}.
 \]
+This is the equality between the combinatorial length (word length in the generators)
+and the geometric length (inversion count).</p>
+<p>Matsumoto's theorem implies that the Hecke algebra \(\mathcal{H}(W, q)\) is
+well-defined: the elements \(T_w\) indexed by \(w \in W\) do not depend on the
+choice of reduced expression.</p>
+<h2>Bruhat order</h2>
+<p>The <strong>Bruhat order</strong> (Chevalley–Bruhat order) on \(W\) is defined by:
 \[
-E_6, \quad E_7, \quad E_8, \quad F_4, \quad G_2.
+  v \le w \iff \text{some (equivalently, every) reduced expression for } v
+  \text{ appears as a subword of some reduced expression for } w.
 \]</p>
-<p>Any root system decomposes uniquely as an orthogonal direct sum of
-<strong>irreducible</strong> root systems (connected Dynkin components).</p>
-<h2>Examples</h2>
-<h3>\(A_{n-1}\)</h3>
-<p>\(V \subseteq \mathbb{R}^n\) the hyperplane \(\sum x_i = 0\);
-\(\Phi = \{e_i - e_j : i \ne j\}\); \(W = S_n\) acting by permutation.</p>
-<h3>\(B_n\)</h3>
-<p>\(V = \mathbb{R}^n\);
-\(\Phi = \{\pm e_i \pm e_j : i &lt; j\} \cup \{\pm e_i\}\);
-\(W = \{\pm 1\}^n \rtimes S_n\) (signed permutations).</p>
-<h3>\(C_n\) (dual of \(B_n\))</h3>
-<p>\(\Phi = \{\pm e_i \pm e_j : i &lt; j\} \cup \{\pm 2 e_i\}\).</p>
-<h3>\(D_n\)</h3>
-<p>\(\Phi = \{\pm e_i \pm e_j : i &lt; j\}\); only "two-letter" roots,
-simply laced.</p>
-<h3>\(G_2\)</h3>
-<p>Rank 2; 12 roots; two root lengths in ratio \(\sqrt{3} : 1\);
-\(W\) = dihedral of order 12.</p>
-<h2>Length-2 chains and structure</h2>
-<p>If \(\alpha, \beta \in \Phi\) are non-proportional roots, the
-<strong>string</strong> \(\beta - p\alpha, \dots, \beta + q\alpha\) of roots
-(integers \(p, q \ge 0\)) satisfies
-\[
-p - q \;=\; \frac{2(\beta, \alpha)}{(\alpha, \alpha)} \;\in\; \{-3, -2, -1, 0, 1, 2, 3\}.
-\]
-Strings have length \(\le 4\). This is the fundamental combinatorial
-constraint underlying the entire classification.</p>
-<h2>Coroots and root datum</h2>
-<p>For \(\alpha \in \Phi\), the <strong>coroot</strong> is
-\(\alpha^\vee = 2\alpha / (\alpha, \alpha) \in V^*\). The set
-\(\Phi^\vee = \{\alpha^\vee : \alpha \in \Phi\}\) is again a root
-system (the <strong>dual root system</strong>).</p>
-<p>A root system together with a lattice \(X\) with
-\(\mathbb{Z}\Phi \subseteq X \subseteq P\) (weight lattice) refines a
-root system to a <a class="node-ref" data-node-id="root_data_and_duality.root_data" href="root_data_and_duality_root_data.html">root datum</a>.</p>
-<h2>Mathlib</h2>
-<p><code>Mathlib.LinearAlgebra.RootSystem.*</code> provides:
-- abstract root pairings and root systems,
-- the Weyl group as a reflection group,
-- partial classification by Dynkin type.</p>
+<p>This poset structure on \(W\) is distinct from — but related to — the closure order
+on Schubert varieties \(\overline{BwB/B}\) in the flag variety \(G/B\): one has
+\(v \le w\) if and only if \(BvB/B \subseteq \overline{BwB/B}\), so the two orders
+coincide.</p>
+<p>The <strong>height function</strong> <code>RootPairing.Base.height</code> in Mathlib assigns to each
+positive root \(\alpha \in \Phi^+\) the total coefficient in the simple root
+expansion \(\alpha = \sum_i c_i \alpha_i\): \(\mathrm{ht}(\alpha) = \sum_i c_i\).</p>
+<h2>Formalization status in Mathlib4: EXPLICIT GAPS</h2>
+<p><strong>Mathlib4 coverage (present):</strong>
+- <code>RootPairing.weylGroup</code> — the Weyl group defined as a subgroup of
+  \(\mathrm{Aut}(M)\) generated by the simple reflections.
+- The permutation representation of <code>weylGroup</code> on the root set is proved.
+- <code>CoxeterSystem</code> — an independent, abstract Coxeter group infrastructure in
+  <code>Mathlib.GroupTheory.Coxeter.Basic</code>.
+- <code>RootPairing.Base.height</code> — the height function on the positive root set.</p>
+<p><strong>Known formalization gaps:</strong></p>
+<ol>
+<li>
+<p><strong>Finiteness of <code>weylGroup</code></strong>: The theorem "<code>RootPairing.weylGroup</code> is a finite
+   group" is an <strong>explicit TODO</strong> in Mathlib4's root system files. The proof would
+   follow from the fact that <code>weylGroup</code> embeds into <code>Sym(ι)</code> (the finite symmetric
+   group on the index type), but this embedding is not yet established in full generality.</p>
+</li>
+<li>
+<p><strong>Faithfulness</strong>: The statement that <code>weylGroup</code> acts faithfully on the root set
+   (i.e.\ the permutation representation is injective) is an <strong>explicit TODO</strong>.</p>
+</li>
+<li>
+<p><strong>Connection to <code>CoxeterSystem</code></strong>: There is currently <strong>no theorem</strong> in Mathlib4
+   connecting <code>RootPairing.weylGroup</code> to the abstract <code>CoxeterSystem</code> framework.
+   The isomorphism between the Weyl group (as defined from the root pairing) and
+   the Coxeter group (as defined abstractly from the Coxeter matrix) is not proved.</p>
+</li>
+<li>
+<p><strong>Matsumoto's theorem</strong>: <code>Matsumoto's theorem</code> (any two reduced expressions
+   are related by braid relations) is stated as a <strong>TODO</strong> in
+   <code>Mathlib.GroupTheory.Coxeter.Basic</code>.</p>
+</li>
+</ol>
+<p>These gaps are significant for any application that requires using Weyl groups as
+Coxeter groups (e.g.\ defining Kazhdan–Lusztig polynomials, Hecke algebras, or the
+Bruhat order via subword characterizations in Mathlib).</p>
 <h2>References</h2>
 <ul>
-<li>Bourbaki, <em>Groupes et Algèbres de Lie</em> IV–VI (1968).</li>
-<li>Humphreys, <em>Introduction to Lie Algebras and Representation Theory</em>
-  (1972).</li>
-<li>Serre, <em>Complex Semisimple Lie Algebras</em> (1987).</li>
+<li>Bourbaki, <em>Groupes et Algèbres de Lie</em> IV (1968), Ch. IV §1.</li>
+<li>Matsumoto, <em>Générateurs et relations des groupes de Weyl généralisés</em> (1964).</li>
+<li>Björner–Brenti, <em>Combinatorics of Coxeter Groups</em> (2005), §1.</li>
+<li>Humphreys, <em>Reflection Groups and Coxeter Groups</em> (1990), §1.8.</li>
 </ul>
-<h2>Prerequisite Topics</h2>
+<h2>Related nodes</h2>
 <ul>
-<li><a class="node-ref" data-node-id="root_data_and_duality.roots_coroots_and_root_subgroups" href="root_data_and_duality_roots_coroots_and_root_subgroups.html">Roots, Coroots, and Root Subgroups</a></li>
 <li><a class="node-ref" data-node-id="root_data_and_duality.weyl_groups" href="root_data_and_duality_weyl_groups.html">Weyl Groups</a></li>
+<li><a class="node-ref" data-node-id="root_data_and_duality.based_root_data" href="root_data_and_duality_based_root_data.html">Based Root Data</a></li>
+<li><a class="node-ref" data-node-id="root_data_and_duality.classification_of_root_systems" href="root_data_and_duality_classification_of_root_systems.html">Classification of Irreducible Root Systems</a></li>
+<li><a class="node-ref" data-node-id="root_data_and_duality.coxeter_systems_and_bruhat_order" href="root_data_and_duality_coxeter_systems_and_bruhat_order.html">Coxeter Systems and Bruhat Order</a></li>
 </ul>
     
   </div>
@@ -608,15 +854,7 @@ root system to a <a class="node-ref" data-node-id="root_data_and_duality.root_da
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="../buildings_and_parahorics/buildings_and_parahorics_affine_root_systems.html">Affine Root Systems</a></li>
-      
-      <li><a href="../classical_and_exceptional_groups/classical_and_exceptional_groups_exceptional_groups.html">Exceptional Groups</a></li>
-      
-      <li><a href="../nilpotent_orbits/nilpotent_orbits_weighted_dynkin_diagrams.html">Weighted Dynkin Diagrams</a></li>
-      
-      <li><a href="root_data_and_duality_cartan_matrices_and_dynkin_diagrams.html">Cartan Matrices and Dynkin Diagrams</a></li>
-      
-      <li><a href="root_data_and_duality_dual_root_systems.html">Dual Root Systems</a></li>
+      <li><a href="root_data_and_duality_weyl_groups.html">Weyl Groups</a></li>
       
     </ul>
   </section>
@@ -624,10 +862,6 @@ root system to a <a class="node-ref" data-node-id="root_data_and_duality.root_da
 
   
 
-  
-  <footer class="tags">
-    <span class="tag">root-systems</span><span class="tag">root-data-and-duality</span>
-  </footer>
   
 </article>
 

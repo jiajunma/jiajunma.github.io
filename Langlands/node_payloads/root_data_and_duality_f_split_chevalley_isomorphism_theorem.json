@@ -1,0 +1,39 @@
+{
+  "id": "root_data_and_duality.f_split_chevalley_isomorphism_theorem",
+  "title": "Chevalley Isomorphism Theorem for F-Split Groups",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "descent_and_forms/root_data_and_duality_f_split_chevalley_isomorphism_theorem.html",
+  "primary_topic": "descent_and_forms",
+  "topics": [
+    "root_data_and_duality",
+    "reductive_structure"
+  ],
+  "body_html": "<h1>Chevalley Isomorphism Theorem for F-Split Groups</h1>\n<p>Let \\(G\\) and \\(G'\\) be connected reductive groups split over \\(F\\). Choose\n\\(F\\)-split maximal tori and Borel subgroups\n\\[\nT\\subseteq B\\subseteq G,\\qquad T'\\subseteq B'\\subseteq G'.\n\\]\nAn isomorphism of based root data\n\\[\n\\Psi(G',B',T')\\xrightarrow{\\sim}\\Psi(G,B,T)\n\\]\nis induced by an \\(F\\)-isomorphism\n\\[\n\\varphi:G\\xrightarrow{\\sim}G'\n\\]\nwith \\(\\varphi(T)=T'\\) and \\(\\varphi(B)=B'\\).</p>\n<p>If \\(\\varphi'\\) is another such \\(F\\)-isomorphism inducing the same based\nroot-datum isomorphism, then\n\\[\n\\varphi'(g)=\\varphi(tgt^{-1})\n\\]\nfor some \\(t\\in T\\) such that \\(\\alpha(t)\\in F^\\times\\) for all simple roots\n\\(\\alpha\\).</p>\n<p><em>Proof strategy.</em><br />\nChoose \\(F\\)-defined parametrizations of the root subgroups for \\(G\\) and\n\\(G'\\). The absolute Chevalley isomorphism theorem gives an isomorphism over\nan algebraic closure matching the maximal tori, Borels, and root subgroup\nparametrizations.</p>\n<p>Because all root subgroup data are \\(F\\)-defined in the split case, this\nisomorphism is \\(F\\)-defined on the big Bruhat cell and on all its Weyl\ntranslates. These open \\(F\\)-subvarieties cover \\(G\\), so the isomorphism is\ndefined over \\(F\\). The uniqueness statement is the usual pinning ambiguity:\ntwo isomorphisms differ by conjugation by an element of \\(T\\), and\n\\(F\\)-rationality is equivalent to the simple-root values lying in\n\\(F^\\times\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "root_data_and_duality.chevalley_isomorphism_theorem",
+      "title": "Chevalley Isomorphism Theorem",
+      "href": "root_data_and_duality/root_data_and_duality_chevalley_isomorphism_theorem.html"
+    },
+    {
+      "id": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "title": "Indexed Root Datum of an F-Reductive Group",
+      "href": "descent_and_forms/root_data_and_duality_indexed_root_datum_of_f_reductive_group.html"
+    },
+    {
+      "id": "root_data_and_duality.pinnings",
+      "title": "Pinnings",
+      "href": "root_data_and_duality/root_data_and_duality_pinnings.html"
+    },
+    {
+      "id": "root_data_and_duality.classification_of_split_reductive_groups",
+      "title": "Classification of Split Reductive Groups",
+      "href": "root_data_and_duality/root_data_and_duality_classification_of_split_reductive_groups.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

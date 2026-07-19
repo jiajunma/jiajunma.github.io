@@ -1,0 +1,29 @@
+{
+  "id": "root_data_and_duality.bruhat_order_closure_relations",
+  "title": "Bruhat Order Gives Schubert Closure Relations",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "root_data_and_duality/root_data_and_duality_bruhat_order_closure_relations.html",
+  "primary_topic": "root_data_and_duality",
+  "topics": [
+    "root_data_and_duality",
+    "reductive_structure"
+  ],
+  "body_html": "<h1>Bruhat Order Gives Schubert Closure Relations</h1>\n<p>With \\(G,B,T,W\\) as in the Bruhat decomposition, define the Schubert variety\n\\[\nX_w=\\overline{BwB/B}\\subseteq G/B.\n\\]\nThen\n\\[\nX_w=\\bigcup_{v\\leq w} BvB/B,\n\\]\nwhere \\(\\leq\\) is the Bruhat order on the Coxeter group \\(W\\). In particular,\n\\[\nX_v\\subseteq X_w \\quad\\Longleftrightarrow\\quad v\\leq w.\n\\]</p>",
+  "proof_html": "<p>For a simple reflection \\(s\\), the rank-one subgroup associated to \\(s\\)\ncontrols the projection \\(G/B\\to G/P_s\\). Its fibers are projective lines,\nand multiplying a Bruhat cell by \\(P_s\\) either preserves the cell or adds\nthe adjacent cell indexed by \\(ws\\), according as \\(\\ell(ws)&lt;\\ell(w)\\) or\n\\(\\ell(ws)&gt;\\ell(w)\\).</p>\n<p>Inducting on a reduced expression for \\(w\\) gives all cells indexed by\nsubexpressions of that reduced word, exactly the elements \\(v\\leq w\\) in\nBruhat order. The dimension formula for Bruhat cells prevents additional\ncells from appearing in the closure.</p>",
+  "deps": [
+    {
+      "id": "root_data_and_duality.bruhat_decomposition",
+      "title": "Bruhat Decomposition",
+      "href": "root_data_and_duality/root_data_and_duality_bruhat_decomposition.html"
+    },
+    {
+      "id": "root_data_and_duality.coxeter_systems_and_bruhat_order",
+      "title": "Coxeter Systems and Bruhat Order",
+      "href": "root_data_and_duality/root_data_and_duality_coxeter_systems_and_bruhat_order.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

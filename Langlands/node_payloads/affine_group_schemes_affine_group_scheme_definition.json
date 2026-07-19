@@ -4,9 +4,9 @@
   "kind": "definition",
   "status": "admitted",
   "href": "affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html",
-  "primary_topic": "linear_algebraic_groups",
+  "primary_topic": "affine_group_schemes",
   "topics": [
-    "linear_algebraic_groups"
+    "affine_group_schemes"
   ],
   "body_html": "<h1>Affine Group Scheme over a Base</h1>\n<p>Let \\(S\\) be a scheme. An <strong>affine group scheme over \\(S\\)</strong> is a scheme \\(G\\)\ntogether with:</p>\n<ol>\n<li>a structure morphism \\(G \\to S\\), making \\(G\\) an object of the slice\n   category \\(\\mathsf{Over}(S)\\);</li>\n<li>a group object structure on \\(G\\) in \\(\\mathsf{Over}(S)\\), supplied by\n   morphisms</li>\n</ol>\n<p>\\[\nm : G \\times_S G \\to G, \\qquad\ne : S \\to G, \\qquad\ni : G \\to G,\n\\]</p>\n<p>subject to the standard associativity, unit, and inverse axioms for\n   group objects in a cartesian category;\n3. an affineness assumption: the structure morphism \\(G \\to S\\) is affine\n   (the preimage of any affine open of \\(S\\) is an affine scheme).</p>\n<p>In the project's Lean development this is the typeclass aggregator\n\\(\\texttt{IsAffineGroupScheme}\\,G\\,S\\), which extends\n\\(\\texttt{GrpObj}(\\operatorname{asOver}\\,G\\,S)\\) and\n\\(\\texttt{IsAffineHom}\\,(G \\downarrow S)\\). No smoothness or finite-type\nassumption is imposed; those are added separately via additional typeclasses\nwhen the theory requires them.</p>",
   "proof_html": null,
@@ -47,19 +47,65 @@
       "id": "affine_group_schemes.points_functor_definition",
       "title": "Functor of Points of a Group Scheme",
       "href": "affine_group_schemes/affine_group_schemes_points_functor_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.special_linear_group_scheme",
+      "title": "Special Linear Group Scheme SL_n",
+      "href": "affine_group_schemes/affine_group_schemes_special_linear_group_scheme.html"
+    },
+    {
+      "id": "affine_group_schemes.special_orthogonal_group_scheme",
+      "title": "Special Orthogonal Group Scheme SO_n",
+      "href": "affine_group_schemes/affine_group_schemes_special_orthogonal_group_scheme.html"
+    },
+    {
+      "id": "affine_group_schemes.symplectic_group_scheme",
+      "title": "Symplectic Group Scheme Sp_{2n}",
+      "href": "affine_group_schemes/affine_group_schemes_symplectic_group_scheme.html"
+    },
+    {
+      "id": "conjugacy_classes.unipotent_elements",
+      "title": "Unipotent Elements and the Unipotent Variety",
+      "href": "conjugacy_classes/conjugacy_classes_unipotent_elements.html"
+    },
+    {
+      "id": "root_data_and_duality.chevalley_group_construction",
+      "title": "Chevalley Group Construction from a Root Datum",
+      "href": "root_data_and_duality/root_data_and_duality_chevalley_group_construction.html"
     }
   ],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.IsAffineGroupScheme",
-      "display_name": "Langlands.AlgebraicGeometry.IsAffineGroupScheme",
-      "qualified_name": "Langlands.AlgebraicGeometry.IsAffineGroupScheme",
-      "module": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
+      "name": "Langlands.AlgebraicGeometry.instIsAffineGroupScheme - Langlands.AlgebraicGeometry.IsAffineGroupScheme",
+      "display_name": "Langlands.AlgebraicGeometry.instIsAffineGroupScheme - Langlands.AlgebraicGeometry.IsAffineGroupScheme",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "Langlands.AlgebraicGeometry.IsAffineGroupScheme",
+        "Langlands.AlgebraicGeometry.instIsAffineGroupScheme",
+        "Langlands.AlgebraicGeometry.instIsAlgebraicGroup"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
+      "display_name": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L64",
-      "has_sorry": false,
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L1",
       "status": "resolved",
       "reason": null
     }

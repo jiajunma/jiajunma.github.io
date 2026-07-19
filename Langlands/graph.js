@@ -95,20 +95,56 @@
     fontcolor: "#6688aa",
   };
 
+  // Tier ordering for the topic overview layout (top = foundational, bottom = derived).
+  // Tiers are matched by topic-id substring — order matters, first match wins.
+  // Unknown topics fall to the bottom tier automatically.
+  const OVERVIEW_TIER_GROUPS = [
+    ["foundational_inputs"],
+    ["affine_group_schemes"],
+    ["linear_algebraic_groups"],
+    ["reductive_structure"],
+    ["root_data_and_duality"],
+    ["conjugacy_classes", "descent_and_forms", "buildings_and_parahorics"],
+  ];
+
   function topicOverviewToDot(data) {
+    const topicIds = new Set((data.topics || []).map((t) => t.id));
+
+    // Assign each topic to its tier; topics not in OVERVIEW_TIER_GROUPS land in the last tier.
+    const tierOf = {};
+    OVERVIEW_TIER_GROUPS.forEach((group, i) => group.forEach((id) => { tierOf[id] = i; }));
+    const lastTier = OVERVIEW_TIER_GROUPS.length;
+    topicIds.forEach((id) => { if (tierOf[id] === undefined) tierOf[id] = lastTier; });
+
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.4, nodesep=0.8, splines=curved, pad=0.5];",
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.6, nodesep=1.0, splines=curved, pad=0.5];",
       '\tnode [label="\\N", penwidth=1.8, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=13, margin="0.38,0.22", style=filled];',
       "\tedge [arrowhead=normal, arrowsize=0.7];",
     ];
+
+    // Topic nodes
     (data.topics || []).forEach((topic) => {
       const mc = topicMaturityColor(topic.status_counts);
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [label=${dotQuote(topic.title)}, fillcolor=${dotQuote(mc.fillcolor)}, color=${dotQuote(mc.color)}, penwidth=2.0, URL=${dotQuote(`#${topicGraphId(topic.id)}`)}];`);
     });
+
+    // Rank-same groups: force topics into their tiers for a clean top-to-bottom layout
+    const tierBuckets = {};
+    topicIds.forEach((id) => {
+      const t = tierOf[id];
+      (tierBuckets[t] = tierBuckets[t] || []).push(id);
+    });
+    Object.keys(tierBuckets).sort((a, b) => a - b).forEach((tier) => {
+      const group = tierBuckets[tier];
+      if (group.length >= 1) {
+        lines.push(`\t{ rank=same; ${group.map((id) => dotQuote(topicGraphId(id))).join("; ")}; }`);
+      }
+    });
+
+    // Edges — skip rare ones; use thickness/darkness to show dependency weight
     (data.edges || []).forEach((edge) => {
       const count = edge.count || 1;
-      // Skip very rare cross-topic edges to reduce visual noise in the overview
       if (count < 2) return;
       const weight = Math.min(count, 10);
       let penwidth, color;
@@ -123,6 +159,7 @@
       }
       lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [weight=${weight}, penwidth=${penwidth}, color=${dotQuote(color)}];`);
     });
+
     lines.push("}");
     return lines.join("\n");
   }

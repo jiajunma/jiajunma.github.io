@@ -1,0 +1,39 @@
+{
+  "id": "reductive_structure.split_reductive_groups",
+  "title": "Split Reductive Groups",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "reductive_structure/reductive_structure_split_reductive_groups.html",
+  "primary_topic": "reductive_structure",
+  "topics": [
+    "reductive_structure",
+    "root_data_and_duality"
+  ],
+  "body_html": "<h1>Split Reductive Groups</h1>\n<p>A connected reductive group \\(G\\) over a field \\(k\\) is <strong>split</strong> if it\ncontains a maximal torus \\(T\\) that is <strong>\\(k\\)-split</strong>, i.e., isomorphic\nto a product of copies of \\(\\mathbb{G}_m\\) as a \\(k\\)-group scheme:\n\\[\nT \\cong \\mathbb{G}_m^r \\quad \\text{over } k,\n\\]\nwhere \\(r = \\mathrm{rank}(G)\\).</p>\n<h2>Split torus</h2>\n<p>A torus \\(T\\) is split over \\(k\\) if its character group\n\\(X^*(T) = \\mathrm{Hom}_{k\\text{-gp}}(T, \\mathbb{G}_m)\\)\nis a free \\(\\mathbb{Z}\\)-module on which \\(\\mathrm{Gal}(\\bar k/k)\\) acts\ntrivially. Equivalently, \\(T\\) is diagonalizable over \\(k\\) itself (not\njust over \\(\\bar k\\)).</p>\n<h2>Split maximal torus</h2>\n<p>A <strong>split maximal torus</strong> is a maximal torus among the tori of \\(G\\)\nthat is split over \\(k\\). Such a torus need not exist for a general\nreductive group over a non-algebraically closed field \\(k\\).</p>\n<p><strong>Example.</strong> For \\(G = \\mathrm{SL}_2\\) over \\(\\mathbb{R}\\), the\ndiagonal torus \\(T = \\left\\{\\begin{pmatrix} t &amp; \\\\ &amp; t^{-1}\n\\end{pmatrix}\\right\\}\\) is split, while the \"compact\" torus\n\\(\\mathrm{SO}(2)\\) is not. So \\(\\mathrm{SL}_2/\\mathbb{R}\\) is split.</p>\n<p><strong>Example.</strong> The unitary group \\(\\mathrm{U}(n)\\) over \\(\\mathbb{R}\\)\nassociated to the standard Hermitian form is not split; its maximal\n\\(\\mathbb{R}\\)-split torus has rank \\(0\\).</p>\n<h2>Classification</h2>\n<p>The fundamental theorem of Chevalley–Demazure–Grothendieck states that\nover any field \\(k\\), split connected reductive groups are classified\nup to isomorphism by their <strong>based root data</strong>:\n\\[\n\\{\\text{split connected reductive groups over } k\\}/{\\cong}\n\\;\\xrightarrow{\\sim}\\;\n\\{\\text{based root data}\\}/{\\cong}.\n\\]\nThis is the content of the Chevalley existence and isomorphism\ntheorems.</p>\n<h2>Split forms of reductive groups</h2>\n<p>Over a general field \\(k\\), a reductive group \\(G\\) may not be split,\nbut it always has a <strong>unique split inner form</strong> (the quasi-split or\nsplit form), which serves as the canonical representative of the\n\\(k\\)-forms of \\(G\\). All \\(k\\)-forms of a fixed split group \\(G_0\\)\nare classified by the Galois cohomology set\n\\(H^1(k, \\mathrm{Aut}(G_0))\\).</p>\n<h2>Over algebraically closed fields</h2>\n<p>Every reductive group over an algebraically closed field is split:\nsince all tori split over \\(\\bar k\\), and a maximal torus over\n\\(\\bar k\\) is rational by the conjugacy of maximal tori, the group\nis automatically split. Thus the Chevalley classification over\n\\(\\bar k\\) classifies all reductive groups.</p>\n<h2>Role in the theory</h2>\n<p>Split reductive groups are the starting point for:\n- <strong>Chevalley group construction</strong>: building \\(G\\) from a based root\n  datum.\n- <strong>Galois descent</strong>: non-split forms are torsors for split groups.\n- <strong>Langlands programme</strong>: the L-group \\({}^L G = \\hat G \\rtimes W_k\\)\n  involves the dual group \\(\\hat G\\), defined using the dual root datum\n  of the split form.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "reductive_structure.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "reductive_structure/reductive_structure_reductive_groups.html"
+    },
+    {
+      "id": "reductive_structure.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "reductive_structure/reductive_structure_algebraic_tori.html"
+    },
+    {
+      "id": "reductive_structure.maximal_tori",
+      "title": "Maximal Tori",
+      "href": "reductive_structure/reductive_structure_maximal_tori.html"
+    },
+    {
+      "id": "reductive_structure.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "href": "reductive_structure/reductive_structure_character_and_cocharacter_lattices.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

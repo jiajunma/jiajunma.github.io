@@ -1,0 +1,44 @@
+{
+  "id": "root_data_and_duality.crystallographic_and_reduced",
+  "title": "Crystallographic and Reduced Root Systems",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "root_data_and_duality/root_data_and_duality_crystallographic_and_reduced.html",
+  "primary_topic": "root_data_and_duality",
+  "topics": [
+    "root_data_and_duality"
+  ],
+  "body_html": "<h1>Crystallographic and Reduced Root Systems</h1>\n<p>Two integrality/finiteness conditions on root pairings play a central role in the\nstructure theory of algebraic groups: <strong>crystallographicity</strong> (integrality of Cartan\nintegers) and <strong>reducedness</strong> (no root is a non-trivial scalar multiple of another).</p>\n<h2>Crystallographic root systems</h2>\n<p><strong>Definition.</strong> A root pairing <code>RootPairing ι R M N</code> is <strong>crystallographic</strong> if for\nall indices <code>i, j : ι</code>,\n\\[\n  \\langle \\mathrm{root}(i),\\, \\mathrm{coroot}(j) \\rangle \\;\\in\\; \\mathbb{Z}.\n\\]\nEquivalently, the image of the pairing <code>⟨root –, coroot –⟩</code> lies in the subring\n\\(\\mathbb{Z} \\hookrightarrow R\\). In Mathlib this is captured by the typeclass\n<code>IsCrystallographic</code>, which asserts <code>IsValuedIn ℤ</code> for the root–coroot pairings.</p>\n<p><strong>Geometric meaning.</strong> Crystallographicity is the integrality condition that makes a\nroot system compatible with a lattice (the <strong>root lattice</strong> \\(\\mathbb{Z}\\Phi \\subseteq\nM\\)). It is automatically satisfied for root data (which live over \\(\\mathbb{Z}\\)) and\nfor any root system arising from an algebraic group over \\(\\mathbb{Z}\\). Real root\nsystems that are not crystallographic (e.g.\\ rank-2 systems with angles \\(\\pi/5\\))\ndo not correspond to algebraic groups.</p>\n<p><strong>Examples of crystallographic root systems:</strong> all of \\(A_n\\), \\(B_n\\), \\(C_n\\),\n\\(D_n\\), \\(E_6\\), \\(E_7\\), \\(E_8\\), \\(F_4\\), \\(G_2\\) are crystallographic.</p>\n<h2>Reduced root systems</h2>\n<p><strong>Definition.</strong> A root pairing is <strong>reduced</strong> if no root is a non-trivial scalar\nmultiple of another root. Precisely: if <code>i, j : ι</code> satisfy \\(\\mathrm{root}(j) = c \\cdot\n\\mathrm{root}(i)\\) for some \\(c \\in R\\), then \\(c = \\pm 1\\) (and <code>j</code> is either <code>i</code>\nor the index of \\(-\\mathrm{root}(i)\\)). Mathlib: <code>RootPairing.IsReduced</code>.</p>\n<p><strong>Characterisation via Coxeter weights.</strong> For a crystallographic root pairing, the\nreducedness condition is equivalent to the following: two roots are linearly independent\nin \\(M\\) if and only if their Coxeter weight satisfies\n\\[\n  \\mathrm{coxeterWeight}(i, j) \\ne 4.\n\\]\nThis is <code>linearIndependent_iff_coxeterWeight_ne_four</code> in Mathlib (proved in\n<code>Mathlib.LinearAlgebra.RootSystem.Finite.Lemmas</code>). The case <code>coxeterWeight = 4</code>\ncorresponds precisely to \\(\\mathrm{root}(j) = \\pm 2 \\cdot \\mathrm{root}(i)\\), i.e.\\ a\nnon-reduced configuration.</p>\n<h2>Admissible Coxeter weights</h2>\n<p>For a crystallographic root pairing, the Coxeter weight\n\\(\\langle \\alpha, \\beta^\\vee \\rangle \\cdot \\langle \\beta, \\alpha^\\vee \\rangle\\)\nmust lie in \\(\\{0, 1, 2, 3, 4\\}\\). The Cartan integer pairs\n\\((\\langle \\alpha, \\beta^\\vee \\rangle,\\, \\langle \\beta, \\alpha^\\vee \\rangle)\\) are\nfurther constrained; the admissible pairs (up to interchange) are:</p>\n<table>\n<thead>\n<tr>\n<th>Coxeter weight</th>\n<th>Cartan integer pairs</th>\n<th>Interpretation</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>0</td>\n<td>\\((0, 0)\\)</td>\n<td>Orthogonal roots</td>\n</tr>\n<tr>\n<td>1</td>\n<td>\\((1, 1)\\) or \\((-1, -1)\\)</td>\n<td>Equal-length, angle \\(2\\pi/3\\)</td>\n</tr>\n<tr>\n<td>2</td>\n<td>\\((1, 2)\\) or \\((-1, -2)\\)</td>\n<td>Double bond (one root twice as long)</td>\n</tr>\n<tr>\n<td>3</td>\n<td>\\((1, 3)\\) or \\((-1, -3)\\)</td>\n<td>Triple bond (G₂)</td>\n</tr>\n<tr>\n<td>4</td>\n<td>\\((2, 2)\\) or \\((-2, -2)\\) etc.</td>\n<td>Proportional roots (non-reduced)</td>\n</tr>\n</tbody>\n</table>\n<p>These constraints are proved in <code>Mathlib.LinearAlgebra.RootSystem.Finite.Lemmas</code>.</p>\n<h2>Non-reduced root systems and the BC_n case</h2>\n<p>The root systems \\(BC_n\\) (sometimes written \\(B_n C_n\\)) are non-reduced: they\ncontain roots of the form \\(\\alpha\\) and \\(2\\alpha\\) simultaneously. They arise\nnaturally in two contexts:</p>\n<ol>\n<li><strong>Relative root systems of unitary groups</strong>: For a unitary group \\(\\mathrm{U}(n)\\)\n   over a local field \\(F/F_0\\), the relative root system (the non-zero weights of the\n   maximal \\(F_0\\)-split torus) is of type \\(BC_n\\) in general.</li>\n<li><strong>Iwahori–Matsumoto classification</strong>: The admissible parameters for Hecke algebras\n   associated to \\(BC_n\\) Coxeter systems include cases corresponding to the\n   non-reduced root system.</li>\n</ol>\n<p>Non-reduced root systems do not correspond to reductive algebraic groups in the usual\nsense but do appear as relative root systems of non-split groups.</p>\n<h2>Mathlib references</h2>\n<ul>\n<li><code>IsCrystallographic</code> — typeclass for crystallographic root pairings</li>\n<li><code>RootPairing.IsReduced</code> — typeclass for reduced root pairings</li>\n<li><code>linearIndependent_iff_coxeterWeight_ne_four</code> — characterisation of reducedness</li>\n<li><code>Mathlib.LinearAlgebra.RootSystem.Finite.Lemmas</code> — Coxeter weight bounds</li>\n</ul>\n<h2>Related nodes</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"root_data_and_duality.root_pairing\" href=\"root_data_and_duality_root_pairing.html\">Root Pairings</a></li>\n<li><a class=\"node-ref\" data-node-id=\"root_data_and_duality.root_systems\" href=\"root_data_and_duality_root_systems.html\">Root Systems</a></li>\n<li><a class=\"node-ref\" data-node-id=\"root_data_and_duality.root_chains\" href=\"root_data_and_duality_root_chains.html\">Root Chains and the String Property</a></li>\n<li><a class=\"node-ref\" data-node-id=\"root_data_and_duality.classification_of_root_systems\" href=\"root_data_and_duality_classification_of_root_systems.html\">Classification of Irreducible Root Systems</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "root_data_and_duality.root_pairing",
+      "title": "Root Pairings (Unified Framework)",
+      "href": "root_data_and_duality/root_data_and_duality_root_pairing.html"
+    },
+    {
+      "id": "root_data_and_duality.root_systems",
+      "title": "Root Systems",
+      "href": "root_data_and_duality/root_data_and_duality_root_systems.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "root_data_and_duality.classification_of_root_systems",
+      "title": "Classification of Irreducible Root Systems",
+      "href": "root_data_and_duality/root_data_and_duality_classification_of_root_systems.html"
+    },
+    {
+      "id": "root_data_and_duality.root_chains",
+      "title": "Root Chains and the String Property",
+      "href": "root_data_and_duality/root_data_and_duality_root_chains.html"
+    },
+    {
+      "id": "root_data_and_duality.root_systems",
+      "title": "Root Systems",
+      "href": "root_data_and_duality/root_data_and_duality_root_systems.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

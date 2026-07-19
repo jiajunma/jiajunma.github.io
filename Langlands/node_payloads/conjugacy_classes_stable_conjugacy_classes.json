@@ -1,0 +1,55 @@
+{
+  "id": "conjugacy_classes.stable_conjugacy_classes",
+  "title": "Stable Conjugacy Classes",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "conjugacy_classes/conjugacy_classes_stable_conjugacy_classes.html",
+  "primary_topic": "conjugacy_classes",
+  "topics": [
+    "conjugacy_classes",
+    "descent_and_forms"
+  ],
+  "body_html": "<h1>Stable Conjugacy Classes</h1>\n<h2>Motivation</h2>\n<p>Over a non-algebraically-closed field $F$, a single geometric conjugacy class\nin $G(\\bar F)$ may split into several $G(F)$-rational conjugacy classes. The\ntrace formula and the theory of <strong>endoscopy</strong> require a notion that groups these\ntogether: the <strong>stable conjugacy class</strong>.</p>\n<h2>Definition (semisimple case)</h2>\n<p>Two semisimple elements $\\gamma, \\gamma' \\in G(F)$ are <strong>stably conjugate</strong> if\nthey are conjugate over $\\bar F$:\n$$\\gamma' = g \\gamma g^{-1} \\quad \\text{for some } g \\in G(\\bar F).$$</p>\n<p>This is a coarser equivalence relation than $G(F)$-conjugacy. The stable\nconjugacy class of $\\gamma$ is the set of all $G(F)$-conjugacy classes inside\nits geometric conjugacy class.</p>\n<h2>Cohomological parametrisation</h2>\n<p>The set of $G(F)$-conjugacy classes within the stable class of $\\gamma$ is\nparametrised by the Galois cohomology set\n$$\\ker\\bigl(H^1(F, C_G(\\gamma)) \\to H^1(F, G)\\bigr),$$\nwhere $C_G(\\gamma)$ is the centraliser of $\\gamma$ in $G$.</p>\n<p>For $G = \\mathrm{GL}_n$, all $H^1$ vanish, so stable $=$ rational conjugacy.\nThe difference first appears for groups with non-trivial $H^1$.</p>\n<h2>Regular semisimple case</h2>\n<p>For <strong>regular semisimple</strong> $\\gamma$ with connected centraliser $T = C_G(\\gamma)$\n(a maximal torus), the $G(F)$-classes within the stable class of $\\gamma$ are\nparametrised by\n$$\\ker\\bigl(H^1(F, T) \\to H^1(F, G)\\bigr) \\cong H^1(F, T)/\\mathrm{im}.$$\nThis finite set measures the failure of Hilbert 90 for the torus $T$.</p>\n<h2>Role in endoscopy</h2>\n<p><strong>Endoscopic groups</strong> $H$ of $G$ are defined so that:\n- Stable conjugacy classes of $H(F)$ map to stable conjugacy classes of $G(F)$.\n- The <strong>transfer</strong> of orbital integrals from $G$ to $H$ (or vice versa) respects\n  stable conjugacy classes.</p>\n<p>The <strong>fundamental lemma</strong> (Ngô, 2010) and the <strong>transfer conjecture</strong>\n(Langlands–Shelstad) are stated in terms of stable orbital integrals:\n$$SO_\\gamma^G(f) = \\sum_{\\delta \\leftrightarrow \\gamma} \\Delta(\\gamma, \\delta)\\, O_\\delta^H(f^H),$$\nwhere the sum is over conjugacy classes $\\delta$ within the stable class of $\\gamma$.</p>\n<h2>Unipotent case</h2>\n<p>For unipotent elements over $p$-adic fields, stable conjugacy is more subtle.\nTwo unipotent elements are stably conjugate if they lie in the same orbit over\n$\\bar F$ <strong>and</strong> correspond under the Springer correspondence to the same local\nsystem. The parametrisation involves Lusztig's theory of character sheaves.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "conjugacy_classes.semisimple_conjugacy_classes",
+      "title": "Semisimple Conjugacy Classes",
+      "href": "conjugacy_classes/conjugacy_classes_semisimple_conjugacy_classes.html"
+    },
+    {
+      "id": "conjugacy_classes.unipotent_orbits",
+      "title": "Unipotent Orbits",
+      "href": "conjugacy_classes/conjugacy_classes_unipotent_orbits.html"
+    },
+    {
+      "id": "conjugacy_classes.regular_elements",
+      "title": "Regular Elements",
+      "href": "conjugacy_classes/conjugacy_classes_regular_elements.html"
+    },
+    {
+      "id": "descent_and_forms.galois_cohomology",
+      "title": "Galois Cohomology",
+      "href": "linear_algebraic_groups/descent_and_forms_galois_cohomology.html"
+    },
+    {
+      "id": "descent_and_forms.inner_forms",
+      "title": "Inner Forms",
+      "href": "descent_and_forms/descent_and_forms_inner_forms.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "conjugacy_classes.geometric_conjugacy",
+      "title": "Geometric Conjugacy and Deligne–Lusztig Theory",
+      "href": "conjugacy_classes/conjugacy_classes_geometric_conjugacy.html"
+    },
+    {
+      "id": "conjugacy_classes.strongly_regular_elements",
+      "title": "Strongly Regular Elements and Harish-Chandra Theory",
+      "href": "conjugacy_classes/conjugacy_classes_strongly_regular_elements.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

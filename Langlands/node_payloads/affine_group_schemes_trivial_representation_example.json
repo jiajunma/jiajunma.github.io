@@ -1,0 +1,57 @@
+{
+  "id": "affine_group_schemes.trivial_representation_example",
+  "title": "Trivial Representation as a Comodule",
+  "kind": "example",
+  "status": "admitted",
+  "href": "affine_group_schemes/affine_group_schemes_trivial_representation_example.html",
+  "primary_topic": "affine_group_schemes",
+  "topics": [
+    "affine_group_schemes"
+  ],
+  "body_html": "<h1>Trivial Representation as a Comodule</h1>\n<p>Let \\(R\\) be a commutative semiring, let \\(A\\) be a bialgebra over \\(R\\),\nand let \\(V\\) be an \\(R\\)-module. The <strong>trivial \\(A\\)-comodule</strong> on \\(V\\)\nhas coaction</p>\n<p>\\[\n\\rho(v) = v \\otimes 1.\n\\]</p>\n<p>This satisfies the axioms of\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.comodule_definition\" href=\"affine_group_schemes_comodule_definition.html\">an \\(A\\)-comodule</a>:\ncoassociativity follows from\n\\[\n\\Delta(1)=1\\otimes 1,\n\\]\nand the counit axiom follows from \\(\\varepsilon(1)=1\\).</p>\n<p>When \\(A = \\mathcal{O}(G)\\) is the coordinate Hopf algebra of an affine\ngroup scheme \\(G\\), this comodule corresponds to the representation on\nwhich every \\(R\\)-point of \\(G\\) acts by the identity on \\(V\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.comodule_definition",
+      "title": "Comodule over a Coalgebra",
+      "href": "affine_group_schemes/affine_group_schemes_comodule_definition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.trivialCoaction_apply - Langlands.AlgebraicGeometry.trivialCoaction - Langlands.AlgebraicGeometry.trivialComodule",
+      "display_name": "Langlands.AlgebraicGeometry.trivialCoaction_apply - Langlands.AlgebraicGeometry.trivialCoaction - Langlands.AlgebraicGeometry.trivialComodule",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "Langlands.AlgebraicGeometry.trivialComodule",
+        "Langlands.AlgebraicGeometry.trivialCoaction_apply",
+        "Langlands.AlgebraicGeometry.trivialCoaction"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Comodule",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Comodule",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Comodule.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

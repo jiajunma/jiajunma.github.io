@@ -4,9 +4,9 @@
   "kind": "theorem",
   "status": "admitted",
   "href": "affine_group_schemes/affine_group_schemes_spec_representability_via_global_sections.html",
-  "primary_topic": "linear_algebraic_groups",
+  "primary_topic": "affine_group_schemes",
   "topics": [
-    "linear_algebraic_groups"
+    "affine_group_schemes"
   ],
   "body_html": "<h1>Hom Into Spec via Global Sections (\\(\\operatorname{Spec} \\dashv \\Gamma\\) Adjunction)</h1>\n<p>Let \\(R\\) be a commutative ring and \\(A\\) a commutative \\(R\\)-algebra.\nFor any scheme \\(T\\) over \\(\\operatorname{Spec} R\\) (not necessarily\naffine), there is a natural bijection of sets</p>\n<p>\\[\n\\operatorname{Hom}_{\\mathsf{Sch}/\\operatorname{Spec} R}(T,\\, \\operatorname{Spec} A)\n\\;\\;\\simeq\\;\\;\n\\operatorname{Hom}_{R\\text{-Alg}}\\bigl(A,\\, \\Gamma(T, \\mathcal{O}_T)\\bigr),\n\\]</p>\n<p>where the right-hand side gives \\(\\Gamma(T, \\mathcal{O}_T)\\) its\ncanonical \\(R\\)-algebra structure via the structure morphism\n\\(T \\to \\operatorname{Spec} R\\). The bijection is natural in \\(T\\).</p>",
   "proof_html": "<p>This is the global-sections-versus-Spec adjunction, restricted to\nmorphisms living over \\(\\operatorname{Spec} R\\). Concretely, given\n\\(f : T \\to \\operatorname{Spec} A\\) over \\(\\operatorname{Spec} R\\), the\npullback on global sections gives\n\\(f^\\sharp : A = \\Gamma(\\operatorname{Spec} A, \\mathcal{O}) \\to \\Gamma(T, \\mathcal{O}_T)\\)\nas an \\(R\\)-algebra hom. Conversely, given an \\(R\\)-algebra hom\n\\(\\varphi : A \\to \\Gamma(T, \\mathcal{O}_T)\\), the universal property of\n\\(\\operatorname{Spec}\\) on the affine target gives a unique scheme\nmorphism \\(T \\to \\operatorname{Spec} A\\) whose induced map on global\nsections is \\(\\varphi\\); compatibility over \\(\\operatorname{Spec} R\\)\nfollows automatically because \\(\\varphi\\) is \\(R\\)-linear.</p>\n<p>Naturality in \\(T\\) is immediate: a morphism \\(g : T' \\to T\\) sends an\n\\(R\\)-algebra hom \\(A \\to \\Gamma(T, \\mathcal{O}_T)\\) to its composition\nwith \\(g^\\sharp : \\Gamma(T, \\mathcal{O}_T) \\to \\Gamma(T', \\mathcal{O}_{T'})\\),\nmatching the precomposition on the scheme-morphism side.<br />\n\\(\\square\\)</p>\n<p><strong>Mathlib state.</strong> This is <code>Spec ⊣ Γ</code> (<code>AlgebraicGeometry.ΓSpec.adjunction</code>\nor <code>Spec.adjunction</code> depending on the formulation). The \"over\n<code>Spec R</code>\" version follows by passing to the slice category. Both are\nin Mathlib master.</p>",
@@ -35,37 +35,64 @@
       "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specRepresentability",
       "qualified_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.specRepresentability",
       "module": "LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf",
+      "kind": "def",
+      "signature": "noncomputable def specRepresentability :\n    (pointsPresheaf R A ⋙ forget GrpCat).RepresentableBy (specObjOver R A) where\n  homEquiv {T : Over (Scheme.Spec.obj (op R))} :=\n    letI := gammaAlgebra R T\n    { toFun := homOverToAlgHom R A T\n      invFun := algHomToHomOver R A T\n      left_inv := by\n        intro f\n        -- Roundtrip: algHomToHomOver ∘ homOverToAlgHom on f reduces\n        -- to f via the adjunction's (homEquiv).apply_symm_apply on f.left.\n        apply Over.OverMorphism.ext\n        show ΓSpec.adjunction.homEquiv T.left (op (CommRingCat.of A))\n            (op (CommRingCat.ofHom\n              ((Scheme.ΓSpecIso (CommRingCat.of A)).inv ≫ f.left.appTop).hom))\n            = f.left\n        -- This is `(homEquiv).apply_symm_apply f.left`, with the symm\n        -- formula unfolded.\n        have hSymm :\n            (ΓSpec.adjunction.homEquiv T.left (op (CommRingCat.of A))).symm\n              f.left =\n            op (CommRingCat.ofHom\n              ((Scheme.ΓSpecIso (CommRingCat.of A)).inv ≫ f.left.appTop).hom) := by\n          rw [Adjunction.homEquiv_counit,\n            ΓSpec.adjunction_counit_app]\n          rfl\n        rw [← hSymm, Equiv.apply_symm_apply]\n      right_inv := by\n        intro φ\n        -- Roundtrip: homOverToAlgHom ∘ algHomToHomOver on φ reduces to φ\n        -- via (homEquiv).symm_apply_apply on op (φ.toRingHom).\n        apply AlgHom.ext\n        intro a\n        -- Use symm_apply_apply for the adjunction homEquiv.\n        have happ :=\n          (ΓSpec.adjunction.homEquiv T.left (op (CommRingCat.of A))).symm_apply_apply\n            (op (CommRingCat.ofHom φ.toRingHom))\n        rw [Adjunction.homEquiv_counit, ΓSpec.adjunction_counit_app] at happ\n        -- happ : op (...) ≫ op (ΓSpecIso A).inv = op (CommRingCat.ofHom φ.toRingHom).\n        -- Take .unop to get a CommRingCat hom equality.\n        have hunop := congrArg Quiver.Hom.unop happ",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L398",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L407",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.homOverToAlgHom",
       "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.homOverToAlgHom",
       "qualified_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.homOverToAlgHom",
       "module": "LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf",
+      "kind": "def",
+      "signature": "noncomputable def homOverToAlgHom (T : Over (Scheme.Spec.obj (op R)))\n    (f : T ⟶ specObjOver R A) :\n    letI",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L285",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L288",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomToHomOver",
       "display_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomToHomOver",
       "qualified_name": "Langlands.AlgebraicGeometry.AlgHomPointsPresheaf.algHomToHomOver",
       "module": "LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf",
+      "kind": "def",
+      "signature": "noncomputable def algHomToHomOver (T : Over (Scheme.Spec.obj (op R)))\n    (φ : letI := gammaAlgebra R T; A →ₐ[R] Γ(T.left, ⊤)) :\n    T ⟶ specObjOver R A",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L339",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L345",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf",
+      "display_name": "LanglandsLean.AlgebraicGeometry.AlgHomPointsPresheaf",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/AlgHomPointsPresheaf.lean#L1",
       "status": "resolved",
       "reason": null
     }

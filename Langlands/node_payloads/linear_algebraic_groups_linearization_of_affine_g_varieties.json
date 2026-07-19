@@ -1,0 +1,33 @@
+{
+  "id": "linear_algebraic_groups.linearization_of_affine_g_varieties",
+  "title": "Affine G-Varieties Embed Equivariantly in Representations",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_linearization_of_affine_g_varieties.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Affine G-Varieties Embed Equivariantly in Representations</h1>\n<p>Let \\(G\\) be a linear algebraic group acting regularly on an affine variety\n\\(X\\). Then there exists a finite-dimensional rational representation \\(V\\)\nof \\(G\\) and a \\(G\\)-equivariant closed immersion\n\\[\nX \\hookrightarrow V.\n\\]</p>\n<p>In particular, affine \\(G\\)-varieties can be studied through finite-dimensional\nlinear representations of \\(G\\).</p>",
+  "proof_html": "<p>Write \\(X=\\operatorname{Spec} A\\). The action of \\(G\\) on \\(X\\) is\nequivalent to a coaction \\(A\\to A\\otimes k[G]\\), so \\(A\\) is a rational\n\\(G\\)-module. Choose finitely many algebra generators of \\(A\\). The\nfinite-subcomodule argument used in the\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">embedding theorem</a> puts\nthese generators inside a finite-dimensional \\(G\\)-stable subspace\n\\(W\\subseteq A\\).</p>\n<p>The inclusion \\(W\\subseteq A\\) gives a surjective algebra map\n\\(\\operatorname{Sym}(W)\\to A\\), hence a closed immersion\n\\(X\\hookrightarrow W^\\vee\\). Since \\(W\\) is \\(G\\)-stable, the dual space\n\\(W^\\vee\\) is a finite-dimensional representation and the immersion is\n\\(G\\)-equivariant.</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "title": "Algebraic Group Actions, Orbits, and Stabilizers",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_action_orbits_stabilizers.html"
+    },
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    },
+    {
+      "id": "affine_group_schemes.representation_equals_comodule",
+      "title": "G-Representations Are A-Comodules",
+      "href": "affine_group_schemes/affine_group_schemes_representation_equals_comodule.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

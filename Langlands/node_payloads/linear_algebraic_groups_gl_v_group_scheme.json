@@ -1,0 +1,75 @@
+{
+  "id": "linear_algebraic_groups.gl_v_group_scheme",
+  "title": "General Linear Group Scheme GL(V)",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_gl_v_group_scheme.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>General Linear Group Scheme GL(V)</h1>\n<p>For a finite free \\(R\\)-module \\(V\\), the <strong>general linear group scheme</strong> \\(\\mathrm{GL}(V)\\)\nis the affine group scheme representing the functor\n\\[\nS \\;\\mapsto\\; \\mathrm{GL}_{R}(V \\otimes_R \\mathcal{O}_S).\n\\]</p>\n<p>When \\(V = R^n\\), this recovers \\(\\mathrm{GL}_n\\) as a special case. The coordinate\nring perspective: \\(\\mathcal{O}(\\mathrm{GL}(V)) = \\mathrm{Sym}(V \\otimes_R V^*)[\\det^{-1}]\\).</p>\n<h2>Lean Formalization</h2>\n<p>The Lean 4 formalization provides:\n- <code>GLV</code>: the group scheme object\n- <code>GLVSch</code>: the scheme underlying <code>GL(V)</code></p>\n<p>as elements of <code>Langlands.AlgebraicGeometry.Examples</code>.</p>\n<h2>References</h2>\n<ul>\n<li>SGA 3, Exposé I–III.</li>\n<li>Demazure–Gabriel, <em>Groupes algébriques</em> (1970).</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.general_linear_group_scheme",
+      "title": "General Linear Group Scheme GL_n",
+      "href": "affine_group_schemes/affine_group_schemes_general_linear_group_scheme.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.GLV",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.GLV",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.GLV",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.GLV",
+      "kind": "def",
+      "signature": "noncomputable def GLV : Over (Scheme.Spec.obj (op R)) :=\n  GLn.over R (Module.finrank R V)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/GLV.lean#L53",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.GLVSch",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.GLVSch",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.GLV",
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.GLn",
+        "(module) LanglandsLean.AlgebraicGeometry.Examples.Ga"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "lean/LanglandsLean/AlgebraicGeometry/Examples/GLV.lean",
+      "display_name": "lean/LanglandsLean/AlgebraicGeometry/Examples/GLV.lean",
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "status": "unresolved",
+      "reason": "module not found in repository 'langlands'"
+    }
+  ]
+}

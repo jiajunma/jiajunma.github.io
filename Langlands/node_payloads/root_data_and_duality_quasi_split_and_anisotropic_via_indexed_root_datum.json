@@ -1,0 +1,35 @@
+{
+  "id": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+  "title": "Quasi-Split and Anisotropic Groups via the Indexed Root Datum",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "descent_and_forms/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html",
+  "primary_topic": "descent_and_forms",
+  "topics": [
+    "root_data_and_duality",
+    "reductive_structure",
+    "descent_and_forms"
+  ],
+  "body_html": "<h1>Quasi-Split and Anisotropic Groups via the Indexed Root Datum</h1>\n<p>Let \\(G\\) be a connected reductive \\(F\\)-group with indexed root datum\n\\[\n{}_{F}\\Psi(G)=(X,D,X^\\vee,D^\\vee,D_0,\\Gamma_F).\n\\]\nThen:</p>\n<ol>\n<li>\\(G\\) is quasi-split over \\(F\\) if and only if \\(G\\) contains a Borel\n   subgroup defined over \\(F\\). Equivalently, \\(D_0=\\emptyset\\).</li>\n<li>\\(G\\) is anisotropic over \\(F\\) if and only if \\(G\\) has no proper\n   parabolic \\(F\\)-subgroup. Equivalently, \\(D_0=D\\).</li>\n</ol>",
+  "proof_html": "<p>Let \\(S\\) be a maximal \\(F\\)-split torus and \\(T\\supseteq S\\) a maximal\n\\(F\\)-torus. Quasi-splitness is equivalent to the centralizer \\(Z_G(S)\\)\nbeing a torus. In that case a cocharacter of \\(S\\) with centralizer \\(T\\)\ndefines a parabolic \\(P(\\lambda)\\) that is solvable, hence a Borel subgroup\ndefined over \\(F\\).</p>\n<p>Conversely, if \\(B\\) is an \\(F\\)-defined Borel subgroup, then \\(B=P(\\lambda)\\)\nfor an \\(F\\)-defined cocharacter after conjugating the image of \\(\\lambda\\)\ninto \\(S\\). Since \\(P(\\lambda)\\) is solvable, its Levi \\(Z_G(\\lambda)\\) is a\ntorus, forcing \\(Z_G(S)=T\\) and \\(D_0=\\emptyset\\).</p>\n<p>The anisotropic criterion follows because proper parabolic \\(F\\)-subgroups\nare exactly the rational parabolics detected by noncentral \\(F\\)-split\ncocharacters. Such cocharacters exist precisely when the distinguished subset\ndoes not equal all of \\(D\\).</p>",
+  "deps": [
+    {
+      "id": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "title": "Indexed Root Datum of an F-Reductive Group",
+      "href": "descent_and_forms/root_data_and_duality_indexed_root_datum_of_f_reductive_group.html"
+    },
+    {
+      "id": "descent_and_forms.quasi_split_forms",
+      "title": "Quasi-Split Forms",
+      "href": "descent_and_forms/descent_and_forms_quasi_split_forms.html"
+    },
+    {
+      "id": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "title": "Levi Decomposition for Parabolic F-Subgroups",
+      "href": "root_data_and_duality/reductive_structure_parabolic_f_subgroups_levi_decomposition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

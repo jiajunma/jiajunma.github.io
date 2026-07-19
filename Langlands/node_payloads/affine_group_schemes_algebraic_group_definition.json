@@ -4,11 +4,11 @@
   "kind": "definition",
   "status": "admitted",
   "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html",
-  "primary_topic": "linear_algebraic_groups",
+  "primary_topic": "affine_group_schemes",
   "topics": [
-    "linear_algebraic_groups"
+    "affine_group_schemes"
   ],
-  "body_html": "<h1>Algebraic Group over a Base</h1>\n<p>Let \\(S\\) be a scheme. An <strong>algebraic group over \\(S\\)</strong> is an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\n\\(G\\) over \\(S\\) whose structure morphism \\(G \\to S\\) is locally of finite\ntype.</p>\n<p>Following the modern convention (Milne, <em>Algebraic Groups</em>; SGA 3), we do\n<strong>not</strong> require \\(G\\) to be smooth over \\(S\\). Smoothness is a separate\nhypothesis added where the theory needs it (for example, to identify the\nidentity component or to make a Lie-algebra argument work). Important\nnon-smooth examples include \\(\\mu_n\\) and \\(\\alpha_p\\) over a field of\ncharacteristic \\(p\\).</p>\n<p>In the project's Lean development this is the typeclass aggregator\n\\(\\texttt{IsAlgebraicGroup}\\,G\\,S\\), which extends\n\\(\\texttt{IsAffineGroupScheme}\\,G\\,S\\) and\n\\(\\texttt{LocallyOfFiniteType}\\,(G \\downarrow S)\\). When the base \\(S\\) is\nthe spectrum of a field, the term <em>linear algebraic group</em> is also used\n(Milne / Borel / Humphreys / Springer).</p>",
+  "body_html": "<h1>Algebraic Group over a Base</h1>\n<p>Let \\(S\\) be a scheme. An <strong>algebraic group over \\(S\\)</strong> is an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"affine_group_schemes_affine_group_scheme_definition.html\">affine group scheme</a>\n\\(G\\) over \\(S\\) whose structure morphism \\(G \\to S\\) is locally of finite\ntype.</p>\n<p>Following the modern convention (Milne, <em>Algebraic Groups</em>; SGA 3), we do\n<strong>not</strong> require \\(G\\) to be smooth over \\(S\\). Smoothness is a separate\nhypothesis added where the theory needs it (for example, to identify the\nidentity component or to make a Lie-algebra argument work). Important\nnon-smooth examples include \\(\\mu_n\\) and \\(\\alpha_p\\) over a field of\ncharacteristic \\(p\\).</p>\n<p>In the project's Lean development this is the typeclass aggregator\n\\(\\texttt{IsAlgebraicGroup}\\,G\\,S\\), which extends\n\\(\\texttt{IsAffineGroupScheme}\\,G\\,S\\) and\n\\(\\texttt{LocallyOfFiniteType}\\,(G \\downarrow S)\\). When the base \\(S\\) is\nthe spectrum of a field, the term <em>linear algebraic group</em> is also used\n(Milne / Borel / Humphreys / Springer).</p>",
   "proof_html": null,
   "deps": [
     {
@@ -24,19 +24,9 @@
       "href": "affine_group_schemes/affine_group_schemes_additive_group_scheme.html"
     },
     {
-      "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
-      "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html"
-    },
-    {
       "id": "affine_group_schemes.base_change_preserves_algebraic_group",
       "title": "Base Change Preserves Algebraic Group Structure",
       "href": "affine_group_schemes/affine_group_schemes_base_change_preserves_algebraic_group.html"
-    },
-    {
-      "id": "linear_algebraic_groups.embedding_theorem",
-      "title": "Embedding Theorem for Algebraic Groups",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
     },
     {
       "id": "affine_group_schemes.faithful_linear_representation_definition",
@@ -62,19 +52,90 @@
       "id": "affine_group_schemes.trivial_group_scheme",
       "title": "Trivial Group Scheme over a Base",
       "href": "affine_group_schemes/affine_group_schemes_trivial_group_scheme.html"
+    },
+    {
+      "id": "linear_algebraic_groups.affine_finite_type_faithful_representation",
+      "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html"
+    },
+    {
+      "id": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "title": "Algebraic Group Actions, Orbits, and Stabilizers",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_action_orbits_stabilizers.html"
+    },
+    {
+      "id": "linear_algebraic_groups.closed_image_of_homomorphism",
+      "title": "Image of an Algebraic Group Homomorphism Is Closed",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_closed_image_of_homomorphism.html"
+    },
+    {
+      "id": "linear_algebraic_groups.embedding_theorem",
+      "title": "Embedding Theorem for Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+    },
+    {
+      "id": "linear_algebraic_groups.identity_component_normal_finite_index",
+      "title": "Identity Component Is Closed Normal of Finite Index",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_identity_component_normal_finite_index.html"
+    },
+    {
+      "id": "linear_algebraic_groups.jordan_decomposition_in_algebraic_group",
+      "title": "Jordan Decomposition in a Linear Algebraic Group",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_jordan_decomposition_in_algebraic_group.html"
+    },
+    {
+      "id": "linear_algebraic_groups.lie_algebra_of_algebraic_group",
+      "title": "Lie Algebra of an Algebraic Group",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_lie_algebra_of_algebraic_group.html"
+    },
+    {
+      "id": "linear_algebraic_groups.quotient_by_closed_subgroup_exists",
+      "title": "Quotient by a Closed Subgroup Exists",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_quotient_by_closed_subgroup_exists.html"
+    },
+    {
+      "id": "linear_algebraic_groups.subgroup_generated_by_connected_subgroups",
+      "title": "Connected Subgroups Generate a Closed Connected Subgroup",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_subgroup_generated_by_connected_subgroups.html"
+    },
+    {
+      "id": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
+      "title": "Unipotent Subgroups Are Triangularizable",
+      "href": "reductive_structure/linear_algebraic_groups_unipotent_subgroups_are_triangularizable.html"
     }
   ],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
-      "display_name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
-      "qualified_name": "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
-      "module": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
+      "name": "Langlands.AlgebraicGeometry.instIsAlgebraicGroup - Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+      "display_name": "Langlands.AlgebraicGeometry.instIsAlgebraicGroup - Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+      "qualified_name": null,
+      "module": null,
+      "kind": null,
+      "signature": null,
+      "docstring": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository",
+      "suggestions": [
+        "Langlands.AlgebraicGeometry.IsAlgebraicGroup",
+        "Langlands.AlgebraicGeometry.instIsAffineGroupScheme",
+        "Langlands.AlgebraicGeometry.instIsAlgebraicGroup"
+      ]
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
+      "display_name": "LanglandsLean.AlgebraicGeometry.IsAlgebraicGroup",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L74",
-      "has_sorry": false,
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/IsAlgebraicGroup.lean#L1",
       "status": "resolved",
       "reason": null
     }

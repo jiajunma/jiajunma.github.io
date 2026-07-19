@@ -1,0 +1,33 @@
+{
+  "id": "linear_algebraic_groups.quotient_by_closed_subgroup_exists",
+  "title": "Quotient by a Closed Subgroup Exists",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_quotient_by_closed_subgroup_exists.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Quotient by a Closed Subgroup Exists</h1>\n<p>Let \\(G\\) be a linear algebraic group over an algebraically closed field and\nlet \\(H\\subseteq G\\) be a closed algebraic subgroup. Then the homogeneous\nspace \\(G/H\\) exists as a variety, the quotient map\n\\[\n\\pi:G\\to G/H\n\\]\nis a morphism, and \\(\\pi\\) is universal among morphisms from \\(G\\) that are\nconstant on right \\(H\\)-cosets. The variety \\(G/H\\) is quasi-projective and\n\\[\n\\dim(G/H)=\\dim G-\\dim H.\n\\]</p>\n<p>If \\(H\\) is normal, then \\(G/H\\) is a linear algebraic group and\n\\(\\pi\\) is a homomorphism.</p>",
+  "proof_html": "<p>The construction embeds \\(G\\) into a finite-dimensional representation and\nchooses a point whose stabilizer is \\(H\\) after passing to a suitable\nprojective representation. The orbit of that point is locally closed by the\norbit theorem, and it represents the coset space \\(G/H\\).</p>\n<p>The universal property follows because a morphism constant on \\(H\\)-cosets\nis constant on the fibers of \\(G\\to G/H\\), hence factors uniquely through the\norbit variety. The dimension formula is the fiber-dimension theorem applied\nto the quotient morphism, whose fibers are translates of \\(H\\). If \\(H\\) is\nnormal, multiplication and inversion descend from \\(G\\) to \\(G/H\\), giving\nthe quotient group structure.</p>",
+  "deps": [
+    {
+      "id": "affine_group_schemes.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "title": "Algebraic Group Actions, Orbits, and Stabilizers",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_action_orbits_stabilizers.html"
+    },
+    {
+      "id": "linear_algebraic_groups.kernels_images_and_quotients",
+      "title": "Kernels, Images, and Quotients",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_kernels_images_and_quotients.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

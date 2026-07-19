@@ -1,0 +1,39 @@
+{
+  "id": "conjugacy_classes.nilpotent_cone",
+  "title": "Nilpotent Cone",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "conjugacy_classes/conjugacy_classes_nilpotent_cone.html",
+  "primary_topic": "conjugacy_classes",
+  "topics": [
+    "conjugacy_classes"
+  ],
+  "body_html": "<h1>Nilpotent Cone</h1>\n<p>The <strong>nilpotent cone</strong> \\(\\mathcal{N} \\subseteq \\mathfrak{g}\\) is the\nclosed subvariety of nilpotent elements in a Lie algebra. It is the\ngeometric scaffolding for the entire theory of nilpotent orbits, the\ntarget of the Springer resolution, and a source of remarkable\nvarieties in representation theory.</p>\n<h2>Definition</h2>\n<p>Let \\(\\mathfrak{g}\\) be the Lie algebra of a connected reductive\nalgebraic group \\(G\\) over an algebraically closed field \\(k\\) of\ncharacteristic 0 (or good characteristic). The <strong>nilpotent cone</strong> is\n\\[\n\\mathcal{N} \\;:=\\; \\{X \\in \\mathfrak{g} : X \\text{ is nilpotent}\\}.\n\\]</p>\n<p>Equivalently:\n\\[\n\\mathcal{N} \\;=\\; \\{X \\in \\mathfrak{g} : \\operatorname{ad}(X) \\text{ is nilpotent}\\}\n\\;=\\; \\{X : 0 \\in \\overline{G \\cdot X}\\}.\n\\]</p>\n<h2>Basic properties</h2>\n<ul>\n<li>\\(\\mathcal{N}\\) is a <strong>closed conical</strong> subvariety (closed under\n  scalar multiplication).</li>\n<li><strong>Irreducible</strong> for \\(\\mathfrak{g}\\) semisimple.</li>\n<li><strong>Dimension</strong>: \\(\\dim \\mathcal{N} = \\dim \\mathfrak{g} - \\mathrm{rank}\\, \\mathfrak{g}\\).</li>\n<li><strong>Normal</strong> as an algebraic variety.</li>\n<li><strong>Singular</strong> at every non-regular nilpotent.</li>\n</ul>\n<h2>Kostant's theorem</h2>\n<p><strong>Theorem (Kostant 1963).</strong> Let \\(\\mathfrak{g}\\) be semisimple. The\n<strong>adjoint quotient</strong> \\(\\chi : \\mathfrak{g} \\to \\mathfrak{g} /\\!\\!/ G\\)\nis flat, and \\(\\mathcal{N} = \\chi^{-1}(0)\\) is a <strong>complete\nintersection</strong> in \\(\\mathfrak{g}\\), cut out by the \\(r\\) basic\n\\(G\\)-invariants \\(p_1, \\ldots, p_r\\) (\\(r = \\mathrm{rank}\\,\\mathfrak{g}\\)).</p>\n<p>For \\(\\mathfrak{gl}_n\\): \\(p_i = \\mathrm{tr}(X^i)\\), and \\(\\mathcal{N}\\)\nis cut out by \\(\\mathrm{tr}(X) = \\mathrm{tr}(X^2) = \\cdots = \\mathrm{tr}(X^n) = 0\\),\nequivalently by the vanishing of the non-constant coefficients of the\ncharacteristic polynomial.</p>\n<h2>Springer resolution</h2>\n<p>The <strong>Springer resolution</strong>\n\\[\n\\mu : \\tilde{\\mathcal{N}} \\;\\longrightarrow\\; \\mathcal{N}\n\\]\nis a proper birational morphism, where\n\\(\\tilde{\\mathcal{N}} = T^*(G/B) = \\{(X, B') : X \\in \\operatorname{Lie}(R_u(B'))\\}\\).\nIt is an isomorphism over the open regular nilpotent orbit and\ncontracts other fibres (<strong>Springer fibres</strong> \\(\\mathcal{B}_X = \\mu^{-1}(X)\\))\nto lower-dimensional varieties.</p>\n<h2>Examples</h2>\n<h3>\\(\\mathfrak{gl}_n\\) and \\(\\mathfrak{sl}_n\\)</h3>\n<p>\\(\\mathcal{N}\\) = nilpotent matrices; \\(\\dim \\mathcal{N} = n^2 - n\\).\nOrbits indexed by partitions of \\(n\\); closure order = dominance.</p>\n<h3>\\(\\mathfrak{sl}_2\\)</h3>\n<p>\\(\\mathcal{N}\\) is the 2-dimensional quadric cone\n\\(\\{X \\in \\mathfrak{sl}_2 : X^2 = 0\\}\\), with three orbits: 0,\nregular nilpotent (open), the rays connecting them collapsed.</p>\n<h3>Exceptional types</h3>\n<p>\\(E_8\\): \\(\\dim \\mathcal{N} = 240\\); 70 orbits stratifying it.\n\\(G_2\\): \\(\\dim \\mathcal{N} = 12\\); 5 orbits.</p>\n<h2>Stratification by orbits</h2>\n<p>\\(\\mathcal{N}\\) is the disjoint union of finitely many \\(G\\)-orbits,\neach locally closed and even-dimensional. The <strong>closure relations</strong>\ngive a partial order with:</p>\n<ul>\n<li>minimum: \\(\\{0\\}\\) (zero orbit);</li>\n<li>maximum: <strong>regular nilpotent</strong> orbit (= principal), open dense;</li>\n<li>minimum non-trivial: <strong>minimal nilpotent orbit</strong>, of dimension\n  \\(2h^\\vee - 2\\) (\\(h^\\vee\\) = dual Coxeter number).</li>\n</ul>\n<h2>Connection to flag variety</h2>\n<p>The Springer resolution is the cotangent bundle\n\\(\\tilde{\\mathcal{N}} = T^*(G/B)\\), so \\(\\mathcal{N}\\) is \"transverse\"\nto the flag variety. Concretely:</p>\n<ul>\n<li><strong>Steinberg variety</strong> \\(Z = \\tilde{\\mathcal{N}} \\times_{\\mathcal{N}} \\tilde{\\mathcal{N}}\\)\n  carries a convolution algebra structure;</li>\n<li>\\(H_{\\bullet}^{BM}(Z, \\mathbb{C}) \\cong \\mathbb{C}[W]\\) (Borel-Moore\n  homology = group algebra of Weyl group) — this is the <strong>Springer\n  algebra</strong>.</li>\n</ul>\n<h2>Geometric Satake</h2>\n<p>Under Mirković-Vilonen / geometric Satake, the nilpotent cone of\n\\(\\hat G\\) corresponds to the affine Grassmannian of \\(G\\), with\nstrata bijection: \\(\\hat G\\)-orbits in \\(\\hat{\\mathcal{N}}\\) ↔\n\\(G(\\mathcal{O})\\)-orbits in \\(\\mathrm{Gr}_G\\).</p>\n<h2>Role in Langlands</h2>\n<ul>\n<li><strong>Springer correspondence</strong>: nilpotent orbits ↔ irreps of \\(W\\)\n  (with extra component-group data), via top-cohomology of Springer\n  fibres.</li>\n<li><strong>A-parameters</strong>: the \\(\\mathrm{SL}_2\\) factor in Arthur parameters\n  corresponds (via Jacobson-Morozov) to a nilpotent orbit in\n  \\(\\mathrm{Lie}(\\hat G)\\); refines L-packets to A-packets.</li>\n<li><strong>Wavefront sets</strong>: invariants of admissible representations\n  parametrised by nilpotent orbits in \\(\\mathfrak{g}\\).</li>\n</ul>\n<h2>Mathlib</h2>\n<p>Not formalised.</p>\n<h2>References</h2>\n<ul>\n<li>Collingwood–McGovern, <em>Nilpotent Orbits in Semisimple Lie Algebras</em>\n  (1993).</li>\n<li>Chriss–Ginzburg, <em>Representation Theory and Complex Geometry</em>\n  (1997).</li>\n<li>Kostant, <em>Lie group representations on polynomial rings</em> (Amer.\\ J.\\\n  Math.\\ 1963).</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><span class=\"node-ref unresolved\" data-node-id=\"nilpotent_orbits.nilpotent_elements\">Nilpotent Elements</span></li>\n<li><span class=\"node-ref unresolved\" data-node-id=\"nilpotent_orbits.adjoint_action\">Adjoint Action</span></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "conjugacy_classes.nilpotent_elements",
+      "title": "Nilpotent Elements",
+      "href": "conjugacy_classes/conjugacy_classes_nilpotent_elements.html"
+    },
+    {
+      "id": "conjugacy_classes.adjoint_action",
+      "title": "Adjoint Action",
+      "href": "conjugacy_classes/conjugacy_classes_adjoint_action.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "conjugacy_classes.nilpotent_orbits",
+      "title": "Nilpotent Orbits",
+      "href": "conjugacy_classes/conjugacy_classes_nilpotent_orbits.html"
+    },
+    {
+      "id": "conjugacy_classes.springer_correspondence",
+      "title": "Springer Correspondence",
+      "href": "conjugacy_classes/conjugacy_classes_springer_correspondence.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

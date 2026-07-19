@@ -4,11 +4,11 @@
   "kind": "definition",
   "status": "admitted",
   "href": "affine_group_schemes/affine_group_schemes_points_functor_definition.html",
-  "primary_topic": "linear_algebraic_groups",
+  "primary_topic": "affine_group_schemes",
   "topics": [
-    "linear_algebraic_groups"
+    "affine_group_schemes"
   ],
-  "body_html": "<h1>Functor of Points of a Group Scheme</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"linear_algebraic_groups_affine_group_scheme_definition.html\">affine group scheme</a>\nover \\(\\operatorname{Spec} k\\). For any commutative \\(k\\)-algebra \\(R\\),\nthe <strong>\\(R\\)-points of \\(G\\)</strong> are</p>\n<p>\\[\nG(R) \\;=\\; \\operatorname{Hom}_{\\operatorname{Spec} k}(\\operatorname{Spec} R,\\, G),\n\\]</p>\n<p>the set of morphisms of schemes \\(\\operatorname{Spec} R \\to G\\) commuting\nwith the structure morphisms to \\(\\operatorname{Spec} k\\). Equivalently,\n\\(G(R)\\) is the hom-set in the slice category \\(\\mathsf{Over}(\\operatorname{Spec} k)\\)\nfrom the canonical \\(\\operatorname{Spec} R\\)-object (whose structure\nmorphism is induced by the algebra map \\(k \\to R\\)) to the canonical\n\\(G\\)-object.</p>\n<p>The assignment \\(R \\mapsto G(R)\\) is a functor from commutative\n\\(k\\)-algebras to sets. For \\(G\\) a group scheme, the functor lands in\ngroups; see\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.points_form_group\" href=\"linear_algebraic_groups_points_form_group.html\">$G(R)$ is a group</a>.</p>\n<p>In the project's Lean development \\(\\texttt{specOver}\\,k\\,R\\) is\n\\(\\operatorname{Spec} R\\) packaged as an \\(\\mathsf{Over}(\\operatorname{Spec} k)\\)\nobject, and \\(\\texttt{points}\\,k\\,G\\,R\\) is the hom set above. The\ndeclaration is an \\(\\texttt{abbrev}\\) so that the group instance below\nunfolds automatically.</p>",
+  "body_html": "<h1>Functor of Points of a Group Scheme</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_group_scheme_definition\" href=\"affine_group_schemes_affine_group_scheme_definition.html\">affine group scheme</a>\nover \\(\\operatorname{Spec} k\\). For any commutative \\(k\\)-algebra \\(R\\),\nthe <strong>\\(R\\)-points of \\(G\\)</strong> are</p>\n<p>\\[\nG(R) \\;=\\; \\operatorname{Hom}_{\\operatorname{Spec} k}(\\operatorname{Spec} R,\\, G),\n\\]</p>\n<p>the set of morphisms of schemes \\(\\operatorname{Spec} R \\to G\\) commuting\nwith the structure morphisms to \\(\\operatorname{Spec} k\\). Equivalently,\n\\(G(R)\\) is the hom-set in the slice category \\(\\mathsf{Over}(\\operatorname{Spec} k)\\)\nfrom the canonical \\(\\operatorname{Spec} R\\)-object (whose structure\nmorphism is induced by the algebra map \\(k \\to R\\)) to the canonical\n\\(G\\)-object.</p>\n<p>The assignment \\(R \\mapsto G(R)\\) is a functor from commutative\n\\(k\\)-algebras to sets. For \\(G\\) a group scheme, the functor lands in\ngroups; see\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.points_form_group\" href=\"affine_group_schemes_points_form_group.html\">$G(R)$ is a group</a>.</p>\n<p>In the project's Lean development \\(\\texttt{specOver}\\,k\\,R\\) is\n\\(\\operatorname{Spec} R\\) packaged as an \\(\\mathsf{Over}(\\operatorname{Spec} k)\\)\nobject, and \\(\\texttt{points}\\,k\\,G\\,R\\) is the hom set above. The\ndeclaration is an \\(\\texttt{abbrev}\\) so that the group instance below\nunfolds automatically.</p>",
   "proof_html": null,
   "deps": [
     {
@@ -46,28 +46,86 @@
   ],
   "lean_refs": [
     {
-      "name": "Langlands.AlgebraicGeometry.points",
-      "display_name": "Langlands.AlgebraicGeometry.points",
-      "qualified_name": "Langlands.AlgebraicGeometry.points",
-      "module": "LanglandsLean.AlgebraicGeometry.Points",
-      "repository_title": "LanglandsLean",
-      "revision": "main",
-      "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L50",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
-    {
       "name": "Langlands.AlgebraicGeometry.specOver",
       "display_name": "Langlands.AlgebraicGeometry.specOver",
       "qualified_name": "Langlands.AlgebraicGeometry.specOver",
       "module": "LanglandsLean.AlgebraicGeometry.Points",
+      "kind": "def",
+      "signature": "noncomputable def specOver (k R : Type u) [Field k] [CommRing R] [Algebra k R] :\n    Over (Spec (CommRingCat.of k)) :=\n  Over.mk (Spec.map (CommRingCat.ofHom (algebraMap k R)))",
+      "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L37",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.specOverHom",
+      "display_name": "Langlands.AlgebraicGeometry.specOverHom",
+      "qualified_name": "Langlands.AlgebraicGeometry.specOverHom",
+      "module": "LanglandsLean.AlgebraicGeometry.Points",
+      "kind": "def",
+      "signature": "noncomputable def specOverHom (k : Type u) [Field k]\n    {R R' : Type u} [CommRing R] [Algebra k R] [CommRing R'] [Algebra k R']\n    (f : R →ₐ[k] R') : specOver k R' ⟶ specOver k R",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L69",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.points",
+      "display_name": "Langlands.AlgebraicGeometry.points",
+      "qualified_name": "Langlands.AlgebraicGeometry.points",
+      "module": "LanglandsLean.AlgebraicGeometry.Points",
+      "kind": "abbrev",
+      "signature": "abbrev points (k : Type u) [Field k]\n    (G : Scheme.{u}) [G.Over (Spec (CommRingCat.of k))]\n    [GrpObj (Scheme.asOver G (Spec (CommRingCat.of k)))]\n    (R : Type u) [CommRing R] [Algebra k R] : Type u :=\n  specOver k R ⟶ Scheme.asOver G (Spec (CommRingCat.of k))",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L50",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.points.map",
+      "display_name": "Langlands.AlgebraicGeometry.points.map",
+      "qualified_name": "Langlands.AlgebraicGeometry.points.map",
+      "module": "LanglandsLean.AlgebraicGeometry.Points",
+      "kind": "def",
+      "signature": "noncomputable def points.map (k : Type u) [Field k]\n    (G : Scheme.{u}) [G.Over (Spec (CommRingCat.of k))]\n    [GrpObj (Scheme.asOver G (Spec (CommRingCat.of k)))]\n    {R R' : Type u} [CommRing R] [Algebra k R] [CommRing R'] [Algebra k R']\n    (f : R →ₐ[k] R') : points k G R → points k G R' :=\n  fun p => specOverHom k f ≫ p",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L83",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGeometry.Points",
+      "display_name": "LanglandsLean.AlgebraicGeometry.Points",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Points.lean#L1",
       "status": "resolved",
       "reason": null
     }

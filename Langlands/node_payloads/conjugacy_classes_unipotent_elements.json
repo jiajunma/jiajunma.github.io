@@ -1,0 +1,40 @@
+{
+  "id": "conjugacy_classes.unipotent_elements",
+  "title": "Unipotent Elements and the Unipotent Variety",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "conjugacy_classes/conjugacy_classes_unipotent_elements.html",
+  "primary_topic": "conjugacy_classes",
+  "topics": [
+    "conjugacy_classes",
+    "reductive_structure"
+  ],
+  "body_html": "<h1>Unipotent Elements and the Unipotent Variety</h1>\n<h2>Definition</h2>\n<p>Let \\(G\\) be a linear algebraic group. An element \\(g \\in G(k)\\) is\n<strong>unipotent</strong> if its semisimple part in the Jordan decomposition is trivial:\n\\(g = g_u\\), i.e.\\ \\(g_s = 1\\).</p>\n<p>Equivalently, for any faithful representation \\(\\rho : G \\to \\mathrm{GL}(V)\\),\n\\(\\rho(g)\\) is a unipotent matrix: all eigenvalues equal \\(1\\), i.e.\\((\\rho(g) - I)^N = 0\\) for some \\(N \\le \\dim V\\).</p>\n<h2>The unipotent variety</h2>\n<p>The <strong>unipotent variety</strong> (or <strong>unipotent cone</strong>) is\n\\[\n\\mathcal{U} = \\{g \\in G : g \\text{ is unipotent}\\}.\n\\]\nThis is a <strong>closed</strong>, <strong>\\(G\\)-stable</strong> (under conjugation) subvariety of \\(G\\).</p>\n<h3>Dimension</h3>\n<p>\\[\n\\dim \\mathcal{U} = \\dim G - \\mathrm{rank}(G).\n\\]</p>\n<h3>Irreducibility</h3>\n<p>For \\(G\\) connected reductive, \\(\\mathcal{U}\\) is <strong>irreducible</strong>: every\nunipotent element is conjugate to an element of the unipotent radical\n\\(U_B\\) of a Borel subgroup \\(B\\), and \\(G/B \\times U_B \\to \\mathcal{U}\\)\nis a resolution (the Springer resolution).</p>\n<h2>Relation to the nilpotent cone</h2>\n<p>In characteristic \\(0\\), the exponential map gives a \\(G\\)-equivariant\nisomorphism\n\\[\n\\exp : \\mathcal{N} \\xrightarrow{\\;\\sim\\;} \\mathcal{U},\n\\]\nwhere \\(\\mathcal{N} \\subset \\mathrm{Lie}(G)\\) is the nilpotent cone.\nThis identifies unipotent orbits in \\(G\\) with nilpotent orbits in\n\\(\\mathrm{Lie}(G)\\).</p>\n<p>In characteristic \\(p &gt; 0\\), the exponential map does not converge globally.\nInstead, the identification goes through the <strong>Springer isomorphism</strong> (a\n\\(G\\)-equivariant isomorphism \\(\\mathcal{N} \\xrightarrow{\\sim} \\mathcal{U}\\)\nthat exists under mild hypotheses on \\(p\\), e.g.\\ \\(p\\) good for \\(G\\)).</p>\n<h2>Unipotent subgroups</h2>\n<p>The unipotent elements in a <strong>connected unipotent</strong> algebraic group \\(U\\) fill\nall of \\(U\\). For a reductive \\(G\\), unipotent elements appear in:\n- Unipotent radicals \\(R_u(P)\\) of parabolic subgroups \\(P\\).\n- Root subgroups \\(U_\\alpha \\cong \\mathbb{G}_a\\).\n- The big cell \\(B^- \\cdot B\\) (open dense in \\(G\\)).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "conjugacy_classes.jordan_decomposition",
+      "title": "Jordan Decomposition in Algebraic Groups",
+      "href": "conjugacy_classes/conjugacy_classes_jordan_decomposition.html"
+    },
+    {
+      "id": "reductive_structure.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "reductive_structure/reductive_structure_reductive_groups.html"
+    },
+    {
+      "id": "affine_group_schemes.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "affine_group_schemes/affine_group_schemes_affine_group_scheme_definition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "conjugacy_classes.unipotent_orbits",
+      "title": "Unipotent Orbits",
+      "href": "conjugacy_classes/conjugacy_classes_unipotent_orbits.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

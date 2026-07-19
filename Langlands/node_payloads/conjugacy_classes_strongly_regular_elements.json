@@ -1,0 +1,38 @@
+{
+  "id": "conjugacy_classes.strongly_regular_elements",
+  "title": "Strongly Regular Elements and Harish-Chandra Theory",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "conjugacy_classes/conjugacy_classes_strongly_regular_elements.html",
+  "primary_topic": "conjugacy_classes",
+  "topics": [
+    "conjugacy_classes"
+  ],
+  "body_html": "<h1>Strongly Regular Elements and Harish-Chandra Theory</h1>\n<h2>Definition</h2>\n<p>Let $G$ be a connected reductive group. A semisimple element $\\gamma \\in G$\nis <strong>strongly regular</strong> if its centraliser $C_G(\\gamma)$ is a <strong>maximal torus</strong>\n(i.e.\\ connected and abelian of rank $r$):\n$$C_G(\\gamma) = T \\quad \\text{(a maximal torus)}.$$</p>\n<p>The set of strongly regular elements is denoted $G^{\\mathrm{sr}}$.</p>\n<h2>Comparison with regular elements</h2>\n<table>\n<thead>\n<tr>\n<th>Property</th>\n<th>Strongly regular</th>\n<th>Regular semisimple</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>$C_G(\\gamma)$</td>\n<td>Maximal torus (connected)</td>\n<td>$C_G(\\gamma)^\\circ$ a max.\\ torus</td>\n</tr>\n<tr>\n<td>Condition on $\\alpha(\\gamma)$</td>\n<td>$\\alpha(\\gamma) \\ne 1$ for <strong>all</strong> $\\alpha$</td>\n<td>Same</td>\n</tr>\n<tr>\n<td>$C_G(\\gamma)$ connected?</td>\n<td>Yes, by definition</td>\n<td>Not always</td>\n</tr>\n</tbody>\n</table>\n<p>For <strong>simply connected</strong> $G$ (or adjoint $G$): regular semisimple $\\iff$\nstrongly regular (since $C_G(\\gamma)$ is automatically connected).</p>\n<p>For general reductive $G$: strongly regular $\\Rightarrow$ regular semisimple,\nwith the difference measured by $\\pi_0(C_G(\\gamma))$.</p>\n<h2>Open dense subset</h2>\n<p>$G^{\\mathrm{sr}}$ is <strong>open dense</strong> in $G$ (and in particular in the set\nof semisimple elements). Its complement has codimension $\\ge 1$.</p>\n<h2>Role in harmonic analysis</h2>\n<p><strong>Harish-Chandra's theorem:</strong> For a regular semisimple element $\\gamma \\in G(F)$\n($F$ a local field), the <strong>orbital integral</strong>\n$$O_\\gamma(f) = \\int_{G(F)/C_G(\\gamma)(F)} f(g \\gamma g^{-1})\\, dg$$\nis absolutely convergent for any $f \\in C_c^\\infty(G(F))$.</p>\n<p>The function $\\gamma \\mapsto O_\\gamma(f)$ (as $\\gamma$ varies over\n$G^{\\mathrm{sr}}(F)$) extends to all regular semisimple elements and\nsatisfies the <strong>germ expansion</strong> near the identity:\n$$O_\\gamma(f) \\sim \\sum_{\\mathcal{O}} c_{\\mathcal{O}}(\\gamma) \\cdot O_{\\mathcal{O}}(f)$$\nwhere $\\mathcal{O}$ ranges over nilpotent orbits and $c_\\mathcal{O}(\\gamma)$ are\nthe <strong>Shalika germs</strong>.</p>\n<h2>Lie algebra version</h2>\n<p>On $\\mathfrak{g} = \\mathrm{Lie}(G)$, the strongly regular elements of\n$\\mathfrak{g}$ are the <strong>regular semisimple</strong> elements\n$\\mathfrak{g}^{\\mathrm{rs}} = \\{X \\in \\mathfrak{g} : C_G(X) \\text{ is a max torus}\\}$.</p>\n<p>The invariant polynomials $\\mathfrak{g} \\to \\mathfrak{t}/W$ restrict to a\nsmooth fibration over the strongly regular locus, with fibres $G/T$ (flag variety).</p>\n<h2>Stable orbital integrals</h2>\n<p>For strongly regular $\\gamma \\in G(F)$, the <strong>stable orbital integral</strong> is\n$$SO_\\gamma(f) = \\sum_{\\gamma' \\sim_{\\mathrm{st}} \\gamma} O_{\\gamma'}(f),$$\nwhere the sum is over $G(F)$-conjugacy classes within the stable class of $\\gamma$.\nThese are the building blocks of the <strong>geometric side</strong> of the stable trace formula.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "conjugacy_classes.regular_elements",
+      "title": "Regular Elements",
+      "href": "conjugacy_classes/conjugacy_classes_regular_elements.html"
+    },
+    {
+      "id": "conjugacy_classes.stable_conjugacy_classes",
+      "title": "Stable Conjugacy Classes",
+      "href": "conjugacy_classes/conjugacy_classes_stable_conjugacy_classes.html"
+    },
+    {
+      "id": "conjugacy_classes.lie_algebras_of_reductive_groups",
+      "title": "Lie Algebras of Reductive Groups",
+      "href": "conjugacy_classes/conjugacy_classes_lie_algebras_of_reductive_groups.html"
+    },
+    {
+      "id": "reductive_structure.maximal_tori",
+      "title": "Maximal Tori",
+      "href": "reductive_structure/reductive_structure_maximal_tori.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

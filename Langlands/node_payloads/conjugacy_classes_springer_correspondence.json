@@ -1,0 +1,49 @@
+{
+  "id": "conjugacy_classes.springer_correspondence",
+  "title": "Springer Correspondence",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "conjugacy_classes/conjugacy_classes_springer_correspondence.html",
+  "primary_topic": "conjugacy_classes",
+  "topics": [
+    "conjugacy_classes"
+  ],
+  "body_html": "<h1>Springer Correspondence</h1>\n<h2>Setup</h2>\n<p>Let \\(G\\) be a connected reductive group over an algebraically closed field\n\\(k\\), with Weyl group \\(W = N_G(T)/T\\). Let \\(\\mathcal{B} = G/B\\) be the\n<strong>flag variety</strong> and \\(\\mathcal{N} \\subset \\mathrm{Lie}(G)\\) the\n<strong>nilpotent cone</strong>.</p>\n<h2>The Springer resolution</h2>\n<p>The <strong>Springer resolution</strong> is the map\n\\[\n\\mu : \\widetilde{\\mathcal{N}} \\longrightarrow \\mathcal{N},\n\\]\nwhere\n\\[\n\\widetilde{\\mathcal{N}} = \\{(X, B') : X \\in \\mathrm{Lie}(B'),\\; B' \\in \\mathcal{B}\\}\n\\subset \\mathcal{N} \\times \\mathcal{B},\n\\]\nand \\(\\mu(X, B') = X\\). This is a proper, \\(G\\)-equivariant, birational\nmorphism resolving the singularities of \\(\\mathcal{N}\\).</p>\n<h2>The W-action and the correspondence</h2>\n<p>Springer showed that the Weyl group \\(W\\) acts on each cohomology group\n\\(H^i(\\mu^{-1}(X), \\overline{\\mathbb{Q}}_\\ell)\\) for \\(X \\in \\mathcal{N}\\).\nSpecifically:</p>\n<p><strong>Springer's theorem.</strong> For each nilpotent orbit \\(\\mathcal{O} \\subset \\mathcal{N}\\)\nand each \\(G\\)-equivariant local system \\(\\mathcal{L}\\) on \\(\\mathcal{O}\\),\nthere exists an irreducible representation \\(\\phi_{\\mathcal{O},\\mathcal{L}}\\)\nof \\(W\\) appearing in \\(H^{2d}(\\mu^{-1}(X), \\overline{\\mathbb{Q}}_\\ell)\\)\nfor \\(X \\in \\mathcal{O}\\) and \\(d = \\dim \\mu^{-1}(X)\\).</p>\n<p>This gives the <strong>Springer correspondence</strong>:\n\\[\n\\bigsqcup_{\\mathcal{O}} \\{\\text{irred.\\ }G\\text{-equivariant local systems on }\\mathcal{O}\\}\n\\xrightarrow{\\;\\sim\\;} \\widehat{W},\n\\]\na bijection from pairs \\((\\mathcal{O}, \\mathcal{L})\\) to the set \\(\\widehat{W}\\) of\nirreducible complex representations of \\(W\\).</p>\n<h2>For the trivial local system</h2>\n<p>For the <strong>trivial</strong> local system on each orbit, the Springer correspondence\ngives a map (not a bijection):\n\\[\n\\{\\text{nilpotent orbits}\\} \\to \\widehat{W}, \\quad \\mathcal{O} \\mapsto \\phi_{\\mathcal{O}}.\n\\]\nIn type \\(A_{n-1}\\) (\\(G = \\mathrm{SL}_n\\)), this recovers the Robinson-Schensted\ncorrespondence: both sides are parametrised by partitions of \\(n\\).</p>\n<h2>Geometric interpretation</h2>\n<p>Via the <strong>decomposition theorem</strong> for \\(\\mu_*(\\overline{\\mathbb{Q}}_\\ell)\\),\nthe Springer correspondence can be expressed as:\n\\[\n\\mu_*(\\overline{\\mathbb{Q}}_\\ell)[\\dim G] \\cong \\bigoplus_{(\\mathcal{O},\\mathcal{L})}\nV_{\\mathcal{O},\\mathcal{L}} \\otimes \\mathrm{IC}(\\overline{\\mathcal{O}}, \\mathcal{L}),\n\\]\nwhere \\(V_{\\mathcal{O},\\mathcal{L}}\\) is the corresponding \\(W\\)-representation\nand \\(\\mathrm{IC}\\) denotes the intersection complex.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "conjugacy_classes.unipotent_orbits",
+      "title": "Unipotent Orbits",
+      "href": "conjugacy_classes/conjugacy_classes_unipotent_orbits.html"
+    },
+    {
+      "id": "conjugacy_classes.nilpotent_orbits",
+      "title": "Nilpotent Orbits",
+      "href": "conjugacy_classes/conjugacy_classes_nilpotent_orbits.html"
+    },
+    {
+      "id": "conjugacy_classes.nilpotent_cone",
+      "title": "Nilpotent Cone",
+      "href": "conjugacy_classes/conjugacy_classes_nilpotent_cone.html"
+    },
+    {
+      "id": "reductive_structure.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "reductive_structure/reductive_structure_reductive_groups.html"
+    },
+    {
+      "id": "reductive_structure.borel_subgroups",
+      "title": "Borel Subgroups",
+      "href": "reductive_structure/reductive_structure_borel_subgroups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "conjugacy_classes.conjugacy_in_weyl_groups",
+      "title": "Conjugacy Classes in the Weyl Group",
+      "href": "conjugacy_classes/conjugacy_classes_conjugacy_in_weyl_groups.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}
