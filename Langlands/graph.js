@@ -57,37 +57,73 @@
   let graphZoomSelection = null;
 
   // Per-topic color palette for the overview graph.
-  // label: short two-line display label (undefined = use topic.title as-is)
+  // Colors span the full hue wheel so each topic is immediately distinct.
+  // fillcolor: 40-50% saturation pastel (readable dark text on top)
+  // color: dark saturated border of same hue
+  // label: two-line display label for consistent node sizing
   const TOPIC_PALETTE = {
-    foundational_inputs:          { fillcolor: "#f5f0e8", color: "#8b7355",
-                                    label: "Foundational\nInputs" },
-    linear_algebraic_groups:      { fillcolor: "#dce8f5", color: "#2b6cb0",
-                                    label: "Linear Algebraic\nGroups" },
-    affine_group_schemes:         { fillcolor: "#e6eef8", color: "#4a85c4",
-                                    label: "Affine Group\nSchemes" },
-    descent_and_forms:            { fillcolor: "#d5ece8", color: "#276d5e",
-                                    label: "Galois Descent\n& Forms" },
-    reductive_structure:          { fillcolor: "#d5ecd8", color: "#2a7a3f",
-                                    label: "Reductive Group\nStructure" },
-    root_data_and_duality:        { fillcolor: "#ead5ec", color: "#7d2d7d",
-                                    label: "Root Data\n& Duality" },
-    classical_and_exceptional_groups: { fillcolor: "#f5e8d5", color: "#c07020",
-                                    label: "Classical &\nExceptional Groups" },
-    buildings_and_parahorics:     { fillcolor: "#eee0cc", color: "#8b5a3c",
-                                    label: "Buildings &\nParahorics" },
-    kottwitz_structures:          { fillcolor: "#d5dff0", color: "#2d4d8b",
-                                    label: "Kottwitz\nStructures" },
-    conjugacy_classes:            { fillcolor: "#f0d5d5", color: "#8b2d2d",
-                                    label: "Conjugacy\nClasses" },
-    bd_covers:                    { fillcolor: "#ddd5ec", color: "#4d2d8b",
-                                    label: "BD & Metaplectic\nCovers" },
+    // warm neutral — the conceptual "foundation"
+    foundational_inputs: {
+      fillcolor: "#ede8e0", color: "#6a5840",
+      label: "Foundational\nInputs",
+    },
+    // cobalt blue — core algebraic groups
+    linear_algebraic_groups: {
+      fillcolor: "#b8d8f8", color: "#1060b0",
+      label: "Linear Algebraic\nGroups",
+    },
+    // aqua / teal-cyan — schemes, geometry
+    affine_group_schemes: {
+      fillcolor: "#a8e8f2", color: "#0c7890",
+      label: "Affine Group\nSchemes",
+    },
+    // yellow-green / lime — descent & cohomology
+    descent_and_forms: {
+      fillcolor: "#d8f0a8", color: "#587818",
+      label: "Galois Descent\n& Forms",
+    },
+    // forest green — reductive structure
+    reductive_structure: {
+      fillcolor: "#b8e8b8", color: "#1e7828",
+      label: "Reductive Group\nStructure",
+    },
+    // violet — root data & Langlands duality
+    root_data_and_duality: {
+      fillcolor: "#dcc0f2", color: "#6e28a0",
+      label: "Root Data\n& Duality",
+    },
+    // amber / golden orange — classical groups
+    classical_and_exceptional_groups: {
+      fillcolor: "#ffe4a8", color: "#c06008",
+      label: "Classical &\nExceptional Groups",
+    },
+    // sienna / brick — buildings
+    buildings_and_parahorics: {
+      fillcolor: "#f0c8a8", color: "#884020",
+      label: "Buildings &\nParahorics",
+    },
+    // deep indigo — Kottwitz / p-adic
+    kottwitz_structures: {
+      fillcolor: "#b8b8f8", color: "#2828b0",
+      label: "Kottwitz\nStructures",
+    },
+    // crimson / rose — conjugacy classes
+    conjugacy_classes: {
+      fillcolor: "#f2b8b8", color: "#b02020",
+      label: "Conjugacy\nClasses",
+    },
+    // magenta — BD / metaplectic covers
+    bd_covers: {
+      fillcolor: "#f2b8e0", color: "#a01878",
+      label: "BD & Metaplectic\nCovers",
+    },
   };
 
   function topicOverviewToDot(data) {
     const lines = [
       'strict digraph "" {',
-      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.2, nodesep=0.7, splines=curved, concentrate=true, pad=0.5];",
-      '\tnode [label="\\N", penwidth=2.0, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=13, margin="0.35,0.20", style=filled, fillcolor="white"];',
+      "\tgraph [bgcolor=transparent, rankdir=TB, ranksep=1.4, nodesep=0.8, splines=curved, pad=0.5];",
+      '\tnode [label="\\N", penwidth=2.0, shape=box, fontname="Helvetica Neue,Helvetica,Arial,sans-serif", fontsize=13, margin="0.38,0.22", style=filled, fillcolor="white"];',
       "\tedge [arrowhead=normal, arrowsize=0.7];",
     ];
     (data.topics || []).forEach((topic) => {
