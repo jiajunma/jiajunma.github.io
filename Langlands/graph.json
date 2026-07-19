@@ -4708,9 +4708,6 @@
         "root_data_and_duality.chevalley_isomorphism_theorem",
         "root_data_and_duality.classification_of_split_reductive_groups",
         "root_data_and_duality.root_data"
-      ],
-      "used_by": [
-        "root_data_and_duality.chevalley_group_construction"
       ]
     },
     {
@@ -4738,8 +4735,6 @@
         "reductive_structure.algebraic_tori",
         "root_data_and_duality.based_root_data",
         "root_data_and_duality.chevalley_basis",
-        "root_data_and_duality.chevalley_existence_theorem",
-        "root_data_and_duality.chevalley_isomorphism_theorem",
         "root_data_and_duality.pinnings",
         "root_data_and_duality.rank_one_subgroups_sl2_embeddings",
         "root_data_and_duality.root_data"
@@ -4776,7 +4771,6 @@
       ],
       "used_by": [
         "root_data_and_duality.chevalley_existence_theorem",
-        "root_data_and_duality.chevalley_group_construction",
         "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
       ]
     },
@@ -4865,8 +4859,7 @@
       ],
       "topic": "root_data_and_duality",
       "uses": [
-        "root_data_and_duality.root_pairing",
-        "root_data_and_duality.root_systems"
+        "root_data_and_duality.root_pairing"
       ],
       "used_by": [
         "root_data_and_duality.classification_of_root_systems",
@@ -5380,8 +5373,7 @@
         "root_data_and_duality.dual_root_data",
         "root_data_and_duality.fundamental_group_of_root_datum",
         "root_data_and_duality.isogeny_types_from_root_datum",
-        "root_data_and_duality.root_datum_from_reductive_group",
-        "root_data_and_duality.root_pairing"
+        "root_data_and_duality.root_datum_from_reductive_group"
       ]
     },
     {
@@ -5447,10 +5439,6 @@
         "root_data_and_duality"
       ],
       "topic": "root_data_and_duality",
-      "uses": [
-        "root_data_and_duality.root_data",
-        "root_data_and_duality.root_systems"
-      ],
       "used_by": [
         "root_data_and_duality.crystallographic_and_reduced",
         "root_data_and_duality.root_chains",
@@ -5505,9 +5493,7 @@
       "topic": "root_data_and_duality",
       "uses": [
         "root_data_and_duality.crystallographic_and_reduced",
-        "root_data_and_duality.root_pairing",
-        "root_data_and_duality.roots_coroots_and_root_subgroups",
-        "root_data_and_duality.weyl_groups"
+        "root_data_and_duality.root_pairing"
       ],
       "used_by": [
         "buildings_and_parahorics.affine_root_systems",
@@ -5516,10 +5502,9 @@
         "conjugacy_classes.weighted_dynkin_diagrams",
         "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
         "root_data_and_duality.chevalley_basis",
-        "root_data_and_duality.crystallographic_and_reduced",
         "root_data_and_duality.dual_root_systems",
-        "root_data_and_duality.root_pairing",
-        "root_data_and_duality.weyl_group_generated_by_reflections"
+        "root_data_and_duality.weyl_group_generated_by_reflections",
+        "root_data_and_duality.weyl_groups"
       ]
     },
     {
@@ -5548,7 +5533,6 @@
         "root_data_and_duality.root_data",
         "root_data_and_duality.root_datum_from_reductive_group",
         "root_data_and_duality.root_subgroups_generate_reductive_group",
-        "root_data_and_duality.root_systems",
         "root_data_and_duality.unipotent_radical_and_positive_roots",
         "root_data_and_duality.weyl_groups"
       ]
@@ -5592,9 +5576,6 @@
       "uses": [
         "root_data_and_duality.based_root_data",
         "root_data_and_duality.classification_of_root_systems",
-        "root_data_and_duality.weyl_groups"
-      ],
-      "used_by": [
         "root_data_and_duality.weyl_groups"
       ]
     },
@@ -5643,14 +5624,13 @@
       ],
       "topic": "root_data_and_duality",
       "uses": [
-        "root_data_and_duality.roots_coroots_and_root_subgroups",
-        "root_data_and_duality.weyl_group_coxeter_structure"
+        "root_data_and_duality.root_systems",
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
       ],
       "used_by": [
         "conjugacy_classes.conjugacy_in_weyl_groups",
         "root_data_and_duality.coxeter_systems_and_bruhat_order",
         "root_data_and_duality.root_form_and_positive_definiteness",
-        "root_data_and_duality.root_systems",
         "root_data_and_duality.weyl_group_coxeter_structure",
         "root_data_and_duality.weyl_group_generated_by_reflections"
       ]
@@ -7410,14 +7390,6 @@
       "to": "root_data_and_duality.chevalley_group_construction"
     },
     {
-      "from": "root_data_and_duality.chevalley_existence_theorem",
-      "to": "root_data_and_duality.chevalley_group_construction"
-    },
-    {
-      "from": "root_data_and_duality.chevalley_isomorphism_theorem",
-      "to": "root_data_and_duality.chevalley_group_construction"
-    },
-    {
       "from": "root_data_and_duality.pinnings",
       "to": "root_data_and_duality.chevalley_group_construction"
     },
@@ -7487,10 +7459,6 @@
     },
     {
       "from": "root_data_and_duality.root_pairing",
-      "to": "root_data_and_duality.crystallographic_and_reduced"
-    },
-    {
-      "from": "root_data_and_duality.root_systems",
       "to": "root_data_and_duality.crystallographic_and_reduced"
     },
     {
@@ -7722,14 +7690,6 @@
       "to": "root_data_and_duality.root_form_and_positive_definiteness"
     },
     {
-      "from": "root_data_and_duality.root_data",
-      "to": "root_data_and_duality.root_pairing"
-    },
-    {
-      "from": "root_data_and_duality.root_systems",
-      "to": "root_data_and_duality.root_pairing"
-    },
-    {
       "from": "reductive_structure.reductive_groups",
       "to": "root_data_and_duality.root_subgroups_generate_reductive_group"
     },
@@ -7751,14 +7711,6 @@
     },
     {
       "from": "root_data_and_duality.root_pairing",
-      "to": "root_data_and_duality.root_systems"
-    },
-    {
-      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
-      "to": "root_data_and_duality.root_systems"
-    },
-    {
-      "from": "root_data_and_duality.weyl_groups",
       "to": "root_data_and_duality.root_systems"
     },
     {
@@ -7814,11 +7766,11 @@
       "to": "root_data_and_duality.weyl_group_generated_by_reflections"
     },
     {
-      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
+      "from": "root_data_and_duality.root_systems",
       "to": "root_data_and_duality.weyl_groups"
     },
     {
-      "from": "root_data_and_duality.weyl_group_coxeter_structure",
+      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
       "to": "root_data_and_duality.weyl_groups"
     }
   ]
