@@ -1,0 +1,44 @@
+{
+  "id": "linear_algebraic_groups.closed_image_of_homomorphism",
+  "title": "Image of an Algebraic Group Homomorphism Is Closed",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_closed_image_of_homomorphism.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Image of an Algebraic Group Homomorphism Is Closed</h1>\n<p>Let \\(f : G \\to H\\) be a homomorphism of linear algebraic groups over an\nalgebraically closed field. Then \\(\\ker(f)\\) is a closed normal subgroup of\n\\(G\\), and \\(f(G)\\) is a closed algebraic subgroup of \\(H\\).</p>\n<p>If \\(G\\) and \\(H\\) are defined over a subfield \\(F\\) and \\(f\\) is defined\nover \\(F\\), then \\(f(G)\\) is a closed \\(F\\)-subgroup of \\(H\\).</p>",
+  "proof_html": "<p>The kernel is the inverse image of the closed point \\(e_H\\), hence is closed;\nnormality is immediate from the homomorphism identity.</p>\n<p>For the image, let \\(\\overline{f(G)}\\) be its Zariski closure in \\(H\\).\nBecause multiplication and inversion on \\(H\\) are regular, the closure of a\nsubgroup is again a closed subgroup. The image \\(f(G)\\) is constructible by\nChevalley's theorem and is stable under left and right multiplication by its\nown elements. A constructible subgroup of an algebraic group contains a\nnonempty open subset of its closure; translating this open subset by elements\nof the subgroup covers the closure. Hence \\(f(G)=\\overline{f(G)}\\), so the\nimage is closed.</p>\n<p>The statement over \\(F\\) follows because the defining ideal of the closure is\nstable under the \\(F\\)-structure and the homomorphism is defined over \\(F\\).</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.morphisms_and_closed_subgroups",
+      "title": "Morphisms and Closed Subgroups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_morphisms_and_closed_subgroups.html"
+    },
+    {
+      "id": "linear_algebraic_groups.kernels_images_and_quotients",
+      "title": "Kernels, Images, and Quotients",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_kernels_images_and_quotients.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "descent_and_forms.f_subgroup_field_of_definition",
+      "title": "Field of Definition for Subgroups of F-Groups",
+      "href": "descent_and_forms/descent_and_forms_f_subgroup_field_of_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.orbits_are_locally_closed",
+      "title": "Orbits of Algebraic Group Actions Are Locally Closed",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_orbits_are_locally_closed.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -64,12 +64,11 @@
       "\tedge [arrowhead=vee];",
     ];
     (data.topics || []).forEach((topic) => {
-      const attrs = [
-        ["label", topic.title],
-        ["shape", "box"],
-        ["URL", `#${topicGraphId(topic.id)}`],
-      ];
-      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${attrs.map(([key, value]) => `${key}=${dotQuote(value)}`).join(", ")}];`);
+      lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
+        ...topicBoxAttrs(topic),
+        label: topic.title,
+        URL: `#${topicGraphId(topic.id)}`,
+      })}];`);
     });
     (data.edges || []).forEach((edge) => {
       lines.push(`\t${dotQuote(topicGraphId(edge.from))} -> ${dotQuote(topicGraphId(edge.to))} [style=dashed];`);
@@ -101,6 +100,49 @@
     if (statusFilled) tokens.push("filled");
     if (node.kind === "proof-plan") tokens.push("dashed");
     return tokens.length ? tokens.join(",") : null;
+  }
+
+  // Completion of a topic = share of its nodes whose statement/proof is
+  // accepted (admitted, formalized, or proved) out of all its nodes.
+  function topicCompletion(topic) {
+    const counts = (topic && topic.status_counts) || {};
+    const total = Object.values(counts).reduce((sum, n) => sum + n, 0);
+    if (total === 0) return { ratio: null, total: 0 };
+    const done = (counts.admitted || 0) + (counts.formalized || 0) + (counts.proved || 0);
+    return { ratio: done / total, total };
+  }
+
+  function mixHex(from, to, t) {
+    const clamp = Math.max(0, Math.min(1, t));
+    const parse = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+    const [r1, g1, b1] = parse(from);
+    const [r2, g2, b2] = parse(to);
+    const channel = (a, b) => Math.round(a + (b - a) * clamp).toString(16).padStart(2, "0");
+    return `#${channel(r1, r2)}${channel(g1, g2)}${channel(b1, b2)}`;
+  }
+
+  // Topics render as rounded boxes (distinct from definitions' square boxes),
+  // shaded by completion. Empty topics stay hollow with a dashed outline so
+  // "no content yet" is visually obvious.
+  function topicBoxAttrs(topic, opts = {}) {
+    const { ratio, total } = topicCompletion(topic);
+    const attrs = { shape: "box" };
+    if (opts.boundary) {
+      attrs.style = "rounded,dashed";
+      attrs.color = "#777777";
+    } else if (total === 0) {
+      attrs.style = "rounded,dashed";
+      attrs.color = "#bdbdbd";
+    } else {
+      attrs.style = "rounded,filled";
+      attrs.fillcolor = mixHex("#eceff1", "#66bb6a", ratio);
+      attrs.color = ratio >= 1 ? "#2e7d32" : "#90a4ae";
+    }
+    if (opts.emphasis) {
+      attrs.color = "#1f6feb";
+      attrs.penwidth = "2.4";
+    }
+    return attrs;
   }
 
   function dotAttributes(attrs) {
@@ -162,26 +204,22 @@
     ];
     if (data.topic) {
       lines.push(`\t${dotQuote(topicGraphId(data.topic.id))} [${dotAttributes({
-        color: "blue",
+        ...topicBoxAttrs(data.topic, { emphasis: true }),
         label: data.topic.title,
-        penwidth: "2.4",
-        shape: "box",
         URL: `#${topicGraphId(data.topic.id)}`,
       })}];`);
     }
     (data.child_topic_nodes || []).forEach((topic) => {
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
+        ...topicBoxAttrs(topic),
         label: topic.title,
-        shape: "box",
         URL: `#${topicGraphId(topic.id)}`,
       })}];`);
     });
     (data.boundary_topics || []).forEach((topic) => {
       lines.push(`\t${dotQuote(topicGraphId(topic.id))} [${dotAttributes({
-        color: "#777777",
+        ...topicBoxAttrs(topic, { boundary: true }),
         label: topic.title,
-        shape: "box",
-        style: "dashed",
         URL: `#${topicGraphId(topic.id)}`,
       })}];`);
     });

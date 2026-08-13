@@ -4,22 +4,25 @@
     "title": "Descent And Forms",
     "href": "descent_and_forms/index.html",
     "parent": null,
-    "node_count": 22,
-    "descendant_node_count": 22
+    "node_count": 31,
+    "descendant_node_count": 31,
+    "status_counts": {
+      "admitted": 31
+    }
   },
   "counts": {
-    "internal_nodes": 22,
+    "internal_nodes": 31,
     "inlined_nodes": 0,
-    "descendant_nodes": 22,
+    "descendant_nodes": 31,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 22,
+    "non_proof_plan_nodes": 31,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 29,
-    "visible_nodes_with_selected_proof_plans": 29
+    "visible_nodes_without_proof_plans": 38,
+    "visible_nodes_with_selected_proof_plans": 38
   },
   "nodes": [
     {
@@ -37,6 +40,14 @@
       "status": "admitted",
       "href": "descent_and_forms/descent_and_forms_extended_groups_for_real_forms.html",
       "payload": "node_payloads/descent_and_forms_extended_groups_for_real_forms.json"
+    },
+    {
+      "id": "descent_and_forms.f_subgroup_field_of_definition",
+      "title": "Field of Definition for Subgroups of F-Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "descent_and_forms/descent_and_forms_f_subgroup_field_of_definition.html",
+      "payload": "node_payloads/descent_and_forms_f_subgroup_field_of_definition.json"
     },
     {
       "id": "descent_and_forms.forms_of_algebraic_groups",
@@ -85,6 +96,14 @@
       "status": "admitted",
       "href": "descent_and_forms/descent_and_forms_kaletha_refined_inner_forms.html",
       "payload": "node_payloads/descent_and_forms_kaletha_refined_inner_forms.json"
+    },
+    {
+      "id": "descent_and_forms.lang_theorem_finite_fields",
+      "title": "Lang Theorem for Connected Algebraic Groups over Finite Fields",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "descent_and_forms/descent_and_forms_lang_theorem_finite_fields.html",
+      "payload": "node_payloads/descent_and_forms_lang_theorem_finite_fields.json"
     },
     {
       "id": "descent_and_forms.nonabelian_h1",
@@ -197,6 +216,62 @@
       "status": "admitted",
       "href": "descent_and_forms/descent_and_forms_vogan_diagrams.html",
       "payload": "node_payloads/descent_and_forms_vogan_diagrams.json"
+    },
+    {
+      "id": "reductive_structure.f_split_solvable_fixed_point_theorem",
+      "title": "Fixed Point Theorem for F-Split Solvable Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "reductive_structure/reductive_structure_f_split_solvable_fixed_point_theorem.html",
+      "payload": "node_payloads/reductive_structure_f_split_solvable_fixed_point_theorem.json"
+    },
+    {
+      "id": "reductive_structure.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "reductive_structure/reductive_structure_f_tori_galois_module_classification.html",
+      "payload": "node_payloads/reductive_structure_f_tori_galois_module_classification.json"
+    },
+    {
+      "id": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "title": "Maximal F-Split Tori Are G(F)-Conjugate",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "reductive_structure/reductive_structure_maximal_f_split_tori_are_conjugate.html",
+      "payload": "node_payloads/reductive_structure_maximal_f_split_tori_are_conjugate.json"
+    },
+    {
+      "id": "reductive_structure.maximal_f_tori_exist",
+      "title": "Maximal F-Tori Exist in Connected F-Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "reductive_structure/reductive_structure_maximal_f_tori_exist.html",
+      "payload": "node_payloads/reductive_structure_maximal_f_tori_exist.json"
+    },
+    {
+      "id": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "title": "Levi Decomposition for Parabolic F-Subgroups",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "reductive_structure/reductive_structure_parabolic_f_subgroups_levi_decomposition.html",
+      "payload": "node_payloads/reductive_structure_parabolic_f_subgroups_levi_decomposition.json"
+    },
+    {
+      "id": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "title": "Indexed Root Datum of an F-Reductive Group",
+      "kind": "definition",
+      "status": "admitted",
+      "href": "root_data_and_duality/root_data_and_duality_indexed_root_datum_of_f_reductive_group.html",
+      "payload": "node_payloads/root_data_and_duality_indexed_root_datum_of_f_reductive_group.json"
+    },
+    {
+      "id": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+      "title": "Quasi-Split and Anisotropic Groups via the Indexed Root Datum",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "root_data_and_duality/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.html",
+      "payload": "node_payloads/root_data_and_duality_quasi_split_and_anisotropic_via_indexed_root_datum.json"
     }
   ],
   "edges": [
@@ -218,6 +293,16 @@
     {
       "from": "descent_and_forms.real_forms",
       "to": "descent_and_forms.extended_groups_for_real_forms",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.galois_groups_and_descent_data",
+      "to": "descent_and_forms.f_subgroup_field_of_definition",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "descent_and_forms.f_subgroup_field_of_definition",
       "kind": "uses"
     },
     {
@@ -248,6 +333,16 @@
     {
       "from": "descent_and_forms.rigid_inner_forms",
       "to": "descent_and_forms.kaletha_refined_inner_forms",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.galois_cohomology",
+      "to": "descent_and_forms.lang_theorem_finite_fields",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.twisted_conjugacy_classes",
+      "to": "descent_and_forms.lang_theorem_finite_fields",
       "kind": "uses"
     },
     {
@@ -359,6 +454,76 @@
       "from": "descent_and_forms.real_forms",
       "to": "descent_and_forms.vogan_diagrams",
       "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "reductive_structure.f_split_solvable_fixed_point_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.galois_groups_and_descent_data",
+      "to": "reductive_structure.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "reductive_structure.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "reductive_structure.f_split_solvable_fixed_point_theorem",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "kind": "uses"
+    },
+    {
+      "from": "reductive_structure.f_tori_galois_module_classification",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "kind": "uses"
+    },
+    {
+      "from": "reductive_structure.maximal_f_tori_exist",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.f_subgroup_field_of_definition",
+      "to": "reductive_structure.maximal_f_tori_exist",
+      "kind": "uses"
+    },
+    {
+      "from": "reductive_structure.f_tori_galois_module_classification",
+      "to": "reductive_structure.maximal_f_tori_exist",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.f_subgroup_field_of_definition",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "kind": "uses"
+    },
+    {
+      "from": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_reductive_groups",
+      "to": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "kind": "uses"
+    },
+    {
+      "from": "descent_and_forms.quasi_split_forms",
+      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+      "kind": "uses"
+    },
+    {
+      "from": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+      "kind": "uses"
+    },
+    {
+      "from": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -381,7 +546,7 @@
       "title": "Linear Algebraic Groups",
       "href": "linear_algebraic_groups/index.html",
       "role": "dependency",
-      "node_count": 46
+      "node_count": 61
     },
     {
       "id": "nilpotent_orbits",
@@ -395,14 +560,14 @@
       "title": "Reductive Structure",
       "href": "reductive_structure/index.html",
       "role": "dependency",
-      "node_count": 13
+      "node_count": 44
     },
     {
       "id": "root_data_and_duality",
       "title": "Root Data And Duality",
       "href": "root_data_and_duality/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 21
+      "node_count": 37
     }
   ],
   "boundary_edges": [
@@ -443,6 +608,13 @@
     },
     {
       "from": "topic:linear_algebraic_groups",
+      "to": "descent_and_forms.f_subgroup_field_of_definition",
+      "kind": "boundary_dependency",
+      "topic": "linear_algebraic_groups",
+      "count": 3
+    },
+    {
+      "from": "topic:linear_algebraic_groups",
       "to": "descent_and_forms.forms_of_algebraic_groups",
       "kind": "boundary_dependency",
       "topic": "linear_algebraic_groups",
@@ -454,6 +626,13 @@
       "kind": "boundary_dependency",
       "topic": "linear_algebraic_groups",
       "count": 1
+    },
+    {
+      "from": "topic:linear_algebraic_groups",
+      "to": "descent_and_forms.lang_theorem_finite_fields",
+      "kind": "boundary_dependency",
+      "topic": "linear_algebraic_groups",
+      "count": 2
     },
     {
       "from": "topic:linear_algebraic_groups",
@@ -477,6 +656,41 @@
       "count": 1
     },
     {
+      "from": "topic:reductive_structure",
+      "to": "reductive_structure.f_split_solvable_fixed_point_theorem",
+      "kind": "boundary_dependency",
+      "topic": "reductive_structure",
+      "count": 3
+    },
+    {
+      "from": "topic:reductive_structure",
+      "to": "reductive_structure.f_tori_galois_module_classification",
+      "kind": "boundary_dependency",
+      "topic": "reductive_structure",
+      "count": 2
+    },
+    {
+      "from": "topic:reductive_structure",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "kind": "boundary_dependency",
+      "topic": "reductive_structure",
+      "count": 1
+    },
+    {
+      "from": "topic:reductive_structure",
+      "to": "reductive_structure.maximal_f_tori_exist",
+      "kind": "boundary_dependency",
+      "topic": "reductive_structure",
+      "count": 2
+    },
+    {
+      "from": "topic:reductive_structure",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "kind": "boundary_dependency",
+      "topic": "reductive_structure",
+      "count": 2
+    },
+    {
       "from": "topic:root_data_and_duality",
       "to": "descent_and_forms.rational_forms_of_reductive_groups",
       "kind": "boundary_dependency",
@@ -489,6 +703,13 @@
       "kind": "boundary_dependency",
       "topic": "root_data_and_duality",
       "count": 2
+    },
+    {
+      "from": "topic:root_data_and_duality",
+      "to": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "kind": "boundary_dependency",
+      "topic": "root_data_and_duality",
+      "count": 3
     },
     {
       "from": "descent_and_forms.galois_cohomology",
@@ -510,6 +731,27 @@
       "kind": "boundary_dependent",
       "topic": "root_data_and_duality",
       "count": 1
+    },
+    {
+      "from": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "to": "topic:root_data_and_duality",
+      "kind": "boundary_dependent",
+      "topic": "root_data_and_duality",
+      "count": 2
+    },
+    {
+      "from": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "to": "topic:root_data_and_duality",
+      "kind": "boundary_dependent",
+      "topic": "root_data_and_duality",
+      "count": 1
+    },
+    {
+      "from": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "to": "topic:root_data_and_duality",
+      "kind": "boundary_dependent",
+      "topic": "root_data_and_duality",
+      "count": 1
     }
   ],
   "keywords": [
@@ -526,10 +768,40 @@
       "count": 1
     },
     {
+      "id": "anisotropic",
+      "title": "anisotropic",
+      "href": "keywords/anisotropic.html",
+      "count": 1
+    },
+    {
+      "id": "cartan-subgroup",
+      "title": "cartan-subgroup",
+      "href": "keywords/cartan-subgroup.html",
+      "count": 1
+    },
+    {
       "id": "cocycles",
       "title": "cocycles",
       "href": "keywords/cocycles.html",
       "count": 1
+    },
+    {
+      "id": "conjugacy",
+      "title": "conjugacy",
+      "href": "keywords/conjugacy.html",
+      "count": 1
+    },
+    {
+      "id": "definition",
+      "title": "definition",
+      "href": "keywords/definition.html",
+      "count": 1
+    },
+    {
+      "id": "descent",
+      "title": "descent",
+      "href": "keywords/descent.html",
+      "count": 2
     },
     {
       "id": "descent-and-forms",
@@ -544,10 +816,64 @@
       "count": 1
     },
     {
+      "id": "f-group",
+      "title": "f-group",
+      "href": "keywords/f-group.html",
+      "count": 3
+    },
+    {
+      "id": "f-reductive-group",
+      "title": "f-reductive-group",
+      "href": "keywords/f-reductive-group.html",
+      "count": 1
+    },
+    {
+      "id": "f-split",
+      "title": "f-split",
+      "href": "keywords/f-split.html",
+      "count": 1
+    },
+    {
+      "id": "f-split-torus",
+      "title": "f-split-torus",
+      "href": "keywords/f-split-torus.html",
+      "count": 1
+    },
+    {
+      "id": "f-torus",
+      "title": "f-torus",
+      "href": "keywords/f-torus.html",
+      "count": 1
+    },
+    {
+      "id": "field-of-definition",
+      "title": "field-of-definition",
+      "href": "keywords/field-of-definition.html",
+      "count": 1
+    },
+    {
+      "id": "finite-field",
+      "title": "finite-field",
+      "href": "keywords/finite-field.html",
+      "count": 1
+    },
+    {
+      "id": "fixed-point",
+      "title": "fixed-point",
+      "href": "keywords/fixed-point.html",
+      "count": 1
+    },
+    {
       "id": "forms",
       "title": "forms",
       "href": "keywords/forms.html",
       "count": 2
+    },
+    {
+      "id": "frobenius",
+      "title": "frobenius",
+      "href": "keywords/frobenius.html",
+      "count": 1
     },
     {
       "id": "galois-cohomology",
@@ -562,6 +888,18 @@
       "count": 1
     },
     {
+      "id": "galois-module",
+      "title": "galois-module",
+      "href": "keywords/galois-module.html",
+      "count": 1
+    },
+    {
+      "id": "indexed-root-datum",
+      "title": "indexed-root-datum",
+      "href": "keywords/indexed-root-datum.html",
+      "count": 2
+    },
+    {
       "id": "inner-forms",
       "title": "inner-forms",
       "href": "keywords/inner-forms.html",
@@ -574,9 +912,27 @@
       "count": 3
     },
     {
+      "id": "lang-theorem",
+      "title": "lang-theorem",
+      "href": "keywords/lang-theorem.html",
+      "count": 1
+    },
+    {
+      "id": "levi-decomposition",
+      "title": "levi-decomposition",
+      "href": "keywords/levi-decomposition.html",
+      "count": 1
+    },
+    {
       "id": "linear-algebraic-groups",
       "title": "linear-algebraic-groups",
       "href": "keywords/linear-algebraic-groups.html",
+      "count": 1
+    },
+    {
+      "id": "maximal-torus",
+      "title": "maximal-torus",
+      "href": "keywords/maximal-torus.html",
       "count": 1
     },
     {
@@ -592,9 +948,21 @@
       "count": 1
     },
     {
+      "id": "parabolic",
+      "title": "parabolic",
+      "href": "keywords/parabolic.html",
+      "count": 1
+    },
+    {
       "id": "pure-inner-twists",
       "title": "pure-inner-twists",
       "href": "keywords/pure-inner-twists.html",
+      "count": 1
+    },
+    {
+      "id": "quasi-split",
+      "title": "quasi-split",
+      "href": "keywords/quasi-split.html",
       "count": 1
     },
     {
@@ -622,6 +990,12 @@
       "count": 1
     },
     {
+      "id": "reductive-structure",
+      "title": "reductive-structure",
+      "href": "keywords/reductive-structure.html",
+      "count": 5
+    },
+    {
       "id": "rigid-inner-forms",
       "title": "rigid-inner-forms",
       "href": "keywords/rigid-inner-forms.html",
@@ -632,6 +1006,24 @@
       "title": "rigid-inner-twists",
       "href": "keywords/rigid-inner-twists.html",
       "count": 1
+    },
+    {
+      "id": "root-data-and-duality",
+      "title": "root-data-and-duality",
+      "href": "keywords/root-data-and-duality.html",
+      "count": 2
+    },
+    {
+      "id": "solvable-group",
+      "title": "solvable-group",
+      "href": "keywords/solvable-group.html",
+      "count": 1
+    },
+    {
+      "id": "springer",
+      "title": "springer",
+      "href": "keywords/springer.html",
+      "count": 9
     },
     {
       "id": "strong-inner-forms",
@@ -646,9 +1038,27 @@
       "count": 1
     },
     {
+      "id": "theorem",
+      "title": "theorem",
+      "href": "keywords/theorem.html",
+      "count": 8
+    },
+    {
+      "id": "tits-index",
+      "title": "tits-index",
+      "href": "keywords/tits-index.html",
+      "count": 1
+    },
+    {
       "id": "torsors",
       "title": "torsors",
       "href": "keywords/torsors.html",
+      "count": 1
+    },
+    {
+      "id": "torus",
+      "title": "torus",
+      "href": "keywords/torus.html",
       "count": 1
     },
     {

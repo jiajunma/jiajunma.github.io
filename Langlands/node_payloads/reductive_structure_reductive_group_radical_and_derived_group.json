@@ -1,0 +1,38 @@
+{
+  "id": "reductive_structure.reductive_group_radical_and_derived_group",
+  "title": "Radical and Derived Group of a Reductive Group",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "reductive_structure/reductive_structure_reductive_group_radical_and_derived_group.html",
+  "primary_topic": "reductive_structure",
+  "topics": [
+    "reductive_structure"
+  ],
+  "body_html": "<h1>Radical and Derived Group of a Reductive Group</h1>\n<p>Let \\(G\\) be a connected reductive group over an algebraically closed field.\nThen the radical \\(R(G)\\) is a torus and equals the connected center\n\\(Z(G)^\\circ\\). The derived group \\(G_{\\mathrm{der}}=[G,G]\\) is semisimple,\nand multiplication induces an isogeny\n\\[\nZ(G)^\\circ \\times G_{\\mathrm{der}} \\longrightarrow G.\n\\]\nEquivalently,\n\\[\nG=Z(G)^\\circ\\cdot G_{\\mathrm{der}},\n\\]\nwith finite central intersection.</p>",
+  "proof_html": "<p>The radical is connected, solvable, and normal. Its unipotent radical would\nbe a connected normal unipotent subgroup of \\(G\\), so reductivity forces that\nunipotent radical to be trivial. A connected solvable group with trivial\nunipotent radical is a torus, and a normal torus in a connected group is\ncentral; hence \\(R(G)=Z(G)^\\circ\\).</p>\n<p>The quotient \\(G/Z(G)^\\circ\\) has trivial radical, so it is semisimple. The\nimage of \\(G_{\\mathrm{der}}\\) in this quotient is all of it because the\nquotient has no nontrivial torus quotient. Thus\nZ(G)^\\circ G_{\\mathrm{der}}=G. The intersection is a subgroup of the center\nof the semisimple group \\(G_{\\mathrm{der}}\\), hence finite.</p>",
+  "deps": [
+    {
+      "id": "reductive_structure.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "reductive_structure/reductive_structure_reductive_groups.html"
+    },
+    {
+      "id": "reductive_structure.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "reductive_structure/reductive_structure_algebraic_tori.html"
+    },
+    {
+      "id": "reductive_structure.semisimple_groups",
+      "title": "Semisimple Groups",
+      "href": "reductive_structure/reductive_structure_semisimple_groups.html"
+    },
+    {
+      "id": "root_data_and_duality.root_subgroups_generate_reductive_group",
+      "title": "Root Subgroups Generate a Reductive Group",
+      "href": "root_data_and_duality/root_data_and_duality_root_subgroups_generate_reductive_group.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

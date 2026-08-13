@@ -1,0 +1,39 @@
+{
+  "id": "linear_algebraic_groups.identity_component_normal_finite_index",
+  "title": "Identity Component Is Closed Normal of Finite Index",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "linear_algebraic_groups/linear_algebraic_groups_identity_component_normal_finite_index.html",
+  "primary_topic": "linear_algebraic_groups",
+  "topics": [
+    "linear_algebraic_groups"
+  ],
+  "body_html": "<h1>Identity Component Is Closed Normal of Finite Index</h1>\n<p>Let \\(G\\) be a linear algebraic group over an algebraically closed field.\nThe irreducible component containing the identity element \\(e\\) is a closed\nconnected normal subgroup, denoted \\(G^\\circ\\). It has finite index in\n\\(G\\), and every closed subgroup of finite index in \\(G\\) contains\n\\(G^\\circ\\).</p>\n<p>Equivalently, the quotient \\(G/G^\\circ\\) is a finite group, and\n\\(G^\\circ\\) is the smallest closed finite-index subgroup of \\(G\\).</p>",
+  "proof_html": "<p>The connected components of a finite-type algebraic variety are finitely\nmany, closed, and coincide with irreducible components after taking the\ncomponent containing a smooth point such as \\(e\\). Multiplication sends the\nproduct of two connected subsets containing \\(e\\) into a connected subset\ncontaining \\(e\\), hence \\(G^\\circ G^\\circ \\subseteq G^\\circ\\); inversion\nsimilarly preserves \\(G^\\circ\\). Thus \\(G^\\circ\\) is a closed subgroup.</p>\n<p>For any \\(g \\in G\\), conjugation by \\(g\\) is an algebraic automorphism of\n\\(G\\) and sends \\(e\\) to \\(e\\), so it preserves the identity component.\nTherefore \\(G^\\circ\\) is normal. Since \\(G\\) has only finitely many\nconnected components, \\(G/G^\\circ\\) is finite. Finally, if \\(H \\subseteq G\\)\nis closed of finite index, then \\(G/H\\) is finite and the image of the\nconnected set \\(G^\\circ\\) in it is a point; since \\(e \\in H\\), this gives\n\\(G^\\circ \\subseteq H\\).</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.algebraic_group_definition",
+      "title": "Algebraic Group over a Base",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_definition.html"
+    },
+    {
+      "id": "linear_algebraic_groups.connected_components",
+      "title": "Connected Components",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_connected_components.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "descent_and_forms.f_subgroup_field_of_definition",
+      "title": "Field of Definition for Subgroups of F-Groups",
+      "href": "descent_and_forms/descent_and_forms_f_subgroup_field_of_definition.html"
+    },
+    {
+      "id": "descent_and_forms.lang_theorem_finite_fields",
+      "title": "Lang Theorem for Connected Algebraic Groups over Finite Fields",
+      "href": "descent_and_forms/descent_and_forms_lang_theorem_finite_fields.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

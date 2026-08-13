@@ -585,6 +585,36 @@
       ]
     },
     {
+      "id": "descent_and_forms.f_subgroup_field_of_definition",
+      "title": "Field of Definition for Subgroups of F-Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "f-group",
+        "field-of-definition",
+        "descent",
+        "theorem"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms",
+        "linear_algebraic_groups"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_groups_and_descent_data",
+        "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+        "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+        "linear_algebraic_groups.closed_image_of_homomorphism",
+        "linear_algebraic_groups.identity_component_normal_finite_index"
+      ],
+      "used_by": [
+        "reductive_structure.maximal_f_tori_exist",
+        "reductive_structure.parabolic_f_subgroups_levi_decomposition"
+      ]
+    },
+    {
       "id": "descent_and_forms.forms_of_algebraic_groups",
       "title": "Forms of Algebraic Groups",
       "kind": "topic",
@@ -650,6 +680,7 @@
         "descent_and_forms.galois_groups_and_descent_data"
       ],
       "used_by": [
+        "descent_and_forms.lang_theorem_finite_fields",
         "descent_and_forms.nonabelian_h1",
         "descent_and_forms.rational_forms_of_reductive_groups",
         "descent_and_forms.rigid_inner_twists",
@@ -675,8 +706,10 @@
         "foundational_inputs.fields_and_field_extensions"
       ],
       "used_by": [
+        "descent_and_forms.f_subgroup_field_of_definition",
         "descent_and_forms.forms_of_algebraic_objects",
-        "descent_and_forms.galois_cohomology"
+        "descent_and_forms.galois_cohomology",
+        "reductive_structure.f_tori_galois_module_classification"
       ]
     },
     {
@@ -723,6 +756,32 @@
         "descent_and_forms.rigid_inner_forms",
         "kottwitz_structures.b_of_g",
         "kottwitz_structures.kottwitz_map_on_b_of_g"
+      ]
+    },
+    {
+      "id": "descent_and_forms.lang_theorem_finite_fields",
+      "title": "Lang Theorem for Connected Algebraic Groups over Finite Fields",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "lang-theorem",
+        "finite-field",
+        "frobenius",
+        "theorem",
+        "descent"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms",
+        "linear_algebraic_groups"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_cohomology",
+        "descent_and_forms.twisted_conjugacy_classes",
+        "linear_algebraic_groups.identity_component_normal_finite_index",
+        "linear_algebraic_groups.lie_algebra_of_algebraic_group"
       ]
     },
     {
@@ -805,6 +864,9 @@
       "topic": "descent_and_forms",
       "uses": [
         "descent_and_forms.rational_forms_of_reductive_groups"
+      ],
+      "used_by": [
+        "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum"
       ]
     },
     {
@@ -825,6 +887,11 @@
       "uses": [
         "descent_and_forms.forms_of_algebraic_groups",
         "linear_algebraic_groups.linear_algebraic_groups"
+      ],
+      "used_by": [
+        "descent_and_forms.f_subgroup_field_of_definition",
+        "reductive_structure.f_split_solvable_fixed_point_theorem",
+        "reductive_structure.f_tori_galois_module_classification"
       ]
     },
     {
@@ -854,7 +921,8 @@
         "descent_and_forms.quasi_split_forms",
         "descent_and_forms.real_forms",
         "nilpotent_orbits.rational_nilpotent_orbits",
-        "root_data_and_duality.galois_action_on_root_data"
+        "root_data_and_duality.galois_action_on_root_data",
+        "root_data_and_duality.indexed_root_datum_of_f_reductive_group"
       ]
     },
     {
@@ -1010,6 +1078,9 @@
       "uses": [
         "descent_and_forms.galois_cohomology",
         "linear_algebraic_groups.conjugacy_classes"
+      ],
+      "used_by": [
+        "descent_and_forms.lang_theorem_finite_fields"
       ]
     },
     {
@@ -1460,8 +1531,7 @@
         "Polynomial.instBialgebra",
         "Polynomial.instHopfAlgebra",
         "Langlands.AlgebraicGeometry.Examples.additiveGroup",
-        "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj",
-        "Langlands.AlgebraicGeometry.Examples.Ga"
+        "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -1581,7 +1651,7 @@
     },
     {
       "id": "linear_algebraic_groups.algebra_hom_composed_with_antipode_is_algebra_hom",
-      "title": "Composition of an Algebra Hom with the Antipode Is an Algebra Hom",
+      "title": "Composition with the Antipode Is an Algebra Hom for Commutative Hopf Algebras",
       "kind": "theorem",
       "status": "admitted",
       "tags": [
@@ -1599,7 +1669,7 @@
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
-        "linear_algebraic_groups.antipode_anti_multiplicativity"
+        "linear_algebraic_groups.antipode_multiplicativity_commutative_hopf"
       ],
       "used_by": [
         "linear_algebraic_groups.algebra_homs_form_group_under_convolution"
@@ -1675,6 +1745,36 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "title": "Algebraic Group Actions, Orbits, and Stabilizers",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "group-action",
+        "orbit",
+        "stabilizer",
+        "definition",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_definition"
+      ],
+      "used_by": [
+        "descent_and_forms.f_subgroup_field_of_definition",
+        "linear_algebraic_groups.linearization_of_affine_g_varieties",
+        "linear_algebraic_groups.orbits_are_locally_closed",
+        "linear_algebraic_groups.quotient_by_closed_subgroup_exists",
+        "reductive_structure.borel_fixed_point_theorem",
+        "reductive_structure.lie_kolchin_theorem"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.algebraic_group_definition",
       "title": "Algebraic Group over a Base",
       "kind": "definition",
@@ -1698,13 +1798,21 @@
       "used_by": [
         "linear_algebraic_groups.additive_group_scheme",
         "linear_algebraic_groups.affine_finite_type_faithful_representation",
+        "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
         "linear_algebraic_groups.base_change_preserves_algebraic_group",
+        "linear_algebraic_groups.closed_image_of_homomorphism",
         "linear_algebraic_groups.embedding_theorem",
         "linear_algebraic_groups.faithful_linear_representation_definition",
         "linear_algebraic_groups.general_linear_group_scheme",
+        "linear_algebraic_groups.identity_component_normal_finite_index",
+        "linear_algebraic_groups.jordan_decomposition_in_algebraic_group",
+        "linear_algebraic_groups.lie_algebra_of_algebraic_group",
         "linear_algebraic_groups.multiplicative_group_scheme",
+        "linear_algebraic_groups.quotient_by_closed_subgroup_exists",
         "linear_algebraic_groups.roots_of_unity_group_scheme",
-        "linear_algebraic_groups.trivial_group_scheme"
+        "linear_algebraic_groups.subgroup_generated_by_connected_subgroups",
+        "linear_algebraic_groups.trivial_group_scheme",
+        "linear_algebraic_groups.unipotent_subgroups_are_triangularizable"
       ]
     },
     {
@@ -1723,15 +1831,12 @@
         "linear_algebraic_groups"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.HopfObjectBridge.antipode_anti_multiplicativity"
+        "Langlands.AlgebraicGeometry.HopfAntipode.antipode_anti_multiplicativity"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
         "foundational_inputs.hopf_algebras",
         "linear_algebraic_groups.coordinate_rings_and_hopf_algebras"
-      ],
-      "used_by": [
-        "linear_algebraic_groups.algebra_hom_composed_with_antipode_is_algebra_hom"
       ]
     },
     {
@@ -1758,6 +1863,9 @@
       "uses": [
         "foundational_inputs.hopf_algebras",
         "linear_algebraic_groups.multiplication_is_coalgebra_hom"
+      ],
+      "used_by": [
+        "linear_algebraic_groups.algebra_hom_composed_with_antipode_is_algebra_hom"
       ]
     },
     {
@@ -1857,6 +1965,33 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.closed_image_of_homomorphism",
+      "title": "Image of an Algebraic Group Homomorphism Is Closed",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "homomorphism",
+        "closed-subgroup",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_definition",
+        "linear_algebraic_groups.kernels_images_and_quotients",
+        "linear_algebraic_groups.morphisms_and_closed_subgroups"
+      ],
+      "used_by": [
+        "descent_and_forms.f_subgroup_field_of_definition",
+        "linear_algebraic_groups.orbits_are_locally_closed"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.comodule_definition",
       "title": "Comodule over a Coalgebra",
       "kind": "definition",
@@ -1882,7 +2017,8 @@
       "used_by": [
         "linear_algebraic_groups.finite_dim_subcomodule_lemma",
         "linear_algebraic_groups.regular_representation_example",
-        "linear_algebraic_groups.representation_equals_comodule"
+        "linear_algebraic_groups.representation_equals_comodule",
+        "linear_algebraic_groups.trivial_representation_example"
       ]
     },
     {
@@ -1926,6 +2062,8 @@
         "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
       ],
       "used_by": [
+        "linear_algebraic_groups.identity_component_normal_finite_index",
+        "linear_algebraic_groups.subgroup_generated_by_connected_subgroups",
         "reductive_structure.borel_subgroups",
         "reductive_structure.solvable_groups"
       ]
@@ -2063,7 +2201,10 @@
       ],
       "used_by": [
         "linear_algebraic_groups.affine_finite_type_faithful_representation",
-        "linear_algebraic_groups.embedding_corollary_closed_subgroup_GL_n"
+        "linear_algebraic_groups.embedding_corollary_closed_subgroup_GL_n",
+        "linear_algebraic_groups.jordan_decomposition_in_algebraic_group",
+        "linear_algebraic_groups.linearization_of_affine_g_varieties",
+        "linear_algebraic_groups.unipotent_subgroups_are_triangularizable"
       ]
     },
     {
@@ -2136,8 +2277,7 @@
         "Langlands.AlgebraicGeometry.Examples.GLn.universalMatrix",
         "Langlands.AlgebraicGeometry.Examples.GLn.det",
         "Langlands.AlgebraicGeometry.Examples.GLn.coordRing",
-        "Langlands.AlgebraicGeometry.Examples.GLn.over",
-        "Langlands.AlgebraicGeometry.Examples.GLnSch"
+        "Langlands.AlgebraicGeometry.Examples.GLn.over"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -2293,6 +2433,57 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.identity_component_normal_finite_index",
+      "title": "Identity Component Is Closed Normal of Finite Index",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "connected-component",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_definition",
+        "linear_algebraic_groups.connected_components"
+      ],
+      "used_by": [
+        "descent_and_forms.f_subgroup_field_of_definition",
+        "descent_and_forms.lang_theorem_finite_fields"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.jordan_decomposition_in_algebraic_group",
+      "title": "Jordan Decomposition in a Linear Algebraic Group",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "jordan-decomposition",
+        "semisimple",
+        "unipotent",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_definition",
+        "linear_algebraic_groups.embedding_theorem"
+      ],
+      "used_by": [
+        "reductive_structure.commutative_group_semisimple_unipotent_decomposition"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.kernels_images_and_quotients",
       "title": "Kernels, Images, and Quotients",
       "kind": "topic",
@@ -2310,6 +2501,35 @@
       "topic": "linear_algebraic_groups",
       "uses": [
         "linear_algebraic_groups.morphisms_and_closed_subgroups"
+      ],
+      "used_by": [
+        "linear_algebraic_groups.closed_image_of_homomorphism",
+        "linear_algebraic_groups.quotient_by_closed_subgroup_exists"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.lie_algebra_of_algebraic_group",
+      "title": "Lie Algebra of an Algebraic Group",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "lie-algebra",
+        "tangent-space",
+        "definition",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_definition",
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
+      ],
+      "used_by": [
+        "descent_and_forms.lang_theorem_finite_fields"
       ]
     },
     {
@@ -2360,6 +2580,30 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.linearization_of_affine_g_varieties",
+      "title": "Affine G-Varieties Embed Equivariantly in Representations",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "representation",
+        "equivariant-embedding",
+        "affine-variety",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+        "linear_algebraic_groups.embedding_theorem",
+        "linear_algebraic_groups.representation_equals_comodule"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.morphisms_and_closed_subgroups",
       "title": "Morphisms and Closed Subgroups",
       "kind": "topic",
@@ -2380,7 +2624,9 @@
       "used_by": [
         "linear_algebraic_groups.automorphism_groups",
         "linear_algebraic_groups.basic_examples",
-        "linear_algebraic_groups.kernels_images_and_quotients"
+        "linear_algebraic_groups.closed_image_of_homomorphism",
+        "linear_algebraic_groups.kernels_images_and_quotients",
+        "linear_algebraic_groups.subgroup_generated_by_connected_subgroups"
       ]
     },
     {
@@ -2426,8 +2672,7 @@
       ],
       "lean_declarations": [
         "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup",
-        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj",
-        "Langlands.AlgebraicGeometry.Examples.Gm"
+        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -2459,6 +2704,31 @@
       "uses": [
         "linear_algebraic_groups.multiplicative_group_scheme",
         "linear_algebraic_groups.points_functor_definition"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.orbits_are_locally_closed",
+      "title": "Orbits of Algebraic Group Actions Are Locally Closed",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "orbit",
+        "locally-closed",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+        "linear_algebraic_groups.closed_image_of_homomorphism"
+      ],
+      "used_by": [
+        "reductive_structure.borel_fixed_point_theorem"
       ]
     },
     {
@@ -2514,6 +2784,29 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.quotient_by_closed_subgroup_exists",
+      "title": "Quotient by a Closed Subgroup Exists",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "quotient",
+        "homogeneous-space",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+        "linear_algebraic_groups.algebraic_group_definition",
+        "linear_algebraic_groups.kernels_images_and_quotients"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.regular_representation_example",
       "title": "Regular Representation as a Comodule",
       "kind": "example",
@@ -2563,7 +2856,8 @@
         "linear_algebraic_groups.points_functor_definition"
       ],
       "used_by": [
-        "linear_algebraic_groups.embedding_theorem"
+        "linear_algebraic_groups.embedding_theorem",
+        "linear_algebraic_groups.linearization_of_affine_g_varieties"
       ]
     },
     {
@@ -2582,10 +2876,8 @@
         "linear_algebraic_groups"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg",
         "Langlands.AlgebraicGeometry.Examples.muN",
-        "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj",
-        "Langlands.AlgebraicGeometry.Examples.MuN"
+        "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -2617,6 +2909,7 @@
       "used_by": [
         "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
         "linear_algebraic_groups.connected_components",
+        "linear_algebraic_groups.lie_algebra_of_algebraic_group",
         "nilpotent_orbits.lie_algebras_of_reductive_groups"
       ]
     },
@@ -2651,6 +2944,29 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.subgroup_generated_by_connected_subgroups",
+      "title": "Connected Subgroups Generate a Closed Connected Subgroup",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "connected-group",
+        "generated-subgroup",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_definition",
+        "linear_algebraic_groups.connected_components",
+        "linear_algebraic_groups.morphisms_and_closed_subgroups"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.trivial_group_scheme",
       "title": "Trivial Group Scheme over a Base",
       "kind": "definition",
@@ -2671,6 +2987,54 @@
       "topic": "linear_algebraic_groups",
       "uses": [
         "linear_algebraic_groups.algebraic_group_definition"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.trivial_representation_example",
+      "title": "Trivial Representation as a Comodule",
+      "kind": "example",
+      "status": "admitted",
+      "tags": [
+        "example",
+        "representation",
+        "comodule",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "lean_declarations": [
+        "Langlands.AlgebraicGeometry.trivialCoaction",
+        "Langlands.AlgebraicGeometry.trivialComodule"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.comodule_definition"
+      ]
+    },
+    {
+      "id": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
+      "title": "Unipotent Subgroups Are Triangularizable",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "unipotent",
+        "triangularization",
+        "theorem",
+        "linear-algebraic-groups"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups",
+        "reductive_structure"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_definition",
+        "linear_algebraic_groups.embedding_theorem",
+        "reductive_structure.unipotent_groups"
       ]
     },
     {
@@ -2908,8 +3272,40 @@
       "used_by": [
         "reductive_structure.borel_subgroups",
         "reductive_structure.character_and_cocharacter_lattices",
+        "reductive_structure.connected_solvable_group_structure",
+        "reductive_structure.diagonalizable_groups_antiequivalence",
         "reductive_structure.maximal_tori",
+        "reductive_structure.reductive_group_radical_and_derived_group",
         "reductive_structure.reductive_groups"
+      ]
+    },
+    {
+      "id": "reductive_structure.borel_fixed_point_theorem",
+      "title": "Borel Fixed Point Theorem",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "borel",
+        "fixed-point",
+        "solvable-group",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+        "linear_algebraic_groups.orbits_are_locally_closed",
+        "reductive_structure.solvable_groups"
+      ],
+      "used_by": [
+        "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+        "reductive_structure.f_split_solvable_fixed_point_theorem",
+        "reductive_structure.lie_kolchin_theorem"
       ]
     },
     {
@@ -2932,7 +3328,63 @@
         "reductive_structure.solvable_groups"
       ],
       "used_by": [
+        "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
         "reductive_structure.parabolic_subgroups"
+      ]
+    },
+    {
+      "id": "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+      "title": "Borel Subgroups Are Conjugate and Control Parabolics",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "borel",
+        "parabolic",
+        "conjugacy",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.borel_fixed_point_theorem",
+        "reductive_structure.borel_subgroups",
+        "reductive_structure.parabolic_subgroups"
+      ],
+      "used_by": [
+        "reductive_structure.maximal_tori_are_conjugate",
+        "reductive_structure.standard_parabolic_classification",
+        "root_data_and_duality.bruhat_decomposition"
+      ]
+    },
+    {
+      "id": "reductive_structure.cartan_subgroups_from_maximal_tori",
+      "title": "Cartan Subgroups from Maximal Tori",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "cartan-subgroup",
+        "maximal-torus",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.maximal_tori",
+        "reductive_structure.maximal_tori_are_conjugate",
+        "reductive_structure.solvable_groups"
+      ],
+      "used_by": [
+        "reductive_structure.maximal_f_tori_exist"
       ]
     },
     {
@@ -2976,8 +3428,65 @@
         "reductive_structure.algebraic_tori"
       ],
       "used_by": [
+        "reductive_structure.diagonalizable_group_characterization",
         "reductive_structure.diagonalizable_groups",
+        "reductive_structure.diagonalizable_groups_antiequivalence",
+        "reductive_structure.f_tori_galois_module_classification",
         "root_data_and_duality.root_data"
+      ]
+    },
+    {
+      "id": "reductive_structure.commutative_group_semisimple_unipotent_decomposition",
+      "title": "Commutative Algebraic Groups Split into Semisimple and Unipotent Parts",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "commutative-group",
+        "semisimple",
+        "unipotent",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "linear_algebraic_groups"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "linear_algebraic_groups.jordan_decomposition_in_algebraic_group",
+        "reductive_structure.diagonalizable_groups",
+        "reductive_structure.unipotent_groups"
+      ]
+    },
+    {
+      "id": "reductive_structure.connected_solvable_group_structure",
+      "title": "Structure of Connected Solvable Algebraic Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "solvable-group",
+        "unipotent-radical",
+        "torus",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.algebraic_tori",
+        "reductive_structure.lie_kolchin_theorem",
+        "reductive_structure.solvable_groups",
+        "reductive_structure.unipotent_groups"
+      ],
+      "used_by": [
+        "reductive_structure.f_split_solvable_fixed_point_theorem",
+        "reductive_structure.maximal_tori_are_conjugate"
       ]
     },
     {
@@ -3003,6 +3512,31 @@
       ]
     },
     {
+      "id": "reductive_structure.diagonalizable_group_characterization",
+      "title": "Characterization of Diagonalizable Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "diagonalizable-group",
+        "character",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.character_and_cocharacter_lattices",
+        "reductive_structure.diagonalizable_groups"
+      ],
+      "used_by": [
+        "reductive_structure.diagonalizable_groups_antiequivalence"
+      ]
+    },
+    {
       "id": "reductive_structure.diagonalizable_groups",
       "title": "Diagonalizable Groups",
       "kind": "topic",
@@ -3019,6 +3553,125 @@
       "uses": [
         "linear_algebraic_groups.linear_algebraic_groups",
         "reductive_structure.character_and_cocharacter_lattices"
+      ],
+      "used_by": [
+        "reductive_structure.commutative_group_semisimple_unipotent_decomposition",
+        "reductive_structure.diagonalizable_group_characterization"
+      ]
+    },
+    {
+      "id": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "title": "Diagonalizable Groups Are Dual to Character Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "diagonalizable-group",
+        "character-lattice",
+        "torus",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "root_data_and_duality"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.algebraic_tori",
+        "reductive_structure.character_and_cocharacter_lattices",
+        "reductive_structure.diagonalizable_group_characterization"
+      ],
+      "used_by": [
+        "reductive_structure.f_tori_galois_module_classification"
+      ]
+    },
+    {
+      "id": "reductive_structure.f_split_solvable_fixed_point_theorem",
+      "title": "Fixed Point Theorem for F-Split Solvable Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "f-split",
+        "solvable-group",
+        "fixed-point",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "descent_and_forms"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+        "reductive_structure.borel_fixed_point_theorem",
+        "reductive_structure.connected_solvable_group_structure",
+        "reductive_structure.lie_kolchin_theorem"
+      ],
+      "used_by": [
+        "reductive_structure.maximal_f_split_tori_are_conjugate"
+      ]
+    },
+    {
+      "id": "reductive_structure.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "torus",
+        "galois-module",
+        "f-group",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "descent_and_forms"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "descent_and_forms.galois_groups_and_descent_data",
+        "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+        "reductive_structure.character_and_cocharacter_lattices",
+        "reductive_structure.diagonalizable_groups_antiequivalence"
+      ],
+      "used_by": [
+        "reductive_structure.maximal_f_split_tori_are_conjugate",
+        "reductive_structure.maximal_f_tori_exist"
+      ]
+    },
+    {
+      "id": "reductive_structure.levi_decomposition_of_parabolics",
+      "title": "Levi Decomposition of Parabolic Subgroups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "parabolic",
+        "levi-decomposition",
+        "unipotent-radical",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "root_data_and_duality"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.levi_subgroups_and_unipotent_radicals",
+        "reductive_structure.standard_parabolic_classification",
+        "root_data_and_duality.root_subgroups_generate_reductive_group"
+      ],
+      "used_by": [
+        "reductive_structure.parabolic_f_subgroups_levi_decomposition"
       ]
     },
     {
@@ -3042,7 +3695,96 @@
       ],
       "used_by": [
         "nilpotent_orbits.bala_carter_classification",
+        "reductive_structure.levi_decomposition_of_parabolics",
         "reductive_structure.reductive_groups"
+      ]
+    },
+    {
+      "id": "reductive_structure.lie_kolchin_theorem",
+      "title": "Lie-Kolchin Theorem",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "lie-kolchin",
+        "solvable-group",
+        "triangularization",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "linear_algebraic_groups"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+        "reductive_structure.borel_fixed_point_theorem",
+        "reductive_structure.solvable_groups"
+      ],
+      "used_by": [
+        "reductive_structure.connected_solvable_group_structure",
+        "reductive_structure.f_split_solvable_fixed_point_theorem"
+      ]
+    },
+    {
+      "id": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "title": "Maximal F-Split Tori Are G(F)-Conjugate",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "f-split-torus",
+        "conjugacy",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "descent_and_forms"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.f_split_solvable_fixed_point_theorem",
+        "reductive_structure.f_tori_galois_module_classification",
+        "reductive_structure.maximal_f_tori_exist",
+        "reductive_structure.parabolic_subgroups"
+      ],
+      "used_by": [
+        "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+        "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+        "root_data_and_duality.relative_weyl_group_generated_by_reflections"
+      ]
+    },
+    {
+      "id": "reductive_structure.maximal_f_tori_exist",
+      "title": "Maximal F-Tori Exist in Connected F-Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "f-torus",
+        "maximal-torus",
+        "cartan-subgroup",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "descent_and_forms"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "descent_and_forms.f_subgroup_field_of_definition",
+        "reductive_structure.cartan_subgroups_from_maximal_tori",
+        "reductive_structure.f_tori_galois_module_classification",
+        "reductive_structure.maximal_tori_are_conjugate"
+      ],
+      "used_by": [
+        "reductive_structure.maximal_f_split_tori_are_conjugate"
       ]
     },
     {
@@ -3064,7 +3806,67 @@
         "reductive_structure.reductive_groups"
       ],
       "used_by": [
+        "reductive_structure.cartan_subgroups_from_maximal_tori",
+        "reductive_structure.maximal_tori_are_conjugate",
         "root_data_and_duality.roots_coroots_and_root_subgroups"
+      ]
+    },
+    {
+      "id": "reductive_structure.maximal_tori_are_conjugate",
+      "title": "Maximal Tori Are Conjugate",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "maximal-torus",
+        "conjugacy",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+        "reductive_structure.connected_solvable_group_structure",
+        "reductive_structure.maximal_tori"
+      ],
+      "used_by": [
+        "reductive_structure.cartan_subgroups_from_maximal_tori",
+        "reductive_structure.maximal_f_tori_exist",
+        "root_data_and_duality.root_datum_from_reductive_group"
+      ]
+    },
+    {
+      "id": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "title": "Levi Decomposition for Parabolic F-Subgroups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "parabolic",
+        "levi-decomposition",
+        "f-group",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "descent_and_forms"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "descent_and_forms.f_subgroup_field_of_definition",
+        "reductive_structure.levi_decomposition_of_parabolics",
+        "reductive_structure.maximal_f_split_tori_are_conjugate",
+        "reductive_structure.reductive_groups"
+      ],
+      "used_by": [
+        "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+        "root_data_and_duality.rational_bruhat_decomposition"
       ]
     },
     {
@@ -3088,7 +3890,36 @@
         "buildings_and_parahorics.bn_pairs_and_tits_systems",
         "buildings_and_parahorics.tits_buildings",
         "nilpotent_orbits.bala_carter_classification",
-        "reductive_structure.levi_subgroups_and_unipotent_radicals"
+        "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+        "reductive_structure.levi_subgroups_and_unipotent_radicals",
+        "reductive_structure.maximal_f_split_tori_are_conjugate",
+        "reductive_structure.standard_parabolic_classification"
+      ]
+    },
+    {
+      "id": "reductive_structure.reductive_group_radical_and_derived_group",
+      "title": "Radical and Derived Group of a Reductive Group",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "reductive-group",
+        "radical",
+        "derived-group",
+        "semisimple",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.algebraic_tori",
+        "reductive_structure.reductive_groups",
+        "reductive_structure.semisimple_groups",
+        "root_data_and_duality.root_subgroups_generate_reductive_group"
       ]
     },
     {
@@ -3123,7 +3954,12 @@
         "reductive_structure.central_isogenies",
         "reductive_structure.derived_group_center_adjoint_sc_cover",
         "reductive_structure.maximal_tori",
+        "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+        "reductive_structure.reductive_group_radical_and_derived_group",
         "reductive_structure.semisimple_groups",
+        "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+        "root_data_and_duality.root_datum_from_reductive_group",
+        "root_data_and_duality.root_subgroups_generate_reductive_group",
         "root_data_and_duality.roots_coroots_and_root_subgroups"
       ]
     },
@@ -3143,6 +3979,9 @@
       "topic": "reductive_structure",
       "uses": [
         "reductive_structure.reductive_groups"
+      ],
+      "used_by": [
+        "reductive_structure.reductive_group_radical_and_derived_group"
       ]
     },
     {
@@ -3164,8 +4003,41 @@
         "reductive_structure.unipotent_groups"
       ],
       "used_by": [
+        "reductive_structure.borel_fixed_point_theorem",
         "reductive_structure.borel_subgroups",
+        "reductive_structure.cartan_subgroups_from_maximal_tori",
+        "reductive_structure.connected_solvable_group_structure",
+        "reductive_structure.lie_kolchin_theorem",
         "reductive_structure.reductive_groups"
+      ]
+    },
+    {
+      "id": "reductive_structure.standard_parabolic_classification",
+      "title": "Standard Parabolics Are Classified by Simple Roots",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "parabolic",
+        "simple-roots",
+        "classification",
+        "theorem",
+        "reductive-structure"
+      ],
+      "primary_topic": "reductive_structure",
+      "topics": [
+        "reductive_structure",
+        "root_data_and_duality"
+      ],
+      "topic": "reductive_structure",
+      "uses": [
+        "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+        "reductive_structure.parabolic_subgroups",
+        "root_data_and_duality.bruhat_decomposition",
+        "root_data_and_duality.weyl_group_generated_by_reflections"
+      ],
+      "used_by": [
+        "reductive_structure.levi_decomposition_of_parabolics"
       ]
     },
     {
@@ -3186,6 +4058,9 @@
         "linear_algebraic_groups.linear_algebraic_groups"
       ],
       "used_by": [
+        "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
+        "reductive_structure.commutative_group_semisimple_unipotent_decomposition",
+        "reductive_structure.connected_solvable_group_structure",
         "reductive_structure.levi_subgroups_and_unipotent_radicals",
         "reductive_structure.reductive_groups",
         "reductive_structure.solvable_groups"
@@ -3232,8 +4107,64 @@
       ],
       "used_by": [
         "root_data_and_duality.automorphisms_of_root_data",
+        "root_data_and_duality.chevalley_existence_theorem",
+        "root_data_and_duality.chevalley_isomorphism_theorem",
         "root_data_and_duality.classification_of_split_reductive_groups",
         "root_data_and_duality.pinnings"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.bruhat_decomposition",
+      "title": "Bruhat Decomposition",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "bruhat-decomposition",
+        "weyl-group",
+        "borel",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+        "root_data_and_duality.root_subgroups_generate_reductive_group",
+        "root_data_and_duality.weyl_group_generated_by_reflections"
+      ],
+      "used_by": [
+        "reductive_structure.standard_parabolic_classification",
+        "root_data_and_duality.bruhat_order_closure_relations",
+        "root_data_and_duality.chevalley_isomorphism_theorem",
+        "root_data_and_duality.rational_bruhat_decomposition"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.bruhat_order_closure_relations",
+      "title": "Bruhat Order Gives Schubert Closure Relations",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "bruhat-order",
+        "schubert-variety",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.bruhat_decomposition",
+        "root_data_and_duality.coxeter_systems_and_bruhat_order"
       ]
     },
     {
@@ -3299,6 +4230,63 @@
       ]
     },
     {
+      "id": "root_data_and_duality.chevalley_existence_theorem",
+      "title": "Chevalley Existence Theorem",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "chevalley",
+        "existence-theorem",
+        "root-datum",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.based_root_data",
+        "root_data_and_duality.chevalley_isomorphism_theorem",
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.root_data"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.chevalley_isomorphism_theorem",
+      "title": "Chevalley Isomorphism Theorem",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "chevalley",
+        "isomorphism-theorem",
+        "root-datum",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.based_root_data",
+        "root_data_and_duality.bruhat_decomposition",
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.root_datum_from_reductive_group",
+        "root_data_and_duality.root_subgroups_generate_reductive_group"
+      ],
+      "used_by": [
+        "root_data_and_duality.chevalley_existence_theorem",
+        "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
+      ]
+    },
+    {
       "id": "root_data_and_duality.classification_of_split_reductive_groups",
       "title": "Classification of Split Reductive Groups",
       "kind": "topic",
@@ -3321,7 +4309,10 @@
       "used_by": [
         "classical_and_exceptional_groups.classical_groups",
         "classical_and_exceptional_groups.exceptional_groups",
-        "root_data_and_duality.dual_reductive_groups"
+        "root_data_and_duality.chevalley_existence_theorem",
+        "root_data_and_duality.chevalley_isomorphism_theorem",
+        "root_data_and_duality.dual_reductive_groups",
+        "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
       ]
     },
     {
@@ -3345,7 +4336,8 @@
       ],
       "used_by": [
         "buildings_and_parahorics.affine_weyl_groups",
-        "buildings_and_parahorics.coxeter_complexes"
+        "buildings_and_parahorics.coxeter_complexes",
+        "root_data_and_duality.bruhat_order_closure_relations"
       ]
     },
     {
@@ -3413,6 +4405,32 @@
       ]
     },
     {
+      "id": "root_data_and_duality.f_split_chevalley_isomorphism_theorem",
+      "title": "Chevalley Isomorphism Theorem for F-Split Groups",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "chevalley",
+        "f-split",
+        "isomorphism-theorem",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.chevalley_isomorphism_theorem",
+        "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+        "root_data_and_duality.pinnings"
+      ]
+    },
+    {
       "id": "root_data_and_duality.fundamental_group_of_root_datum",
       "title": "Fundamental Group of a Root Datum",
       "kind": "topic",
@@ -3459,7 +4477,40 @@
         "buildings_and_parahorics.valued_root_data",
         "descent_and_forms.vogan_diagrams",
         "kottwitz_structures.kottwitz_homomorphism",
-        "root_data_and_duality.l_groups"
+        "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+        "root_data_and_duality.l_groups",
+        "root_data_and_duality.relative_root_datum_of_f_reductive_group"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "title": "Indexed Root Datum of an F-Reductive Group",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "indexed-root-datum",
+        "tits-index",
+        "f-reductive-group",
+        "definition",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure",
+        "descent_and_forms"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "descent_and_forms.rational_forms_of_reductive_groups",
+        "root_data_and_duality.galois_action_on_root_data",
+        "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+        "root_data_and_duality.root_datum_from_reductive_group"
+      ],
+      "used_by": [
+        "root_data_and_duality.f_split_chevalley_isomorphism_theorem",
+        "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum"
       ]
     },
     {
@@ -3568,7 +4619,116 @@
       ],
       "used_by": [
         "root_data_and_duality.classification_of_split_reductive_groups",
+        "root_data_and_duality.f_split_chevalley_isomorphism_theorem",
         "root_data_and_duality.pinned_dual_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum",
+      "title": "Quasi-Split and Anisotropic Groups via the Indexed Root Datum",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "quasi-split",
+        "anisotropic",
+        "indexed-root-datum",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure",
+        "descent_and_forms"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "descent_and_forms.quasi_split_forms",
+        "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+        "root_data_and_duality.indexed_root_datum_of_f_reductive_group"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.rational_bruhat_decomposition",
+      "title": "Rational Bruhat Decomposition",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "bruhat-decomposition",
+        "rational-points",
+        "relative-weyl-group",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+        "root_data_and_duality.bruhat_decomposition",
+        "root_data_and_duality.relative_weyl_group_generated_by_reflections"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+      "title": "Relative Root Datum of an F-Reductive Group",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "relative-root-datum",
+        "f-reductive-group",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "reductive_structure.maximal_f_split_tori_are_conjugate",
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.galois_action_on_root_data",
+        "root_data_and_duality.root_datum_from_reductive_group"
+      ],
+      "used_by": [
+        "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+        "root_data_and_duality.relative_weyl_group_generated_by_reflections"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.relative_weyl_group_generated_by_reflections",
+      "title": "Relative Weyl Group Is Generated by Relative Reflections",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "relative-weyl-group",
+        "reflection",
+        "f-reductive-group",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "reductive_structure.maximal_f_split_tori_are_conjugate",
+        "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+        "root_data_and_duality.weyl_group_generated_by_reflections"
+      ],
+      "used_by": [
+        "root_data_and_duality.rational_bruhat_decomposition"
       ]
     },
     {
@@ -3600,9 +4760,73 @@
         "root_data_and_duality.automorphisms_of_root_data",
         "root_data_and_duality.based_root_data",
         "root_data_and_duality.central_isogenies_and_duality",
+        "root_data_and_duality.chevalley_existence_theorem",
         "root_data_and_duality.classification_of_split_reductive_groups",
         "root_data_and_duality.dual_root_data",
-        "root_data_and_duality.fundamental_group_of_root_datum"
+        "root_data_and_duality.fundamental_group_of_root_datum",
+        "root_data_and_duality.root_datum_from_reductive_group"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.root_datum_from_reductive_group",
+      "title": "Root Datum of a Reductive Group",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "root-datum",
+        "reductive-group",
+        "definition",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "reductive_structure.maximal_tori_are_conjugate",
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.root_data",
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
+      ],
+      "used_by": [
+        "root_data_and_duality.chevalley_isomorphism_theorem",
+        "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+        "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+        "root_data_and_duality.root_subgroups_generate_reductive_group",
+        "root_data_and_duality.weyl_group_generated_by_reflections"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.root_subgroups_generate_reductive_group",
+      "title": "Root Subgroups Generate a Reductive Group",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "root-subgroup",
+        "reductive-group",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "reductive_structure.reductive_groups",
+        "root_data_and_duality.root_datum_from_reductive_group",
+        "root_data_and_duality.roots_coroots_and_root_subgroups"
+      ],
+      "used_by": [
+        "reductive_structure.levi_decomposition_of_parabolics",
+        "reductive_structure.reductive_group_radical_and_derived_group",
+        "root_data_and_duality.bruhat_decomposition",
+        "root_data_and_duality.chevalley_isomorphism_theorem"
       ]
     },
     {
@@ -3628,7 +4852,8 @@
         "classical_and_exceptional_groups.exceptional_groups",
         "nilpotent_orbits.weighted_dynkin_diagrams",
         "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
-        "root_data_and_duality.dual_root_systems"
+        "root_data_and_duality.dual_root_systems",
+        "root_data_and_duality.weyl_group_generated_by_reflections"
       ]
     },
     {
@@ -3654,8 +4879,40 @@
       "used_by": [
         "root_data_and_duality.pinnings",
         "root_data_and_duality.root_data",
+        "root_data_and_duality.root_datum_from_reductive_group",
+        "root_data_and_duality.root_subgroups_generate_reductive_group",
         "root_data_and_duality.root_systems",
         "root_data_and_duality.weyl_groups"
+      ]
+    },
+    {
+      "id": "root_data_and_duality.weyl_group_generated_by_reflections",
+      "title": "Weyl Group Is Generated by Root Reflections",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "weyl-group",
+        "reflection",
+        "root-system",
+        "theorem",
+        "root-data-and-duality"
+      ],
+      "primary_topic": "root_data_and_duality",
+      "topics": [
+        "root_data_and_duality",
+        "reductive_structure"
+      ],
+      "topic": "root_data_and_duality",
+      "uses": [
+        "root_data_and_duality.root_datum_from_reductive_group",
+        "root_data_and_duality.root_systems",
+        "root_data_and_duality.weyl_groups"
+      ],
+      "used_by": [
+        "reductive_structure.standard_parabolic_classification",
+        "root_data_and_duality.bruhat_decomposition",
+        "root_data_and_duality.relative_weyl_group_generated_by_reflections"
       ]
     },
     {
@@ -3677,7 +4934,8 @@
       ],
       "used_by": [
         "root_data_and_duality.coxeter_systems_and_bruhat_order",
-        "root_data_and_duality.root_systems"
+        "root_data_and_duality.root_systems",
+        "root_data_and_duality.weyl_group_generated_by_reflections"
       ]
     }
   ],
@@ -3939,6 +5197,26 @@
       "to": "descent_and_forms.extended_groups_for_real_forms"
     },
     {
+      "from": "descent_and_forms.galois_groups_and_descent_data",
+      "to": "descent_and_forms.f_subgroup_field_of_definition"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "descent_and_forms.f_subgroup_field_of_definition"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "to": "descent_and_forms.f_subgroup_field_of_definition"
+    },
+    {
+      "from": "linear_algebraic_groups.closed_image_of_homomorphism",
+      "to": "descent_and_forms.f_subgroup_field_of_definition"
+    },
+    {
+      "from": "linear_algebraic_groups.identity_component_normal_finite_index",
+      "to": "descent_and_forms.f_subgroup_field_of_definition"
+    },
+    {
       "from": "descent_and_forms.cocycles_and_twisting",
       "to": "descent_and_forms.forms_of_algebraic_groups"
     },
@@ -3985,6 +5263,22 @@
     {
       "from": "kottwitz_structures.kottwitz_map_on_b_of_g",
       "to": "descent_and_forms.kaletha_refined_inner_forms"
+    },
+    {
+      "from": "descent_and_forms.galois_cohomology",
+      "to": "descent_and_forms.lang_theorem_finite_fields"
+    },
+    {
+      "from": "descent_and_forms.twisted_conjugacy_classes",
+      "to": "descent_and_forms.lang_theorem_finite_fields"
+    },
+    {
+      "from": "linear_algebraic_groups.identity_component_normal_finite_index",
+      "to": "descent_and_forms.lang_theorem_finite_fields"
+    },
+    {
+      "from": "linear_algebraic_groups.lie_algebra_of_algebraic_group",
+      "to": "descent_and_forms.lang_theorem_finite_fields"
     },
     {
       "from": "descent_and_forms.galois_cohomology",
@@ -4267,7 +5561,7 @@
       "to": "linear_algebraic_groups.affine_group_scheme_definition"
     },
     {
-      "from": "linear_algebraic_groups.antipode_anti_multiplicativity",
+      "from": "linear_algebraic_groups.antipode_multiplicativity_commutative_hopf",
       "to": "linear_algebraic_groups.algebra_hom_composed_with_antipode_is_algebra_hom"
     },
     {
@@ -4289,6 +5583,10 @@
     {
       "from": "linear_algebraic_groups.convolution_of_algebra_homs_is_algebra_hom",
       "to": "linear_algebraic_groups.algebra_homs_form_group_under_convolution"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers"
     },
     {
       "from": "linear_algebraic_groups.affine_group_scheme_definition",
@@ -4341,6 +5639,18 @@
     {
       "from": "linear_algebraic_groups.morphisms_and_closed_subgroups",
       "to": "linear_algebraic_groups.basic_examples"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.closed_image_of_homomorphism"
+    },
+    {
+      "from": "linear_algebraic_groups.kernels_images_and_quotients",
+      "to": "linear_algebraic_groups.closed_image_of_homomorphism"
+    },
+    {
+      "from": "linear_algebraic_groups.morphisms_and_closed_subgroups",
+      "to": "linear_algebraic_groups.closed_image_of_homomorphism"
     },
     {
       "from": "foundational_inputs.hopf_algebras",
@@ -4491,8 +5801,32 @@
       "to": "linear_algebraic_groups.hopf_spec_grpobj_via_yoneda"
     },
     {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.identity_component_normal_finite_index"
+    },
+    {
+      "from": "linear_algebraic_groups.connected_components",
+      "to": "linear_algebraic_groups.identity_component_normal_finite_index"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.jordan_decomposition_in_algebraic_group"
+    },
+    {
+      "from": "linear_algebraic_groups.embedding_theorem",
+      "to": "linear_algebraic_groups.jordan_decomposition_in_algebraic_group"
+    },
+    {
       "from": "linear_algebraic_groups.morphisms_and_closed_subgroups",
       "to": "linear_algebraic_groups.kernels_images_and_quotients"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.lie_algebra_of_algebraic_group"
+    },
+    {
+      "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "to": "linear_algebraic_groups.lie_algebra_of_algebraic_group"
     },
     {
       "from": "foundational_inputs.affine_schemes",
@@ -4513,6 +5847,18 @@
     {
       "from": "linear_algebraic_groups.affine_algebraic_groups",
       "to": "linear_algebraic_groups.linear_algebraic_groups"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "to": "linear_algebraic_groups.linearization_of_affine_g_varieties"
+    },
+    {
+      "from": "linear_algebraic_groups.embedding_theorem",
+      "to": "linear_algebraic_groups.linearization_of_affine_g_varieties"
+    },
+    {
+      "from": "linear_algebraic_groups.representation_equals_comodule",
+      "to": "linear_algebraic_groups.linearization_of_affine_g_varieties"
     },
     {
       "from": "linear_algebraic_groups.affine_algebraic_groups",
@@ -4543,12 +5889,32 @@
       "to": "linear_algebraic_groups.multiplicative_group_scheme_points"
     },
     {
+      "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "to": "linear_algebraic_groups.orbits_are_locally_closed"
+    },
+    {
+      "from": "linear_algebraic_groups.closed_image_of_homomorphism",
+      "to": "linear_algebraic_groups.orbits_are_locally_closed"
+    },
+    {
       "from": "linear_algebraic_groups.points_functor_definition",
       "to": "linear_algebraic_groups.points_form_group"
     },
     {
       "from": "linear_algebraic_groups.affine_group_scheme_definition",
       "to": "linear_algebraic_groups.points_functor_definition"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "to": "linear_algebraic_groups.quotient_by_closed_subgroup_exists"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.quotient_by_closed_subgroup_exists"
+    },
+    {
+      "from": "linear_algebraic_groups.kernels_images_and_quotients",
+      "to": "linear_algebraic_groups.quotient_by_closed_subgroup_exists"
     },
     {
       "from": "linear_algebraic_groups.comodule_definition",
@@ -4600,7 +5966,35 @@
     },
     {
       "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.subgroup_generated_by_connected_subgroups"
+    },
+    {
+      "from": "linear_algebraic_groups.connected_components",
+      "to": "linear_algebraic_groups.subgroup_generated_by_connected_subgroups"
+    },
+    {
+      "from": "linear_algebraic_groups.morphisms_and_closed_subgroups",
+      "to": "linear_algebraic_groups.subgroup_generated_by_connected_subgroups"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
       "to": "linear_algebraic_groups.trivial_group_scheme"
+    },
+    {
+      "from": "linear_algebraic_groups.comodule_definition",
+      "to": "linear_algebraic_groups.trivial_representation_example"
+    },
+    {
+      "from": "linear_algebraic_groups.algebraic_group_definition",
+      "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable"
+    },
+    {
+      "from": "linear_algebraic_groups.embedding_theorem",
+      "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable"
+    },
+    {
+      "from": "reductive_structure.unipotent_groups",
+      "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable"
     },
     {
       "from": "nilpotent_orbits.lie_algebras_of_reductive_groups",
@@ -4683,6 +6077,18 @@
       "to": "reductive_structure.algebraic_tori"
     },
     {
+      "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "to": "reductive_structure.borel_fixed_point_theorem"
+    },
+    {
+      "from": "linear_algebraic_groups.orbits_are_locally_closed",
+      "to": "reductive_structure.borel_fixed_point_theorem"
+    },
+    {
+      "from": "reductive_structure.solvable_groups",
+      "to": "reductive_structure.borel_fixed_point_theorem"
+    },
+    {
       "from": "linear_algebraic_groups.connected_components",
       "to": "reductive_structure.borel_subgroups"
     },
@@ -4695,12 +6101,64 @@
       "to": "reductive_structure.borel_subgroups"
     },
     {
+      "from": "reductive_structure.borel_fixed_point_theorem",
+      "to": "reductive_structure.borel_subgroups_conjugacy_and_parabolics"
+    },
+    {
+      "from": "reductive_structure.borel_subgroups",
+      "to": "reductive_structure.borel_subgroups_conjugacy_and_parabolics"
+    },
+    {
+      "from": "reductive_structure.parabolic_subgroups",
+      "to": "reductive_structure.borel_subgroups_conjugacy_and_parabolics"
+    },
+    {
+      "from": "reductive_structure.maximal_tori",
+      "to": "reductive_structure.cartan_subgroups_from_maximal_tori"
+    },
+    {
+      "from": "reductive_structure.maximal_tori_are_conjugate",
+      "to": "reductive_structure.cartan_subgroups_from_maximal_tori"
+    },
+    {
+      "from": "reductive_structure.solvable_groups",
+      "to": "reductive_structure.cartan_subgroups_from_maximal_tori"
+    },
+    {
       "from": "reductive_structure.reductive_groups",
       "to": "reductive_structure.central_isogenies"
     },
     {
       "from": "reductive_structure.algebraic_tori",
       "to": "reductive_structure.character_and_cocharacter_lattices"
+    },
+    {
+      "from": "linear_algebraic_groups.jordan_decomposition_in_algebraic_group",
+      "to": "reductive_structure.commutative_group_semisimple_unipotent_decomposition"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_groups",
+      "to": "reductive_structure.commutative_group_semisimple_unipotent_decomposition"
+    },
+    {
+      "from": "reductive_structure.unipotent_groups",
+      "to": "reductive_structure.commutative_group_semisimple_unipotent_decomposition"
+    },
+    {
+      "from": "reductive_structure.algebraic_tori",
+      "to": "reductive_structure.connected_solvable_group_structure"
+    },
+    {
+      "from": "reductive_structure.lie_kolchin_theorem",
+      "to": "reductive_structure.connected_solvable_group_structure"
+    },
+    {
+      "from": "reductive_structure.solvable_groups",
+      "to": "reductive_structure.connected_solvable_group_structure"
+    },
+    {
+      "from": "reductive_structure.unipotent_groups",
+      "to": "reductive_structure.connected_solvable_group_structure"
     },
     {
       "from": "reductive_structure.central_isogenies",
@@ -4711,12 +6169,76 @@
       "to": "reductive_structure.derived_group_center_adjoint_sc_cover"
     },
     {
+      "from": "reductive_structure.character_and_cocharacter_lattices",
+      "to": "reductive_structure.diagonalizable_group_characterization"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_groups",
+      "to": "reductive_structure.diagonalizable_group_characterization"
+    },
+    {
       "from": "linear_algebraic_groups.linear_algebraic_groups",
       "to": "reductive_structure.diagonalizable_groups"
     },
     {
       "from": "reductive_structure.character_and_cocharacter_lattices",
       "to": "reductive_structure.diagonalizable_groups"
+    },
+    {
+      "from": "reductive_structure.algebraic_tori",
+      "to": "reductive_structure.diagonalizable_groups_antiequivalence"
+    },
+    {
+      "from": "reductive_structure.character_and_cocharacter_lattices",
+      "to": "reductive_structure.diagonalizable_groups_antiequivalence"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_group_characterization",
+      "to": "reductive_structure.diagonalizable_groups_antiequivalence"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "reductive_structure.f_split_solvable_fixed_point_theorem"
+    },
+    {
+      "from": "reductive_structure.borel_fixed_point_theorem",
+      "to": "reductive_structure.f_split_solvable_fixed_point_theorem"
+    },
+    {
+      "from": "reductive_structure.connected_solvable_group_structure",
+      "to": "reductive_structure.f_split_solvable_fixed_point_theorem"
+    },
+    {
+      "from": "reductive_structure.lie_kolchin_theorem",
+      "to": "reductive_structure.f_split_solvable_fixed_point_theorem"
+    },
+    {
+      "from": "descent_and_forms.galois_groups_and_descent_data",
+      "to": "reductive_structure.f_tori_galois_module_classification"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "reductive_structure.f_tori_galois_module_classification"
+    },
+    {
+      "from": "reductive_structure.character_and_cocharacter_lattices",
+      "to": "reductive_structure.f_tori_galois_module_classification"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "to": "reductive_structure.f_tori_galois_module_classification"
+    },
+    {
+      "from": "reductive_structure.levi_subgroups_and_unipotent_radicals",
+      "to": "reductive_structure.levi_decomposition_of_parabolics"
+    },
+    {
+      "from": "reductive_structure.standard_parabolic_classification",
+      "to": "reductive_structure.levi_decomposition_of_parabolics"
+    },
+    {
+      "from": "root_data_and_duality.root_subgroups_generate_reductive_group",
+      "to": "reductive_structure.levi_decomposition_of_parabolics"
     },
     {
       "from": "reductive_structure.parabolic_subgroups",
@@ -4727,6 +6249,50 @@
       "to": "reductive_structure.levi_subgroups_and_unipotent_radicals"
     },
     {
+      "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "to": "reductive_structure.lie_kolchin_theorem"
+    },
+    {
+      "from": "reductive_structure.borel_fixed_point_theorem",
+      "to": "reductive_structure.lie_kolchin_theorem"
+    },
+    {
+      "from": "reductive_structure.solvable_groups",
+      "to": "reductive_structure.lie_kolchin_theorem"
+    },
+    {
+      "from": "reductive_structure.f_split_solvable_fixed_point_theorem",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
+    },
+    {
+      "from": "reductive_structure.f_tori_galois_module_classification",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
+    },
+    {
+      "from": "reductive_structure.maximal_f_tori_exist",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
+    },
+    {
+      "from": "reductive_structure.parabolic_subgroups",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
+    },
+    {
+      "from": "descent_and_forms.f_subgroup_field_of_definition",
+      "to": "reductive_structure.maximal_f_tori_exist"
+    },
+    {
+      "from": "reductive_structure.cartan_subgroups_from_maximal_tori",
+      "to": "reductive_structure.maximal_f_tori_exist"
+    },
+    {
+      "from": "reductive_structure.f_tori_galois_module_classification",
+      "to": "reductive_structure.maximal_f_tori_exist"
+    },
+    {
+      "from": "reductive_structure.maximal_tori_are_conjugate",
+      "to": "reductive_structure.maximal_f_tori_exist"
+    },
+    {
       "from": "reductive_structure.algebraic_tori",
       "to": "reductive_structure.maximal_tori"
     },
@@ -4735,8 +6301,52 @@
       "to": "reductive_structure.maximal_tori"
     },
     {
+      "from": "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+      "to": "reductive_structure.maximal_tori_are_conjugate"
+    },
+    {
+      "from": "reductive_structure.connected_solvable_group_structure",
+      "to": "reductive_structure.maximal_tori_are_conjugate"
+    },
+    {
+      "from": "reductive_structure.maximal_tori",
+      "to": "reductive_structure.maximal_tori_are_conjugate"
+    },
+    {
+      "from": "descent_and_forms.f_subgroup_field_of_definition",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition"
+    },
+    {
+      "from": "reductive_structure.levi_decomposition_of_parabolics",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition"
+    },
+    {
+      "from": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition"
+    },
+    {
+      "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.parabolic_f_subgroups_levi_decomposition"
+    },
+    {
       "from": "reductive_structure.borel_subgroups",
       "to": "reductive_structure.parabolic_subgroups"
+    },
+    {
+      "from": "reductive_structure.algebraic_tori",
+      "to": "reductive_structure.reductive_group_radical_and_derived_group"
+    },
+    {
+      "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.reductive_group_radical_and_derived_group"
+    },
+    {
+      "from": "reductive_structure.semisimple_groups",
+      "to": "reductive_structure.reductive_group_radical_and_derived_group"
+    },
+    {
+      "from": "root_data_and_duality.root_subgroups_generate_reductive_group",
+      "to": "reductive_structure.reductive_group_radical_and_derived_group"
     },
     {
       "from": "reductive_structure.algebraic_tori",
@@ -4767,6 +6377,22 @@
       "to": "reductive_structure.solvable_groups"
     },
     {
+      "from": "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+      "to": "reductive_structure.standard_parabolic_classification"
+    },
+    {
+      "from": "reductive_structure.parabolic_subgroups",
+      "to": "reductive_structure.standard_parabolic_classification"
+    },
+    {
+      "from": "root_data_and_duality.bruhat_decomposition",
+      "to": "reductive_structure.standard_parabolic_classification"
+    },
+    {
+      "from": "root_data_and_duality.weyl_group_generated_by_reflections",
+      "to": "reductive_structure.standard_parabolic_classification"
+    },
+    {
       "from": "linear_algebraic_groups.linear_algebraic_groups",
       "to": "reductive_structure.unipotent_groups"
     },
@@ -4781,6 +6407,26 @@
     {
       "from": "root_data_and_duality.root_data",
       "to": "root_data_and_duality.based_root_data"
+    },
+    {
+      "from": "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
+      "to": "root_data_and_duality.bruhat_decomposition"
+    },
+    {
+      "from": "root_data_and_duality.root_subgroups_generate_reductive_group",
+      "to": "root_data_and_duality.bruhat_decomposition"
+    },
+    {
+      "from": "root_data_and_duality.weyl_group_generated_by_reflections",
+      "to": "root_data_and_duality.bruhat_decomposition"
+    },
+    {
+      "from": "root_data_and_duality.bruhat_decomposition",
+      "to": "root_data_and_duality.bruhat_order_closure_relations"
+    },
+    {
+      "from": "root_data_and_duality.coxeter_systems_and_bruhat_order",
+      "to": "root_data_and_duality.bruhat_order_closure_relations"
     },
     {
       "from": "root_data_and_duality.root_systems",
@@ -4801,6 +6447,42 @@
     {
       "from": "root_data_and_duality.root_data",
       "to": "root_data_and_duality.central_isogenies_and_duality"
+    },
+    {
+      "from": "root_data_and_duality.based_root_data",
+      "to": "root_data_and_duality.chevalley_existence_theorem"
+    },
+    {
+      "from": "root_data_and_duality.chevalley_isomorphism_theorem",
+      "to": "root_data_and_duality.chevalley_existence_theorem"
+    },
+    {
+      "from": "root_data_and_duality.classification_of_split_reductive_groups",
+      "to": "root_data_and_duality.chevalley_existence_theorem"
+    },
+    {
+      "from": "root_data_and_duality.root_data",
+      "to": "root_data_and_duality.chevalley_existence_theorem"
+    },
+    {
+      "from": "root_data_and_duality.based_root_data",
+      "to": "root_data_and_duality.chevalley_isomorphism_theorem"
+    },
+    {
+      "from": "root_data_and_duality.bruhat_decomposition",
+      "to": "root_data_and_duality.chevalley_isomorphism_theorem"
+    },
+    {
+      "from": "root_data_and_duality.classification_of_split_reductive_groups",
+      "to": "root_data_and_duality.chevalley_isomorphism_theorem"
+    },
+    {
+      "from": "root_data_and_duality.root_datum_from_reductive_group",
+      "to": "root_data_and_duality.chevalley_isomorphism_theorem"
+    },
+    {
+      "from": "root_data_and_duality.root_subgroups_generate_reductive_group",
+      "to": "root_data_and_duality.chevalley_isomorphism_theorem"
     },
     {
       "from": "root_data_and_duality.based_root_data",
@@ -4839,6 +6521,22 @@
       "to": "root_data_and_duality.dual_root_systems"
     },
     {
+      "from": "root_data_and_duality.chevalley_isomorphism_theorem",
+      "to": "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
+    },
+    {
+      "from": "root_data_and_duality.classification_of_split_reductive_groups",
+      "to": "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
+    },
+    {
+      "from": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "to": "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
+    },
+    {
+      "from": "root_data_and_duality.pinnings",
+      "to": "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
+    },
+    {
       "from": "root_data_and_duality.root_data",
       "to": "root_data_and_duality.fundamental_group_of_root_datum"
     },
@@ -4849,6 +6547,22 @@
     {
       "from": "root_data_and_duality.automorphisms_of_root_data",
       "to": "root_data_and_duality.galois_action_on_root_data"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_reductive_groups",
+      "to": "root_data_and_duality.indexed_root_datum_of_f_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.galois_action_on_root_data",
+      "to": "root_data_and_duality.indexed_root_datum_of_f_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+      "to": "root_data_and_duality.indexed_root_datum_of_f_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.root_datum_from_reductive_group",
+      "to": "root_data_and_duality.indexed_root_datum_of_f_reductive_group"
     },
     {
       "from": "root_data_and_duality.galois_action_on_root_data",
@@ -4887,12 +6601,92 @@
       "to": "root_data_and_duality.pinnings"
     },
     {
+      "from": "descent_and_forms.quasi_split_forms",
+      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum"
+    },
+    {
+      "from": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum"
+    },
+    {
+      "from": "root_data_and_duality.indexed_root_datum_of_f_reductive_group",
+      "to": "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum"
+    },
+    {
+      "from": "reductive_structure.parabolic_f_subgroups_levi_decomposition",
+      "to": "root_data_and_duality.rational_bruhat_decomposition"
+    },
+    {
+      "from": "root_data_and_duality.bruhat_decomposition",
+      "to": "root_data_and_duality.rational_bruhat_decomposition"
+    },
+    {
+      "from": "root_data_and_duality.relative_weyl_group_generated_by_reflections",
+      "to": "root_data_and_duality.rational_bruhat_decomposition"
+    },
+    {
+      "from": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "to": "root_data_and_duality.relative_root_datum_of_f_reductive_group"
+    },
+    {
+      "from": "reductive_structure.reductive_groups",
+      "to": "root_data_and_duality.relative_root_datum_of_f_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.galois_action_on_root_data",
+      "to": "root_data_and_duality.relative_root_datum_of_f_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.root_datum_from_reductive_group",
+      "to": "root_data_and_duality.relative_root_datum_of_f_reductive_group"
+    },
+    {
+      "from": "reductive_structure.maximal_f_split_tori_are_conjugate",
+      "to": "root_data_and_duality.relative_weyl_group_generated_by_reflections"
+    },
+    {
+      "from": "root_data_and_duality.relative_root_datum_of_f_reductive_group",
+      "to": "root_data_and_duality.relative_weyl_group_generated_by_reflections"
+    },
+    {
+      "from": "root_data_and_duality.weyl_group_generated_by_reflections",
+      "to": "root_data_and_duality.relative_weyl_group_generated_by_reflections"
+    },
+    {
       "from": "reductive_structure.character_and_cocharacter_lattices",
       "to": "root_data_and_duality.root_data"
     },
     {
       "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
       "to": "root_data_and_duality.root_data"
+    },
+    {
+      "from": "reductive_structure.maximal_tori_are_conjugate",
+      "to": "root_data_and_duality.root_datum_from_reductive_group"
+    },
+    {
+      "from": "reductive_structure.reductive_groups",
+      "to": "root_data_and_duality.root_datum_from_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.root_data",
+      "to": "root_data_and_duality.root_datum_from_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
+      "to": "root_data_and_duality.root_datum_from_reductive_group"
+    },
+    {
+      "from": "reductive_structure.reductive_groups",
+      "to": "root_data_and_duality.root_subgroups_generate_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.root_datum_from_reductive_group",
+      "to": "root_data_and_duality.root_subgroups_generate_reductive_group"
+    },
+    {
+      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
+      "to": "root_data_and_duality.root_subgroups_generate_reductive_group"
     },
     {
       "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
@@ -4909,6 +6703,18 @@
     {
       "from": "reductive_structure.reductive_groups",
       "to": "root_data_and_duality.roots_coroots_and_root_subgroups"
+    },
+    {
+      "from": "root_data_and_duality.root_datum_from_reductive_group",
+      "to": "root_data_and_duality.weyl_group_generated_by_reflections"
+    },
+    {
+      "from": "root_data_and_duality.root_systems",
+      "to": "root_data_and_duality.weyl_group_generated_by_reflections"
+    },
+    {
+      "from": "root_data_and_duality.weyl_groups",
+      "to": "root_data_and_duality.weyl_group_generated_by_reflections"
     },
     {
       "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
