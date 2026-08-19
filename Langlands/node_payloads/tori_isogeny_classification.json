@@ -1,0 +1,28 @@
+{
+  "id": "tori.isogeny_classification",
+  "title": "Tori up to Isogeny Are Rational Representations",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_isogeny_classification.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori"
+  ],
+  "body_html": "<h1>Tori up to Isogeny Are Rational Representations</h1>\n<p>An <strong>isogeny</strong> of tori is a surjective \\(k\\)-homomorphism with finite\nkernel; two tori are <strong>isogenous</strong> if they are connected by a chain\nof isogenies (a symmetric relation for tori, via dual isogenies).</p>\n<p><strong>Theorem.</strong> Let \\(\\Theta = \\operatorname{Gal}(k_s/k)\\).</p>\n<ol>\n<li>Two tori \\(T, T'\\) over \\(k\\) are isogenous iff\n   \\[\n   X^*(T) \\otimes_{\\mathbb{Z}} \\mathbb{Q}\n   \\;\\cong\\;\n   X^*(T') \\otimes_{\\mathbb{Z}} \\mathbb{Q}\n   \\]\n   as \\(\\mathbb{Q}\\)-representations of \\(\\Theta\\): the rational\n   character module is a <strong>complete isogeny invariant</strong>.</li>\n<li>The category of tori over \\(k\\) <strong>up to isogeny</strong> (morphisms\n   tensored with \\(\\mathbb{Q}\\)) is anti-equivalent to the category\n   of continuous finite-dimensional \\(\\mathbb{Q}\\)-representations\n   of \\(\\Theta\\) (equivalently, of \\(\\mathbb{Q}[Q]\\)-modules for\n   finite quotients \\(Q\\) of \\(\\Theta\\)). This category is\n   <strong>semisimple</strong> (Maschke over \\(\\mathbb{Q}\\)), so every torus is\n   isogenous to a product of tori that are <em>irreducible up to\n   isogeny</em>, uniquely up to reordering.</li>\n</ol>",
+  "proof_html": "<p>By <a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>, tori\ncorrespond anti-equivalently to \\(\\Theta\\)-lattices. A\n\\(k\\)-homomorphism \\(f : T \\to T'\\) is an isogeny iff\n\\(X^*(f) : X^*(T') \\to X^*(T)\\) is injective with finite cokernel,\niff \\(X^*(f) \\otimes \\mathbb{Q}\\) is an isomorphism: surjectivity of\n\\(f\\) with finite kernel translates through the anti-equivalence to\nexactness of\n\\(0 \\to X^*(T') \\to X^*(T) \\to X^*(\\ker f) \\to 0\\) with\n\\(X^*(\\ker f)\\) finite. Hence isogenies become isomorphisms after\n\\(\\otimes\\, \\mathbb{Q}\\), giving that the rational module is an\nisogeny invariant. Conversely, an isomorphism\n\\(\\phi : X^*(T')_{\\mathbb{Q}} \\to X^*(T)_{\\mathbb{Q}}\\) can be\nscaled by a positive integer so that\n\\(N\\phi(X^*(T')) \\subseteq X^*(T)\\) with finite index; \\(N\\phi\\) is\nthen a lattice map realizing an isogeny \\(T \\to T'\\). This proves\n(1), and (2) follows since morphisms up to isogeny are\n\\(\\operatorname{Hom}\\otimes\\mathbb{Q}\\) on lattices, i.e. morphisms\nof rational representations; semisimplicity is Maschke for the\nfinite quotient through which \\(\\Theta\\) acts.</p>\n<p><strong>Example.</strong> The split–anisotropic decomposition\n(<a class=\"node-ref\" data-node-id=\"tori.split_anisotropic_decomposition\" href=\"../../tori/tori_split_anisotropic_decomposition.html\">Split-Anisotropic Decomposition of a Torus</a>) is the isotypic\ndecomposition isolating the trivial \\(\\mathbb{Q}[\\Theta]\\)-isotype:\n\\(T\\) is isogenous to \\(T_d \\times T_a\\) with\n\\(X^*(T_d)_{\\mathbb{Q}}\\) the trivial isotype and\n\\(X^*(T_a)_{\\mathbb{Q}}\\) its complement. \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    },
+    {
+      "id": "tori.split_anisotropic_decomposition",
+      "title": "Split-Anisotropic Decomposition of a Torus",
+      "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

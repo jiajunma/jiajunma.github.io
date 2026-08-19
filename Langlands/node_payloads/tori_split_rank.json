@@ -1,0 +1,140 @@
+{
+  "id": "tori.split_rank",
+  "title": "Rank and Split Rank of a Torus",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_split_rank.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori"
+  ],
+  "body_html": "<h1>Rank and Split Rank of a Torus</h1>\n<p>Let \\(T\\) be a torus over \\(k\\), with character and cocharacter\nlattices \\(X^*(T), X_*(T)\\) and\n\\(\\Theta = \\operatorname{Gal}(k_s/k)\\)\n(<a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"../../tori/tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>).</p>\n<ul>\n<li>The <strong>rank</strong> of \\(T\\) is\n  \\[\n  \\operatorname{rank} T \\;:=\\; \\operatorname{rk}_{\\mathbb{Z}} X^*(T)\n  \\;=\\; \\operatorname{rk}_{\\mathbb{Z}} X_*(T),\n  \\]\n  the \\(n\\) with \\(T_{k_s} \\cong \\mathbb{G}_m^{\\,n}\\)\n  (<a class=\"node-ref\" data-node-id=\"tori.torus_definition\" href=\"../../tori/tori_torus_definition.html\">Algebraic Torus</a>).</li>\n<li>The <strong>split rank</strong> (or <strong>\\(k\\)-rank</strong>) of \\(T\\) is the rank of the\n  maximal split subtorus \\(T_d \\subseteq T\\)\n  (<a class=\"node-ref\" data-node-id=\"tori.split_anisotropic_decomposition\" href=\"../../tori/tori_split_anisotropic_decomposition.html\">Split-Anisotropic Decomposition of a Torus</a>):\n  \\[\n  \\operatorname{rank}_k T \\;:=\\; \\operatorname{rank} T_d\n  \\;=\\; \\operatorname{rk}_{\\mathbb{Z}} X_*(T)^{\\Theta}.\n  \\]\n  The second equality holds because cocharacters of \\(T\\) defined\n  over \\(k\\) are exactly the \\(\\Theta\\)-fixed cocharacters, and they\n  all land in \\(T_d\\).</li>\n<li>Equivalently on the character side:\n  \\[\n  \\operatorname{rank}_k T\n  \\;=\\; \\operatorname{rk}_{\\mathbb{Z}} X^*(T)^{\\Theta}.\n  \\]\n  <em>Why the two invariant ranks agree.</em> \\(\\Theta\\) acts through a\n  finite quotient \\(Q\\). Over \\(\\mathbb{Q}\\), the perfect\n  \\(\\Theta\\)-invariant pairing\n  \\(X^*(T)_{\\mathbb{Q}} \\times X_*(T)_{\\mathbb{Q}} \\to \\mathbb{Q}\\)\n  identifies \\(X_*(T)_{\\mathbb{Q}}\\) with the dual representation of\n  \\(X^*(T)_{\\mathbb{Q}}\\), and for a finite group the invariants of a\n  representation and of its dual have the same dimension (both equal\n  the multiplicity of the trivial representation, by averaging /\n  Maschke). Intersecting with the lattices does not change the rank\n  of the invariants.</li>\n</ul>\n<h2>Basic facts</h2>\n<ol>\n<li>\\(0 \\leq \\operatorname{rank}_k T \\leq \\operatorname{rank} T\\).</li>\n<li>\\(\\operatorname{rank}_k T = \\operatorname{rank} T\\) iff \\(T\\) is\n   split (trivial action on a finite-index sublattice of \\(X^*\\)\n   forces trivial action, since the action is by finite-order\n   automorphisms of the lattice).</li>\n<li>\\(\\operatorname{rank}_k T = 0\\) iff \\(T\\) is anisotropic\n   (<a class=\"node-ref\" data-node-id=\"tori.anisotropic_torus\" href=\"../../tori/tori_anisotropic_torus.html\">Anisotropic Torus</a>).</li>\n<li>\\(\\operatorname{rank}_k T =\n   \\operatorname{rank} T_d\\) and\n   \\(\\operatorname{rank} T = \\operatorname{rank}_k T +\n   \\operatorname{rank} T_a\\) minus the rank of the finite\n   intersection's contribution — precisely: the isogeny\n   \\(T_d \\times T_a \\to T\\) of\n   <a class=\"node-ref\" data-node-id=\"tori.split_anisotropic_decomposition\" href=\"../../tori/tori_split_anisotropic_decomposition.html\">Split-Anisotropic Decomposition of a Torus</a> gives\n   \\(\\operatorname{rank} T = \\operatorname{rank}_k T +\n   \\operatorname{rank} T_a\\).</li>\n</ol>\n<p><strong>Downstream.</strong> The split rank of a maximal torus is the dimension of\nthe corresponding apartment in the Bruhat–Tits building; the split\nrank of the connected center measures the non-compactness of the\ngroup of rational points.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tori.torus_definition",
+      "title": "Algebraic Torus",
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
+    },
+    {
+      "id": "tori.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "href": "AlgebraicGroups/Tori/tori_character_and_cocharacter_lattices.html"
+    },
+    {
+      "id": "tori.split_anisotropic_decomposition",
+      "title": "Split-Anisotropic Decomposition of a Torus",
+      "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
+    },
+    {
+      "id": "tori.anisotropic_torus",
+      "title": "Anisotropic Torus",
+      "href": "AlgebraicGroups/Tori/tori_anisotropic_torus.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.torusRank",
+      "display_name": "Langlands.Tori.torusRank",
+      "qualified_name": "Langlands.Tori.torusRank",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "def",
+      "signature": "noncomputable def torusRank : ℕ :=\n  Module.finrank ℤ (Additive (CharLattice k E A))",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L150",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.torusSplitRank",
+      "display_name": "Langlands.Tori.torusSplitRank",
+      "qualified_name": "Langlands.Tori.torusSplitRank",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "def",
+      "signature": "noncomputable def torusSplitRank : ℕ :=\n  Module.finrank ℤ (charRep k E A).invariants",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L161",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.torusSplitRank_le_torusRank",
+      "display_name": "Langlands.Tori.torusSplitRank_le_torusRank",
+      "qualified_name": "Langlands.Tori.torusSplitRank_le_torusRank",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "theorem",
+      "signature": "theorem torusSplitRank_le_torusRank (hA : IsTorusAlgebra k E A) :\n    torusSplitRank k E A ≤ torusRank k E A",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L168",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.torusSplitRank_eq_torusRank_iff",
+      "display_name": "Langlands.Tori.torusSplitRank_eq_torusRank_iff",
+      "qualified_name": "Langlands.Tori.torusSplitRank_eq_torusRank_iff",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "theorem",
+      "signature": "theorem torusSplitRank_eq_torusRank_iff\n    [FiniteDimensional k E] [IsGalois k E] (hA : IsTorusAlgebra k E A) :\n    torusSplitRank k E A = torusRank k E A ↔ IsSplitTorusAlgebra k A",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L178",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.torusSplitRank_eq_zero_iff",
+      "display_name": "Langlands.Tori.torusSplitRank_eq_zero_iff",
+      "qualified_name": "Langlands.Tori.torusSplitRank_eq_zero_iff",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "theorem",
+      "signature": "theorem torusSplitRank_eq_zero_iff\n    [FiniteDimensional k E] [IsGalois k E] (hA : IsTorusAlgebra k E A) :\n    torusSplitRank k E A = 0 ↔ IsAnisotropicAlgebra k E A",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L278",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

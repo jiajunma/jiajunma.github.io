@@ -1,0 +1,28 @@
+{
+  "id": "tori.finiteness_per_rank",
+  "title": "Finiteness of Tori of Bounded Rank",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_finiteness_per_rank.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori"
+  ],
+  "body_html": "<h1>Finiteness of Tori of Bounded Rank</h1>\n<p>Let \\(k\\) be a field and \\(n \\geq 0\\). Then:</p>\n<ol>\n<li>\\(\\operatorname{GL}_n(\\mathbb{Z})\\) has only finitely many\n   conjugacy classes of finite subgroups (a form of the\n   <strong>Jordan–Zassenhaus theorem</strong>: there are finitely many\n   isomorphism classes of \\(\\mathbb{Z}[G]\\)-lattices of rank \\(n\\)\n   for each finite group \\(G\\), and finitely many candidate \\(G\\)\n   embed in \\(\\operatorname{GL}_n(\\mathbb{Z})\\) since finite\n   subgroups have order bounded in terms of \\(n\\) — Minkowski);</li>\n<li>consequently, for each \\(n\\) there are only <strong>finitely many\n   \\(\\Gamma\\)-lattice types of rank \\(n\\)</strong> for any profinite\n   \\(\\Gamma\\) acting continuously, and hence — by\n   <a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a> in the cocycle\n   form <a class=\"node-ref\" data-node-id=\"tori.classification_by_cocycles\" href=\"../../tori/tori_classification_by_cocycles.html\">Tori Are Classified by Cocycles in GL_n(Z)</a> — for a fixed\n   finite Galois extension \\(E/k\\), only finitely many isomorphism\n   classes of rank-\\(n\\) tori over \\(k\\) split by \\(E\\).</li>\n</ol>\n<p>Over \\(k\\) itself the set of rank-\\(n\\) tori need not be finite\n(splitting fields vary), but each is determined by a finite-image\ncontinuous homomorphism \\(\\Theta \\to \\operatorname{GL}_n(\\mathbb{Z})\\)\nwhose image is one of the finitely many finite subgroups up to\nconjugacy.</p>\n<p><strong>Status.</strong> Statement-only: the Jordan–Zassenhaus theorem and the\nMinkowski bound are recorded here as external inputs with source;\ntheir proofs are outside the scope of this knowledge base\n(<code>verification.proof: gap</code> marks the node as consumed\nstatement-only). Downstream uses: finiteness of the candidate list in\nrank-one and rank-two classifications.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    },
+    {
+      "id": "tori.classification_by_cocycles",
+      "title": "Tori Are Classified by Cocycles in GL_n(Z)",
+      "href": "AlgebraicGroups/Tori/tori_classification_by_cocycles.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

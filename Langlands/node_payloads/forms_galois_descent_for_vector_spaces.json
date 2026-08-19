@@ -20,6 +20,11 @@
   ],
   "dependents": [
     {
+      "id": "forms.hopf_descent",
+      "title": "Galois Descent for Hopf Algebras",
+      "href": "AlgebraicGroups/Forms/forms_hopf_descent.html"
+    },
+    {
       "id": "tori.f_tori_galois_module_classification",
       "title": "F-Tori Are Classified by Galois Modules",
       "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
@@ -97,6 +102,42 @@
       "status": "resolved",
       "reason": null,
       "suggestions": []
+    },
+    {
+      "name": "Langlands.Forms.descentMap_bijective",
+      "display_name": "Langlands.Forms.descentMap_bijective",
+      "qualified_name": "Langlands.Forms.descentMap_bijective",
+      "module": "LanglandsLean.AlgebraicGroups.Forms.GaloisDescentStatements",
+      "kind": "theorem",
+      "signature": "theorem descentMap_bijective\n    [IsGalois k E] [FiniteDimensional k E]\n    (hone : ∀ v, ρ 1 v = v)\n    (hmul : ∀ γ δ v, ρ (γ * δ) v = ρ γ (ρ δ v))\n    (hsemi : ∀ γ (c : E) v, ρ γ (c • v) = γ c • ρ γ v) :\n    Function.Bijective (descentMap (k := k) (E := E) ρ hsemi)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Forms/GaloisDescentStatements.lean#L72",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Forms.linearIndependent_fixedPoints",
+      "display_name": "Langlands.Forms.linearIndependent_fixedPoints",
+      "qualified_name": "Langlands.Forms.linearIndependent_fixedPoints",
+      "module": "LanglandsLean.AlgebraicGroups.Forms.GaloisDescentStatements",
+      "kind": "theorem",
+      "signature": "theorem linearIndependent_fixedPoints\n    [IsGalois k E] [FiniteDimensional k E]\n    (hone : ∀ v, ρ 1 v = v)\n    (hmul : ∀ γ δ v, ρ (γ * δ) v = ρ γ (ρ δ v))\n    (hsemi : ∀ γ (c : E) v, ρ γ (c • v) = γ c • ρ γ v)\n    {ι : Type*} (v : ι → V) (hv : ∀ i γ, ρ γ (v i) = v i)\n    (h : LinearIndependent k v) : LinearIndependent E v",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Forms/GaloisDescentStatements.lean#L56",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [
@@ -107,6 +148,16 @@
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Forms/GaloisDescent.lean#L1",
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Forms.GaloisDescentStatements",
+      "display_name": "LanglandsLean.AlgebraicGroups.Forms.GaloisDescentStatements",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Forms/GaloisDescentStatements.lean#L1",
       "status": "resolved",
       "reason": null
     }

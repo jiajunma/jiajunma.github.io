@@ -29,6 +29,11 @@
   ],
   "dependents": [
     {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    },
+    {
       "id": "tori.norm_one_torus",
       "title": "Norm-One Torus of a Separable Extension",
       "href": "AlgebraicGroups/Tori/tori_norm_one_torus.html"
@@ -37,8 +42,61 @@
       "id": "tori.split_anisotropic_decomposition",
       "title": "Split-Anisotropic Decomposition of a Torus",
       "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
+    },
+    {
+      "id": "tori.split_rank",
+      "title": "Rank and Split Rank of a Torus",
+      "href": "AlgebraicGroups/Tori/tori_split_rank.html"
     }
   ],
-  "lean_refs": [],
-  "lean_modules": []
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.IsAnisotropicAlgebra",
+      "display_name": "Langlands.Tori.IsAnisotropicAlgebra",
+      "qualified_name": "Langlands.Tori.IsAnisotropicAlgebra",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "def",
+      "signature": "def IsAnisotropicAlgebra : Prop :=\n  ∀ l : CocharLattice k E A, IsGalFixedCochar k E A l → l = 1",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L269",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.torusSplitRank_eq_zero_iff",
+      "display_name": "Langlands.Tori.torusSplitRank_eq_zero_iff",
+      "qualified_name": "Langlands.Tori.torusSplitRank_eq_zero_iff",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "theorem",
+      "signature": "theorem torusSplitRank_eq_zero_iff\n    [FiniteDimensional k E] [IsGalois k E] (hA : IsTorusAlgebra k E A) :\n    torusSplitRank k E A = 0 ↔ IsAnisotropicAlgebra k E A",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L278",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

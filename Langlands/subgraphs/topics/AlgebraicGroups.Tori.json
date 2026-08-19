@@ -4,22 +4,22 @@
     "title": "Algebraic Groups.Tori",
     "href": "AlgebraicGroups/Tori/index.html",
     "parent": "AlgebraicGroups",
-    "node_count": 22,
-    "descendant_node_count": 22
+    "node_count": 31,
+    "descendant_node_count": 31
   },
   "counts": {
-    "internal_nodes": 22,
+    "internal_nodes": 31,
     "inlined_nodes": 0,
-    "descendant_nodes": 22,
+    "descendant_nodes": 31,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 22,
+    "non_proof_plan_nodes": 31,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 29,
-    "visible_nodes_with_selected_proof_plans": 29
+    "visible_nodes_without_proof_plans": 38,
+    "visible_nodes_with_selected_proof_plans": 38
   },
   "nodes": [
     {
@@ -37,6 +37,14 @@
       "status": "admitted",
       "href": "AlgebraicGroups/Forms/forms_galois_descent_for_vector_spaces.html",
       "payload": "node_payloads/forms_galois_descent_for_vector_spaces.json"
+    },
+    {
+      "id": "forms.hopf_descent",
+      "title": "Galois Descent for Hopf Algebras",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Forms/forms_hopf_descent.html",
+      "payload": "node_payloads/forms_hopf_descent.json"
     },
     {
       "id": "tori.algebraic_tori",
@@ -71,6 +79,22 @@
       "payload": "node_payloads/tori_characters_as_group_like_elements.json"
     },
     {
+      "id": "tori.classification_by_cocycles",
+      "title": "Tori Are Classified by Cocycles in GL_n(Z)",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_classification_by_cocycles.html",
+      "payload": "node_payloads/tori_classification_by_cocycles.json"
+    },
+    {
+      "id": "tori.classification_hom_level",
+      "title": "Homomorphisms of Tori Correspond to Lattice Maps",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_classification_hom_level.html",
+      "payload": "node_payloads/tori_classification_hom_level.json"
+    },
+    {
       "id": "tori.convolution_is_pointwise_multiplication",
       "title": "Convolution Is Pointwise Multiplication",
       "kind": "theorem",
@@ -87,6 +111,14 @@
       "payload": "node_payloads/tori_f_tori_galois_module_classification.json"
     },
     {
+      "id": "tori.finiteness_per_rank",
+      "title": "Finiteness of Tori of Bounded Rank",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_finiteness_per_rank.html",
+      "payload": "node_payloads/tori_finiteness_per_rank.json"
+    },
+    {
       "id": "tori.induced_resolution",
       "title": "Resolution of a Torus by Induced Tori",
       "kind": "theorem",
@@ -101,6 +133,14 @@
       "status": "admitted",
       "href": "AlgebraicGroups/Tori/tori_induced_torus.html",
       "payload": "node_payloads/tori_induced_torus.json"
+    },
+    {
+      "id": "tori.isogeny_classification",
+      "title": "Tori up to Isogeny Are Rational Representations",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_isogeny_classification.html",
+      "payload": "node_payloads/tori_isogeny_classification.json"
     },
     {
       "id": "tori.multiplicative_type_characterization",
@@ -127,12 +167,28 @@
       "payload": "node_payloads/tori_rank_one_classification.json"
     },
     {
+      "id": "tori.real_tori_classification",
+      "title": "Classification of Real Tori",
+      "kind": "example",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_real_tori_classification.html",
+      "payload": "node_payloads/tori_real_tori_classification.json"
+    },
+    {
       "id": "tori.split_anisotropic_decomposition",
       "title": "Split-Anisotropic Decomposition of a Torus",
       "kind": "theorem",
       "status": "admitted",
       "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html",
       "payload": "node_payloads/tori_split_anisotropic_decomposition.json"
+    },
+    {
+      "id": "tori.split_rank",
+      "title": "Rank and Split Rank of a Torus",
+      "kind": "definition",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_split_rank.html",
+      "payload": "node_payloads/tori_split_rank.json"
     },
     {
       "id": "tori.split_torus",
@@ -167,12 +223,28 @@
       "payload": "node_payloads/tori_tamely_ramified_torus.json"
     },
     {
+      "id": "tori.tori_over_finite_fields",
+      "title": "Tori over Finite Fields",
+      "kind": "example",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_tori_over_finite_fields.html",
+      "payload": "node_payloads/tori_tori_over_finite_fields.json"
+    },
+    {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
       "kind": "definition",
       "status": "admitted",
       "href": "AlgebraicGroups/Tori/tori_torus_definition.html",
       "payload": "node_payloads/tori_torus_definition.json"
+    },
+    {
+      "id": "tori.twisted_form_of_lattice",
+      "title": "The Twisted Form of a Galois Lattice",
+      "kind": "definition",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_twisted_form_of_lattice.html",
+      "payload": "node_payloads/tori_twisted_form_of_lattice.json"
     },
     {
       "id": "tori.unramified_torus",
@@ -200,6 +272,11 @@
     }
   ],
   "edges": [
+    {
+      "from": "forms.galois_descent_for_vector_spaces",
+      "to": "forms.hopf_descent",
+      "kind": "uses"
+    },
     {
       "from": "tori.algebraic_tori",
       "to": "tori.anisotropic_torus",
@@ -236,6 +313,36 @@
       "kind": "uses"
     },
     {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.classification_by_cocycles",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.splitting_field",
+      "to": "tori.classification_by_cocycles",
+      "kind": "uses"
+    },
+    {
+      "from": "forms.hopf_descent",
+      "to": "tori.classification_hom_level",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
+      "to": "tori.classification_hom_level",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.characters_as_group_like_elements",
+      "to": "tori.classification_hom_level",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.twisted_form_of_lattice",
+      "to": "tori.classification_hom_level",
+      "kind": "uses"
+    },
+    {
       "from": "tori.algebraic_tori",
       "to": "tori.convolution_is_pointwise_multiplication",
       "kind": "uses"
@@ -246,13 +353,48 @@
       "kind": "uses"
     },
     {
+      "from": "forms.hopf_descent",
+      "to": "tori.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
       "from": "tori.algebraic_tori",
+      "to": "tori.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.anisotropic_torus",
       "to": "tori.f_tori_galois_module_classification",
       "kind": "uses"
     },
     {
       "from": "tori.character_and_cocharacter_lattices",
       "to": "tori.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.characters_as_group_like_elements",
+      "to": "tori.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.classification_hom_level",
+      "to": "tori.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.twisted_form_of_lattice",
+      "to": "tori.f_tori_galois_module_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.classification_by_cocycles",
+      "to": "tori.finiteness_per_rank",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.finiteness_per_rank",
       "kind": "uses"
     },
     {
@@ -298,6 +440,16 @@
     {
       "from": "tori.weil_restriction_of_tori",
       "to": "tori.induced_torus",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.isogeny_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.split_anisotropic_decomposition",
+      "to": "tori.isogeny_classification",
       "kind": "uses"
     },
     {
@@ -361,6 +513,26 @@
       "kind": "uses"
     },
     {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.real_tori_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.norm_one_torus",
+      "to": "tori.real_tori_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.split_torus",
+      "to": "tori.real_tori_classification",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.weil_restriction_of_tori",
+      "to": "tori.real_tori_classification",
+      "kind": "uses"
+    },
+    {
       "from": "tori.algebraic_tori",
       "to": "tori.split_anisotropic_decomposition",
       "kind": "uses"
@@ -388,6 +560,26 @@
     {
       "from": "tori.torus_definition",
       "to": "tori.split_anisotropic_decomposition",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.anisotropic_torus",
+      "to": "tori.split_rank",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
+      "to": "tori.split_rank",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.split_anisotropic_decomposition",
+      "to": "tori.split_rank",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.split_rank",
       "kind": "uses"
     },
     {
@@ -451,8 +643,48 @@
       "kind": "uses"
     },
     {
+      "from": "tori.classification_by_cocycles",
+      "to": "tori.tori_over_finite_fields",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.tori_over_finite_fields",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.splitting_field",
+      "to": "tori.tori_over_finite_fields",
+      "kind": "uses"
+    },
+    {
       "from": "tori.algebraic_tori",
       "to": "tori.torus_definition",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.group_algebra_scheme",
+      "to": "tori.twisted_form_of_lattice",
+      "kind": "uses"
+    },
+    {
+      "from": "forms.hopf_descent",
+      "to": "tori.twisted_form_of_lattice",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.characters_as_group_like_elements",
+      "to": "tori.twisted_form_of_lattice",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.split_torus",
+      "to": "tori.twisted_form_of_lattice",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.twisted_form_of_lattice",
       "kind": "uses"
     },
     {
@@ -524,7 +756,7 @@
       "title": "Algebraic Groups.Forms",
       "href": "AlgebraicGroups/Forms/index.html",
       "role": "dependency",
-      "node_count": 33
+      "node_count": 37
     },
     {
       "id": "AlgebraicGroups.LinearAlgebraicGroups",
@@ -600,10 +832,31 @@
     },
     {
       "from": "topic:AlgebraicGroups.Forms",
+      "to": "forms.hopf_descent",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.Forms",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.Forms",
+      "to": "tori.classification_by_cocycles",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.Forms",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.Forms",
       "to": "tori.f_tori_galois_module_classification",
       "kind": "boundary_dependency",
       "topic": "AlgebraicGroups.Forms",
       "count": 2
+    },
+    {
+      "from": "topic:AlgebraicGroups.Forms",
+      "to": "tori.tori_over_finite_fields",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.Forms",
+      "count": 1
     },
     {
       "from": "topic:AlgebraicGroups.LinearAlgebraicGroups",
@@ -617,6 +870,13 @@
       "to": "tori.torus_definition",
       "kind": "boundary_dependency",
       "topic": "AlgebraicGroups.LinearAlgebraicGroups",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.ReductiveGroups",
+      "to": "tori.classification_hom_level",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.ReductiveGroups",
       "count": 1
     },
     {
@@ -643,6 +903,13 @@
     {
       "from": "topic:Foundations",
       "to": "affine_group_schemes.group_algebra_scheme",
+      "kind": "boundary_dependency",
+      "topic": "Foundations",
+      "count": 1
+    },
+    {
+      "from": "topic:Foundations",
+      "to": "forms.hopf_descent",
       "kind": "boundary_dependency",
       "topic": "Foundations",
       "count": 1
@@ -706,10 +973,16 @@
   ],
   "keywords": [
     {
+      "id": "AlgebraicGroups.Forms",
+      "title": "AlgebraicGroups.Forms",
+      "href": "keywords/AlgebraicGroups.Forms.html",
+      "count": 1
+    },
+    {
       "id": "AlgebraicGroups.Tori",
       "title": "AlgebraicGroups.Tori",
       "href": "keywords/AlgebraicGroups.Tori.html",
-      "count": 18
+      "count": 26
     },
     {
       "id": "affine-group-schemes",
@@ -742,6 +1015,12 @@
       "count": 1
     },
     {
+      "id": "cocycle",
+      "title": "cocycle",
+      "href": "keywords/cocycle.html",
+      "count": 1
+    },
+    {
       "id": "convolution",
       "title": "convolution",
       "href": "keywords/convolution.html",
@@ -757,7 +1036,7 @@
       "id": "definition",
       "title": "definition",
       "href": "keywords/definition.html",
-      "count": 7
+      "count": 9
     },
     {
       "id": "descent-and-forms",
@@ -775,7 +1054,7 @@
       "id": "example",
       "title": "example",
       "href": "keywords/example.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "f-group",
@@ -784,10 +1063,40 @@
       "count": 1
     },
     {
+      "id": "finite-field",
+      "title": "finite-field",
+      "href": "keywords/finite-field.html",
+      "count": 1
+    },
+    {
+      "id": "finiteness",
+      "title": "finiteness",
+      "href": "keywords/finiteness.html",
+      "count": 1
+    },
+    {
+      "id": "frobenius",
+      "title": "frobenius",
+      "href": "keywords/frobenius.html",
+      "count": 1
+    },
+    {
+      "id": "galois-cohomology",
+      "title": "galois-cohomology",
+      "href": "keywords/galois-cohomology.html",
+      "count": 1
+    },
+    {
       "id": "galois-descent",
       "title": "galois-descent",
       "href": "keywords/galois-descent.html",
-      "count": 1
+      "count": 2
+    },
+    {
+      "id": "galois-lattice",
+      "title": "galois-lattice",
+      "href": "keywords/galois-lattice.html",
+      "count": 2
     },
     {
       "id": "galois-module",
@@ -808,10 +1117,34 @@
       "count": 1
     },
     {
+      "id": "homomorphism",
+      "title": "homomorphism",
+      "href": "keywords/homomorphism.html",
+      "count": 1
+    },
+    {
+      "id": "hopf-algebra",
+      "title": "hopf-algebra",
+      "href": "keywords/hopf-algebra.html",
+      "count": 1
+    },
+    {
       "id": "induced",
       "title": "induced",
       "href": "keywords/induced.html",
       "count": 2
+    },
+    {
+      "id": "isogeny",
+      "title": "isogeny",
+      "href": "keywords/isogeny.html",
+      "count": 1
+    },
+    {
+      "id": "jordan-zassenhaus",
+      "title": "jordan-zassenhaus",
+      "href": "keywords/jordan-zassenhaus.html",
+      "count": 1
     },
     {
       "id": "multiplicative-type",
@@ -844,9 +1177,27 @@
       "count": 2
     },
     {
+      "id": "rank",
+      "title": "rank",
+      "href": "keywords/rank.html",
+      "count": 1
+    },
+    {
       "id": "rank-one",
       "title": "rank-one",
       "href": "keywords/rank-one.html",
+      "count": 1
+    },
+    {
+      "id": "rational-representation",
+      "title": "rational-representation",
+      "href": "keywords/rational-representation.html",
+      "count": 1
+    },
+    {
+      "id": "real-forms",
+      "title": "real-forms",
+      "href": "keywords/real-forms.html",
       "count": 1
     },
     {
@@ -859,7 +1210,7 @@
       "id": "semilinear",
       "title": "semilinear",
       "href": "keywords/semilinear.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "speiser",
@@ -872,6 +1223,12 @@
       "title": "split",
       "href": "keywords/split.html",
       "count": 2
+    },
+    {
+      "id": "split-rank",
+      "title": "split-rank",
+      "href": "keywords/split-rank.html",
+      "count": 1
     },
     {
       "id": "splitting-field",
@@ -901,7 +1258,7 @@
       "id": "theorem",
       "title": "theorem",
       "href": "keywords/theorem.html",
-      "count": 10
+      "count": 15
     },
     {
       "id": "tori",
@@ -913,7 +1270,13 @@
       "id": "torus",
       "title": "torus",
       "href": "keywords/torus.html",
-      "count": 17
+      "count": 25
+    },
+    {
+      "id": "twisted-form",
+      "title": "twisted-form",
+      "href": "keywords/twisted-form.html",
+      "count": 1
     },
     {
       "id": "unramified",

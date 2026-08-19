@@ -1,0 +1,50 @@
+{
+  "id": "forms.hopf_descent",
+  "title": "Galois Descent for Hopf Algebras",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Forms/forms_hopf_descent.html",
+  "primary_topic": "AlgebraicGroups.Forms",
+  "topics": [
+    "AlgebraicGroups.Forms",
+    "AlgebraicGroups.Tori"
+  ],
+  "body_html": "<h1>Galois Descent for Hopf Algebras</h1>\n<p>Let \\(E/k\\) be a finite Galois extension with group\n\\(\\Gamma = \\operatorname{Gal}(E/k)\\). Let \\(A\\) be a commutative\n\\(E\\)-Hopf algebra equipped with a <strong>semilinear \\(\\Gamma\\)-action</strong>:\nring automorphisms \\(\\rho_\\gamma : A \\to A\\) with\n\\(\\rho_1 = \\mathrm{id}\\), \\(\\rho_{\\gamma\\delta} =\n\\rho_\\gamma \\circ \\rho_\\delta\\),\n\\(\\rho_\\gamma(c\\,a) = \\gamma(c)\\,\\rho_\\gamma(a)\\) for \\(c \\in E\\),\n<strong>compatible with the Hopf structure</strong>:\n\\[\n\\Delta \\circ \\rho_\\gamma = (\\rho_\\gamma \\otimes \\rho_\\gamma) \\circ \\Delta,\n\\qquad\n\\varepsilon(\\rho_\\gamma a) = \\gamma\\bigl(\\varepsilon(a)\\bigr),\n\\qquad\nS \\circ \\rho_\\gamma = \\rho_\\gamma \\circ S,\n\\]\nwhere the middle identity uses the semilinear action of \\(\\gamma\\) on\nthe codomain \\(E\\) of \\(\\varepsilon\\), and the first uses the\ndiagonal semilinear action on \\(A \\otimes_E A\\) (well defined because\n\\(\\rho_\\gamma \\otimes \\rho_\\gamma\\) is balanced over the\n\\(\\gamma\\)-twist).</p>\n<p>Then, writing \\(B := A^\\Gamma\\) for the fixed points:</p>\n<ol>\n<li>\\(B\\) is a \\(k\\)-Hopf algebra under the restrictions of the\n   structure maps of \\(A\\);</li>\n<li>the natural multiplication map\n   \\(E \\otimes_k B \\longrightarrow A\\) is an isomorphism of\n   \\(E\\)-Hopf algebras (where \\(E \\otimes_k B\\) carries the base-change\n   Hopf structure);</li>\n<li>the assignments \\(A \\mapsto A^\\Gamma\\) and\n   \\(B \\mapsto E \\otimes_k B\\) are quasi-inverse equivalences between\n   the category of commutative \\(E\\)-Hopf algebras with compatible\n   semilinear \\(\\Gamma\\)-action (morphisms: \\(\\Gamma\\)-equivariant\n   \\(E\\)-Hopf maps) and the category of commutative \\(k\\)-Hopf\n   algebras; in particular\n   \\[\n   \\operatorname{Hom}_{k\\text{-Hopf}}(B, B')\n   \\;\\cong\\;\n   \\operatorname{Hom}_{\\Gamma,\\,E\\text{-Hopf}}(A, A').\n   \\]</li>\n</ol>",
+  "proof_html": "<p><strong>Step 1: linear descent.</strong> By\n<a class=\"node-ref\" data-node-id=\"forms.galois_descent_for_vector_spaces\" href=\"../../forms/forms_galois_descent_for_vector_spaces.html\">Galois Descent for Vector Spaces</a> applied to the\nunderlying \\(E\\)-vector space of \\(A\\), the fixed points \\(B\\) span\n\\(A\\) over \\(E\\) and \\(k\\)-linearly independent fixed vectors stay\n\\(E\\)-independent; hence \\(E \\otimes_k B \\to A\\) is an isomorphism of\n\\(E\\)-vector spaces. Applied to \\(A \\otimes_E A\\) with the diagonal\nsemilinear action, the same theorem gives\n\\((A \\otimes_E A)^\\Gamma \\cong B \\otimes_k B\\): the spanning half\nshows every fixed tensor is an \\(E\\)-combination of fixed\ndecomposables, and independence identifies the \\(k\\)-structure.</p>\n<p><strong>Step 2: the structure maps restrict.</strong> Multiplication and unit are\n\\(\\Gamma\\)-equivariant because the \\(\\rho_\\gamma\\) are ring maps.\nThe compatibility hypotheses say exactly that \\(\\Delta\\),\n\\(\\varepsilon\\), \\(S\\) are \\(\\Gamma\\)-equivariant; hence they carry\nfixed points to fixed points:\n\\(\\Delta(B) \\subseteq (A \\otimes_E A)^\\Gamma = B \\otimes_k B\\),\n\\(\\varepsilon(B) \\subseteq E^\\Gamma = k\\) (Galois),\n\\(S(B) \\subseteq B\\). The Hopf axioms for the restricted maps hold\nbecause they hold in \\(A\\) and \\(B \\hookrightarrow A\\),\n\\(B \\otimes_k B \\hookrightarrow A \\otimes_E A\\) are injective\n(Step 1). This proves (1), and (2) upgrades the linear isomorphism of\nStep 1 to Hopf: it is a ring map by construction, and comultiplication\nis compatible because it is determined on the spanning set\n\\(B\\).</p>\n<p><strong>Step 3: homs.</strong> A \\(\\Gamma\\)-equivariant \\(E\\)-Hopf map\n\\(\\phi : A \\to A'\\) carries fixed points to fixed points, giving\n\\(\\phi^\\Gamma : B \\to B'\\), a \\(k\\)-Hopf map. Conversely a \\(k\\)-Hopf\nmap \\(\\psi : B \\to B'\\) base-changes to\n\\(E \\otimes \\psi : E \\otimes_k B \\to E \\otimes_k B'\\), which is\n\\(\\Gamma\\)-equivariant for the actions \\(\\gamma \\otimes 1\\) — these\ncorrespond to the given actions under (2). The two constructions are\nmutually inverse: \\(\\phi\\) is determined by its restriction to \\(B\\)\nbecause \\(B\\) spans \\(A\\) over \\(E\\) and \\(\\phi\\) is \\(E\\)-linear.\nThis proves (3). \\(\\square\\)</p>\n<h2>Remarks</h2>\n<ul>\n<li>The compatibility of \\(\\Delta\\) is stated through the diagonal\n  semilinear action on \\(A \\otimes_E A\\); making this precise is the\n  only delicate point of the formalization (plan G0.C M3, where it is\n  done for the concrete twisted group algebra rather than\n  axiomatically — design decision D-d).</li>\n<li>Specialized to \\(A = E[M]\\) with the action twisted by a lattice\n  action of \\(\\Gamma\\), this theorem produces all twisted forms of\n  split tori; see <a class=\"node-ref\" data-node-id=\"tori.twisted_form_of_lattice\" href=\"../../tori/tori_twisted_form_of_lattice.html\">The Twisted Form of a Galois Lattice</a>.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "forms.galois_groups_and_descent_data",
+      "title": "Galois Groups and Descent Data",
+      "href": "AlgebraicGroups/Forms/forms_galois_groups_and_descent_data.html"
+    },
+    {
+      "id": "forms.galois_descent_for_vector_spaces",
+      "title": "Galois Descent for Vector Spaces",
+      "href": "AlgebraicGroups/Forms/forms_galois_descent_for_vector_spaces.html"
+    },
+    {
+      "id": "foundations.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "Foundations/foundations_hopf_algebras.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.classification_hom_level",
+      "title": "Homomorphisms of Tori Correspond to Lattice Maps",
+      "href": "AlgebraicGroups/Tori/tori_classification_hom_level.html"
+    },
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    },
+    {
+      "id": "tori.twisted_form_of_lattice",
+      "title": "The Twisted Form of a Galois Lattice",
+      "href": "AlgebraicGroups/Tori/tori_twisted_form_of_lattice.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

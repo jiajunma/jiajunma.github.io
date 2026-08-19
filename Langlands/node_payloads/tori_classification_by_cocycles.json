@@ -1,0 +1,45 @@
+{
+  "id": "tori.classification_by_cocycles",
+  "title": "Tori Are Classified by Cocycles in GL_n(Z)",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_classification_by_cocycles.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori",
+    "AlgebraicGroups.Forms"
+  ],
+  "body_html": "<h1>Tori Are Classified by Cocycles in GL_n(Z)</h1>\n<p>Let \\(k\\) be a field, \\(k_s\\) a separable closure,\n\\(\\Theta = \\operatorname{Gal}(k_s/k)\\), and \\(n \\geq 0\\). Since the\nautomorphism group of the split torus \\(\\mathbb{G}_m^{\\,n}\\) is\n\\(\\operatorname{GL}_n(\\mathbb{Z})\\) — acting on the character\nlattice — with <strong>trivial</strong> \\(\\Theta\\)-action, the general\nform-cocycle machinery (<a class=\"node-ref\" data-node-id=\"forms.nonabelian_h1\" href=\"../../forms/forms_nonabelian_h1.html\">Nonabelian H1</a>) simplifies:</p>\n<ol>\n<li>Isomorphism classes of rank-\\(n\\) tori over \\(k\\) are in\n   bijection with\n   \\[\n   H^1\\bigl(\\Theta,\\, \\operatorname{GL}_n(\\mathbb{Z})\\bigr)\n   \\;=\\;\n   \\operatorname{Hom}_{\\mathrm{cont}}\\bigl(\\Theta,\\,\n     \\operatorname{GL}_n(\\mathbb{Z})\\bigr)\\big/\\text{conj},\n   \\]\n   continuous homomorphisms up to conjugacy (cocycles for a trivial\n   action are homomorphisms, and cohomologous means conjugate).</li>\n<li>For a fixed finite Galois extension \\(E/k\\) with group\n   \\(\\Gamma\\), tori split by \\(E\\) correspond to\n   \\(\\operatorname{Hom}(\\Gamma, \\operatorname{GL}_n(\\mathbb{Z}))/\\text{conj}\\).</li>\n</ol>",
+  "proof_html": "<p>By <a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>, rank-\\(n\\)\ntori up to isomorphism correspond to \\(\\Theta\\)-lattices of rank\n\\(n\\) up to isomorphism. Choosing a \\(\\mathbb{Z}\\)-basis of the\nlattice turns the action into a continuous homomorphism\n\\(\\Theta \\to \\operatorname{GL}_n(\\mathbb{Z})\\) (continuity =\nopen kernel, by <a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"../../tori/tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a> the kernel cuts out\nthe minimal splitting field); changing the basis conjugates the\nhomomorphism, and two lattices are isomorphic iff the homomorphisms\nare conjugate. A torus is split by \\(E\\) iff its homomorphism\nfactors through \\(\\Gamma = \\operatorname{Gal}(E/k)\\), giving (2).\nThat this bijection agrees with the general nonabelian-\\(H^1\\)\nclassification of forms is the observation that both sides classify\ndescent data on \\(\\mathbb{G}_{m,k_s}^{\\,n}\\), with trivial action on\n\\(\\operatorname{Aut} = \\operatorname{GL}_n(\\mathbb{Z})\\) because\nevery automorphism of the split torus is defined over the prime\nfield. \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    },
+    {
+      "id": "tori.splitting_field",
+      "title": "The Minimal Splitting Field of a Torus",
+      "href": "AlgebraicGroups/Tori/tori_splitting_field.html"
+    },
+    {
+      "id": "forms.nonabelian_h1",
+      "title": "Nonabelian H1",
+      "href": "AlgebraicGroups/Forms/forms_nonabelian_h1.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.finiteness_per_rank",
+      "title": "Finiteness of Tori of Bounded Rank",
+      "href": "AlgebraicGroups/Tori/tori_finiteness_per_rank.html"
+    },
+    {
+      "id": "tori.tori_over_finite_fields",
+      "title": "Tori over Finite Fields",
+      "href": "AlgebraicGroups/Tori/tori_tori_over_finite_fields.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

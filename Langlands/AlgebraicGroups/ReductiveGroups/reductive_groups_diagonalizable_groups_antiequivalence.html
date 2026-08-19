@@ -72,10 +72,12 @@
         <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
       </button>
       <input type="search" id="keyword-search" class="keyword-search"
-             placeholder="Search 317 keywords…"
+             placeholder="Search 327 keywords…"
              aria-controls="keyword-list" autocomplete="off">
       <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
       <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../../keywords/AlgebraicGroups.Forms.html">AlgebraicGroups.Forms</a></li>
       
         <li><a href="../../keywords/AlgebraicGroups.Tori.html">AlgebraicGroups.Tori</a></li>
       
@@ -197,6 +199,8 @@
       
         <li><a href="../../keywords/cocharacters.html">cocharacters</a></li>
       
+        <li><a href="../../keywords/cocycle.html">cocycle</a></li>
+      
         <li><a href="../../keywords/cocycles.html">cocycles</a></li>
       
         <li><a href="../../keywords/combinatorics.html">combinatorics</a></li>
@@ -313,6 +317,8 @@
       
         <li><a href="../../keywords/finite-groups-lie-type.html">finite-groups-lie-type</a></li>
       
+        <li><a href="../../keywords/finiteness.html">finiteness</a></li>
+      
         <li><a href="../../keywords/fixed-point.html">fixed-point</a></li>
       
         <li><a href="../../keywords/formal-deformation.html">formal-deformation</a></li>
@@ -336,6 +342,8 @@
         <li><a href="../../keywords/galois-cohomology.html">galois-cohomology</a></li>
       
         <li><a href="../../keywords/galois-descent.html">galois-descent</a></li>
+      
+        <li><a href="../../keywords/galois-lattice.html">galois-lattice</a></li>
       
         <li><a href="../../keywords/galois-module.html">galois-module</a></li>
       
@@ -383,6 +391,8 @@
       
         <li><a href="../../keywords/isocrystals.html">isocrystals</a></li>
       
+        <li><a href="../../keywords/isogeny.html">isogeny</a></li>
+      
         <li><a href="../../keywords/isogeny-type.html">isogeny-type</a></li>
       
         <li><a href="../../keywords/isomorphism-theorem.html">isomorphism-theorem</a></li>
@@ -390,6 +400,8 @@
         <li><a href="../../keywords/jacobson-morozov.html">jacobson-morozov</a></li>
       
         <li><a href="../../keywords/jordan-decomposition.html">jordan-decomposition</a></li>
+      
+        <li><a href="../../keywords/jordan-zassenhaus.html">jordan-zassenhaus</a></li>
       
         <li><a href="../../keywords/k-theory.html">k-theory</a></li>
       
@@ -507,6 +519,8 @@
       
         <li><a href="../../keywords/ramification.html">ramification</a></li>
       
+        <li><a href="../../keywords/rank.html">rank</a></li>
+      
         <li><a href="../../keywords/rank-one.html">rank-one</a></li>
       
         <li><a href="../../keywords/rank-one-subgroup.html">rank-one-subgroup</a></li>
@@ -516,6 +530,8 @@
         <li><a href="../../keywords/rational-nilpotent-orbits.html">rational-nilpotent-orbits</a></li>
       
         <li><a href="../../keywords/rational-points.html">rational-points</a></li>
+      
+        <li><a href="../../keywords/rational-representation.html">rational-representation</a></li>
       
         <li><a href="../../keywords/real-forms.html">real-forms</a></li>
       
@@ -613,6 +629,8 @@
       
         <li><a href="../../keywords/split.html">split</a></li>
       
+        <li><a href="../../keywords/split-rank.html">split-rank</a></li>
+      
         <li><a href="../../keywords/split-reductive-group.html">split-reductive-group</a></li>
       
         <li><a href="../../keywords/split-reductive-groups.html">split-reductive-groups</a></li>
@@ -666,6 +684,8 @@
         <li><a href="../../keywords/triangularization.html">triangularization</a></li>
       
         <li><a href="../../keywords/twisted-conjugacy.html">twisted-conjugacy</a></li>
+      
+        <li><a href="../../keywords/twisted-form.html">twisted-form</a></li>
       
         <li><a href="../../keywords/twisting.html">twisting</a></li>
       
@@ -812,6 +832,141 @@
       Nonempty (M ≃+ N)</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L308"><code>Langlands.Tori.characterGroup_inv_mul_cancel</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem characterGroup_inv_mul_cancel
+    (A : Type v) [CommSemiring A] [Bialgebra R A]
+    (φ : CharacterGroup R A) : φ⁻¹ * φ = 1</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L317"><code>Langlands.Tori.comul_comp_antipode</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem comul_comp_antipode
+    (A : Type v) [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A] :
+    (Coalgebra.comul (R := R) (A := A)) ∘ₗ (HopfAlgebra.antipode R) =
+      (TensorProduct.map (HopfAlgebra.antipode R) (HopfAlgebra.antipode R))
+        ∘ₗ Coalgebra.comul</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L250"><code>Langlands.Tori.diagGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          <p class="lean-docstring">`D(M)` bundled as a group object.</p>
+          <pre class="lean-signature"><code>noncomputable def diagGrp (M : Type u) [AddCommGroup M] :
+    Grp (Over (Scheme.Spec.obj (op Rc))) :=
+  { X := diagGroupOver Rc M
+    grp := diagGroupOver.instGrpObj Rc M }</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L295"><code>Langlands.Tori.gmAntipodeBialgHom</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def gmAntipodeBialgHom :
+    (AddMonoidAlgebra R ℤ) →ₐc[R] (AddMonoidAlgebra R ℤ) :=
+  AddMonoidAlgebra.mapDomainBialgHom R (AddMonoidHom.mk&#39; Neg.neg neg_add)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L235"><code>Langlands.Tori.gmGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          <p class="lean-docstring">`𝔾ₘ = Spec R[ℤ]` bundled as a group object of `Over (Spec R)`.</p>
+          <pre class="lean-signature"><code>noncomputable def gmGrp : Grp (Over (Scheme.Spec.obj (op Rc))) :=
+  { X := specObjOver Rc (AddMonoidAlgebra Rc ℤ)
+    grp := hopfSpecGrpObj Rc (AddMonoidAlgebra Rc ℤ) }</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L172"><code>Langlands.Tori.groupLikeSingle</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def groupLikeSingle [Nontrivial R] :
+    Multiplicative M →* GroupLike R (AddMonoidAlgebra R M) where
+  toFun m :=
+    ⟨AddMonoidAlgebra.single m.toAdd 1,
+      AddMonoidAlgebra.isGroupLikeElem_single_one _⟩
+  map_one&#39; := by
+    ext
+    simp [AddMonoidAlgebra.one_def]
+  map_mul&#39; a b := by
+    ext
+    simp [AddMonoidAlgebra.single_mul_single]</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L90"><code>Langlands.Tori.zmultiplesAddEquiv</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def zmultiplesAddEquiv : M ≃+ (ℤ →+ M)</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
@@ -868,6 +1023,8 @@ group \(\mathbb{Z}/p\) gives the connected non-smooth group \(\mu_p\).</p>
   <section class="deps deps-used-by">
     <h2>Used by</h2>
     <ul>
+      
+      <li><a href="../Tori/tori_classification_hom_level.html">Homomorphisms of Tori Correspond to Lattice Maps</a></li>
       
       <li><a href="../Tori/tori_f_tori_galois_module_classification.html">F-Tori Are Classified by Galois Modules</a></li>
       

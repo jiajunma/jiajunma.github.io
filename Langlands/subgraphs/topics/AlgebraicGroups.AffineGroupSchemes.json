@@ -748,7 +748,7 @@
       "title": "Algebraic Groups.Forms",
       "href": "AlgebraicGroups/Forms/index.html",
       "role": "dependent",
-      "node_count": 33
+      "node_count": 37
     },
     {
       "id": "AlgebraicGroups.LinearAlgebraicGroups",
@@ -769,7 +769,7 @@
       "title": "Algebraic Groups.Tori",
       "href": "AlgebraicGroups/Tori/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 22
+      "node_count": 31
     },
     {
       "id": "Foundations",
@@ -1005,11 +1005,25 @@
       "count": 1
     },
     {
+      "from": "affine_group_schemes.group_algebra_scheme",
+      "to": "topic:AlgebraicGroups.Tori",
+      "kind": "boundary_dependent",
+      "topic": "AlgebraicGroups.Tori",
+      "count": 1
+    },
+    {
       "from": "affine_group_schemes.multiplicative_group_scheme",
       "to": "topic:AlgebraicGroups.Tori",
       "kind": "boundary_dependent",
       "topic": "AlgebraicGroups.Tori",
       "count": 2
+    },
+    {
+      "from": "tori.characters_as_group_like_elements",
+      "to": "topic:AlgebraicGroups.Tori",
+      "kind": "boundary_dependent",
+      "topic": "AlgebraicGroups.Tori",
+      "count": 3
     }
   ],
   "keywords": [

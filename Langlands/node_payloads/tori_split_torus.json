@@ -29,6 +29,11 @@
       "href": "AlgebraicGroups/Tori/tori_rank_one_classification.html"
     },
     {
+      "id": "tori.real_tori_classification",
+      "title": "Classification of Real Tori",
+      "href": "AlgebraicGroups/Tori/tori_real_tori_classification.html"
+    },
+    {
       "id": "tori.split_anisotropic_decomposition",
       "title": "Split-Anisotropic Decomposition of a Torus",
       "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
@@ -37,6 +42,11 @@
       "id": "tori.tamely_ramified_torus",
       "title": "Tamely Ramified Torus",
       "href": "AlgebraicGroups/Tori/tori_tamely_ramified_torus.html"
+    },
+    {
+      "id": "tori.twisted_form_of_lattice",
+      "title": "The Twisted Form of a Galois Lattice",
+      "href": "AlgebraicGroups/Tori/tori_twisted_form_of_lattice.html"
     },
     {
       "id": "tori.unramified_torus",
@@ -56,7 +66,7 @@
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L65",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L74",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -74,9 +84,63 @@
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L72",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L81",
       "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.IsSplitTorusAlgebra",
+      "display_name": "Langlands.Tori.IsSplitTorusAlgebra",
+      "qualified_name": "Langlands.Tori.IsSplitTorusAlgebra",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "kind": "def",
+      "signature": "def IsSplitTorusAlgebra (A : Type u) [CommRing A] [HopfAlgebra k A] : Prop :=\n  ∃ (M : Type u) (_ : AddCommGroup M) (_ : Module.Free ℤ M)\n    (_ : Module.Finite ℤ M),\n    Nonempty (A ≃ₐc[k] AddMonoidAlgebra k M)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L53",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.isTorusAlgebra_addMonoidAlgebra",
+      "display_name": "Langlands.Tori.isTorusAlgebra_addMonoidAlgebra",
+      "qualified_name": "Langlands.Tori.isTorusAlgebra_addMonoidAlgebra",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "kind": "theorem",
+      "signature": "theorem isTorusAlgebra_addMonoidAlgebra\n    (M : Type u) [AddCommGroup M] [Module.Free ℤ M] [Module.Finite ℤ M] :\n    IsTorusAlgebra k E (AddMonoidAlgebra k M)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L70",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.IsSplitTorusAlgebra.isTorusAlgebra",
+      "display_name": "Langlands.Tori.IsSplitTorusAlgebra.isTorusAlgebra",
+      "qualified_name": "Langlands.Tori.IsSplitTorusAlgebra.isTorusAlgebra",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "kind": "theorem",
+      "signature": "theorem IsSplitTorusAlgebra.isTorusAlgebra\n    {A : Type u} [CommRing A] [HopfAlgebra k A]\n    (h : IsSplitTorusAlgebra k A) : IsTorusAlgebra k E A",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L80",
+      "doc_url": null,
+      "has_sorry": true,
       "status": "resolved",
       "reason": null,
       "suggestions": []
@@ -90,6 +154,16 @@
       "revision": "main",
       "short_revision": "main",
       "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L1",
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L1",
       "status": "resolved",
       "reason": null
     }

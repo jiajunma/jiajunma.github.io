@@ -425,7 +425,7 @@
       "title": "Algebraic Groups.Forms",
       "href": "AlgebraicGroups/Forms/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 33
+      "node_count": 37
     },
     {
       "id": "AlgebraicGroups.ReductiveGroups",
@@ -439,7 +439,7 @@
       "title": "Algebraic Groups.Tori",
       "href": "AlgebraicGroups/Tori/index.html",
       "role": "dependent",
-      "node_count": 22
+      "node_count": 31
     },
     {
       "id": "Foundations",
@@ -701,6 +701,13 @@
       "kind": "boundary_dependent",
       "topic": "AlgebraicGroups.ReductiveGroups",
       "count": 2
+    },
+    {
+      "from": "forms.lang_theorem_finite_fields",
+      "to": "topic:AlgebraicGroups.Tori",
+      "kind": "boundary_dependent",
+      "topic": "AlgebraicGroups.Tori",
+      "count": 1
     },
     {
       "from": "linear_algebraic_groups.linear_algebraic_groups",

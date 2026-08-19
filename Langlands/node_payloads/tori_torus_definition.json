@@ -69,6 +69,11 @@
       "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
     },
     {
+      "id": "tori.split_rank",
+      "title": "Rank and Split Rank of a Torus",
+      "href": "AlgebraicGroups/Tori/tori_split_rank.html"
+    },
+    {
       "id": "tori.split_torus",
       "title": "Split Torus",
       "href": "AlgebraicGroups/Tori/tori_split_torus.html"
@@ -89,6 +94,11 @@
       "href": "AlgebraicGroups/Tori/tori_tamely_ramified_torus.html"
     },
     {
+      "id": "tori.twisted_form_of_lattice",
+      "title": "The Twisted Form of a Galois Lattice",
+      "href": "AlgebraicGroups/Tori/tori_twisted_form_of_lattice.html"
+    },
+    {
       "id": "tori.unramified_torus",
       "title": "Unramified Torus",
       "href": "AlgebraicGroups/Tori/tori_unramified_torus.html"
@@ -104,6 +114,36 @@
       "href": "AlgebraicGroups/Tori/tori_weil_restriction_of_tori.html"
     }
   ],
-  "lean_refs": [],
-  "lean_modules": []
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.IsTorusAlgebra",
+      "display_name": "Langlands.Tori.IsTorusAlgebra",
+      "qualified_name": "Langlands.Tori.IsTorusAlgebra",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "kind": "def",
+      "signature": "def IsTorusAlgebra (A : Type u) [CommRing A] [HopfAlgebra k A] : Prop :=\n  ∃ (M : Type u) (_ : AddCommGroup M) (_ : Module.Free ℤ M)\n    (_ : Module.Finite ℤ M),\n    Nonempty ((E ⊗[k] A) ≃ₐc[E] AddMonoidAlgebra E M)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L42",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

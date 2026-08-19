@@ -1,0 +1,85 @@
+{
+  "id": "tori.twisted_form_of_lattice",
+  "title": "The Twisted Form of a Galois Lattice",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_twisted_form_of_lattice.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori",
+    "AlgebraicGroups.Forms"
+  ],
+  "body_html": "<h1>The Twisted Form of a Galois Lattice</h1>\n<p>Let \\(E/k\\) be a finite Galois extension,\n\\(\\Gamma = \\operatorname{Gal}(E/k)\\), and let \\((M, \\sigma)\\) be a\n<strong>\\(\\Gamma\\)-lattice</strong>: a finite free \\(\\mathbb{Z}\\)-module \\(M\\)\nwith an action \\(\\sigma : \\Gamma \\to \\operatorname{Aut}(M)\\).</p>\n<p>On the group algebra \\(E[M]\\) (the coordinate Hopf algebra of the\nsplit torus \\(D(M)\\), see\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.group_algebra_scheme\" href=\"../../affine_group_schemes/affine_group_schemes_group_algebra_scheme.html\">The Diagonalizable Group Scheme D(M)</a>), define the\nsemilinear \\(\\Gamma\\)-action\n\\[\n\\rho_\\gamma\\bigl(a\\,e^m\\bigr) \\;=\\; \\gamma(a)\\, e^{\\sigma_\\gamma m},\n\\qquad a \\in E,\\; m \\in M .\n\\]\nEach \\(\\rho_\\gamma\\) permutes the group-like basis \\(\\{e^m\\}\\) and is\ntherefore compatible with the Hopf structure\n(\\(\\Delta e^m = e^m \\otimes e^m\\), \\(\\varepsilon(e^m) = 1\\),\n\\(S(e^m) = e^{-m}\\)), so <a class=\"node-ref\" data-node-id=\"forms.hopf_descent\" href=\"../../forms/forms_hopf_descent.html\">Galois Descent for Hopf Algebras</a> applies. The\n<strong>twisted form of \\((M,\\sigma)\\)</strong> is the affine group scheme\n\\[\nT(M, \\sigma) \\;:=\\;\n\\operatorname{Spec}\\Bigl( E[M]^{\\Gamma} \\Bigr)\n\\]\nover \\(k\\), with coordinate \\(k\\)-Hopf algebra the fixed algebra\n\\(E[M]^\\Gamma\\).</p>\n<h2>Properties</h2>\n<ol>\n<li><strong>Descent.</strong> \\(E[M]^\\Gamma\\) is a \\(k\\)-Hopf algebra and the\n   natural map \\(E \\otimes_k E[M]^\\Gamma \\to E[M]\\) is an isomorphism\n   of \\(E\\)-Hopf algebras — this is\n   <a class=\"node-ref\" data-node-id=\"forms.hopf_descent\" href=\"../../forms/forms_hopf_descent.html\">Galois Descent for Hopf Algebras</a> (1)–(2), applicable because\n   \\(\\rho\\) permutes the group-like basis.</li>\n<li><strong>\\(T(M,\\sigma)\\) is a torus split by \\(E\\).</strong> By (1) the base\n   change \\(T(M,\\sigma)_E\\) is \\(D(M) \\cong \\mathbb{G}_m^{\\,n}\\)\n   (\\(n = \\operatorname{rk} M\\), after a choice of basis), which is\n   the defining property in <a class=\"node-ref\" data-node-id=\"tori.torus_definition\" href=\"../../tori/tori_torus_definition.html\">Algebraic Torus</a>.</li>\n<li><strong>Character lattice.</strong> \\(X^*(T(M,\\sigma)) \\cong (M, \\sigma)\\) as\n   \\(\\Gamma\\)-lattices: the characters of \\(T(M,\\sigma)_E = D(M)\\)\n   are the group-likes \\(\\{e^m\\}\\) of \\(E[M]\\)\n   (<a class=\"node-ref\" data-node-id=\"tori.characters_as_group_like_elements\" href=\"../../tori/tori_characters_as_group_like_elements.html\">Characters Are Group-Like Elements</a>), and the Galois\n   action transported through the isomorphism of (1) sends\n   \\(e^m \\mapsto e^{\\sigma_\\gamma m}\\), i.e. is \\(\\sigma\\) on\n   \\(M\\).</li>\n<li><strong>Trivial action.</strong> If \\(\\sigma\\) is trivial then\n   \\(E[M]^\\Gamma = k[M]\\) (coefficientwise Galois fixed points), so\n   \\(T(M, \\mathrm{triv}) = D(M)\\) is the split torus\n   (<a class=\"node-ref\" data-node-id=\"tori.split_torus\" href=\"../../tori/tori_split_torus.html\">Split Torus</a>).</li>\n</ol>\n<p>This construction is the essential-surjectivity half of the\nclassification <a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>:\nevery \\(\\Gamma\\)-lattice arises as the character lattice of a torus,\nnamely of its twisted form.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "forms.hopf_descent",
+      "title": "Galois Descent for Hopf Algebras",
+      "href": "AlgebraicGroups/Forms/forms_hopf_descent.html"
+    },
+    {
+      "id": "affine_group_schemes.group_algebra_scheme",
+      "title": "The Diagonalizable Group Scheme D(M)",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_algebra_scheme.html"
+    },
+    {
+      "id": "tori.torus_definition",
+      "title": "Algebraic Torus",
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
+    },
+    {
+      "id": "tori.split_torus",
+      "title": "Split Torus",
+      "href": "AlgebraicGroups/Tori/tori_split_torus.html"
+    },
+    {
+      "id": "tori.characters_as_group_like_elements",
+      "title": "Characters Are Group-Like Elements",
+      "href": "AlgebraicGroups/Tori/tori_characters_as_group_like_elements.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.classification_hom_level",
+      "title": "Homomorphisms of Tori Correspond to Lattice Maps",
+      "href": "AlgebraicGroups/Tori/tori_classification_hom_level.html"
+    },
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.exists_charLatticeRep_iso",
+      "display_name": "Langlands.Tori.exists_charLatticeRep_iso",
+      "qualified_name": "Langlands.Tori.exists_charLatticeRep_iso",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Classification",
+      "kind": "theorem",
+      "signature": "theorem exists_charLatticeRep_iso\n    (V : Rep.{u} ℤ (E ≃ₐ[k] E))\n    (hfree : Module.Free ℤ V) (hfin : Module.Finite ℤ V) :\n    ∃ (A : Type u) (_ : CommRing A) (_ : HopfAlgebra k A),\n      IsTorusAlgebra k E A ∧ Nonempty (charLatticeRep k E A ≅ V)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L164",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.Classification",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.Classification",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

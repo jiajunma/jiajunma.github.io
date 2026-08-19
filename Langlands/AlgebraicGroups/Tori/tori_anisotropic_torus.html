@@ -72,10 +72,12 @@
         <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
       </button>
       <input type="search" id="keyword-search" class="keyword-search"
-             placeholder="Search 317 keywords…"
+             placeholder="Search 327 keywords…"
              aria-controls="keyword-list" autocomplete="off">
       <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
       <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../../keywords/AlgebraicGroups.Forms.html">AlgebraicGroups.Forms</a></li>
       
         <li><a href="../../keywords/AlgebraicGroups.Tori.html">AlgebraicGroups.Tori</a></li>
       
@@ -197,6 +199,8 @@
       
         <li><a href="../../keywords/cocharacters.html">cocharacters</a></li>
       
+        <li><a href="../../keywords/cocycle.html">cocycle</a></li>
+      
         <li><a href="../../keywords/cocycles.html">cocycles</a></li>
       
         <li><a href="../../keywords/combinatorics.html">combinatorics</a></li>
@@ -313,6 +317,8 @@
       
         <li><a href="../../keywords/finite-groups-lie-type.html">finite-groups-lie-type</a></li>
       
+        <li><a href="../../keywords/finiteness.html">finiteness</a></li>
+      
         <li><a href="../../keywords/fixed-point.html">fixed-point</a></li>
       
         <li><a href="../../keywords/formal-deformation.html">formal-deformation</a></li>
@@ -336,6 +342,8 @@
         <li><a href="../../keywords/galois-cohomology.html">galois-cohomology</a></li>
       
         <li><a href="../../keywords/galois-descent.html">galois-descent</a></li>
+      
+        <li><a href="../../keywords/galois-lattice.html">galois-lattice</a></li>
       
         <li><a href="../../keywords/galois-module.html">galois-module</a></li>
       
@@ -383,6 +391,8 @@
       
         <li><a href="../../keywords/isocrystals.html">isocrystals</a></li>
       
+        <li><a href="../../keywords/isogeny.html">isogeny</a></li>
+      
         <li><a href="../../keywords/isogeny-type.html">isogeny-type</a></li>
       
         <li><a href="../../keywords/isomorphism-theorem.html">isomorphism-theorem</a></li>
@@ -390,6 +400,8 @@
         <li><a href="../../keywords/jacobson-morozov.html">jacobson-morozov</a></li>
       
         <li><a href="../../keywords/jordan-decomposition.html">jordan-decomposition</a></li>
+      
+        <li><a href="../../keywords/jordan-zassenhaus.html">jordan-zassenhaus</a></li>
       
         <li><a href="../../keywords/k-theory.html">k-theory</a></li>
       
@@ -507,6 +519,8 @@
       
         <li><a href="../../keywords/ramification.html">ramification</a></li>
       
+        <li><a href="../../keywords/rank.html">rank</a></li>
+      
         <li><a href="../../keywords/rank-one.html">rank-one</a></li>
       
         <li><a href="../../keywords/rank-one-subgroup.html">rank-one-subgroup</a></li>
@@ -516,6 +530,8 @@
         <li><a href="../../keywords/rational-nilpotent-orbits.html">rational-nilpotent-orbits</a></li>
       
         <li><a href="../../keywords/rational-points.html">rational-points</a></li>
+      
+        <li><a href="../../keywords/rational-representation.html">rational-representation</a></li>
       
         <li><a href="../../keywords/real-forms.html">real-forms</a></li>
       
@@ -613,6 +629,8 @@
       
         <li><a href="../../keywords/split.html">split</a></li>
       
+        <li><a href="../../keywords/split-rank.html">split-rank</a></li>
+      
         <li><a href="../../keywords/split-reductive-group.html">split-reductive-group</a></li>
       
         <li><a href="../../keywords/split-reductive-groups.html">split-reductive-groups</a></li>
@@ -666,6 +684,8 @@
         <li><a href="../../keywords/triangularization.html">triangularization</a></li>
       
         <li><a href="../../keywords/twisted-conjugacy.html">twisted-conjugacy</a></li>
+      
+        <li><a href="../../keywords/twisted-form.html">twisted-form</a></li>
       
         <li><a href="../../keywords/twisting.html">twisting</a></li>
       
@@ -732,6 +752,8 @@
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
     </div>
   </header>
 
@@ -752,6 +774,55 @@
   </div>
   
 
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L269"><code>Langlands.Tori.IsAnisotropicAlgebra</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def IsAnisotropicAlgebra : Prop :=
+  ∀ l : CocharLattice k E A, IsGalFixedCochar k E A l → l = 1</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L278"><code>Langlands.Tori.torusSplitRank_eq_zero_iff</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem torusSplitRank_eq_zero_iff
+    [FiniteDimensional k E] [IsGalois k E] (hA : IsTorusAlgebra k E A) :
+    torusSplitRank k E A = 0 ↔ IsAnisotropicAlgebra k E A</code></pre>
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharLattice</code></a>
+      </p>
+      
+    </div>
+  </div>
   
 
   <div class="definition_thmcontent thm-content body">
@@ -797,9 +868,13 @@ recorded with the source span above.</p>
     <h2>Used by</h2>
     <ul>
       
+      <li><a href="tori_f_tori_galois_module_classification.html">F-Tori Are Classified by Galois Modules</a></li>
+      
       <li><a href="tori_norm_one_torus.html">Norm-One Torus of a Separable Extension</a></li>
       
       <li><a href="tori_split_anisotropic_decomposition.html">Split-Anisotropic Decomposition of a Torus</a></li>
+      
+      <li><a href="tori_split_rank.html">Rank and Split Rank of a Torus</a></li>
       
     </ul>
   </section>

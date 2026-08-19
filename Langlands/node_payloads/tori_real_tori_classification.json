@@ -1,0 +1,38 @@
+{
+  "id": "tori.real_tori_classification",
+  "title": "Classification of Real Tori",
+  "kind": "example",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_real_tori_classification.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori"
+  ],
+  "body_html": "<h1>Classification of Real Tori</h1>\n<p>Take \\(k = \\mathbb{R}\\), so \\(k_s = \\mathbb{C}\\) and\n\\(\\Theta = \\operatorname{Gal}(\\mathbb{C}/\\mathbb{R}) = C_2 =\n\\{1, \\tau\\}\\). By\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>, real tori\ncorrespond to \\(\\mathbb{Z}[C_2]\\)-lattices.</p>\n<p><strong>Lattice input.</strong> Every \\(\\mathbb{Z}[C_2]\\)-lattice is a direct sum,\nunique up to reordering, of the three indecomposables:\n\\[\n\\mathbb{Z}\\;(\\tau = +1), \\qquad\n\\mathbb{Z}^-\\;(\\tau = -1), \\qquad\n\\mathbb{Z}[C_2]\\;(\\text{regular, } \\tau \\text{ swaps the basis}).\n\\]\n(Integral representation theory of the cyclic group of order 2;\nuniqueness is the Krull–Schmidt property for this order.)</p>\n<p><strong>Torus output.</strong> Under the classification the three indecomposables\ncorrespond to:</p>\n<table>\n<thead>\n<tr>\n<th>lattice</th>\n<th>torus</th>\n<th>real points</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\\(\\mathbb{Z}\\) (trivial)</td>\n<td>\\(\\mathbb{G}_{m,\\mathbb{R}}\\) (<a class=\"node-ref\" data-node-id=\"tori.split_torus\" href=\"../../tori/tori_split_torus.html\">Split Torus</a>)</td>\n<td>\\(\\mathbb{R}^\\times\\)</td>\n</tr>\n<tr>\n<td>\\(\\mathbb{Z}^-\\) (sign)</td>\n<td>\\(S^1 = T^1_{\\mathbb{C}/\\mathbb{R}}\\) (<a class=\"node-ref\" data-node-id=\"tori.norm_one_torus\" href=\"../../tori/tori_norm_one_torus.html\">Norm-One Torus of a Separable Extension</a>)</td>\n<td>\\(\\{z \\in \\mathbb{C}^\\times : z\\bar z = 1\\}\\)</td>\n</tr>\n<tr>\n<td>\\(\\mathbb{Z}[C_2]\\) (regular)</td>\n<td>\\(\\operatorname{Res}_{\\mathbb{C}/\\mathbb{R}} \\mathbb{G}_m\\) (<a class=\"node-ref\" data-node-id=\"tori.weil_restriction_of_tori\" href=\"../../tori/tori_weil_restriction_of_tori.html\">Weil Restriction of Tori</a>)</td>\n<td>\\(\\mathbb{C}^\\times\\)</td>\n</tr>\n</tbody>\n</table>\n<p>Hence <strong>every real torus is, uniquely up to reordering,</strong>\n\\[\nT \\;\\cong\\;\n\\mathbb{G}_m^{\\,a} \\times (S^1)^{\\,b} \\times\n\\bigl(\\operatorname{Res}_{\\mathbb{C}/\\mathbb{R}} \\mathbb{G}_m\\bigr)^{c},\n\\qquad a, b, c \\geq 0 .\n\\]\nThe rank is \\(a + b + 2c\\), the split rank is \\(a + c\\)\n(the \\(\\tau = +1\\) fixed sublattice of \\(X_*\\) has rank \\(a+c\\)), and\n\\(T\\) is anisotropic iff \\(a = c = 0\\), i.e. \\(T \\cong (S^1)^b\\) — the\ncompact real tori.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    },
+    {
+      "id": "tori.split_torus",
+      "title": "Split Torus",
+      "href": "AlgebraicGroups/Tori/tori_split_torus.html"
+    },
+    {
+      "id": "tori.norm_one_torus",
+      "title": "Norm-One Torus of a Separable Extension",
+      "href": "AlgebraicGroups/Tori/tori_norm_one_torus.html"
+    },
+    {
+      "id": "tori.weil_restriction_of_tori",
+      "title": "Weil Restriction of Tori",
+      "href": "AlgebraicGroups/Tori/tori_weil_restriction_of_tori.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

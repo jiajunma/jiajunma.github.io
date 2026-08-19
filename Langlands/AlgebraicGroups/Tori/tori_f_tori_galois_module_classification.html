@@ -72,10 +72,12 @@
         <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
       </button>
       <input type="search" id="keyword-search" class="keyword-search"
-             placeholder="Search 317 keywords…"
+             placeholder="Search 327 keywords…"
              aria-controls="keyword-list" autocomplete="off">
       <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
       <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../../keywords/AlgebraicGroups.Forms.html">AlgebraicGroups.Forms</a></li>
       
         <li><a href="../../keywords/AlgebraicGroups.Tori.html">AlgebraicGroups.Tori</a></li>
       
@@ -197,6 +199,8 @@
       
         <li><a href="../../keywords/cocharacters.html">cocharacters</a></li>
       
+        <li><a href="../../keywords/cocycle.html">cocycle</a></li>
+      
         <li><a href="../../keywords/cocycles.html">cocycles</a></li>
       
         <li><a href="../../keywords/combinatorics.html">combinatorics</a></li>
@@ -313,6 +317,8 @@
       
         <li><a href="../../keywords/finite-groups-lie-type.html">finite-groups-lie-type</a></li>
       
+        <li><a href="../../keywords/finiteness.html">finiteness</a></li>
+      
         <li><a href="../../keywords/fixed-point.html">fixed-point</a></li>
       
         <li><a href="../../keywords/formal-deformation.html">formal-deformation</a></li>
@@ -336,6 +342,8 @@
         <li><a href="../../keywords/galois-cohomology.html">galois-cohomology</a></li>
       
         <li><a href="../../keywords/galois-descent.html">galois-descent</a></li>
+      
+        <li><a href="../../keywords/galois-lattice.html">galois-lattice</a></li>
       
         <li><a href="../../keywords/galois-module.html">galois-module</a></li>
       
@@ -383,6 +391,8 @@
       
         <li><a href="../../keywords/isocrystals.html">isocrystals</a></li>
       
+        <li><a href="../../keywords/isogeny.html">isogeny</a></li>
+      
         <li><a href="../../keywords/isogeny-type.html">isogeny-type</a></li>
       
         <li><a href="../../keywords/isomorphism-theorem.html">isomorphism-theorem</a></li>
@@ -390,6 +400,8 @@
         <li><a href="../../keywords/jacobson-morozov.html">jacobson-morozov</a></li>
       
         <li><a href="../../keywords/jordan-decomposition.html">jordan-decomposition</a></li>
+      
+        <li><a href="../../keywords/jordan-zassenhaus.html">jordan-zassenhaus</a></li>
       
         <li><a href="../../keywords/k-theory.html">k-theory</a></li>
       
@@ -507,6 +519,8 @@
       
         <li><a href="../../keywords/ramification.html">ramification</a></li>
       
+        <li><a href="../../keywords/rank.html">rank</a></li>
+      
         <li><a href="../../keywords/rank-one.html">rank-one</a></li>
       
         <li><a href="../../keywords/rank-one-subgroup.html">rank-one-subgroup</a></li>
@@ -516,6 +530,8 @@
         <li><a href="../../keywords/rational-nilpotent-orbits.html">rational-nilpotent-orbits</a></li>
       
         <li><a href="../../keywords/rational-points.html">rational-points</a></li>
+      
+        <li><a href="../../keywords/rational-representation.html">rational-representation</a></li>
       
         <li><a href="../../keywords/real-forms.html">real-forms</a></li>
       
@@ -613,6 +629,8 @@
       
         <li><a href="../../keywords/split.html">split</a></li>
       
+        <li><a href="../../keywords/split-rank.html">split-rank</a></li>
+      
         <li><a href="../../keywords/split-reductive-group.html">split-reductive-group</a></li>
       
         <li><a href="../../keywords/split-reductive-groups.html">split-reductive-groups</a></li>
@@ -666,6 +684,8 @@
         <li><a href="../../keywords/triangularization.html">triangularization</a></li>
       
         <li><a href="../../keywords/twisted-conjugacy.html">twisted-conjugacy</a></li>
+      
+        <li><a href="../../keywords/twisted-form.html">twisted-form</a></li>
       
         <li><a href="../../keywords/twisting.html">twisting</a></li>
       
@@ -732,6 +752,8 @@
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
     </div>
   </header>
 
@@ -753,11 +775,285 @@
         
         <li><a href="../Forms/forms_rational_forms_of_linear_algebraic_groups.html">Rational Forms of Linear Algebraic Groups</a></li>
         
+        <li><a href="../Forms/forms_hopf_descent.html">Galois Descent for Hopf Algebras</a></li>
+        
+        <li><a href="tori_twisted_form_of_lattice.html">The Twisted Form of a Galois Lattice</a></li>
+        
+        <li><a href="tori_classification_hom_level.html">Homomorphisms of Tori Correspond to Lattice Maps</a></li>
+        
+        <li><a href="tori_characters_as_group_like_elements.html">Characters Are Group-Like Elements</a></li>
+        
+        <li><a href="tori_anisotropic_torus.html">Anisotropic Torus</a></li>
+        
       </ul>
     </div>
   </div>
   
 
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L114"><code>Langlands.Tori.charRep</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>noncomputable def charRep :
+    Representation ℤ (E ≃ₐ[k] E) (Additive (CharLattice k E A)) where
+  toFun γ := (MonoidHom.toAdditive (charGalAct k E A γ)).toIntLinearMap
+  map_one&#39; := by
+    sorry -- proof: M5 (transport of charGalAct.map_one)
+  map_mul&#39; := by
+    sorry -- proof: M5 (transport of charGalAct.map_mul)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L59"><code>Langlands.Tori.TorusAlgCat</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>abbrev TorusAlgCat := (torusAlgebraProp k E).FullSubcategory</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L66"><code>Langlands.Tori.TorusCat</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>abbrev TorusCat := (TorusAlgCat k E)ᵒᵖ</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L81"><code>Langlands.Tori.LatticeCat</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>abbrev LatticeCat := (latticeProp Γ).FullSubcategory</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L94"><code>Langlands.Tori.charLatticeRep</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def charLatticeRep : Rep.{u} ℤ (E ≃ₐ[k] E) :=
+  Rep.of (charRep k E A)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L105"><code>Langlands.Tori.charLatticeFunctor</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>noncomputable def charLatticeFunctor :
+    TorusAlgCat k E ⥤ LatticeCat (E ≃ₐ[k] E) where
+  obj A :=
+    ⟨charLatticeRep k E A.obj,
+      charLattice_free k E A.obj A.property,
+      charLattice_finite k E A.obj A.property⟩
+  map {A B} f :=
+    ⟨Rep.ofHom
+      { toLinearMap :=
+          (MonoidHom.toAdditive (charLatticeMap k E f.hom.hom)).toIntLinearMap
+        isIntertwining&#39; := fun γ =&gt; by
+          sorry }⟩ -- proof: M6 (equivariance = charLatticeMap_galAct)
+  map_id A := by
+    sorry -- proof: M6 (charLatticeMap of the identity)
+  map_comp f g := by
+    sorry -- proof: M6 (charLatticeMap of a composition)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L132"><code>Langlands.Tori.charLatticeFunctor_faithful</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>instance charLatticeFunctor_faithful : (charLatticeFunctor k E).Faithful where
+  map_injective := by
+    sorry</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L141"><code>Langlands.Tori.charLatticeFunctor_full</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>instance charLatticeFunctor_full : (charLatticeFunctor k E).Full where
+  map_surjective := by
+    sorry</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">instance</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L151"><code>Langlands.Tori.charLatticeFunctor_essSurj</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>instance charLatticeFunctor_essSurj : (charLatticeFunctor k E).EssSurj where
+  mem_essImage := by
+    sorry</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L179"><code>Langlands.Tori.toriClassification</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def toriClassification :
+    (TorusCat k E)ᵒᵖ ≌ LatticeCat (E ≃ₐ[k] E) :=
+  (opOpEquivalence (TorusAlgCat k E)).trans
+    (charLatticeFunctor k E).asEquivalence</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L108"><code>Langlands.Tori.diagCharEquiv</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def diagCharEquiv :
+    Multiplicative M ≃* CharacterGroup R (AddMonoidAlgebra R M) :=
+  AddEquiv.toMultiplicativeLeft
+    ((zmultiplesAddEquiv M).trans
+      (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L139"><code>Langlands.Tori.diag_bialgEquiv_iff_addEquiv</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem diag_bialgEquiv_iff_addEquiv :
+    Nonempty (AddMonoidAlgebra R M ≃ₐc[R] AddMonoidAlgebra R N) ↔
+      Nonempty (M ≃+ N)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/TwistedGroupAlgebra.lean#L119"><code>Langlands.Tori.twistedGroupAlgebra</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.TwistedGroupAlgebra
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def twistedGroupAlgebra : Subalgebra k (AddMonoidAlgebra E M) where
+  carrier := {f | ∀ γ : E ≃ₐ[k] E, semilinearAut k E M σ γ f = f}
+  add_mem&#39; hf hg γ := by rw [map_add, hf γ, hg γ]
+  mul_mem&#39; hf hg γ := by rw [map_mul, hf γ, hg γ]
+  algebraMap_mem&#39; r γ := by
+    rw [AlgEquiv.commutes]</code></pre>
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharLattice</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.Classification</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharacterGroup</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/TwistedGroupAlgebra.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.TwistedGroupAlgebra</code></a>
+      </p>
+      
+    </div>
+  </div>
   
 
   <div class="theorem_thmcontent thm-content body">
@@ -784,23 +1080,73 @@ groups with continuous \(\Gamma\)-action.</p>
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>For a torus \(T\), all characters of \(T_{F_s}\) are defined over \(F_s\), and
-the natural Galois action on \(F_s[T]\) preserves the character basis. Thus
-\(X^*(T_{F_s})\) is a continuous \(\Gamma\)-module.</p>
-<p>Conversely, for such a module \(M\), the group algebra \(F_s[M]\) has its
-standard Hopf algebra structure and the semilinear \(\Gamma\)-action
-\[
-\gamma(ae^m)=\gamma(a)e^{\gamma m}.
-\]
-The fixed algebra descends this Hopf algebra to \(F\), giving an
-\(F\)-torus with character module \(M\). These constructions are inverse.</p>
-<p>The split criterion follows because an \(F\)-split torus has a basis of
-\(F\)-defined characters, exactly a trivial Galois action. An \(F\)-split
-subtorus corresponds to a nonzero fixed cocharacter; hence anisotropy is
-equivalent to the absence of nonzero Galois-fixed cocharacters, and by duality
-to the absence of nonzero Galois-fixed characters. The complement statement is
-Maschke's theorem over \(\mathbb{Q}\) applied to the finite quotient through
-which \(\Gamma\) acts.</p>
+        <p>The statement asserts an anti-equivalence of categories; per the
+working reduction to a finite level (every torus is split by a finite
+Galois extension, and the continuous \(\Gamma\)-action factors
+through its group — see the discussion in
+<a class="node-ref" data-node-id="tori.character_and_cocharacter_lattices" href="../../tori/tori_character_and_cocharacter_lattices.html">Character and Cocharacter Lattices</a>), it suffices to
+prove, for each finite Galois \(E/k\) with group
+\(\Gamma_E = \operatorname{Gal}(E/k)\), an anti-equivalence between
+tori split by \(E\) and \(\Gamma_E\)-lattices, compatibly with
+enlarging \(E\). Three steps, each with its own node:</p>
+<ol>
+<li>
+<p><strong>Well-definedness.</strong> For \(T\) split by \(E\), the character
+   lattice \(X^*(T_E)\) is a finite free \(\mathbb{Z}\)-module and
+   the Galois action on \(E[T_E]\) preserves the character basis, so
+   \(X^*(T)\) is a \(\Gamma_E\)-lattice, functorially in \(T\)
+   (<a class="node-ref" data-node-id="tori.character_and_cocharacter_lattices" href="../../tori/tori_character_and_cocharacter_lattices.html">Character and Cocharacter Lattices</a>, with the
+   characters realized as group-likes of the coordinate algebra by
+   <a class="node-ref" data-node-id="tori.characters_as_group_like_elements" href="../../tori/tori_characters_as_group_like_elements.html">Characters Are Group-Like Elements</a>).</p>
+</li>
+<li>
+<p><strong>Full faithfulness.</strong> The functor is bijective on homomorphism
+   sets:
+   \(\operatorname{Hom}_k(T, T') \cong
+   \operatorname{Hom}_{\Gamma_E}(X^*(T'), X^*(T))\) — this is
+   <a class="node-ref" data-node-id="tori.classification_hom_level" href="../../tori/tori_classification_hom_level.html">Homomorphisms of Tori Correspond to Lattice Maps</a>, whose proof combines the
+   hom part of Galois descent for Hopf algebras
+   (<a class="node-ref" data-node-id="forms.hopf_descent" href="../../forms/forms_hopf_descent.html">Galois Descent for Hopf Algebras</a>) with Cartier duality over the
+   splitting field
+   (<a class="node-ref" data-node-id="reductive_groups.diagonalizable_groups_antiequivalence" href="../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html">Diagonalizable Groups Are Dual to Character Groups</a>).</p>
+</li>
+<li>
+<p><strong>Essential surjectivity.</strong> Every \(\Gamma_E\)-lattice
+   \((M, \sigma)\) is the character lattice of a torus: the twisted
+   form \(T(M,\sigma) = \operatorname{Spec} E[M]^{\Gamma_E}\)
+   constructed in <a class="node-ref" data-node-id="tori.twisted_form_of_lattice" href="../../tori/tori_twisted_form_of_lattice.html">The Twisted Form of a Galois Lattice</a> is a torus
+   split by \(E\) with \(X^*(T(M,\sigma)) \cong (M,\sigma)\).</p>
+</li>
+</ol>
+<p>The four bullets under the correspondence:</p>
+<ul>
+<li><strong>Split criterion.</strong> A split torus has a basis of \(k\)-defined
+  characters, so the action is trivial; conversely trivial action
+  gives \(T = D(M)\) split
+  (<a class="node-ref" data-node-id="tori.twisted_form_of_lattice" href="../../tori/tori_twisted_form_of_lattice.html">The Twisted Form of a Galois Lattice</a>, property (4)). The
+  \(X_*\) formulation follows by the perfect pairing
+  (<a class="node-ref" data-node-id="tori.character_and_cocharacter_lattices" href="../../tori/tori_character_and_cocharacter_lattices.html">Character and Cocharacter Lattices</a>).</li>
+<li><strong>Anisotropy criterion.</strong> This is the working definition and the
+  averaging argument recorded in <a class="node-ref" data-node-id="tori.anisotropic_torus" href="../../tori/tori_anisotropic_torus.html">Anisotropic Torus</a>.</li>
+<li><strong>Splitting over \(F_s\).</strong> Continuity of the action on the
+  discrete lattice \(X^*\) forces a finite-index kernel, whose fixed
+  field is a finite Galois splitting extension.</li>
+<li><strong>Almost-complement.</strong> Over \(\mathbb{Q}\), Maschke's theorem for
+  the finite quotient through which \(\Gamma\) acts splits off
+  \(X^*(T_1)_{\mathbb{Q}}\) as a direct summand; scaling the
+  projection by a suitable integer produces a sublattice
+  complementary up to finite index, i.e. a subtorus \(T_2\) with
+  \(T = T_1 T_2\) and \(T_1 \cap T_2\) finite.</li>
+</ul>
+<p>\(\square\)</p>
+<h2>Remarks</h2>
+<p>Downstream nodes that develop the bullets: the minimal splitting
+field and its Galois group are identified in
+<a class="node-ref" data-node-id="tori.splitting_field" href="../../tori/tori_splitting_field.html">The Minimal Splitting Field of a Torus</a>; the split–anisotropic decomposition
+theory built on the almost-complement statement is
+<a class="node-ref" data-node-id="tori.split_anisotropic_decomposition" href="../../tori/tori_split_anisotropic_decomposition.html">Split-Anisotropic Decomposition of a Torus</a>. Both consume this
+classification, so they are cited here only as forward pointers, not
+as inputs.</p>
       </div>
     </details>
     
@@ -817,15 +1163,25 @@ which \(\Gamma\) acts.</p>
       
       <li><a href="../ReductiveGroups/reductive_groups_maximal_f_tori_exist.html">Maximal F-Tori Exist in Connected F-Groups</a></li>
       
+      <li><a href="tori_classification_by_cocycles.html">Tori Are Classified by Cocycles in GL_n(Z)</a></li>
+      
+      <li><a href="tori_finiteness_per_rank.html">Finiteness of Tori of Bounded Rank</a></li>
+      
       <li><a href="tori_induced_resolution.html">Resolution of a Torus by Induced Tori</a></li>
       
+      <li><a href="tori_isogeny_classification.html">Tori up to Isogeny Are Rational Representations</a></li>
+      
       <li><a href="tori_rank_one_classification.html">Classification of Rank-One Tori</a></li>
+      
+      <li><a href="tori_real_tori_classification.html">Classification of Real Tori</a></li>
       
       <li><a href="tori_split_anisotropic_decomposition.html">Split-Anisotropic Decomposition of a Torus</a></li>
       
       <li><a href="tori_splitting_field.html">The Minimal Splitting Field of a Torus</a></li>
       
       <li><a href="tori_subtori_and_quotients.html">Subtori and Quotients via the Character Lattice</a></li>
+      
+      <li><a href="tori_tori_over_finite_fields.html">Tori over Finite Fields</a></li>
       
       <li><a href="tori_weil_restriction_of_tori.html">Weil Restriction of Tori</a></li>
       

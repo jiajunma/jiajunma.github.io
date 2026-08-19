@@ -1,0 +1,116 @@
+{
+  "id": "tori.classification_hom_level",
+  "title": "Homomorphisms of Tori Correspond to Lattice Maps",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_classification_hom_level.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori",
+    "AlgebraicGroups.Forms"
+  ],
+  "body_html": "<h1>Homomorphisms of Tori Correspond to Lattice Maps</h1>\n<p>Let \\(E/k\\) be a finite Galois extension with group\n\\(\\Gamma = \\operatorname{Gal}(E/k)\\), and let \\(T, T'\\) be tori over\n\\(k\\) split by \\(E\\). Then the character-lattice functor gives a\nbijection\n\\[\n\\operatorname{Hom}_{k\\text{-grp}}(T,\\, T')\n\\;\\;\\xrightarrow{\\;\\sim\\;}\\;\\;\n\\operatorname{Hom}_{\\Gamma}\\bigl(X^*(T'),\\, X^*(T)\\bigr),\n\\qquad f \\longmapsto X^*(f) = (\\chi \\mapsto \\chi \\circ f_E),\n\\]\nwhere the right-hand side is the group of \\(\\Gamma\\)-equivariant\nhomomorphisms of the character lattices\n(<a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"../../tori/tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>). The bijection is\ncontravariant and compatible with composition and identities.</p>",
+  "proof_html": "<p><strong>Step 1: descent of homs.</strong> \\(k\\)-homomorphisms \\(T \\to T'\\)\ncorrespond to \\(k\\)-Hopf algebra maps \\(k[T'] \\to k[T]\\), and by the\nhom part of <a class=\"node-ref\" data-node-id=\"forms.hopf_descent\" href=\"../../forms/forms_hopf_descent.html\">Galois Descent for Hopf Algebras</a> these correspond to\n\\(\\Gamma\\)-equivariant \\(E\\)-Hopf maps \\(E[T'_E] \\to E[T_E]\\), i.e.\n\\[\n\\operatorname{Hom}_{k\\text{-grp}}(T, T')\n\\;\\cong\\;\n\\operatorname{Hom}_{E\\text{-grp}}(T_E,\\, T'_E)^{\\Gamma},\n\\]\nwhere \\(\\Gamma\\) acts on an \\(E\\)-homomorphism by conjugating with\nthe semilinear actions on both coordinate algebras.</p>\n<p><strong>Step 2: the split case.</strong> Over \\(E\\) both tori are split, so by\nCartier duality for diagonalizable groups\n(<a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups_antiequivalence\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a>)\n\\[\n\\operatorname{Hom}_{E\\text{-grp}}(T_E,\\, T'_E)\n\\;\\cong\\;\n\\operatorname{Hom}_{\\mathbb{Z}}\\bigl(X^*(T'),\\, X^*(T)\\bigr),\n\\]\ncontravariantly: an \\(E\\)-homomorphism of split tori is determined by\nits effect on characters, and every lattice map arises (on group\nalgebras, \\(e^{m'} \\mapsto e^{\\phi(m')}\\)).</p>\n<p><strong>Step 3: matching the actions.</strong> The \\(\\Gamma\\)-action of Step 1 on\n\\(E\\)-homomorphisms corresponds under Step 2 to the conjugation\naction on lattice maps,\n\\(\\phi \\mapsto \\sigma_\\gamma \\circ \\phi \\circ \\sigma'^{-1}_\\gamma\\):\nthis is the computation that the semilinear action permutes the\ngroup-like bases by the lattice actions\n(<a class=\"node-ref\" data-node-id=\"tori.characters_as_group_like_elements\" href=\"../../tori/tori_characters_as_group_like_elements.html\">Characters Are Group-Like Elements</a> transported as in\n<a class=\"node-ref\" data-node-id=\"tori.twisted_form_of_lattice\" href=\"../../tori/tori_twisted_form_of_lattice.html\">The Twisted Form of a Galois Lattice</a> property (3)). Fixed points of\nthe conjugation action are exactly the \\(\\Gamma\\)-equivariant lattice\nmaps. Combining the three displays gives the bijection; functoriality\nholds because each step is compatible with composition. \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "reductive_groups.diagonalizable_groups_antiequivalence",
+      "title": "Diagonalizable Groups Are Dual to Character Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_diagonalizable_groups_antiequivalence.html"
+    },
+    {
+      "id": "forms.hopf_descent",
+      "title": "Galois Descent for Hopf Algebras",
+      "href": "AlgebraicGroups/Forms/forms_hopf_descent.html"
+    },
+    {
+      "id": "tori.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "href": "AlgebraicGroups/Tori/tori_character_and_cocharacter_lattices.html"
+    },
+    {
+      "id": "tori.characters_as_group_like_elements",
+      "title": "Characters Are Group-Like Elements",
+      "href": "AlgebraicGroups/Tori/tori_characters_as_group_like_elements.html"
+    },
+    {
+      "id": "tori.twisted_form_of_lattice",
+      "title": "The Twisted Form of a Galois Lattice",
+      "href": "AlgebraicGroups/Tori/tori_twisted_form_of_lattice.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.charLatticeMap",
+      "display_name": "Langlands.Tori.charLatticeMap",
+      "qualified_name": "Langlands.Tori.charLatticeMap",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "def",
+      "signature": "noncomputable def charLatticeMap (f : A →ₐc[k] B) :\n    CharLattice k E A →* CharLattice k E B where\n  toFun x :=\n    ⟨Algebra.TensorProduct.map (AlgHom.id E E) f.toAlgHom x.val, by\n      sorry⟩ -- proof: M5 (base change of a Hopf hom preserves group-likes)\n  map_one' := by\n    ext\n    exact map_one (Algebra.TensorProduct.map (AlgHom.id E E) f.toAlgHom)\n  map_mul' := fun x y => by\n    ext\n    exact map_mul (Algebra.TensorProduct.map (AlgHom.id E E) f.toAlgHom)\n      x.val y.val",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L294",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.charLatticeMap_galAct",
+      "display_name": "Langlands.Tori.charLatticeMap_galAct",
+      "qualified_name": "Langlands.Tori.charLatticeMap_galAct",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "theorem",
+      "signature": "theorem charLatticeMap_galAct (f : A →ₐc[k] B) (γ : E ≃ₐ[k] E)\n    (x : CharLattice k E A) :\n    charLatticeMap k E f (charGalAct k E A γ x) =\n      charGalAct k E B γ (charLatticeMap k E f x)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L313",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.existsUnique_bialgHom_of_equivariant",
+      "display_name": "Langlands.Tori.existsUnique_bialgHom_of_equivariant",
+      "qualified_name": "Langlands.Tori.existsUnique_bialgHom_of_equivariant",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "kind": "theorem",
+      "signature": "theorem existsUnique_bialgHom_of_equivariant\n    [FiniteDimensional k E] [IsGalois k E]\n    (hA : IsTorusAlgebra k E A) (hB : IsTorusAlgebra k E B)\n    (g : CharLattice k E A →* CharLattice k E B)\n    (hg : ∀ γ x, g (charGalAct k E A γ x) = charGalAct k E B γ (g x)) :\n    ∃! f : A →ₐc[k] B, charLatticeMap k E f = g",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L326",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.CharLattice",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}
