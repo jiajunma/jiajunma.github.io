@@ -779,7 +779,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L74"><code>Langlands.Tori.CharLattice</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L52"><code>Langlands.Tori.CharLattice</code></a>
           
           
           
@@ -789,13 +789,14 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev CharLattice : Type u := GroupLike E (E ⊗[k] A)</code></pre>
+          <pre class="lean-signature"><code>abbrev CharLattice (A : Type v) [CommSemiring A] [Bialgebra R A] : Type _ :=
+  Additive (CharacterGroup R A)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L190"><code>Langlands.Tori.charGalAct</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L290"><code>Langlands.Tori.charGalAct</code></a>
           
           
           
@@ -806,33 +807,45 @@
           
           
           <pre class="lean-signature"><code>noncomputable def charGalAct :
-    (E ≃ₐ[k] E) →* Monoid.End (CharLattice k E A) where
+    (E ≃ₐ[k] E) →* Monoid.End (CharacterGroup E (E ⊗[k] A)) where
   toFun γ :=
-    { toFun := fun x =&gt;
-        ⟨galAlgAut k E A γ x.val, isGroupLikeElem_galAlgAut k E A γ x⟩
+    { toFun := fun χ =&gt; toConv (conjChar k E A γ χ.ofConv)
       map_one&#39; := by
-        ext
-        exact map_one (galAlgAut k E A γ)
-      map_mul&#39; := fun x y =&gt; by
-        ext
-        exact map_mul (galAlgAut k E A γ) x.val y.val }
+        refine WithConv.ofConv_injective (charBialgHom_ext k E A fun n =&gt; ?_)
+        rw [conjChar_single_one, BialgHom.convOne_apply,
+          (AddMonoidAlgebra.isGroupLikeElem_single_one
+            (R := E) (n : ℤ)).counit_eq_one]
+        simp
+      map_mul&#39; := fun χ ψ =&gt; by
+        refine WithConv.ofConv_injective (charBialgHom_ext k E A fun n =&gt; ?_)
+        rw [conjChar_single_one,
+          convMul_apply_of_isGroupLikeElem _ _
+            (AddMonoidAlgebra.isGroupLikeElem_single_one n),
+          convMul_apply_of_isGroupLikeElem _ _
+            (AddMonoidAlgebra.isGroupLikeElem_single_one n),
+          map_mul, conjChar_single_one, conjChar_single_one] }
   map_one&#39; := by
-    ext x
-    exact galAlgAut_one k E A x.val
+    ext χ m
+    show conjChar k E A 1 χ.ofConv (AddMonoidAlgebra.single m 1) =
+      χ.ofConv (AddMonoidAlgebra.single m 1)
+    rw [conjChar_single_one, galAlgAut_one]
   map_mul&#39; := fun γ δ =&gt; by
-    ext x
-    exact galAlgAut_mul k E A γ δ x.val</code></pre>
+    ext χ m
+    show conjChar k E A (γ * δ) χ.ofConv (AddMonoidAlgebra.single m 1) =
+      conjChar k E A γ (conjChar k E A δ χ.ofConv) (AddMonoidAlgebra.single m 1)
+    rw [conjChar_single_one, conjChar_single_one, conjChar_single_one,
+      galAlgAut_mul]</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L296"><code>Langlands.Tori.CocharLattice</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L67"><code>Langlands.Tori.CocharLattice</code></a>
           
           
           
           <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Duality
           </span>
           
           
@@ -843,47 +856,46 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L306"><code>Langlands.Tori.charPairing</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L76"><code>Langlands.Tori.charPairing</code></a>
           
           
           
           <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Duality
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def charPairing
-    (x : CharLattice k E A) (l : CocharLattice k E A) : ℤ :=
+    (x : CharLattice E (E ⊗[k] A)) (l : CocharLattice k E A) : ℤ :=
   Multiplicative.toAdd &lt;|
-    (diagGroupLikeEquiv E ℤ).symm
-      ⟨l.ofConv x.val, x.isGroupLikeElem_val.map l.ofConv⟩</code></pre>
+    (diagCharEquiv E ℤ).symm (toConv (l.ofConv.comp x.toMul.ofConv))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L345"><code>Langlands.Tori.charPairing_perfect</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L110"><code>Langlands.Tori.charPairing_perfect</code></a>
           
           
           
           <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Duality
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem charPairing_perfect [IsTorusAlgebra k E A]
-    (f : Additive (CharLattice k E A) →+ ℤ) :
+    (f : CharLattice E (E ⊗[k] A) →+ ℤ) :
     ∃! l : CocharLattice k E A,
-      ∀ x : CharLattice k E A,
-        charPairing k E A x l = f (Additive.ofMul x)</code></pre>
+      ∀ x : CharLattice E (E ⊗[k] A),
+        charPairing k E A x l = f x</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L245"><code>Langlands.Tori.SchemeCharacterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L247"><code>Langlands.Tori.SchemeCharacterGroup</code></a>
           
           
           
@@ -901,7 +913,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L235"><code>Langlands.Tori.gmGrp</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L237"><code>Langlands.Tori.gmGrp</code></a>
           
           
           
@@ -953,7 +965,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L108"><code>Langlands.Tori.diagCharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L110"><code>Langlands.Tori.diagCharEquiv</code></a>
           
           
           
@@ -973,7 +985,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L129"><code>Langlands.Tori.diagCocharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L131"><code>Langlands.Tori.diagCocharEquiv</code></a>
           
           
           
@@ -991,7 +1003,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L190"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L192"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
           
           
           
@@ -1008,7 +1020,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L308"><code>Langlands.Tori.characterGroup_inv_mul_cancel</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L327"><code>Langlands.Tori.characterGroup_inv_mul_cancel</code></a>
           
           
           
@@ -1016,7 +1028,7 @@
             LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
           </span>
           
-          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
           
           <pre class="lean-signature"><code>theorem characterGroup_inv_mul_cancel
     (A : Type v) [CommSemiring A] [Bialgebra R A]
@@ -1026,7 +1038,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L317"><code>Langlands.Tori.comul_comp_antipode</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L399"><code>Langlands.Tori.comul_comp_antipode</code></a>
           
           
           
@@ -1046,7 +1058,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L250"><code>Langlands.Tori.diagGrp</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L252"><code>Langlands.Tori.diagGrp</code></a>
           
           
           
@@ -1065,7 +1077,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L295"><code>Langlands.Tori.gmAntipodeBialgHom</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L299"><code>Langlands.Tori.gmAntipodeBialgHom</code></a>
           
           
           
@@ -1083,7 +1095,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L172"><code>Langlands.Tori.groupLikeSingle</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L174"><code>Langlands.Tori.groupLikeSingle</code></a>
           
           
           
@@ -1125,7 +1137,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharacterGroup</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharLattice</code></a>
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharacterGroup</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharLattice</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.Duality</code></a>
       </p>
       
     </div>

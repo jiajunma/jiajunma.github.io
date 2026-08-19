@@ -34,6 +34,36 @@
     }
   ],
   "dependents": [],
-  "lean_refs": [],
-  "lean_modules": []
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.convMul_apply_of_isGroupLikeElem",
+      "display_name": "Langlands.Tori.convMul_apply_of_isGroupLikeElem",
+      "qualified_name": "Langlands.Tori.convMul_apply_of_isGroupLikeElem",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "kind": "theorem",
+      "signature": "theorem convMul_apply_of_isGroupLikeElem\n    {C A : Type*} [Semiring C] [CommSemiring A] [Bialgebra R C]\n    [Bialgebra R A] [Coalgebra.IsCocomm R C]\n    (f g : WithConv (C →ₐc[R] A)) {c : C} (hc : IsGroupLikeElem R c) :\n    (f * g).ofConv c = f.ofConv c * g.ofConv c",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L366",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

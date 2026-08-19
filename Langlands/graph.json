@@ -4102,7 +4102,7 @@
         "Langlands.Tori.diagCharEquiv",
         "Langlands.Tori.diagHomEquiv",
         "Langlands.Tori.diag_bialgEquiv_iff_addEquiv",
-        "Langlands.Tori.groupLikeLift",
+        "Langlands.Tori.charLift",
         "Langlands.Tori.IsDiagonalizableAlgebra",
         "Langlands.Tori.characterGroup_inv_mul_cancel",
         "Langlands.Tori.comul_comp_antipode",
@@ -6003,6 +6003,9 @@
       "topics": [
         "AlgebraicGroups.Tori",
         "AlgebraicGroups.AffineGroupSchemes"
+      ],
+      "lean_declarations": [
+        "Langlands.Tori.convMul_apply_of_isGroupLikeElem"
       ],
       "topic": "AlgebraicGroups.Tori",
       "uses": [

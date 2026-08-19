@@ -799,7 +799,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L213"><code>Langlands.Tori.charRep</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L326"><code>Langlands.Tori.charRep</code></a>
           
           
           
@@ -810,7 +810,7 @@
           
           
           <pre class="lean-signature"><code>noncomputable def charRep :
-    Representation ℤ (E ≃ₐ[k] E) (Additive (CharLattice k E A)) where
+    Representation ℤ (E ≃ₐ[k] E) (CharLattice E (E ⊗[k] A)) where
   toFun γ := (MonoidHom.toAdditive (charGalAct k E A γ)).toIntLinearMap
   map_one&#39; := by
     refine LinearMap.ext fun x =&gt; ?_
@@ -827,7 +827,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L59"><code>Langlands.Tori.TorusAlgCat</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L60"><code>Langlands.Tori.TorusAlgCat</code></a>
           
           
           
@@ -843,7 +843,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L66"><code>Langlands.Tori.TorusCat</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L67"><code>Langlands.Tori.TorusCat</code></a>
           
           
           
@@ -859,7 +859,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L81"><code>Langlands.Tori.LatticeCat</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L82"><code>Langlands.Tori.LatticeCat</code></a>
           
           
           
@@ -875,7 +875,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L94"><code>Langlands.Tori.charLatticeRep</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L96"><code>Langlands.Tori.charLatticeRep</code></a>
           
           
           
@@ -892,7 +892,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L105"><code>Langlands.Tori.charLatticeFunctor</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L107"><code>Langlands.Tori.charLatticeFunctor</code></a>
           
           
           
@@ -911,8 +911,7 @@
       charLattice_finite k E A.obj⟩
   map {A B} f :=
     ⟨Rep.ofHom
-      { toLinearMap :=
-          (MonoidHom.toAdditive (charLatticeMap k E f.hom.hom)).toIntLinearMap
+      { toLinearMap := (charLatticeMap k E f.hom.hom).toIntLinearMap
         isIntertwining&#39; := fun γ =&gt; by
           sorry }⟩ -- proof: M6 (equivariance = charLatticeMap_galAct)
   map_id A := by
@@ -924,7 +923,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L133"><code>Langlands.Tori.charLatticeFunctor_faithful</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L134"><code>Langlands.Tori.charLatticeFunctor_faithful</code></a>
           
           
           
@@ -942,7 +941,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L142"><code>Langlands.Tori.charLatticeFunctor_full</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L143"><code>Langlands.Tori.charLatticeFunctor_full</code></a>
           
           
           
@@ -960,7 +959,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L152"><code>Langlands.Tori.charLatticeFunctor_essSurj</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L153"><code>Langlands.Tori.charLatticeFunctor_essSurj</code></a>
           
           
           
@@ -978,7 +977,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L180"><code>Langlands.Tori.toriClassification</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L197"><code>Langlands.Tori.toriClassification</code></a>
           
           
           
@@ -997,7 +996,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L108"><code>Langlands.Tori.diagCharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L110"><code>Langlands.Tori.diagCharEquiv</code></a>
           
           
           
@@ -1017,7 +1016,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L139"><code>Langlands.Tori.diag_bialgEquiv_iff_addEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L141"><code>Langlands.Tori.diag_bialgEquiv_iff_addEquiv</code></a>
           
           
           

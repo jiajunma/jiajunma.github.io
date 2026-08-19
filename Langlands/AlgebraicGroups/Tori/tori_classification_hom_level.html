@@ -787,7 +787,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L398"><code>Langlands.Tori.charLatticeMap</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L361"><code>Langlands.Tori.charLatticeMap</code></a>
           
           
           
@@ -798,23 +798,13 @@
           
           
           <pre class="lean-signature"><code>noncomputable def charLatticeMap (f : A →ₐc[k] B) :
-    CharLattice k E A →* CharLattice k E B where
-  toFun x :=
-    ⟨Bialgebra.TensorProduct.map (BialgHom.id E E) f x.val,
-      x.2.map (Bialgebra.TensorProduct.map (BialgHom.id E E) f)⟩
-  map_one&#39; := by
-    ext
-    exact map_one (Bialgebra.TensorProduct.map (BialgHom.id E E) f)
-  map_mul&#39; := fun x y =&gt; by
-    ext
-    exact map_mul (Bialgebra.TensorProduct.map (BialgHom.id E E) f)
-      x.val y.val</code></pre>
+    CharLattice E (E ⊗[k] A) →+ CharLattice E (E ⊗[k] B)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L429"><code>Langlands.Tori.charLatticeMap_galAct</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L390"><code>Langlands.Tori.charLatticeMap_galAct</code></a>
           
           
           
@@ -825,36 +815,35 @@
           
           
           <pre class="lean-signature"><code>theorem charLatticeMap_galAct (f : A →ₐc[k] B) (γ : E ≃ₐ[k] E)
-    (x : CharLattice k E A) :
-    charLatticeMap k E f (charGalAct k E A γ x) =
-      charGalAct k E B γ (charLatticeMap k E f x)</code></pre>
+    (x : CharLattice E (E ⊗[k] A)) :
+    charLatticeMap k E f (charRep k E A γ x) =
+      charRep k E B γ (charLatticeMap k E f x)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L443"><code>Langlands.Tori.existsUnique_bialgHom_of_equivariant</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L168"><code>Langlands.Tori.existsUnique_bialgHom_of_equivariant</code></a>
           
           
           
           <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Classification
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem existsUnique_bialgHom_of_equivariant
-    [FiniteDimensional k E] [IsGalois k E]
     [IsTorusAlgebra k E A] [IsTorusAlgebra k E B]
-    (g : CharLattice k E A →* CharLattice k E B)
-    (hg : ∀ γ x, g (charGalAct k E A γ x) = charGalAct k E B γ (g x)) :
+    (g : CharLattice E (E ⊗[k] A) →+ CharLattice E (E ⊗[k] B))
+    (hg : ∀ γ x, g (charRep k E A γ x) = charRep k E B γ (g x)) :
     ∃! f : A →ₐc[k] B, charLatticeMap k E f = g</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharLattice</code></a>
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharLattice</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.Classification</code></a>
       </p>
       
     </div>

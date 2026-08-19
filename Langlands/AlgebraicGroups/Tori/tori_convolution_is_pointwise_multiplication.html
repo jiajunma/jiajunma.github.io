@@ -752,6 +752,8 @@
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
     </div>
   </header>
 
@@ -774,6 +776,40 @@
   </div>
   
 
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L366"><code>Langlands.Tori.convMul_apply_of_isGroupLikeElem</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem convMul_apply_of_isGroupLikeElem
+    {C A : Type*} [Semiring C] [CommSemiring A] [Bialgebra R C]
+    [Bialgebra R A] [Coalgebra.IsCocomm R C]
+    (f g : WithConv (C →ₐc[R] A)) {c : C} (hc : IsGroupLikeElem R c) :
+    (f * g).ofConv c = f.ofConv c * g.ofConv c</code></pre>
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharacterGroup</code></a>
+      </p>
+      
+    </div>
+  </div>
   
 
   <div class="theorem_thmcontent thm-content body">
