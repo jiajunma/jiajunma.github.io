@@ -785,7 +785,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L207"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L185"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
           
           
           
@@ -802,7 +802,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L119"><code>Langlands.Tori.characterGroup_diag_equiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L118"><code>Langlands.Tori.characterGroup_diag_equiv</code></a>
           
           
           
@@ -815,6 +815,24 @@
           <pre class="lean-signature"><code>theorem characterGroup_diag_equiv (M : Type u) [AddCommGroup M]
     [IsDomain R] :
     Nonempty (CharacterGroup R (Grp.mk (diagGroupOver R M)) ≃ Multiplicative M)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L335"><code>Langlands.Tori.nonempty_characterGroup_equiv_groupLike</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem nonempty_characterGroup_equiv_groupLike
+    (A : Type u) [CommRing A] [HopfAlgebra R A] :
+    Nonempty (CharacterGroup R (Grp.mk (specObjOver R A)) ≃ GroupLike R A)</code></pre>
         </li>
         
       </ul>

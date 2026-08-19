@@ -779,7 +779,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L57"><code>Langlands.Tori.CharLattice</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L53"><code>Langlands.Tori.CharLattice</code></a>
           
           
           
@@ -789,14 +789,14 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev CharLattice (A : Type v) [CommSemiring A] [Bialgebra R A] : Type _ :=
-  Additive (HopfCharacterGroup R A)</code></pre>
+          <pre class="lean-signature"><code>abbrev CharLattice (A : Type*) [CommRing A] [HopfAlgebra R A] :=
+  Additive (GroupLike R A)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L295"><code>Langlands.Tori.charGalAct</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L175"><code>Langlands.Tori.charGalAct</code></a>
           
           
           
@@ -807,40 +807,28 @@
           
           
           <pre class="lean-signature"><code>noncomputable def charGalAct :
-    (E ≃ₐ[k] E) →* Monoid.End (HopfCharacterGroup E (E ⊗[k] A)) where
+    (E ≃ₐ[k] E) →* Monoid.End (GroupLike E (E ⊗[k] A)) where
   toFun γ :=
-    { toFun := fun χ =&gt; toConv (conjChar k E A γ χ.ofConv)
+    { toFun := fun x =&gt;
+        ⟨galAlgAut k E A γ x.val, isGroupLikeElem_galAlgAut k E A γ x⟩
       map_one&#39; := by
-        refine WithConv.ofConv_injective (charBialgHom_ext k E A fun n =&gt; ?_)
-        rw [conjChar_single_one, BialgHom.convOne_apply,
-          (AddMonoidAlgebra.isGroupLikeElem_single_one
-            (R := E) (n : ℤ)).counit_eq_one]
-        simp
-      map_mul&#39; := fun χ ψ =&gt; by
-        refine WithConv.ofConv_injective (charBialgHom_ext k E A fun n =&gt; ?_)
-        rw [conjChar_single_one,
-          convMul_apply_of_isGroupLikeElem _ _
-            (AddMonoidAlgebra.isGroupLikeElem_single_one n),
-          convMul_apply_of_isGroupLikeElem _ _
-            (AddMonoidAlgebra.isGroupLikeElem_single_one n),
-          map_mul, conjChar_single_one, conjChar_single_one] }
+        ext
+        exact map_one (galAlgAut k E A γ)
+      map_mul&#39; := fun x y =&gt; by
+        ext
+        exact map_mul (galAlgAut k E A γ) x.val y.val }
   map_one&#39; := by
-    ext χ m
-    show conjChar k E A 1 χ.ofConv (AddMonoidAlgebra.single m 1) =
-      χ.ofConv (AddMonoidAlgebra.single m 1)
-    rw [conjChar_single_one, galAlgAut_one]
+    ext x
+    exact galAlgAut_one k E A x.val
   map_mul&#39; := fun γ δ =&gt; by
-    ext χ m
-    show conjChar k E A (γ * δ) χ.ofConv (AddMonoidAlgebra.single m 1) =
-      conjChar k E A γ (conjChar k E A δ χ.ofConv) (AddMonoidAlgebra.single m 1)
-    rw [conjChar_single_one, conjChar_single_one, conjChar_single_one,
-      galAlgAut_mul]</code></pre>
+    ext x
+    exact galAlgAut_mul k E A γ δ x.val</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L68"><code>Langlands.Tori.CocharLattice</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L67"><code>Langlands.Tori.CocharLattice</code></a>
           
           
           
@@ -850,13 +838,13 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev CocharLattice : Type u := HopfCocharacterGroup E (E ⊗[k] A)</code></pre>
+          <pre class="lean-signature"><code>abbrev CocharLattice := WithConv ((E ⊗[k] A) →ₐc[E] LaurentPolynomial E)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L77"><code>Langlands.Tori.charPairing</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Duality.lean#L76"><code>Langlands.Tori.charPairing</code></a>
           
           
           
@@ -869,7 +857,8 @@
           <pre class="lean-signature"><code>noncomputable def charPairing
     (x : CharLattice E (E ⊗[k] A)) (l : CocharLattice k E A) : ℤ :=
   Multiplicative.toAdd &lt;|
-    (diagCharEquiv E ℤ).symm (toConv (l.ofConv.comp x.toMul.ofConv))</code></pre>
+    (diagGroupLikeEquiv E ℤ).symm
+      ⟨l.ofConv x.toMul.val, x.toMul.isGroupLikeElem_val.map l.ofConv⟩</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -895,7 +884,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L88"><code>Langlands.Tori.CharacterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L87"><code>Langlands.Tori.CharacterGroup</code></a>
           
           
           
@@ -906,31 +895,14 @@
           
           
           <pre class="lean-signature"><code>noncomputable def CharacterGroup
-    (G : Grp (Over (Scheme.Spec.obj (op R)))) : Type _ :=
-  G ⟶ Grp.mk (multiplicativeGroup R)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">abbrev</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L140"><code>Langlands.Tori.HopfCharacterGroup</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>abbrev HopfCharacterGroup (A : Type v) [CommSemiring A] [Bialgebra R A] : Type _ :=
-  WithConv (LaurentPolynomial R →ₐc[R] A)</code></pre>
+    (G : Grp (Over (Scheme.Spec.obj (op R)))) :=
+  G ⟶ 𝔾ₘ R</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L97"><code>Langlands.Tori.CocharacterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L96"><code>Langlands.Tori.CocharacterGroup</code></a>
           
           
           
@@ -941,31 +913,14 @@
           
           
           <pre class="lean-signature"><code>noncomputable def CocharacterGroup
-    (G : Grp (Over (Scheme.Spec.obj (op R)))) : Type _ :=
-  Grp.mk (multiplicativeGroup R) ⟶ G</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">abbrev</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L150"><code>Langlands.Tori.HopfCocharacterGroup</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>abbrev HopfCocharacterGroup (A : Type v) [Semiring A] [Bialgebra R A] : Type _ :=
-  WithConv (A →ₐc[R] LaurentPolynomial R)</code></pre>
+    (G : Grp (Over (Scheme.Spec.obj (op R)))) :=
+  𝔾ₘ R ⟶ G</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/ReductiveGroups/Diagonalizable.lean#L50"><code>Langlands.ReductiveGroups.diagCharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/ReductiveGroups/Diagonalizable.lean#L49"><code>Langlands.ReductiveGroups.diagCharEquiv</code></a>
           
           
           
@@ -976,7 +931,7 @@
           
           
           <pre class="lean-signature"><code>noncomputable def diagCharEquiv :
-    Multiplicative M ≃* HopfCharacterGroup R (AddMonoidAlgebra R M) :=
+    Multiplicative M ≃* WithConv (LaurentPolynomial R →ₐc[R] AddMonoidAlgebra R M) :=
   AddEquiv.toMultiplicativeLeft
     ((zmultiplesAddEquiv M).trans
       (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))</code></pre>
@@ -985,7 +940,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L174"><code>Langlands.Tori.diagCocharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L152"><code>Langlands.Tori.diagCocharEquiv</code></a>
           
           
           
@@ -996,14 +951,14 @@
           
           
           <pre class="lean-signature"><code>noncomputable def diagCocharEquiv :
-    (M →+ ℤ) ≃ HopfCocharacterGroup R (AddMonoidAlgebra R M) :=
+    (M →+ ℤ) ≃ WithConv (AddMonoidAlgebra R M →ₐc[R] LaurentPolynomial R) :=
   (AddMonoidAlgebra.mapDomainBialgHomEquiv).trans (WithConv.equiv _).symm</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L207"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L185"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
           
           
           
@@ -1020,7 +975,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L264"><code>Langlands.Tori.characterGroup_inv_mul_cancel</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L242"><code>Langlands.Tori.characterGroup_inv_mul_cancel</code></a>
           
           
           
@@ -1031,14 +986,14 @@
           
           
           <pre class="lean-signature"><code>theorem characterGroup_inv_mul_cancel
-    (A : Type v) [CommSemiring A] [Bialgebra R A]
-    (φ : HopfCharacterGroup R A) : φ⁻¹ * φ = 1</code></pre>
+    (A : Type*) [CommSemiring A] [Bialgebra R A]
+    (φ : WithConv (LaurentPolynomial R →ₐc[R] A)) : φ⁻¹ * φ = 1</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L336"><code>Langlands.Tori.comul_comp_antipode</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L314"><code>Langlands.Tori.comul_comp_antipode</code></a>
           
           
           
@@ -1049,7 +1004,7 @@
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem comul_comp_antipode
-    (A : Type v) [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A] :
+    (A : Type*) [CommRing A] [HopfAlgebra R A] [Coalgebra.IsCocomm R A] :
     (Coalgebra.comul (R := R) (A := A)) ∘ₗ (HopfAlgebra.antipode R) =
       (TensorProduct.map (HopfAlgebra.antipode R) (HopfAlgebra.antipode R))
         ∘ₗ Coalgebra.comul</code></pre>
@@ -1058,7 +1013,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L236"><code>Langlands.Tori.gmAntipodeBialgHom</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L214"><code>Langlands.Tori.gmAntipodeBialgHom</code></a>
           
           
           
@@ -1076,7 +1031,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L189"><code>Langlands.Tori.groupLikeSingle</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L167"><code>Langlands.Tori.groupLikeSingle</code></a>
           
           
           
@@ -1102,7 +1057,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L157"><code>Langlands.Tori.zmultiplesAddEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L135"><code>Langlands.Tori.zmultiplesAddEquiv</code></a>
           
           
           
