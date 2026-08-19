@@ -1,0 +1,100 @@
+{
+  "id": "affine_group_schemes.group_algebra_scheme",
+  "title": "The Diagonalizable Group Scheme D(M)",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_algebra_scheme.html",
+  "primary_topic": "AlgebraicGroups.AffineGroupSchemes",
+  "topics": [
+    "AlgebraicGroups.AffineGroupSchemes",
+    "AlgebraicGroups.Tori"
+  ],
+  "body_html": "<h1>The Diagonalizable Group Scheme D(M)</h1>\n<p>Let \\(R\\) be a commutative ring and \\(M\\) an abelian group. The\n<strong>diagonalizable group scheme</strong> \\(D(M)\\) over \\(R\\) admits two\nequivalent descriptions.</p>\n<p><strong>As a spectrum (construction).</strong>\n\\[\nD(M) \\;=\\; \\operatorname{Spec} R[M],\n\\]\nthe spectrum of the group algebra, whose Hopf structure is group-like\non the canonical basis: \\(\\Delta(e^m) = e^m \\otimes e^m\\),\n\\(\\varepsilon(e^m) = 1\\), \\(S(e^m) = e^{-m}\\).</p>\n<p><strong>By its points (characterization).</strong> For any \\(R\\)-scheme \\(T\\),\n\\[\nD(M)(T) \\;=\\; \\operatorname{Hom}_{\\mathrm{grp}}\\bigl(M,\\,\n\\Gamma(T, \\mathcal{O}_T)^{\\times}\\bigr),\n\\]\nthe group of characters of \\(M\\) valued in units of the coordinate\nring, with pointwise multiplication. The equivalence with the\nspectral description is the chain\n\\[\n\\operatorname{Hom}_{R}(T, \\operatorname{Spec} R[M])\n\\;\\cong\\; \\operatorname{Hom}_{R\\text{-alg}}(R[M], \\Gamma(T))\n\\;\\cong\\; \\operatorname{Hom}_{\\mathrm{mon}}(M, \\Gamma(T))\n\\;\\cong\\; \\operatorname{Hom}_{\\mathrm{grp}}(M, \\Gamma(T)^{\\times}),\n\\]\nusing affineness, the universal property of the group algebra, and the\nfact that a monoid homomorphism from a group lands in the units.</p>\n<p>The points description is the one to <em>read</em>: it determines \\(D(M)\\)\nup to canonical isomorphism and exhibits the group law with no\nreference to the Hopf plumbing.</p>\n<p>Basic examples: \\(D(\\mathbb{Z}) = \\mathbb{G}_m\\)\n(<a class=\"node-ref\" data-node-id=\"affine_group_schemes.multiplicative_group_scheme\" href=\"../../affine_group_schemes/affine_group_schemes_multiplicative_group_scheme.html\">Multiplicative Group Scheme 𝔾_m</a>),\n\\(D(\\mathbb{Z}/n) = \\mu_n\\)\n(<a class=\"node-ref\" data-node-id=\"affine_group_schemes.roots_of_unity_group_scheme\" href=\"../../affine_group_schemes/affine_group_schemes_roots_of_unity_group_scheme.html\">Roots of Unity Group Scheme μ_n</a>),\n\\(D(\\mathbb{Z}^n) = \\mathbb{G}_m^n\\)\n(<a class=\"node-ref\" data-node-id=\"tori.split_torus\" href=\"../../tori/tori_split_torus.html\">the split torus</a>).</p>\n<p>A group scheme is called <strong>diagonalizable</strong> if it is isomorphic to\nsome \\(D(M)\\); that property, and the anti-equivalence \\(M \\mapsto\nD(M)\\), are recorded at\n<a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups.html\">Diagonalizable Groups</a> and\n<a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups_antiequivalence\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.multiplicative_group_scheme",
+      "title": "Multiplicative Group Scheme 𝔾_m",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_multiplicative_group_scheme.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html"
+    },
+    {
+      "id": "foundations.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "Foundations/foundations_hopf_algebras.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.diagGroupOver",
+      "display_name": "Langlands.Tori.diagGroupOver",
+      "qualified_name": "Langlands.Tori.diagGroupOver",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Diagonalizable",
+      "kind": "def",
+      "signature": "noncomputable def diagGroupOver : Over (Scheme.Spec.obj (op R)) :=\n  specObjOver R (AddMonoidAlgebra R M)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Diagonalizable.lean#L59",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.DiagGroup",
+      "display_name": "Langlands.Tori.DiagGroup",
+      "qualified_name": "Langlands.Tori.DiagGroup",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Diagonalizable",
+      "kind": "noncomputable abbrev",
+      "signature": "noncomputable abbrev DiagGroup : Scheme.{u}",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Diagonalizable.lean#L74",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.diagGroupPointsEquiv",
+      "display_name": "Langlands.Tori.diagGroupPointsEquiv",
+      "qualified_name": "Langlands.Tori.diagGroupPointsEquiv",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Diagonalizable",
+      "kind": "def",
+      "signature": "noncomputable def diagGroupPointsEquiv (T : Over (Scheme.Spec.obj (op R))) :\n    (T ⟶ diagGroupOver R M) ≃\n      (Multiplicative M →* (Γ(T.left, ⊤) : CommRingCat)ˣ)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Diagonalizable.lean#L89",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.Diagonalizable",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.Diagonalizable",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Diagonalizable.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

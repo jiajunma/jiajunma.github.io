@@ -4,24 +4,32 @@
     "title": "Algebraicgroups.Tori",
     "href": "AlgebraicGroups/Tori/index.html",
     "parent": "AlgebraicGroups",
-    "node_count": 19,
-    "descendant_node_count": 19
+    "node_count": 20,
+    "descendant_node_count": 20
   },
   "counts": {
-    "internal_nodes": 19,
+    "internal_nodes": 20,
     "inlined_nodes": 0,
-    "descendant_nodes": 19,
+    "descendant_nodes": 20,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 19,
+    "non_proof_plan_nodes": 20,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 26,
-    "visible_nodes_with_selected_proof_plans": 26
+    "visible_nodes_without_proof_plans": 27,
+    "visible_nodes_with_selected_proof_plans": 27
   },
   "nodes": [
+    {
+      "id": "affine_group_schemes.group_algebra_scheme",
+      "title": "The Diagonalizable Group Scheme D(M)",
+      "kind": "definition",
+      "status": "admitted",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_algebra_scheme.html",
+      "payload": "node_payloads/affine_group_schemes_group_algebra_scheme.json"
+    },
     {
       "id": "forms.galois_descent_for_vector_spaces",
       "title": "Galois Descent for Vector Spaces",
@@ -473,7 +481,7 @@
       "title": "Algebraicgroups.Affinegroupschemes",
       "href": "AlgebraicGroups/AffineGroupSchemes/index.html",
       "role": "dependency",
-      "node_count": 38
+      "node_count": 39
     },
     {
       "id": "AlgebraicGroups.Forms",
@@ -512,6 +520,13 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:AlgebraicGroups.AffineGroupSchemes",
+      "to": "affine_group_schemes.group_algebra_scheme",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "count": 2
+    },
     {
       "from": "topic:AlgebraicGroups.AffineGroupSchemes",
       "to": "tori.algebraic_tori",
@@ -573,6 +588,13 @@
       "to": "tori.subtori_and_quotients",
       "kind": "boundary_dependency",
       "topic": "AlgebraicGroups.ReductiveGroups",
+      "count": 1
+    },
+    {
+      "from": "topic:Foundations",
+      "to": "affine_group_schemes.group_algebra_scheme",
+      "kind": "boundary_dependency",
+      "topic": "Foundations",
       "count": 1
     },
     {
@@ -640,6 +662,12 @@
       "count": 18
     },
     {
+      "id": "affine-group-schemes",
+      "title": "affine-group-schemes",
+      "href": "keywords/affine-group-schemes.html",
+      "count": 1
+    },
+    {
       "id": "anisotropic",
       "title": "anisotropic",
       "href": "keywords/anisotropic.html",
@@ -682,6 +710,12 @@
       "count": 1
     },
     {
+      "id": "diagonalizable",
+      "title": "diagonalizable",
+      "href": "keywords/diagonalizable.html",
+      "count": 1
+    },
+    {
       "id": "example",
       "title": "example",
       "href": "keywords/example.html",
@@ -703,6 +737,12 @@
       "id": "galois-module",
       "title": "galois-module",
       "href": "keywords/galois-module.html",
+      "count": 1
+    },
+    {
+      "id": "group-scheme",
+      "title": "group-scheme",
+      "href": "keywords/group-scheme.html",
       "count": 1
     },
     {

@@ -439,6 +439,7 @@
       "used_by": [
         "affine_group_schemes.additive_group_scheme",
         "affine_group_schemes.general_linear_group_scheme",
+        "affine_group_schemes.group_algebra_scheme",
         "affine_group_schemes.hopf_spec_functor",
         "affine_group_schemes.multiplicative_group_scheme",
         "affine_group_schemes.regular_representation_example",
@@ -584,6 +585,33 @@
       "uses": [
         "affine_group_schemes.general_linear_group_scheme",
         "affine_group_schemes.points_functor_definition"
+      ]
+    },
+    {
+      "id": "affine_group_schemes.group_algebra_scheme",
+      "title": "The Diagonalizable Group Scheme D(M)",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "diagonalizable",
+        "group-scheme",
+        "affine-group-schemes"
+      ],
+      "primary_topic": "AlgebraicGroups.AffineGroupSchemes",
+      "topics": [
+        "AlgebraicGroups.AffineGroupSchemes",
+        "AlgebraicGroups.Tori"
+      ],
+      "lean_declarations": [
+        "Langlands.Tori.diagGroupOver",
+        "Langlands.Tori.DiagGroup",
+        "Langlands.Tori.diagGroupPointsEquiv"
+      ],
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "uses": [
+        "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+        "affine_group_schemes.multiplicative_group_scheme",
+        "foundations.hopf_algebras"
       ]
     },
     {
@@ -765,6 +793,7 @@
         "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme"
       ],
       "used_by": [
+        "affine_group_schemes.group_algebra_scheme",
         "affine_group_schemes.multiplicative_group_scheme_points",
         "affine_group_schemes.roots_of_unity_group_scheme",
         "affine_group_schemes.special_linear_group_scheme",
@@ -2869,6 +2898,7 @@
         "affine_group_schemes.comodule_definition",
         "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "affine_group_schemes.group_algebra_scheme",
         "affine_group_schemes.hopf_spec_functor",
         "affine_group_schemes.multiplication_is_coalgebra_hom",
         "covers.central_extensions_of_algebraic_groups",
@@ -3956,10 +3986,6 @@
       "primary_topic": "AlgebraicGroups.ReductiveGroups",
       "topics": [
         "AlgebraicGroups.ReductiveGroups"
-      ],
-      "lean_declarations": [
-        "Langlands.Tori.diagonalizable",
-        "Langlands.Tori.Diagonalizable"
       ],
       "topic": "AlgebraicGroups.ReductiveGroups",
       "uses": [
@@ -5964,7 +5990,7 @@
         "AlgebraicGroups.Tori"
       ],
       "lean_declarations": [
-        "Langlands.Tori.splitTorus",
+        "Langlands.Tori.splitTorusOver",
         "Langlands.Tori.SplitTorus"
       ],
       "topic": "AlgebraicGroups.Tori",
@@ -6331,6 +6357,18 @@
     {
       "from": "affine_group_schemes.points_functor_definition",
       "to": "affine_group_schemes.general_linear_group_scheme_points"
+    },
+    {
+      "from": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "to": "affine_group_schemes.group_algebra_scheme"
+    },
+    {
+      "from": "affine_group_schemes.multiplicative_group_scheme",
+      "to": "affine_group_schemes.group_algebra_scheme"
+    },
+    {
+      "from": "foundations.hopf_algebras",
+      "to": "affine_group_schemes.group_algebra_scheme"
     },
     {
       "from": "affine_group_schemes.affine_group_scheme_definition",

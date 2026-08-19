@@ -4,22 +4,22 @@
     "title": "Algebraicgroups.Affinegroupschemes",
     "href": "AlgebraicGroups/AffineGroupSchemes/index.html",
     "parent": "AlgebraicGroups",
-    "node_count": 38,
-    "descendant_node_count": 38
+    "node_count": 39,
+    "descendant_node_count": 39
   },
   "counts": {
-    "internal_nodes": 38,
+    "internal_nodes": 39,
     "inlined_nodes": 0,
-    "descendant_nodes": 38,
+    "descendant_nodes": 39,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 38,
+    "non_proof_plan_nodes": 39,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 47,
-    "visible_nodes_with_selected_proof_plans": 47
+    "visible_nodes_without_proof_plans": 48,
+    "visible_nodes_with_selected_proof_plans": 48
   },
   "nodes": [
     {
@@ -181,6 +181,14 @@
       "status": "admitted",
       "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_general_linear_group_scheme_points.html",
       "payload": "node_payloads/affine_group_schemes_general_linear_group_scheme_points.json"
+    },
+    {
+      "id": "affine_group_schemes.group_algebra_scheme",
+      "title": "The Diagonalizable Group Scheme D(M)",
+      "kind": "definition",
+      "status": "admitted",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_algebra_scheme.html",
+      "payload": "node_payloads/affine_group_schemes_group_algebra_scheme.json"
     },
     {
       "id": "affine_group_schemes.hopf_spec_essential_image_affine",
@@ -464,6 +472,16 @@
       "kind": "uses"
     },
     {
+      "from": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "to": "affine_group_schemes.group_algebra_scheme",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.multiplicative_group_scheme",
+      "to": "affine_group_schemes.group_algebra_scheme",
+      "kind": "uses"
+    },
+    {
       "from": "affine_group_schemes.affine_group_scheme_definition",
       "to": "affine_group_schemes.hopf_spec_essential_image_affine",
       "kind": "uses"
@@ -692,7 +710,7 @@
       "title": "Algebraicgroups.Tori",
       "href": "AlgebraicGroups/Tori/index.html",
       "role": "dependent",
-      "node_count": 19
+      "node_count": 20
     },
     {
       "id": "Foundations",
@@ -758,6 +776,13 @@
       "kind": "boundary_dependency",
       "topic": "Foundations",
       "count": 3
+    },
+    {
+      "from": "topic:Foundations",
+      "to": "affine_group_schemes.group_algebra_scheme",
+      "kind": "boundary_dependency",
+      "topic": "Foundations",
+      "count": 1
     },
     {
       "from": "topic:Foundations",
@@ -940,6 +965,12 @@
       "count": 4
     },
     {
+      "id": "affine-group-schemes",
+      "title": "affine-group-schemes",
+      "href": "keywords/affine-group-schemes.html",
+      "count": 1
+    },
+    {
       "id": "algebra-hom",
       "title": "algebra-hom",
       "href": "keywords/algebra-hom.html",
@@ -1018,6 +1049,12 @@
       "count": 1
     },
     {
+      "id": "diagonalizable",
+      "title": "diagonalizable",
+      "href": "keywords/diagonalizable.html",
+      "count": 1
+    },
+    {
       "id": "equivalence",
       "title": "equivalence",
       "href": "keywords/equivalence.html",
@@ -1051,7 +1088,7 @@
       "id": "group-scheme",
       "title": "group-scheme",
       "href": "keywords/group-scheme.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "hopf-algebra",
