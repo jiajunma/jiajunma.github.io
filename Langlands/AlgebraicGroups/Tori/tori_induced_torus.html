@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Induced Tori — Reductive Linear Algebraic Groups Knowledge DAG</title>
+  <title>Induced Torus — Reductive Linear Algebraic Groups Knowledge DAG</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -33,15 +33,15 @@
       <ul id="topic-list" class="topic-list nav-list">
         <li class="topic-parent topic-active">
           <details open data-topic-root="AlgebraicGroups">
-            <summary><a href="../../AlgebraicGroups/index.html">Algebraicgroups</a></summary>
+            <summary><a href="../../AlgebraicGroups/index.html">Algebraic Groups</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
-          <a href="../../AlgebraicGroups/AffineGroupSchemes/index.html">Affinegroupschemes</a>
+          <a href="../../AlgebraicGroups/AffineGroupSchemes/index.html">Affine Group Schemes</a>
         </li><li class="topic-leaf">
           <a href="../../AlgebraicGroups/Buildings/index.html">Buildings</a>
         </li><li class="topic-leaf">
-          <a href="../../AlgebraicGroups/ClassicalAndExceptionalGroups/index.html">Classicalandexceptionalgroups</a>
+          <a href="../../AlgebraicGroups/ClassicalAndExceptionalGroups/index.html">Classical And Exceptional Groups</a>
         </li><li class="topic-leaf">
-          <a href="../../AlgebraicGroups/ConjugacyClasses/index.html">Conjugacyclasses</a>
+          <a href="../../AlgebraicGroups/ConjugacyClasses/index.html">Conjugacy Classes</a>
         </li><li class="topic-leaf">
           <a href="../../AlgebraicGroups/Covers/index.html">Covers</a>
         </li><li class="topic-leaf">
@@ -49,11 +49,11 @@
         </li><li class="topic-leaf">
           <a href="../../AlgebraicGroups/Kottwitz/index.html">Kottwitz</a>
         </li><li class="topic-leaf">
-          <a href="../../AlgebraicGroups/LinearAlgebraicGroups/index.html">Linearalgebraicgroups</a>
+          <a href="../../AlgebraicGroups/LinearAlgebraicGroups/index.html">Linear Algebraic Groups</a>
         </li><li class="topic-leaf">
-          <a href="../../AlgebraicGroups/ReductiveGroups/index.html">Reductivegroups</a>
+          <a href="../../AlgebraicGroups/ReductiveGroups/index.html">Reductive Groups</a>
         </li><li class="topic-leaf">
-          <a href="../../AlgebraicGroups/RootData/index.html">Rootdata</a>
+          <a href="../../AlgebraicGroups/RootData/index.html">Root Data</a>
         </li><li class="topic-leaf topic-active">
           <a href="../../AlgebraicGroups/Tori/index.html">Tori</a>
         </li></ul>
@@ -71,6 +71,10 @@
       <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
         <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
       </button>
+      <input type="search" id="keyword-search" class="keyword-search"
+             placeholder="Search 315 keywords…"
+             aria-controls="keyword-list" autocomplete="off">
+      <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
       <ul id="keyword-list" class="keyword-list nav-list">
       
         <li><a href="../../keywords/AlgebraicGroups.Tori.html">AlgebraicGroups.Tori</a></li>
@@ -709,17 +713,17 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-tori-2e-induced_tori">
+<article class="definition_thmwrapper theorem-style-definition node-page" id="node-tori-2e-induced_torus">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Induced Tori</span>
+    <span class="definition_thmtitle thm-title">Induced Torus</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-definition">definition</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-tori-2e-induced_tori">#</a>
+      <a class="permalink" href="#node-tori-2e-induced_torus">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -747,7 +751,7 @@
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1>Induced Tori</h1>
+    <h1>Induced Torus</h1>
 <p>A torus \(T\) over \(k\) is <strong>induced</strong> (synonym in the literature:
 <em>quasi-trivial</em>) if the lattice \(X^*(T)\) — equivalently
 \(X_*(T)\) — has a \(\mathbb{Z}\)-basis permuted by \(\Theta\), i.e.
@@ -834,19 +838,43 @@ group, so "quasi-split" carries no information about a torus.</p>
         });
       });
 
-      // Keywords section toggle
+      // Keywords section toggle (folded by default: the keyword list can run
+      // into the hundreds of entries, so only Topics is open on first visit).
       var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
       var keywordList = document.getElementById('keyword-list');
-      if (keywordBtn && keywordList) {
+      // `hidden` on the list is the single source of fold truth, so a search
+      // that auto-expands the list cannot desync the toggle button.
+      function setKeywordsFolded(folded, remember) {
+        keywordList.hidden = folded;
+        if (keywordBtn) keywordBtn.setAttribute('aria-expanded', String(!folded));
+        if (remember) localStorage.setItem('sidebar-keywords-folded', String(folded));
+      }
+      if (keywordList) {
         var kwStored = localStorage.getItem('sidebar-keywords-folded');
-        var kwFolded = kwStored === 'true';
-        keywordList.hidden = kwFolded;
-        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        setKeywordsFolded(kwStored === null ? true : kwStored === 'true', false);
+      }
+      if (keywordBtn && keywordList) {
         keywordBtn.addEventListener('click', function() {
-          kwFolded = !kwFolded;
-          keywordList.hidden = kwFolded;
-          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
-          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+          setKeywordsFolded(!keywordList.hidden, true);
+        });
+      }
+
+      // Keyword search: client-side filter over the existing <li> entries,
+      // so every keyword page stays a plain reachable link with no JS.
+      var keywordSearch = document.getElementById('keyword-search');
+      var keywordEmpty = document.getElementById('keyword-empty');
+      if (keywordSearch && keywordList) {
+        var keywordItems = Array.prototype.slice.call(keywordList.querySelectorAll('li'));
+        keywordSearch.addEventListener('input', function() {
+          var query = keywordSearch.value.trim().toLowerCase();
+          if (query && keywordList.hidden) setKeywordsFolded(false, false);
+          var visible = 0;
+          keywordItems.forEach(function(item) {
+            var match = !query || item.textContent.toLowerCase().indexOf(query) !== -1;
+            item.hidden = !match;
+            if (match) visible += 1;
+          });
+          if (keywordEmpty) keywordEmpty.hidden = visible !== 0;
         });
       }
     });

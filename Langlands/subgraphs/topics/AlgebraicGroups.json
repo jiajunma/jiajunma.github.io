@@ -1,7 +1,7 @@
 {
   "topic": {
     "id": "AlgebraicGroups",
-    "title": "Algebraicgroups",
+    "title": "Algebraic Groups",
     "href": "AlgebraicGroups/index.html",
     "parent": null,
     "node_count": 0,
@@ -487,12 +487,12 @@
       "payload": "node_payloads/tori_induced_resolution.json"
     },
     {
-      "id": "tori.induced_tori",
-      "title": "Induced Tori",
+      "id": "tori.induced_torus",
+      "title": "Induced Torus",
       "kind": "definition",
       "status": "admitted",
-      "href": "AlgebraicGroups/Tori/tori_induced_tori.html",
-      "payload": "node_payloads/tori_induced_tori.json"
+      "href": "AlgebraicGroups/Tori/tori_induced_torus.html",
+      "payload": "node_payloads/tori_induced_torus.json"
     },
     {
       "id": "tori.multiplicative_type_characterization",
@@ -978,7 +978,7 @@
       "kind": "uses"
     },
     {
-      "from": "tori.induced_tori",
+      "from": "tori.induced_torus",
       "to": "tori.induced_resolution",
       "kind": "uses"
     },
@@ -999,17 +999,17 @@
     },
     {
       "from": "tori.algebraic_tori",
-      "to": "tori.induced_tori",
+      "to": "tori.induced_torus",
       "kind": "uses"
     },
     {
       "from": "tori.torus_definition",
-      "to": "tori.induced_tori",
+      "to": "tori.induced_torus",
       "kind": "uses"
     },
     {
       "from": "tori.weil_restriction_of_tori",
-      "to": "tori.induced_tori",
+      "to": "tori.induced_torus",
       "kind": "uses"
     },
     {
@@ -1193,7 +1193,7 @@
       "kind": "uses"
     },
     {
-      "from": "tori.induced_tori",
+      "from": "tori.induced_torus",
       "to": "tori.weakly_induced_torus",
       "kind": "uses"
     },
@@ -2522,7 +2522,7 @@
   "child_topic_nodes": [
     {
       "id": "AlgebraicGroups.AffineGroupSchemes",
-      "title": "Algebraicgroups.Affinegroupschemes",
+      "title": "Algebraic Groups.Affine Group Schemes",
       "depth": 2,
       "parent": "AlgebraicGroups",
       "node_count": 39,
@@ -2542,7 +2542,7 @@
     },
     {
       "id": "AlgebraicGroups.Forms",
-      "title": "Algebraicgroups.Forms",
+      "title": "Algebraic Groups.Forms",
       "depth": 2,
       "parent": "AlgebraicGroups",
       "node_count": 33,
@@ -2560,7 +2560,7 @@
     },
     {
       "id": "AlgebraicGroups.LinearAlgebraicGroups",
-      "title": "Algebraicgroups.Linearalgebraicgroups",
+      "title": "Algebraic Groups.Linear Algebraic Groups",
       "depth": 2,
       "parent": "AlgebraicGroups",
       "node_count": 27,
@@ -2580,7 +2580,7 @@
     },
     {
       "id": "AlgebraicGroups.ReductiveGroups",
-      "title": "Algebraicgroups.Reductivegroups",
+      "title": "Algebraic Groups.Reductive Groups",
       "depth": 2,
       "parent": "AlgebraicGroups",
       "node_count": 49,
@@ -2598,7 +2598,7 @@
     },
     {
       "id": "AlgebraicGroups.RootData",
-      "title": "Algebraicgroups.Rootdata",
+      "title": "Algebraic Groups.Root Data",
       "depth": 2,
       "parent": "AlgebraicGroups",
       "node_count": 49,

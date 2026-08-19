@@ -5703,7 +5703,7 @@
         "tori.character_and_cocharacter_lattices",
         "tori.f_tori_galois_module_classification",
         "tori.induced_resolution",
-        "tori.induced_tori",
+        "tori.induced_torus",
         "tori.multiplicative_type_characterization",
         "tori.norm_one_torus",
         "tori.rank_one_classification",
@@ -5839,15 +5839,15 @@
       "uses": [
         "tori.algebraic_tori",
         "tori.f_tori_galois_module_classification",
-        "tori.induced_tori",
+        "tori.induced_torus",
         "tori.subtori_and_quotients",
         "tori.torus_definition",
         "tori.weil_restriction_of_tori"
       ]
     },
     {
-      "id": "tori.induced_tori",
-      "title": "Induced Tori",
+      "id": "tori.induced_torus",
+      "title": "Induced Torus",
       "kind": "definition",
       "status": "admitted",
       "tags": [
@@ -6111,7 +6111,7 @@
       "used_by": [
         "tori.anisotropic_torus",
         "tori.induced_resolution",
-        "tori.induced_tori",
+        "tori.induced_torus",
         "tori.multiplicative_type_characterization",
         "tori.norm_one_torus",
         "tori.rank_one_classification",
@@ -6172,7 +6172,7 @@
       "uses": [
         "foundations.local_fields",
         "tori.algebraic_tori",
-        "tori.induced_tori",
+        "tori.induced_torus",
         "tori.tamely_ramified_torus",
         "tori.torus_definition"
       ]
@@ -6200,7 +6200,7 @@
       ],
       "used_by": [
         "tori.induced_resolution",
-        "tori.induced_tori",
+        "tori.induced_torus",
         "tori.norm_one_torus"
       ]
     }
@@ -8387,7 +8387,7 @@
       "to": "tori.induced_resolution"
     },
     {
-      "from": "tori.induced_tori",
+      "from": "tori.induced_torus",
       "to": "tori.induced_resolution"
     },
     {
@@ -8404,15 +8404,15 @@
     },
     {
       "from": "tori.algebraic_tori",
-      "to": "tori.induced_tori"
+      "to": "tori.induced_torus"
     },
     {
       "from": "tori.torus_definition",
-      "to": "tori.induced_tori"
+      "to": "tori.induced_torus"
     },
     {
       "from": "tori.weil_restriction_of_tori",
-      "to": "tori.induced_tori"
+      "to": "tori.induced_torus"
     },
     {
       "from": "reductive_groups.diagonalizable_groups",
@@ -8595,7 +8595,7 @@
       "to": "tori.weakly_induced_torus"
     },
     {
-      "from": "tori.induced_tori",
+      "from": "tori.induced_torus",
       "to": "tori.weakly_induced_torus"
     },
     {
