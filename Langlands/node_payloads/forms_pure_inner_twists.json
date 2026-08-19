@@ -1,0 +1,39 @@
+{
+  "id": "forms.pure_inner_twists",
+  "title": "Pure Inner Twists",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Forms/forms_pure_inner_twists.html",
+  "primary_topic": "AlgebraicGroups.Forms",
+  "topics": [
+    "AlgebraicGroups.Forms"
+  ],
+  "body_html": "<h1>Pure Inner Twists</h1>\n<p>A <strong>pure inner twist</strong> of a connected reductive group is an inner twist\ntogether with a chosen cocycle in \\(G\\) itself (rather than just\n\\(G_{\\mathrm{ad}}\\)). The \"pure\" refinement (due to Vogan) keeps track\nof the <strong>\\(Z(G)\\)-part</strong> of the cocycle, making the L-packet\nparametrisation cleaner.</p>\n<h2>Definition</h2>\n<p>Let \\(G\\) be a connected reductive group over a field \\(k\\). A <strong>pure\ninner twist</strong> of \\(G\\) is a pair \\((G^*, c)\\) where:</p>\n<ul>\n<li>\\(c \\in Z^1(k, G)\\) is a 1-cocycle valued in \\(G\\) (not just\n  \\(G_{\\mathrm{ad}}\\));</li>\n<li>\\(G^* = G^c\\) is the inner-twisted form of \\(G\\) by the image of\n  \\(c\\) in \\(G_{\\mathrm{ad}}\\).</li>\n</ul>\n<p>Two pure inner twists are equivalent if their cocycles are cohomologous\nin \\(Z^1(k, G)\\).</p>\n<h2>Vs.\\ ordinary inner twists</h2>\n<table>\n<thead>\n<tr>\n<th>Object</th>\n<th>Cocycle in</th>\n<th>Equivalence</th>\n<th>Classifies</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Inner form</td>\n<td>\\(Z^1(k, G_{\\mathrm{ad}})\\)</td>\n<td>cohomology in \\(G_{\\mathrm{ad}}\\)</td>\n<td>inner forms of \\(G\\)</td>\n</tr>\n<tr>\n<td>Pure inner twist</td>\n<td>\\(Z^1(k, G)\\)</td>\n<td>cohomology in \\(G\\)</td>\n<td>inner forms + central character refinement</td>\n</tr>\n</tbody>\n</table>\n<p>The natural map\n\\[\nH^1(k, G) \\;\\to\\; H^1(k, G_{\\mathrm{ad}})\n\\]\nsends pure inner twists to ordinary inner forms; the fibres are\ntorsors under the central character data of \\(Z(G)\\).</p>\n<h2>Long exact sequence</h2>\n<p>The exact sequence \\(1 \\to Z(G) \\to G \\to G_{\\mathrm{ad}} \\to 1\\)\ninduces:\n\\[\nH^1(k, Z(G)) \\;\\to\\; H^1(k, G) \\;\\to\\; H^1(k, G_{\\mathrm{ad}}) \\;\\to\\; H^2(k, Z(G)).\n\\]</p>\n<p>So:\n- The map \\(H^1(k, G) \\to H^1(k, G_{\\mathrm{ad}})\\) has fibres\n  parametrised by \\(H^1(k, Z(G))\\).\n- The image is the kernel of the boundary\n  \\(H^1(k, G_{\\mathrm{ad}}) \\to H^2(k, Z(G))\\); only inner forms\n  whose central character data \"lifts\" come from pure inner twists.</p>\n<h2>Vogan's L-packet refinement</h2>\n<p><strong>Vogan's bijection (1993, refined by Kaletha).</strong> For an L-parameter\n\\(\\varphi : W_F \\to {}^L G\\), the L-packet \\(\\Pi_\\varphi\\) (across all\ninner forms of \\(G\\)) is in bijection with irreducible representations\nof the <strong>enhanced \\(S_\\varphi\\)-group</strong>:\n\\[\nS_\\varphi^+ \\;:=\\; \\pi_0(Z_{\\hat G}(\\varphi)) / \\text{centre},\n\\]\nwhere the parametrisation is <strong>canonical</strong> when one uses <strong>pure inner\ntwists</strong> (rather than just inner forms).</p>\n<p>This is the basis of the modern formulation of local Langlands across\ninner forms.</p>\n<h2>Example: Real \\(\\mathrm{SL}_2\\)</h2>\n<p>For \\(G = \\mathrm{SL}_2 / \\mathbb{R}\\):\n- \\(Z(G) = \\{\\pm 1\\}\\);\n- \\(H^1(\\mathbb{R}, Z(G)) = \\{\\pm 1\\}\\);\n- \\(H^1(\\mathbb{R}, G) = \\{\\pm 1\\}\\) (split form \\(\\mathrm{SL}_2(\\mathbb{R})\\)\n  and compact form \\(\\mathrm{SU}(2)\\));\n- \\(H^1(\\mathbb{R}, G_{\\mathrm{ad}}) = \\{\\pm 1\\}\\) (split form\n  \\(\\mathrm{PGL}_2(\\mathbb{R})\\) and compact form \\(\\mathrm{PSU}(2)\\)).</p>\n<p>Pure inner twists: 4 classes (split or compact \\(\\times\\) trivial or\nnon-trivial central character lift), with the trivial lift recovering\nthe standard inner-form classification.</p>\n<h2>Limitations of pure inner twists</h2>\n<p>Pure inner twists work cleanly when \\(G\\) has appropriate central\nextensions — specifically when the long exact sequence cleanly\nparametrises the fibres of \\(H^1(k, G) \\to H^1(k, G_{\\mathrm{ad}})\\).</p>\n<p>For more general settings (e.g.\\ non-quasi-split inner forms with\n\"big\" central character data), the <strong>rigid inner twist</strong> formalism of\nKaletha (using a Galois gerbe) is needed; see\n<a class=\"node-ref\" data-node-id=\"forms.rigid_inner_twists\" href=\"../../forms/forms_rigid_inner_twists.html\">rigid inner twists</a>.</p>\n<h2>Role in Langlands</h2>\n<ul>\n<li><strong>Local Langlands across inner forms</strong>: pure inner twists give\n  Vogan's parametrisation of L-packets.</li>\n<li><strong>Endoscopic transfer</strong>: the transfer between inner forms is\n  cleanest with pure inner twists.</li>\n<li><strong>Adjoint vs.\\ pure groups</strong>: distinguishing the central data\n  matters for genuine vs.\\ non-genuine representations of\n  metaplectic covers.</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>Vogan, <em>The local Langlands conjecture</em> (in: Representation Theory\n  of Groups and Algebras, AMS 1993).</li>\n<li>Kottwitz, <em>Stable trace formula: elliptic singular terms</em> (Math.\\ Ann.\\\n  1986).</li>\n<li>Kaletha, <em>Genericity and contragredience in the local Langlands\n  correspondence</em> (Algebra Number Theory 2013).</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"forms.inner_forms\" href=\"../../forms/forms_inner_forms.html\">Inner Forms</a></li>\n<li><a class=\"node-ref\" data-node-id=\"forms.nonabelian_h1\" href=\"../../forms/forms_nonabelian_h1.html\">Nonabelian H1</a></li>\n<li><a class=\"node-ref\" data-node-id=\"forms.cocycles_and_twisting\" href=\"../../forms/forms_cocycles_and_twisting.html\">Cocycles and Twisting</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "forms.inner_forms",
+      "title": "Inner Forms",
+      "href": "AlgebraicGroups/Forms/forms_inner_forms.html"
+    },
+    {
+      "id": "forms.nonabelian_h1",
+      "title": "Nonabelian H1",
+      "href": "AlgebraicGroups/Forms/forms_nonabelian_h1.html"
+    },
+    {
+      "id": "forms.cocycles_and_twisting",
+      "title": "Cocycles and Twisting",
+      "href": "AlgebraicGroups/Forms/forms_cocycles_and_twisting.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "forms.rigid_inner_twists",
+      "title": "Rigid Inner Twists",
+      "href": "AlgebraicGroups/Forms/forms_rigid_inner_twists.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

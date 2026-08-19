@@ -1,0 +1,39 @@
+{
+  "id": "reductive_groups.cartan_subgroups_from_maximal_tori",
+  "title": "Cartan Subgroups from Maximal Tori",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_cartan_subgroups_from_maximal_tori.html",
+  "primary_topic": "AlgebraicGroups.ReductiveGroups",
+  "topics": [
+    "AlgebraicGroups.ReductiveGroups"
+  ],
+  "body_html": "<h1>Cartan Subgroups from Maximal Tori</h1>\n<p>Let \\(G\\) be a connected linear algebraic group over an algebraically closed\nfield, and let \\(T\\subseteq G\\) be a maximal torus. Then\n\\[\nC_G(T)^\\circ\n\\]\nis a Cartan subgroup of \\(G\\). Conversely, every Cartan subgroup of \\(G\\) is\nof this form for a maximal torus \\(T\\). In particular, Cartan subgroups are\nconjugate.</p>\n<p>If \\(G\\) is reductive, then \\(C_G(T)=T\\) for every maximal torus \\(T\\).</p>",
+  "proof_html": "<p>The centralizer \\(C_G(T)\\) is closed, and its identity component is connected\nand nilpotent in the classical algebraic-group sense. Maximality of \\(T\\)\nforces any semisimple part in the centralizer to lie in \\(T\\), so\n\\(C_G(T)^\\circ\\) is the largest connected subgroup whose semisimple part is\ncontrolled by \\(T\\). This is exactly the Cartan condition.</p>\n<p>Conversely, a Cartan subgroup contains a maximal torus, and its defining\nself-normalizing nilpotence forces it to coincide with the connected\ncentralizer of that torus. Since maximal tori are conjugate, the resulting\nCartan subgroups are conjugate. In a reductive group, a nontrivial unipotent\npart in \\(C_G(T)^\\circ\\) would define a root-zero unipotent normal direction,\ncontradicting reductivity; hence the centralizer is the torus itself.</p>",
+  "deps": [
+    {
+      "id": "reductive_groups.maximal_tori_are_conjugate",
+      "title": "Maximal Tori Are Conjugate",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_tori_are_conjugate.html"
+    },
+    {
+      "id": "reductive_groups.maximal_tori",
+      "title": "Maximal Tori",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_tori.html"
+    },
+    {
+      "id": "reductive_groups.solvable_groups",
+      "title": "Solvable Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_solvable_groups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "reductive_groups.maximal_f_tori_exist",
+      "title": "Maximal F-Tori Exist in Connected F-Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_f_tori_exist.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

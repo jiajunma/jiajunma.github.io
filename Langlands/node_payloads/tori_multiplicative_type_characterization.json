@@ -3,33 +3,33 @@
   "title": "Tori among Groups of Multiplicative Type",
   "kind": "theorem",
   "status": "admitted",
-  "href": "tori/tori_multiplicative_type_characterization.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_multiplicative_type_characterization.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
-  "body_html": "<h1>Tori among Groups of Multiplicative Type</h1>\n<p>Let \\(k\\) be a field and let \\(G\\) be an affine algebraic \\(k\\)-group\nof multiplicative type (a \\(k_s/k\\)-form of a\n<a class=\"node-ref\" data-node-id=\"reductive_structure.diagonalizable_groups\" href=\"../reductive_structure/reductive_structure_diagonalizable_groups.html\">diagonalizable group</a>),\nwith character group \\(X^*(G)\\), a finitely generated abelian group.\nThe following are equivalent:</p>\n<ol>\n<li>\\(G\\) is a torus, i.e. \\(G_{k_s} \\cong \\mathbb{G}_m^n\\);</li>\n<li>\\(X^*(G)\\) is torsion-free;</li>\n<li>\\(G\\) is smooth and connected.</li>\n</ol>\n<p>If \\(\\operatorname{char}(k) = 0\\), these are further equivalent to\n\\(G\\) being connected. If \\(\\operatorname{char}(k) = p &gt; 0\\) they are\n<strong>not</strong>: \\(\\mu_p\\) is connected of multiplicative type with\n\\(X^*(\\mu_p) = \\mathbb{Z}/p\\), and it is neither smooth nor a torus.\nThe precise trichotomy for \\(G\\) of multiplicative type with\n\\(M = X^*(G)\\), in characteristic \\(p \\geq 0\\), is:</p>\n<ul>\n<li>\\(G\\) is <strong>smooth</strong> if and only if \\(M\\) has no \\(p\\)-torsion;</li>\n<li>\\(G\\) is <strong>connected</strong> if and only if \\(M\\) has no torsion prime to\n  \\(p\\);</li>\n<li>\\(G\\) is a <strong>torus</strong> if and only if \\(M\\) is torsion-free.</li>\n</ul>\n<p>Consequently the phrase \"connected multiplicative type\" defines a\ntorus only in characteristic zero, and the torsion-freeness of\n\\(X^*\\) (equivalently: smooth and connected) is the correct general\ndefinition.</p>",
-  "proof_html": "<p>All conditions are insensitive to base change along \\(k_s/k\\), so we\nmay assume \\(G = D(M)\\) diagonalizable with coordinate ring\n\\(k[M]\\), by <a class=\"node-ref\" data-node-id=\"reductive_structure.diagonalizable_groups_antiequivalence\" href=\"../reductive_structure/reductive_structure_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a>.\nDecompose \\(M \\cong \\mathbb{Z}^n \\oplus M_{p} \\oplus M_{p'}\\) with\n\\(M_p\\) the \\(p\\)-primary torsion and \\(M_{p'}\\) the torsion of order\nprime to \\(p\\); correspondingly \\(D(M) \\cong \\mathbb{G}_m^n \\times\nD(M_p) \\times D(M_{p'})\\).</p>\n<p>For a cyclic factor \\(\\mathbb{Z}/m\\) with \\(p \\nmid m\\), the algebra\n\\(k[x]/(x^m - 1)\\) is etale, so \\(D(\\mathbb{Z}/m) = \\mu_m\\) is a\nfinite etale group scheme with \\(m &gt; 1\\) geometric points: smooth,\nnot connected. For a cyclic factor \\(\\mathbb{Z}/p^a\\) with \\(p &gt; 0\\),\nthe algebra \\(k[x]/(x^{p^a} - 1) = k[x]/((x-1)^{p^a})\\) is a local\nArtin ring: \\(\\mu_{p^a}\\) is connected, not smooth. The factor\n\\(\\mathbb{G}_m^n\\) is smooth and connected. Since smoothness and\nconnectedness of a finite product hold exactly when they hold for each\nfactor, \\(D(M)\\) is smooth iff \\(M_p = 0\\), connected iff\n\\(M_{p'} = 0\\), and smooth and connected iff \\(M\\) is torsion-free,\nin which case \\(D(M) = \\mathbb{G}_m^n\\) is a torus. Conversely a torus\nhas \\(X^* = \\mathbb{Z}^n\\) torsion-free.</p>",
+  "body_html": "<h1>Tori among Groups of Multiplicative Type</h1>\n<p>Let \\(k\\) be a field and let \\(G\\) be an affine algebraic \\(k\\)-group\nof multiplicative type (a \\(k_s/k\\)-form of a\n<a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups.html\">diagonalizable group</a>),\nwith character group \\(X^*(G)\\), a finitely generated abelian group.\nThe following are equivalent:</p>\n<ol>\n<li>\\(G\\) is a torus, i.e. \\(G_{k_s} \\cong \\mathbb{G}_m^n\\);</li>\n<li>\\(X^*(G)\\) is torsion-free;</li>\n<li>\\(G\\) is smooth and connected.</li>\n</ol>\n<p>If \\(\\operatorname{char}(k) = 0\\), these are further equivalent to\n\\(G\\) being connected. If \\(\\operatorname{char}(k) = p &gt; 0\\) they are\n<strong>not</strong>: \\(\\mu_p\\) is connected of multiplicative type with\n\\(X^*(\\mu_p) = \\mathbb{Z}/p\\), and it is neither smooth nor a torus.\nThe precise trichotomy for \\(G\\) of multiplicative type with\n\\(M = X^*(G)\\), in characteristic \\(p \\geq 0\\), is:</p>\n<ul>\n<li>\\(G\\) is <strong>smooth</strong> if and only if \\(M\\) has no \\(p\\)-torsion;</li>\n<li>\\(G\\) is <strong>connected</strong> if and only if \\(M\\) has no torsion prime to\n  \\(p\\);</li>\n<li>\\(G\\) is a <strong>torus</strong> if and only if \\(M\\) is torsion-free.</li>\n</ul>\n<p>Consequently the phrase \"connected multiplicative type\" defines a\ntorus only in characteristic zero, and the torsion-freeness of\n\\(X^*\\) (equivalently: smooth and connected) is the correct general\ndefinition.</p>",
+  "proof_html": "<p>All conditions are insensitive to base change along \\(k_s/k\\), so we\nmay assume \\(G = D(M)\\) diagonalizable with coordinate ring\n\\(k[M]\\), by <a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups_antiequivalence\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a>.\nDecompose \\(M \\cong \\mathbb{Z}^n \\oplus M_{p} \\oplus M_{p'}\\) with\n\\(M_p\\) the \\(p\\)-primary torsion and \\(M_{p'}\\) the torsion of order\nprime to \\(p\\); correspondingly \\(D(M) \\cong \\mathbb{G}_m^n \\times\nD(M_p) \\times D(M_{p'})\\).</p>\n<p>For a cyclic factor \\(\\mathbb{Z}/m\\) with \\(p \\nmid m\\), the algebra\n\\(k[x]/(x^m - 1)\\) is etale, so \\(D(\\mathbb{Z}/m) = \\mu_m\\) is a\nfinite etale group scheme with \\(m &gt; 1\\) geometric points: smooth,\nnot connected. For a cyclic factor \\(\\mathbb{Z}/p^a\\) with \\(p &gt; 0\\),\nthe algebra \\(k[x]/(x^{p^a} - 1) = k[x]/((x-1)^{p^a})\\) is a local\nArtin ring: \\(\\mu_{p^a}\\) is connected, not smooth. The factor\n\\(\\mathbb{G}_m^n\\) is smooth and connected. Since smoothness and\nconnectedness of a finite product hold exactly when they hold for each\nfactor, \\(D(M)\\) is smooth iff \\(M_p = 0\\), connected iff\n\\(M_{p'} = 0\\), and smooth and connected iff \\(M\\) is torsion-free,\nin which case \\(D(M) = \\mathbb{G}_m^n\\) is a torus. Conversely a torus\nhas \\(X^* = \\mathbb{Z}^n\\) torsion-free.</p>",
   "deps": [
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
-      "id": "reductive_structure.diagonalizable_groups",
+      "id": "reductive_groups.diagonalizable_groups",
       "title": "Diagonalizable Groups",
-      "href": "reductive_structure/reductive_structure_diagonalizable_groups.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_diagonalizable_groups.html"
     },
     {
-      "id": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "id": "reductive_groups.diagonalizable_groups_antiequivalence",
       "title": "Diagonalizable Groups Are Dual to Character Groups",
-      "href": "reductive_structure/reductive_structure_diagonalizable_groups_antiequivalence.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_diagonalizable_groups_antiequivalence.html"
     }
   ],
   "dependents": [],

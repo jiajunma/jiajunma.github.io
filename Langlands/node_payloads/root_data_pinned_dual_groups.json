@@ -1,0 +1,34 @@
+{
+  "id": "root_data.pinned_dual_groups",
+  "title": "Pinned Dual Groups",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/RootData/root_data_pinned_dual_groups.html",
+  "primary_topic": "AlgebraicGroups.RootData",
+  "topics": [
+    "AlgebraicGroups.RootData"
+  ],
+  "body_html": "<h1>Pinned Dual Groups</h1>\n<p>The <strong>pinned dual group</strong> \\((\\hat G, \\hat T, \\hat B, \\{X_{\\alpha^\\vee}\\})\\)\nis the dual group equipped with a chosen Borel, maximal torus, and\nsimple-coroot vectors. The pinning is the canonical data making the\nGalois action on the dual root datum lift to an action on \\(\\hat G\\),\nso that the L-group \\({}^L G = \\hat G \\rtimes \\Gamma\\) is well-defined.</p>\n<h2>Definition</h2>\n<p>For a connected reductive group \\(G\\) over a field \\(k\\), a <strong>pinned\ndual group</strong> consists of:</p>\n<ul>\n<li>A connected reductive group \\(\\hat G\\) over \\(\\mathbb{C}\\) with the\n  dual root datum of \\(G\\);</li>\n<li>A maximal torus \\(\\hat T \\subseteq \\hat G\\);</li>\n<li>A Borel subgroup \\(\\hat B \\supseteq \\hat T\\);</li>\n<li>For each simple coroot \\(\\alpha^\\vee \\in \\Delta^\\vee\\) (= simple root\n  of the dual), a chosen non-zero element\n  \\(X_{\\alpha^\\vee} \\in \\hat{\\mathfrak{g}}_{\\alpha^\\vee}\\).</li>\n</ul>\n<p>This pinning is the dual of a pinning of \\(G\\): the role of simple\nroots in \\(G\\) is played by simple coroots in \\(\\hat G\\).</p>\n<h2>Functoriality</h2>\n<p>The pinned dual is <strong>functorial</strong> with respect to pinned isomorphisms:\nif \\((G, T, B, \\{X_\\alpha\\}) \\cong (G', T', B', \\{X'_\\alpha\\})\\), then\n\\((\\hat G, \\hat T, \\hat B, \\{X_{\\alpha^\\vee}\\}) \\cong (\\hat G', \\hat T', \\hat B', \\{X'_{\\alpha^\\vee}\\})\\)\ncanonically.</p>\n<p>For a pinning-preserving outer automorphism \\(\\sigma : G \\to G\\)\n(\\(\\sigma \\in \\mathrm{Out}(G)\\)), the dual \\(\\hat \\sigma : \\hat G \\to \\hat G\\)\npreserves the dual pinning.</p>\n<h2>Why the pinning matters</h2>\n<p>Without a pinning, the dual group \\(\\hat G\\) is well-defined up to\n<strong>non-canonical</strong> isomorphism — multiple isomorphisms differ by inner\nautomorphisms. This causes problems when:</p>\n<ul>\n<li>Defining the Galois action on \\(\\hat G\\): different choices of\n  \\(\\hat G\\) give different Galois actions.</li>\n<li>Composing L-morphisms: the composition of pinned-preserving maps is\n  canonical.</li>\n<li>Defining the L-group: \\({}^L G = \\hat G \\rtimes \\Gamma\\) needs a\n  canonical \\(\\Gamma\\)-action.</li>\n</ul>\n<p>The pinning rigidifies \\(\\hat G\\) so all these constructions are\n<strong>canonical</strong> (not just up to inner conjugacy).</p>\n<h2>Galois action on pinned dual</h2>\n<p>For \\(G\\) defined over \\(k\\) (not necessarily split): the Galois\naction on the based root datum of \\(G_{\\bar k}\\) dualises to an action\non the based root datum of \\(\\hat G\\). This lifts (via the rigidity\nof pinned groups) to a Galois action on the pinned dual:\n\\[\n\\rho_G : \\Gamma \\;\\longrightarrow\\; \\mathrm{Aut}^{\\mathrm{pin}}(\\hat G).\n\\]</p>\n<p>For quasi-split \\(G\\): the action factors through \\(\\mathrm{Out}(\\hat G)\\)\n(diagram automorphisms).</p>\n<p>For inner forms of a quasi-split \\(G\\): the action on the pinned\ndual is the same as for the quasi-split form.</p>\n<h2>Examples</h2>\n<h3>\\(\\mathrm{GL}_n\\) (split)</h3>\n<p>Pinned dual: \\(\\hat G = \\mathrm{GL}_n(\\mathbb{C})\\),\n\\(\\hat T\\) = diagonal, \\(\\hat B\\) = upper-triangular,\n\\(\\{X_{\\alpha^\\vee}\\} = \\{E_{i, i+1}\\}\\). Galois action trivial.</p>\n<h3>\\(\\mathrm{U}(n)\\) (unitary, quasi-split)</h3>\n<p>Pinned dual: \\(\\hat G = \\mathrm{GL}_n(\\mathbb{C})\\) with non-trivial\nGalois action by the \"transpose-inverse\" diagram automorphism.\n\\[\n{}^L \\mathrm{U}(n) \\;=\\; \\mathrm{GL}_n(\\mathbb{C}) \\rtimes \\mathrm{Gal}(K/F),\n\\]\nwhere the non-trivial Galois element acts by the outer automorphism.</p>\n<h3>\\({}^3 D_4\\), the triality form</h3>\n<p>Pinned dual: \\(\\hat G = \\mathrm{Spin}_8(\\mathbb{C})\\) with \\(S_3\\)\naction by triality. \\({}^L({}^3 D_4) = \\mathrm{Spin}_8 \\rtimes S_3\\)\n(via the cubic Galois group).</p>\n<h2>The L-group with pinning</h2>\n<p>\\[\n{}^L G \\;:=\\; \\hat G(\\mathbb{C}) \\;\\rtimes\\; \\Gamma,\n\\]\nwhere the semi-direct product uses the Galois action \\(\\rho_G\\) on\nthe pinned dual.</p>\n<p>The pinning is essential: without it, the semi-direct product would\ndepend on a non-canonical choice of inner automorphism, and the L-group\nwould only be well-defined up to inner conjugacy.</p>\n<h2>Relation with quasi-split forms</h2>\n<p>A connected reductive group \\(G\\) over \\(k\\) is <strong>quasi-split</strong> iff\nits pinned dual has a \\(\\Gamma\\)-fixed pinning (equivalently, the\nGalois action on the pinning lifts trivially).</p>\n<p>Every group has a quasi-split inner form (unique up to inner-form\ntwist), so the pinned dual of \\(G\\) coincides with that of its quasi-\nsplit form, with the same Galois action.</p>\n<h2>Mathlib</h2>\n<p>Not formalised.</p>\n<h2>References</h2>\n<ul>\n<li>Borel, <em>Automorphic L-functions</em> (Corvallis 1979).</li>\n<li>Kottwitz, <em>Stable trace formula: cuspidal tempered terms</em> (Duke\n  1984), §1.</li>\n<li>Conrad, <em>Reductive group schemes</em> (Notes, 2014), §7.</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"root_data.dual_reductive_groups\" href=\"../../root_data/root_data_dual_reductive_groups.html\">Dual Reductive Groups</a></li>\n<li><a class=\"node-ref\" data-node-id=\"root_data.pinnings\" href=\"../../root_data/root_data_pinnings.html\">Pinnings</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "root_data.dual_reductive_groups",
+      "title": "Dual Reductive Groups",
+      "href": "AlgebraicGroups/RootData/root_data_dual_reductive_groups.html"
+    },
+    {
+      "id": "root_data.pinnings",
+      "title": "Pinnings",
+      "href": "AlgebraicGroups/RootData/root_data_pinnings.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "root_data.langlands_dual_groups",
+      "title": "Langlands Dual Groups",
+      "href": "AlgebraicGroups/RootData/root_data_langlands_dual_groups.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

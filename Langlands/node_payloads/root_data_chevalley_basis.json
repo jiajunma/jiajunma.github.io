@@ -1,0 +1,39 @@
+{
+  "id": "root_data.chevalley_basis",
+  "title": "Chevalley Basis",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "AlgebraicGroups/RootData/root_data_chevalley_basis.html",
+  "primary_topic": "AlgebraicGroups.RootData",
+  "topics": [
+    "AlgebraicGroups.RootData"
+  ],
+  "body_html": "<h1>Chevalley Basis</h1>\n<p>A <strong>Chevalley basis</strong> of a complex semisimple Lie algebra \\(\\mathfrak g\\)\nis a basis\n\\[\n\\{H_\\alpha : \\alpha \\in \\Delta\\} \\cup \\{E_\\alpha : \\alpha \\in \\Phi\\}\n\\]\n(indexed by simple roots \\(\\Delta\\) and all roots \\(\\Phi\\))\nsatisfying the integer structure constant conditions:</p>\n<p>\\[\n[H_\\alpha, H_\\beta] = 0, \\quad\n[H_\\alpha, E_\\beta] = \\langle \\beta, \\alpha^\\vee \\rangle\\, E_\\beta,\n\\]\n\\[\n[E_\\alpha, E_{-\\alpha}] = H_\\alpha, \\quad\n[E_\\alpha, E_\\beta] = N_{\\alpha,\\beta}\\, E_{\\alpha+\\beta}\n\\quad (\\alpha + \\beta \\in \\Phi),\n\\]\nwhere \\(N_{\\alpha,\\beta} \\in \\mathbb{Z} \\setminus \\{0\\}\\) and\n\\(N_{\\alpha,\\beta} = -N_{-\\alpha,-\\beta}\\).</p>\n<h2>Key properties</h2>\n<ol>\n<li>\n<p><strong>Integer structure constants</strong>: all \\(N_{\\alpha,\\beta} \\in \\mathbb{Z}\\), so\n   the \\(\\mathbb{Z}\\)-span\n   \\[\n   \\mathfrak g_{\\mathbb{Z}} = \\bigoplus_{\\alpha \\in \\Delta} \\mathbb{Z} H_\\alpha\n   \\oplus \\bigoplus_{\\alpha \\in \\Phi} \\mathbb{Z} E_\\alpha\n   \\]\n   is a Lie algebra over \\(\\mathbb{Z}\\) (a <strong>Chevalley \\(\\mathbb{Z}\\)-form</strong>).</p>\n</li>\n<li>\n<p><strong>Base change</strong>: \\(\\mathfrak g_{\\mathbb{Z}} \\otimes_{\\mathbb{Z}} k\\) is a\n   Lie algebra over any field \\(k\\), and the structure constants remain\n   the same integers modulo \\(\\mathrm{char}(k)\\).</p>\n</li>\n<li>\n<p><strong>Sign ambiguity</strong>: The basis is not unique. Different Chevalley bases\n   for the same root system differ by signs \\(E_\\alpha \\mapsto \\pm E_\\alpha\\).\n   However, the isomorphism type of the resulting integral form\n   \\(\\mathfrak g_{\\mathbb{Z}}\\) is unique.</p>\n</li>\n<li>\n<p><strong>Existence</strong>: Chevalley proved existence for all complex semisimple\n   Lie algebras by explicit computation using Serre's presentation.</p>\n</li>\n</ol>\n<h2>Structure constants \\(N_{\\alpha,\\beta}\\)</h2>\n<p>For non-proportional roots \\(\\alpha, \\beta \\in \\Phi\\) with\n\\(\\alpha + \\beta \\in \\Phi\\), define the <strong>\\(\\alpha\\)-string through \\(\\beta\\)</strong> as\n\\[\n\\beta - q\\alpha, \\ldots, \\beta, \\ldots, \\beta + p\\alpha \\quad\n(q,p \\geq 0, \\; q + p = -\\langle \\beta, \\alpha^\\vee \\rangle + 2p).\n\\]\nThen\n\\[\nN_{\\alpha,\\beta} = \\pm(q+1),\n\\]\nwhere the sign is fixed by a global sign convention on the basis.</p>\n<h2>Role in Chevalley group construction</h2>\n<p>The Chevalley basis is the essential input for the <strong>Chevalley group\nconstruction</strong>:</p>\n<ol>\n<li>The elements \\(H_\\alpha, E_\\alpha\\) define a faithful representation\n   on a free \\(\\mathbb{Z}\\)-module \\(L\\) (a lattice in the representation).</li>\n<li>The <strong>root subgroup elements</strong> are formal exponentials\n   \\[\n   x_\\alpha(t) = \\exp(t E_\\alpha) = \\sum_{k=0}^\\infty \\frac{t^k}{k!} E_\\alpha^k.\n   \\]\n   Since \\(E_\\alpha\\) is nilpotent on \\(L\\), the sum is finite and\n   \\(x_\\alpha(t)\\) acts on \\(L \\otimes R\\) for any ring \\(R\\).</li>\n<li>The map \\(t \\mapsto x_\\alpha(t)\\) is a group scheme morphism\n   \\(\\mathbb{G}_a \\to \\mathrm{GL}(L)\\), defining the <strong>root subgroup</strong>\n   \\(U_\\alpha\\).</li>\n<li>The commutator \\([x_\\alpha(s), x_\\beta(t)]\\) is computed by the\n   <strong>Chevalley commutator formula</strong>, whose coefficients involve the\n   \\(N_{\\alpha,\\beta}\\) and are integers.</li>\n</ol>\n<h2>Examples</h2>\n<table>\n<thead>\n<tr>\n<th>Root system</th>\n<th>\\(\\mathfrak g\\)</th>\n<th>Basis elements</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\\(A_1\\)</td>\n<td>\\(\\mathfrak{sl}_2\\)</td>\n<td>\\(H, E, F\\) with \\([H,E]=2E, [H,F]=-2F, [E,F]=H\\)</td>\n</tr>\n<tr>\n<td>\\(A_{n-1}\\)</td>\n<td>\\(\\mathfrak{sl}_n\\)</td>\n<td>\\(E_{ij}\\) (matrix units) for \\(i \\ne j\\), \\(H_i = E_{ii} - E_{i+1,i+1}\\)</td>\n</tr>\n<tr>\n<td>\\(G_2\\)</td>\n<td>Exceptional</td>\n<td>14-dim basis with specific integer structure constants</td>\n</tr>\n</tbody>\n</table>\n<h2>References</h2>\n<ul>\n<li>Chevalley (1955), original construction.</li>\n<li>Carter, <em>Finite Groups of Lie Type</em>, §1.4: explicit structure constants.</li>\n<li>Humphreys, <em>Introduction to Lie Algebras</em>, Chapter IV.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "root_data.root_systems",
+      "title": "Root Systems",
+      "href": "AlgebraicGroups/RootData/root_data_root_systems.html"
+    },
+    {
+      "id": "root_data.cartan_matrices_and_dynkin_diagrams",
+      "title": "Cartan Matrices and Dynkin Diagrams",
+      "href": "AlgebraicGroups/RootData/root_data_cartan_matrices_and_dynkin_diagrams.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "root_data.chevalley_existence_theorem",
+      "title": "Chevalley Existence Theorem",
+      "href": "AlgebraicGroups/RootData/root_data_chevalley_existence_theorem.html"
+    },
+    {
+      "id": "root_data.chevalley_group_construction",
+      "title": "Chevalley Group Construction from a Root Datum",
+      "href": "AlgebraicGroups/RootData/root_data_chevalley_group_construction.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -3,38 +3,38 @@
   "title": "Weakly Induced Torus",
   "kind": "definition",
   "status": "admitted",
-  "href": "tori/tori_weakly_induced_torus.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_weakly_induced_torus.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
-  "body_html": "<h1>Weakly Induced Torus</h1>\n<p>Let \\(k\\) be a Henselian discretely valued field with wild inertia\ngroup \\(P \\subseteq \\Theta\\), and let \\(k_t \\subseteq k_s\\) be the\nmaximal tamely ramified extension of \\(k\\), so\n\\(P = \\operatorname{Gal}(k_s/k_t)\\).</p>\n<p>A torus \\(T\\) over \\(k\\) is <strong>weakly induced</strong> if there exists a\ntamely ramified extension \\(\\ell/k\\) such that \\(T_\\ell\\) is\n<a class=\"node-ref\" data-node-id=\"tori.induced_tori\" href=\"tori_induced_tori.html\">induced</a>. Equivalently:</p>\n<ul>\n<li>\\(T_{k_t}\\) is induced; equivalently</li>\n<li>\\(X^*(T)\\) (equivalently \\(X_*(T)\\)) has a \\(\\mathbb{Z}\\)-basis\n  permuted by the wild inertia group \\(P\\).</li>\n</ul>\n<p>Every induced torus is weakly induced, and every\n<a class=\"node-ref\" data-node-id=\"tori.tamely_ramified_torus\" href=\"tori_tamely_ramified_torus.html\">tamely ramified torus</a> is weakly\ninduced (the wild inertia then acts trivially, so any basis is\npermuted). The class is designed for integral-model theory: it is\nrecorded at the integral-model stage of this topic that the standard\nintegral model of a torus is smooth with well-behaved congruence\nfiltration exactly under this hypothesis, which is why the class —\nrather than the tame or induced classes — is the natural boundary of\nthe good theory.</p>",
+  "body_html": "<h1>Weakly Induced Torus</h1>\n<p>Let \\(k\\) be a Henselian discretely valued field with wild inertia\ngroup \\(P \\subseteq \\Theta\\), and let \\(k_t \\subseteq k_s\\) be the\nmaximal tamely ramified extension of \\(k\\), so\n\\(P = \\operatorname{Gal}(k_s/k_t)\\).</p>\n<p>A torus \\(T\\) over \\(k\\) is <strong>weakly induced</strong> if there exists a\ntamely ramified extension \\(\\ell/k\\) such that \\(T_\\ell\\) is\n<a class=\"node-ref\" data-node-id=\"tori.induced_tori\" href=\"../../tori/tori_induced_tori.html\">induced</a>. Equivalently:</p>\n<ul>\n<li>\\(T_{k_t}\\) is induced; equivalently</li>\n<li>\\(X^*(T)\\) (equivalently \\(X_*(T)\\)) has a \\(\\mathbb{Z}\\)-basis\n  permuted by the wild inertia group \\(P\\).</li>\n</ul>\n<p>Every induced torus is weakly induced, and every\n<a class=\"node-ref\" data-node-id=\"tori.tamely_ramified_torus\" href=\"../../tori/tori_tamely_ramified_torus.html\">tamely ramified torus</a> is weakly\ninduced (the wild inertia then acts trivially, so any basis is\npermuted). The class is designed for integral-model theory: it is\nrecorded at the integral-model stage of this topic that the standard\nintegral model of a torus is smooth with well-behaved congruence\nfiltration exactly under this hypothesis, which is why the class —\nrather than the tame or induced classes — is the natural boundary of\nthe good theory.</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
       "id": "tori.induced_tori",
       "title": "Induced Tori",
-      "href": "tori/tori_induced_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_induced_tori.html"
     },
     {
       "id": "tori.tamely_ramified_torus",
       "title": "Tamely Ramified Torus",
-      "href": "tori/tori_tamely_ramified_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_tamely_ramified_torus.html"
     },
     {
-      "id": "foundational_inputs.local_fields",
+      "id": "foundations.local_fields",
       "title": "Local Fields",
-      "href": "foundational_inputs/foundational_inputs_local_fields.html"
+      "href": "Foundations/foundations_local_fields.html"
     }
   ],
   "dependents": [],

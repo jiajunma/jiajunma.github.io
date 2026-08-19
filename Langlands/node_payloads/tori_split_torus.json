@@ -3,10 +3,10 @@
   "title": "Split Torus",
   "kind": "definition",
   "status": "admitted",
-  "href": "tori/tori_split_torus.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_split_torus.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
   "body_html": "<h1>Split Torus</h1>\n<p>A torus \\(T\\) over \\(k\\) is <strong>split</strong> if\n\\(T \\cong \\mathbb{G}_{m,k}^{\\,n}\\) over \\(k\\) itself. Equivalently,\nthe \\(\\Theta\\)-action on \\(X^*(T)\\) (equivalently on \\(X_*(T)\\)) is\ntrivial; equivalently, every character of \\(T_{k_s}\\) is defined over\n\\(k\\).</p>\n<p>For a split torus the character and cocharacter lattices are plain\nlattices \\(\\mathbb{Z}^n\\) with trivial Galois action, and\n\\(T(k) \\cong (k^\\times)^n\\); more canonically\n\\(T(k) = X_*(T) \\otimes_{\\mathbb{Z}} k^\\times\\) via\n\\(\\lambda \\otimes x \\mapsto \\lambda(x)\\).</p>",
   "proof_html": null,
@@ -14,34 +14,34 @@
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     }
   ],
   "dependents": [
     {
       "id": "tori.rank_one_classification",
       "title": "Classification of Rank-One Tori",
-      "href": "tori/tori_rank_one_classification.html"
+      "href": "AlgebraicGroups/Tori/tori_rank_one_classification.html"
     },
     {
       "id": "tori.split_anisotropic_decomposition",
       "title": "Split-Anisotropic Decomposition of a Torus",
-      "href": "tori/tori_split_anisotropic_decomposition.html"
+      "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
     },
     {
       "id": "tori.tamely_ramified_torus",
       "title": "Tamely Ramified Torus",
-      "href": "tori/tori_tamely_ramified_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_tamely_ramified_torus.html"
     },
     {
       "id": "tori.unramified_torus",
       "title": "Unramified Torus",
-      "href": "tori/tori_unramified_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_unramified_torus.html"
     }
   ],
   "lean_refs": [
@@ -49,14 +49,14 @@
       "name": "Langlands.Tori.splitTorus",
       "display_name": "Langlands.Tori.splitTorus",
       "qualified_name": "Langlands.Tori.splitTorus",
-      "module": "LanglandsLean.Tori.SplitTorus",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.SplitTorus",
       "kind": "noncomputable abbrev",
       "signature": "noncomputable abbrev splitTorus : Over (Scheme.Spec.obj (op R))",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/SplitTorus.lean#L69",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L69",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -67,14 +67,14 @@
       "name": "Langlands.Tori.SplitTorus",
       "display_name": "Langlands.Tori.SplitTorus",
       "qualified_name": "Langlands.Tori.SplitTorus",
-      "module": "LanglandsLean.Tori.SplitTorus",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.SplitTorus",
       "kind": "noncomputable abbrev",
       "signature": "noncomputable abbrev SplitTorus : Scheme.{u}",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/SplitTorus.lean#L76",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L76",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -84,12 +84,12 @@
   ],
   "lean_modules": [
     {
-      "name": "LanglandsLean.Tori.SplitTorus",
-      "display_name": "LanglandsLean.Tori.SplitTorus",
+      "name": "LanglandsLean.AlgebraicGroups.Tori.SplitTorus",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.SplitTorus",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/SplitTorus.lean#L1",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/SplitTorus.lean#L1",
       "status": "resolved",
       "reason": null
     }

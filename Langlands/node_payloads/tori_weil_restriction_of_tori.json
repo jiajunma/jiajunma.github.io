@@ -3,10 +3,10 @@
   "title": "Weil Restriction of Tori",
   "kind": "theorem",
   "status": "admitted",
-  "href": "tori/tori_weil_restriction_of_tori.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_weil_restriction_of_tori.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
   "body_html": "<h1>Weil Restriction of Tori</h1>\n<p>Let \\(E/k\\) be a finite separable field extension, \\(\\Theta_E =\n\\operatorname{Gal}(k_s/E) \\subseteq \\Theta\\), and let \\(S\\) be a torus\nover \\(E\\) of rank \\(m\\). The Weil restriction \\(R_{E/k}S\\) — the\naffine \\(k\\)-group with functor of points\n\\[\n(R_{E/k}S)(A) \\;=\\; S(A \\otimes_k E)\n\\quad \\text{for } k\\text{-algebras } A\n\\]\n— is a torus over \\(k\\) of rank \\([E:k]\\,m\\), with\n\\[\nX^*\\!\\bigl(R_{E/k}S\\bigr) \\;=\\;\n\\operatorname{Ind}_{\\Theta_E}^{\\Theta} X^*(S),\n\\qquad\nX_*\\!\\bigl(R_{E/k}S\\bigr) \\;=\\;\n\\operatorname{Ind}_{\\Theta_E}^{\\Theta} X_*(S)\n\\]\nas \\(\\Theta\\)-modules. In particular\n\\(X^*(R_{E/k}\\mathbb{G}_m) = \\mathbb{Z}[\\Theta/\\Theta_E]\\), the\npermutation module on the coset space, and\n\\((R_{E/k}\\mathbb{G}_m)(k) = E^\\times\\).</p>",
   "proof_html": "<p>Representability of \\(R_{E/k}S\\) by an affine \\(k\\)-group of finite\ntype is the standard existence of Weil restriction along the finite\nlocally free morphism \\(\\operatorname{Spec} E \\to \\operatorname{Spec} k\\)\n(source span). To see that it is a torus, base change to \\(k_s\\):\nsince \\(E/k\\) is separable,\n\\(E \\otimes_k k_s \\cong \\prod_{\\iota} k_s\\) indexed by the\n\\([E:k]\\) embeddings \\(\\iota : E \\to k_s\\), giving\n\\[\n(R_{E/k}S)_{k_s} \\;\\cong\\; \\prod_{\\iota} S \\times_{E, \\iota} k_s\n\\;\\cong\\; \\mathbb{G}_{m}^{[E:k]\\,m},\n\\]\nso \\(R_{E/k}S\\) is a torus of the stated rank.</p>\n<p>The displayed product decomposition identifies\n\\(X^*((R_{E/k}S)_{k_s})\\) with\n\\(\\bigoplus_{\\iota} X^*(S \\times_{E,\\iota} k_s)\\); the group\n\\(\\Theta\\) permutes the factors through its action on the embeddings\n\\(\\iota\\), i.e. on \\(\\Theta/\\Theta_E\\), and \\(\\Theta_E\\) acts on the\nfactor at the distinguished embedding through its action on\n\\(X^*(S)\\). This is exactly the induced module\n\\(\\operatorname{Ind}_{\\Theta_E}^{\\Theta} X^*(S)\\), and dually for\ncocharacters. Finally \\((R_{E/k}S)(k) = S(k \\otimes_k E) = S(E)\\), in\nparticular \\(E^\\times\\) for \\(S = \\mathbb{G}_m\\).</p>",
@@ -14,34 +14,34 @@
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
       "id": "tori.f_tori_galois_module_classification",
       "title": "F-Tori Are Classified by Galois Modules",
-      "href": "tori/tori_f_tori_galois_module_classification.html"
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
     }
   ],
   "dependents": [
     {
       "id": "tori.induced_resolution",
       "title": "Resolution of a Torus by Induced Tori",
-      "href": "tori/tori_induced_resolution.html"
+      "href": "AlgebraicGroups/Tori/tori_induced_resolution.html"
     },
     {
       "id": "tori.induced_tori",
       "title": "Induced Tori",
-      "href": "tori/tori_induced_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_induced_tori.html"
     },
     {
       "id": "tori.norm_one_torus",
       "title": "Norm-One Torus of a Separable Extension",
-      "href": "tori/tori_norm_one_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_norm_one_torus.html"
     }
   ],
   "lean_refs": [],

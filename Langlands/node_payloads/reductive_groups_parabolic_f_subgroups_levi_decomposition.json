@@ -1,0 +1,50 @@
+{
+  "id": "reductive_groups.parabolic_f_subgroups_levi_decomposition",
+  "title": "Levi Decomposition for Parabolic F-Subgroups",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_parabolic_f_subgroups_levi_decomposition.html",
+  "primary_topic": "AlgebraicGroups.ReductiveGroups",
+  "topics": [
+    "AlgebraicGroups.ReductiveGroups",
+    "AlgebraicGroups.Forms"
+  ],
+  "body_html": "<h1>Levi Decomposition for Parabolic F-Subgroups</h1>\n<p>Let \\(G\\) be a connected reductive \\(F\\)-group and let \\(P\\subseteq G\\) be a\nparabolic \\(F\\)-subgroup. Then:</p>\n<ol>\n<li>The unipotent radical \\(R_u(P)\\) is defined over \\(F\\) and is \\(F\\)-split.</li>\n<li>\\(P\\) has Levi subgroups defined over \\(F\\).</li>\n<li>Any two \\(F\\)-defined Levi subgroups of \\(P\\) are conjugate by a unique\n   element of \\(R_u(P)(F)\\).</li>\n<li>\\(P\\) contains a maximal \\(F\\)-split \\(F\\)-subtorus of \\(G\\).</li>\n</ol>",
+  "proof_html": "<p>A parabolic \\(F\\)-subgroup of a reductive group is of the form \\(P(\\lambda)\\)\nfor an \\(F\\)-defined cocharacter \\(\\lambda:\\mathbb{G}_m\\to G\\). The group\n\\[\nZ_G(\\lambda)=C_G(\\operatorname{im}\\lambda)\n\\]\nis a connected reductive \\(F\\)-subgroup, while the contracting subgroup\n\\[\nU(\\lambda)=\\{g:\\lim_{t\\to 0}\\lambda(t)g\\lambda(t)^{-1}=e\\}\n\\]\nis connected unipotent and \\(F\\)-split. The product map\n\\[\nZ_G(\\lambda)\\ltimes U(\\lambda)\\to P(\\lambda)\n\\]\nis an isomorphism of varieties and groups, so \\(U(\\lambda)=R_u(P)\\) and\n\\(Z_G(\\lambda)\\) is an \\(F\\)-Levi subgroup.</p>\n<p>If \\(L\\) is another \\(F\\)-defined Levi subgroup, it is the centralizer of an\n\\(F\\)-defined torus in \\(P\\). Geometric Levi conjugacy gives a unique element\nof \\(R_u(P)\\) carrying \\(Z_G(\\lambda)\\) to \\(L\\). The transporter is\n\\(F\\)-defined and consists of one point, hence that point lies in\n\\(R_u(P)(F)\\). The maximal \\(F\\)-split torus statement follows by choosing a\nminimal parabolic \\(F\\)-subgroup inside \\(P\\) and applying the conjugacy of\nmaximal \\(F\\)-split tori.</p>",
+  "deps": [
+    {
+      "id": "reductive_groups.levi_decomposition_of_parabolics",
+      "title": "Levi Decomposition of Parabolic Subgroups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_levi_decomposition_of_parabolics.html"
+    },
+    {
+      "id": "reductive_groups.maximal_f_split_tori_are_conjugate",
+      "title": "Maximal F-Split Tori Are G(F)-Conjugate",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_f_split_tori_are_conjugate.html"
+    },
+    {
+      "id": "reductive_groups.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_groups.html"
+    },
+    {
+      "id": "forms.f_subgroup_field_of_definition",
+      "title": "Field of Definition for Subgroups of F-Groups",
+      "href": "AlgebraicGroups/Forms/forms_f_subgroup_field_of_definition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "root_data.quasi_split_and_anisotropic_via_indexed_root_datum",
+      "title": "Quasi-Split and Anisotropic Groups via the Indexed Root Datum",
+      "href": "AlgebraicGroups/RootData/root_data_quasi_split_and_anisotropic_via_indexed_root_datum.html"
+    },
+    {
+      "id": "root_data.rational_bruhat_decomposition",
+      "title": "Rational Bruhat Decomposition",
+      "href": "AlgebraicGroups/RootData/root_data_rational_bruhat_decomposition.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

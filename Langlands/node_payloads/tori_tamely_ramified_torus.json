@@ -3,45 +3,45 @@
   "title": "Tamely Ramified Torus",
   "kind": "definition",
   "status": "admitted",
-  "href": "tori/tori_tamely_ramified_torus.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_tamely_ramified_torus.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
-  "body_html": "<h1>Tamely Ramified Torus</h1>\n<p>Let \\(k\\) be a Henselian discretely valued field with residue\ncharacteristic \\(p \\geq 0\\), and let\n\\(P \\subseteq I \\subseteq \\Theta\\) denote the wild inertia subgroup\n(the pro-\\(p\\) radical of the inertia group \\(I\\); trivial when\n\\(p = 0\\)).</p>\n<p>A torus \\(T\\) over \\(k\\) is <strong>tamely ramified</strong> if it splits over a\ntamely ramified Galois extension of \\(k\\). Equivalently, the wild\ninertia group \\(P\\) acts trivially on \\(X^*(T)\\).</p>\n<p>Special cases:</p>\n<ul>\n<li>every <a class=\"node-ref\" data-node-id=\"tori.unramified_torus\" href=\"tori_unramified_torus.html\">unramified torus</a> is tamely\n  ramified;</li>\n<li>if \\(p = 0\\), every torus over \\(k\\) is tamely ramified;</li>\n<li>if \\(p &gt; 0\\), a torus whose minimal splitting field\n  (<a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>) has degree prime to \\(p\\) is tamely\n  ramified.</li>\n</ul>",
+  "body_html": "<h1>Tamely Ramified Torus</h1>\n<p>Let \\(k\\) be a Henselian discretely valued field with residue\ncharacteristic \\(p \\geq 0\\), and let\n\\(P \\subseteq I \\subseteq \\Theta\\) denote the wild inertia subgroup\n(the pro-\\(p\\) radical of the inertia group \\(I\\); trivial when\n\\(p = 0\\)).</p>\n<p>A torus \\(T\\) over \\(k\\) is <strong>tamely ramified</strong> if it splits over a\ntamely ramified Galois extension of \\(k\\). Equivalently, the wild\ninertia group \\(P\\) acts trivially on \\(X^*(T)\\).</p>\n<p>Special cases:</p>\n<ul>\n<li>every <a class=\"node-ref\" data-node-id=\"tori.unramified_torus\" href=\"../../tori/tori_unramified_torus.html\">unramified torus</a> is tamely\n  ramified;</li>\n<li>if \\(p = 0\\), every torus over \\(k\\) is tamely ramified;</li>\n<li>if \\(p &gt; 0\\), a torus whose minimal splitting field\n  (<a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"../../tori/tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>) has degree prime to \\(p\\) is tamely\n  ramified.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
       "id": "tori.split_torus",
       "title": "Split Torus",
-      "href": "tori/tori_split_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_split_torus.html"
     },
     {
       "id": "tori.unramified_torus",
       "title": "Unramified Torus",
-      "href": "tori/tori_unramified_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_unramified_torus.html"
     },
     {
-      "id": "foundational_inputs.local_fields",
+      "id": "foundations.local_fields",
       "title": "Local Fields",
-      "href": "foundational_inputs/foundational_inputs_local_fields.html"
+      "href": "Foundations/foundations_local_fields.html"
     }
   ],
   "dependents": [
     {
       "id": "tori.weakly_induced_torus",
       "title": "Weakly Induced Torus",
-      "href": "tori/tori_weakly_induced_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_weakly_induced_torus.html"
     }
   ],
   "lean_refs": [],

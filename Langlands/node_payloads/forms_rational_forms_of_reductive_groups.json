@@ -1,0 +1,69 @@
+{
+  "id": "forms.rational_forms_of_reductive_groups",
+  "title": "Rational Forms of Reductive Groups",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Forms/forms_rational_forms_of_reductive_groups.html",
+  "primary_topic": "AlgebraicGroups.Forms",
+  "topics": [
+    "AlgebraicGroups.Forms"
+  ],
+  "body_html": "<h1>Rational Forms of Reductive Groups</h1>\n<p>A <strong>rational form</strong> of a reductive group \\(G\\) over a field \\(k\\) is a\n\\(k\\)-form: a reductive group \\(G'\\) over \\(k\\) with\n\\(G'_{\\bar k} \\cong G_{\\bar k}\\). Rational forms are classified by\nGalois cohomology of the automorphism group of \\(G_{\\bar k}\\), and\nthey organise the entire Langlands programme over fields.</p>\n<h2>Definition</h2>\n<p>Let \\(G\\) be a connected reductive group over a separably closed\nfield \\(\\bar k\\). A <strong>rational form</strong> of \\(G\\) over a subfield\n\\(k \\subseteq \\bar k\\) is a connected reductive \\(k\\)-group \\(G'\\)\nsuch that \\(G' \\otimes_k \\bar k \\cong G\\).</p>\n<p>\\(G\\) itself may not be defined over \\(k\\); the question is whether\nthere is a \\(k\\)-form at all, and how many.</p>\n<h2>Classification</h2>\n<p>Fix a split connected reductive \\(G_0\\) over \\(k\\) (e.g., the\nChevalley form). All other forms of \\(G_0 \\otimes \\bar k\\) are\nclassified by:\n\\[\n\\{\\text{forms of } G_0 \\text{ over } k\\}/\\cong \\;\\stackrel{\\sim}{\\longleftrightarrow}\\; H^1(k, \\mathrm{Aut}(G_0)).\n\\]</p>\n<h2>Inner vs.\\ outer decomposition</h2>\n<p>The exact sequence\n\\[\n1 \\;\\to\\; G_{0, \\mathrm{ad}} \\;\\to\\; \\mathrm{Aut}(G_0) \\;\\to\\; \\mathrm{Out}(G_0) \\;\\to\\; 1\n\\]\ngives a long exact sequence in cohomology:\n\\[\n1 \\to G_{0, \\mathrm{ad}}(k) \\to \\mathrm{Aut}(G_0)(k) \\to \\mathrm{Out}(G_0)(k) \\to H^1(k, G_{0, \\mathrm{ad}}) \\to H^1(k, \\mathrm{Aut}(G_0)) \\to H^1(k, \\mathrm{Out}(G_0)).\n\\]</p>\n<p>So:</p>\n<ol>\n<li>The <strong>outer form structure</strong> of \\(G\\) is classified by a map\n   \\(\\Gamma_k \\to \\mathrm{Out}(G_0)\\) (modulo conjugacy).</li>\n<li>The <strong>inner forms</strong> within a fixed outer-form class are classified\n   by \\(H^1(k, G_{0, \\mathrm{ad}}^c)\\), where \\(G_{0, \\mathrm{ad}}^c\\)\n   is the adjoint group of the quasi-split form \\(c\\).</li>\n</ol>\n<h2>Quasi-split forms</h2>\n<p>A form \\(G\\) is <strong>quasi-split</strong> if it has a Borel subgroup defined\nover \\(k\\) (equivalently: \\(H^1(k, B)\\) is trivial for some Borel\n\\(B \\subseteq G\\)).</p>\n<p>Every outer-form class contains a unique quasi-split form (up to\nisomorphism); inner forms differ by a class in \\(H^1(k, G_{\\mathrm{ad}})\\).</p>\n<p>\\(G_0\\) (split) is the quasi-split form with trivial outer twist;\n\\(\\mathrm{U}(n)\\) is the quasi-split form in the outer twist class of\nthe non-trivial diagram automorphism.</p>\n<h2>Examples</h2>\n<h3>\\(\\mathrm{GL}_n\\)</h3>\n<p>\\(\\mathrm{Aut}(\\mathrm{GL}_n) = \\mathrm{PGL}_n \\rtimes \\mathbb{Z}/2\\)\n(inner = \\(\\mathrm{PGL}_n\\), outer = transpose-inverse).</p>\n<table>\n<thead>\n<tr>\n<th>Form</th>\n<th>\\(\\Gamma_k\\)-action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Split \\(\\mathrm{GL}_n\\)</td>\n<td>trivial</td>\n</tr>\n<tr>\n<td>Inner forms = \\(\\mathrm{GL}_r(D)\\) for \\(D / k\\) central simple of degree \\(n\\)</td>\n<td>non-trivial cocycle in \\(\\mathrm{PGL}_n\\)</td>\n</tr>\n<tr>\n<td>Outer form \\(\\mathrm{U}(n, K/k)\\)</td>\n<td>non-trivial in \\(\\mathbb{Z}/2\\); inner twist by Hermitian form</td>\n</tr>\n</tbody>\n</table>\n<h3>\\(\\mathrm{SL}_n\\)</h3>\n<p>Inner forms: \\(\\mathrm{SL}_1(D)\\) for division algebras \\(D\\) of\ndegree \\(n\\); the <strong>norm-one</strong> subgroup of \\(D^\\times\\).</p>\n<p>Outer forms over \\(\\mathbb{R}\\): special unitary groups\n\\(\\mathrm{SU}(p, q)\\) and \\(\\mathrm{SU}^*(2n)\\) (the quaternionic\nform).</p>\n<h3>\\(E_6\\)</h3>\n<p>Two classes of outer forms: \\(E_6^{\\mathrm{split}}\\) (trivial Galois)\nand \\({}^2 E_6\\) (non-trivial Galois). Inner forms then refine each.</p>\n<h2>Tits index</h2>\n<p>A <strong>Tits index</strong> records the combinatorial data of a rational form:</p>\n<ul>\n<li>The Dynkin diagram of the absolute root system;</li>\n<li>The Galois orbits on the Dynkin diagram;</li>\n<li>The distinguished vertices (= simple roots defined over \\(k\\)).</li>\n</ul>\n<p>The Tits index gives a complete classification of reductive groups\nover a fixed field \\(k\\) (Tits, 1966).</p>\n<h2>Hasse principle</h2>\n<p><strong>Theorem (Kneser-Harder-Chernousov).</strong> For a simply connected\nsemisimple group \\(G\\) over a number field \\(F\\):\n\\[\n\\Sha^1(F, G) \\;:=\\; \\ker\\Big(H^1(F, G) \\to \\prod_v H^1(F_v, G)\\Big) \\;=\\; 1.\n\\]</p>\n<p>Equivalently, every \\(G\\)-torsor that is trivial locally everywhere is\ntrivial globally.</p>\n<p>For non-simply-connected groups: \\(\\Sha^1(F, G)\\) can be non-trivial,\nand is computable via Borovoi's abelianised Galois cohomology.</p>\n<h2>Role in Langlands</h2>\n<ul>\n<li><strong>Forms of \\(G\\) at all places</strong>: \\(G\\) over \\(F\\) determines forms\n  \\(G_v\\) over each local completion \\(F_v\\); these forms organise\n  the local L-packet structure.</li>\n<li><strong>Adelic local-global</strong>: \\(G(\\mathbb{A}_F) = \\prod_v G(F_v)\\) makes\n  sense once each local form is fixed; rational structure ensures the\n  product is well-defined.</li>\n<li><strong>Strong approximation</strong>: simply connected semisimple groups satisfy\n  strong approximation (\\(G(F) \\cdot G(F_v)\\) is dense in\n  \\(G(\\mathbb{A}_F)\\) for any place \\(v\\) of positive rank); this is\n  the basis of many automorphic argument.</li>\n</ul>\n<h2>Mathlib</h2>\n<p>Not formalised; depends on Galois cohomology infrastructure.</p>\n<h2>References</h2>\n<ul>\n<li>Tits, <em>Classification of algebraic semisimple groups</em> (Proc.\\ AMS\n  Symp.\\ 1966).</li>\n<li>Platonov–Rapinchuk, <em>Algebraic Groups and Number Theory</em> (1994).</li>\n<li>Borel–Serre, <em>Théorèmes de finitude en cohomologie galoisienne</em>\n  (Comment.\\ Math.\\ Helv.\\ 1964).</li>\n<li>Conrad, <em>Reductive group schemes</em> (Notes, 2014), §7.</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"forms.forms_of_algebraic_groups\" href=\"../../forms/forms_forms_of_algebraic_groups.html\">Forms of Algebraic Groups</a></li>\n<li><a class=\"node-ref\" data-node-id=\"reductive_groups.reductive_groups\" href=\"../../reductive_groups/reductive_groups_reductive_groups.html\">Reductive Groups</a></li>\n<li><a class=\"node-ref\" data-node-id=\"root_data.root_data\" href=\"../../root_data/root_data_root_data.html\">Root Data</a></li>\n<li><a class=\"node-ref\" data-node-id=\"forms.galois_cohomology\" href=\"../../forms/forms_galois_cohomology.html\">Galois Cohomology</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "forms.forms_of_algebraic_groups",
+      "title": "Forms of Algebraic Groups",
+      "href": "AlgebraicGroups/Forms/forms_forms_of_algebraic_groups.html"
+    },
+    {
+      "id": "reductive_groups.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_groups.html"
+    },
+    {
+      "id": "root_data.root_data",
+      "title": "Root Data",
+      "href": "AlgebraicGroups/RootData/root_data_root_data.html"
+    },
+    {
+      "id": "forms.galois_cohomology",
+      "title": "Galois Cohomology",
+      "href": "AlgebraicGroups/Forms/forms_galois_cohomology.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "conjugacy_classes.rational_nilpotent_orbits",
+      "title": "Rational Nilpotent Orbits",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_rational_nilpotent_orbits.html"
+    },
+    {
+      "id": "forms.inner_forms",
+      "title": "Inner Forms",
+      "href": "AlgebraicGroups/Forms/forms_inner_forms.html"
+    },
+    {
+      "id": "forms.outer_forms",
+      "title": "Outer Forms",
+      "href": "AlgebraicGroups/Forms/forms_outer_forms.html"
+    },
+    {
+      "id": "forms.quasi_split_forms",
+      "title": "Quasi-Split Forms",
+      "href": "AlgebraicGroups/Forms/forms_quasi_split_forms.html"
+    },
+    {
+      "id": "forms.real_forms",
+      "title": "Real Forms",
+      "href": "AlgebraicGroups/Forms/forms_real_forms.html"
+    },
+    {
+      "id": "root_data.indexed_root_datum_of_f_reductive_group",
+      "title": "Indexed Root Datum of an F-Reductive Group",
+      "href": "AlgebraicGroups/RootData/root_data_indexed_root_datum_of_f_reductive_group.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

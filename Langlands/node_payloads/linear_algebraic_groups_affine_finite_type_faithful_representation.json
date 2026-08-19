@@ -3,38 +3,38 @@
   "title": "Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations",
   "kind": "theorem",
   "status": "admitted",
-  "href": "linear_algebraic_groups/linear_algebraic_groups_affine_finite_type_faithful_representation.html",
-  "primary_topic": "linear_algebraic_groups",
+  "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_affine_finite_type_faithful_representation.html",
+  "primary_topic": "AlgebraicGroups.LinearAlgebraicGroups",
   "topics": [
-    "linear_algebraic_groups"
+    "AlgebraicGroups.LinearAlgebraicGroups"
   ],
-  "body_html": "<h1>Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"../affine_group_schemes/affine_group_schemes_algebraic_group_definition.html\">algebraic group</a>\nover \\(\\operatorname{Spec} k\\). Then \\(G\\) admits a\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.faithful_linear_representation_definition\" href=\"../affine_group_schemes/affine_group_schemes_faithful_linear_representation_definition.html\">faithful finite-dimensional representation</a>.\nEquivalently, \\(G\\) is isomorphic, as a group scheme over\n\\(\\operatorname{Spec} k\\), to a closed subgroup scheme of some\n\\(\\operatorname{GL}_n\\).</p>\n<p>This is the signature theorem of affine algebraic groups (Springer\n§2.3.7, Borel §1.10, Waterhouse §3.4, Milne §4.9). In this project the\nstatement is recorded as the proposition\n\\(\\texttt{HasFaithfulLinearRepresentation}\\,k\\,G\\). The proof is the\nsubject of Phase B (Hopf algebra correspondence + finite-generation\nlemma for comodules + regular representation argument); see\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">the embedding theorem</a>.</p>",
-  "proof_html": "<p>(Statement form here; proof in\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"linear_algebraic_groups_embedding_theorem.html\">the embedding theorem</a>.)</p>\n<p>The proof proceeds as follows:</p>\n<ol>\n<li>Apply the\n   <a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_essential_image_affine\" href=\"../affine_group_schemes/affine_group_schemes_hopf_spec_essential_image_affine.html\">Hopf algebra correspondence</a>\n   to identify \\(G\\) with \\(\\operatorname{Spec} A\\) for a finitely\n   generated commutative Hopf \\(k\\)-algebra \\(A\\).</li>\n<li>Apply\n   <a class=\"node-ref\" data-node-id=\"affine_group_schemes.finite_dim_subcomodule_lemma\" href=\"../affine_group_schemes/affine_group_schemes_finite_dim_subcomodule_lemma.html\">finite generation of comodules</a>\n   to find a finite-dimensional \\(G\\)-stable subspace\n   \\(W \\subseteq A\\) containing a \\(k\\)-algebra generating set of \\(A\\).</li>\n<li>The coaction of \\(A\\) on \\(W\\) defines a representation\n   \\(\\rho : G \\to \\operatorname{GL}(W)\\); the corresponding ring\n   homomorphism is surjective because \\(W\\) generates \\(A\\), so\n   \\(\\rho\\) is a closed immersion.\n\\(\\square\\)</li>\n</ol>",
+  "body_html": "<h1>Affine Finite-Type Groups Have Faithful Finite-Dimensional Representations</h1>\n<p>Let \\(k\\) be a field and \\(G\\) an\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.algebraic_group_definition\" href=\"../../affine_group_schemes/affine_group_schemes_algebraic_group_definition.html\">algebraic group</a>\nover \\(\\operatorname{Spec} k\\). Then \\(G\\) admits a\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.faithful_linear_representation_definition\" href=\"../../affine_group_schemes/affine_group_schemes_faithful_linear_representation_definition.html\">faithful finite-dimensional representation</a>.\nEquivalently, \\(G\\) is isomorphic, as a group scheme over\n\\(\\operatorname{Spec} k\\), to a closed subgroup scheme of some\n\\(\\operatorname{GL}_n\\).</p>\n<p>This is the signature theorem of affine algebraic groups (Springer\n§2.3.7, Borel §1.10, Waterhouse §3.4, Milne §4.9). In this project the\nstatement is recorded as the proposition\n\\(\\texttt{HasFaithfulLinearRepresentation}\\,k\\,G\\). The proof is the\nsubject of Phase B (Hopf algebra correspondence + finite-generation\nlemma for comodules + regular representation argument); see\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"../../linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html\">the embedding theorem</a>.</p>",
+  "proof_html": "<p>(Statement form here; proof in\n<a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.embedding_theorem\" href=\"../../linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html\">the embedding theorem</a>.)</p>\n<p>The proof proceeds as follows:</p>\n<ol>\n<li>Apply the\n   <a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_essential_image_affine\" href=\"../../affine_group_schemes/affine_group_schemes_hopf_spec_essential_image_affine.html\">Hopf algebra correspondence</a>\n   to identify \\(G\\) with \\(\\operatorname{Spec} A\\) for a finitely\n   generated commutative Hopf \\(k\\)-algebra \\(A\\).</li>\n<li>Apply\n   <a class=\"node-ref\" data-node-id=\"affine_group_schemes.finite_dim_subcomodule_lemma\" href=\"../../affine_group_schemes/affine_group_schemes_finite_dim_subcomodule_lemma.html\">finite generation of comodules</a>\n   to find a finite-dimensional \\(G\\)-stable subspace\n   \\(W \\subseteq A\\) containing a \\(k\\)-algebra generating set of \\(A\\).</li>\n<li>The coaction of \\(A\\) on \\(W\\) defines a representation\n   \\(\\rho : G \\to \\operatorname{GL}(W)\\); the corresponding ring\n   homomorphism is surjective because \\(W\\) generates \\(A\\), so\n   \\(\\rho\\) is a closed immersion.\n\\(\\square\\)</li>\n</ol>",
   "deps": [
     {
       "id": "affine_group_schemes.algebraic_group_definition",
       "title": "Algebraic Group over a Base",
-      "href": "affine_group_schemes/affine_group_schemes_algebraic_group_definition.html"
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_algebraic_group_definition.html"
     },
     {
       "id": "affine_group_schemes.faithful_linear_representation_definition",
       "title": "Faithful Linear Representation",
-      "href": "affine_group_schemes/affine_group_schemes_faithful_linear_representation_definition.html"
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_faithful_linear_representation_definition.html"
     },
     {
       "id": "affine_group_schemes.hopf_spec_essential_image_affine",
       "title": "Essential Image of Spec Is Affine Group Schemes",
-      "href": "affine_group_schemes/affine_group_schemes_hopf_spec_essential_image_affine.html"
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_hopf_spec_essential_image_affine.html"
     },
     {
       "id": "affine_group_schemes.finite_dim_subcomodule_lemma",
       "title": "Finite-Dimensional Subspace in a Sub-Comodule",
-      "href": "affine_group_schemes/affine_group_schemes_finite_dim_subcomodule_lemma.html"
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_finite_dim_subcomodule_lemma.html"
     },
     {
       "id": "linear_algebraic_groups.embedding_theorem",
       "title": "Embedding Theorem for Algebraic Groups",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_embedding_theorem.html"
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_embedding_theorem.html"
     }
   ],
   "dependents": [],

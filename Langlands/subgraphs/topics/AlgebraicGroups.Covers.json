@@ -1,0 +1,269 @@
+{
+  "topic": {
+    "id": "AlgebraicGroups.Covers",
+    "title": "Algebraicgroups.Covers",
+    "href": "AlgebraicGroups/Covers/index.html",
+    "parent": "AlgebraicGroups",
+    "node_count": 6,
+    "descendant_node_count": 6
+  },
+  "counts": {
+    "internal_nodes": 6,
+    "inlined_nodes": 0,
+    "descendant_nodes": 6,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 6,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 5,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
+  },
+  "nodes": [
+    {
+      "id": "covers.brylinski_deligne_k2_extensions",
+      "title": "Brylinski-Deligne K2-Extensions",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Covers/covers_brylinski_deligne_k2_extensions.html",
+      "payload": "node_payloads/covers_brylinski_deligne_k2_extensions.json"
+    },
+    {
+      "id": "covers.central_extensions_of_algebraic_groups",
+      "title": "Central Extensions of Algebraic Groups",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Covers/covers_central_extensions_of_algebraic_groups.html",
+      "payload": "node_payloads/covers_central_extensions_of_algebraic_groups.json"
+    },
+    {
+      "id": "covers.dual_groups_for_covers",
+      "title": "Dual Groups for Covers",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Covers/covers_dual_groups_for_covers.html",
+      "payload": "node_payloads/covers_dual_groups_for_covers.json"
+    },
+    {
+      "id": "covers.l_groups_for_covers",
+      "title": "L-Groups for Covers",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Covers/covers_l_groups_for_covers.html",
+      "payload": "node_payloads/covers_l_groups_for_covers.json"
+    },
+    {
+      "id": "covers.local_and_global_metaplectic_covers",
+      "title": "Local and Global Metaplectic Covers",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Covers/covers_local_and_global_metaplectic_covers.html",
+      "payload": "node_payloads/covers_local_and_global_metaplectic_covers.json"
+    },
+    {
+      "id": "covers.splittings_over_integral_and_parahoric_subgroups",
+      "title": "Splittings over Integral and Parahoric Subgroups",
+      "kind": "topic",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Covers/covers_splittings_over_integral_and_parahoric_subgroups.html",
+      "payload": "node_payloads/covers_splittings_over_integral_and_parahoric_subgroups.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "covers.central_extensions_of_algebraic_groups",
+      "to": "covers.brylinski_deligne_k2_extensions",
+      "kind": "uses"
+    },
+    {
+      "from": "covers.brylinski_deligne_k2_extensions",
+      "to": "covers.dual_groups_for_covers",
+      "kind": "uses"
+    },
+    {
+      "from": "covers.dual_groups_for_covers",
+      "to": "covers.l_groups_for_covers",
+      "kind": "uses"
+    },
+    {
+      "from": "covers.brylinski_deligne_k2_extensions",
+      "to": "covers.local_and_global_metaplectic_covers",
+      "kind": "uses"
+    },
+    {
+      "from": "covers.local_and_global_metaplectic_covers",
+      "to": "covers.splittings_over_integral_and_parahoric_subgroups",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "AlgebraicGroups.AffineGroupSchemes",
+      "title": "Algebraicgroups.Affinegroupschemes",
+      "href": "AlgebraicGroups/AffineGroupSchemes/index.html",
+      "role": "dependency",
+      "node_count": 38
+    },
+    {
+      "id": "AlgebraicGroups.Buildings",
+      "title": "Algebraicgroups.Buildings",
+      "href": "AlgebraicGroups/Buildings/index.html",
+      "role": "dependency",
+      "node_count": 16
+    },
+    {
+      "id": "AlgebraicGroups.ReductiveGroups",
+      "title": "Algebraicgroups.Reductivegroups",
+      "href": "AlgebraicGroups/ReductiveGroups/index.html",
+      "role": "dependency",
+      "node_count": 49
+    },
+    {
+      "id": "AlgebraicGroups.RootData",
+      "title": "Algebraicgroups.Rootdata",
+      "href": "AlgebraicGroups/RootData/index.html",
+      "role": "dependency",
+      "node_count": 49
+    },
+    {
+      "id": "Foundations",
+      "title": "Foundations",
+      "href": "Foundations/index.html",
+      "role": "dependency",
+      "node_count": 9
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:AlgebraicGroups.AffineGroupSchemes",
+      "to": "covers.central_extensions_of_algebraic_groups",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.Buildings",
+      "to": "covers.splittings_over_integral_and_parahoric_subgroups",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.Buildings",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.ReductiveGroups",
+      "to": "covers.brylinski_deligne_k2_extensions",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.ReductiveGroups",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.RootData",
+      "to": "covers.brylinski_deligne_k2_extensions",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.RootData",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.RootData",
+      "to": "covers.dual_groups_for_covers",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.RootData",
+      "count": 2
+    },
+    {
+      "from": "topic:AlgebraicGroups.RootData",
+      "to": "covers.l_groups_for_covers",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.RootData",
+      "count": 1
+    },
+    {
+      "from": "topic:Foundations",
+      "to": "covers.brylinski_deligne_k2_extensions",
+      "kind": "boundary_dependency",
+      "topic": "Foundations",
+      "count": 1
+    },
+    {
+      "from": "topic:Foundations",
+      "to": "covers.central_extensions_of_algebraic_groups",
+      "kind": "boundary_dependency",
+      "topic": "Foundations",
+      "count": 1
+    },
+    {
+      "from": "topic:Foundations",
+      "to": "covers.local_and_global_metaplectic_covers",
+      "kind": "boundary_dependency",
+      "topic": "Foundations",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "bd-covers",
+      "title": "bd-covers",
+      "href": "keywords/bd-covers.html",
+      "count": 6
+    },
+    {
+      "id": "brylinski-deligne",
+      "title": "brylinski-deligne",
+      "href": "keywords/brylinski-deligne.html",
+      "count": 1
+    },
+    {
+      "id": "central-extensions",
+      "title": "central-extensions",
+      "href": "keywords/central-extensions.html",
+      "count": 1
+    },
+    {
+      "id": "covers",
+      "title": "covers",
+      "href": "keywords/covers.html",
+      "count": 2
+    },
+    {
+      "id": "dual-groups",
+      "title": "dual-groups",
+      "href": "keywords/dual-groups.html",
+      "count": 1
+    },
+    {
+      "id": "k2",
+      "title": "k2",
+      "href": "keywords/k2.html",
+      "count": 1
+    },
+    {
+      "id": "l-groups",
+      "title": "l-groups",
+      "href": "keywords/l-groups.html",
+      "count": 1
+    },
+    {
+      "id": "metaplectic-covers",
+      "title": "metaplectic-covers",
+      "href": "keywords/metaplectic-covers.html",
+      "count": 1
+    },
+    {
+      "id": "parahoric-subgroups",
+      "title": "parahoric-subgroups",
+      "href": "keywords/parahoric-subgroups.html",
+      "count": 1
+    },
+    {
+      "id": "splittings",
+      "title": "splittings",
+      "href": "keywords/splittings.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

@@ -3,156 +3,156 @@
   "title": "Algebraic Tori",
   "kind": "topic",
   "status": "admitted",
-  "href": "tori/tori_algebraic_tori.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
-  "body_html": "<h1>Algebraic Tori</h1>\n<p>An algebraic torus is a <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.linear_algebraic_groups\" href=\"../linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_groups.html\">linear algebraic group</a>\nthat becomes isomorphic to a finite power of\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.multiplicative_group_scheme\" href=\"../affine_group_schemes/affine_group_schemes_multiplicative_group_scheme.html\">the multiplicative group</a>\nover a separable closure of the base field. Tori are simultaneously a\nspecial case of reductive groups and the foundation on which the\nstructure theory of reductive groups is built: maximal tori carry root\ndata, maximal split tori carry relative root data and apartments, and\nthe arithmetic of tori over discretely valued fields underlies parahoric\nsubgroups and Bruhat–Tits buildings. This topic develops the theory of\ntori in itself, before and independently of reductive structure theory.</p>\n<h2>Conventions</h2>\n<p>Fixed for every node of this topic and for downstream consumers.</p>\n<ul>\n<li>\\(k\\) denotes the base field, \\(k_s\\) a separable closure,\n  \\(\\Theta = \\operatorname{Gal}(k_s/k)\\). Statements are phrased over\n  \\(k_s\\), never over an algebraic closure: a torus splits over a finite\n  separable extension, so \\(\\bar{k}\\) is an unnecessary strengthening.</li>\n<li>The <strong>character lattice</strong> is\n  \\(X^*(T) = \\operatorname{Hom}_{k_s\\text{-grp}}(T_{k_s}, \\mathbb{G}_m)\\)\n  and the <strong>cocharacter lattice</strong> is\n  \\(X_*(T) = \\operatorname{Hom}_{k_s\\text{-grp}}(\\mathbb{G}_m, T_{k_s})\\),\n  in perfect duality; the continuous \\(\\Theta\\)-action on each is part\n  of the data, not built into the Hom. See\n  <a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>.</li>\n<li><strong>Anisotropic</strong> means \\(X_*(T)^{\\Theta} = 0\\); this is equivalent to\n  \\(X^*(T)^{\\Theta} = 0\\) (see <a class=\"node-ref\" data-node-id=\"tori.anisotropic_torus\" href=\"tori_anisotropic_torus.html\">Anisotropic Torus</a>), and the\n  cocharacter form is the one used downstream.</li>\n<li>\\(X_*\\) is the preferred working lattice: valuation-theoretic\n  invariants of \\(T(k)\\) and, downstream, apartments of buildings are\n  expressed through \\(X_*\\).</li>\n<li>Primitive maps are \\(\\mathbb{Z}\\)-valued into finitely generated\n  abelian groups. Tensoring with \\(\\mathbb{Q}\\) or \\(\\mathbb{R}\\)\n  happens at the point of use, never inside a definition.</li>\n</ul>\n<h2>Core nodes</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"tori.torus_definition\" href=\"tori_torus_definition.html\">Algebraic Torus</a> — the definition.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.multiplicative_type_characterization\" href=\"tori_multiplicative_type_characterization.html\">Tori among Groups of Multiplicative Type</a> — tori among\n  groups of multiplicative type; the characteristic-\\(p\\) trichotomy.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a> — the\n  anti-equivalence with Galois lattices, the complete invariant.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a> — the minimal splitting field.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.split_torus\" href=\"tori_split_torus.html\">Split Torus</a>, <a class=\"node-ref\" data-node-id=\"tori.anisotropic_torus\" href=\"tori_anisotropic_torus.html\">Anisotropic Torus</a> — the two\n  extreme classes.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.subtori_and_quotients\" href=\"tori_subtori_and_quotients.html\">Subtori and Quotients via the Character Lattice</a> — the lattice dictionary for\n  subtori and quotients.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.split_anisotropic_decomposition\" href=\"tori_split_anisotropic_decomposition.html\">Split-Anisotropic Decomposition of a Torus</a> — every torus is an\n  almost direct product of the two extremes.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.weil_restriction_of_tori\" href=\"tori_weil_restriction_of_tori.html\">Weil Restriction of Tori</a>, <a class=\"node-ref\" data-node-id=\"tori.norm_one_torus\" href=\"tori_norm_one_torus.html\">Norm-One Torus of a Separable Extension</a>,\n  <a class=\"node-ref\" data-node-id=\"tori.rank_one_classification\" href=\"tori_rank_one_classification.html\">Classification of Rank-One Tori</a> — the basic examples.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.induced_tori\" href=\"tori_induced_tori.html\">Induced Tori</a>, <a class=\"node-ref\" data-node-id=\"tori.induced_resolution\" href=\"tori_induced_resolution.html\">Resolution of a Torus by Induced Tori</a> — the\n  class that behaves like \\(\\mathbb{G}_m\\), and the resolution of an\n  arbitrary torus by it.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.unramified_torus\" href=\"tori_unramified_torus.html\">Unramified Torus</a>, <a class=\"node-ref\" data-node-id=\"tori.tamely_ramified_torus\" href=\"tori_tamely_ramified_torus.html\">Tamely Ramified Torus</a>,\n  <a class=\"node-ref\" data-node-id=\"tori.weakly_induced_torus\" href=\"tori_weakly_induced_torus.html\">Weakly Induced Torus</a> — ramification classes over\n  discretely valued fields.</li>\n</ul>\n<h2>Planned extensions</h2>\n<p>Galois cohomology of tori, the Kottwitz homomorphism and the subgroups\n\\(T(k)_0 \\subseteq T(k)_1\\) of \\(T(k)\\), integral models and their\nfiltrations, and the dual torus with the local Langlands correspondence\nfor tori are tracked as later stages of this topic.</p>",
+  "body_html": "<h1>Algebraic Tori</h1>\n<p>An algebraic torus is a <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.linear_algebraic_groups\" href=\"../../linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_groups.html\">linear algebraic group</a>\nthat becomes isomorphic to a finite power of\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.multiplicative_group_scheme\" href=\"../../affine_group_schemes/affine_group_schemes_multiplicative_group_scheme.html\">the multiplicative group</a>\nover a separable closure of the base field. Tori are simultaneously a\nspecial case of reductive groups and the foundation on which the\nstructure theory of reductive groups is built: maximal tori carry root\ndata, maximal split tori carry relative root data and apartments, and\nthe arithmetic of tori over discretely valued fields underlies parahoric\nsubgroups and Bruhat–Tits buildings. This topic develops the theory of\ntori in itself, before and independently of reductive structure theory.</p>\n<h2>Conventions</h2>\n<p>Fixed for every node of this topic and for downstream consumers.</p>\n<ul>\n<li>\\(k\\) denotes the base field, \\(k_s\\) a separable closure,\n  \\(\\Theta = \\operatorname{Gal}(k_s/k)\\). Statements are phrased over\n  \\(k_s\\), never over an algebraic closure: a torus splits over a finite\n  separable extension, so \\(\\bar{k}\\) is an unnecessary strengthening.</li>\n<li>The <strong>character lattice</strong> is\n  \\(X^*(T) = \\operatorname{Hom}_{k_s\\text{-grp}}(T_{k_s}, \\mathbb{G}_m)\\)\n  and the <strong>cocharacter lattice</strong> is\n  \\(X_*(T) = \\operatorname{Hom}_{k_s\\text{-grp}}(\\mathbb{G}_m, T_{k_s})\\),\n  in perfect duality; the continuous \\(\\Theta\\)-action on each is part\n  of the data, not built into the Hom. See\n  <a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"../../tori/tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>.</li>\n<li><strong>Anisotropic</strong> means \\(X_*(T)^{\\Theta} = 0\\); this is equivalent to\n  \\(X^*(T)^{\\Theta} = 0\\) (see <a class=\"node-ref\" data-node-id=\"tori.anisotropic_torus\" href=\"../../tori/tori_anisotropic_torus.html\">Anisotropic Torus</a>), and the\n  cocharacter form is the one used downstream.</li>\n<li>\\(X_*\\) is the preferred working lattice: valuation-theoretic\n  invariants of \\(T(k)\\) and, downstream, apartments of buildings are\n  expressed through \\(X_*\\).</li>\n<li>Primitive maps are \\(\\mathbb{Z}\\)-valued into finitely generated\n  abelian groups. Tensoring with \\(\\mathbb{Q}\\) or \\(\\mathbb{R}\\)\n  happens at the point of use, never inside a definition.</li>\n</ul>\n<h2>Core nodes</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"tori.torus_definition\" href=\"../../tori/tori_torus_definition.html\">Algebraic Torus</a> — the definition.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.multiplicative_type_characterization\" href=\"../../tori/tori_multiplicative_type_characterization.html\">Tori among Groups of Multiplicative Type</a> — tori among\n  groups of multiplicative type; the characteristic-\\(p\\) trichotomy.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a> — the\n  anti-equivalence with Galois lattices, the complete invariant.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"../../tori/tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a> — the minimal splitting field.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.split_torus\" href=\"../../tori/tori_split_torus.html\">Split Torus</a>, <a class=\"node-ref\" data-node-id=\"tori.anisotropic_torus\" href=\"../../tori/tori_anisotropic_torus.html\">Anisotropic Torus</a> — the two\n  extreme classes.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.subtori_and_quotients\" href=\"../../tori/tori_subtori_and_quotients.html\">Subtori and Quotients via the Character Lattice</a> — the lattice dictionary for\n  subtori and quotients.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.split_anisotropic_decomposition\" href=\"../../tori/tori_split_anisotropic_decomposition.html\">Split-Anisotropic Decomposition of a Torus</a> — every torus is an\n  almost direct product of the two extremes.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.weil_restriction_of_tori\" href=\"../../tori/tori_weil_restriction_of_tori.html\">Weil Restriction of Tori</a>, <a class=\"node-ref\" data-node-id=\"tori.norm_one_torus\" href=\"../../tori/tori_norm_one_torus.html\">Norm-One Torus of a Separable Extension</a>,\n  <a class=\"node-ref\" data-node-id=\"tori.rank_one_classification\" href=\"../../tori/tori_rank_one_classification.html\">Classification of Rank-One Tori</a> — the basic examples.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.induced_tori\" href=\"../../tori/tori_induced_tori.html\">Induced Tori</a>, <a class=\"node-ref\" data-node-id=\"tori.induced_resolution\" href=\"../../tori/tori_induced_resolution.html\">Resolution of a Torus by Induced Tori</a> — the\n  class that behaves like \\(\\mathbb{G}_m\\), and the resolution of an\n  arbitrary torus by it.</li>\n<li><a class=\"node-ref\" data-node-id=\"tori.unramified_torus\" href=\"../../tori/tori_unramified_torus.html\">Unramified Torus</a>, <a class=\"node-ref\" data-node-id=\"tori.tamely_ramified_torus\" href=\"../../tori/tori_tamely_ramified_torus.html\">Tamely Ramified Torus</a>,\n  <a class=\"node-ref\" data-node-id=\"tori.weakly_induced_torus\" href=\"../../tori/tori_weakly_induced_torus.html\">Weakly Induced Torus</a> — ramification classes over\n  discretely valued fields.</li>\n</ul>\n<h2>Planned extensions</h2>\n<p>Galois cohomology of tori, the Kottwitz homomorphism and the subgroups\n\\(T(k)_0 \\subseteq T(k)_1\\) of \\(T(k)\\), integral models and their\nfiltrations, and the dual torus with the local Langlands correspondence\nfor tori are tracked as later stages of this topic.</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "linear_algebraic_groups.linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_groups.html"
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_linear_algebraic_groups.html"
     },
     {
       "id": "affine_group_schemes.multiplicative_group_scheme",
       "title": "Multiplicative Group Scheme 𝔾_m",
-      "href": "affine_group_schemes/affine_group_schemes_multiplicative_group_scheme.html"
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_multiplicative_group_scheme.html"
     }
   ],
   "dependents": [
     {
-      "id": "reductive_structure.borel_subgroups",
+      "id": "reductive_groups.borel_subgroups",
       "title": "Borel Subgroups",
-      "href": "reductive_structure/reductive_structure_borel_subgroups.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_borel_subgroups.html"
     },
     {
-      "id": "reductive_structure.connected_solvable_group_structure",
+      "id": "reductive_groups.connected_solvable_group_structure",
       "title": "Structure of Connected Solvable Algebraic Groups",
-      "href": "reductive_structure/reductive_structure_connected_solvable_group_structure.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_connected_solvable_group_structure.html"
     },
     {
-      "id": "reductive_structure.maximal_tori",
+      "id": "reductive_groups.maximal_tori",
       "title": "Maximal Tori",
-      "href": "reductive_structure/reductive_structure_maximal_tori.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_tori.html"
     },
     {
-      "id": "reductive_structure.reductive_group_radical_and_derived_group",
+      "id": "reductive_groups.reductive_group_radical_and_derived_group",
       "title": "Radical and Derived Group of a Reductive Group",
-      "href": "reductive_structure/reductive_structure_reductive_group_radical_and_derived_group.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_group_radical_and_derived_group.html"
     },
     {
-      "id": "reductive_structure.reductive_groups",
+      "id": "reductive_groups.reductive_groups",
       "title": "Reductive Groups",
-      "href": "reductive_structure/reductive_structure_reductive_groups.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_groups.html"
     },
     {
-      "id": "reductive_structure.split_reductive_groups",
+      "id": "reductive_groups.split_reductive_groups",
       "title": "Split Reductive Groups",
-      "href": "reductive_structure/reductive_structure_split_reductive_groups.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_split_reductive_groups.html"
     },
     {
-      "id": "root_data_and_duality.chevalley_group_construction",
+      "id": "root_data.chevalley_group_construction",
       "title": "Chevalley Group Construction from a Root Datum",
-      "href": "root_data_and_duality/root_data_and_duality_chevalley_group_construction.html"
+      "href": "AlgebraicGroups/RootData/root_data_chevalley_group_construction.html"
     },
     {
       "id": "tori.anisotropic_torus",
       "title": "Anisotropic Torus",
-      "href": "tori/tori_anisotropic_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_anisotropic_torus.html"
     },
     {
       "id": "tori.character_and_cocharacter_lattices",
       "title": "Character and Cocharacter Lattices",
-      "href": "tori/tori_character_and_cocharacter_lattices.html"
+      "href": "AlgebraicGroups/Tori/tori_character_and_cocharacter_lattices.html"
     },
     {
       "id": "tori.f_tori_galois_module_classification",
       "title": "F-Tori Are Classified by Galois Modules",
-      "href": "tori/tori_f_tori_galois_module_classification.html"
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
     },
     {
       "id": "tori.induced_resolution",
       "title": "Resolution of a Torus by Induced Tori",
-      "href": "tori/tori_induced_resolution.html"
+      "href": "AlgebraicGroups/Tori/tori_induced_resolution.html"
     },
     {
       "id": "tori.induced_tori",
       "title": "Induced Tori",
-      "href": "tori/tori_induced_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_induced_tori.html"
     },
     {
       "id": "tori.multiplicative_type_characterization",
       "title": "Tori among Groups of Multiplicative Type",
-      "href": "tori/tori_multiplicative_type_characterization.html"
+      "href": "AlgebraicGroups/Tori/tori_multiplicative_type_characterization.html"
     },
     {
       "id": "tori.norm_one_torus",
       "title": "Norm-One Torus of a Separable Extension",
-      "href": "tori/tori_norm_one_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_norm_one_torus.html"
     },
     {
       "id": "tori.rank_one_classification",
       "title": "Classification of Rank-One Tori",
-      "href": "tori/tori_rank_one_classification.html"
+      "href": "AlgebraicGroups/Tori/tori_rank_one_classification.html"
     },
     {
       "id": "tori.split_anisotropic_decomposition",
       "title": "Split-Anisotropic Decomposition of a Torus",
-      "href": "tori/tori_split_anisotropic_decomposition.html"
+      "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
     },
     {
       "id": "tori.split_torus",
       "title": "Split Torus",
-      "href": "tori/tori_split_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_split_torus.html"
     },
     {
       "id": "tori.splitting_field",
       "title": "The Minimal Splitting Field of a Torus",
-      "href": "tori/tori_splitting_field.html"
+      "href": "AlgebraicGroups/Tori/tori_splitting_field.html"
     },
     {
       "id": "tori.subtori_and_quotients",
       "title": "Subtori and Quotients via the Character Lattice",
-      "href": "tori/tori_subtori_and_quotients.html"
+      "href": "AlgebraicGroups/Tori/tori_subtori_and_quotients.html"
     },
     {
       "id": "tori.tamely_ramified_torus",
       "title": "Tamely Ramified Torus",
-      "href": "tori/tori_tamely_ramified_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_tamely_ramified_torus.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
       "id": "tori.unramified_torus",
       "title": "Unramified Torus",
-      "href": "tori/tori_unramified_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_unramified_torus.html"
     },
     {
       "id": "tori.weakly_induced_torus",
       "title": "Weakly Induced Torus",
-      "href": "tori/tori_weakly_induced_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_weakly_induced_torus.html"
     },
     {
       "id": "tori.weil_restriction_of_tori",
       "title": "Weil Restriction of Tori",
-      "href": "tori/tori_weil_restriction_of_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_weil_restriction_of_tori.html"
     }
   ],
   "lean_refs": [],
   "lean_modules": [
     {
-      "name": "LanglandsLean.Tori",
-      "display_name": "LanglandsLean.Tori",
+      "name": "LanglandsLean.AlgebraicGroups.Tori",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori.lean#L1",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori.lean#L1",
       "status": "resolved",
       "reason": null
     }

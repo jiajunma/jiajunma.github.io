@@ -3,10 +3,10 @@
   "title": "Regular Elements",
   "kind": "definition",
   "status": "admitted",
-  "href": "conjugacy_classes/conjugacy_classes_regular_elements.html",
-  "primary_topic": "conjugacy_classes",
+  "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_regular_elements.html",
+  "primary_topic": "AlgebraicGroups.ConjugacyClasses",
   "topics": [
-    "conjugacy_classes"
+    "AlgebraicGroups.ConjugacyClasses"
   ],
   "body_html": "<h1>Regular Elements</h1>\n<h2>Definition</h2>\n<p>Let $G$ be a connected reductive group of rank $r = \\mathrm{rank}(G)$. An element\n$g \\in G$ is <strong>regular</strong> if the dimension of its centraliser is minimal:\n$$\\dim C_G(g) = r.$$</p>\n<p>This is equivalent to saying $g$ lies in the open dense subset of $G$ where\nthe function $g \\mapsto \\dim C_G(g)$ attains its minimum.</p>\n<h2>Regular semisimple elements</h2>\n<p>A semisimple element $s \\in G$ is <strong>regular semisimple</strong> if $C_G(s)^\\circ$ is\na maximal torus (equivalently, $\\alpha(s) \\ne 1$ for all roots $\\alpha$).</p>\n<p><strong>Properties:</strong>\n- The set $G^{\\mathrm{rs}}$ of regular semisimple elements is open dense in $G$.\n- $s$ is regular semisimple $\\iff$ $s$ lies in a <strong>unique</strong> maximal torus.\n- Over an algebraically closed field, $G^{\\mathrm{rs}}$ is the complement of\n  the root hyperplanes $\\ker(\\alpha - 1) \\subset T$ (and their conjugates).</p>\n<h2>Regular unipotent elements</h2>\n<p>A unipotent element $u \\in G$ is <strong>regular unipotent</strong> if $\\dim C_G(u) = r$.\nThere exists a <strong>unique regular unipotent conjugacy class</strong> $\\mathcal{O}_{\\mathrm{reg}}$,\nwhich is the <strong>open dense orbit</strong> in the unipotent variety $\\mathcal{U}$.</p>\n<p><strong>Characterisation:</strong> $u$ is regular unipotent $\\iff$ for every Borel subgroup\n$B \\supset T$, the projection of $u$ onto each simple root factor $U_{\\alpha_i}\n\\cong \\mathbb{G}_a$ is non-zero.</p>\n<h2>Regular elements in general</h2>\n<p>For a general element $g = g_s g_u$, $g$ is regular $\\iff$ $g_u$ is a regular\nunipotent element of $C_G(g_s)^\\circ$.</p>\n<h2>Strongly regular elements</h2>\n<p>An element $g$ is <strong>strongly regular</strong> if $C_G(g)$ is a torus (automatically\na maximal torus). Strongly regular $\\Rightarrow$ regular semisimple, but the\nconverse fails for non-simply-connected groups where $C_G(s)$ may be non-connected.</p>\n<h2>Density theorem</h2>\n<p>The set of regular elements is open dense in $G$, as is the set of regular\nsemisimple elements. The complement has codimension $\\ge 1$.</p>",
   "proof_html": null,
@@ -14,34 +14,34 @@
     {
       "id": "conjugacy_classes.jordan_decomposition",
       "title": "Jordan Decomposition in Algebraic Groups",
-      "href": "conjugacy_classes/conjugacy_classes_jordan_decomposition.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_jordan_decomposition.html"
     },
     {
       "id": "conjugacy_classes.semisimple_conjugacy_classes",
       "title": "Semisimple Conjugacy Classes",
-      "href": "conjugacy_classes/conjugacy_classes_semisimple_conjugacy_classes.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_semisimple_conjugacy_classes.html"
     },
     {
       "id": "conjugacy_classes.unipotent_orbits",
       "title": "Unipotent Orbits",
-      "href": "conjugacy_classes/conjugacy_classes_unipotent_orbits.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_unipotent_orbits.html"
     },
     {
-      "id": "reductive_structure.maximal_tori",
+      "id": "reductive_groups.maximal_tori",
       "title": "Maximal Tori",
-      "href": "reductive_structure/reductive_structure_maximal_tori.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_tori.html"
     }
   ],
   "dependents": [
     {
       "id": "conjugacy_classes.stable_conjugacy_classes",
       "title": "Stable Conjugacy Classes",
-      "href": "conjugacy_classes/conjugacy_classes_stable_conjugacy_classes.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_stable_conjugacy_classes.html"
     },
     {
       "id": "conjugacy_classes.strongly_regular_elements",
       "title": "Strongly Regular Elements and Harish-Chandra Theory",
-      "href": "conjugacy_classes/conjugacy_classes_strongly_regular_elements.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_strongly_regular_elements.html"
     }
   ],
   "lean_refs": [],

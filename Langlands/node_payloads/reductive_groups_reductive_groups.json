@@ -1,0 +1,169 @@
+{
+  "id": "reductive_groups.reductive_groups",
+  "title": "Reductive Groups",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_groups.html",
+  "primary_topic": "AlgebraicGroups.ReductiveGroups",
+  "topics": [
+    "AlgebraicGroups.ReductiveGroups"
+  ],
+  "body_html": "<h1>Reductive Groups</h1>\n<p>A <strong>reductive group</strong> is the central object of the structure theory:\na connected linear algebraic group whose geometric unipotent radical\nis trivial. Reductive groups encompass tori, semisimple groups, and\ntheir canonical extensions, and they are the groups appearing on the\n\"automorphic side\" of the Langlands programme.</p>\n<h2>Definition</h2>\n<p>Let \\(G\\) be a connected smooth affine algebraic group over a field\n\\(k\\), and let \\(R(G)\\), \\(R_u(G)\\) denote the <strong>radical</strong>\n(= maximal connected solvable normal subgroup) and <strong>unipotent\nradical</strong> (= maximal connected unipotent normal subgroup).</p>\n<p>\\(G\\) is <strong>reductive</strong> if the geometric unipotent radical\n\\(R_u(G_{\\bar k}) = 1\\). Equivalently, \\(G_{\\bar k}\\) has no nontrivial\nconnected unipotent normal subgroup.</p>\n<p>\\(G\\) is <strong>semisimple</strong> if \\(R(G_{\\bar k}) = 1\\) — strictly stronger\nthan reductive.</p>\n<h2>Geometric vs.\\ algebraic</h2>\n<p>Over a non-perfect field \\(k\\) the geometric condition (after base\nchange to \\(\\bar k\\)) is genuinely stronger than the bare condition\n\"\\(R_u(G) = 1\\)\". For \\(k\\) perfect (in particular for char \\(0\\) or\nfinite \\(k\\)), the two coincide.</p>\n<h2>Structure theorems</h2>\n<p>For a connected reductive group \\(G\\) over an algebraically closed\nfield \\(k\\):</p>\n<ul>\n<li><strong>Radical decomposition.</strong> \\(G = Z(G)^\\circ \\cdot G_{\\mathrm{der}}\\),\n  with \\(Z(G)^\\circ\\) a torus (the <strong>connected centre</strong>) and\n  \\(G_{\\mathrm{der}} = [G, G]\\) semisimple. The intersection\n  \\(Z(G)^\\circ \\cap G_{\\mathrm{der}}\\) is a finite group of multiplicative\n  type.</li>\n<li><strong>Borel subgroups exist and are conjugate.</strong></li>\n<li><strong>Maximal tori exist and are conjugate.</strong></li>\n<li><strong>Levi decomposition of parabolics.</strong> Every parabolic\n  \\(P \\subseteq G\\) is a semidirect product \\(P = L \\ltimes R_u(P)\\)\n  with \\(L\\) a reductive Levi.</li>\n</ul>\n<h2>Classification</h2>\n<p><strong>Theorem (Chevalley, Demazure-Grothendieck).</strong> Split connected\nreductive groups over any field \\(k\\) are classified up to isomorphism\nby their <a class=\"node-ref\" data-node-id=\"root_data.based_root_data\" href=\"../../root_data/root_data_based_root_data.html\">based root datum</a>.\nOver \\(\\mathbb{Z}\\), each based root datum defines a <strong>Chevalley group\nscheme</strong>.</p>\n<p>Non-split forms are classified by Galois cohomology of the\nquasi-split form (<a class=\"node-ref\" data-node-id=\"forms.forms_of_algebraic_groups\" href=\"../../forms/forms_forms_of_algebraic_groups.html\">see node</a>).</p>\n<h2>Examples</h2>\n<ul>\n<li><strong>Tori.</strong> \\(\\mathbb{G}_m\\), \\(\\mathbb{G}_m^n\\), norm tori\n  \\(R^{(1)}_{K/k}\\mathbb{G}_m\\), Weil restrictions \\(R_{K/k}\\mathbb{G}_m\\).</li>\n<li><strong>Classical groups.</strong> \\(\\mathrm{GL}_n\\), \\(\\mathrm{SL}_n\\),\n  \\(\\mathrm{Sp}_{2n}\\), \\(\\mathrm{SO}_n\\), \\(\\mathrm{U}_n\\) (unitary\n  for a Hermitian form), and their inner forms over global fields.</li>\n<li><strong>Exceptional groups.</strong> \\(G_2, F_4, E_6, E_7, E_8\\) in simply\n  connected, adjoint, and intermediate isogeny forms; their inner\n  forms.</li>\n<li><strong>Quasi-split forms.</strong> Outer forms determined by the action of\n  \\(\\mathrm{Gal}(\\bar k/k)\\) on the Dynkin diagram (e.g.\\\n  \\({}^2 A_n\\), \\({}^3 D_4\\), \\({}^2 E_6\\)).</li>\n</ul>\n<h2>Non-examples</h2>\n<ul>\n<li><strong>\\(\\mathbb{G}_a\\)</strong> is connected, smooth, affine, but \\(R_u\\) =\n  itself, hence not reductive.</li>\n<li>The Heisenberg group is unipotent, not reductive.</li>\n<li>A semidirect product of \\(\\mathbb{G}_m\\) and \\(\\mathbb{G}_a\\) (the\n  \"\\(ax + b\\)\" group) has \\(R_u = \\mathbb{G}_a\\), hence not reductive.</li>\n</ul>\n<h2>Role in Langlands</h2>\n<p>Reductive groups are the natural setting for:</p>\n<ul>\n<li><strong>Automorphic forms.</strong> For \\(G\\) reductive over a global field \\(F\\),\n  the automorphic representations of \\(G(\\mathbb{A}_F)\\).</li>\n<li><strong>Local Langlands.</strong> For \\(G\\) reductive over a local field \\(F\\),\n  the parametrisation of representations by L-parameters into\n  \\({}^L G\\).</li>\n<li><strong>Galois representations.</strong> For \\(G = \\mathrm{GL}_n\\), the\n  Langlands correspondence with \\(n\\)-dimensional Galois\n  representations.</li>\n</ul>\n<h2>Mathlib status</h2>\n<ul>\n<li><code>Mathlib.AlgebraicGeometry.GroupScheme.*</code> provides group schemes\n  abstractly.</li>\n<li>Reductive groups specifically are <strong>not yet formalised</strong> in Mathlib;\n  this project's <a class=\"node-ref\" data-node-id=\"affine_group_schemes.affine_algebraic_groups\" href=\"../../affine_group_schemes/affine_group_schemes_affine_algebraic_groups.html\">affine algebraic groups</a>\n  node provides the starting point.</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>Borel, <em>Linear Algebraic Groups</em> (2nd ed., 1991).</li>\n<li>Springer, <em>Linear Algebraic Groups</em> (2nd ed., 1998).</li>\n<li>Milne, <em>Reductive Groups</em> (notes), §17–§25.</li>\n<li>Conrad, <em>Reductive group schemes</em> (SGA3 summer school notes, 2014).</li>\n<li>SGA 3, vol. III (Demazure–Grothendieck, 1970).</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"tori.algebraic_tori\" href=\"../../tori/tori_algebraic_tori.html\">Algebraic Tori</a></li>\n<li><a class=\"node-ref\" data-node-id=\"reductive_groups.unipotent_groups\" href=\"../../reductive_groups/reductive_groups_unipotent_groups.html\">Unipotent Groups</a></li>\n<li><a class=\"node-ref\" data-node-id=\"reductive_groups.solvable_groups\" href=\"../../reductive_groups/reductive_groups_solvable_groups.html\">Solvable Groups</a></li>\n<li><a class=\"node-ref\" data-node-id=\"reductive_groups.levi_subgroups_and_unipotent_radicals\" href=\"../../reductive_groups/reductive_groups_levi_subgroups_and_unipotent_radicals.html\">Levi Subgroups and Unipotent Radicals</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "reductive_groups.unipotent_groups",
+      "title": "Unipotent Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_unipotent_groups.html"
+    },
+    {
+      "id": "reductive_groups.solvable_groups",
+      "title": "Solvable Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_solvable_groups.html"
+    },
+    {
+      "id": "reductive_groups.levi_subgroups_and_unipotent_radicals",
+      "title": "Levi Subgroups and Unipotent Radicals",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_levi_subgroups_and_unipotent_radicals.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "buildings.moy_prasad_filtrations",
+      "title": "Moy-Prasad Filtrations",
+      "href": "AlgebraicGroups/Buildings/buildings_moy_prasad_filtrations.html"
+    },
+    {
+      "id": "buildings.reductive_groups_over_local_fields",
+      "title": "Reductive Groups over Local Fields",
+      "href": "AlgebraicGroups/Buildings/buildings_reductive_groups_over_local_fields.html"
+    },
+    {
+      "id": "buildings.tits_buildings",
+      "title": "Tits Buildings",
+      "href": "AlgebraicGroups/Buildings/buildings_tits_buildings.html"
+    },
+    {
+      "id": "classical_and_exceptional_groups.classical_groups",
+      "title": "Classical Groups",
+      "href": "AlgebraicGroups/ClassicalAndExceptionalGroups/classical_and_exceptional_groups_classical_groups.html"
+    },
+    {
+      "id": "conjugacy_classes.adjoint_action",
+      "title": "Adjoint Action",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_adjoint_action.html"
+    },
+    {
+      "id": "conjugacy_classes.jordan_decomposition",
+      "title": "Jordan Decomposition in Algebraic Groups",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_jordan_decomposition.html"
+    },
+    {
+      "id": "conjugacy_classes.lie_algebras_of_reductive_groups",
+      "title": "Lie Algebras of Reductive Groups",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_lie_algebras_of_reductive_groups.html"
+    },
+    {
+      "id": "conjugacy_classes.semisimple_conjugacy_classes",
+      "title": "Semisimple Conjugacy Classes",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_semisimple_conjugacy_classes.html"
+    },
+    {
+      "id": "conjugacy_classes.springer_correspondence",
+      "title": "Springer Correspondence",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_springer_correspondence.html"
+    },
+    {
+      "id": "conjugacy_classes.unipotent_elements",
+      "title": "Unipotent Elements and the Unipotent Variety",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_unipotent_elements.html"
+    },
+    {
+      "id": "conjugacy_classes.unipotent_orbits",
+      "title": "Unipotent Orbits",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_unipotent_orbits.html"
+    },
+    {
+      "id": "covers.brylinski_deligne_k2_extensions",
+      "title": "Brylinski-Deligne K2-Extensions",
+      "href": "AlgebraicGroups/Covers/covers_brylinski_deligne_k2_extensions.html"
+    },
+    {
+      "id": "forms.rational_forms_of_reductive_groups",
+      "title": "Rational Forms of Reductive Groups",
+      "href": "AlgebraicGroups/Forms/forms_rational_forms_of_reductive_groups.html"
+    },
+    {
+      "id": "kottwitz.algebraic_fundamental_group",
+      "title": "Algebraic Fundamental Group",
+      "href": "AlgebraicGroups/Kottwitz/kottwitz_algebraic_fundamental_group.html"
+    },
+    {
+      "id": "reductive_groups.central_isogenies",
+      "title": "Central Isogenies",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_central_isogenies.html"
+    },
+    {
+      "id": "reductive_groups.derived_group_center_adjoint_sc_cover",
+      "title": "Derived Group, Center, Adjoint Group, and Simply Connected Cover",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_derived_group_center_adjoint_sc_cover.html"
+    },
+    {
+      "id": "reductive_groups.maximal_tori",
+      "title": "Maximal Tori",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_tori.html"
+    },
+    {
+      "id": "reductive_groups.parabolic_f_subgroups_levi_decomposition",
+      "title": "Levi Decomposition for Parabolic F-Subgroups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_parabolic_f_subgroups_levi_decomposition.html"
+    },
+    {
+      "id": "reductive_groups.reductive_group_radical_and_derived_group",
+      "title": "Radical and Derived Group of a Reductive Group",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_group_radical_and_derived_group.html"
+    },
+    {
+      "id": "reductive_groups.semisimple_groups",
+      "title": "Semisimple Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_semisimple_groups.html"
+    },
+    {
+      "id": "reductive_groups.split_reductive_groups",
+      "title": "Split Reductive Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_split_reductive_groups.html"
+    },
+    {
+      "id": "root_data.rank_one_subgroups_sl2_embeddings",
+      "title": "Rank-One Subgroups and SL₂-Embeddings",
+      "href": "AlgebraicGroups/RootData/root_data_rank_one_subgroups_sl2_embeddings.html"
+    },
+    {
+      "id": "root_data.relative_root_datum_of_f_reductive_group",
+      "title": "Relative Root Datum of an F-Reductive Group",
+      "href": "AlgebraicGroups/RootData/root_data_relative_root_datum_of_f_reductive_group.html"
+    },
+    {
+      "id": "root_data.root_datum_from_reductive_group",
+      "title": "Root Datum of a Reductive Group",
+      "href": "AlgebraicGroups/RootData/root_data_root_datum_from_reductive_group.html"
+    },
+    {
+      "id": "root_data.root_subgroups_generate_reductive_group",
+      "title": "Root Subgroups Generate a Reductive Group",
+      "href": "AlgebraicGroups/RootData/root_data_root_subgroups_generate_reductive_group.html"
+    },
+    {
+      "id": "root_data.roots_coroots_and_root_subgroups",
+      "title": "Roots, Coroots, and Root Subgroups",
+      "href": "AlgebraicGroups/RootData/root_data_roots_coroots_and_root_subgroups.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

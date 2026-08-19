@@ -1,0 +1,54 @@
+{
+  "id": "reductive_groups.unipotent_groups",
+  "title": "Unipotent Groups",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_unipotent_groups.html",
+  "primary_topic": "AlgebraicGroups.ReductiveGroups",
+  "topics": [
+    "AlgebraicGroups.ReductiveGroups"
+  ],
+  "body_html": "<h1>Unipotent Groups</h1>\n<p>A <strong>unipotent group</strong> is a connected affine algebraic group whose\nelements act unipotently in every (equivalently, some) faithful linear\nrepresentation. Unipotent groups are the \"complementary\" half of the\nstructure theory: every connected linear algebraic group is an\nextension of a reductive group by its unipotent radical.</p>\n<h2>Definition</h2>\n<p>Let \\(U\\) be a connected affine algebraic group over a field \\(k\\).\nThe following are equivalent:</p>\n<ul>\n<li>For every faithful representation \\(U \\hookrightarrow \\mathrm{GL}_n\\),\n  every element of \\(U(\\bar k)\\) is <strong>unipotent</strong> (\\(I - g\\) is\n  nilpotent).</li>\n<li>There exists a closed embedding \\(U \\hookrightarrow \\mathbb{U}_n\\)\n  into the strict upper-triangular subgroup of \\(\\mathrm{GL}_n\\) for\n  some \\(n\\).</li>\n<li>The Lie algebra \\(\\operatorname{Lie}(U)\\) consists of nilpotent\n  endomorphisms (in any faithful representation).</li>\n</ul>\n<p>In characteristic \\(0\\), the exponential gives an iso of varieties\n\\(\\exp : \\operatorname{Lie}(U) \\xrightarrow{\\sim} U\\); in characteristic\n\\(p\\) this fails (Witt vectors enter).</p>\n<h2>Examples</h2>\n<table>\n<thead>\n<tr>\n<th>Group</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\\(\\mathbb{G}_a\\)</td>\n<td>Additive group, smallest unipotent.</td>\n</tr>\n<tr>\n<td>\\(\\mathbb{U}_n\\)</td>\n<td>Strict upper-triangular \\(n \\times n\\) matrices.</td>\n</tr>\n<tr>\n<td>Heisenberg \\(H_3\\)</td>\n<td>\\(3 \\times 3\\) upper-unitriangular; non-commutative.</td>\n</tr>\n<tr>\n<td>Witt vectors \\(W_n\\)</td>\n<td>Char \\(p\\) phenomenon; not isomorphic to \\(\\mathbb{G}_a^n\\).</td>\n</tr>\n</tbody>\n</table>\n<p>In char \\(0\\), every connected unipotent group is geometrically\nisomorphic to an affine space \\(\\mathbb{A}^n\\) as a variety, but with\na non-trivial group structure when non-commutative.</p>\n<h2>Kolchin's theorem</h2>\n<p><strong>Theorem (Kolchin).</strong> Let \\(V\\) be a finite-dimensional vector space\nover an algebraically closed field \\(k\\), and let \\(G \\subseteq \\mathrm{GL}(V)\\)\nbe a connected algebraic subgroup consisting entirely of unipotent\nelements. Then \\(G\\) stabilises a complete flag in \\(V\\) — i.e.\\\n\\(G \\subseteq \\mathbb{U}_n\\) for some basis.</p>\n<p>In particular: every connected unipotent group is a closed subgroup of\n\\(\\mathbb{U}_n\\) for some \\(n\\), and hence <strong>nilpotent</strong> as an abstract\ngroup.</p>\n<h2>Structure of commutative unipotent groups</h2>\n<p>For a commutative unipotent group \\(U\\) over a perfect field \\(k\\):</p>\n<ul>\n<li><strong>Char \\(0\\)</strong>: \\(U \\cong \\mathbb{G}_a^n\\) (as algebraic groups).</li>\n<li><strong>Char \\(p\\)</strong>: \\(U\\) admits a finite filtration whose successive\n  quotients are subgroups of \\(\\mathbb{G}_a\\) or of the Witt vector\n  groups \\(W_n\\). The classification involves the Dieudonné module of\n  \\(U\\).</li>\n</ul>\n<p>A commutative unipotent group is <strong>\\(p\\)-torsion</strong> in characteristic\n\\(p\\); in characteristic \\(0\\) it is torsion-free and divisible.</p>\n<h2>Non-commutative unipotent groups</h2>\n<p>Examples: the Heisenberg group, the upper-triangular unitary group\n\\(\\mathbb{U}_n\\), and the unipotent radicals of all proper parabolic\nsubgroups of reductive groups. The composition factors of any\nunipotent group are isomorphic to \\(\\mathbb{G}_a\\) (char \\(0\\)) or\nsubgroups of \\(\\mathbb{G}_a\\) (char \\(p\\)).</p>\n<h2>Role in reductive structure</h2>\n<p>For any connected affine algebraic group \\(H\\) over \\(\\bar k\\):</p>\n<ul>\n<li>The <strong>unipotent radical</strong> \\(R_u(H)\\) is the largest connected\n  unipotent normal subgroup.</li>\n<li>\\(H / R_u(H)\\) is <strong>reductive</strong>.</li>\n<li>For \\(H\\) reductive, \\(R_u(H) = 1\\) — this is the definition.</li>\n<li>For \\(H\\) a parabolic subgroup of a reductive \\(G\\): \\(R_u(H)\\) is\n  the \"unipotent radical of the parabolic,\" and the Levi \\(H / R_u(H)\\)\n  is reductive.</li>\n</ul>\n<h2>Role in representation theory</h2>\n<ul>\n<li><strong>Whittaker models.</strong> Generic characters of the unipotent radical\n  of a Borel give Whittaker functionals on \\(G(F)\\)-representations.</li>\n<li><strong>Bernstein-Zelevinsky.</strong> Derivatives along unipotent radicals of\n  parabolics are core invariants of \\(\\mathrm{GL}_n\\)-representations.</li>\n<li><strong>Nilpotent orbits.</strong> \\(\\operatorname{Lie}(U)\\) for the unipotent\n  radical of a parabolic captures nilpotent orbits via the\n  Bala-Carter classification.</li>\n</ul>\n<h2>Mathlib</h2>\n<p>Not yet formalised. Examples like \\(\\mathbb{G}_a\\) exist via the\nproject's <a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.basic_examples\" href=\"../../linear_algebraic_groups/linear_algebraic_groups_basic_examples.html\">basic examples</a> node.</p>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"linear_algebraic_groups.linear_algebraic_groups\" href=\"../../linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_groups.html\">Linear Algebraic Groups</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.linear_algebraic_groups",
+      "title": "Linear Algebraic Groups",
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_linear_algebraic_groups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable",
+      "title": "Unipotent Subgroups Are Triangularizable",
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_unipotent_subgroups_are_triangularizable.html"
+    },
+    {
+      "id": "reductive_groups.commutative_group_semisimple_unipotent_decomposition",
+      "title": "Commutative Algebraic Groups Split into Semisimple and Unipotent Parts",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_commutative_group_semisimple_unipotent_decomposition.html"
+    },
+    {
+      "id": "reductive_groups.connected_solvable_group_structure",
+      "title": "Structure of Connected Solvable Algebraic Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_connected_solvable_group_structure.html"
+    },
+    {
+      "id": "reductive_groups.levi_subgroups_and_unipotent_radicals",
+      "title": "Levi Subgroups and Unipotent Radicals",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_levi_subgroups_and_unipotent_radicals.html"
+    },
+    {
+      "id": "reductive_groups.reductive_groups",
+      "title": "Reductive Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_groups.html"
+    },
+    {
+      "id": "reductive_groups.solvable_groups",
+      "title": "Solvable Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_solvable_groups.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

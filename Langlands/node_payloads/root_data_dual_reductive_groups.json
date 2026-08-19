@@ -1,0 +1,44 @@
+{
+  "id": "root_data.dual_reductive_groups",
+  "title": "Dual Reductive Groups",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/RootData/root_data_dual_reductive_groups.html",
+  "primary_topic": "AlgebraicGroups.RootData",
+  "topics": [
+    "AlgebraicGroups.RootData"
+  ],
+  "body_html": "<h1>Dual Reductive Groups</h1>\n<p>The <strong>dual reductive group</strong> \\(\\hat G\\) of a connected reductive group\n\\(G\\) is the unique connected complex reductive group whose root\ndatum is dual to that of \\(G\\). It is the Langlands dual of \\(G\\)\nwithout Galois action; see\n<a class=\"node-ref\" data-node-id=\"root_data.l_groups\" href=\"../../root_data/root_data_l_groups.html\">L-groups</a> for the Galois-twisted\nversion.</p>\n<h2>Construction</h2>\n<p>Let \\(G\\) be a connected reductive group over a field \\(k\\), with\nroot datum \\((X^*(T), \\Phi, X_*(T), \\Phi^\\vee)\\) for a chosen maximal\ntorus \\(T \\subseteq G\\).</p>\n<p>By the classification of split connected reductive groups (Chevalley-\nDemazure), there is a unique split connected reductive group \\(\\hat G\\)\nover \\(\\mathbb{C}\\) (or any algebraically closed field of\ncharacteristic 0) with root datum\n\\[\n(X_*(T), \\Phi^\\vee, X^*(T), \\Phi),\n\\]\nthe dual root datum.</p>\n<p>\\(\\hat G\\) is well-defined up to non-canonical isomorphism (canonical\nwhen a pinning is chosen).</p>\n<h2>Examples</h2>\n<table>\n<thead>\n<tr>\n<th>\\(G\\)</th>\n<th>\\(\\hat G\\)</th>\n<th>Comments</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\\(\\mathbb{G}_m\\)</td>\n<td>\\(\\mathbb{G}_m\\)</td>\n<td>self-dual torus</td>\n</tr>\n<tr>\n<td>\\(T\\) (torus)</td>\n<td>\\(\\hat T = X^*(T) \\otimes \\mathbb{G}_m\\)</td>\n<td>torus duality</td>\n</tr>\n<tr>\n<td>\\(\\mathrm{GL}_n\\)</td>\n<td>\\(\\mathrm{GL}_n\\)</td>\n<td>self-dual</td>\n</tr>\n<tr>\n<td>\\(\\mathrm{SL}_n\\)</td>\n<td>\\(\\mathrm{PGL}_n\\)</td>\n<td>sc ↔ adj</td>\n</tr>\n<tr>\n<td>\\(\\mathrm{PGL}_n\\)</td>\n<td>\\(\\mathrm{SL}_n\\)</td>\n<td>adj ↔ sc</td>\n</tr>\n<tr>\n<td>\\(\\mathrm{Sp}_{2n}\\)</td>\n<td>\\(\\mathrm{SO}_{2n+1}\\)</td>\n<td>\\(C_n \\leftrightarrow B_n\\)</td>\n</tr>\n<tr>\n<td>\\(\\mathrm{SO}_{2n+1}\\)</td>\n<td>\\(\\mathrm{Sp}_{2n}\\)</td>\n<td>\\(B_n \\leftrightarrow C_n\\)</td>\n</tr>\n<tr>\n<td>\\(\\mathrm{SO}_{2n}\\)</td>\n<td>\\(\\mathrm{SO}_{2n}\\)</td>\n<td>\\(D_n\\) self-dual; sc vs ad swap inside</td>\n</tr>\n<tr>\n<td>\\(G_2\\)</td>\n<td>\\(G_2\\)</td>\n<td>self-dual; long-short root swap</td>\n</tr>\n<tr>\n<td>\\(F_4\\)</td>\n<td>\\(F_4\\)</td>\n<td>self-dual; long-short root swap</td>\n</tr>\n<tr>\n<td>\\(E_8\\)</td>\n<td>\\(E_8\\)</td>\n<td>self-dual</td>\n</tr>\n</tbody>\n</table>\n<h2>Functoriality</h2>\n<p>The construction \\(G \\mapsto \\hat G\\) is <strong>contravariant</strong> on\nisogenies and <strong>covariant</strong> at the level of pinned automorphisms:</p>\n<ul>\n<li>An isogeny \\(G \\to G'\\) dualises to a (typically opposite-direction)\n  isogeny \\(\\hat{G'} \\to \\hat G\\).</li>\n<li>An outer automorphism \\(\\sigma \\in \\mathrm{Out}(G)\\) lifts to\n  \\(\\sigma \\in \\mathrm{Out}(\\hat G)\\) (preserving the dual structure).</li>\n</ul>\n<h2>Centre and fundamental group swap</h2>\n<p>Under duality, the centre and the algebraic fundamental group swap:\n\\[\nZ(\\hat G) \\;\\cong\\; X^*(\\pi_1(G))^\\vee, \\qquad\n\\pi_1(\\hat G) \\;\\cong\\; X^*(Z(G))^\\vee.\n\\]</p>\n<p>Concretely:\n- \\(\\mathrm{SL}_n\\): \\(Z = \\mu_n\\), \\(\\pi_1 = 0\\) →\n  \\(\\widehat{\\mathrm{SL}_n} = \\mathrm{PGL}_n\\): \\(Z = 1\\), \\(\\pi_1 = \\mathbb{Z}/n\\).\n- \\(\\mathrm{GL}_n\\): \\(Z = \\mathbb{G}_m\\), \\(\\pi_1 = \\mathbb{Z}\\) →\n  \\(\\widehat{\\mathrm{GL}_n}\\): same (\\(\\mathrm{GL}_n\\) self-dual,\n  centre dual to fundamental group both \\(\\mathbb{Z}\\)).</p>\n<h2>Functorial structure preservation</h2>\n<ul>\n<li><strong>Parabolics</strong>: \\(P \\subseteq G\\) corresponds to \"dual parabolics\"\n  \\(\\hat P \\subseteq \\hat G\\), giving the Levi-conjugate decomposition:\n  Levi \\(L\\) of \\(P\\) → Levi \\(\\hat L\\) of \\(\\hat P\\).</li>\n<li><strong>Cuspidal data</strong>: depth-zero \\(L\\)-packet \\(\\sigma\\) of \\(L(F)\\)\n  corresponds to L-parameter into \\(\\hat L\\); Langlands quotient\n  passes from \\(\\sigma\\) to \\(\\hat L \\hookrightarrow \\hat G\\).</li>\n<li><strong>Endoscopic groups</strong> \\(H \\subseteq G\\) (in a derived sense)\n  correspond to centralisers of semisimple elements in \\(\\hat G\\).</li>\n</ul>\n<h2>Identification of the centre</h2>\n<p>\\[\nZ(\\hat G) \\;=\\; \\operatorname{Hom}(X_*(T)/Q^\\vee, \\mathbb{C}^\\times) \\;=\\; \\operatorname{Hom}(\\pi_1(G), \\mathbb{C}^\\times).\n\\]</p>\n<p>This is the <strong>dual of \\(\\pi_1(G)\\) as a finite abelian group</strong>, and\nis the relevant target for <strong>central characters of L-packets</strong> in the\nlocal Langlands correspondence.</p>\n<h2>Geometric Satake equivalence</h2>\n<p><strong>Theorem (Mirković-Vilonen, Lusztig, Ginzburg).</strong> There is an\nequivalence of monoidal categories:\n\\[\n\\mathrm{Perv}_{L^+ G}(\\mathrm{Gr}_G) \\;\\simeq\\; \\mathrm{Rep}(\\hat G),\n\\]\nwhere \\(\\mathrm{Gr}_G\\) is the affine Grassmannian and \\(L^+ G = G(\\mathcal{O})\\)\nacts on it. This gives a <strong>purely geometric</strong> construction of \\(\\hat G\\)\nintrinsic to the geometry of \\(G\\) — not from combinatorial duality\nbut from the symmetry of perverse sheaves.</p>\n<h2>Role in Langlands</h2>\n<ul>\n<li><strong>L-parameters</strong>: continuous homomorphisms\n  \\(W_F \\times \\mathrm{SL}_2(\\mathbb{C}) \\to {}^L G\\) up to\n  \\(\\hat G\\)-conjugacy parametrise L-packets of irreducible\n  representations of \\(G(F)\\).</li>\n<li><strong>L-functions</strong>: \\(L(s, \\pi, r)\\) for an L-parameter\n  \\(\\varphi : W_F \\to \\hat G\\) and a finite-dimensional representation\n  \\(r : \\hat G \\to \\mathrm{GL}_N\\).</li>\n<li><strong>Functoriality</strong>: morphisms \\(\\hat H \\to \\hat G\\) conjecturally\n  induce transfer of automorphic representations.</li>\n<li><strong>Endoscopy and stable conjugacy</strong>: defined on the dual side via\n  semisimple centralisers.</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>Borel, <em>Automorphic L-functions</em> (Corvallis 1979).</li>\n<li>Mirković–Vilonen, <em>Geometric Langlands duality and representations\n  of algebraic groups over commutative rings</em> (Annals 2007).</li>\n<li>Kottwitz, <em>Stable trace formula: cuspidal tempered terms</em> (Duke\n  1984), §1.</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"root_data.dual_root_data\" href=\"../../root_data/root_data_dual_root_data.html\">Dual Root Data</a></li>\n<li><a class=\"node-ref\" data-node-id=\"root_data.classification_of_split_reductive_groups\" href=\"../../root_data/root_data_classification_of_split_reductive_groups.html\">Classification of Split Reductive Groups</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "root_data.dual_root_data",
+      "title": "Dual Root Data",
+      "href": "AlgebraicGroups/RootData/root_data_dual_root_data.html"
+    },
+    {
+      "id": "root_data.classification_of_split_reductive_groups",
+      "title": "Classification of Split Reductive Groups",
+      "href": "AlgebraicGroups/RootData/root_data_classification_of_split_reductive_groups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "conjugacy_classes.geometric_conjugacy",
+      "title": "Geometric Conjugacy and Deligne–Lusztig Theory",
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_geometric_conjugacy.html"
+    },
+    {
+      "id": "root_data.l_morphisms",
+      "title": "L-Morphisms",
+      "href": "AlgebraicGroups/RootData/root_data_l_morphisms.html"
+    },
+    {
+      "id": "root_data.pinned_dual_groups",
+      "title": "Pinned Dual Groups",
+      "href": "AlgebraicGroups/RootData/root_data_pinned_dual_groups.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

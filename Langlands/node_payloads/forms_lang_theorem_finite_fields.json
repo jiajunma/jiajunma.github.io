@@ -1,0 +1,39 @@
+{
+  "id": "forms.lang_theorem_finite_fields",
+  "title": "Lang Theorem for Connected Algebraic Groups over Finite Fields",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Forms/forms_lang_theorem_finite_fields.html",
+  "primary_topic": "AlgebraicGroups.Forms",
+  "topics": [
+    "AlgebraicGroups.Forms",
+    "AlgebraicGroups.LinearAlgebraicGroups"
+  ],
+  "body_html": "<h1>Lang Theorem for Connected Algebraic Groups over Finite Fields</h1>\n<p>Let \\(G\\) be a connected algebraic group over a finite field \\(F_q\\), and let\n\\(\\sigma:G\\to G\\) be the \\(q\\)-Frobenius endomorphism. The Lang map\n\\[\nL_\\sigma:G\\to G,\\qquad x\\mapsto \\sigma(x)x^{-1}\n\\]\nis surjective.</p>\n<p>Equivalently, every element of \\(G\\) is \\(\\sigma\\)-conjugate to the identity.\nIn Galois-cohomological language, this gives\n\\[\nH^1(F_q,G)=1\n\\]\nfor connected algebraic groups.</p>",
+  "proof_html": "<p>The differential of the Frobenius morphism is zero, so the differential of\n\\(L_\\sigma\\) at the identity is the negative identity after identifying\ntangent spaces by right translation. Translating the same computation shows\nthat \\(dL_\\sigma\\) is bijective at every point. Hence the image of\n\\(L_\\sigma\\) contains a nonempty open subset of \\(G\\).</p>\n<p>Let \\(a\\in G\\). The same argument applied to the twisted map\n\\[\nx\\mapsto \\sigma(x)a x^{-1}\n\\]\nshows that its image contains a nonempty open subset. Since connected\nalgebraic groups are irreducible, the two nonempty open subsets intersect.\nAn intersection point gives \\(a=\\sigma(x)x^{-1}\\) for some \\(x\\), proving\nsurjectivity.</p>",
+  "deps": [
+    {
+      "id": "forms.galois_cohomology",
+      "title": "Galois Cohomology",
+      "href": "AlgebraicGroups/Forms/forms_galois_cohomology.html"
+    },
+    {
+      "id": "forms.twisted_conjugacy_classes",
+      "title": "Twisted Conjugacy Classes",
+      "href": "AlgebraicGroups/Forms/forms_twisted_conjugacy_classes.html"
+    },
+    {
+      "id": "linear_algebraic_groups.lie_algebra_of_algebraic_group",
+      "title": "Lie Algebra of an Algebraic Group",
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_lie_algebra_of_algebraic_group.html"
+    },
+    {
+      "id": "linear_algebraic_groups.identity_component_normal_finite_index",
+      "title": "Identity Component Is Closed Normal of Finite Index",
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_identity_component_normal_finite_index.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

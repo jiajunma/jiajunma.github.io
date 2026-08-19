@@ -1,113 +1,42 @@
 {
   "roots": [
     {
-      "id": "affine_group_schemes",
-      "title": "Affine Group Schemes",
+      "id": "AlgebraicGroups",
+      "title": "Algebraicgroups",
       "depth": 1,
       "parent": null,
-      "node_count": 38,
-      "direct_node_count": 38,
+      "node_count": 230,
+      "direct_node_count": 0,
       "kind_counts": {
-        "definition": 16,
-        "example": 2,
+        "definition": 46,
+        "example": 3,
         "lemma": 2,
-        "theorem": 15,
-        "topic": 3
+        "theorem": 71,
+        "topic": 108
       },
       "status_counts": {
-        "admitted": 38
+        "admitted": 228,
+        "formalized": 1,
+        "needs_definition_review": 1
       },
-      "href": "affine_group_schemes/index.html",
-      "children": []
+      "href": "AlgebraicGroups/index.html",
+      "children": [
+        "AlgebraicGroups.AffineGroupSchemes",
+        "AlgebraicGroups.Buildings",
+        "AlgebraicGroups.ClassicalAndExceptionalGroups",
+        "AlgebraicGroups.ConjugacyClasses",
+        "AlgebraicGroups.Covers",
+        "AlgebraicGroups.Forms",
+        "AlgebraicGroups.Kottwitz",
+        "AlgebraicGroups.LinearAlgebraicGroups",
+        "AlgebraicGroups.ReductiveGroups",
+        "AlgebraicGroups.RootData",
+        "AlgebraicGroups.Tori"
+      ]
     },
     {
-      "id": "bd_covers",
-      "title": "Bd Covers",
-      "depth": 1,
-      "parent": null,
-      "node_count": 6,
-      "direct_node_count": 6,
-      "kind_counts": {
-        "topic": 6
-      },
-      "status_counts": {
-        "admitted": 6
-      },
-      "href": "bd_covers/index.html",
-      "children": []
-    },
-    {
-      "id": "buildings_and_parahorics",
-      "title": "Buildings And Parahorics",
-      "depth": 1,
-      "parent": null,
-      "node_count": 16,
-      "direct_node_count": 16,
-      "kind_counts": {
-        "topic": 16
-      },
-      "status_counts": {
-        "admitted": 16
-      },
-      "href": "buildings_and_parahorics/index.html",
-      "children": []
-    },
-    {
-      "id": "classical_and_exceptional_groups",
-      "title": "Classical And Exceptional Groups",
-      "depth": 1,
-      "parent": null,
-      "node_count": 5,
-      "direct_node_count": 5,
-      "kind_counts": {
-        "definition": 3,
-        "topic": 2
-      },
-      "status_counts": {
-        "admitted": 5
-      },
-      "href": "classical_and_exceptional_groups/index.html",
-      "children": []
-    },
-    {
-      "id": "conjugacy_classes",
-      "title": "Conjugacy Classes",
-      "depth": 1,
-      "parent": null,
-      "node_count": 20,
-      "direct_node_count": 20,
-      "kind_counts": {
-        "definition": 8,
-        "theorem": 2,
-        "topic": 10
-      },
-      "status_counts": {
-        "admitted": 20
-      },
-      "href": "conjugacy_classes/index.html",
-      "children": []
-    },
-    {
-      "id": "descent_and_forms",
-      "title": "Descent And Forms",
-      "depth": 1,
-      "parent": null,
-      "node_count": 33,
-      "direct_node_count": 33,
-      "kind_counts": {
-        "definition": 2,
-        "theorem": 9,
-        "topic": 22
-      },
-      "status_counts": {
-        "admitted": 33
-      },
-      "href": "descent_and_forms/index.html",
-      "children": []
-    },
-    {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
+      "id": "Foundations",
+      "title": "Foundations",
       "depth": 1,
       "parent": null,
       "node_count": 9,
@@ -119,107 +48,50 @@
       "status_counts": {
         "admitted": 9
       },
-      "href": "foundational_inputs/index.html",
-      "children": []
-    },
-    {
-      "id": "kottwitz_structures",
-      "title": "Kottwitz Structures",
-      "depth": 1,
-      "parent": null,
-      "node_count": 9,
-      "direct_node_count": 9,
-      "kind_counts": {
-        "topic": 9
-      },
-      "status_counts": {
-        "admitted": 9
-      },
-      "href": "kottwitz_structures/index.html",
-      "children": []
-    },
-    {
-      "id": "linear_algebraic_groups",
-      "title": "Linear Algebraic Groups",
-      "depth": 1,
-      "parent": null,
-      "node_count": 27,
-      "direct_node_count": 27,
-      "kind_counts": {
-        "definition": 4,
-        "theorem": 15,
-        "topic": 8
-      },
-      "status_counts": {
-        "admitted": 25,
-        "formalized": 1,
-        "needs_definition_review": 1
-      },
-      "href": "linear_algebraic_groups/index.html",
-      "children": []
-    },
-    {
-      "id": "reductive_structure",
-      "title": "Reductive Structure",
-      "depth": 1,
-      "parent": null,
-      "node_count": 49,
-      "direct_node_count": 49,
-      "kind_counts": {
-        "definition": 8,
-        "theorem": 30,
-        "topic": 11
-      },
-      "status_counts": {
-        "admitted": 49
-      },
-      "href": "reductive_structure/index.html",
-      "children": []
-    },
-    {
-      "id": "root_data_and_duality",
-      "title": "Root Data And Duality",
-      "depth": 1,
-      "parent": null,
-      "node_count": 49,
-      "direct_node_count": 49,
-      "kind_counts": {
-        "definition": 11,
-        "theorem": 19,
-        "topic": 19
-      },
-      "status_counts": {
-        "admitted": 49
-      },
-      "href": "root_data_and_duality/index.html",
-      "children": []
-    },
-    {
-      "id": "tori",
-      "title": "Tori",
-      "depth": 1,
-      "parent": null,
-      "node_count": 19,
-      "direct_node_count": 19,
-      "kind_counts": {
-        "definition": 7,
-        "example": 1,
-        "theorem": 9,
-        "topic": 2
-      },
-      "status_counts": {
-        "admitted": 19
-      },
-      "href": "tori/index.html",
+      "href": "Foundations/index.html",
       "children": []
     }
   ],
   "topics": {
-    "affine_group_schemes": {
-      "id": "affine_group_schemes",
-      "title": "Affine Group Schemes",
+    "AlgebraicGroups": {
+      "id": "AlgebraicGroups",
+      "title": "Algebraicgroups",
       "depth": 1,
       "parent": null,
+      "node_count": 230,
+      "direct_node_count": 0,
+      "kind_counts": {
+        "definition": 46,
+        "example": 3,
+        "lemma": 2,
+        "theorem": 71,
+        "topic": 108
+      },
+      "status_counts": {
+        "admitted": 228,
+        "formalized": 1,
+        "needs_definition_review": 1
+      },
+      "href": "AlgebraicGroups/index.html",
+      "children": [
+        "AlgebraicGroups.AffineGroupSchemes",
+        "AlgebraicGroups.Buildings",
+        "AlgebraicGroups.ClassicalAndExceptionalGroups",
+        "AlgebraicGroups.ConjugacyClasses",
+        "AlgebraicGroups.Covers",
+        "AlgebraicGroups.Forms",
+        "AlgebraicGroups.Kottwitz",
+        "AlgebraicGroups.LinearAlgebraicGroups",
+        "AlgebraicGroups.ReductiveGroups",
+        "AlgebraicGroups.RootData",
+        "AlgebraicGroups.Tori"
+      ]
+    },
+    "AlgebraicGroups.AffineGroupSchemes": {
+      "id": "AlgebraicGroups.AffineGroupSchemes",
+      "title": "Algebraicgroups.Affinegroupschemes",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 38,
       "direct_node_count": 38,
       "kind_counts": {
@@ -232,30 +104,14 @@
       "status_counts": {
         "admitted": 38
       },
-      "href": "affine_group_schemes/index.html",
+      "href": "AlgebraicGroups/AffineGroupSchemes/index.html",
       "children": []
     },
-    "bd_covers": {
-      "id": "bd_covers",
-      "title": "Bd Covers",
-      "depth": 1,
-      "parent": null,
-      "node_count": 6,
-      "direct_node_count": 6,
-      "kind_counts": {
-        "topic": 6
-      },
-      "status_counts": {
-        "admitted": 6
-      },
-      "href": "bd_covers/index.html",
-      "children": []
-    },
-    "buildings_and_parahorics": {
-      "id": "buildings_and_parahorics",
-      "title": "Buildings And Parahorics",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.Buildings": {
+      "id": "AlgebraicGroups.Buildings",
+      "title": "Algebraicgroups.Buildings",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 16,
       "direct_node_count": 16,
       "kind_counts": {
@@ -264,14 +120,14 @@
       "status_counts": {
         "admitted": 16
       },
-      "href": "buildings_and_parahorics/index.html",
+      "href": "AlgebraicGroups/Buildings/index.html",
       "children": []
     },
-    "classical_and_exceptional_groups": {
-      "id": "classical_and_exceptional_groups",
-      "title": "Classical And Exceptional Groups",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.ClassicalAndExceptionalGroups": {
+      "id": "AlgebraicGroups.ClassicalAndExceptionalGroups",
+      "title": "Algebraicgroups.Classicalandexceptionalgroups",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 5,
       "direct_node_count": 5,
       "kind_counts": {
@@ -281,14 +137,14 @@
       "status_counts": {
         "admitted": 5
       },
-      "href": "classical_and_exceptional_groups/index.html",
+      "href": "AlgebraicGroups/ClassicalAndExceptionalGroups/index.html",
       "children": []
     },
-    "conjugacy_classes": {
-      "id": "conjugacy_classes",
-      "title": "Conjugacy Classes",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.ConjugacyClasses": {
+      "id": "AlgebraicGroups.ConjugacyClasses",
+      "title": "Algebraicgroups.Conjugacyclasses",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 20,
       "direct_node_count": 20,
       "kind_counts": {
@@ -299,14 +155,30 @@
       "status_counts": {
         "admitted": 20
       },
-      "href": "conjugacy_classes/index.html",
+      "href": "AlgebraicGroups/ConjugacyClasses/index.html",
       "children": []
     },
-    "descent_and_forms": {
-      "id": "descent_and_forms",
-      "title": "Descent And Forms",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.Covers": {
+      "id": "AlgebraicGroups.Covers",
+      "title": "Algebraicgroups.Covers",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
+      "node_count": 6,
+      "direct_node_count": 6,
+      "kind_counts": {
+        "topic": 6
+      },
+      "status_counts": {
+        "admitted": 6
+      },
+      "href": "AlgebraicGroups/Covers/index.html",
+      "children": []
+    },
+    "AlgebraicGroups.Forms": {
+      "id": "AlgebraicGroups.Forms",
+      "title": "Algebraicgroups.Forms",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 33,
       "direct_node_count": 33,
       "kind_counts": {
@@ -317,31 +189,14 @@
       "status_counts": {
         "admitted": 33
       },
-      "href": "descent_and_forms/index.html",
+      "href": "AlgebraicGroups/Forms/index.html",
       "children": []
     },
-    "foundational_inputs": {
-      "id": "foundational_inputs",
-      "title": "Foundational Inputs",
-      "depth": 1,
-      "parent": null,
-      "node_count": 9,
-      "direct_node_count": 9,
-      "kind_counts": {
-        "definition": 1,
-        "topic": 8
-      },
-      "status_counts": {
-        "admitted": 9
-      },
-      "href": "foundational_inputs/index.html",
-      "children": []
-    },
-    "kottwitz_structures": {
-      "id": "kottwitz_structures",
-      "title": "Kottwitz Structures",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.Kottwitz": {
+      "id": "AlgebraicGroups.Kottwitz",
+      "title": "Algebraicgroups.Kottwitz",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 9,
       "direct_node_count": 9,
       "kind_counts": {
@@ -350,14 +205,14 @@
       "status_counts": {
         "admitted": 9
       },
-      "href": "kottwitz_structures/index.html",
+      "href": "AlgebraicGroups/Kottwitz/index.html",
       "children": []
     },
-    "linear_algebraic_groups": {
-      "id": "linear_algebraic_groups",
-      "title": "Linear Algebraic Groups",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.LinearAlgebraicGroups": {
+      "id": "AlgebraicGroups.LinearAlgebraicGroups",
+      "title": "Algebraicgroups.Linearalgebraicgroups",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 27,
       "direct_node_count": 27,
       "kind_counts": {
@@ -370,14 +225,14 @@
         "formalized": 1,
         "needs_definition_review": 1
       },
-      "href": "linear_algebraic_groups/index.html",
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/index.html",
       "children": []
     },
-    "reductive_structure": {
-      "id": "reductive_structure",
-      "title": "Reductive Structure",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.ReductiveGroups": {
+      "id": "AlgebraicGroups.ReductiveGroups",
+      "title": "Algebraicgroups.Reductivegroups",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 49,
       "direct_node_count": 49,
       "kind_counts": {
@@ -388,14 +243,14 @@
       "status_counts": {
         "admitted": 49
       },
-      "href": "reductive_structure/index.html",
+      "href": "AlgebraicGroups/ReductiveGroups/index.html",
       "children": []
     },
-    "root_data_and_duality": {
-      "id": "root_data_and_duality",
-      "title": "Root Data And Duality",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.RootData": {
+      "id": "AlgebraicGroups.RootData",
+      "title": "Algebraicgroups.Rootdata",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 49,
       "direct_node_count": 49,
       "kind_counts": {
@@ -406,14 +261,14 @@
       "status_counts": {
         "admitted": 49
       },
-      "href": "root_data_and_duality/index.html",
+      "href": "AlgebraicGroups/RootData/index.html",
       "children": []
     },
-    "tori": {
-      "id": "tori",
-      "title": "Tori",
-      "depth": 1,
-      "parent": null,
+    "AlgebraicGroups.Tori": {
+      "id": "AlgebraicGroups.Tori",
+      "title": "Algebraicgroups.Tori",
+      "depth": 2,
+      "parent": "AlgebraicGroups",
       "node_count": 19,
       "direct_node_count": 19,
       "kind_counts": {
@@ -425,7 +280,24 @@
       "status_counts": {
         "admitted": 19
       },
-      "href": "tori/index.html",
+      "href": "AlgebraicGroups/Tori/index.html",
+      "children": []
+    },
+    "Foundations": {
+      "id": "Foundations",
+      "title": "Foundations",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "definition": 1,
+        "topic": 8
+      },
+      "status_counts": {
+        "admitted": 9
+      },
+      "href": "Foundations/index.html",
       "children": []
     }
   }

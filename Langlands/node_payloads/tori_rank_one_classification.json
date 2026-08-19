@@ -3,38 +3,38 @@
   "title": "Classification of Rank-One Tori",
   "kind": "theorem",
   "status": "admitted",
-  "href": "tori/tori_rank_one_classification.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_rank_one_classification.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
   "body_html": "<h1>Classification of Rank-One Tori</h1>\n<p>Every torus of rank \\(1\\) over a field \\(k\\) is isomorphic to exactly\none of:</p>\n<ul>\n<li>the split torus \\(\\mathbb{G}_m\\);</li>\n<li>the norm-one torus \\(R^1_{E/k}\\mathbb{G}_m\\) of a separable\n  quadratic extension \\(E/k\\),</li>\n</ul>\n<p>and \\(R^1_{E/k}\\mathbb{G}_m \\cong R^1_{E'/k}\\mathbb{G}_m\\) if and only\nif \\(E = E'\\) inside \\(k_s\\). Thus rank-one tori are parametrized by\nseparable quadratic extensions of \\(k\\) together with the split one.</p>",
-  "proof_html": "<p>By <a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a> a rank-one torus\ncorresponds to a continuous action of \\(\\Theta\\) on\n\\(\\mathbb{Z}\\), i.e. a continuous homomorphism\n\\(\\chi : \\Theta \\to \\operatorname{Aut}(\\mathbb{Z}) = \\{\\pm 1\\}\\)\n(conjugation is trivial in an abelian target, so isomorphism classes\nare homomorphisms, not just conjugacy classes). If \\(\\chi\\) is trivial\nthe lattice is trivial and the torus is\n<a class=\"node-ref\" data-node-id=\"tori.split_torus\" href=\"tori_split_torus.html\">split</a>. Otherwise \\(\\ker \\chi\\) is an open\nsubgroup of index \\(2\\), i.e. \\(\\ker\\chi = \\operatorname{Gal}(k_s/E)\\)\nfor a uniquely determined separable quadratic extension \\(E/k\\), and\nthe lattice is the sign lattice of \\(E/k\\) — which by\n<a class=\"node-ref\" data-node-id=\"tori.norm_one_torus\" href=\"tori_norm_one_torus.html\">Norm-One Torus of a Separable Extension</a> is the lattice of\n\\(R^1_{E/k}\\mathbb{G}_m\\). Distinct \\(E\\) give distinct kernels, hence\nnon-isomorphic lattices.</p>",
+  "proof_html": "<p>By <a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a> a rank-one torus\ncorresponds to a continuous action of \\(\\Theta\\) on\n\\(\\mathbb{Z}\\), i.e. a continuous homomorphism\n\\(\\chi : \\Theta \\to \\operatorname{Aut}(\\mathbb{Z}) = \\{\\pm 1\\}\\)\n(conjugation is trivial in an abelian target, so isomorphism classes\nare homomorphisms, not just conjugacy classes). If \\(\\chi\\) is trivial\nthe lattice is trivial and the torus is\n<a class=\"node-ref\" data-node-id=\"tori.split_torus\" href=\"../../tori/tori_split_torus.html\">split</a>. Otherwise \\(\\ker \\chi\\) is an open\nsubgroup of index \\(2\\), i.e. \\(\\ker\\chi = \\operatorname{Gal}(k_s/E)\\)\nfor a uniquely determined separable quadratic extension \\(E/k\\), and\nthe lattice is the sign lattice of \\(E/k\\) — which by\n<a class=\"node-ref\" data-node-id=\"tori.norm_one_torus\" href=\"../../tori/tori_norm_one_torus.html\">Norm-One Torus of a Separable Extension</a> is the lattice of\n\\(R^1_{E/k}\\mathbb{G}_m\\). Distinct \\(E\\) give distinct kernels, hence\nnon-isomorphic lattices.</p>",
   "deps": [
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
       "id": "tori.split_torus",
       "title": "Split Torus",
-      "href": "tori/tori_split_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_split_torus.html"
     },
     {
       "id": "tori.norm_one_torus",
       "title": "Norm-One Torus of a Separable Extension",
-      "href": "tori/tori_norm_one_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_norm_one_torus.html"
     },
     {
       "id": "tori.f_tori_galois_module_classification",
       "title": "F-Tori Are Classified by Galois Modules",
-      "href": "tori/tori_f_tori_galois_module_classification.html"
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
     }
   ],
   "dependents": [],

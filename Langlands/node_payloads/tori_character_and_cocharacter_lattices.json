@@ -3,40 +3,40 @@
   "title": "Character and Cocharacter Lattices",
   "kind": "topic",
   "status": "admitted",
-  "href": "tori/tori_character_and_cocharacter_lattices.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_character_and_cocharacter_lattices.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
-  "body_html": "<h1>Character and Cocharacter Lattices</h1>\n<p>To every algebraic torus \\(T\\) over a field \\(k\\) one associates two\nfree abelian groups: the <strong>character lattice</strong> \\(X^*(T)\\) and the\n<strong>cocharacter lattice</strong> \\(X_*(T)\\). Together with the action of\n\\(\\Theta = \\operatorname{Gal}(k_s/k)\\), they form the complete\ninvariant of \\(T\\) (see\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>) and, downstream,\nthe foundation of root data.</p>\n<h2>Definitions</h2>\n<p>For a torus \\(T\\) over \\(k\\) of rank \\(r\\), with \\(k_s\\) a separable\nclosure:</p>\n<ul>\n<li><strong>Character lattice</strong>\n  \\[\n  X^*(T) \\;:=\\; \\operatorname{Hom}_{k_s\\text{-grp}}(T_{k_s}, \\mathbb{G}_m),\n  \\]\n  a free \\(\\mathbb{Z}\\)-module of rank \\(r\\).</li>\n<li><strong>Cocharacter lattice</strong>\n  \\[\n  X_*(T) \\;:=\\; \\operatorname{Hom}_{k_s\\text{-grp}}(\\mathbb{G}_m, T_{k_s}),\n  \\]\n  a free \\(\\mathbb{Z}\\)-module of rank \\(r\\); elements are\n  one-parameter subgroups.</li>\n<li><strong>Perfect pairing</strong>\n  \\[\n  \\langle -, - \\rangle : X^*(T) \\times X_*(T) \\;\\to\\; \\mathbb{Z},\n  \\]\n  defined by \\(\\chi \\circ \\lambda = (z \\mapsto z^{\\langle \\chi, \\lambda \\rangle})\\)\n  in \\(\\operatorname{End}(\\mathbb{G}_m) = \\mathbb{Z}\\).</li>\n</ul>\n<p>Both Homs are taken over \\(k_s\\); the Galois action is separate data,\nnot built into the Hom. A separable closure suffices because tori\nsplit over finite separable extensions\n(<a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>); no algebraic closure is used.</p>\n<h2>Galois action</h2>\n<p>\\(\\Theta\\) acts on \\(X^*(T)\\) by\n\\(({}^{\\gamma}\\chi)(t) = \\gamma\\bigl(\\chi(\\gamma^{-1} t)\\bigr)\\) and\ncompatibly on \\(X_*(T)\\); the pairing is \\(\\Theta\\)-invariant. The\naction is continuous for the discrete topology on the lattices: each\ncharacter is defined over a finite subextension of \\(k_s/k\\). This\nmakes both lattices finitely generated continuous\n\\(\\Theta\\)-modules, free as \\(\\mathbb{Z}\\)-modules.</p>\n<p>Two natural \\(\\Theta\\)-equivariant identifications describe the\npoints of \\(T\\) over \\(k_s\\):\n\\[\nX_*(T) \\otimes_{\\mathbb{Z}} k_s^\\times \\xrightarrow{\\;\\sim\\;} T(k_s),\n\\quad \\lambda \\otimes x \\mapsto \\lambda(x);\n\\qquad\nT(k_s) \\xrightarrow{\\;\\sim\\;} \\operatorname{Hom}(X^*(T), k_s^\\times),\n\\quad t \\mapsto (\\chi \\mapsto \\chi(t)).\n\\]</p>\n<h2>Functoriality</h2>\n<p>For a morphism of tori \\(f : T \\to T'\\) over \\(k\\):</p>\n<ul>\n<li>\\(X^*(f) : X^*(T') \\to X^*(T)\\) (contravariant);</li>\n<li>\\(X_*(f) : X_*(T) \\to X_*(T')\\) (covariant);</li>\n</ul>\n<p>both \\(\\Theta\\)-equivariant. Under the anti-equivalence of\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>, closed immersions\nof tori correspond to surjections of character lattices and\nsurjections of tori to injections; the full dictionary for subtori\nand quotients is <a class=\"node-ref\" data-node-id=\"tori.subtori_and_quotients\" href=\"tori_subtori_and_quotients.html\">Subtori and Quotients via the Character Lattice</a>.</p>\n<h2>Examples</h2>\n<table>\n<thead>\n<tr>\n<th>\\(T\\)</th>\n<th>\\(X^*(T)\\)</th>\n<th>\\(\\Theta\\)-action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\\(\\mathbb{G}_m\\)</td>\n<td>\\(\\mathbb{Z}\\)</td>\n<td>trivial</td>\n</tr>\n<tr>\n<td>\\(\\mathbb{G}_m^n\\)</td>\n<td>\\(\\mathbb{Z}^n\\)</td>\n<td>trivial</td>\n</tr>\n<tr>\n<td>\\(R_{E/k}\\mathbb{G}_m\\)</td>\n<td>\\(\\mathbb{Z}[\\Theta/\\Theta_E]\\)</td>\n<td>permutation</td>\n</tr>\n<tr>\n<td>\\(R^{1}_{E/k}\\mathbb{G}_m\\)</td>\n<td>\\(\\mathbb{Z}[\\Theta/\\Theta_E]/\\mathbb{Z}\\!\\cdot\\!N\\)</td>\n<td>quotient of permutation</td>\n</tr>\n<tr>\n<td>anisotropic \\(T\\)</td>\n<td>lattice with \\(X_*(T)^\\Theta = 0\\)</td>\n<td>no non-zero fixed vector</td>\n</tr>\n</tbody>\n</table>\n<h2>Downstream role</h2>\n<p>For a connected reductive group with a maximal torus \\(T\\), the\nlattice \\(X^*(T)\\) carries the roots and \\(X_*(T)\\) the coroots; the\nquadruple \\((X^*(T), \\Phi, X_*(T), \\Phi^\\vee)\\) is the root datum\n(<a class=\"node-ref\" data-node-id=\"root_data_and_duality.root_data\" href=\"../root_data_and_duality/root_data_and_duality_root_data.html\">root data</a>). Valuation-theoretic\ninvariants of \\(T(k)\\) over discretely valued fields are expressed\nthrough \\(X_*(T)\\), which is why the cocharacter lattice is the\npreferred working lattice of this topic.</p>",
+  "body_html": "<h1>Character and Cocharacter Lattices</h1>\n<p>To every algebraic torus \\(T\\) over a field \\(k\\) one associates two\nfree abelian groups: the <strong>character lattice</strong> \\(X^*(T)\\) and the\n<strong>cocharacter lattice</strong> \\(X_*(T)\\). Together with the action of\n\\(\\Theta = \\operatorname{Gal}(k_s/k)\\), they form the complete\ninvariant of \\(T\\) (see\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>) and, downstream,\nthe foundation of root data.</p>\n<h2>Definitions</h2>\n<p>For a torus \\(T\\) over \\(k\\) of rank \\(r\\), with \\(k_s\\) a separable\nclosure:</p>\n<ul>\n<li><strong>Character lattice</strong>\n  \\[\n  X^*(T) \\;:=\\; \\operatorname{Hom}_{k_s\\text{-grp}}(T_{k_s}, \\mathbb{G}_m),\n  \\]\n  a free \\(\\mathbb{Z}\\)-module of rank \\(r\\).</li>\n<li><strong>Cocharacter lattice</strong>\n  \\[\n  X_*(T) \\;:=\\; \\operatorname{Hom}_{k_s\\text{-grp}}(\\mathbb{G}_m, T_{k_s}),\n  \\]\n  a free \\(\\mathbb{Z}\\)-module of rank \\(r\\); elements are\n  one-parameter subgroups.</li>\n<li><strong>Perfect pairing</strong>\n  \\[\n  \\langle -, - \\rangle : X^*(T) \\times X_*(T) \\;\\to\\; \\mathbb{Z},\n  \\]\n  defined by \\(\\chi \\circ \\lambda = (z \\mapsto z^{\\langle \\chi, \\lambda \\rangle})\\)\n  in \\(\\operatorname{End}(\\mathbb{G}_m) = \\mathbb{Z}\\).</li>\n</ul>\n<p>Both Homs are taken over \\(k_s\\); the Galois action is separate data,\nnot built into the Hom. A separable closure suffices because tori\nsplit over finite separable extensions\n(<a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"../../tori/tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>); no algebraic closure is used.</p>\n<h2>Galois action</h2>\n<p>\\(\\Theta\\) acts on \\(X^*(T)\\) by\n\\(({}^{\\gamma}\\chi)(t) = \\gamma\\bigl(\\chi(\\gamma^{-1} t)\\bigr)\\) and\ncompatibly on \\(X_*(T)\\); the pairing is \\(\\Theta\\)-invariant. The\naction is continuous for the discrete topology on the lattices: each\ncharacter is defined over a finite subextension of \\(k_s/k\\). This\nmakes both lattices finitely generated continuous\n\\(\\Theta\\)-modules, free as \\(\\mathbb{Z}\\)-modules.</p>\n<p>Two natural \\(\\Theta\\)-equivariant identifications describe the\npoints of \\(T\\) over \\(k_s\\):\n\\[\nX_*(T) \\otimes_{\\mathbb{Z}} k_s^\\times \\xrightarrow{\\;\\sim\\;} T(k_s),\n\\quad \\lambda \\otimes x \\mapsto \\lambda(x);\n\\qquad\nT(k_s) \\xrightarrow{\\;\\sim\\;} \\operatorname{Hom}(X^*(T), k_s^\\times),\n\\quad t \\mapsto (\\chi \\mapsto \\chi(t)).\n\\]</p>\n<h2>Functoriality</h2>\n<p>For a morphism of tori \\(f : T \\to T'\\) over \\(k\\):</p>\n<ul>\n<li>\\(X^*(f) : X^*(T') \\to X^*(T)\\) (contravariant);</li>\n<li>\\(X_*(f) : X_*(T) \\to X_*(T')\\) (covariant);</li>\n</ul>\n<p>both \\(\\Theta\\)-equivariant. Under the anti-equivalence of\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>, closed immersions\nof tori correspond to surjections of character lattices and\nsurjections of tori to injections; the full dictionary for subtori\nand quotients is <a class=\"node-ref\" data-node-id=\"tori.subtori_and_quotients\" href=\"../../tori/tori_subtori_and_quotients.html\">Subtori and Quotients via the Character Lattice</a>.</p>\n<h2>Examples</h2>\n<table>\n<thead>\n<tr>\n<th>\\(T\\)</th>\n<th>\\(X^*(T)\\)</th>\n<th>\\(\\Theta\\)-action</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\\(\\mathbb{G}_m\\)</td>\n<td>\\(\\mathbb{Z}\\)</td>\n<td>trivial</td>\n</tr>\n<tr>\n<td>\\(\\mathbb{G}_m^n\\)</td>\n<td>\\(\\mathbb{Z}^n\\)</td>\n<td>trivial</td>\n</tr>\n<tr>\n<td>\\(R_{E/k}\\mathbb{G}_m\\)</td>\n<td>\\(\\mathbb{Z}[\\Theta/\\Theta_E]\\)</td>\n<td>permutation</td>\n</tr>\n<tr>\n<td>\\(R^{1}_{E/k}\\mathbb{G}_m\\)</td>\n<td>\\(\\mathbb{Z}[\\Theta/\\Theta_E]/\\mathbb{Z}\\!\\cdot\\!N\\)</td>\n<td>quotient of permutation</td>\n</tr>\n<tr>\n<td>anisotropic \\(T\\)</td>\n<td>lattice with \\(X_*(T)^\\Theta = 0\\)</td>\n<td>no non-zero fixed vector</td>\n</tr>\n</tbody>\n</table>\n<h2>Downstream role</h2>\n<p>For a connected reductive group with a maximal torus \\(T\\), the\nlattice \\(X^*(T)\\) carries the roots and \\(X_*(T)\\) the coroots; the\nquadruple \\((X^*(T), \\Phi, X_*(T), \\Phi^\\vee)\\) is the root datum\n(<a class=\"node-ref\" data-node-id=\"root_data.root_data\" href=\"../../root_data/root_data_root_data.html\">root data</a>). Valuation-theoretic\ninvariants of \\(T(k)\\) over discretely valued fields are expressed\nthrough \\(X_*(T)\\), which is why the cocharacter lattice is the\npreferred working lattice of this topic.</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     }
   ],
   "dependents": [
     {
-      "id": "reductive_structure.split_reductive_groups",
+      "id": "reductive_groups.split_reductive_groups",
       "title": "Split Reductive Groups",
-      "href": "reductive_structure/reductive_structure_split_reductive_groups.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_split_reductive_groups.html"
     },
     {
-      "id": "root_data_and_duality.root_data",
+      "id": "root_data.root_data",
       "title": "Root Data",
-      "href": "root_data_and_duality/root_data_and_duality_root_data.html"
+      "href": "AlgebraicGroups/RootData/root_data_root_data.html"
     },
     {
       "id": "tori.anisotropic_torus",
       "title": "Anisotropic Torus",
-      "href": "tori/tori_anisotropic_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_anisotropic_torus.html"
     },
     {
       "id": "tori.f_tori_galois_module_classification",
       "title": "F-Tori Are Classified by Galois Modules",
-      "href": "tori/tori_f_tori_galois_module_classification.html"
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
     }
   ],
   "lean_refs": [
@@ -44,14 +44,14 @@
       "name": "Langlands.Tori.characterGroup",
       "display_name": "Langlands.Tori.characterGroup",
       "qualified_name": "Langlands.Tori.characterGroup",
-      "module": "LanglandsLean.Tori.CharacterGroup",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
       "kind": "abbrev",
       "signature": "abbrev characterGroup (A : Type v) [Ring A] [HopfAlgebra R A] : Type v :=\n  GroupLike R A",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/CharacterGroup.lean#L73",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L73",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -62,14 +62,14 @@
       "name": "Langlands.Tori.cocharacterHom",
       "display_name": "Langlands.Tori.cocharacterHom",
       "qualified_name": "Langlands.Tori.cocharacterHom",
-      "module": "LanglandsLean.Tori.CharacterGroup",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
       "kind": "abbrev",
       "signature": "abbrev cocharacterHom (A : Type v) [Ring A] [HopfAlgebra R A] : Type _ :=\n  A →ₐc[R] AddMonoidAlgebra R ℤ",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/CharacterGroup.lean#L85",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L85",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -80,14 +80,14 @@
       "name": "Langlands.Tori.diagCharEquiv",
       "display_name": "Langlands.Tori.diagCharEquiv",
       "qualified_name": "Langlands.Tori.diagCharEquiv",
-      "module": "LanglandsLean.Tori.CharacterGroup",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
       "kind": "def",
       "signature": "noncomputable def diagCharEquiv :\n    Multiplicative M ≃* characterGroup R (AddMonoidAlgebra R M)",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/CharacterGroup.lean#L116",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L116",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -98,14 +98,14 @@
       "name": "Langlands.Tori.diagCocharEquiv",
       "display_name": "Langlands.Tori.diagCocharEquiv",
       "qualified_name": "Langlands.Tori.diagCocharEquiv",
-      "module": "LanglandsLean.Tori.CharacterGroup",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
       "kind": "def",
       "signature": "noncomputable def diagCocharEquiv :\n    (M →+ ℤ) ≃ cocharacterHom R (AddMonoidAlgebra R M) :=\n  AddMonoidAlgebra.mapDomainBialgHomEquiv",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/CharacterGroup.lean#L146",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L146",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -115,12 +115,12 @@
   ],
   "lean_modules": [
     {
-      "name": "LanglandsLean.Tori.CharacterGroup",
-      "display_name": "LanglandsLean.Tori.CharacterGroup",
+      "name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/Tori/CharacterGroup.lean#L1",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1",
       "status": "resolved",
       "reason": null
     }

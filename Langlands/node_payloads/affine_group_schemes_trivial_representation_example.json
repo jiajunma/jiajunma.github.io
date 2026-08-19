@@ -3,18 +3,18 @@
   "title": "Trivial Representation as a Comodule",
   "kind": "example",
   "status": "admitted",
-  "href": "affine_group_schemes/affine_group_schemes_trivial_representation_example.html",
-  "primary_topic": "affine_group_schemes",
+  "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_trivial_representation_example.html",
+  "primary_topic": "AlgebraicGroups.AffineGroupSchemes",
   "topics": [
-    "affine_group_schemes"
+    "AlgebraicGroups.AffineGroupSchemes"
   ],
-  "body_html": "<h1>Trivial Representation as a Comodule</h1>\n<p>Let \\(R\\) be a commutative semiring, let \\(A\\) be a bialgebra over \\(R\\),\nand let \\(V\\) be an \\(R\\)-module. The <strong>trivial \\(A\\)-comodule</strong> on \\(V\\)\nhas coaction</p>\n<p>\\[\n\\rho(v) = v \\otimes 1.\n\\]</p>\n<p>This satisfies the axioms of\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.comodule_definition\" href=\"affine_group_schemes_comodule_definition.html\">an \\(A\\)-comodule</a>:\ncoassociativity follows from\n\\[\n\\Delta(1)=1\\otimes 1,\n\\]\nand the counit axiom follows from \\(\\varepsilon(1)=1\\).</p>\n<p>When \\(A = \\mathcal{O}(G)\\) is the coordinate Hopf algebra of an affine\ngroup scheme \\(G\\), this comodule corresponds to the representation on\nwhich every \\(R\\)-point of \\(G\\) acts by the identity on \\(V\\).</p>",
+  "body_html": "<h1>Trivial Representation as a Comodule</h1>\n<p>Let \\(R\\) be a commutative semiring, let \\(A\\) be a bialgebra over \\(R\\),\nand let \\(V\\) be an \\(R\\)-module. The <strong>trivial \\(A\\)-comodule</strong> on \\(V\\)\nhas coaction</p>\n<p>\\[\n\\rho(v) = v \\otimes 1.\n\\]</p>\n<p>This satisfies the axioms of\n<a class=\"node-ref\" data-node-id=\"affine_group_schemes.comodule_definition\" href=\"../../affine_group_schemes/affine_group_schemes_comodule_definition.html\">an \\(A\\)-comodule</a>:\ncoassociativity follows from\n\\[\n\\Delta(1)=1\\otimes 1,\n\\]\nand the counit axiom follows from \\(\\varepsilon(1)=1\\).</p>\n<p>When \\(A = \\mathcal{O}(G)\\) is the coordinate Hopf algebra of an affine\ngroup scheme \\(G\\), this comodule corresponds to the representation on\nwhich every \\(R\\)-point of \\(G\\) acts by the identity on \\(V\\).</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "affine_group_schemes.comodule_definition",
       "title": "Comodule over a Coalgebra",
-      "href": "affine_group_schemes/affine_group_schemes_comodule_definition.html"
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_comodule_definition.html"
     }
   ],
   "dependents": [],

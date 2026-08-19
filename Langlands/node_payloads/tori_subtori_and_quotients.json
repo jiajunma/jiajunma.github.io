@@ -3,50 +3,50 @@
   "title": "Subtori and Quotients via the Character Lattice",
   "kind": "theorem",
   "status": "admitted",
-  "href": "tori/tori_subtori_and_quotients.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_subtori_and_quotients.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
   "body_html": "<h1>Subtori and Quotients via the Character Lattice</h1>\n<p>Let \\(T\\) be a torus over \\(k\\) with character lattice\n\\(X^*(T)\\). Recall that a sublattice \\(L \\subseteq X^*(T)\\) is\n<strong>saturated</strong> if \\(X^*(T)/L\\) is torsion-free.</p>\n<p>For a \\(\\Theta\\)-stable sublattice \\(L \\subseteq X^*(T)\\) put\n\\[\nH_L \\;=\\; \\bigcap_{\\chi \\in L} \\ker \\chi \\;\\subseteq\\; T .\n\\]</p>\n<ol>\n<li>\\(H_L\\) is a closed \\(k\\)-subgroup of multiplicative type with\n   \\(X^*(H_L) = X^*(T)/L\\), and \\(L \\mapsto H_L\\) is an\n   inclusion-reversing bijection between \\(\\Theta\\)-stable sublattices\n   of \\(X^*(T)\\) and closed multiplicative-type \\(k\\)-subgroups of\n   \\(T\\).</li>\n<li>\\(H_L\\) is a subtorus if and only if \\(L\\) is saturated.</li>\n<li>The quotient \\(T/H_L\\) is a torus with\n   \\(X^*(T/H_L) = L\\), and the exact sequence\n   \\(1 \\to H_L \\to T \\to T/H_L \\to 1\\) corresponds to the exact\n   sequence \\(0 \\to L \\to X^*(T) \\to X^*(T)/L \\to 0\\) of\n   \\(\\Theta\\)-modules.</li>\n<li>Dually, quotient tori of \\(T\\) correspond to \\(\\Theta\\)-stable\n   saturated sublattices (their character lattices), and surjections of\n   tori correspond to injections of character lattices.</li>\n</ol>\n<p>In particular every subtorus and every quotient torus of \\(T\\) is\nagain a torus, computed purely from the Galois lattice.</p>",
-  "proof_html": "<p>After base change to \\(k_s\\) the torus is diagonalizable and the\nanti-equivalence\n<a class=\"node-ref\" data-node-id=\"reductive_structure.diagonalizable_groups_antiequivalence\" href=\"../reductive_structure/reductive_structure_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a> is\nexact: a quotient of character groups \\(X^*(T) \\twoheadrightarrow\nX^*(T)/L\\) corresponds to the closed subgroup\n\\(D(X^*(T)/L) \\subseteq D(X^*(T))\\), which is exactly the common\nkernel \\(H_L\\) of the characters in \\(L\\); a subgroup\n\\(L \\subseteq X^*(T)\\) corresponds to the quotient\n\\(D(X^*(T)) \\twoheadrightarrow D(L)\\), whose kernel is \\(H_L\\). All\nconstructions are functorial, so \\(\\Theta\\)-stability of \\(L\\) is\nexactly what makes them descend to \\(k\\) by\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>.</p>\n<p>For (2): \\(H_L\\) is a torus iff its character group \\(X^*(T)/L\\) is\ntorsion-free, which is the definition of saturation. For (3): the\ncharacters of \\(T\\) vanishing on \\(H_L\\) are precisely those mapping\nto zero in \\(X^*(H_L) = X^*(T)/L\\), i.e. the elements of \\(L\\); the\nquotient group \\(T/H_L\\) is of multiplicative type with character\ngroup \\(L\\), and \\(L\\), being a subgroup of a lattice, is\ntorsion-free, so \\(T/H_L\\) is a torus. (4) is (1)-(3) read through the\nanti-equivalence.</p>",
+  "proof_html": "<p>After base change to \\(k_s\\) the torus is diagonalizable and the\nanti-equivalence\n<a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups_antiequivalence\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a> is\nexact: a quotient of character groups \\(X^*(T) \\twoheadrightarrow\nX^*(T)/L\\) corresponds to the closed subgroup\n\\(D(X^*(T)/L) \\subseteq D(X^*(T))\\), which is exactly the common\nkernel \\(H_L\\) of the characters in \\(L\\); a subgroup\n\\(L \\subseteq X^*(T)\\) corresponds to the quotient\n\\(D(X^*(T)) \\twoheadrightarrow D(L)\\), whose kernel is \\(H_L\\). All\nconstructions are functorial, so \\(\\Theta\\)-stability of \\(L\\) is\nexactly what makes them descend to \\(k\\) by\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>.</p>\n<p>For (2): \\(H_L\\) is a torus iff its character group \\(X^*(T)/L\\) is\ntorsion-free, which is the definition of saturation. For (3): the\ncharacters of \\(T\\) vanishing on \\(H_L\\) are precisely those mapping\nto zero in \\(X^*(H_L) = X^*(T)/L\\), i.e. the elements of \\(L\\); the\nquotient group \\(T/H_L\\) is of multiplicative type with character\ngroup \\(L\\), and \\(L\\), being a subgroup of a lattice, is\ntorsion-free, so \\(T/H_L\\) is a torus. (4) is (1)-(3) read through the\nanti-equivalence.</p>",
   "deps": [
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
       "id": "tori.f_tori_galois_module_classification",
       "title": "F-Tori Are Classified by Galois Modules",
-      "href": "tori/tori_f_tori_galois_module_classification.html"
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
     },
     {
-      "id": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "id": "reductive_groups.diagonalizable_groups_antiequivalence",
       "title": "Diagonalizable Groups Are Dual to Character Groups",
-      "href": "reductive_structure/reductive_structure_diagonalizable_groups_antiequivalence.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_diagonalizable_groups_antiequivalence.html"
     }
   ],
   "dependents": [
     {
       "id": "tori.induced_resolution",
       "title": "Resolution of a Torus by Induced Tori",
-      "href": "tori/tori_induced_resolution.html"
+      "href": "AlgebraicGroups/Tori/tori_induced_resolution.html"
     },
     {
       "id": "tori.norm_one_torus",
       "title": "Norm-One Torus of a Separable Extension",
-      "href": "tori/tori_norm_one_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_norm_one_torus.html"
     },
     {
       "id": "tori.split_anisotropic_decomposition",
       "title": "Split-Anisotropic Decomposition of a Torus",
-      "href": "tori/tori_split_anisotropic_decomposition.html"
+      "href": "AlgebraicGroups/Tori/tori_split_anisotropic_decomposition.html"
     }
   ],
   "lean_refs": [],

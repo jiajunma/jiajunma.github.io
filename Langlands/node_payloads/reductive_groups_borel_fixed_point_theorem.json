@@ -1,0 +1,49 @@
+{
+  "id": "reductive_groups.borel_fixed_point_theorem",
+  "title": "Borel Fixed Point Theorem",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_borel_fixed_point_theorem.html",
+  "primary_topic": "AlgebraicGroups.ReductiveGroups",
+  "topics": [
+    "AlgebraicGroups.ReductiveGroups"
+  ],
+  "body_html": "<h1>Borel Fixed Point Theorem</h1>\n<p>Let \\(B\\) be a connected solvable linear algebraic group acting regularly on\na nonempty complete variety \\(X\\) over an algebraically closed field. Then\n\\(B\\) has a fixed point in \\(X\\).</p>",
+  "proof_html": "<p>Choose a closed \\(B\\)-orbit \\(Y\\subseteq X\\), which exists because orbit\nclosures in a complete variety contain closed orbits. Replacing \\(X\\) by\n\\(Y\\), assume \\(B\\) acts transitively. Since \\(B\\) is solvable, it has a\nnormal connected subgroup \\(N\\) such that \\(B/N\\) is either one-dimensional\nunipotent or one-dimensional toral after passing through a composition\nseries.</p>\n<p>By induction on \\(\\dim B\\), the subgroup \\(N\\) has a fixed point on the\ncomplete variety \\(Y\\) or the action descends to the quotient group\n\\(B/N\\). A one-dimensional connected solvable algebraic group acting on a\ncomplete variety has a fixed point: for \\(\\mathbb{G}_a\\), orbit closures are\nrational complete curves with a point at infinity fixed by the action; for\n\\(\\mathbb{G}_m\\), the closure of a nonclosed orbit has endpoints fixed by\n\\(\\mathbb{G}_m\\). Hence \\(B\\) fixes a point.</p>",
+  "deps": [
+    {
+      "id": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
+      "title": "Algebraic Group Actions, Orbits, and Stabilizers",
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_algebraic_group_action_orbits_stabilizers.html"
+    },
+    {
+      "id": "linear_algebraic_groups.orbits_are_locally_closed",
+      "title": "Orbits of Algebraic Group Actions Are Locally Closed",
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_orbits_are_locally_closed.html"
+    },
+    {
+      "id": "reductive_groups.solvable_groups",
+      "title": "Solvable Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_solvable_groups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "reductive_groups.borel_subgroups_conjugacy_and_parabolics",
+      "title": "Borel Subgroups Are Conjugate and Control Parabolics",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_borel_subgroups_conjugacy_and_parabolics.html"
+    },
+    {
+      "id": "reductive_groups.f_split_solvable_fixed_point_theorem",
+      "title": "Fixed Point Theorem for F-Split Solvable Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_f_split_solvable_fixed_point_theorem.html"
+    },
+    {
+      "id": "reductive_groups.lie_kolchin_theorem",
+      "title": "Lie-Kolchin Theorem",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_lie_kolchin_theorem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

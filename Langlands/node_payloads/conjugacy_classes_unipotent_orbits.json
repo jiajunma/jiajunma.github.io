@@ -3,10 +3,10 @@
   "title": "Unipotent Orbits",
   "kind": "definition",
   "status": "admitted",
-  "href": "conjugacy_classes/conjugacy_classes_unipotent_orbits.html",
-  "primary_topic": "conjugacy_classes",
+  "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_unipotent_orbits.html",
+  "primary_topic": "AlgebraicGroups.ConjugacyClasses",
   "topics": [
-    "conjugacy_classes"
+    "AlgebraicGroups.ConjugacyClasses"
   ],
   "body_html": "<h1>Unipotent Orbits</h1>\n<h2>Definition</h2>\n<p>Let \\(G\\) be a connected reductive group over an algebraically closed field\n\\(k\\). The <strong>unipotent orbits</strong> of \\(G\\) are the orbits of \\(G\\) acting on\nthe unipotent variety \\(\\mathcal{U}\\) by conjugation:\n\\[\ng \\cdot u = g u g^{-1}, \\quad g \\in G(k),\\; u \\in \\mathcal{U}(k).\n\\]</p>\n<p>There are <strong>finitely many</strong> unipotent orbits; their number depends only on the\nroot datum (root system) of \\(G\\).</p>\n<h2>Classification</h2>\n<p>The unipotent orbits of \\(G\\) are classified by the same combinatorial data\nas nilpotent orbits in \\(\\mathrm{Lie}(G)\\):</p>\n<table>\n<thead>\n<tr>\n<th>Method</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Bala-Carter</strong></td>\n<td>Distinguished parabolic subgroups \\(P\\) with Levi \\(L\\); pairs \\((L, \\mathcal{O}_L^{\\mathrm{reg}})\\)</td>\n</tr>\n<tr>\n<td><strong>Weighted Dynkin diagrams</strong></td>\n<td>Labellings of the Dynkin diagram by \\(\\{0, 1, 2\\}\\)</td>\n</tr>\n<tr>\n<td><strong>Partitions</strong> (type A)</td>\n<td>Partitions of \\(n\\) parametrise unipotent orbits of \\(\\mathrm{GL}_n\\)</td>\n</tr>\n<tr>\n<td><strong>Partitions</strong> (types B,C,D)</td>\n<td>B-partitions / D-partitions for \\(\\mathrm{SO}_n\\), \\(\\mathrm{Sp}_{2n}\\)</td>\n</tr>\n</tbody>\n</table>\n<h2>The regular and subregular orbits</h2>\n<ul>\n<li><strong>Regular orbit</strong>: The unique dense orbit; consists of elements \\(u \\in \\mathcal{U}\\)\n  with \\(\\dim C_G(u) = \\mathrm{rank}(G)\\). Exists in all characteristics.</li>\n<li><strong>Subregular orbit</strong>: The second largest orbit (by closure order);\n  its closure is \\(\\overline{\\mathcal{O}_{\\mathrm{sub}}} = \\mathcal{U} \\setminus \\mathcal{O}_{\\mathrm{reg}}\\).</li>\n<li><strong>Trivial orbit</strong>: The single-point orbit \\(\\{1\\}\\).</li>\n</ul>\n<h2>Closure ordering</h2>\n<p>The set of unipotent orbits carries the <strong>closure order</strong>: \\(\\mathcal{O}_1 \\le \\mathcal{O}_2\\)\nif \\(\\mathcal{O}_1 \\subseteq \\overline{\\mathcal{O}_2}\\). This gives a partial\norder whose Hasse diagram is the same as for nilpotent orbits.</p>\n<h2>Correspondence with nilpotent orbits</h2>\n<p>In characteristic \\(0\\) (or good characteristic \\(p\\) via the Springer isomorphism),\nthe identification \\(\\mathcal{U} \\cong \\mathcal{N}\\) is \\(G\\)-equivariant, giving\na bijection:\n\\[\n\\{\\text{unipotent orbits in }G\\} \\xleftrightarrow{\\;\\sim\\;}\n\\{\\text{nilpotent orbits in }\\mathrm{Lie}(G)\\}.\n\\]</p>",
   "proof_html": null,
@@ -14,39 +14,39 @@
     {
       "id": "conjugacy_classes.unipotent_elements",
       "title": "Unipotent Elements and the Unipotent Variety",
-      "href": "conjugacy_classes/conjugacy_classes_unipotent_elements.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_unipotent_elements.html"
     },
     {
       "id": "conjugacy_classes.jordan_decomposition",
       "title": "Jordan Decomposition in Algebraic Groups",
-      "href": "conjugacy_classes/conjugacy_classes_jordan_decomposition.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_jordan_decomposition.html"
     },
     {
       "id": "conjugacy_classes.nilpotent_orbits",
       "title": "Nilpotent Orbits",
-      "href": "conjugacy_classes/conjugacy_classes_nilpotent_orbits.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_nilpotent_orbits.html"
     },
     {
-      "id": "reductive_structure.reductive_groups",
+      "id": "reductive_groups.reductive_groups",
       "title": "Reductive Groups",
-      "href": "reductive_structure/reductive_structure_reductive_groups.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_reductive_groups.html"
     }
   ],
   "dependents": [
     {
       "id": "conjugacy_classes.regular_elements",
       "title": "Regular Elements",
-      "href": "conjugacy_classes/conjugacy_classes_regular_elements.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_regular_elements.html"
     },
     {
       "id": "conjugacy_classes.springer_correspondence",
       "title": "Springer Correspondence",
-      "href": "conjugacy_classes/conjugacy_classes_springer_correspondence.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_springer_correspondence.html"
     },
     {
       "id": "conjugacy_classes.stable_conjugacy_classes",
       "title": "Stable Conjugacy Classes",
-      "href": "conjugacy_classes/conjugacy_classes_stable_conjugacy_classes.html"
+      "href": "AlgebraicGroups/ConjugacyClasses/conjugacy_classes_stable_conjugacy_classes.html"
     }
   ],
   "lean_refs": [],

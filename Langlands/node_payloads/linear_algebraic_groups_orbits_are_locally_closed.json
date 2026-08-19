@@ -3,10 +3,10 @@
   "title": "Orbits of Algebraic Group Actions Are Locally Closed",
   "kind": "theorem",
   "status": "admitted",
-  "href": "linear_algebraic_groups/linear_algebraic_groups_orbits_are_locally_closed.html",
-  "primary_topic": "linear_algebraic_groups",
+  "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_orbits_are_locally_closed.html",
+  "primary_topic": "AlgebraicGroups.LinearAlgebraicGroups",
   "topics": [
-    "linear_algebraic_groups"
+    "AlgebraicGroups.LinearAlgebraicGroups"
   ],
   "body_html": "<h1>Orbits of Algebraic Group Actions Are Locally Closed</h1>\n<p>Let a linear algebraic group \\(G\\) act regularly on an algebraic variety\n\\(X\\). For every \\(x \\in X\\), the orbit \\(Gx\\) is a locally closed\nsubvariety of \\(X\\), open in its closure. The boundary\n\\(\\overline{Gx}\\setminus Gx\\), if nonempty, is a union of orbits of strictly\nsmaller dimension. In particular, every orbit closure contains at least one\nclosed orbit.</p>",
   "proof_html": "<p>The orbit map \\(a_x:G\\to X\\), \\(g\\mapsto gx\\), has constructible image by\nChevalley's theorem. Let \\(Y=\\overline{Gx}\\). A constructible dense subset of\nan irreducible component of \\(Y\\) contains a nonempty open subset \\(U\\).\nTranslates of \\(U\\) by elements of \\(G\\) remain in the same orbit and cover\n\\(Gx\\), so \\(Gx\\) is open in \\(Y\\).</p>\n<p>Since the orbit is open in its closure, any orbit contained in\n\\(Y\\setminus Gx\\) has smaller dimension. Repeating the dimension drop in a\nNoetherian space reaches a closed orbit.</p>",
@@ -14,19 +14,19 @@
     {
       "id": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
       "title": "Algebraic Group Actions, Orbits, and Stabilizers",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_algebraic_group_action_orbits_stabilizers.html"
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_algebraic_group_action_orbits_stabilizers.html"
     },
     {
       "id": "linear_algebraic_groups.closed_image_of_homomorphism",
       "title": "Image of an Algebraic Group Homomorphism Is Closed",
-      "href": "linear_algebraic_groups/linear_algebraic_groups_closed_image_of_homomorphism.html"
+      "href": "AlgebraicGroups/LinearAlgebraicGroups/linear_algebraic_groups_closed_image_of_homomorphism.html"
     }
   ],
   "dependents": [
     {
-      "id": "reductive_structure.borel_fixed_point_theorem",
+      "id": "reductive_groups.borel_fixed_point_theorem",
       "title": "Borel Fixed Point Theorem",
-      "href": "reductive_structure/reductive_structure_borel_fixed_point_theorem.html"
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_borel_fixed_point_theorem.html"
     }
   ],
   "lean_refs": [],

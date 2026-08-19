@@ -1,0 +1,59 @@
+{
+  "id": "root_data.galois_action_on_root_data",
+  "title": "Galois Action on Root Data",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/RootData/root_data_galois_action_on_root_data.html",
+  "primary_topic": "AlgebraicGroups.RootData",
+  "topics": [
+    "AlgebraicGroups.RootData"
+  ],
+  "body_html": "<h1>Galois Action on Root Data</h1>\n<p>For a reductive group \\(G\\) defined over a non-algebraically-closed\nfield \\(k\\), the absolute Galois group \\(\\Gamma = \\mathrm{Gal}(\\bar k / k)\\)\nacts on the root datum of \\(G_{\\bar k}\\). This Galois module is the\n<strong>core invariant</strong> of \\(G\\) up to inner forms.</p>\n<h2>Setup</h2>\n<p>Let \\(G\\) be a connected reductive group over \\(k\\) with separable\nclosure \\(\\bar k\\) and absolute Galois group \\(\\Gamma\\). Choose a\nmaximal torus \\(T \\subseteq G\\) defined over \\(k\\) (such tori\nexist). Then \\(T_{\\bar k}\\) is a split torus over \\(\\bar k\\), and the\nroot datum \\((X^*(T_{\\bar k}), \\Phi, X_*(T_{\\bar k}), \\Phi^\\vee)\\) is\ndefined.</p>\n<h2>Galois action</h2>\n<p>\\(\\Gamma\\) acts on \\(T_{\\bar k}\\) via its action on \\(\\bar k\\), hence\nacts on:\n- the character lattice \\(X^*(T_{\\bar k})\\);\n- the cocharacter lattice \\(X_*(T_{\\bar k})\\);\n- the set of roots \\(\\Phi\\) (preserving it as a subset of\n  \\(X^*\\));\n- the set of coroots \\(\\Phi^\\vee\\).</p>\n<p>The pairing \\(\\langle -, - \\rangle\\) is \\(\\Gamma\\)-invariant.</p>\n<p>For a fixed pinning of \\(G_{\\bar k}\\), the Galois action need not\npreserve the pinning; instead it acts on the <strong>based</strong> root datum\nthrough pinned automorphisms (i.e.\\ through\n\\(\\mathrm{Aut}^{\\mathrm{pin}}(G_{\\bar k}) = \\mathrm{Out}(G_{\\bar k})\\)).</p>\n<h2>Classification of forms</h2>\n<p><strong>Theorem.</strong> Quasi-split forms of \\(G\\) over \\(k\\) (i.e.\\ forms with a\n\\(k\\)-rational Borel) are in bijection with continuous homomorphisms\n\\[\n\\Gamma \\;\\longrightarrow\\; \\mathrm{Out}(G_{\\bar k}),\n\\]\nup to conjugacy.</p>\n<p>General forms are quasi-split forms further twisted by a class in\n\\(H^1(k, G_{\\mathrm{ad}})\\) (an inner twist).</p>\n<h2>Inner vs.\\ outer</h2>\n<p>A form \\(G' / k\\) of \\(G\\) is:\n- <strong>Inner</strong>: \\(\\Gamma\\) acts trivially on the based root datum of\n  \\(G'_{\\bar k}\\) — the form is twisted purely \"internally\" by\n  \\(G_{\\mathrm{ad}}\\)-cocycles.\n- <strong>Outer</strong>: \\(\\Gamma\\) acts non-trivially on the based root datum;\n  the action factors through \\(\\mathrm{Out}(G_{\\bar k})\\).</p>\n<p>\\(\\mathrm{GL}_n\\) and \\(\\mathrm{Sp}_{2n}\\) have no outer forms (their\nDynkin diagrams have no automorphisms or only trivial ones for\nclassical Dynkin reasons). \\(\\mathrm{U}(n)\\) is the prototypical\nouter form (Galois flip of \\(A_{n-1}\\)).</p>\n<h2>Examples</h2>\n<h3>\\(\\mathrm{GL}_n\\)</h3>\n<p>\\(\\mathrm{Out}(\\mathrm{GL}_n) = \\mathbb{Z}/2\\) (transpose-inverse\nautomorphism for \\(n \\ge 2\\)). If \\(\\Gamma \\to \\mathbb{Z}/2\\) is the\nquadratic extension associated to \\(K/k\\), the resulting form is\n\\(\\mathrm{Res}_{K/k} \\mathrm{GL}_n^{(\\sigma)} = \\mathrm{U}(n, K/k)\\):\nthe unitary group of the Hermitian form attached to \\(K/k\\).</p>\n<h3>\\(D_4\\) and triality</h3>\n<p>\\(\\mathrm{Out}(D_4) = S_3\\). Continuous homomorphisms\n\\(\\Gamma \\to S_3\\) factor through finite quotients; for a cubic\nextension \\(K/k\\) with Galois group \\(\\mathbb{Z}/3\\), one gets the\n<strong>trialitarian form</strong> \\({}^3 D_4\\) of \\(\\mathrm{Spin}_8\\).</p>\n<h3>\\(E_6\\)</h3>\n<p>\\(\\mathrm{Out}(E_6) = \\mathbb{Z}/2\\); a quadratic extension gives the\nouter form \\({}^2 E_6\\), denoted \\(E_6^{(2)}\\).</p>\n<h3>Tori</h3>\n<p>For a torus \\(T\\): the entire root datum is just the character\nlattice (no roots), and the Galois action on \\(X^*(T)\\) classifies\n\\(T\\) over \\(k\\) (anti-equivalence with finite-rank free continuous\n\\(\\Gamma\\)-modules).</p>\n<h2>Action on the dual group</h2>\n<p>Under root-datum duality, the Galois action on the root datum of \\(G\\)\nbecomes a Galois action on the dual root datum of \\(\\hat G\\), hence\non \\(\\hat G\\) by pinned automorphisms. This is precisely the action\ndefining the <strong>L-group</strong>:\n\\[\n{}^L G \\;=\\; \\hat G(\\mathbb{C}) \\;\\rtimes\\; \\Gamma.\n\\]</p>\n<h2>Tits indices</h2>\n<p>The combinatorial data of the Galois action plus the inner-form\ncocycle is encoded by a <strong>Tits index</strong>: a Dynkin diagram with:\n- \\(\\Gamma\\)-orbits marked;\n- distinguished vertices (representing the \\(k\\)-rational simple\n  roots);\n- arrows for the Galois action.</p>\n<p>Tits indices give a complete classification of reductive groups over\na fixed field, including their quasi-split data.</p>\n<h2>Role in Langlands</h2>\n<ul>\n<li><strong>L-group construction</strong>: requires the Galois action on the dual\n  root datum.</li>\n<li><strong>Local Langlands for non-split groups</strong>: L-parameters must respect\n  the Galois action — they map into the L-group, not just \\(\\hat G\\).</li>\n<li><strong>Global Langlands</strong>: the global Galois action on root data is the\n  natural compatibility for adelic groups.</li>\n</ul>\n<h2>Mathlib</h2>\n<p>Not yet formalised in the explicit Galois-module setting.</p>\n<h2>References</h2>\n<ul>\n<li>Tits, <em>Classification of algebraic semisimple groups</em> (Proc.\\ AMS\n  Symp.\\ 1966).</li>\n<li>Borel–Tits, <em>Groupes réductifs</em> (Publ.\\ IHES 1965).</li>\n<li>Platonov–Rapinchuk, <em>Algebraic Groups and Number Theory</em> (1994).</li>\n<li>Conrad, <em>Reductive group schemes</em> (Notes, 2014), §7.</li>\n</ul>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"forms.rational_forms_of_reductive_groups\" href=\"../../forms/forms_rational_forms_of_reductive_groups.html\">Rational Forms of Reductive Groups</a></li>\n<li><a class=\"node-ref\" data-node-id=\"root_data.automorphisms_of_root_data\" href=\"../../root_data/root_data_automorphisms_of_root_data.html\">Automorphisms of Root Data</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "root_data.automorphisms_of_root_data",
+      "title": "Automorphisms of Root Data",
+      "href": "AlgebraicGroups/RootData/root_data_automorphisms_of_root_data.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "buildings.reductive_groups_over_local_fields",
+      "title": "Reductive Groups over Local Fields",
+      "href": "AlgebraicGroups/Buildings/buildings_reductive_groups_over_local_fields.html"
+    },
+    {
+      "id": "buildings.valued_root_data",
+      "title": "Valued Root Data",
+      "href": "AlgebraicGroups/Buildings/buildings_valued_root_data.html"
+    },
+    {
+      "id": "forms.vogan_diagrams",
+      "title": "Vogan Diagrams",
+      "href": "AlgebraicGroups/Forms/forms_vogan_diagrams.html"
+    },
+    {
+      "id": "kottwitz.kottwitz_homomorphism",
+      "title": "Kottwitz Homomorphism",
+      "href": "AlgebraicGroups/Kottwitz/kottwitz_kottwitz_homomorphism.html"
+    },
+    {
+      "id": "root_data.indexed_root_datum_of_f_reductive_group",
+      "title": "Indexed Root Datum of an F-Reductive Group",
+      "href": "AlgebraicGroups/RootData/root_data_indexed_root_datum_of_f_reductive_group.html"
+    },
+    {
+      "id": "root_data.l_groups",
+      "title": "L-Groups",
+      "href": "AlgebraicGroups/RootData/root_data_l_groups.html"
+    },
+    {
+      "id": "root_data.relative_root_datum_of_f_reductive_group",
+      "title": "Relative Root Datum of an F-Reductive Group",
+      "href": "AlgebraicGroups/RootData/root_data_relative_root_datum_of_f_reductive_group.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

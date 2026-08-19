@@ -1,0 +1,106 @@
+{
+  "id": "reductive_groups.diagonalizable_groups_antiequivalence",
+  "title": "Diagonalizable Groups Are Dual to Character Groups",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_diagonalizable_groups_antiequivalence.html",
+  "primary_topic": "AlgebraicGroups.ReductiveGroups",
+  "topics": [
+    "AlgebraicGroups.ReductiveGroups",
+    "AlgebraicGroups.RootData"
+  ],
+  "body_html": "<h1>Diagonalizable Groups Are Dual to Character Groups</h1>\n<p>The functor\n\\[\nD \\longmapsto X(D)=\\operatorname{Hom}(D,\\mathbb{G}_m)\n\\]\ngives an anti-equivalence between diagonalizable algebraic groups over an\nalgebraically closed field and finitely generated abelian character groups\nof the allowed type in the given characteristic. Under this correspondence,\ngroups with free abelian character group of finite rank are exactly the\nsplit tori; how the remaining invariants (smoothness, connectedness)\nread off the torsion of the character group is recorded where tori are\ndefined.</p>\n<p>For a finitely generated abelian group \\(M\\), the associated diagonalizable\ngroup is\n\\[\nD(M)=\\operatorname{Spec} k[M],\n\\]\nwhere \\(k[M]\\) is the group algebra with Hopf structure\n\\(\\Delta(e^m)=e^m\\otimes e^m\\).</p>",
+  "proof_html": "<p>For diagonalizable \\(D\\), the character decomposition of \\(k[D]\\) identifies\nthe coordinate Hopf algebra with the group algebra \\(k[X(D)]\\). A morphism\n\\(D_1\\to D_2\\) pulls characters back, giving a homomorphism\n\\(X(D_2)\\to X(D_1)\\).</p>\n<p>Conversely, any finitely generated abelian group \\(M\\) defines the Hopf\nalgebra \\(k[M]\\), hence the diagonalizable group \\(D(M)\\). Its characters\nare exactly the basis elements indexed by \\(M\\). These two constructions are\ninverse to each other. Groups with torsion-free character group are\nprecisely the split tori; note that in characteristic \\(p &gt; 0\\)\nconnectedness alone does not force torsion-freeness, since the character\ngroup \\(\\mathbb{Z}/p\\) gives the connected non-smooth group \\(\\mu_p\\).</p>",
+  "deps": [
+    {
+      "id": "reductive_groups.diagonalizable_group_characterization",
+      "title": "Characterization of Diagonalizable Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_diagonalizable_group_characterization.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "AlgebraicGroups/Tori/tori_f_tori_galois_module_classification.html"
+    },
+    {
+      "id": "tori.multiplicative_type_characterization",
+      "title": "Tori among Groups of Multiplicative Type",
+      "href": "AlgebraicGroups/Tori/tori_multiplicative_type_characterization.html"
+    },
+    {
+      "id": "tori.subtori_and_quotients",
+      "title": "Subtori and Quotients via the Character Lattice",
+      "href": "AlgebraicGroups/Tori/tori_subtori_and_quotients.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.diagCharEquiv",
+      "display_name": "Langlands.Tori.diagCharEquiv",
+      "qualified_name": "Langlands.Tori.diagCharEquiv",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "kind": "def",
+      "signature": "noncomputable def diagCharEquiv :\n    Multiplicative M ≃* characterGroup R (AddMonoidAlgebra R M)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L116",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.diagHomEquiv",
+      "display_name": "Langlands.Tori.diagHomEquiv",
+      "qualified_name": "Langlands.Tori.diagHomEquiv",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "kind": "def",
+      "signature": "noncomputable def diagHomEquiv :\n    (M →+ N) ≃ (AddMonoidAlgebra R M →ₐc[R] AddMonoidAlgebra R N) :=\n  AddMonoidAlgebra.mapDomainBialgHomEquiv",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L137",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.diag_bialgEquiv_iff_addEquiv",
+      "display_name": "Langlands.Tori.diag_bialgEquiv_iff_addEquiv",
+      "qualified_name": "Langlands.Tori.diag_bialgEquiv_iff_addEquiv",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "kind": "theorem",
+      "signature": "theorem diag_bialgEquiv_iff_addEquiv :\n    Nonempty (AddMonoidAlgebra R M ≃ₐc[R] AddMonoidAlgebra R N) ↔\n      Nonempty (M ≃+ N)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L157",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

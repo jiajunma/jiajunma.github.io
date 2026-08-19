@@ -1,0 +1,64 @@
+{
+  "id": "root_data.based_root_data",
+  "title": "Based Root Data",
+  "kind": "topic",
+  "status": "admitted",
+  "href": "AlgebraicGroups/RootData/root_data_based_root_data.html",
+  "primary_topic": "AlgebraicGroups.RootData",
+  "topics": [
+    "AlgebraicGroups.RootData"
+  ],
+  "body_html": "<h1>Based Root Data</h1>\n<p>A <strong>based root datum</strong> is the combinatorial invariant that classifies\nsplit connected reductive groups. The classification theorem\n(Demazure / Chevalley) states:</p>\n<p>\\[\n\\{\\text{split connected reductive } G/k\\} \\;\\leftrightarrow\\; \\{\\text{based root data}\\}.\n\\]</p>\n<p>This is the algebraic-geometric analogue of \"compact Lie groups are\nclassified by their root data\" in classical Lie theory.</p>\n<h2>Definition</h2>\n<p>A <strong>root datum</strong> is a quadruple \\((X, \\Phi, X^\\vee, \\Phi^\\vee)\\) where:</p>\n<ul>\n<li>\\(X, X^\\vee\\) are finite-rank free \\(\\mathbb{Z}\\)-modules paired\n  perfectly \\(\\langle -, - \\rangle : X \\times X^\\vee \\to \\mathbb{Z}\\);</li>\n<li>\\(\\Phi \\subseteq X\\) is a finite set (<strong>roots</strong>);</li>\n<li>\\(\\Phi^\\vee \\subseteq X^\\vee\\) is a finite set (<strong>coroots</strong>);</li>\n<li>there is a bijection \\(\\Phi \\leftrightarrow \\Phi^\\vee\\),\n  \\(\\alpha \\leftrightarrow \\alpha^\\vee\\) satisfying:</li>\n<li>\\(\\langle \\alpha, \\alpha^\\vee \\rangle = 2\\);</li>\n<li>reflections \\(s_\\alpha(x) = x - \\langle x, \\alpha^\\vee \\rangle \\alpha\\)\n    preserve \\(\\Phi\\) (and dually \\(\\Phi^\\vee\\)).</li>\n</ul>\n<p>A <strong>based</strong> root datum adds a choice of <strong>base</strong> (= simple roots)\n\\(\\Delta \\subseteq \\Phi\\): a subset such that every root is a\nnon-negative or non-positive integer combination of \\(\\Delta\\).</p>\n<h2>Interpretation for a reductive group</h2>\n<p>For a split connected reductive group \\(G\\) over \\(k\\) with split\nmaximal torus \\(T\\):</p>\n<ul>\n<li>\\(X = X^*(T) = \\operatorname{Hom}(T, \\mathbb{G}_m)\\) is the\n  <strong>character lattice</strong> (a free \\(\\mathbb{Z}\\)-module of rank \\(= \\dim T\\));</li>\n<li>\\(X^\\vee = X_*(T) = \\operatorname{Hom}(\\mathbb{G}_m, T)\\) is the\n  <strong>cocharacter lattice</strong>;</li>\n<li>\\(\\Phi \\subseteq X\\) is the set of nonzero weights of \\(T\\) acting on\n  \\(\\operatorname{Lie}(G)\\) (<strong>roots</strong>);</li>\n<li>For each \\(\\alpha \\in \\Phi\\), there is a canonical \"SL_2-triple\"\n  giving \\(\\alpha^\\vee : \\mathbb{G}_m \\to T\\) (<strong>coroot</strong>).</li>\n</ul>\n<p>A choice of Borel subgroup \\(B \\supseteq T\\) gives the base: the\n<strong>simple roots</strong> are the weights of \\(T\\) on \\(\\operatorname{Lie}(B/T)\\)\nthat are not sums of two positive roots.</p>\n<h2>Classification</h2>\n<p><strong>Theorem (Chevalley / Demazure–Grothendieck).</strong> Over any field \\(k\\),\nthe assignment \\(G \\mapsto (\\text{based root datum})\\) is a bijection\nbetween isomorphism classes of split connected reductive \\(k\\)-groups\nand isomorphism classes of based root data.</p>\n<p>Moreover, this works over \\(\\mathbb{Z}\\): every based root datum lifts\ncanonically to a <strong>Chevalley group scheme</strong> \\(G_{\\mathbb{Z}}\\) over\n\\(\\mathbb{Z}\\), and the split form over any base is obtained by base\nchange.</p>\n<h2>Connection to Dynkin diagrams</h2>\n<p>A based root datum determines a <strong>Dynkin diagram</strong>:</p>\n<ul>\n<li>vertices = simple roots;</li>\n<li>edges record the angles between simple roots via the Cartan integers\n  \\(c_{ij} = \\langle \\alpha_i, \\alpha_j^\\vee \\rangle\\).</li>\n</ul>\n<p>The connected Dynkin diagrams classify <strong>simple root systems</strong> (and\nhence simply connected simple algebraic groups):</p>\n<p>\\[\nA_n, B_n, C_n, D_n, E_6, E_7, E_8, F_4, G_2.\n\\]</p>\n<p>For semisimple groups, the based root datum decomposes as a product of\n\"isogeny classes\" indexed by the simply connected and adjoint forms in\neach Dynkin type.</p>\n<h2>Duality</h2>\n<p>The <strong>dual root datum</strong> \\((X^\\vee, \\Phi^\\vee, X, \\Phi)\\) swaps roots\nand coroots. Under the classification theorem, this corresponds to the\n<strong>Langlands dual group</strong> \\({}^L G\\) of \\(G\\):</p>\n<p>\\[\nG = \\mathrm{SL}_n \\leftrightarrow {}^L G = \\mathrm{PGL}_n, \\qquad\nG = \\mathrm{SO}_{2n+1} \\leftrightarrow {}^L G = \\mathrm{Sp}_{2n},\n\\]</p>\n<p>and so on. Langlands duality is the cornerstone of the Langlands\ncorrespondence.</p>\n<h2>Outer automorphisms</h2>\n<p>\\(\\operatorname{Out}(G) \\cong \\operatorname{Aut}(\\text{based root datum})\\)\nfor connected reductive \\(G\\). This is the <strong>rigidity</strong> that makes the\nclassification a classification: there is no continuous moduli of\nreductive groups, only the discrete combinatorial data.</p>\n<h2>Prerequisite Topics</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"root_data.root_data\" href=\"../../root_data/root_data_root_data.html\">Root Data</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "root_data.root_data",
+      "title": "Root Data",
+      "href": "AlgebraicGroups/RootData/root_data_root_data.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "root_data.automorphisms_of_root_data",
+      "title": "Automorphisms of Root Data",
+      "href": "AlgebraicGroups/RootData/root_data_automorphisms_of_root_data.html"
+    },
+    {
+      "id": "root_data.chevalley_existence_theorem",
+      "title": "Chevalley Existence Theorem",
+      "href": "AlgebraicGroups/RootData/root_data_chevalley_existence_theorem.html"
+    },
+    {
+      "id": "root_data.chevalley_group_construction",
+      "title": "Chevalley Group Construction from a Root Datum",
+      "href": "AlgebraicGroups/RootData/root_data_chevalley_group_construction.html"
+    },
+    {
+      "id": "root_data.chevalley_isomorphism_theorem",
+      "title": "Chevalley Isomorphism Theorem",
+      "href": "AlgebraicGroups/RootData/root_data_chevalley_isomorphism_theorem.html"
+    },
+    {
+      "id": "root_data.classification_of_split_reductive_groups",
+      "title": "Classification of Split Reductive Groups",
+      "href": "AlgebraicGroups/RootData/root_data_classification_of_split_reductive_groups.html"
+    },
+    {
+      "id": "root_data.pinnings",
+      "title": "Pinnings",
+      "href": "AlgebraicGroups/RootData/root_data_pinnings.html"
+    },
+    {
+      "id": "root_data.unipotent_radical_and_positive_roots",
+      "title": "Unipotent Radical of a Borel Subgroup and Positive Roots",
+      "href": "AlgebraicGroups/RootData/root_data_unipotent_radical_and_positive_roots.html"
+    },
+    {
+      "id": "root_data.weyl_group_coxeter_structure",
+      "title": "Weyl Groups as Coxeter Groups",
+      "href": "AlgebraicGroups/RootData/root_data_weyl_group_coxeter_structure.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

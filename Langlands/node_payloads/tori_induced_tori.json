@@ -3,40 +3,40 @@
   "title": "Induced Tori",
   "kind": "definition",
   "status": "admitted",
-  "href": "tori/tori_induced_tori.html",
-  "primary_topic": "tori",
+  "href": "AlgebraicGroups/Tori/tori_induced_tori.html",
+  "primary_topic": "AlgebraicGroups.Tori",
   "topics": [
-    "tori"
+    "AlgebraicGroups.Tori"
   ],
-  "body_html": "<h1>Induced Tori</h1>\n<p>A torus \\(T\\) over \\(k\\) is <strong>induced</strong> (synonym in the literature:\n<em>quasi-trivial</em>) if the lattice \\(X^*(T)\\) — equivalently\n\\(X_*(T)\\) — has a \\(\\mathbb{Z}\\)-basis permuted by \\(\\Theta\\), i.e.\nis a permutation module.</p>\n<p><strong>Product description.</strong> \\(T\\) is induced if and only if\n\\[\nT \\;\\cong\\; \\prod_{i} R_{E_i/k}\\,\\mathbb{G}_m\n\\]\nfor finitely many finite separable extensions \\(E_i/k\\). Indeed, a\npermutation basis decomposes into \\(\\Theta\\)-orbits; the stabilizer of\na basis vector is an open subgroup \\(\\Theta_i \\subseteq \\Theta\\)\n(openness by continuity of the action on the discrete lattice), with\nfixed field \\(E_i\\), and the orbit spans a copy of\n\\(\\mathbb{Z}[\\Theta/\\Theta_i] = X^*(R_{E_i/k}\\mathbb{G}_m)\\) by\n<a class=\"node-ref\" data-node-id=\"tori.weil_restriction_of_tori\" href=\"tori_weil_restriction_of_tori.html\">Weil Restriction of Tori</a>. Conversely a product of such\nWeil restrictions has permutation character lattice.</p>\n<p>In particular \\(T(k) \\cong \\prod_i E_i^\\times\\), and induced tori are\nexactly the tori whose arithmetic reduces to that of\n\\(\\mathbb{G}_m\\) over finite separable extensions — the reason they\nserve as the resolving class for arbitrary tori\n(see <a class=\"node-ref\" data-node-id=\"tori.induced_resolution\" href=\"tori_induced_resolution.html\">Resolution of a Torus by Induced Tori</a>).</p>\n<p><strong>Terminology warning</strong> (following the source). Induced tori are\nsometimes called <em>quasi-split tori</em> in the literature. This knowledge\nbase avoids that usage: <em>every</em> torus is a quasi-split reductive\ngroup, so \"quasi-split\" carries no information about a torus.</p>",
+  "body_html": "<h1>Induced Tori</h1>\n<p>A torus \\(T\\) over \\(k\\) is <strong>induced</strong> (synonym in the literature:\n<em>quasi-trivial</em>) if the lattice \\(X^*(T)\\) — equivalently\n\\(X_*(T)\\) — has a \\(\\mathbb{Z}\\)-basis permuted by \\(\\Theta\\), i.e.\nis a permutation module.</p>\n<p><strong>Product description.</strong> \\(T\\) is induced if and only if\n\\[\nT \\;\\cong\\; \\prod_{i} R_{E_i/k}\\,\\mathbb{G}_m\n\\]\nfor finitely many finite separable extensions \\(E_i/k\\). Indeed, a\npermutation basis decomposes into \\(\\Theta\\)-orbits; the stabilizer of\na basis vector is an open subgroup \\(\\Theta_i \\subseteq \\Theta\\)\n(openness by continuity of the action on the discrete lattice), with\nfixed field \\(E_i\\), and the orbit spans a copy of\n\\(\\mathbb{Z}[\\Theta/\\Theta_i] = X^*(R_{E_i/k}\\mathbb{G}_m)\\) by\n<a class=\"node-ref\" data-node-id=\"tori.weil_restriction_of_tori\" href=\"../../tori/tori_weil_restriction_of_tori.html\">Weil Restriction of Tori</a>. Conversely a product of such\nWeil restrictions has permutation character lattice.</p>\n<p>In particular \\(T(k) \\cong \\prod_i E_i^\\times\\), and induced tori are\nexactly the tori whose arithmetic reduces to that of\n\\(\\mathbb{G}_m\\) over finite separable extensions — the reason they\nserve as the resolving class for arbitrary tori\n(see <a class=\"node-ref\" data-node-id=\"tori.induced_resolution\" href=\"../../tori/tori_induced_resolution.html\">Resolution of a Torus by Induced Tori</a>).</p>\n<p><strong>Terminology warning</strong> (following the source). Induced tori are\nsometimes called <em>quasi-split tori</em> in the literature. This knowledge\nbase avoids that usage: <em>every</em> torus is a quasi-split reductive\ngroup, so \"quasi-split\" carries no information about a torus.</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "tori.algebraic_tori",
       "title": "Algebraic Tori",
-      "href": "tori/tori_algebraic_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
     },
     {
       "id": "tori.torus_definition",
       "title": "Algebraic Torus",
-      "href": "tori/tori_torus_definition.html"
+      "href": "AlgebraicGroups/Tori/tori_torus_definition.html"
     },
     {
       "id": "tori.weil_restriction_of_tori",
       "title": "Weil Restriction of Tori",
-      "href": "tori/tori_weil_restriction_of_tori.html"
+      "href": "AlgebraicGroups/Tori/tori_weil_restriction_of_tori.html"
     }
   ],
   "dependents": [
     {
       "id": "tori.induced_resolution",
       "title": "Resolution of a Torus by Induced Tori",
-      "href": "tori/tori_induced_resolution.html"
+      "href": "AlgebraicGroups/Tori/tori_induced_resolution.html"
     },
     {
       "id": "tori.weakly_induced_torus",
       "title": "Weakly Induced Torus",
-      "href": "tori/tori_weakly_induced_torus.html"
+      "href": "AlgebraicGroups/Tori/tori_weakly_induced_torus.html"
     }
   ],
   "lean_refs": [],

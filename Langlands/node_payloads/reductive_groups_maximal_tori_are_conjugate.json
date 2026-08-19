@@ -1,0 +1,49 @@
+{
+  "id": "reductive_groups.maximal_tori_are_conjugate",
+  "title": "Maximal Tori Are Conjugate",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_tori_are_conjugate.html",
+  "primary_topic": "AlgebraicGroups.ReductiveGroups",
+  "topics": [
+    "AlgebraicGroups.ReductiveGroups"
+  ],
+  "body_html": "<h1>Maximal Tori Are Conjugate</h1>\n<p>Let \\(G\\) be a connected linear algebraic group over an algebraically closed\nfield. Any two maximal tori of \\(G\\) are conjugate by an element of \\(G\\).</p>",
+  "proof_html": "<p>Every torus is contained in a Borel subgroup: let the torus act on the\ncomplete variety of Borel subgroups, or equivalently on a suitable quotient\n\\(G/B\\), and use the fixed-point theorem to find a Borel subgroup containing\nit. Thus two maximal tori \\(T_1,T_2\\) lie in Borel subgroups \\(B_1,B_2\\).\nConjugacy of Borel subgroups lets us assume \\(B_1=B_2=B\\).</p>\n<p>Inside the connected solvable group \\(B\\), maximal tori are conjugate by\nelements of \\(R_u(B)\\). Therefore \\(T_1\\) and \\(T_2\\) are conjugate in \\(G\\).</p>",
+  "deps": [
+    {
+      "id": "reductive_groups.maximal_tori",
+      "title": "Maximal Tori",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_tori.html"
+    },
+    {
+      "id": "reductive_groups.borel_subgroups_conjugacy_and_parabolics",
+      "title": "Borel Subgroups Are Conjugate and Control Parabolics",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_borel_subgroups_conjugacy_and_parabolics.html"
+    },
+    {
+      "id": "reductive_groups.connected_solvable_group_structure",
+      "title": "Structure of Connected Solvable Algebraic Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_connected_solvable_group_structure.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "reductive_groups.cartan_subgroups_from_maximal_tori",
+      "title": "Cartan Subgroups from Maximal Tori",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_cartan_subgroups_from_maximal_tori.html"
+    },
+    {
+      "id": "reductive_groups.maximal_f_tori_exist",
+      "title": "Maximal F-Tori Exist in Connected F-Groups",
+      "href": "AlgebraicGroups/ReductiveGroups/reductive_groups_maximal_f_tori_exist.html"
+    },
+    {
+      "id": "root_data.root_datum_from_reductive_group",
+      "title": "Root Datum of a Reductive Group",
+      "href": "AlgebraicGroups/RootData/root_data_root_datum_from_reductive_group.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}
