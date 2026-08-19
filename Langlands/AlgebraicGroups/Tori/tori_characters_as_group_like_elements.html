@@ -785,7 +785,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L236"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L207"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
           
           
           
@@ -802,7 +802,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L139"><code>Langlands.Tori.characterGroup_diag_equiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L119"><code>Langlands.Tori.characterGroup_diag_equiv</code></a>
           
           
           
@@ -813,8 +813,8 @@
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem characterGroup_diag_equiv (M : Type u) [AddCommGroup M]
-    [IsDomain Rc] :
-    Nonempty (CharacterGroup Rc (diagGrp Rc M) ≃ Multiplicative M)</code></pre>
+    [IsDomain R] :
+    Nonempty (CharacterGroup R (Grp.mk (diagGroupOver R M)) ≃ Multiplicative M)</code></pre>
         </li>
         
       </ul>

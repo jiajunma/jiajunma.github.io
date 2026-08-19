@@ -779,28 +779,9 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L92"><code>Langlands.Tori.specGrp</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>noncomputable def specGrp (A : Type u) [CommRing A] [HopfAlgebra Rc A] :
-    Grp (Over (Scheme.Spec.obj (op Rc))) :=
-  { X := specObjOver Rc A
-    grp := hopfSpecGrpObj Rc A }</code></pre>
-        </li>
-        
-        <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L177"><code>Langlands.Tori.nonempty_characterGroup_equiv_hopf</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L355"><code>Langlands.Tori.nonempty_characterGroup_equiv_hopf</code></a>
           
           
           
@@ -811,8 +792,9 @@
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem nonempty_characterGroup_equiv_hopf
-    (Rc : CommRingCat.{u}) (A : Type u) [CommRing A] [HopfAlgebra Rc A] :
-    Nonempty (CharacterGroup Rc (specGrp Rc A) ≃ HopfCharacterGroup Rc A)</code></pre>
+    (A : Type u) [CommRing A] [HopfAlgebra R A] :
+    Nonempty (CharacterGroup R (Grp.mk (specObjOver R A)) ≃
+      HopfCharacterGroup R A)</code></pre>
         </li>
         
       </ul>
