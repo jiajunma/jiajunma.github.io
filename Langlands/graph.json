@@ -641,6 +641,10 @@
       "topics": [
         "AlgebraicGroups.AffineGroupSchemes"
       ],
+      "lean_declarations": [
+        "Langlands.Tori.specGrp",
+        "Langlands.Tori.nonempty_characterGroup_equiv_hopf"
+      ],
       "topic": "AlgebraicGroups.AffineGroupSchemes",
       "uses": [
         "affine_group_schemes.affine_group_scheme_definition",
@@ -825,10 +829,10 @@
         "AlgebraicGroups.AffineGroupSchemes"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.hopfAlg",
-        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup",
-        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj",
-        "Langlands.AlgebraicGeometry.Examples.Gm"
+        "Langlands.AlgebraicGeometry.multiplicativeGroup.hopfAlg",
+        "Langlands.AlgebraicGeometry.multiplicativeGroup",
+        "Langlands.AlgebraicGeometry.multiplicativeGroup.instGrpObj",
+        "Langlands.AlgebraicGeometry.Gm"
       ],
       "topic": "AlgebraicGroups.AffineGroupSchemes",
       "uses": [
@@ -5868,7 +5872,9 @@
         "Langlands.Tori.SchemeCharacterGroup",
         "Langlands.Tori.gmGrp",
         "Langlands.Tori.CharacterGroup",
+        "Langlands.Tori.HopfCharacterGroup",
         "Langlands.Tori.CocharacterGroup",
+        "Langlands.Tori.HopfCocharacterGroup",
         "Langlands.ReductiveGroups.diagCharEquiv",
         "Langlands.Tori.diagCocharEquiv",
         "Langlands.Tori.diagGroupLikeEquiv",

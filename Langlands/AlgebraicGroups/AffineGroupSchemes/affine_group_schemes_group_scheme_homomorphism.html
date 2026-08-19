@@ -752,6 +752,8 @@
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
     </div>
   </header>
 
@@ -770,6 +772,57 @@
   </div>
   
 
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L92"><code>Langlands.Tori.specGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def specGrp (A : Type u) [CommRing A] [HopfAlgebra Rc A] :
+    Grp (Over (Scheme.Spec.obj (op Rc))) :=
+  { X := specObjOver Rc A
+    grp := hopfSpecGrpObj Rc A }</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L188"><code>Langlands.Tori.nonempty_characterGroup_equiv_hopf</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem nonempty_characterGroup_equiv_hopf
+    (A : Type u) [CommRing A] [HopfAlgebra R A] :
+    Nonempty (CharacterGroup R A ≃ HopfCharacterGroup R A)</code></pre>
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharacterGroup</code></a>
+      </p>
+      
+    </div>
+  </div>
   
 
   <div class="definition_thmcontent thm-content body">

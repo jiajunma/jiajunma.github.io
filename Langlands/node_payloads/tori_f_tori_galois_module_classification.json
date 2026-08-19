@@ -322,7 +322,7 @@
       "qualified_name": "Langlands.ReductiveGroups.diagCharEquiv",
       "module": "LanglandsLean.AlgebraicGroups.ReductiveGroups.Diagonalizable",
       "kind": "def",
-      "signature": "noncomputable def diagCharEquiv :\n    Multiplicative M ≃* CharacterGroup R (AddMonoidAlgebra R M) :=\n  AddEquiv.toMultiplicativeLeft\n    ((zmultiplesAddEquiv M).trans\n      (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))",
+      "signature": "noncomputable def diagCharEquiv :\n    Multiplicative M ≃* HopfCharacterGroup R (AddMonoidAlgebra R M) :=\n  AddEquiv.toMultiplicativeLeft\n    ((zmultiplesAddEquiv M).trans\n      (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
