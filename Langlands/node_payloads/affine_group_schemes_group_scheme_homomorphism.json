@@ -1,0 +1,39 @@
+{
+  "id": "affine_group_schemes.group_scheme_homomorphism",
+  "title": "Homomorphism of Affine Group Schemes",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_scheme_homomorphism.html",
+  "primary_topic": "AlgebraicGroups.AffineGroupSchemes",
+  "topics": [
+    "AlgebraicGroups.AffineGroupSchemes"
+  ],
+  "body_html": "<h1>Homomorphism of Affine Group Schemes</h1>\n<p>Let \\(G, H\\) be affine group schemes over a commutative ring \\(R\\). A\n<strong>homomorphism</strong> \\(f : G \\to H\\) is a morphism of \\(R\\)-schemes\ncompatible with the multiplication morphisms:\n\\[\nf \\circ m_G \\;=\\; m_H \\circ (f \\times f),\n\\]\ni.e. a morphism of group objects in the category of \\(R\\)-schemes.</p>\n<p><strong>Unit and inversion come for free.</strong> Compatibility with the unit and\ninversion morphisms need not be imposed: for every \\(R\\)-algebra\n\\(S\\), the map \\(f(S) : G(S) \\to H(S)\\) is a map of groups\ncommuting with multiplication, and a multiplication-preserving map of\ngroups automatically preserves the identity and inverses; by the\nfunctor-of-points characterization this holds at the scheme level.</p>\n<p><strong>Coordinate-ring translation (the bridge).</strong> For \\(G =\n\\operatorname{Spec} A\\) and \\(H = \\operatorname{Spec} B\\) with their\ncoordinate Hopf algebras, homomorphisms \\(G \\to H\\) correspond\ncontravariantly to \\(R\\)-<strong>bialgebra</strong> homomorphisms \\(B \\to A\\):\ncompatibility with multiplication translates to compatibility with\ncomultiplication, the counit condition is automatic (it is the unit\ncompatibility), and compatibility with the antipode is automatic for\nbialgebra maps between Hopf algebras. This bridge decomposes as the\ncomposite of two identifications, each recorded separately:</p>\n<ol>\n<li>group-object morphisms correspond to group-object morphisms in the\n   opposite category of algebras\n   (<a class=\"node-ref\" data-node-id=\"affine_group_schemes.hopf_spec_fully_faithful\" href=\"../../affine_group_schemes/affine_group_schemes_hopf_spec_fully_faithful.html\">Spec Functor on Hopf Algebras Is Fully Faithful</a>);</li>\n<li>group-object morphisms in the opposite category of algebras\n   correspond to bialgebra homomorphisms of the coordinate Hopf\n   algebras — the morphism half of the dictionary between\n   <a class=\"node-ref\" data-node-id=\"affine_group_schemes.coordinate_hopf_algebra_of_group_scheme\" href=\"../../affine_group_schemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html\">coordinate Hopf algebras</a>\n   and group objects.</li>\n</ol>\n<p>Every use of \"characters are Hopf-algebra maps\" in this knowledge\nbase passes through this bridge; see\n<a class=\"node-ref\" data-node-id=\"tori.characters_as_group_like_elements\" href=\"../../tori/tori_characters_as_group_like_elements.html\">Characters Are Group-Like Elements</a> and\n<a class=\"node-ref\" data-node-id=\"tori.convolution_is_pointwise_multiplication\" href=\"../../tori/tori_convolution_is_pointwise_multiplication.html\">Convolution Is Pointwise Multiplication</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "affine_group_schemes.affine_group_scheme_definition",
+      "title": "Affine Group Scheme over a Base",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_affine_group_scheme_definition.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.characters_as_group_like_elements",
+      "title": "Characters Are Group-Like Elements",
+      "href": "AlgebraicGroups/Tori/tori_characters_as_group_like_elements.html"
+    },
+    {
+      "id": "tori.convolution_is_pointwise_multiplication",
+      "title": "Convolution Is Pointwise Multiplication",
+      "href": "AlgebraicGroups/Tori/tori_convolution_is_pointwise_multiplication.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,69 @@
+{
+  "id": "tori.characters_as_group_like_elements",
+  "title": "Characters Are Group-Like Elements",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_characters_as_group_like_elements.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori",
+    "AlgebraicGroups.AffineGroupSchemes"
+  ],
+  "body_html": "<h1>Characters Are Group-Like Elements</h1>\n<p>Let \\(G = \\operatorname{Spec} A\\) be an affine group scheme over\n\\(R\\). The character group\n\\(X^*(G) = \\operatorname{Hom}_{\\mathrm{grp}}(G, \\mathbb{G}_m)\\)\n(the definition, see\n<a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"../../tori/tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>) admits the\nfollowing <strong>computed description</strong>, in two steps:</p>\n<ol>\n<li>By the coordinate-ring bridge\n   (<a class=\"node-ref\" data-node-id=\"affine_group_schemes.group_scheme_homomorphism\" href=\"../../affine_group_schemes/affine_group_schemes_group_scheme_homomorphism.html\">Homomorphism of Affine Group Schemes</a>),\n   \\[\n   \\operatorname{Hom}_{\\mathrm{grp}}(G, \\mathbb{G}_m)\n   \\;\\cong\\;\n   \\operatorname{Hom}_{R\\text{-bialg}}\\bigl(R[\\mathbb{Z}],\\, A\\bigr),\n   \\]\n   since \\(O(\\mathbb{G}_m) = R[\\mathbb{Z}]\\)\n   (<a class=\"node-ref\" data-node-id=\"affine_group_schemes.group_algebra_scheme\" href=\"../../affine_group_schemes/affine_group_schemes_group_algebra_scheme.html\">The Diagonalizable Group Scheme D(M)</a>).</li>\n<li>A bialgebra homomorphism \\(\\varphi : R[\\mathbb{Z}] \\to A\\) is\n   determined by \\(u = \\varphi(e^{1})\\): multiplicativity forces\n   \\(\\varphi(e^{n}) = u^n\\), so \\(u\\) must be invertible, and\n   compatibility with comultiplication and counit says exactly that\n   \\(u\\) is <strong>group-like</strong> (\\(\\Delta u = u \\otimes u\\),\n   \\(\\varepsilon(u) = 1\\)). Conversely every group-like unit defines\n   such a homomorphism. Hence\n   \\[\n   X^*(G) \\;\\cong\\; \\{\\text{group-like units of } A\\},\n   \\]\n   and when \\(A\\) is a Hopf algebra every group-like element is\n   automatically a unit (its inverse is its antipode image), so\n   \\(X^*(G) \\cong \\mathrm{GroupLike}(A)\\).</li>\n</ol>\n<p>Under this identification the pointwise product of characters\ncorresponds to the product of group-like elements\n(see <a class=\"node-ref\" data-node-id=\"tori.convolution_is_pointwise_multiplication\" href=\"../../tori/tori_convolution_is_pointwise_multiplication.html\">Convolution Is Pointwise Multiplication</a>).</p>\n<p><strong>Specialization to split tori.</strong> For \\(A = R[M]\\) over a domain\n\\(R\\), the group-like elements are exactly the basis elements\n\\(e^m\\), so \\(X^*(D(M)) \\cong M\\) — this is the object half of\nCartier duality recorded at\n<a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups_antiequivalence\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a>.</p>",
+  "proof_html": "<p>Step 1 is the bridge node. For step 2: given \\(\\varphi\\), set\n\\(u = \\varphi(e^1)\\); then \\(\\varphi(e^n) = u^n\\) for \\(n \\geq 0\\) by\nmultiplicativity and for \\(n &lt; 0\\) because \\(e^{-1}\\) is the inverse\nof \\(e^1\\), forcing \\(u \\in A^\\times\\). Compatibility with the\ngroup-like comultiplication of \\(R[\\mathbb{Z}]\\) gives\n\\(\\Delta(u) = u \\otimes u\\) and \\(\\varepsilon(u) = 1\\). Conversely a\ngroup-like unit \\(u\\) defines an algebra map \\(R[\\mathbb{Z}] \\to A\\),\n\\(e^n \\mapsto u^n\\), which is a coalgebra map on the basis, hence a\nbialgebra map. The two constructions are mutually inverse. For a Hopf\nalgebra, \\(S(u)\\,u = \\varepsilon(u) = 1\\) shows group-likes are\nunits.</p>",
+  "deps": [
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "tori.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "href": "AlgebraicGroups/Tori/tori_character_and_cocharacter_lattices.html"
+    },
+    {
+      "id": "affine_group_schemes.group_scheme_homomorphism",
+      "title": "Homomorphism of Affine Group Schemes",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_scheme_homomorphism.html"
+    },
+    {
+      "id": "affine_group_schemes.group_algebra_scheme",
+      "title": "The Diagonalizable Group Scheme D(M)",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_algebra_scheme.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Langlands.Tori.diagGroupLikeEquiv",
+      "display_name": "Langlands.Tori.diagGroupLikeEquiv",
+      "qualified_name": "Langlands.Tori.diagGroupLikeEquiv",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "kind": "def",
+      "signature": "noncomputable def diagGroupLikeEquiv :\n    Multiplicative M ≃* GroupLike R (AddMonoidAlgebra R M)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L190",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "display_name": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

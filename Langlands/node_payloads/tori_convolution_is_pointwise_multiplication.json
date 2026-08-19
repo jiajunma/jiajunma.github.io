@@ -1,0 +1,39 @@
+{
+  "id": "tori.convolution_is_pointwise_multiplication",
+  "title": "Convolution Is Pointwise Multiplication",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "AlgebraicGroups/Tori/tori_convolution_is_pointwise_multiplication.html",
+  "primary_topic": "AlgebraicGroups.Tori",
+  "topics": [
+    "AlgebraicGroups.Tori",
+    "AlgebraicGroups.AffineGroupSchemes"
+  ],
+  "body_html": "<h1>Convolution Is Pointwise Multiplication</h1>\n<p>Let \\(G = \\operatorname{Spec} A\\) be an affine group scheme over\n\\(R\\) with coordinate Hopf algebra \\(A\\), and let \\(T\\) be an\n\\(R\\)-scheme. Under the affine identification\n\\[\nG(T) \\;=\\; \\operatorname{Hom}_{R\\text{-sch}}(T, G)\n\\;\\cong\\; \\operatorname{Hom}_{R\\text{-alg}}\\bigl(A,\\, \\Gamma(T)\\bigr),\n\\]\nthe group law of \\(G\\) on \\(T\\)-points corresponds to the\n<strong>convolution product</strong>\n\\[\n\\varphi * \\psi \\;=\\; \\mu_{\\Gamma(T)} \\circ (\\varphi \\otimes \\psi)\n\\circ \\Delta_A ,\n\\]\nwith unit \\(\\eta \\circ \\varepsilon_A\\) and inverse\n\\(\\varphi \\circ S_A\\).</p>\n<p><strong>Specialization to characters.</strong> For an affine group scheme \\(G'\\),\nthe pointwise product of characters\n\\(\\chi_1 \\chi_2 : G' \\to \\mathbb{G}_m\\) corresponds, under the\ncoordinate-ring bridge\n(<a class=\"node-ref\" data-node-id=\"affine_group_schemes.group_scheme_homomorphism\" href=\"../../affine_group_schemes/affine_group_schemes_group_scheme_homomorphism.html\">Homomorphism of Affine Group Schemes</a>), to the\nconvolution product on\n\\(\\operatorname{Hom}_{R\\text{-bialg}}(R[\\mathbb{Z}], O(G'))\\), and\nunder <a class=\"node-ref\" data-node-id=\"tori.characters_as_group_like_elements\" href=\"../../tori/tori_characters_as_group_like_elements.html\">Characters Are Group-Like Elements</a> to the ring\nproduct of group-like elements. This is the justification for\ncarrying character groups by convolution structures in the Lean\ndevelopment.</p>",
+  "proof_html": "<p>The group law \\(G \\times_R G \\to G\\) corresponds contravariantly to\nthe comultiplication \\(\\Delta_A : A \\to A \\otimes_R A\\). Given\n\\(T\\)-points \\(\\varphi, \\psi : A \\to \\Gamma(T)\\), their product point\nis the composite\n\\(A \\xrightarrow{\\Delta} A \\otimes A \\xrightarrow{\\varphi \\otimes \\psi}\n\\Gamma(T) \\otimes \\Gamma(T) \\xrightarrow{\\mu} \\Gamma(T)\\) — the\nconvolution. The unit point corresponds to the counit and the\ninverse to precomposition with the antipode, by the same\ntranslation of the unit and inversion morphisms. For characters:\nthe pointwise product \\(\\chi_1\\chi_2\\) is the composite\n\\(G' \\xrightarrow{\\Delta_{G'}} G' \\times G'\n\\xrightarrow{\\chi_1 \\times \\chi_2} \\mathbb{G}_m \\times \\mathbb{G}_m\n\\xrightarrow{m} \\mathbb{G}_m\\), whose coordinate-ring translation is\nexactly the convolution of the corresponding bialgebra maps. On\ngroup-like elements \\(u_i = \\chi_i(e^1)\\), convolution evaluates to\n\\(u_1 u_2\\).</p>",
+  "deps": [
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "AlgebraicGroups/Tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "affine_group_schemes.group_scheme_homomorphism",
+      "title": "Homomorphism of Affine Group Schemes",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_scheme_homomorphism.html"
+    },
+    {
+      "id": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "title": "Coordinate Hopf Algebra of an Affine Group Scheme",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_coordinate_hopf_algebra_of_group_scheme.html"
+    },
+    {
+      "id": "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
+      "title": "Group Object Structure on Spec A via Yoneda",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_hopf_spec_grpobj_via_yoneda.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -4,22 +4,22 @@
     "title": "Algebraic Groups.Affine Group Schemes",
     "href": "AlgebraicGroups/AffineGroupSchemes/index.html",
     "parent": "AlgebraicGroups",
-    "node_count": 39,
-    "descendant_node_count": 39
+    "node_count": 42,
+    "descendant_node_count": 42
   },
   "counts": {
-    "internal_nodes": 39,
+    "internal_nodes": 42,
     "inlined_nodes": 0,
-    "descendant_nodes": 39,
+    "descendant_nodes": 42,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 39,
+    "non_proof_plan_nodes": 42,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 48,
-    "visible_nodes_with_selected_proof_plans": 48
+    "visible_nodes_without_proof_plans": 51,
+    "visible_nodes_with_selected_proof_plans": 51
   },
   "nodes": [
     {
@@ -191,6 +191,14 @@
       "payload": "node_payloads/affine_group_schemes_group_algebra_scheme.json"
     },
     {
+      "id": "affine_group_schemes.group_scheme_homomorphism",
+      "title": "Homomorphism of Affine Group Schemes",
+      "kind": "definition",
+      "status": "admitted",
+      "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_group_scheme_homomorphism.html",
+      "payload": "node_payloads/affine_group_schemes_group_scheme_homomorphism.json"
+    },
+    {
       "id": "affine_group_schemes.hopf_spec_essential_image_affine",
       "title": "Essential Image of Spec Is Affine Group Schemes",
       "kind": "theorem",
@@ -333,6 +341,22 @@
       "status": "admitted",
       "href": "AlgebraicGroups/AffineGroupSchemes/affine_group_schemes_trivial_representation_example.html",
       "payload": "node_payloads/affine_group_schemes_trivial_representation_example.json"
+    },
+    {
+      "id": "tori.characters_as_group_like_elements",
+      "title": "Characters Are Group-Like Elements",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_characters_as_group_like_elements.html",
+      "payload": "node_payloads/tori_characters_as_group_like_elements.json"
+    },
+    {
+      "id": "tori.convolution_is_pointwise_multiplication",
+      "title": "Convolution Is Pointwise Multiplication",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_convolution_is_pointwise_multiplication.html",
+      "payload": "node_payloads/tori_convolution_is_pointwise_multiplication.json"
     }
   ],
   "edges": [
@@ -479,6 +503,16 @@
     {
       "from": "affine_group_schemes.multiplicative_group_scheme",
       "to": "affine_group_schemes.group_algebra_scheme",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.affine_group_scheme_definition",
+      "to": "affine_group_schemes.group_scheme_homomorphism",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "to": "affine_group_schemes.group_scheme_homomorphism",
       "kind": "uses"
     },
     {
@@ -660,6 +694,31 @@
       "from": "affine_group_schemes.comodule_definition",
       "to": "affine_group_schemes.trivial_representation_example",
       "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.group_algebra_scheme",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.group_scheme_homomorphism",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "to": "tori.convolution_is_pointwise_multiplication",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.group_scheme_homomorphism",
+      "to": "tori.convolution_is_pointwise_multiplication",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
+      "to": "tori.convolution_is_pointwise_multiplication",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -709,8 +768,8 @@
       "id": "AlgebraicGroups.Tori",
       "title": "Algebraic Groups.Tori",
       "href": "AlgebraicGroups/Tori/index.html",
-      "role": "dependent",
-      "node_count": 20
+      "role": "dependency_and_dependent",
+      "node_count": 22
     },
     {
       "id": "Foundations",
@@ -721,6 +780,20 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:AlgebraicGroups.Tori",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.Tori",
+      "count": 2
+    },
+    {
+      "from": "topic:AlgebraicGroups.Tori",
+      "to": "tori.convolution_is_pointwise_multiplication",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.Tori",
+      "count": 1
+    },
     {
       "from": "topic:Foundations",
       "to": "affine_group_schemes.affine_group_scheme_definition",
@@ -968,7 +1041,7 @@
       "id": "affine-group-schemes",
       "title": "affine-group-schemes",
       "href": "keywords/affine-group-schemes.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "algebra-hom",
@@ -1001,6 +1074,12 @@
       "count": 1
     },
     {
+      "id": "characters",
+      "title": "characters",
+      "href": "keywords/characters.html",
+      "count": 2
+    },
+    {
       "id": "classical-groups",
       "title": "classical-groups",
       "href": "keywords/classical-groups.html",
@@ -1022,7 +1101,7 @@
       "id": "convolution",
       "title": "convolution",
       "href": "keywords/convolution.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "coordinate-ring",
@@ -1085,10 +1164,22 @@
       "count": 2
     },
     {
+      "id": "group-like",
+      "title": "group-like",
+      "href": "keywords/group-like.html",
+      "count": 1
+    },
+    {
       "id": "group-scheme",
       "title": "group-scheme",
       "href": "keywords/group-scheme.html",
-      "count": 4
+      "count": 5
+    },
+    {
+      "id": "homomorphism",
+      "title": "homomorphism",
+      "href": "keywords/homomorphism.html",
+      "count": 1
     },
     {
       "id": "hopf-algebra",
@@ -1172,7 +1263,13 @@
       "id": "theorem",
       "title": "theorem",
       "href": "keywords/theorem.html",
-      "count": 15
+      "count": 17
+    },
+    {
+      "id": "tori",
+      "title": "tori",
+      "href": "keywords/tori.html",
+      "count": 2
     },
     {
       "id": "type-B",

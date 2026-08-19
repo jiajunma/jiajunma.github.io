@@ -113,6 +113,7 @@
       "used_by": [
         "affine_group_schemes.algebraic_group_definition",
         "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+        "affine_group_schemes.group_scheme_homomorphism",
         "affine_group_schemes.hopf_spec_essential_image_affine",
         "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
         "affine_group_schemes.points_functor_definition",
@@ -440,6 +441,7 @@
         "affine_group_schemes.additive_group_scheme",
         "affine_group_schemes.general_linear_group_scheme",
         "affine_group_schemes.group_algebra_scheme",
+        "affine_group_schemes.group_scheme_homomorphism",
         "affine_group_schemes.hopf_spec_functor",
         "affine_group_schemes.multiplicative_group_scheme",
         "affine_group_schemes.regular_representation_example",
@@ -447,7 +449,8 @@
         "affine_group_schemes.roots_of_unity_group_scheme",
         "affine_group_schemes.special_linear_group_scheme",
         "affine_group_schemes.special_orthogonal_group_scheme",
-        "affine_group_schemes.symplectic_group_scheme"
+        "affine_group_schemes.symplectic_group_scheme",
+        "tori.convolution_is_pointwise_multiplication"
       ]
     },
     {
@@ -612,6 +615,33 @@
         "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
         "affine_group_schemes.multiplicative_group_scheme",
         "foundations.hopf_algebras"
+      ],
+      "used_by": [
+        "tori.characters_as_group_like_elements"
+      ]
+    },
+    {
+      "id": "affine_group_schemes.group_scheme_homomorphism",
+      "title": "Homomorphism of Affine Group Schemes",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "group-scheme",
+        "homomorphism",
+        "affine-group-schemes"
+      ],
+      "primary_topic": "AlgebraicGroups.AffineGroupSchemes",
+      "topics": [
+        "AlgebraicGroups.AffineGroupSchemes"
+      ],
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "uses": [
+        "affine_group_schemes.affine_group_scheme_definition",
+        "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme"
+      ],
+      "used_by": [
+        "tori.characters_as_group_like_elements",
+        "tori.convolution_is_pointwise_multiplication"
       ]
     },
     {
@@ -732,7 +762,8 @@
         "affine_group_schemes.spec_representability_via_global_sections"
       ],
       "used_by": [
-        "affine_group_schemes.hopf_spec_functor"
+        "affine_group_schemes.hopf_spec_functor",
+        "tori.convolution_is_pointwise_multiplication"
       ]
     },
     {
@@ -5702,6 +5733,8 @@
         "root_data.chevalley_group_construction",
         "tori.anisotropic_torus",
         "tori.character_and_cocharacter_lattices",
+        "tori.characters_as_group_like_elements",
+        "tori.convolution_is_pointwise_multiplication",
         "tori.f_tori_galois_module_classification",
         "tori.induced_resolution",
         "tori.induced_torus",
@@ -5760,6 +5793,8 @@
         "AlgebraicGroups.Tori"
       ],
       "lean_declarations": [
+        "Langlands.Tori.schemeCharacterGroup",
+        "Langlands.Tori.gmGrp",
         "Langlands.Tori.characterGroup",
         "Langlands.Tori.cocharacterGroup",
         "Langlands.Tori.diagCharEquiv",
@@ -5774,7 +5809,59 @@
         "reductive_groups.split_reductive_groups",
         "root_data.root_data",
         "tori.anisotropic_torus",
+        "tori.characters_as_group_like_elements",
         "tori.f_tori_galois_module_classification"
+      ]
+    },
+    {
+      "id": "tori.characters_as_group_like_elements",
+      "title": "Characters Are Group-Like Elements",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "characters",
+        "group-like",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "AlgebraicGroups.Tori",
+      "topics": [
+        "AlgebraicGroups.Tori",
+        "AlgebraicGroups.AffineGroupSchemes"
+      ],
+      "lean_declarations": [
+        "Langlands.Tori.diagGroupLikeEquiv"
+      ],
+      "topic": "AlgebraicGroups.Tori",
+      "uses": [
+        "affine_group_schemes.group_algebra_scheme",
+        "affine_group_schemes.group_scheme_homomorphism",
+        "tori.algebraic_tori",
+        "tori.character_and_cocharacter_lattices"
+      ]
+    },
+    {
+      "id": "tori.convolution_is_pointwise_multiplication",
+      "title": "Convolution Is Pointwise Multiplication",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "convolution",
+        "characters",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "AlgebraicGroups.Tori",
+      "topics": [
+        "AlgebraicGroups.Tori",
+        "AlgebraicGroups.AffineGroupSchemes"
+      ],
+      "topic": "AlgebraicGroups.Tori",
+      "uses": [
+        "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+        "affine_group_schemes.group_scheme_homomorphism",
+        "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
+        "tori.algebraic_tori"
       ]
     },
     {
@@ -6365,6 +6452,14 @@
     {
       "from": "foundations.hopf_algebras",
       "to": "affine_group_schemes.group_algebra_scheme"
+    },
+    {
+      "from": "affine_group_schemes.affine_group_scheme_definition",
+      "to": "affine_group_schemes.group_scheme_homomorphism"
+    },
+    {
+      "from": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "to": "affine_group_schemes.group_scheme_homomorphism"
     },
     {
       "from": "affine_group_schemes.affine_group_scheme_definition",
@@ -8349,6 +8444,38 @@
     {
       "from": "tori.algebraic_tori",
       "to": "tori.character_and_cocharacter_lattices"
+    },
+    {
+      "from": "affine_group_schemes.group_algebra_scheme",
+      "to": "tori.characters_as_group_like_elements"
+    },
+    {
+      "from": "affine_group_schemes.group_scheme_homomorphism",
+      "to": "tori.characters_as_group_like_elements"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.characters_as_group_like_elements"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
+      "to": "tori.characters_as_group_like_elements"
+    },
+    {
+      "from": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+      "to": "tori.convolution_is_pointwise_multiplication"
+    },
+    {
+      "from": "affine_group_schemes.group_scheme_homomorphism",
+      "to": "tori.convolution_is_pointwise_multiplication"
+    },
+    {
+      "from": "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
+      "to": "tori.convolution_is_pointwise_multiplication"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.convolution_is_pointwise_multiplication"
     },
     {
       "from": "forms.galois_descent_for_vector_spaces",

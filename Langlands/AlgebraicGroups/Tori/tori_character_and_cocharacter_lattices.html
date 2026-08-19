@@ -72,7 +72,7 @@
         <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
       </button>
       <input type="search" id="keyword-search" class="keyword-search"
-             placeholder="Search 315 keywords…"
+             placeholder="Search 317 keywords…"
              aria-controls="keyword-list" autocomplete="off">
       <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
       <ul id="keyword-list" class="keyword-list nav-list">
@@ -350,6 +350,8 @@
         <li><a href="../../keywords/global-fields.html">global-fields</a></li>
       
         <li><a href="../../keywords/group-action.html">group-action</a></li>
+      
+        <li><a href="../../keywords/group-like.html">group-like</a></li>
       
         <li><a href="../../keywords/group-scheme.html">group-scheme</a></li>
       
@@ -653,6 +655,8 @@
       
         <li><a href="../../keywords/tits-systems.html">tits-systems</a></li>
       
+        <li><a href="../../keywords/tori.html">tori</a></li>
+      
         <li><a href="../../keywords/torsors.html">torsors</a></li>
       
         <li><a href="../../keywords/torus.html">torus</a></li>
@@ -753,9 +757,45 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L245"><code>Langlands.Tori.schemeCharacterGroup</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def schemeCharacterGroup
+    (G : Grp (Over (Scheme.Spec.obj (op Rc)))) : Type _ :=
+  G ⟶ gmGrp Rc</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L235"><code>Langlands.Tori.gmGrp</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          <p class="lean-docstring">`𝔾ₘ = Spec R[ℤ]` bundled as a group object of `Over (Spec R)`.</p>
+          <pre class="lean-signature"><code>noncomputable def gmGrp : Grp (Over (Scheme.Spec.obj (op Rc))) :=
+  { X := specObjOver Rc (AddMonoidAlgebra Rc ℤ)
+    grp := hopfSpecGrpObj Rc (AddMonoidAlgebra Rc ℤ) }</code></pre>
+        </li>
+        
+        <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L69"><code>Langlands.Tori.characterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L73"><code>Langlands.Tori.characterGroup</code></a>
           
           
           
@@ -772,7 +812,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L79"><code>Langlands.Tori.cocharacterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L83"><code>Langlands.Tori.cocharacterGroup</code></a>
           
           
           
@@ -789,7 +829,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L104"><code>Langlands.Tori.diagCharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L108"><code>Langlands.Tori.diagCharEquiv</code></a>
           
           
           
@@ -809,7 +849,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L125"><code>Langlands.Tori.diagCocharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L129"><code>Langlands.Tori.diagCocharEquiv</code></a>
           
           
           
@@ -827,7 +867,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L183"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L190"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
           
           
           
@@ -974,6 +1014,8 @@ preferred working lattice of this topic.</p>
       <li><a href="../RootData/root_data_root_data.html">Root Data</a></li>
       
       <li><a href="tori_anisotropic_torus.html">Anisotropic Torus</a></li>
+      
+      <li><a href="tori_characters_as_group_like_elements.html">Characters Are Group-Like Elements</a></li>
       
       <li><a href="tori_f_tori_galois_module_classification.html">F-Tori Are Classified by Galois Modules</a></li>
       

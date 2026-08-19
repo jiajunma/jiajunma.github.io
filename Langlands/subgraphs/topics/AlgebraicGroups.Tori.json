@@ -4,22 +4,22 @@
     "title": "Algebraic Groups.Tori",
     "href": "AlgebraicGroups/Tori/index.html",
     "parent": "AlgebraicGroups",
-    "node_count": 20,
-    "descendant_node_count": 20
+    "node_count": 22,
+    "descendant_node_count": 22
   },
   "counts": {
-    "internal_nodes": 20,
+    "internal_nodes": 22,
     "inlined_nodes": 0,
-    "descendant_nodes": 20,
+    "descendant_nodes": 22,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 20,
+    "non_proof_plan_nodes": 22,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 27,
-    "visible_nodes_with_selected_proof_plans": 27
+    "visible_nodes_without_proof_plans": 29,
+    "visible_nodes_with_selected_proof_plans": 29
   },
   "nodes": [
     {
@@ -61,6 +61,22 @@
       "status": "admitted",
       "href": "AlgebraicGroups/Tori/tori_character_and_cocharacter_lattices.html",
       "payload": "node_payloads/tori_character_and_cocharacter_lattices.json"
+    },
+    {
+      "id": "tori.characters_as_group_like_elements",
+      "title": "Characters Are Group-Like Elements",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_characters_as_group_like_elements.html",
+      "payload": "node_payloads/tori_characters_as_group_like_elements.json"
+    },
+    {
+      "id": "tori.convolution_is_pointwise_multiplication",
+      "title": "Convolution Is Pointwise Multiplication",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_convolution_is_pointwise_multiplication.html",
+      "payload": "node_payloads/tori_convolution_is_pointwise_multiplication.json"
     },
     {
       "id": "tori.f_tori_galois_module_classification",
@@ -202,6 +218,26 @@
     {
       "from": "tori.algebraic_tori",
       "to": "tori.character_and_cocharacter_lattices",
+      "kind": "uses"
+    },
+    {
+      "from": "affine_group_schemes.group_algebra_scheme",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.convolution_is_pointwise_multiplication",
       "kind": "uses"
     },
     {
@@ -481,7 +517,7 @@
       "title": "Algebraic Groups.Affine Group Schemes",
       "href": "AlgebraicGroups/AffineGroupSchemes/index.html",
       "role": "dependency",
-      "node_count": 39
+      "node_count": 42
     },
     {
       "id": "AlgebraicGroups.Forms",
@@ -533,6 +569,20 @@
       "kind": "boundary_dependency",
       "topic": "AlgebraicGroups.AffineGroupSchemes",
       "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.AffineGroupSchemes",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.AffineGroupSchemes",
+      "to": "tori.convolution_is_pointwise_multiplication",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "count": 3
     },
     {
       "from": "topic:AlgebraicGroups.AffineGroupSchemes",
@@ -677,7 +727,7 @@
       "id": "characters",
       "title": "characters",
       "href": "keywords/characters.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "classification",
@@ -689,6 +739,12 @@
       "id": "cocharacters",
       "title": "cocharacters",
       "href": "keywords/cocharacters.html",
+      "count": 1
+    },
+    {
+      "id": "convolution",
+      "title": "convolution",
+      "href": "keywords/convolution.html",
       "count": 1
     },
     {
@@ -737,6 +793,12 @@
       "id": "galois-module",
       "title": "galois-module",
       "href": "keywords/galois-module.html",
+      "count": 1
+    },
+    {
+      "id": "group-like",
+      "title": "group-like",
+      "href": "keywords/group-like.html",
       "count": 1
     },
     {
@@ -839,7 +901,13 @@
       "id": "theorem",
       "title": "theorem",
       "href": "keywords/theorem.html",
-      "count": 8
+      "count": 10
+    },
+    {
+      "id": "tori",
+      "title": "tori",
+      "href": "keywords/tori.html",
+      "count": 2
     },
     {
       "id": "torus",

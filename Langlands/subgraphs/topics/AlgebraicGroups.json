@@ -5,21 +5,21 @@
     "href": "AlgebraicGroups/index.html",
     "parent": null,
     "node_count": 0,
-    "descendant_node_count": 231
+    "descendant_node_count": 234
   },
   "counts": {
     "internal_nodes": 0,
-    "inlined_nodes": 71,
-    "descendant_nodes": 231,
+    "inlined_nodes": 73,
+    "descendant_nodes": 234,
     "child_topics": 5,
     "inlined_child_topics": 6,
-    "non_proof_plan_nodes": 71,
+    "non_proof_plan_nodes": 73,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 73,
-    "visible_nodes_with_selected_proof_plans": 73
+    "visible_nodes_without_proof_plans": 75,
+    "visible_nodes_with_selected_proof_plans": 75
   },
   "nodes": [
     {
@@ -469,6 +469,22 @@
       "status": "admitted",
       "href": "AlgebraicGroups/Tori/tori_character_and_cocharacter_lattices.html",
       "payload": "node_payloads/tori_character_and_cocharacter_lattices.json"
+    },
+    {
+      "id": "tori.characters_as_group_like_elements",
+      "title": "Characters Are Group-Like Elements",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_characters_as_group_like_elements.html",
+      "payload": "node_payloads/tori_characters_as_group_like_elements.json"
+    },
+    {
+      "id": "tori.convolution_is_pointwise_multiplication",
+      "title": "Convolution Is Pointwise Multiplication",
+      "kind": "theorem",
+      "status": "admitted",
+      "href": "AlgebraicGroups/Tori/tori_convolution_is_pointwise_multiplication.html",
+      "payload": "node_payloads/tori_convolution_is_pointwise_multiplication.json"
     },
     {
       "id": "tori.f_tori_galois_module_classification",
@@ -959,6 +975,21 @@
     },
     {
       "from": "tori.algebraic_tori",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.convolution_is_pointwise_multiplication",
+      "kind": "uses"
+    },
+    {
+      "from": "tori.algebraic_tori",
       "to": "tori.f_tori_galois_module_classification",
       "kind": "uses"
     },
@@ -1339,6 +1370,20 @@
       "kind": "boundary_dependency",
       "topic": "AlgebraicGroups.AffineGroupSchemes",
       "count": 1
+    },
+    {
+      "from": "topic:AlgebraicGroups.AffineGroupSchemes",
+      "to": "tori.characters_as_group_like_elements",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "count": 2
+    },
+    {
+      "from": "topic:AlgebraicGroups.AffineGroupSchemes",
+      "to": "tori.convolution_is_pointwise_multiplication",
+      "kind": "boundary_dependency",
+      "topic": "AlgebraicGroups.AffineGroupSchemes",
+      "count": 3
     },
     {
       "from": "topic:AlgebraicGroups.AffineGroupSchemes",
@@ -1950,7 +1995,7 @@
       "id": "characters",
       "title": "characters",
       "href": "keywords/characters.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "classical-and-exceptional-groups",
@@ -1981,6 +2026,12 @@
       "title": "conjugacy",
       "href": "keywords/conjugacy.html",
       "count": 5
+    },
+    {
+      "id": "convolution",
+      "title": "convolution",
+      "href": "keywords/convolution.html",
+      "count": 1
     },
     {
       "id": "covers",
@@ -2094,6 +2145,12 @@
       "id": "geometric-conjugacy",
       "title": "geometric-conjugacy",
       "href": "keywords/geometric-conjugacy.html",
+      "count": 1
+    },
+    {
+      "id": "group-like",
+      "title": "group-like",
+      "href": "keywords/group-like.html",
       "count": 1
     },
     {
@@ -2424,7 +2481,7 @@
       "id": "theorem",
       "title": "theorem",
       "href": "keywords/theorem.html",
-      "count": 8
+      "count": 10
     },
     {
       "id": "tits-buildings",
@@ -2437,6 +2494,12 @@
       "title": "tits-systems",
       "href": "keywords/tits-systems.html",
       "count": 1
+    },
+    {
+      "id": "tori",
+      "title": "tori",
+      "href": "keywords/tori.html",
+      "count": 2
     },
     {
       "id": "torus",
@@ -2525,17 +2588,17 @@
       "title": "Algebraic Groups.Affine Group Schemes",
       "depth": 2,
       "parent": "AlgebraicGroups",
-      "node_count": 39,
-      "direct_node_count": 39,
+      "node_count": 42,
+      "direct_node_count": 42,
       "kind_counts": {
-        "definition": 17,
+        "definition": 18,
         "example": 2,
         "lemma": 2,
-        "theorem": 15,
+        "theorem": 17,
         "topic": 3
       },
       "status_counts": {
-        "admitted": 39
+        "admitted": 42
       },
       "href": "AlgebraicGroups/AffineGroupSchemes/index.html",
       "children": []
