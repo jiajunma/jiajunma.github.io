@@ -21,19 +21,19 @@
       "children": []
     },
     {
-      "id": "algebraic_geometry",
-      "title": "Algebraic Geometry",
+      "id": "bd_covers",
+      "title": "Bd Covers",
       "depth": 1,
       "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "topic": 1
+        "topic": 6
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 6
       },
-      "href": "algebraic_geometry/index.html",
+      "href": "bd_covers/index.html",
       "children": []
     },
     {
@@ -41,32 +41,32 @@
       "title": "Buildings And Parahorics",
       "depth": 1,
       "parent": null,
-      "node_count": 20,
-      "direct_node_count": 20,
+      "node_count": 16,
+      "direct_node_count": 16,
       "kind_counts": {
-        "definition": 18,
-        "theorem": 2
+        "topic": 16
       },
       "status_counts": {
-        "admitted": 20
+        "admitted": 16
       },
       "href": "buildings_and_parahorics/index.html",
       "children": []
     },
     {
-      "id": "commutative_algebra",
-      "title": "Commutative Algebra",
+      "id": "classical_and_exceptional_groups",
+      "title": "Classical And Exceptional Groups",
       "depth": 1,
       "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
-        "topic": 4
+        "definition": 3,
+        "topic": 2
       },
       "status_counts": {
-        "admitted": 4
+        "admitted": 5
       },
-      "href": "commutative_algebra/index.html",
+      "href": "classical_and_exceptional_groups/index.html",
       "children": []
     },
     {
@@ -92,17 +92,50 @@
       "title": "Descent And Forms",
       "depth": 1,
       "parent": null,
-      "node_count": 32,
-      "direct_node_count": 32,
+      "node_count": 33,
+      "direct_node_count": 33,
       "kind_counts": {
         "definition": 2,
-        "theorem": 8,
+        "theorem": 9,
         "topic": 22
       },
       "status_counts": {
-        "admitted": 32
+        "admitted": 33
       },
       "href": "descent_and_forms/index.html",
+      "children": []
+    },
+    {
+      "id": "foundational_inputs",
+      "title": "Foundational Inputs",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "definition": 1,
+        "topic": 8
+      },
+      "status_counts": {
+        "admitted": 9
+      },
+      "href": "foundational_inputs/index.html",
+      "children": []
+    },
+    {
+      "id": "kottwitz_structures",
+      "title": "Kottwitz Structures",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "topic": 9
+      },
+      "status_counts": {
+        "admitted": 9
+      },
+      "href": "kottwitz_structures/index.html",
       "children": []
     },
     {
@@ -110,36 +143,19 @@
       "title": "Linear Algebraic Groups",
       "depth": 1,
       "parent": null,
-      "node_count": 31,
-      "direct_node_count": 26,
+      "node_count": 27,
+      "direct_node_count": 27,
       "kind_counts": {
-        "definition": 6,
+        "definition": 4,
         "theorem": 15,
-        "topic": 10
+        "topic": 8
       },
       "status_counts": {
-        "admitted": 30,
-        "formalized": 1
+        "admitted": 25,
+        "formalized": 1,
+        "needs_definition_review": 1
       },
       "href": "linear_algebraic_groups/index.html",
-      "children": [
-        "linear_algebraic_groups.classical_and_exceptional_groups"
-      ]
-    },
-    {
-      "id": "number_theory",
-      "title": "Number Theory",
-      "depth": 1,
-      "parent": null,
-      "node_count": 3,
-      "direct_node_count": 3,
-      "kind_counts": {
-        "topic": 3
-      },
-      "status_counts": {
-        "admitted": 3
-      },
-      "href": "number_theory/index.html",
       "children": []
     },
     {
@@ -147,14 +163,15 @@
       "title": "Reductive Structure",
       "depth": 1,
       "parent": null,
-      "node_count": 52,
-      "direct_node_count": 52,
+      "node_count": 49,
+      "direct_node_count": 49,
       "kind_counts": {
-        "definition": 21,
-        "theorem": 31
+        "definition": 8,
+        "theorem": 30,
+        "topic": 11
       },
       "status_counts": {
-        "admitted": 52
+        "admitted": 49
       },
       "href": "reductive_structure/index.html",
       "children": []
@@ -164,24 +181,45 @@
       "title": "Root Data And Duality",
       "depth": 1,
       "parent": null,
-      "node_count": 64,
+      "node_count": 49,
       "direct_node_count": 49,
       "kind_counts": {
         "definition": 11,
         "theorem": 19,
-        "topic": 34
+        "topic": 19
       },
       "status_counts": {
-        "admitted": 64
+        "admitted": 49
       },
       "href": "root_data_and_duality/index.html",
-      "children": [
-        "root_data_and_duality.bd_covers",
-        "root_data_and_duality.kottwitz_structures"
-      ]
+      "children": []
+    },
+    {
+      "id": "tori",
+      "title": "Tori",
+      "depth": 1,
+      "parent": null,
+      "node_count": 19,
+      "direct_node_count": 19,
+      "kind_counts": {
+        "definition": 7,
+        "example": 1,
+        "theorem": 9,
+        "topic": 2
+      },
+      "status_counts": {
+        "admitted": 19
+      },
+      "href": "tori/index.html",
+      "children": []
     }
   ],
   "edges": [
+    {
+      "from": "affine_group_schemes",
+      "to": "bd_covers",
+      "count": 1
+    },
     {
       "from": "affine_group_schemes",
       "to": "buildings_and_parahorics",
@@ -200,57 +238,27 @@
     {
       "from": "affine_group_schemes",
       "to": "linear_algebraic_groups",
-      "count": 24
+      "count": 25
     },
     {
       "from": "affine_group_schemes",
       "to": "root_data_and_duality",
+      "count": 2
+    },
+    {
+      "from": "affine_group_schemes",
+      "to": "tori",
       "count": 3
     },
     {
-      "from": "algebraic_geometry",
-      "to": "affine_group_schemes",
-      "count": 4
-    },
-    {
-      "from": "algebraic_geometry",
-      "to": "linear_algebraic_groups",
+      "from": "buildings_and_parahorics",
+      "to": "bd_covers",
       "count": 1
     },
     {
       "from": "buildings_and_parahorics",
-      "to": "root_data_and_duality",
-      "count": 3
-    },
-    {
-      "from": "commutative_algebra",
-      "to": "affine_group_schemes",
-      "count": 11
-    },
-    {
-      "from": "commutative_algebra",
-      "to": "algebraic_geometry",
-      "count": 1
-    },
-    {
-      "from": "commutative_algebra",
-      "to": "descent_and_forms",
-      "count": 1
-    },
-    {
-      "from": "commutative_algebra",
-      "to": "number_theory",
-      "count": 3
-    },
-    {
-      "from": "commutative_algebra",
-      "to": "root_data_and_duality",
+      "to": "kottwitz_structures",
       "count": 2
-    },
-    {
-      "from": "descent_and_forms",
-      "to": "buildings_and_parahorics",
-      "count": 1
     },
     {
       "from": "descent_and_forms",
@@ -260,7 +268,7 @@
     {
       "from": "descent_and_forms",
       "to": "reductive_structure",
-      "count": 5
+      "count": 3
     },
     {
       "from": "descent_and_forms",
@@ -268,8 +276,63 @@
       "count": 2
     },
     {
+      "from": "descent_and_forms",
+      "to": "tori",
+      "count": 3
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "affine_group_schemes",
+      "count": 15
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "bd_covers",
+      "count": 4
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "buildings_and_parahorics",
+      "count": 4
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "descent_and_forms",
+      "count": 1
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "kottwitz_structures",
+      "count": 2
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "linear_algebraic_groups",
+      "count": 4
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "root_data_and_duality",
+      "count": 1
+    },
+    {
+      "from": "foundational_inputs",
+      "to": "tori",
+      "count": 3
+    },
+    {
+      "from": "kottwitz_structures",
+      "to": "descent_and_forms",
+      "count": 4
+    },
+    {
       "from": "linear_algebraic_groups",
       "to": "buildings_and_parahorics",
+      "count": 1
+    },
+    {
+      "from": "linear_algebraic_groups",
+      "to": "classical_and_exceptional_groups",
       "count": 1
     },
     {
@@ -285,22 +348,27 @@
     {
       "from": "linear_algebraic_groups",
       "to": "reductive_structure",
-      "count": 9
+      "count": 8
     },
     {
-      "from": "number_theory",
-      "to": "buildings_and_parahorics",
-      "count": 5
+      "from": "linear_algebraic_groups",
+      "to": "tori",
+      "count": 2
     },
     {
-      "from": "number_theory",
-      "to": "root_data_and_duality",
-      "count": 5
+      "from": "reductive_structure",
+      "to": "bd_covers",
+      "count": 1
     },
     {
       "from": "reductive_structure",
       "to": "buildings_and_parahorics",
       "count": 5
+    },
+    {
+      "from": "reductive_structure",
+      "to": "classical_and_exceptional_groups",
+      "count": 1
     },
     {
       "from": "reductive_structure",
@@ -314,18 +382,38 @@
     },
     {
       "from": "reductive_structure",
+      "to": "kottwitz_structures",
+      "count": 1
+    },
+    {
+      "from": "reductive_structure",
       "to": "linear_algebraic_groups",
-      "count": 2
+      "count": 1
     },
     {
       "from": "reductive_structure",
       "to": "root_data_and_duality",
-      "count": 22
+      "count": 18
+    },
+    {
+      "from": "reductive_structure",
+      "to": "tori",
+      "count": 4
+    },
+    {
+      "from": "root_data_and_duality",
+      "to": "bd_covers",
+      "count": 4
     },
     {
       "from": "root_data_and_duality",
       "to": "buildings_and_parahorics",
-      "count": 7
+      "count": 6
+    },
+    {
+      "from": "root_data_and_duality",
+      "to": "classical_and_exceptional_groups",
+      "count": 5
     },
     {
       "from": "root_data_and_duality",
@@ -335,17 +423,27 @@
     {
       "from": "root_data_and_duality",
       "to": "descent_and_forms",
-      "count": 7
+      "count": 3
     },
     {
       "from": "root_data_and_duality",
-      "to": "linear_algebraic_groups",
-      "count": 5
+      "to": "kottwitz_structures",
+      "count": 4
     },
     {
       "from": "root_data_and_duality",
       "to": "reductive_structure",
       "count": 3
+    },
+    {
+      "from": "tori",
+      "to": "reductive_structure",
+      "count": 9
+    },
+    {
+      "from": "tori",
+      "to": "root_data_and_duality",
+      "count": 2
     }
   ]
 }

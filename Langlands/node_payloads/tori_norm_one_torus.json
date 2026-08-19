@@ -1,0 +1,49 @@
+{
+  "id": "tori.norm_one_torus",
+  "title": "Norm-One Torus of a Separable Extension",
+  "kind": "example",
+  "status": "admitted",
+  "href": "tori/tori_norm_one_torus.html",
+  "primary_topic": "tori",
+  "topics": [
+    "tori"
+  ],
+  "body_html": "<h1>Norm-One Torus of a Separable Extension</h1>\n<p>Let \\(E/k\\) be a finite separable extension. The norm map on points\n\\(N_{E/k} : E^\\times \\to k^\\times\\) is algebraic: it is the map of\ntori\n\\[\nN \\;:\\; R_{E/k}\\mathbb{G}_m \\longrightarrow \\mathbb{G}_m\n\\]\nwhich on characters sends the generator of\n\\(X^*(\\mathbb{G}_m) = \\mathbb{Z}\\) to the norm element\n\\(\\sum_{c \\in \\Theta/\\Theta_E} c \\in \\mathbb{Z}[\\Theta/\\Theta_E]\\).\nThe <strong>norm-one torus</strong> is its kernel:\n\\[\nR^{1}_{E/k}\\mathbb{G}_m \\;=\\; \\ker\\bigl(N : R_{E/k}\\mathbb{G}_m \\to\n\\mathbb{G}_m\\bigr),\n\\qquad\nR^{1}_{E/k}\\mathbb{G}_m(k) = \\{x \\in E^\\times : N_{E/k}(x) = 1\\}.\n\\]</p>\n<p>It is a torus of rank \\([E:k]-1\\): the norm element spans a saturated\n\\(\\Theta\\)-stable sublattice \\(\\mathbb{Z}\\cdot N \\subseteq\n\\mathbb{Z}[\\Theta/\\Theta_E]\\) (a generator with content one), so by\n<a class=\"node-ref\" data-node-id=\"tori.subtori_and_quotients\" href=\"tori_subtori_and_quotients.html\">Subtori and Quotients via the Character Lattice</a> the kernel is a subtorus with\n\\[\nX^*\\bigl(R^1_{E/k}\\mathbb{G}_m\\bigr) \\;=\\;\n\\mathbb{Z}[\\Theta/\\Theta_E] \\,/\\, \\mathbb{Z}\\!\\cdot\\! N .\n\\]</p>\n<p><strong>Quadratic case.</strong> For \\([E:k] = 2\\) with\n\\(\\operatorname{Gal}(E/k) = \\{1,\\sigma\\}\\):\n\\(X^*(R^1_{E/k}\\mathbb{G}_m) \\cong \\mathbb{Z}\\) with \\(\\sigma\\)\nacting by \\(-1\\) (the sign lattice). Its invariants vanish, so the\nquadratic norm-one torus is <a class=\"node-ref\" data-node-id=\"tori.anisotropic_torus\" href=\"tori_anisotropic_torus.html\">anisotropic</a>\n— the smallest non-split torus, and the running counterexample of this\ntopic: it witnesses the failure of the split-anisotropic decomposition\nto be direct, and, over discretely valued fields with ramified\n\\(E/k\\), the failure of the Iwahori subgroup to exhaust the maximal\nbounded subgroup (recorded at the arithmetic stage; source span).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "tori.torus_definition",
+      "title": "Algebraic Torus",
+      "href": "tori/tori_torus_definition.html"
+    },
+    {
+      "id": "tori.weil_restriction_of_tori",
+      "title": "Weil Restriction of Tori",
+      "href": "tori/tori_weil_restriction_of_tori.html"
+    },
+    {
+      "id": "tori.anisotropic_torus",
+      "title": "Anisotropic Torus",
+      "href": "tori/tori_anisotropic_torus.html"
+    },
+    {
+      "id": "tori.subtori_and_quotients",
+      "title": "Subtori and Quotients via the Character Lattice",
+      "href": "tori/tori_subtori_and_quotients.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.rank_one_classification",
+      "title": "Classification of Rank-One Tori",
+      "href": "tori/tori_rank_one_classification.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

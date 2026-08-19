@@ -1,0 +1,44 @@
+{
+  "id": "tori.anisotropic_torus",
+  "title": "Anisotropic Torus",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "tori/tori_anisotropic_torus.html",
+  "primary_topic": "tori",
+  "topics": [
+    "tori"
+  ],
+  "body_html": "<h1>Anisotropic Torus</h1>\n<p>A torus \\(T\\) over \\(k\\) is <strong>anisotropic</strong> if\n\\[\nX_*(T)^{\\Theta} \\;=\\; 0,\n\\]\nthat is, \\(T\\) admits no non-trivial \\(k\\)-homomorphism\n\\(\\mathbb{G}_m \\to T\\). This is the working definition throughout the\nknowledge base.</p>\n<p><strong>Equivalent formulations.</strong> The following are equivalent:</p>\n<ol>\n<li>\\(X_*(T)^{\\Theta} = 0\\);</li>\n<li>\\(X^*(T)^{\\Theta} = 0\\), i.e. \\(T\\) has no non-trivial\n   \\(k\\)-rational character \\(T \\to \\mathbb{G}_m\\);</li>\n<li>the maximal split subtorus of \\(T\\) (see\n   <a class=\"node-ref\" data-node-id=\"tori.split_anisotropic_decomposition\" href=\"tori_split_anisotropic_decomposition.html\">Split-Anisotropic Decomposition of a Torus</a>) is trivial.</li>\n</ol>\n<p><em>Equivalence of (1) and (2).</em> The pairing\n\\(\\langle\\,,\\,\\rangle : X^*(T) \\times X_*(T) \\to \\mathbb{Z}\\) is\nperfect and \\(\\Theta\\)-invariant, and \\(\\Theta\\) acts through a finite\nquotient \\(Q\\) (see <a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>). Suppose\n\\(\\lambda \\in X_*(T)^{\\Theta}\\) is non-zero. Choose\n\\(\\chi \\in X^*(T)\\) with \\(\\langle \\chi, \\lambda\\rangle \\neq 0\\) and\nset \\(\\chi' = \\sum_{q \\in Q} q\\chi\\). Then \\(\\chi'\\) is\n\\(\\Theta\\)-fixed and\n\\(\\langle \\chi', \\lambda \\rangle = \\sum_{q}\\langle \\chi, q^{-1}\\lambda\\rangle\n= \\lvert Q\\rvert \\,\\langle \\chi, \\lambda \\rangle \\neq 0\\), so\n\\(\\chi' \\neq 0\\) and \\(X^*(T)^{\\Theta} \\neq 0\\). The same argument\nwith the roles of the lattices exchanged gives the converse.</p>\n<p>Over a discretely valued Henselian field, anisotropy of \\(T\\) is\nfurther equivalent to boundedness of the group \\(T(k)\\); that\nequivalence belongs to the arithmetic stage of this topic and is\nrecorded with the source span above.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "tori.torus_definition",
+      "title": "Algebraic Torus",
+      "href": "tori/tori_torus_definition.html"
+    },
+    {
+      "id": "tori.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "href": "tori/tori_character_and_cocharacter_lattices.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.norm_one_torus",
+      "title": "Norm-One Torus of a Separable Extension",
+      "href": "tori/tori_norm_one_torus.html"
+    },
+    {
+      "id": "tori.split_anisotropic_decomposition",
+      "title": "Split-Anisotropic Decomposition of a Torus",
+      "href": "tori/tori_split_anisotropic_decomposition.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -12,9 +12,9 @@
   "proof_html": "<p>The standard argument uses uniqueness of inverses in the convolution\nalgebra. Consider the convolution algebra \\(\\operatorname{End}_R(A \\otimes_R A, A)\\)\nwith convolution multiplication coming from the coalgebra structure on\n\\(A \\otimes A\\) and the algebra structure on \\(A\\). The multiplication\nmap \\(\\mu : A \\otimes A \\to A\\) is an element of this algebra. We\nexhibit two convolution-inverses of \\(\\mu\\) and conclude they are\nequal:</p>\n<ol>\n<li>\\(\\mu \\circ (S \\otimes S) \\circ \\tau\\), where \\(\\tau\\) is the\n   tensor-swap, satisfies\n   \\(\\mu * (\\mu \\circ (S \\otimes S) \\circ \\tau) = \\eta \\circ \\varepsilon \\circ \\mu\\),\n   by direct Sweedler computation using the antipode axiom on each\n   factor.</li>\n<li>\\(S \\circ \\mu\\) satisfies the analogous identity by a similar\n   computation, using that \\(\\varepsilon\\) is multiplicative\n   (\\(\\varepsilon(ab) = \\varepsilon(a) \\varepsilon(b)\\), the bialgebra\n   axiom).</li>\n</ol>\n<p>Convolution inverses in an algebra are unique, hence the two maps are\nequal: \\(S \\circ \\mu = \\mu \\circ (S \\otimes S) \\circ \\tau\\), i.e.\\\n\\(S(ab) = S(b) S(a)\\).<br />\n\\(\\square\\)</p>\n<p><strong>Mathlib state.</strong> This lemma is now proved directly at the\nring-theoretic level as \\(\\texttt{HopfAlgebra.antipode\\_mul}\\) in\n\\(\\texttt{Mathlib.RingTheory.HopfAlgebra.Basic}\\). The project exposes\nthe same theorem under\n\\(\\texttt{Langlands.AlgebraicGeometry.HopfAntipode.antipode\\_anti\\_multiplicativity}\\)\nso downstream nodes do not depend on Mathlib naming details.</p>\n<p><strong>Project use.</strong> For affine group schemes we usually use the\n<strong>commutative-source</strong> specialization,\n[[node:affine_group_schemes.antipode_multiplicativity_commutative_hopf|the\nmultiplicativity statement \\(S(ab) = S(a) S(b)\\)]], which follows from\nanti-multiplicativity plus commutativity of the coordinate ring.</p>",
   "deps": [
     {
-      "id": "commutative_algebra.hopf_algebras",
+      "id": "foundational_inputs.hopf_algebras",
       "title": "Hopf Algebras",
-      "href": "commutative_algebra/commutative_algebra_hopf_algebras.html"
+      "href": "foundational_inputs/foundational_inputs_hopf_algebras.html"
     },
     {
       "id": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
@@ -35,7 +35,7 @@
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L298",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L299",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -53,7 +53,7 @@
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L58",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/HopfObjectBridge.lean#L59",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",

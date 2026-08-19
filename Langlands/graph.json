@@ -16,6 +16,14 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
+        "Polynomial.gaAntipode_X",
+        "Polynomial.gaComul_X",
+        "Polynomial.gaCounit_X",
+        "Polynomial.gaComul",
+        "Polynomial.gaCounit",
+        "Polynomial.gaAntipode",
+        "Polynomial.instBialgebra",
+        "Polynomial.instHopfAlgebra",
         "Langlands.AlgebraicGeometry.Examples.additiveGroup",
         "Langlands.AlgebraicGeometry.Examples.additiveGroup.instGrpObj"
       ],
@@ -100,7 +108,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "algebraic_geometry.affine_schemes"
+        "foundational_inputs.affine_schemes"
       ],
       "used_by": [
         "affine_group_schemes.algebraic_group_definition",
@@ -164,8 +172,8 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "commutative_algebra.commutative_algebra",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.commutative_algebra",
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.convolution_of_algebra_homs_is_algebra_hom"
@@ -270,7 +278,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.hopf_algebras"
       ]
     },
     {
@@ -296,7 +304,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.multiplication_is_coalgebra_hom",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.algebra_hom_composed_with_antipode_is_algebra_hom"
@@ -318,11 +326,12 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "commutative_algebra.fields_and_field_extensions"
+        "foundational_inputs.fields_and_field_extensions"
       ],
       "used_by": [
         "affine_group_schemes.base_change_preserves_algebraic_group",
-        "descent_and_forms.forms_of_algebraic_groups"
+        "descent_and_forms.forms_of_algebraic_groups",
+        "tori.torus_definition"
       ]
     },
     {
@@ -369,7 +378,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.finite_dim_subcomodule_lemma",
@@ -425,7 +434,7 @@
       "uses": [
         "affine_group_schemes.affine_group_scheme_definition",
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.additive_group_scheme",
@@ -456,9 +465,9 @@
       ],
       "topic": "affine_group_schemes",
       "uses": [
-        "algebraic_geometry.affine_schemes",
-        "commutative_algebra.commutative_algebra",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.affine_schemes",
+        "foundational_inputs.commutative_algebra",
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.affine_algebraic_groups",
@@ -466,7 +475,8 @@
         "affine_group_schemes.antipode_anti_multiplicativity",
         "affine_group_schemes.comodule_definition",
         "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
-        "affine_group_schemes.spec_representability_via_global_sections"
+        "affine_group_schemes.spec_representability_via_global_sections",
+        "linear_algebraic_groups.linear_algebraic_group_definition"
       ]
     },
     {
@@ -652,8 +662,8 @@
       "uses": [
         "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
         "affine_group_schemes.hopf_spec_grpobj_via_yoneda",
-        "algebraic_geometry.affine_schemes",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.affine_schemes",
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.hopf_spec_essential_image_affine",
@@ -713,14 +723,17 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
+        "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode",
+        "Langlands.AlgebraicGeometry.HopfAntipode.convId",
         "Langlands.AlgebraicGeometry.HopfAntipode.convId_mul_convAntipode",
         "Langlands.AlgebraicGeometry.HopfAntipode.convAntipode_mul_convId",
         "Langlands.AlgebraicGeometry.HopfAntipode.convMul_mul_convMulCompSSTensor",
-        "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor"
+        "Langlands.AlgebraicGeometry.HopfAntipode.mul_map_twist_eq_lTensor_smul_lTensor",
+        "Langlands.AlgebraicGeometry.HopfAntipode.mulCoalgHom"
       ],
       "topic": "affine_group_schemes",
       "uses": [
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "affine_group_schemes.antipode_multiplicativity_commutative_hopf"
@@ -742,6 +755,8 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
+        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.hopfAlg",
+        "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup",
         "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj"
       ],
       "topic": "affine_group_schemes",
@@ -752,7 +767,9 @@
       "used_by": [
         "affine_group_schemes.multiplicative_group_scheme_points",
         "affine_group_schemes.roots_of_unity_group_scheme",
-        "affine_group_schemes.special_linear_group_scheme"
+        "affine_group_schemes.special_linear_group_scheme",
+        "tori.algebraic_tori",
+        "tori.torus_definition"
       ]
     },
     {
@@ -901,6 +918,8 @@
         "affine_group_schemes"
       ],
       "lean_declarations": [
+        "Langlands.AlgebraicGeometry.Examples.muN.hopfAlg",
+        "Langlands.AlgebraicGeometry.Examples.muN",
         "Langlands.AlgebraicGeometry.Examples.muN.instGrpObj"
       ],
       "topic": "affine_group_schemes",
@@ -934,7 +953,7 @@
       "topic": "affine_group_schemes",
       "uses": [
         "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "algebraic_geometry.affine_schemes"
+        "foundational_inputs.affine_schemes"
       ],
       "used_by": [
         "affine_group_schemes.hopf_spec_grpobj_via_yoneda"
@@ -955,7 +974,7 @@
       "primary_topic": "affine_group_schemes",
       "topics": [
         "affine_group_schemes",
-        "linear_algebraic_groups.classical_and_exceptional_groups"
+        "classical_and_exceptional_groups"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -985,7 +1004,7 @@
       "primary_topic": "affine_group_schemes",
       "topics": [
         "affine_group_schemes",
-        "linear_algebraic_groups.classical_and_exceptional_groups"
+        "classical_and_exceptional_groups"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -1010,7 +1029,7 @@
       "primary_topic": "affine_group_schemes",
       "topics": [
         "affine_group_schemes",
-        "linear_algebraic_groups.classical_and_exceptional_groups"
+        "classical_and_exceptional_groups"
       ],
       "topic": "affine_group_schemes",
       "uses": [
@@ -1071,32 +1090,6 @@
       ]
     },
     {
-      "id": "algebraic_geometry.affine_schemes",
-      "title": "Affine Schemes",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "affine-schemes",
-        "foundational-inputs"
-      ],
-      "primary_topic": "algebraic_geometry",
-      "topics": [
-        "algebraic_geometry"
-      ],
-      "topic": "algebraic_geometry",
-      "uses": [
-        "commutative_algebra.commutative_algebra"
-      ],
-      "used_by": [
-        "affine_group_schemes.affine_group_scheme_definition",
-        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "affine_group_schemes.hopf_spec_functor",
-        "affine_group_schemes.spec_representability_via_global_sections",
-        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
-      ]
-    },
-    {
       "id": "bd_covers.brylinski_deligne_k2_extensions",
       "title": "Brylinski-Deligne K2-Extensions",
       "kind": "topic",
@@ -1106,14 +1099,14 @@
         "k2",
         "bd-covers"
       ],
-      "primary_topic": "root_data_and_duality.bd_covers",
+      "primary_topic": "bd_covers",
       "topics": [
-        "root_data_and_duality.bd_covers"
+        "bd_covers"
       ],
-      "topic": "root_data_and_duality.bd_covers",
+      "topic": "bd_covers",
       "uses": [
         "bd_covers.central_extensions_of_algebraic_groups",
-        "number_theory.algebraic_k_theory_and_k2",
+        "foundational_inputs.algebraic_k_theory_and_k2",
         "reductive_structure.reductive_groups",
         "root_data_and_duality.root_data"
       ],
@@ -1131,14 +1124,14 @@
         "central-extensions",
         "bd-covers"
       ],
-      "primary_topic": "root_data_and_duality.bd_covers",
+      "primary_topic": "bd_covers",
       "topics": [
-        "root_data_and_duality.bd_covers"
+        "bd_covers"
       ],
-      "topic": "root_data_and_duality.bd_covers",
+      "topic": "bd_covers",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "commutative_algebra.hopf_algebras"
+        "foundational_inputs.hopf_algebras"
       ],
       "used_by": [
         "bd_covers.brylinski_deligne_k2_extensions"
@@ -1154,11 +1147,11 @@
         "covers",
         "bd-covers"
       ],
-      "primary_topic": "root_data_and_duality.bd_covers",
+      "primary_topic": "bd_covers",
       "topics": [
-        "root_data_and_duality.bd_covers"
+        "bd_covers"
       ],
-      "topic": "root_data_and_duality.bd_covers",
+      "topic": "bd_covers",
       "uses": [
         "bd_covers.brylinski_deligne_k2_extensions",
         "root_data_and_duality.dual_root_data",
@@ -1178,11 +1171,11 @@
         "covers",
         "bd-covers"
       ],
-      "primary_topic": "root_data_and_duality.bd_covers",
+      "primary_topic": "bd_covers",
       "topics": [
-        "root_data_and_duality.bd_covers"
+        "bd_covers"
       ],
-      "topic": "root_data_and_duality.bd_covers",
+      "topic": "bd_covers",
       "uses": [
         "bd_covers.dual_groups_for_covers",
         "root_data_and_duality.l_groups"
@@ -1197,15 +1190,15 @@
         "metaplectic-covers",
         "bd-covers"
       ],
-      "primary_topic": "root_data_and_duality.bd_covers",
+      "primary_topic": "bd_covers",
       "topics": [
-        "root_data_and_duality.bd_covers"
+        "bd_covers"
       ],
-      "topic": "root_data_and_duality.bd_covers",
+      "topic": "bd_covers",
       "uses": [
         "bd_covers.brylinski_deligne_k2_extensions",
-        "number_theory.global_fields_adeles_and_reciprocity_symbols",
-        "number_theory.local_fields"
+        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+        "foundational_inputs.local_fields"
       ],
       "used_by": [
         "bd_covers.splittings_over_integral_and_parahoric_subgroups"
@@ -1221,11 +1214,11 @@
         "parahoric-subgroups",
         "bd-covers"
       ],
-      "primary_topic": "root_data_and_duality.bd_covers",
+      "primary_topic": "bd_covers",
       "topics": [
-        "root_data_and_duality.bd_covers"
+        "bd_covers"
       ],
-      "topic": "root_data_and_duality.bd_covers",
+      "topic": "bd_covers",
       "uses": [
         "bd_covers.local_and_global_metaplectic_covers",
         "buildings_and_parahorics.parahoric_subgroups"
@@ -1234,7 +1227,7 @@
     {
       "id": "buildings_and_parahorics.affine_root_systems",
       "title": "Affine Root Systems",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "affine-root-systems",
@@ -1250,14 +1243,13 @@
         "root_data_and_duality.root_systems"
       ],
       "used_by": [
-        "buildings_and_parahorics.affine_weyl_groups",
-        "buildings_and_parahorics.concave_functions_and_subgroups"
+        "buildings_and_parahorics.affine_weyl_groups"
       ]
     },
     {
       "id": "buildings_and_parahorics.affine_weyl_groups",
       "title": "Affine Weyl Groups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "affine-weyl-groups",
@@ -1274,14 +1266,13 @@
       ],
       "used_by": [
         "buildings_and_parahorics.bruhat_tits_apartments",
-        "buildings_and_parahorics.iwahori_weyl_group",
         "kottwitz_structures.admissible_sets"
       ]
     },
     {
       "id": "buildings_and_parahorics.bn_pairs_and_tits_systems",
       "title": "BN-Pairs and Tits Systems",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "bn-pairs",
@@ -1303,30 +1294,9 @@
       ]
     },
     {
-      "id": "buildings_and_parahorics.bounded_subgroups_of_reductive_groups",
-      "title": "Bounded Subgroups of Reductive Groups over Local Fields",
-      "kind": "definition",
-      "status": "admitted",
-      "tags": [
-        "bounded-subgroups",
-        "compact-open-subgroups",
-        "local-fields",
-        "bruhat-tits"
-      ],
-      "primary_topic": "buildings_and_parahorics",
-      "topics": [
-        "buildings_and_parahorics"
-      ],
-      "topic": "buildings_and_parahorics",
-      "uses": [
-        "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "number_theory.local_fields"
-      ]
-    },
-    {
       "id": "buildings_and_parahorics.bruhat_tits_apartments",
       "title": "Bruhat-Tits Apartments",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "bruhat-tits",
@@ -1342,7 +1312,7 @@
         "buildings_and_parahorics.affine_weyl_groups",
         "buildings_and_parahorics.reductive_groups_over_local_fields",
         "buildings_and_parahorics.valued_root_data",
-        "number_theory.local_fields"
+        "foundational_inputs.local_fields"
       ],
       "used_by": [
         "buildings_and_parahorics.bruhat_tits_buildings"
@@ -1351,7 +1321,7 @@
     {
       "id": "buildings_and_parahorics.bruhat_tits_buildings",
       "title": "Bruhat-Tits Buildings",
-      "kind": "theorem",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "bruhat-tits-buildings",
@@ -1367,37 +1337,13 @@
         "buildings_and_parahorics.bruhat_tits_apartments"
       ],
       "used_by": [
-        "buildings_and_parahorics.facets_in_bruhat_tits_buildings",
-        "buildings_and_parahorics.special_and_hyperspecial_points"
-      ]
-    },
-    {
-      "id": "buildings_and_parahorics.concave_functions_and_subgroups",
-      "title": "Concave Functions and Filtration Subgroups",
-      "kind": "definition",
-      "status": "admitted",
-      "tags": [
-        "concave-functions",
-        "filtration-subgroups",
-        "affine-root-system",
-        "bruhat-tits"
-      ],
-      "primary_topic": "buildings_and_parahorics",
-      "topics": [
-        "buildings_and_parahorics"
-      ],
-      "topic": "buildings_and_parahorics",
-      "uses": [
-        "buildings_and_parahorics.affine_root_systems",
-        "buildings_and_parahorics.moy_prasad_filtrations",
-        "buildings_and_parahorics.parahoric_subgroups",
-        "buildings_and_parahorics.valued_root_data"
+        "buildings_and_parahorics.facets_in_bruhat_tits_buildings"
       ]
     },
     {
       "id": "buildings_and_parahorics.coxeter_complexes",
       "title": "Coxeter Complexes",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "coxeter-complexes",
@@ -1418,7 +1364,7 @@
     {
       "id": "buildings_and_parahorics.facets_in_bruhat_tits_buildings",
       "title": "Facets in Bruhat-Tits Buildings",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "facets",
@@ -1437,32 +1383,9 @@
       ]
     },
     {
-      "id": "buildings_and_parahorics.iwahori_weyl_group",
-      "title": "Iwahori-Weyl Group",
-      "kind": "definition",
-      "status": "admitted",
-      "tags": [
-        "iwahori-weyl-group",
-        "affine-weyl-group",
-        "bruhat-decomposition",
-        "iwahori-subgroup"
-      ],
-      "primary_topic": "buildings_and_parahorics",
-      "topics": [
-        "buildings_and_parahorics"
-      ],
-      "topic": "buildings_and_parahorics",
-      "uses": [
-        "buildings_and_parahorics.affine_weyl_groups",
-        "buildings_and_parahorics.parahoric_subgroups",
-        "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "root_data_and_duality.root_data"
-      ]
-    },
-    {
       "id": "buildings_and_parahorics.moy_prasad_filtrations",
       "title": "Moy-Prasad Filtrations",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "moy-prasad-filtrations",
@@ -1476,15 +1399,12 @@
       "uses": [
         "buildings_and_parahorics.parahoric_subgroups",
         "reductive_structure.reductive_groups"
-      ],
-      "used_by": [
-        "buildings_and_parahorics.concave_functions_and_subgroups"
       ]
     },
     {
       "id": "buildings_and_parahorics.parahoric_group_schemes",
       "title": "Parahoric Group Schemes",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "parahoric-group-schemes",
@@ -1500,14 +1420,13 @@
         "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
       ],
       "used_by": [
-        "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes",
-        "buildings_and_parahorics.special_and_hyperspecial_points"
+        "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes"
       ]
     },
     {
       "id": "buildings_and_parahorics.parahoric_subgroups",
       "title": "Parahoric Subgroups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "parahoric-subgroups",
@@ -1524,17 +1443,14 @@
       ],
       "used_by": [
         "bd_covers.splittings_over_integral_and_parahoric_subgroups",
-        "buildings_and_parahorics.concave_functions_and_subgroups",
-        "buildings_and_parahorics.iwahori_weyl_group",
         "buildings_and_parahorics.moy_prasad_filtrations",
-        "buildings_and_parahorics.parahoric_group_schemes",
-        "buildings_and_parahorics.special_and_hyperspecial_points"
+        "buildings_and_parahorics.parahoric_group_schemes"
       ]
     },
     {
       "id": "buildings_and_parahorics.reductive_groups_over_local_fields",
       "title": "Reductive Groups over Local Fields",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "local-fields",
@@ -1547,16 +1463,13 @@
       ],
       "topic": "buildings_and_parahorics",
       "uses": [
-        "number_theory.local_fields",
+        "foundational_inputs.local_fields",
         "reductive_structure.reductive_groups",
         "root_data_and_duality.galois_action_on_root_data"
       ],
       "used_by": [
-        "buildings_and_parahorics.bounded_subgroups_of_reductive_groups",
         "buildings_and_parahorics.bruhat_tits_apartments",
-        "buildings_and_parahorics.iwahori_weyl_group",
         "buildings_and_parahorics.parahoric_subgroups",
-        "buildings_and_parahorics.special_and_hyperspecial_points",
         "buildings_and_parahorics.valued_root_data",
         "kottwitz_structures.sigma_conjugacy_classes"
       ]
@@ -1564,7 +1477,7 @@
     {
       "id": "buildings_and_parahorics.reductive_quotients_of_parahoric_group_schemes",
       "title": "Reductive Quotients of Parahoric Group Schemes",
-      "kind": "theorem",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "reductive-quotients",
@@ -1583,7 +1496,7 @@
     {
       "id": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
       "title": "Smooth Affine Group Schemes over Valuation Rings",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "group-schemes",
@@ -1597,42 +1510,17 @@
       "topic": "buildings_and_parahorics",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
-        "number_theory.local_fields"
+        "foundational_inputs.local_fields",
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
       ],
       "used_by": [
         "buildings_and_parahorics.parahoric_group_schemes"
       ]
     },
     {
-      "id": "buildings_and_parahorics.special_and_hyperspecial_points",
-      "title": "Special and Hyperspecial Points in the Bruhat-Tits Building",
-      "kind": "definition",
-      "status": "admitted",
-      "tags": [
-        "hyperspecial",
-        "special-vertex",
-        "superspecial",
-        "parahoric",
-        "bruhat-tits-building"
-      ],
-      "primary_topic": "buildings_and_parahorics",
-      "topics": [
-        "buildings_and_parahorics"
-      ],
-      "topic": "buildings_and_parahorics",
-      "uses": [
-        "buildings_and_parahorics.bruhat_tits_buildings",
-        "buildings_and_parahorics.parahoric_group_schemes",
-        "buildings_and_parahorics.parahoric_subgroups",
-        "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "descent_and_forms.quasi_split_forms"
-      ]
-    },
-    {
       "id": "buildings_and_parahorics.spherical_buildings",
       "title": "Spherical Buildings",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "spherical-buildings",
@@ -1653,7 +1541,7 @@
     {
       "id": "buildings_and_parahorics.tits_buildings",
       "title": "Tits Buildings",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "tits-buildings",
@@ -1673,7 +1561,7 @@
     {
       "id": "buildings_and_parahorics.valued_root_data",
       "title": "Valued Root Data",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "valued-root-data",
@@ -1686,14 +1574,13 @@
       "topic": "buildings_and_parahorics",
       "uses": [
         "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "number_theory.local_fields",
+        "foundational_inputs.local_fields",
         "root_data_and_duality.galois_action_on_root_data",
         "root_data_and_duality.root_data"
       ],
       "used_by": [
         "buildings_and_parahorics.affine_root_systems",
-        "buildings_and_parahorics.bruhat_tits_apartments",
-        "buildings_and_parahorics.concave_functions_and_subgroups"
+        "buildings_and_parahorics.bruhat_tits_apartments"
       ]
     },
     {
@@ -1705,11 +1592,11 @@
         "classical-groups",
         "classical-and-exceptional-groups"
       ],
-      "primary_topic": "linear_algebraic_groups.classical_and_exceptional_groups",
+      "primary_topic": "classical_and_exceptional_groups",
       "topics": [
-        "linear_algebraic_groups.classical_and_exceptional_groups"
+        "classical_and_exceptional_groups"
       ],
-      "topic": "linear_algebraic_groups.classical_and_exceptional_groups",
+      "topic": "classical_and_exceptional_groups",
       "uses": [
         "linear_algebraic_groups.basic_examples",
         "reductive_structure.reductive_groups",
@@ -1726,109 +1613,15 @@
         "exceptional-groups",
         "classical-and-exceptional-groups"
       ],
-      "primary_topic": "linear_algebraic_groups.classical_and_exceptional_groups",
+      "primary_topic": "classical_and_exceptional_groups",
       "topics": [
-        "linear_algebraic_groups.classical_and_exceptional_groups"
+        "classical_and_exceptional_groups"
       ],
-      "topic": "linear_algebraic_groups.classical_and_exceptional_groups",
+      "topic": "classical_and_exceptional_groups",
       "uses": [
         "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
         "root_data_and_duality.classification_of_split_reductive_groups",
         "root_data_and_duality.root_systems"
-      ]
-    },
-    {
-      "id": "commutative_algebra.basic_combinatorics",
-      "title": "Basic Combinatorics",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "combinatorics",
-        "foundational-inputs"
-      ],
-      "primary_topic": "commutative_algebra",
-      "topics": [
-        "commutative_algebra"
-      ],
-      "topic": "commutative_algebra",
-      "used_by": [
-        "root_data_and_duality.coxeter_systems_and_bruhat_order"
-      ]
-    },
-    {
-      "id": "commutative_algebra.commutative_algebra",
-      "title": "Commutative Algebra",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "commutative-algebra",
-        "foundational-inputs"
-      ],
-      "primary_topic": "commutative_algebra",
-      "topics": [
-        "commutative_algebra"
-      ],
-      "topic": "commutative_algebra",
-      "used_by": [
-        "affine_group_schemes.algebra_hom_convolution",
-        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "algebraic_geometry.affine_schemes",
-        "commutative_algebra.hopf_algebras",
-        "number_theory.algebraic_k_theory_and_k2"
-      ]
-    },
-    {
-      "id": "commutative_algebra.fields_and_field_extensions",
-      "title": "Fields and Field Extensions",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "fields",
-        "foundational-inputs"
-      ],
-      "primary_topic": "commutative_algebra",
-      "topics": [
-        "commutative_algebra"
-      ],
-      "topic": "commutative_algebra",
-      "used_by": [
-        "affine_group_schemes.base_change",
-        "descent_and_forms.galois_groups_and_descent_data",
-        "number_theory.global_fields_adeles_and_reciprocity_symbols",
-        "number_theory.local_fields"
-      ]
-    },
-    {
-      "id": "commutative_algebra.hopf_algebras",
-      "title": "Hopf Algebras",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "hopf-algebras",
-        "foundational-inputs"
-      ],
-      "primary_topic": "commutative_algebra",
-      "topics": [
-        "commutative_algebra"
-      ],
-      "topic": "commutative_algebra",
-      "uses": [
-        "commutative_algebra.commutative_algebra"
-      ],
-      "used_by": [
-        "affine_group_schemes.algebra_hom_convolution",
-        "affine_group_schemes.antipode_anti_multiplicativity",
-        "affine_group_schemes.antipode_multiplicativity_commutative_hopf",
-        "affine_group_schemes.comodule_definition",
-        "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
-        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-        "affine_group_schemes.hopf_spec_functor",
-        "affine_group_schemes.multiplication_is_coalgebra_hom",
-        "bd_covers.central_extensions_of_algebraic_groups"
       ]
     },
     {
@@ -2468,6 +2261,35 @@
       ]
     },
     {
+      "id": "descent_and_forms.galois_descent_for_vector_spaces",
+      "title": "Galois Descent for Vector Spaces",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "galois-descent",
+        "semilinear",
+        "speiser",
+        "descent-and-forms"
+      ],
+      "primary_topic": "descent_and_forms",
+      "topics": [
+        "descent_and_forms",
+        "tori"
+      ],
+      "lean_declarations": [
+        "Langlands.Tori.span_fixedPoints_eq_top",
+        "Langlands.Tori.span_galEval_eq_top",
+        "Langlands.Tori.linearIndependent_algEquiv"
+      ],
+      "topic": "descent_and_forms",
+      "uses": [
+        "descent_and_forms.galois_groups_and_descent_data"
+      ],
+      "used_by": [
+        "tori.f_tori_galois_module_classification"
+      ]
+    },
+    {
       "id": "descent_and_forms.galois_groups_and_descent_data",
       "title": "Galois Groups and Descent Data",
       "kind": "topic",
@@ -2482,13 +2304,14 @@
       ],
       "topic": "descent_and_forms",
       "uses": [
-        "commutative_algebra.fields_and_field_extensions"
+        "foundational_inputs.fields_and_field_extensions"
       ],
       "used_by": [
         "descent_and_forms.f_subgroup_field_of_definition",
         "descent_and_forms.forms_of_algebraic_objects",
         "descent_and_forms.galois_cohomology",
-        "reductive_structure.f_tori_galois_module_classification"
+        "descent_and_forms.galois_descent_for_vector_spaces",
+        "tori.f_tori_galois_module_classification"
       ]
     },
     {
@@ -2646,7 +2469,6 @@
         "descent_and_forms.rational_forms_of_reductive_groups"
       ],
       "used_by": [
-        "buildings_and_parahorics.special_and_hyperspecial_points",
         "root_data_and_duality.quasi_split_and_anisotropic_via_indexed_root_datum"
       ]
     },
@@ -2672,7 +2494,7 @@
       "used_by": [
         "descent_and_forms.f_subgroup_field_of_definition",
         "reductive_structure.f_split_solvable_fixed_point_theorem",
-        "reductive_structure.f_tori_galois_module_classification"
+        "tori.f_tori_galois_module_classification"
       ]
     },
     {
@@ -2884,6 +2706,229 @@
       ]
     },
     {
+      "id": "foundational_inputs.affine_schemes",
+      "title": "Affine Schemes",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "affine-schemes",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.commutative_algebra"
+      ],
+      "used_by": [
+        "affine_group_schemes.affine_group_scheme_definition",
+        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "affine_group_schemes.hopf_spec_functor",
+        "affine_group_schemes.spec_representability_via_global_sections",
+        "linear_algebraic_groups.linear_algebraic_group_definition",
+        "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
+      ]
+    },
+    {
+      "id": "foundational_inputs.algebraic_k_theory_and_k2",
+      "title": "Algebraic K-Theory and K2",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "k-theory",
+        "k2",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.commutative_algebra"
+      ],
+      "used_by": [
+        "bd_covers.brylinski_deligne_k2_extensions"
+      ]
+    },
+    {
+      "id": "foundational_inputs.basic_combinatorics",
+      "title": "Basic Combinatorics",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "combinatorics",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "used_by": [
+        "root_data_and_duality.coxeter_systems_and_bruhat_order"
+      ]
+    },
+    {
+      "id": "foundational_inputs.commutative_algebra",
+      "title": "Commutative Algebra",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "commutative-algebra",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "used_by": [
+        "affine_group_schemes.algebra_hom_convolution",
+        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "foundational_inputs.affine_schemes",
+        "foundational_inputs.algebraic_k_theory_and_k2",
+        "foundational_inputs.hopf_algebras"
+      ]
+    },
+    {
+      "id": "foundational_inputs.fields_and_field_extensions",
+      "title": "Fields and Field Extensions",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "fields",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "used_by": [
+        "affine_group_schemes.base_change",
+        "descent_and_forms.galois_groups_and_descent_data",
+        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+        "foundational_inputs.local_fields",
+        "linear_algebraic_groups.linear_algebraic_group_definition"
+      ]
+    },
+    {
+      "id": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+      "title": "Global Fields, Adeles, and Reciprocity Symbols",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "global-fields",
+        "adeles",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.fields_and_field_extensions",
+        "foundational_inputs.local_fields"
+      ],
+      "used_by": [
+        "bd_covers.local_and_global_metaplectic_covers"
+      ]
+    },
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "hopf-algebras",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.commutative_algebra"
+      ],
+      "used_by": [
+        "affine_group_schemes.algebra_hom_convolution",
+        "affine_group_schemes.antipode_anti_multiplicativity",
+        "affine_group_schemes.antipode_multiplicativity_commutative_hopf",
+        "affine_group_schemes.comodule_definition",
+        "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
+        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "affine_group_schemes.hopf_spec_functor",
+        "affine_group_schemes.multiplication_is_coalgebra_hom",
+        "bd_covers.central_extensions_of_algebraic_groups",
+        "foundational_inputs.quantum_group_definition",
+        "linear_algebraic_groups.linear_algebraic_group_definition"
+      ]
+    },
+    {
+      "id": "foundational_inputs.local_fields",
+      "title": "Local Fields",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "external-background",
+        "local-fields",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.fields_and_field_extensions"
+      ],
+      "used_by": [
+        "bd_covers.local_and_global_metaplectic_covers",
+        "buildings_and_parahorics.bruhat_tits_apartments",
+        "buildings_and_parahorics.reductive_groups_over_local_fields",
+        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
+        "buildings_and_parahorics.valued_root_data",
+        "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
+        "kottwitz_structures.kottwitz_homomorphism",
+        "kottwitz_structures.sigma_conjugacy_classes",
+        "tori.tamely_ramified_torus",
+        "tori.unramified_torus",
+        "tori.weakly_induced_torus"
+      ]
+    },
+    {
+      "id": "foundational_inputs.quantum_group_definition",
+      "title": "Quantum Group (Formal-Deformation Convention)",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "quantum-groups",
+        "hopf-algebras",
+        "formal-deformation",
+        "foundational-inputs"
+      ],
+      "primary_topic": "foundational_inputs",
+      "topics": [
+        "foundational_inputs"
+      ],
+      "topic": "foundational_inputs",
+      "uses": [
+        "foundational_inputs.hopf_algebras"
+      ]
+    },
+    {
       "id": "kottwitz_structures.admissible_sets",
       "title": "Admissible Sets",
       "kind": "topic",
@@ -2892,11 +2937,11 @@
         "admissible-sets",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "buildings_and_parahorics.affine_weyl_groups",
         "kottwitz_structures.b_of_g"
@@ -2911,11 +2956,11 @@
         "algebraic-fundamental-group",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "reductive_structure.reductive_groups",
         "root_data_and_duality.fundamental_group_of_root_datum",
@@ -2938,11 +2983,11 @@
         "kottwitz",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "kottwitz_structures.algebraic_fundamental_group",
         "kottwitz_structures.kottwitz_homomorphism",
@@ -2966,11 +3011,11 @@
         "sigma-conjugacy",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "kottwitz_structures.kottwitz_map_on_b_of_g",
         "kottwitz_structures.newton_map"
@@ -2986,11 +3031,11 @@
         "g-structure",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "kottwitz_structures.b_of_g",
         "kottwitz_structures.sigma_conjugacy_classes"
@@ -3006,14 +3051,14 @@
         "kottwitz-homomorphism",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
+        "foundational_inputs.local_fields",
         "kottwitz_structures.algebraic_fundamental_group",
-        "number_theory.local_fields",
         "root_data_and_duality.galois_action_on_root_data"
       ],
       "used_by": [
@@ -3031,11 +3076,11 @@
         "b-g",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "kottwitz_structures.algebraic_fundamental_group",
         "kottwitz_structures.b_of_g"
@@ -3054,11 +3099,11 @@
         "newton-map",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "kottwitz_structures.b_of_g",
         "root_data_and_duality.root_data"
@@ -3076,14 +3121,14 @@
         "sigma-conjugacy",
         "kottwitz-structures"
       ],
-      "primary_topic": "root_data_and_duality.kottwitz_structures",
+      "primary_topic": "kottwitz_structures",
       "topics": [
-        "root_data_and_duality.kottwitz_structures"
+        "kottwitz_structures"
       ],
-      "topic": "root_data_and_duality.kottwitz_structures",
+      "topic": "kottwitz_structures",
       "uses": [
         "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "number_theory.local_fields"
+        "foundational_inputs.local_fields"
       ],
       "used_by": [
         "kottwitz_structures.b_of_g",
@@ -3334,7 +3379,8 @@
         "linear_algebraic_groups"
       ],
       "lean_declarations": [
-        "Langlands.AlgebraicGeometry.Examples.GLV"
+        "Langlands.AlgebraicGeometry.Examples.GLV",
+        "Langlands.AlgebraicGeometry.Examples.GLVSch"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
@@ -3442,6 +3488,28 @@
       ]
     },
     {
+      "id": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "title": "Definition of Linear Algebraic Groups",
+      "kind": "definition",
+      "status": "needs_definition_review",
+      "tags": [
+        "linear-algebraic-groups",
+        "affine-group-schemes",
+        "definitions"
+      ],
+      "primary_topic": "linear_algebraic_groups",
+      "topics": [
+        "linear_algebraic_groups"
+      ],
+      "topic": "linear_algebraic_groups",
+      "uses": [
+        "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+        "foundational_inputs.affine_schemes",
+        "foundational_inputs.fields_and_field_extensions",
+        "foundational_inputs.hopf_algebras"
+      ]
+    },
+    {
       "id": "linear_algebraic_groups.linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "kind": "topic",
@@ -3461,9 +3529,10 @@
         "descent_and_forms.rational_forms_of_linear_algebraic_groups",
         "linear_algebraic_groups.basic_examples",
         "linear_algebraic_groups.conjugacy_classes",
-        "reductive_structure.algebraic_tori",
         "reductive_structure.diagonalizable_groups",
-        "reductive_structure.unipotent_groups"
+        "reductive_structure.unipotent_groups",
+        "tori.algebraic_tori",
+        "tori.torus_definition"
       ]
     },
     {
@@ -3582,7 +3651,7 @@
       "topic": "linear_algebraic_groups",
       "uses": [
         "affine_group_schemes.affine_algebraic_groups",
-        "algebraic_geometry.affine_schemes"
+        "foundational_inputs.affine_schemes"
       ],
       "used_by": [
         "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
@@ -3628,119 +3697,15 @@
       ],
       "primary_topic": "linear_algebraic_groups",
       "topics": [
-        "linear_algebraic_groups"
+        "linear_algebraic_groups",
+        "reductive_structure",
+        "reductive_structure"
       ],
       "topic": "linear_algebraic_groups",
       "uses": [
         "affine_group_schemes.algebraic_group_definition",
         "linear_algebraic_groups.embedding_theorem",
         "reductive_structure.unipotent_groups"
-      ]
-    },
-    {
-      "id": "number_theory.algebraic_k_theory_and_k2",
-      "title": "Algebraic K-Theory and K2",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "k-theory",
-        "k2",
-        "foundational-inputs"
-      ],
-      "primary_topic": "number_theory",
-      "topics": [
-        "number_theory"
-      ],
-      "topic": "number_theory",
-      "uses": [
-        "commutative_algebra.commutative_algebra"
-      ],
-      "used_by": [
-        "bd_covers.brylinski_deligne_k2_extensions"
-      ]
-    },
-    {
-      "id": "number_theory.global_fields_adeles_and_reciprocity_symbols",
-      "title": "Global Fields, Adeles, and Reciprocity Symbols",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "global-fields",
-        "adeles",
-        "foundational-inputs"
-      ],
-      "primary_topic": "number_theory",
-      "topics": [
-        "number_theory"
-      ],
-      "topic": "number_theory",
-      "uses": [
-        "commutative_algebra.fields_and_field_extensions",
-        "number_theory.local_fields"
-      ],
-      "used_by": [
-        "bd_covers.local_and_global_metaplectic_covers"
-      ]
-    },
-    {
-      "id": "number_theory.local_fields",
-      "title": "Local Fields",
-      "kind": "topic",
-      "status": "admitted",
-      "tags": [
-        "external-background",
-        "local-fields",
-        "foundational-inputs"
-      ],
-      "primary_topic": "number_theory",
-      "topics": [
-        "number_theory"
-      ],
-      "topic": "number_theory",
-      "uses": [
-        "commutative_algebra.fields_and_field_extensions"
-      ],
-      "used_by": [
-        "bd_covers.local_and_global_metaplectic_covers",
-        "buildings_and_parahorics.bounded_subgroups_of_reductive_groups",
-        "buildings_and_parahorics.bruhat_tits_apartments",
-        "buildings_and_parahorics.reductive_groups_over_local_fields",
-        "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings",
-        "buildings_and_parahorics.valued_root_data",
-        "kottwitz_structures.kottwitz_homomorphism",
-        "kottwitz_structures.sigma_conjugacy_classes",
-        "number_theory.global_fields_adeles_and_reciprocity_symbols"
-      ]
-    },
-    {
-      "id": "reductive_structure.algebraic_tori",
-      "title": "Algebraic Tori",
-      "kind": "definition",
-      "status": "admitted",
-      "tags": [
-        "tori",
-        "reductive-structure"
-      ],
-      "primary_topic": "reductive_structure",
-      "topics": [
-        "reductive_structure"
-      ],
-      "topic": "reductive_structure",
-      "uses": [
-        "linear_algebraic_groups.linear_algebraic_groups"
-      ],
-      "used_by": [
-        "reductive_structure.borel_subgroups",
-        "reductive_structure.character_and_cocharacter_lattices",
-        "reductive_structure.connected_solvable_group_structure",
-        "reductive_structure.diagonalizable_groups_antiequivalence",
-        "reductive_structure.maximal_tori",
-        "reductive_structure.reductive_group_radical_and_derived_group",
-        "reductive_structure.reductive_groups",
-        "reductive_structure.split_reductive_groups",
-        "root_data_and_duality.chevalley_group_construction"
       ]
     },
     {
@@ -3775,7 +3740,7 @@
     {
       "id": "reductive_structure.borel_subgroups",
       "title": "Borel Subgroups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "borel-subgroups",
@@ -3788,8 +3753,8 @@
       "topic": "reductive_structure",
       "uses": [
         "linear_algebraic_groups.connected_components",
-        "reductive_structure.algebraic_tori",
-        "reductive_structure.solvable_groups"
+        "reductive_structure.solvable_groups",
+        "tori.algebraic_tori"
       ],
       "used_by": [
         "conjugacy_classes.springer_correspondence",
@@ -3856,7 +3821,7 @@
     {
       "id": "reductive_structure.central_isogenies",
       "title": "Central Isogenies",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "central-isogenies",
@@ -3874,34 +3839,6 @@
         "reductive_structure.derived_group_center_adjoint_sc_cover",
         "root_data_and_duality.central_isogenies_and_duality",
         "root_data_and_duality.isogeny_types_from_root_datum"
-      ]
-    },
-    {
-      "id": "reductive_structure.character_and_cocharacter_lattices",
-      "title": "Character and Cocharacter Lattices",
-      "kind": "definition",
-      "status": "admitted",
-      "tags": [
-        "characters",
-        "cocharacters",
-        "reductive-structure"
-      ],
-      "primary_topic": "reductive_structure",
-      "topics": [
-        "reductive_structure"
-      ],
-      "topic": "reductive_structure",
-      "uses": [
-        "reductive_structure.algebraic_tori"
-      ],
-      "used_by": [
-        "reductive_structure.diagonalizable_group_characterization",
-        "reductive_structure.diagonalizable_groups",
-        "reductive_structure.diagonalizable_groups_antiequivalence",
-        "reductive_structure.dynamic_method",
-        "reductive_structure.f_tori_galois_module_classification",
-        "reductive_structure.split_reductive_groups",
-        "root_data_and_duality.root_data"
       ]
     },
     {
@@ -3948,10 +3885,10 @@
       ],
       "topic": "reductive_structure",
       "uses": [
-        "reductive_structure.algebraic_tori",
         "reductive_structure.lie_kolchin_theorem",
         "reductive_structure.solvable_groups",
-        "reductive_structure.unipotent_groups"
+        "reductive_structure.unipotent_groups",
+        "tori.algebraic_tori"
       ],
       "used_by": [
         "reductive_structure.f_split_solvable_fixed_point_theorem",
@@ -3961,7 +3898,7 @@
     {
       "id": "reductive_structure.derived_group_center_adjoint_sc_cover",
       "title": "Derived Group, Center, Adjoint Group, and Simply Connected Cover",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "derived-group",
@@ -4001,7 +3938,6 @@
       ],
       "topic": "reductive_structure",
       "uses": [
-        "reductive_structure.character_and_cocharacter_lattices",
         "reductive_structure.diagonalizable_groups"
       ],
       "used_by": [
@@ -4011,7 +3947,7 @@
     {
       "id": "reductive_structure.diagonalizable_groups",
       "title": "Diagonalizable Groups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "diagonalizable-groups",
@@ -4021,14 +3957,18 @@
       "topics": [
         "reductive_structure"
       ],
+      "lean_declarations": [
+        "Langlands.Tori.diagonalizable",
+        "Langlands.Tori.Diagonalizable"
+      ],
       "topic": "reductive_structure",
       "uses": [
-        "linear_algebraic_groups.linear_algebraic_groups",
-        "reductive_structure.character_and_cocharacter_lattices"
+        "linear_algebraic_groups.linear_algebraic_groups"
       ],
       "used_by": [
         "reductive_structure.commutative_group_semisimple_unipotent_decomposition",
-        "reductive_structure.diagonalizable_group_characterization"
+        "reductive_structure.diagonalizable_group_characterization",
+        "tori.multiplicative_type_characterization"
       ]
     },
     {
@@ -4049,37 +3989,19 @@
         "reductive_structure",
         "root_data_and_duality"
       ],
+      "lean_declarations": [
+        "Langlands.Tori.diagCharEquiv",
+        "Langlands.Tori.diagHomEquiv",
+        "Langlands.Tori.diag_bialgEquiv_iff_addEquiv"
+      ],
       "topic": "reductive_structure",
       "uses": [
-        "reductive_structure.algebraic_tori",
-        "reductive_structure.character_and_cocharacter_lattices",
         "reductive_structure.diagonalizable_group_characterization"
       ],
       "used_by": [
-        "reductive_structure.f_tori_galois_module_classification"
-      ]
-    },
-    {
-      "id": "reductive_structure.dynamic_method",
-      "title": "The Dynamic Method",
-      "kind": "theorem",
-      "status": "admitted",
-      "tags": [
-        "dynamic-method",
-        "parabolic-subgroups",
-        "cocharacter",
-        "levi-decomposition"
-      ],
-      "primary_topic": "reductive_structure",
-      "topics": [
-        "reductive_structure"
-      ],
-      "topic": "reductive_structure",
-      "uses": [
-        "reductive_structure.character_and_cocharacter_lattices",
-        "reductive_structure.levi_subgroups_and_unipotent_radicals",
-        "reductive_structure.parabolic_subgroups",
-        "reductive_structure.reductive_groups"
+        "tori.f_tori_galois_module_classification",
+        "tori.multiplicative_type_characterization",
+        "tori.subtori_and_quotients"
       ]
     },
     {
@@ -4109,36 +4031,6 @@
       ],
       "used_by": [
         "reductive_structure.maximal_f_split_tori_are_conjugate"
-      ]
-    },
-    {
-      "id": "reductive_structure.f_tori_galois_module_classification",
-      "title": "F-Tori Are Classified by Galois Modules",
-      "kind": "theorem",
-      "status": "admitted",
-      "tags": [
-        "springer",
-        "torus",
-        "galois-module",
-        "f-group",
-        "theorem",
-        "reductive-structure"
-      ],
-      "primary_topic": "reductive_structure",
-      "topics": [
-        "reductive_structure",
-        "descent_and_forms"
-      ],
-      "topic": "reductive_structure",
-      "uses": [
-        "descent_and_forms.galois_groups_and_descent_data",
-        "descent_and_forms.rational_forms_of_linear_algebraic_groups",
-        "reductive_structure.character_and_cocharacter_lattices",
-        "reductive_structure.diagonalizable_groups_antiequivalence"
-      ],
-      "used_by": [
-        "reductive_structure.maximal_f_split_tori_are_conjugate",
-        "reductive_structure.maximal_f_tori_exist"
       ]
     },
     {
@@ -4172,7 +4064,7 @@
     {
       "id": "reductive_structure.levi_subgroups_and_unipotent_radicals",
       "title": "Levi Subgroups and Unipotent Radicals",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "levi-subgroups",
@@ -4190,7 +4082,6 @@
       ],
       "used_by": [
         "conjugacy_classes.bala_carter_classification",
-        "reductive_structure.dynamic_method",
         "reductive_structure.levi_decomposition_of_parabolics",
         "reductive_structure.reductive_groups",
         "root_data_and_duality.unipotent_radical_and_positive_roots"
@@ -4245,9 +4136,9 @@
       "topic": "reductive_structure",
       "uses": [
         "reductive_structure.f_split_solvable_fixed_point_theorem",
-        "reductive_structure.f_tori_galois_module_classification",
         "reductive_structure.maximal_f_tori_exist",
-        "reductive_structure.parabolic_subgroups"
+        "reductive_structure.parabolic_subgroups",
+        "tori.f_tori_galois_module_classification"
       ],
       "used_by": [
         "reductive_structure.parabolic_f_subgroups_levi_decomposition",
@@ -4277,8 +4168,8 @@
       "uses": [
         "descent_and_forms.f_subgroup_field_of_definition",
         "reductive_structure.cartan_subgroups_from_maximal_tori",
-        "reductive_structure.f_tori_galois_module_classification",
-        "reductive_structure.maximal_tori_are_conjugate"
+        "reductive_structure.maximal_tori_are_conjugate",
+        "tori.f_tori_galois_module_classification"
       ],
       "used_by": [
         "reductive_structure.maximal_f_split_tori_are_conjugate"
@@ -4287,7 +4178,7 @@
     {
       "id": "reductive_structure.maximal_tori",
       "title": "Maximal Tori",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "maximal-tori",
@@ -4299,8 +4190,8 @@
       ],
       "topic": "reductive_structure",
       "uses": [
-        "reductive_structure.algebraic_tori",
-        "reductive_structure.reductive_groups"
+        "reductive_structure.reductive_groups",
+        "tori.algebraic_tori"
       ],
       "used_by": [
         "conjugacy_classes.regular_elements",
@@ -4374,7 +4265,7 @@
     {
       "id": "reductive_structure.parabolic_subgroups",
       "title": "Parabolic Subgroups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "parabolic-subgroups",
@@ -4393,7 +4284,6 @@
         "buildings_and_parahorics.tits_buildings",
         "conjugacy_classes.bala_carter_classification",
         "reductive_structure.borel_subgroups_conjugacy_and_parabolics",
-        "reductive_structure.dynamic_method",
         "reductive_structure.levi_subgroups_and_unipotent_radicals",
         "reductive_structure.maximal_f_split_tori_are_conjugate",
         "reductive_structure.standard_parabolic_classification"
@@ -4419,15 +4309,15 @@
       ],
       "topic": "reductive_structure",
       "uses": [
-        "reductive_structure.algebraic_tori",
         "reductive_structure.reductive_groups",
-        "reductive_structure.semisimple_groups"
+        "reductive_structure.semisimple_groups",
+        "tori.algebraic_tori"
       ]
     },
     {
       "id": "reductive_structure.reductive_groups",
       "title": "Reductive Groups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "reductive-groups",
@@ -4439,10 +4329,10 @@
       ],
       "topic": "reductive_structure",
       "uses": [
-        "reductive_structure.algebraic_tori",
         "reductive_structure.levi_subgroups_and_unipotent_radicals",
         "reductive_structure.solvable_groups",
-        "reductive_structure.unipotent_groups"
+        "reductive_structure.unipotent_groups",
+        "tori.algebraic_tori"
       ],
       "used_by": [
         "bd_covers.brylinski_deligne_k2_extensions",
@@ -4461,7 +4351,6 @@
         "kottwitz_structures.algebraic_fundamental_group",
         "reductive_structure.central_isogenies",
         "reductive_structure.derived_group_center_adjoint_sc_cover",
-        "reductive_structure.dynamic_method",
         "reductive_structure.maximal_tori",
         "reductive_structure.parabolic_f_subgroups_levi_decomposition",
         "reductive_structure.reductive_group_radical_and_derived_group",
@@ -4477,7 +4366,7 @@
     {
       "id": "reductive_structure.semisimple_groups",
       "title": "Semisimple Groups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "semisimple-groups",
@@ -4498,7 +4387,7 @@
     {
       "id": "reductive_structure.solvable_groups",
       "title": "Solvable Groups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "solvable-groups",
@@ -4539,10 +4428,10 @@
       ],
       "topic": "reductive_structure",
       "uses": [
-        "reductive_structure.algebraic_tori",
-        "reductive_structure.character_and_cocharacter_lattices",
         "reductive_structure.maximal_tori",
-        "reductive_structure.reductive_groups"
+        "reductive_structure.reductive_groups",
+        "tori.algebraic_tori",
+        "tori.character_and_cocharacter_lattices"
       ]
     },
     {
@@ -4577,7 +4466,7 @@
     {
       "id": "reductive_structure.unipotent_groups",
       "title": "Unipotent Groups",
-      "kind": "definition",
+      "kind": "topic",
       "status": "admitted",
       "tags": [
         "unipotent-groups",
@@ -4847,12 +4736,13 @@
       "uses": [
         "affine_group_schemes.affine_group_scheme_definition",
         "affine_group_schemes.general_linear_group_scheme",
-        "reductive_structure.algebraic_tori",
         "root_data_and_duality.based_root_data",
         "root_data_and_duality.chevalley_basis",
+        "root_data_and_duality.chevalley_isomorphism_theorem",
         "root_data_and_duality.pinnings",
         "root_data_and_duality.rank_one_subgroups_sl2_embeddings",
-        "root_data_and_duality.root_data"
+        "root_data_and_duality.root_data",
+        "tori.algebraic_tori"
       ],
       "used_by": [
         "root_data_and_duality.chevalley_existence_theorem"
@@ -4886,6 +4776,7 @@
       ],
       "used_by": [
         "root_data_and_duality.chevalley_existence_theorem",
+        "root_data_and_duality.chevalley_group_construction",
         "root_data_and_duality.f_split_chevalley_isomorphism_theorem"
       ]
     },
@@ -4954,7 +4845,7 @@
       ],
       "topic": "root_data_and_duality",
       "uses": [
-        "commutative_algebra.basic_combinatorics",
+        "foundational_inputs.basic_combinatorics",
         "root_data_and_duality.weyl_groups"
       ],
       "used_by": [
@@ -4974,12 +4865,12 @@
       ],
       "topic": "root_data_and_duality",
       "uses": [
-        "root_data_and_duality.root_pairing"
+        "root_data_and_duality.root_pairing",
+        "root_data_and_duality.root_systems"
       ],
       "used_by": [
         "root_data_and_duality.classification_of_root_systems",
-        "root_data_and_duality.root_chains",
-        "root_data_and_duality.root_systems"
+        "root_data_and_duality.root_chains"
       ]
     },
     {
@@ -5459,6 +5350,9 @@
       "status": "admitted",
       "tags": [
         "root-data",
+        "root-pairing",
+        "character-lattice",
+        "mathlib-aligned",
         "root-data-and-duality"
       ],
       "primary_topic": "root_data_and_duality",
@@ -5467,13 +5361,12 @@
       ],
       "topic": "root_data_and_duality",
       "uses": [
-        "reductive_structure.character_and_cocharacter_lattices",
         "root_data_and_duality.root_pairing",
-        "root_data_and_duality.roots_coroots_and_root_subgroups"
+        "root_data_and_duality.root_systems",
+        "tori.character_and_cocharacter_lattices"
       ],
       "used_by": [
         "bd_covers.brylinski_deligne_k2_extensions",
-        "buildings_and_parahorics.iwahori_weyl_group",
         "buildings_and_parahorics.valued_root_data",
         "classical_and_exceptional_groups.classical_groups",
         "descent_and_forms.rational_forms_of_reductive_groups",
@@ -5600,6 +5493,8 @@
       "status": "admitted",
       "tags": [
         "root-systems",
+        "root-pairing",
+        "mathlib-aligned",
         "root-data-and-duality"
       ],
       "primary_topic": "root_data_and_duality",
@@ -5608,7 +5503,6 @@
       ],
       "topic": "root_data_and_duality",
       "uses": [
-        "root_data_and_duality.crystallographic_and_reduced",
         "root_data_and_duality.root_pairing"
       ],
       "used_by": [
@@ -5618,7 +5512,9 @@
         "conjugacy_classes.weighted_dynkin_diagrams",
         "root_data_and_duality.cartan_matrices_and_dynkin_diagrams",
         "root_data_and_duality.chevalley_basis",
+        "root_data_and_duality.crystallographic_and_reduced",
         "root_data_and_duality.dual_root_systems",
+        "root_data_and_duality.root_data",
         "root_data_and_duality.weyl_group_generated_by_reflections",
         "root_data_and_duality.weyl_groups"
       ]
@@ -5646,7 +5542,6 @@
       "used_by": [
         "root_data_and_duality.pinnings",
         "root_data_and_duality.rank_one_subgroups_sl2_embeddings",
-        "root_data_and_duality.root_data",
         "root_data_and_duality.root_datum_from_reductive_group",
         "root_data_and_duality.root_subgroups_generate_reductive_group",
         "root_data_and_duality.unipotent_radical_and_positive_roots",
@@ -5750,6 +5645,537 @@
         "root_data_and_duality.weyl_group_coxeter_structure",
         "root_data_and_duality.weyl_group_generated_by_reflections"
       ]
+    },
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "tori",
+        "torus"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "affine_group_schemes.multiplicative_group_scheme",
+        "linear_algebraic_groups.linear_algebraic_groups"
+      ],
+      "used_by": [
+        "reductive_structure.borel_subgroups",
+        "reductive_structure.connected_solvable_group_structure",
+        "reductive_structure.maximal_tori",
+        "reductive_structure.reductive_group_radical_and_derived_group",
+        "reductive_structure.reductive_groups",
+        "reductive_structure.split_reductive_groups",
+        "root_data_and_duality.chevalley_group_construction",
+        "tori.anisotropic_torus",
+        "tori.character_and_cocharacter_lattices",
+        "tori.f_tori_galois_module_classification",
+        "tori.induced_resolution",
+        "tori.induced_tori",
+        "tori.multiplicative_type_characterization",
+        "tori.norm_one_torus",
+        "tori.rank_one_classification",
+        "tori.split_anisotropic_decomposition",
+        "tori.split_torus",
+        "tori.splitting_field",
+        "tori.subtori_and_quotients",
+        "tori.tamely_ramified_torus",
+        "tori.torus_definition",
+        "tori.unramified_torus",
+        "tori.weakly_induced_torus",
+        "tori.weil_restriction_of_tori"
+      ]
+    },
+    {
+      "id": "tori.anisotropic_torus",
+      "title": "Anisotropic Torus",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "anisotropic",
+        "definition",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.character_and_cocharacter_lattices",
+        "tori.torus_definition"
+      ],
+      "used_by": [
+        "tori.norm_one_torus",
+        "tori.split_anisotropic_decomposition"
+      ]
+    },
+    {
+      "id": "tori.character_and_cocharacter_lattices",
+      "title": "Character and Cocharacter Lattices",
+      "kind": "topic",
+      "status": "admitted",
+      "tags": [
+        "characters",
+        "cocharacters",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "lean_declarations": [
+        "Langlands.Tori.characterGroup",
+        "Langlands.Tori.cocharacterHom",
+        "Langlands.Tori.diagCharEquiv",
+        "Langlands.Tori.diagCocharEquiv"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori"
+      ],
+      "used_by": [
+        "reductive_structure.split_reductive_groups",
+        "root_data_and_duality.root_data",
+        "tori.anisotropic_torus",
+        "tori.f_tori_galois_module_classification"
+      ]
+    },
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "springer",
+        "torus",
+        "galois-module",
+        "f-group",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori",
+        "descent_and_forms"
+      ],
+      "lean_declarations": [
+        "Langlands.Tori.diagCharEquiv",
+        "Langlands.Tori.diag_bialgEquiv_iff_addEquiv",
+        "Langlands.Tori.twistedGroupAlgebra",
+        "Langlands.Tori.twistedGroupAlgebra_span_top"
+      ],
+      "topic": "tori",
+      "uses": [
+        "descent_and_forms.galois_descent_for_vector_spaces",
+        "descent_and_forms.galois_groups_and_descent_data",
+        "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+        "reductive_structure.diagonalizable_groups_antiequivalence",
+        "tori.algebraic_tori",
+        "tori.character_and_cocharacter_lattices"
+      ],
+      "used_by": [
+        "reductive_structure.maximal_f_split_tori_are_conjugate",
+        "reductive_structure.maximal_f_tori_exist",
+        "tori.induced_resolution",
+        "tori.rank_one_classification",
+        "tori.split_anisotropic_decomposition",
+        "tori.splitting_field",
+        "tori.subtori_and_quotients",
+        "tori.weil_restriction_of_tori"
+      ]
+    },
+    {
+      "id": "tori.induced_resolution",
+      "title": "Resolution of a Torus by Induced Tori",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "induced",
+        "resolution",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.f_tori_galois_module_classification",
+        "tori.induced_tori",
+        "tori.subtori_and_quotients",
+        "tori.torus_definition",
+        "tori.weil_restriction_of_tori"
+      ]
+    },
+    {
+      "id": "tori.induced_tori",
+      "title": "Induced Tori",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "induced",
+        "quasi-trivial",
+        "definition",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.torus_definition",
+        "tori.weil_restriction_of_tori"
+      ],
+      "used_by": [
+        "tori.induced_resolution",
+        "tori.weakly_induced_torus"
+      ]
+    },
+    {
+      "id": "tori.multiplicative_type_characterization",
+      "title": "Tori among Groups of Multiplicative Type",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "multiplicative-type",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "reductive_structure.diagonalizable_groups",
+        "reductive_structure.diagonalizable_groups_antiequivalence",
+        "tori.algebraic_tori",
+        "tori.torus_definition"
+      ]
+    },
+    {
+      "id": "tori.norm_one_torus",
+      "title": "Norm-One Torus of a Separable Extension",
+      "kind": "example",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "norm-one",
+        "example",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.anisotropic_torus",
+        "tori.subtori_and_quotients",
+        "tori.torus_definition",
+        "tori.weil_restriction_of_tori"
+      ],
+      "used_by": [
+        "tori.rank_one_classification"
+      ]
+    },
+    {
+      "id": "tori.rank_one_classification",
+      "title": "Classification of Rank-One Tori",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "rank-one",
+        "classification",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.f_tori_galois_module_classification",
+        "tori.norm_one_torus",
+        "tori.split_torus",
+        "tori.torus_definition"
+      ]
+    },
+    {
+      "id": "tori.split_anisotropic_decomposition",
+      "title": "Split-Anisotropic Decomposition of a Torus",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "split",
+        "anisotropic",
+        "decomposition",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.anisotropic_torus",
+        "tori.f_tori_galois_module_classification",
+        "tori.split_torus",
+        "tori.subtori_and_quotients",
+        "tori.torus_definition"
+      ]
+    },
+    {
+      "id": "tori.split_torus",
+      "title": "Split Torus",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "split",
+        "definition",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "lean_declarations": [
+        "Langlands.Tori.splitTorus",
+        "Langlands.Tori.SplitTorus"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.torus_definition"
+      ],
+      "used_by": [
+        "tori.rank_one_classification",
+        "tori.split_anisotropic_decomposition",
+        "tori.tamely_ramified_torus",
+        "tori.unramified_torus"
+      ]
+    },
+    {
+      "id": "tori.splitting_field",
+      "title": "The Minimal Splitting Field of a Torus",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "splitting-field",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.f_tori_galois_module_classification",
+        "tori.torus_definition"
+      ],
+      "used_by": [
+        "tori.unramified_torus"
+      ]
+    },
+    {
+      "id": "tori.subtori_and_quotients",
+      "title": "Subtori and Quotients via the Character Lattice",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "subtorus",
+        "quotient",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "reductive_structure.diagonalizable_groups_antiequivalence",
+        "tori.algebraic_tori",
+        "tori.f_tori_galois_module_classification",
+        "tori.torus_definition"
+      ],
+      "used_by": [
+        "tori.induced_resolution",
+        "tori.norm_one_torus",
+        "tori.split_anisotropic_decomposition"
+      ]
+    },
+    {
+      "id": "tori.tamely_ramified_torus",
+      "title": "Tamely Ramified Torus",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "tame",
+        "ramification",
+        "definition",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "foundational_inputs.local_fields",
+        "tori.algebraic_tori",
+        "tori.split_torus",
+        "tori.torus_definition",
+        "tori.unramified_torus"
+      ],
+      "used_by": [
+        "tori.weakly_induced_torus"
+      ]
+    },
+    {
+      "id": "tori.torus_definition",
+      "title": "Algebraic Torus",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "definition",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "affine_group_schemes.base_change",
+        "affine_group_schemes.multiplicative_group_scheme",
+        "linear_algebraic_groups.linear_algebraic_groups",
+        "tori.algebraic_tori"
+      ],
+      "used_by": [
+        "tori.anisotropic_torus",
+        "tori.induced_resolution",
+        "tori.induced_tori",
+        "tori.multiplicative_type_characterization",
+        "tori.norm_one_torus",
+        "tori.rank_one_classification",
+        "tori.split_anisotropic_decomposition",
+        "tori.split_torus",
+        "tori.splitting_field",
+        "tori.subtori_and_quotients",
+        "tori.tamely_ramified_torus",
+        "tori.unramified_torus",
+        "tori.weakly_induced_torus",
+        "tori.weil_restriction_of_tori"
+      ]
+    },
+    {
+      "id": "tori.unramified_torus",
+      "title": "Unramified Torus",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "unramified",
+        "definition",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "foundational_inputs.local_fields",
+        "tori.algebraic_tori",
+        "tori.split_torus",
+        "tori.splitting_field",
+        "tori.torus_definition"
+      ],
+      "used_by": [
+        "tori.tamely_ramified_torus"
+      ]
+    },
+    {
+      "id": "tori.weakly_induced_torus",
+      "title": "Weakly Induced Torus",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "weakly-induced",
+        "ramification",
+        "definition",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "foundational_inputs.local_fields",
+        "tori.algebraic_tori",
+        "tori.induced_tori",
+        "tori.tamely_ramified_torus",
+        "tori.torus_definition"
+      ]
+    },
+    {
+      "id": "tori.weil_restriction_of_tori",
+      "title": "Weil Restriction of Tori",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "torus",
+        "weil-restriction",
+        "theorem",
+        "tori"
+      ],
+      "primary_topic": "tori",
+      "topics": [
+        "tori"
+      ],
+      "topic": "tori",
+      "uses": [
+        "tori.algebraic_tori",
+        "tori.f_tori_galois_module_classification",
+        "tori.torus_definition"
+      ],
+      "used_by": [
+        "tori.induced_resolution",
+        "tori.induced_tori",
+        "tori.norm_one_torus"
+      ]
     }
   ],
   "edges": [
@@ -5778,7 +6204,7 @@
       "to": "affine_group_schemes.affine_group_scheme_definition"
     },
     {
-      "from": "algebraic_geometry.affine_schemes",
+      "from": "foundational_inputs.affine_schemes",
       "to": "affine_group_schemes.affine_group_scheme_definition"
     },
     {
@@ -5790,11 +6216,11 @@
       "to": "affine_group_schemes.algebra_hom_convolution"
     },
     {
-      "from": "commutative_algebra.commutative_algebra",
+      "from": "foundational_inputs.commutative_algebra",
       "to": "affine_group_schemes.algebra_hom_convolution"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.algebra_hom_convolution"
     },
     {
@@ -5814,7 +6240,7 @@
       "to": "affine_group_schemes.antipode_anti_multiplicativity"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.antipode_anti_multiplicativity"
     },
     {
@@ -5822,7 +6248,7 @@
       "to": "affine_group_schemes.antipode_multiplicativity_commutative_hopf"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.antipode_multiplicativity_commutative_hopf"
     },
     {
@@ -5830,7 +6256,7 @@
       "to": "affine_group_schemes.base_change"
     },
     {
-      "from": "commutative_algebra.fields_and_field_extensions",
+      "from": "foundational_inputs.fields_and_field_extensions",
       "to": "affine_group_schemes.base_change"
     },
     {
@@ -5846,7 +6272,7 @@
       "to": "affine_group_schemes.comodule_definition"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.comodule_definition"
     },
     {
@@ -5862,19 +6288,19 @@
       "to": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme"
     },
     {
-      "from": "algebraic_geometry.affine_schemes",
+      "from": "foundational_inputs.affine_schemes",
       "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras"
     },
     {
-      "from": "commutative_algebra.commutative_algebra",
+      "from": "foundational_inputs.commutative_algebra",
       "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras"
     },
     {
@@ -5926,11 +6352,11 @@
       "to": "affine_group_schemes.hopf_spec_functor"
     },
     {
-      "from": "algebraic_geometry.affine_schemes",
+      "from": "foundational_inputs.affine_schemes",
       "to": "affine_group_schemes.hopf_spec_functor"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.hopf_spec_functor"
     },
     {
@@ -5946,7 +6372,7 @@
       "to": "affine_group_schemes.hopf_spec_grpobj_via_yoneda"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "affine_group_schemes.multiplication_is_coalgebra_hom"
     },
     {
@@ -6010,7 +6436,7 @@
       "to": "affine_group_schemes.spec_representability_via_global_sections"
     },
     {
-      "from": "algebraic_geometry.affine_schemes",
+      "from": "foundational_inputs.affine_schemes",
       "to": "affine_group_schemes.spec_representability_via_global_sections"
     },
     {
@@ -6066,15 +6492,11 @@
       "to": "affine_group_schemes.trivial_representation_example"
     },
     {
-      "from": "commutative_algebra.commutative_algebra",
-      "to": "algebraic_geometry.affine_schemes"
-    },
-    {
       "from": "bd_covers.central_extensions_of_algebraic_groups",
       "to": "bd_covers.brylinski_deligne_k2_extensions"
     },
     {
-      "from": "number_theory.algebraic_k_theory_and_k2",
+      "from": "foundational_inputs.algebraic_k_theory_and_k2",
       "to": "bd_covers.brylinski_deligne_k2_extensions"
     },
     {
@@ -6090,7 +6512,7 @@
       "to": "bd_covers.central_extensions_of_algebraic_groups"
     },
     {
-      "from": "commutative_algebra.hopf_algebras",
+      "from": "foundational_inputs.hopf_algebras",
       "to": "bd_covers.central_extensions_of_algebraic_groups"
     },
     {
@@ -6118,11 +6540,11 @@
       "to": "bd_covers.local_and_global_metaplectic_covers"
     },
     {
-      "from": "number_theory.global_fields_adeles_and_reciprocity_symbols",
+      "from": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols",
       "to": "bd_covers.local_and_global_metaplectic_covers"
     },
     {
-      "from": "number_theory.local_fields",
+      "from": "foundational_inputs.local_fields",
       "to": "bd_covers.local_and_global_metaplectic_covers"
     },
     {
@@ -6158,14 +6580,6 @@
       "to": "buildings_and_parahorics.bn_pairs_and_tits_systems"
     },
     {
-      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
-      "to": "buildings_and_parahorics.bounded_subgroups_of_reductive_groups"
-    },
-    {
-      "from": "number_theory.local_fields",
-      "to": "buildings_and_parahorics.bounded_subgroups_of_reductive_groups"
-    },
-    {
       "from": "buildings_and_parahorics.affine_weyl_groups",
       "to": "buildings_and_parahorics.bruhat_tits_apartments"
     },
@@ -6178,7 +6592,7 @@
       "to": "buildings_and_parahorics.bruhat_tits_apartments"
     },
     {
-      "from": "number_theory.local_fields",
+      "from": "foundational_inputs.local_fields",
       "to": "buildings_and_parahorics.bruhat_tits_apartments"
     },
     {
@@ -6190,44 +6604,12 @@
       "to": "buildings_and_parahorics.bruhat_tits_buildings"
     },
     {
-      "from": "buildings_and_parahorics.affine_root_systems",
-      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
-    },
-    {
-      "from": "buildings_and_parahorics.moy_prasad_filtrations",
-      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
-    },
-    {
-      "from": "buildings_and_parahorics.parahoric_subgroups",
-      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
-    },
-    {
-      "from": "buildings_and_parahorics.valued_root_data",
-      "to": "buildings_and_parahorics.concave_functions_and_subgroups"
-    },
-    {
       "from": "root_data_and_duality.coxeter_systems_and_bruhat_order",
       "to": "buildings_and_parahorics.coxeter_complexes"
     },
     {
       "from": "buildings_and_parahorics.bruhat_tits_buildings",
       "to": "buildings_and_parahorics.facets_in_bruhat_tits_buildings"
-    },
-    {
-      "from": "buildings_and_parahorics.affine_weyl_groups",
-      "to": "buildings_and_parahorics.iwahori_weyl_group"
-    },
-    {
-      "from": "buildings_and_parahorics.parahoric_subgroups",
-      "to": "buildings_and_parahorics.iwahori_weyl_group"
-    },
-    {
-      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
-      "to": "buildings_and_parahorics.iwahori_weyl_group"
-    },
-    {
-      "from": "root_data_and_duality.root_data",
-      "to": "buildings_and_parahorics.iwahori_weyl_group"
     },
     {
       "from": "buildings_and_parahorics.parahoric_subgroups",
@@ -6254,7 +6636,7 @@
       "to": "buildings_and_parahorics.parahoric_subgroups"
     },
     {
-      "from": "number_theory.local_fields",
+      "from": "foundational_inputs.local_fields",
       "to": "buildings_and_parahorics.reductive_groups_over_local_fields"
     },
     {
@@ -6274,32 +6656,12 @@
       "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
     },
     {
+      "from": "foundational_inputs.local_fields",
+      "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
+    },
+    {
       "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
       "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
-    },
-    {
-      "from": "number_theory.local_fields",
-      "to": "buildings_and_parahorics.smooth_affine_group_schemes_over_valuation_rings"
-    },
-    {
-      "from": "buildings_and_parahorics.bruhat_tits_buildings",
-      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
-    },
-    {
-      "from": "buildings_and_parahorics.parahoric_group_schemes",
-      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
-    },
-    {
-      "from": "buildings_and_parahorics.parahoric_subgroups",
-      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
-    },
-    {
-      "from": "buildings_and_parahorics.reductive_groups_over_local_fields",
-      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
-    },
-    {
-      "from": "descent_and_forms.quasi_split_forms",
-      "to": "buildings_and_parahorics.special_and_hyperspecial_points"
     },
     {
       "from": "buildings_and_parahorics.bn_pairs_and_tits_systems",
@@ -6322,7 +6684,7 @@
       "to": "buildings_and_parahorics.valued_root_data"
     },
     {
-      "from": "number_theory.local_fields",
+      "from": "foundational_inputs.local_fields",
       "to": "buildings_and_parahorics.valued_root_data"
     },
     {
@@ -6360,10 +6722,6 @@
     {
       "from": "root_data_and_duality.root_systems",
       "to": "classical_and_exceptional_groups.exceptional_groups"
-    },
-    {
-      "from": "commutative_algebra.commutative_algebra",
-      "to": "commutative_algebra.hopf_algebras"
     },
     {
       "from": "conjugacy_classes.lie_algebras_of_reductive_groups",
@@ -6662,7 +7020,11 @@
       "to": "descent_and_forms.galois_cohomology"
     },
     {
-      "from": "commutative_algebra.fields_and_field_extensions",
+      "from": "descent_and_forms.galois_groups_and_descent_data",
+      "to": "descent_and_forms.galois_descent_for_vector_spaces"
+    },
+    {
+      "from": "foundational_inputs.fields_and_field_extensions",
       "to": "descent_and_forms.galois_groups_and_descent_data"
     },
     {
@@ -6818,6 +7180,34 @@
       "to": "descent_and_forms.vogan_diagrams"
     },
     {
+      "from": "foundational_inputs.commutative_algebra",
+      "to": "foundational_inputs.affine_schemes"
+    },
+    {
+      "from": "foundational_inputs.commutative_algebra",
+      "to": "foundational_inputs.algebraic_k_theory_and_k2"
+    },
+    {
+      "from": "foundational_inputs.fields_and_field_extensions",
+      "to": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols"
+    },
+    {
+      "from": "foundational_inputs.local_fields",
+      "to": "foundational_inputs.global_fields_adeles_and_reciprocity_symbols"
+    },
+    {
+      "from": "foundational_inputs.commutative_algebra",
+      "to": "foundational_inputs.hopf_algebras"
+    },
+    {
+      "from": "foundational_inputs.fields_and_field_extensions",
+      "to": "foundational_inputs.local_fields"
+    },
+    {
+      "from": "foundational_inputs.hopf_algebras",
+      "to": "foundational_inputs.quantum_group_definition"
+    },
+    {
       "from": "buildings_and_parahorics.affine_weyl_groups",
       "to": "kottwitz_structures.admissible_sets"
     },
@@ -6866,11 +7256,11 @@
       "to": "kottwitz_structures.isocrystals_with_g_structure"
     },
     {
-      "from": "kottwitz_structures.algebraic_fundamental_group",
+      "from": "foundational_inputs.local_fields",
       "to": "kottwitz_structures.kottwitz_homomorphism"
     },
     {
-      "from": "number_theory.local_fields",
+      "from": "kottwitz_structures.algebraic_fundamental_group",
       "to": "kottwitz_structures.kottwitz_homomorphism"
     },
     {
@@ -6898,7 +7288,7 @@
       "to": "kottwitz_structures.sigma_conjugacy_classes"
     },
     {
-      "from": "number_theory.local_fields",
+      "from": "foundational_inputs.local_fields",
       "to": "kottwitz_structures.sigma_conjugacy_classes"
     },
     {
@@ -7026,6 +7416,22 @@
       "to": "linear_algebraic_groups.lie_algebra_of_algebraic_group"
     },
     {
+      "from": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
+    },
+    {
+      "from": "foundational_inputs.affine_schemes",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
+    },
+    {
+      "from": "foundational_inputs.fields_and_field_extensions",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
+    },
+    {
+      "from": "foundational_inputs.hopf_algebras",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition"
+    },
+    {
       "from": "affine_group_schemes.affine_algebraic_groups",
       "to": "linear_algebraic_groups.linear_algebraic_groups"
     },
@@ -7070,7 +7476,7 @@
       "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
     },
     {
-      "from": "algebraic_geometry.affine_schemes",
+      "from": "foundational_inputs.affine_schemes",
       "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras"
     },
     {
@@ -7098,26 +7504,6 @@
       "to": "linear_algebraic_groups.unipotent_subgroups_are_triangularizable"
     },
     {
-      "from": "commutative_algebra.commutative_algebra",
-      "to": "number_theory.algebraic_k_theory_and_k2"
-    },
-    {
-      "from": "commutative_algebra.fields_and_field_extensions",
-      "to": "number_theory.global_fields_adeles_and_reciprocity_symbols"
-    },
-    {
-      "from": "number_theory.local_fields",
-      "to": "number_theory.global_fields_adeles_and_reciprocity_symbols"
-    },
-    {
-      "from": "commutative_algebra.fields_and_field_extensions",
-      "to": "number_theory.local_fields"
-    },
-    {
-      "from": "linear_algebraic_groups.linear_algebraic_groups",
-      "to": "reductive_structure.algebraic_tori"
-    },
-    {
       "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
       "to": "reductive_structure.borel_fixed_point_theorem"
     },
@@ -7134,11 +7520,11 @@
       "to": "reductive_structure.borel_subgroups"
     },
     {
-      "from": "reductive_structure.algebraic_tori",
+      "from": "reductive_structure.solvable_groups",
       "to": "reductive_structure.borel_subgroups"
     },
     {
-      "from": "reductive_structure.solvable_groups",
+      "from": "tori.algebraic_tori",
       "to": "reductive_structure.borel_subgroups"
     },
     {
@@ -7170,10 +7556,6 @@
       "to": "reductive_structure.central_isogenies"
     },
     {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "reductive_structure.character_and_cocharacter_lattices"
-    },
-    {
       "from": "linear_algebraic_groups.jordan_decomposition_in_algebraic_group",
       "to": "reductive_structure.commutative_group_semisimple_unipotent_decomposition"
     },
@@ -7184,10 +7566,6 @@
     {
       "from": "reductive_structure.unipotent_groups",
       "to": "reductive_structure.commutative_group_semisimple_unipotent_decomposition"
-    },
-    {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "reductive_structure.connected_solvable_group_structure"
     },
     {
       "from": "reductive_structure.lie_kolchin_theorem",
@@ -7202,16 +7580,16 @@
       "to": "reductive_structure.connected_solvable_group_structure"
     },
     {
+      "from": "tori.algebraic_tori",
+      "to": "reductive_structure.connected_solvable_group_structure"
+    },
+    {
       "from": "reductive_structure.central_isogenies",
       "to": "reductive_structure.derived_group_center_adjoint_sc_cover"
     },
     {
       "from": "reductive_structure.reductive_groups",
       "to": "reductive_structure.derived_group_center_adjoint_sc_cover"
-    },
-    {
-      "from": "reductive_structure.character_and_cocharacter_lattices",
-      "to": "reductive_structure.diagonalizable_group_characterization"
     },
     {
       "from": "reductive_structure.diagonalizable_groups",
@@ -7222,36 +7600,8 @@
       "to": "reductive_structure.diagonalizable_groups"
     },
     {
-      "from": "reductive_structure.character_and_cocharacter_lattices",
-      "to": "reductive_structure.diagonalizable_groups"
-    },
-    {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "reductive_structure.diagonalizable_groups_antiequivalence"
-    },
-    {
-      "from": "reductive_structure.character_and_cocharacter_lattices",
-      "to": "reductive_structure.diagonalizable_groups_antiequivalence"
-    },
-    {
       "from": "reductive_structure.diagonalizable_group_characterization",
       "to": "reductive_structure.diagonalizable_groups_antiequivalence"
-    },
-    {
-      "from": "reductive_structure.character_and_cocharacter_lattices",
-      "to": "reductive_structure.dynamic_method"
-    },
-    {
-      "from": "reductive_structure.levi_subgroups_and_unipotent_radicals",
-      "to": "reductive_structure.dynamic_method"
-    },
-    {
-      "from": "reductive_structure.parabolic_subgroups",
-      "to": "reductive_structure.dynamic_method"
-    },
-    {
-      "from": "reductive_structure.reductive_groups",
-      "to": "reductive_structure.dynamic_method"
     },
     {
       "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
@@ -7268,22 +7618,6 @@
     {
       "from": "reductive_structure.lie_kolchin_theorem",
       "to": "reductive_structure.f_split_solvable_fixed_point_theorem"
-    },
-    {
-      "from": "descent_and_forms.galois_groups_and_descent_data",
-      "to": "reductive_structure.f_tori_galois_module_classification"
-    },
-    {
-      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
-      "to": "reductive_structure.f_tori_galois_module_classification"
-    },
-    {
-      "from": "reductive_structure.character_and_cocharacter_lattices",
-      "to": "reductive_structure.f_tori_galois_module_classification"
-    },
-    {
-      "from": "reductive_structure.diagonalizable_groups_antiequivalence",
-      "to": "reductive_structure.f_tori_galois_module_classification"
     },
     {
       "from": "reductive_structure.levi_subgroups_and_unipotent_radicals",
@@ -7322,15 +7656,15 @@
       "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
     },
     {
-      "from": "reductive_structure.f_tori_galois_module_classification",
-      "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
-    },
-    {
       "from": "reductive_structure.maximal_f_tori_exist",
       "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
     },
     {
       "from": "reductive_structure.parabolic_subgroups",
+      "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
       "to": "reductive_structure.maximal_f_split_tori_are_conjugate"
     },
     {
@@ -7342,19 +7676,19 @@
       "to": "reductive_structure.maximal_f_tori_exist"
     },
     {
-      "from": "reductive_structure.f_tori_galois_module_classification",
-      "to": "reductive_structure.maximal_f_tori_exist"
-    },
-    {
       "from": "reductive_structure.maximal_tori_are_conjugate",
       "to": "reductive_structure.maximal_f_tori_exist"
     },
     {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "reductive_structure.maximal_tori"
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "reductive_structure.maximal_f_tori_exist"
     },
     {
       "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.maximal_tori"
+    },
+    {
+      "from": "tori.algebraic_tori",
       "to": "reductive_structure.maximal_tori"
     },
     {
@@ -7390,10 +7724,6 @@
       "to": "reductive_structure.parabolic_subgroups"
     },
     {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "reductive_structure.reductive_group_radical_and_derived_group"
-    },
-    {
       "from": "reductive_structure.reductive_groups",
       "to": "reductive_structure.reductive_group_radical_and_derived_group"
     },
@@ -7402,8 +7732,8 @@
       "to": "reductive_structure.reductive_group_radical_and_derived_group"
     },
     {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "reductive_structure.reductive_groups"
+      "from": "tori.algebraic_tori",
+      "to": "reductive_structure.reductive_group_radical_and_derived_group"
     },
     {
       "from": "reductive_structure.levi_subgroups_and_unipotent_radicals",
@@ -7415,6 +7745,10 @@
     },
     {
       "from": "reductive_structure.unipotent_groups",
+      "to": "reductive_structure.reductive_groups"
+    },
+    {
+      "from": "tori.algebraic_tori",
       "to": "reductive_structure.reductive_groups"
     },
     {
@@ -7430,19 +7764,19 @@
       "to": "reductive_structure.solvable_groups"
     },
     {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "reductive_structure.split_reductive_groups"
-    },
-    {
-      "from": "reductive_structure.character_and_cocharacter_lattices",
-      "to": "reductive_structure.split_reductive_groups"
-    },
-    {
       "from": "reductive_structure.maximal_tori",
       "to": "reductive_structure.split_reductive_groups"
     },
     {
       "from": "reductive_structure.reductive_groups",
+      "to": "reductive_structure.split_reductive_groups"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "reductive_structure.split_reductive_groups"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
       "to": "reductive_structure.split_reductive_groups"
     },
     {
@@ -7558,15 +7892,15 @@
       "to": "root_data_and_duality.chevalley_group_construction"
     },
     {
-      "from": "reductive_structure.algebraic_tori",
-      "to": "root_data_and_duality.chevalley_group_construction"
-    },
-    {
       "from": "root_data_and_duality.based_root_data",
       "to": "root_data_and_duality.chevalley_group_construction"
     },
     {
       "from": "root_data_and_duality.chevalley_basis",
+      "to": "root_data_and_duality.chevalley_group_construction"
+    },
+    {
+      "from": "root_data_and_duality.chevalley_isomorphism_theorem",
       "to": "root_data_and_duality.chevalley_group_construction"
     },
     {
@@ -7579,6 +7913,10 @@
     },
     {
       "from": "root_data_and_duality.root_data",
+      "to": "root_data_and_duality.chevalley_group_construction"
+    },
+    {
+      "from": "tori.algebraic_tori",
       "to": "root_data_and_duality.chevalley_group_construction"
     },
     {
@@ -7630,7 +7968,7 @@
       "to": "root_data_and_duality.classification_of_split_reductive_groups"
     },
     {
-      "from": "commutative_algebra.basic_combinatorics",
+      "from": "foundational_inputs.basic_combinatorics",
       "to": "root_data_and_duality.coxeter_systems_and_bruhat_order"
     },
     {
@@ -7639,6 +7977,10 @@
     },
     {
       "from": "root_data_and_duality.root_pairing",
+      "to": "root_data_and_duality.crystallographic_and_reduced"
+    },
+    {
+      "from": "root_data_and_duality.root_systems",
       "to": "root_data_and_duality.crystallographic_and_reduced"
     },
     {
@@ -7834,15 +8176,15 @@
       "to": "root_data_and_duality.root_chains"
     },
     {
-      "from": "reductive_structure.character_and_cocharacter_lattices",
-      "to": "root_data_and_duality.root_data"
-    },
-    {
       "from": "root_data_and_duality.root_pairing",
       "to": "root_data_and_duality.root_data"
     },
     {
-      "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
+      "from": "root_data_and_duality.root_systems",
+      "to": "root_data_and_duality.root_data"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
       "to": "root_data_and_duality.root_data"
     },
     {
@@ -7884,10 +8226,6 @@
     {
       "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
       "to": "root_data_and_duality.root_subgroups_generate_reductive_group"
-    },
-    {
-      "from": "root_data_and_duality.crystallographic_and_reduced",
-      "to": "root_data_and_duality.root_systems"
     },
     {
       "from": "root_data_and_duality.root_pairing",
@@ -7952,6 +8290,294 @@
     {
       "from": "root_data_and_duality.roots_coroots_and_root_subgroups",
       "to": "root_data_and_duality.weyl_groups"
+    },
+    {
+      "from": "affine_group_schemes.multiplicative_group_scheme",
+      "to": "tori.algebraic_tori"
+    },
+    {
+      "from": "linear_algebraic_groups.linear_algebraic_groups",
+      "to": "tori.algebraic_tori"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.anisotropic_torus"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
+      "to": "tori.anisotropic_torus"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.anisotropic_torus"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.character_and_cocharacter_lattices"
+    },
+    {
+      "from": "descent_and_forms.galois_descent_for_vector_spaces",
+      "to": "tori.f_tori_galois_module_classification"
+    },
+    {
+      "from": "descent_and_forms.galois_groups_and_descent_data",
+      "to": "tori.f_tori_galois_module_classification"
+    },
+    {
+      "from": "descent_and_forms.rational_forms_of_linear_algebraic_groups",
+      "to": "tori.f_tori_galois_module_classification"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "to": "tori.f_tori_galois_module_classification"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.f_tori_galois_module_classification"
+    },
+    {
+      "from": "tori.character_and_cocharacter_lattices",
+      "to": "tori.f_tori_galois_module_classification"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.induced_resolution"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.induced_resolution"
+    },
+    {
+      "from": "tori.induced_tori",
+      "to": "tori.induced_resolution"
+    },
+    {
+      "from": "tori.subtori_and_quotients",
+      "to": "tori.induced_resolution"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.induced_resolution"
+    },
+    {
+      "from": "tori.weil_restriction_of_tori",
+      "to": "tori.induced_resolution"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.induced_tori"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.induced_tori"
+    },
+    {
+      "from": "tori.weil_restriction_of_tori",
+      "to": "tori.induced_tori"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_groups",
+      "to": "tori.multiplicative_type_characterization"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "to": "tori.multiplicative_type_characterization"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.multiplicative_type_characterization"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.multiplicative_type_characterization"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.norm_one_torus"
+    },
+    {
+      "from": "tori.anisotropic_torus",
+      "to": "tori.norm_one_torus"
+    },
+    {
+      "from": "tori.subtori_and_quotients",
+      "to": "tori.norm_one_torus"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.norm_one_torus"
+    },
+    {
+      "from": "tori.weil_restriction_of_tori",
+      "to": "tori.norm_one_torus"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.rank_one_classification"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.rank_one_classification"
+    },
+    {
+      "from": "tori.norm_one_torus",
+      "to": "tori.rank_one_classification"
+    },
+    {
+      "from": "tori.split_torus",
+      "to": "tori.rank_one_classification"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.rank_one_classification"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.split_anisotropic_decomposition"
+    },
+    {
+      "from": "tori.anisotropic_torus",
+      "to": "tori.split_anisotropic_decomposition"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.split_anisotropic_decomposition"
+    },
+    {
+      "from": "tori.split_torus",
+      "to": "tori.split_anisotropic_decomposition"
+    },
+    {
+      "from": "tori.subtori_and_quotients",
+      "to": "tori.split_anisotropic_decomposition"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.split_anisotropic_decomposition"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.split_torus"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.split_torus"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.splitting_field"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.splitting_field"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.splitting_field"
+    },
+    {
+      "from": "reductive_structure.diagonalizable_groups_antiequivalence",
+      "to": "tori.subtori_and_quotients"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.subtori_and_quotients"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.subtori_and_quotients"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.subtori_and_quotients"
+    },
+    {
+      "from": "foundational_inputs.local_fields",
+      "to": "tori.tamely_ramified_torus"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.tamely_ramified_torus"
+    },
+    {
+      "from": "tori.split_torus",
+      "to": "tori.tamely_ramified_torus"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.tamely_ramified_torus"
+    },
+    {
+      "from": "tori.unramified_torus",
+      "to": "tori.tamely_ramified_torus"
+    },
+    {
+      "from": "affine_group_schemes.base_change",
+      "to": "tori.torus_definition"
+    },
+    {
+      "from": "affine_group_schemes.multiplicative_group_scheme",
+      "to": "tori.torus_definition"
+    },
+    {
+      "from": "linear_algebraic_groups.linear_algebraic_groups",
+      "to": "tori.torus_definition"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.torus_definition"
+    },
+    {
+      "from": "foundational_inputs.local_fields",
+      "to": "tori.unramified_torus"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.unramified_torus"
+    },
+    {
+      "from": "tori.split_torus",
+      "to": "tori.unramified_torus"
+    },
+    {
+      "from": "tori.splitting_field",
+      "to": "tori.unramified_torus"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.unramified_torus"
+    },
+    {
+      "from": "foundational_inputs.local_fields",
+      "to": "tori.weakly_induced_torus"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.weakly_induced_torus"
+    },
+    {
+      "from": "tori.induced_tori",
+      "to": "tori.weakly_induced_torus"
+    },
+    {
+      "from": "tori.tamely_ramified_torus",
+      "to": "tori.weakly_induced_torus"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.weakly_induced_torus"
+    },
+    {
+      "from": "tori.algebraic_tori",
+      "to": "tori.weil_restriction_of_tori"
+    },
+    {
+      "from": "tori.f_tori_galois_module_classification",
+      "to": "tori.weil_restriction_of_tori"
+    },
+    {
+      "from": "tori.torus_definition",
+      "to": "tori.weil_restriction_of_tori"
     }
   ]
 }

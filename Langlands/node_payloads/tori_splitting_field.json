@@ -1,0 +1,39 @@
+{
+  "id": "tori.splitting_field",
+  "title": "The Minimal Splitting Field of a Torus",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "tori/tori_splitting_field.html",
+  "primary_topic": "tori",
+  "topics": [
+    "tori"
+  ],
+  "body_html": "<h1>The Minimal Splitting Field of a Torus</h1>\n<p>Let \\(T\\) be a torus of rank \\(n\\) over \\(k\\). Then:</p>\n<ol>\n<li>\\(T\\) splits over a finite separable extension of \\(k\\);</li>\n<li>there is a unique minimal splitting field \\(E/k\\) inside \\(k_s\\); it\n   is finite Galois over \\(k\\), namely the fixed field of\n   \\(\\ker\\bigl(\\Theta \\to \\operatorname{Aut}(X^*(T))\\bigr)\\);</li>\n<li>the action of \\(\\operatorname{Gal}(E/k)\\) on \\(X^*(T)\\) is\n   faithful, giving an embedding\n   \\(\\operatorname{Gal}(E/k) \\hookrightarrow\n   \\operatorname{Aut}(X^*(T)) \\cong \\operatorname{GL}_n(\\mathbb{Z})\\).</li>\n</ol>\n<p>In particular the isomorphism classes of rank-\\(n\\) tori over \\(k\\)\ncorrespond to conjugacy classes of continuous homomorphisms\n\\(\\Theta \\to \\operatorname{GL}_n(\\mathbb{Z})\\), and every torus is\nsplit by a finite Galois extension whose group is a finite subgroup of\n\\(\\operatorname{GL}_n(\\mathbb{Z})\\).</p>",
+  "proof_html": "<p>The \\(\\Theta\\)-action on the discrete finitely generated group\n\\(X^*(T)\\) is continuous: each character of \\(T_{k_s}\\) is defined\nover a finite subextension, and a finite generating set is therefore\nstabilized by an open subgroup of \\(\\Theta\\). Hence\n\\(N = \\ker(\\Theta \\to \\operatorname{Aut} X^*(T))\\) is an open normal\nsubgroup, and its fixed field \\(E\\) is finite Galois over \\(k\\) with\n\\(\\operatorname{Gal}(E/k) = \\Theta/N\\) acting faithfully on\n\\(X^*(T)\\).</p>\n<p>Over \\(E\\) the Galois group \\(\\operatorname{Gal}(k_s/E) = N\\) acts\ntrivially on \\(X^*(T)\\), so by\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a> the torus \\(T_E\\)\ncorresponds to the trivial \\(\\operatorname{Gal}(k_s/E)\\)-lattice\n\\(\\mathbb{Z}^n\\), i.e. \\(T_E \\cong \\mathbb{G}_{m,E}^n\\) is split. Any\nsplitting field \\(L \\subseteq k_s\\) of \\(T\\) must satisfy\n\\(\\operatorname{Gal}(k_s/L) \\subseteq N\\), i.e. \\(L \\supseteq E\\), so\n\\(E\\) is the unique minimal one. The final classification statement is\nthe anti-equivalence again.</p>",
+  "deps": [
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "tori.torus_definition",
+      "title": "Algebraic Torus",
+      "href": "tori/tori_torus_definition.html"
+    },
+    {
+      "id": "tori.f_tori_galois_module_classification",
+      "title": "F-Tori Are Classified by Galois Modules",
+      "href": "tori/tori_f_tori_galois_module_classification.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.unramified_torus",
+      "title": "Unramified Torus",
+      "href": "tori/tori_unramified_torus.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

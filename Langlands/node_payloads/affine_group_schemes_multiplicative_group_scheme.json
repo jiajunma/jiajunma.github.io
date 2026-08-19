@@ -37,9 +37,55 @@
       "id": "affine_group_schemes.special_linear_group_scheme",
       "title": "Special Linear Group Scheme SL_n",
       "href": "affine_group_schemes/affine_group_schemes_special_linear_group_scheme.html"
+    },
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "tori.torus_definition",
+      "title": "Algebraic Torus",
+      "href": "tori/tori_torus_definition.html"
     }
   ],
   "lean_refs": [
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.hopfAlg",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.hopfAlg",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.hopfAlg",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.Gm",
+      "kind": "noncomputable abbrev",
+      "signature": "noncomputable abbrev multiplicativeGroup.hopfAlg :\n    CommAlgCat.{u} R",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Gm.lean#L51",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup",
+      "display_name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup",
+      "qualified_name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup",
+      "module": "LanglandsLean.AlgebraicGeometry.Examples.Gm",
+      "kind": "def",
+      "signature": "noncomputable def multiplicativeGroup :\n    Over (Scheme.Spec.obj (op R)) :=\n  specObjOver R (LaurentPolynomial R)",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGeometry/Examples/Gm.lean#L57",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
     {
       "name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj",
       "display_name": "Langlands.AlgebraicGeometry.Examples.multiplicativeGroup.instGrpObj",

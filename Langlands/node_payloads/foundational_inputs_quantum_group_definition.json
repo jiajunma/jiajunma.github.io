@@ -1,0 +1,23 @@
+{
+  "id": "foundational_inputs.quantum_group_definition",
+  "title": "Quantum Group (Formal-Deformation Convention)",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "foundational_inputs/foundational_inputs_quantum_group_definition.html",
+  "primary_topic": "foundational_inputs",
+  "topics": [
+    "foundational_inputs"
+  ],
+  "body_html": "<h1>Quantum Group (Formal-Deformation Convention)</h1>\n<p>The term <strong>quantum group</strong> is used in several closely related ways. In this\nknowledge base, the primary meaning is a Hopf algebra equipped with explicit\ndeformation data and a classical limit.</p>\n<h2>Definition</h2>\n<p>Let \\(k\\) be a field, let \\(H_0\\) be a Hopf algebra over \\(k\\), and write\n\\(A=k[[\\hbar]]\\). A <strong>formal quantum group deforming \\(H_0\\)</strong> is a Hopf\nalgebra \\(H_\\hbar\\) over \\(A\\), together with an isomorphism of Hopf algebras</p>\n<p>$$\nH_\\hbar/\\hbar H_\\hbar \\;\\cong\\; H_0,\n$$</p>\n<p>such that \\(H_\\hbar\\) is complete and separated for the \\(\\hbar\\)-adic\ntopology and is topologically free as an \\(A\\)-module. Equivalently, as a\ntopological \\(A\\)-module it has the form \\(M[[\\hbar]]\\) for some \\(k\\)-vector\nspace \\(M\\).\nTopological freeness is the flatness condition that prevents the deformation\nfrom acquiring \\(\\hbar\\)-torsion.</p>\n<p>The multiplication, unit, comultiplication, counit, and antipode of\n\\(H_\\hbar\\) must all be continuous and must satisfy the Hopf algebra axioms.\nReduction modulo \\(\\hbar\\) recovers every structure map of \\(H_0\\).</p>\n<h2>Two standard forms</h2>\n<ul>\n<li>A <strong>quantized universal enveloping algebra</strong> \\(U_\\hbar(\\mathfrak g)\\)\n  deforms the cocommutative Hopf algebra \\(U(\\mathfrak g)\\), usually starting\n  from a Lie bialgebra \\(\\mathfrak g\\).</li>\n<li>A <strong>quantized coordinate algebra</strong> \\(\\mathcal O_\\hbar(G)\\) deforms the\n  commutative coordinate Hopf algebra \\(\\mathcal O(G)\\), usually starting from\n  a Poisson--Lie group \\(G\\).</li>\n</ul>\n<p>These are dual viewpoints when suitable finiteness or topological duality\nhypotheses are available; they are not literally dual for arbitrary\ninfinite-dimensional Hopf algebras.</p>\n<h2>Classical limit</h2>\n<p>The first-order failure of commutativity or cocommutativity records the\nclassical infinitesimal structure. For example, if \\(H_0\\) is commutative,\n\\(a,b\\in H_\\hbar\\), and \\(a_0,b_0\\in H_0\\) are their reductions, then</p>\n<p>$$\n\\{a_0,b_0\\}\n  = \\left(\\frac{ab-ba}{\\hbar}\\right)\\bmod \\hbar\n$$</p>\n<p>defines the associated Poisson bracket. Dually, when the undeformed coproduct\nis cocommutative, the first-order term of\n\\((\\Delta_\\hbar-\\Delta_\\hbar^{\\mathrm{op}})/\\hbar\\) gives the corresponding\nLie cobracket.</p>\n<h2>The \\(q\\)-notation</h2>\n<p>Many examples are written as \\(U_q(\\mathfrak g)\\) or \\(\\mathcal O_q(G)\\).\nTo retain a classical limit, a quantum group over \\(k(q)\\) must be accompanied\nby a suitable integral form over a ring such as \\(k[q,q^{-1}]\\), or by a\ncompletion near \\(q=1\\), whose specialization at \\(q=1\\) is the classical Hopf\nalgebra. A Hopf algebra over \\(k(q)\\) without chosen specialization data does\nnot by itself determine a deformation of a classical group.</p>\n<p>Thus, in this project, \"quantum group\" does <strong>not</strong> mean every\nnoncommutative Hopf algebra. The deformation parameter, flatness or\ntopological-freeness condition, and classical specialization are part of the\ndefinition.</p>\n<h2>References</h2>\n<ul>\n<li>V. G. Drinfeld, <em>Quantum groups</em>, Proceedings of the International Congress\n  of Mathematicians, Berkeley (1986).</li>\n<li>M. Jimbo, <em>A q-difference analogue of U(g) and the Yang--Baxter equation</em>,\n  Letters in Mathematical Physics 10 (1985).</li>\n<li>C. Kassel, <em>Quantum Groups</em>, Graduate Texts in Mathematics 155 (1995).</li>\n<li>V. Chari and A. Pressley, <em>A Guide to Quantum Groups</em> (1994).</li>\n</ul>\n<h2>Prerequisite</h2>\n<ul>\n<li><a class=\"node-ref\" data-node-id=\"foundational_inputs.hopf_algebras\" href=\"foundational_inputs_hopf_algebras.html\">Hopf Algebras</a></li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "foundational_inputs.hopf_algebras",
+      "title": "Hopf Algebras",
+      "href": "foundational_inputs/foundational_inputs_hopf_algebras.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

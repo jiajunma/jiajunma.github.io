@@ -1,0 +1,109 @@
+{
+  "id": "tori.torus_definition",
+  "title": "Algebraic Torus",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "tori/tori_torus_definition.html",
+  "primary_topic": "tori",
+  "topics": [
+    "tori"
+  ],
+  "body_html": "<h1>Algebraic Torus</h1>\n<p>Let \\(k\\) be a field and \\(k_s\\) a separable closure. An <strong>algebraic\ntorus</strong> over \\(k\\) is a linear algebraic group \\(T\\) over \\(k\\) such\nthat\n\\[\nT_{k_s} \\;\\cong\\; \\mathbb{G}_{m,k_s}^{\\,n}\n\\]\nfor some \\(n \\geq 0\\). The integer \\(n\\) is called the <strong>rank</strong> of\n\\(T\\).</p>\n<p>Equivalently (see <a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>) there exists a finite\nseparable extension \\(E/k\\) with \\(T_E \\cong \\mathbb{G}_{m,E}^{\\,n}\\);\nthe separable closure in the definition is not a genuine infinite\nlimit.</p>\n<p>The character lattice \\(X^*(T)\\) and cocharacter lattice \\(X_*(T)\\)\nof a torus of rank \\(n\\) are free \\(\\mathbb{Z}\\)-modules of rank\n\\(n\\) in perfect duality, carrying continuous actions of\n\\(\\Theta = \\operatorname{Gal}(k_s/k)\\); see\n<a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>. They form the\ncomplete invariant of \\(T\\) by\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>.</p>\n<p>A torus is smooth, connected, and commutative. Smoothness and\nconnectedness hold because both can be checked after base change to\n\\(k_s\\), where \\(\\mathbb{G}_m^n\\) is a smooth connected variety;\ncommutativity holds because \\(T(k_s) \\subseteq T(k_s)\\) is the group\n\\((k_s^\\times)^n\\) under the defining isomorphism and \\(T(k_s)\\) is\nschematically dense in the smooth \\(k_s\\)-group \\(T_{k_s}\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tori.algebraic_tori",
+      "title": "Algebraic Tori",
+      "href": "tori/tori_algebraic_tori.html"
+    },
+    {
+      "id": "linear_algebraic_groups.linear_algebraic_groups",
+      "title": "Linear Algebraic Groups",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_groups.html"
+    },
+    {
+      "id": "affine_group_schemes.multiplicative_group_scheme",
+      "title": "Multiplicative Group Scheme 𝔾_m",
+      "href": "affine_group_schemes/affine_group_schemes_multiplicative_group_scheme.html"
+    },
+    {
+      "id": "affine_group_schemes.base_change",
+      "title": "Base Change",
+      "href": "affine_group_schemes/affine_group_schemes_base_change.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tori.anisotropic_torus",
+      "title": "Anisotropic Torus",
+      "href": "tori/tori_anisotropic_torus.html"
+    },
+    {
+      "id": "tori.induced_resolution",
+      "title": "Resolution of a Torus by Induced Tori",
+      "href": "tori/tori_induced_resolution.html"
+    },
+    {
+      "id": "tori.induced_tori",
+      "title": "Induced Tori",
+      "href": "tori/tori_induced_tori.html"
+    },
+    {
+      "id": "tori.multiplicative_type_characterization",
+      "title": "Tori among Groups of Multiplicative Type",
+      "href": "tori/tori_multiplicative_type_characterization.html"
+    },
+    {
+      "id": "tori.norm_one_torus",
+      "title": "Norm-One Torus of a Separable Extension",
+      "href": "tori/tori_norm_one_torus.html"
+    },
+    {
+      "id": "tori.rank_one_classification",
+      "title": "Classification of Rank-One Tori",
+      "href": "tori/tori_rank_one_classification.html"
+    },
+    {
+      "id": "tori.split_anisotropic_decomposition",
+      "title": "Split-Anisotropic Decomposition of a Torus",
+      "href": "tori/tori_split_anisotropic_decomposition.html"
+    },
+    {
+      "id": "tori.split_torus",
+      "title": "Split Torus",
+      "href": "tori/tori_split_torus.html"
+    },
+    {
+      "id": "tori.splitting_field",
+      "title": "The Minimal Splitting Field of a Torus",
+      "href": "tori/tori_splitting_field.html"
+    },
+    {
+      "id": "tori.subtori_and_quotients",
+      "title": "Subtori and Quotients via the Character Lattice",
+      "href": "tori/tori_subtori_and_quotients.html"
+    },
+    {
+      "id": "tori.tamely_ramified_torus",
+      "title": "Tamely Ramified Torus",
+      "href": "tori/tori_tamely_ramified_torus.html"
+    },
+    {
+      "id": "tori.unramified_torus",
+      "title": "Unramified Torus",
+      "href": "tori/tori_unramified_torus.html"
+    },
+    {
+      "id": "tori.weakly_induced_torus",
+      "title": "Weakly Induced Torus",
+      "href": "tori/tori_weakly_induced_torus.html"
+    },
+    {
+      "id": "tori.weil_restriction_of_tori",
+      "title": "Weil Restriction of Tori",
+      "href": "tori/tori_weil_restriction_of_tori.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

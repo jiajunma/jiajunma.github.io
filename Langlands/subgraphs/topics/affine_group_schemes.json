@@ -646,25 +646,18 @@
   ],
   "boundary_topics": [
     {
-      "id": "algebraic_geometry",
-      "title": "Algebraic Geometry",
-      "href": "algebraic_geometry/index.html",
-      "role": "dependency",
-      "node_count": 1
+      "id": "bd_covers",
+      "title": "Bd Covers",
+      "href": "bd_covers/index.html",
+      "role": "dependent",
+      "node_count": 6
     },
     {
       "id": "buildings_and_parahorics",
       "title": "Buildings And Parahorics",
       "href": "buildings_and_parahorics/index.html",
       "role": "dependent",
-      "node_count": 20
-    },
-    {
-      "id": "commutative_algebra",
-      "title": "Commutative Algebra",
-      "href": "commutative_algebra/index.html",
-      "role": "dependency",
-      "node_count": 4
+      "node_count": 16
     },
     {
       "id": "conjugacy_classes",
@@ -678,120 +671,120 @@
       "title": "Descent And Forms",
       "href": "descent_and_forms/index.html",
       "role": "dependent",
-      "node_count": 32
+      "node_count": 33
+    },
+    {
+      "id": "foundational_inputs",
+      "title": "Foundational Inputs",
+      "href": "foundational_inputs/index.html",
+      "role": "dependency",
+      "node_count": 9
     },
     {
       "id": "linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "href": "linear_algebraic_groups/index.html",
       "role": "dependent",
-      "node_count": 31
+      "node_count": 27
     },
     {
       "id": "root_data_and_duality",
       "title": "Root Data And Duality",
       "href": "root_data_and_duality/index.html",
       "role": "dependent",
-      "node_count": 64
+      "node_count": 49
     },
     {
-      "id": "root_data_and_duality.bd_covers",
-      "title": "Root Data And Duality.Bd Covers",
-      "href": "root_data_and_duality/bd_covers/index.html",
+      "id": "tori",
+      "title": "Tori",
+      "href": "tori/index.html",
       "role": "dependent",
-      "node_count": 6
+      "node_count": 19
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:algebraic_geometry",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.affine_group_scheme_definition",
       "kind": "boundary_dependency",
-      "topic": "algebraic_geometry",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
-      "from": "topic:algebraic_geometry",
-      "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
-      "kind": "boundary_dependency",
-      "topic": "algebraic_geometry",
-      "count": 1
-    },
-    {
-      "from": "topic:algebraic_geometry",
-      "to": "affine_group_schemes.hopf_spec_functor",
-      "kind": "boundary_dependency",
-      "topic": "algebraic_geometry",
-      "count": 1
-    },
-    {
-      "from": "topic:algebraic_geometry",
-      "to": "affine_group_schemes.spec_representability_via_global_sections",
-      "kind": "boundary_dependency",
-      "topic": "algebraic_geometry",
-      "count": 1
-    },
-    {
-      "from": "topic:commutative_algebra",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.algebra_hom_convolution",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
       "count": 2
     },
     {
-      "from": "topic:commutative_algebra",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.antipode_anti_multiplicativity",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
-      "from": "topic:commutative_algebra",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.antipode_multiplicativity_commutative_hopf",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
-      "from": "topic:commutative_algebra",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.base_change",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
-      "from": "topic:commutative_algebra",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.comodule_definition",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
-      "from": "topic:commutative_algebra",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.coordinate_hopf_algebra_of_group_scheme",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
-      "from": "topic:commutative_algebra",
+      "from": "topic:foundational_inputs",
       "to": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
+      "count": 3
+    },
+    {
+      "from": "topic:foundational_inputs",
+      "to": "affine_group_schemes.hopf_spec_functor",
+      "kind": "boundary_dependency",
+      "topic": "foundational_inputs",
       "count": 2
     },
     {
-      "from": "topic:commutative_algebra",
-      "to": "affine_group_schemes.hopf_spec_functor",
+      "from": "topic:foundational_inputs",
+      "to": "affine_group_schemes.multiplication_is_coalgebra_hom",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
-      "from": "topic:commutative_algebra",
-      "to": "affine_group_schemes.multiplication_is_coalgebra_hom",
+      "from": "topic:foundational_inputs",
+      "to": "affine_group_schemes.spec_representability_via_global_sections",
       "kind": "boundary_dependency",
-      "topic": "commutative_algebra",
+      "topic": "foundational_inputs",
+      "count": 1
+    },
+    {
+      "from": "affine_group_schemes.affine_algebraic_groups",
+      "to": "topic:bd_covers",
+      "kind": "boundary_dependent",
+      "topic": "bd_covers",
       "count": 1
     },
     {
@@ -842,6 +835,13 @@
       "kind": "boundary_dependent",
       "topic": "linear_algebraic_groups",
       "count": 10
+    },
+    {
+      "from": "affine_group_schemes.coordinate_rings_and_hopf_algebras",
+      "to": "topic:linear_algebraic_groups",
+      "kind": "boundary_dependent",
+      "topic": "linear_algebraic_groups",
+      "count": 1
     },
     {
       "from": "affine_group_schemes.faithful_linear_representation_definition",
@@ -900,11 +900,18 @@
       "count": 1
     },
     {
-      "from": "affine_group_schemes.affine_algebraic_groups",
-      "to": "topic:root_data_and_duality.bd_covers",
+      "from": "affine_group_schemes.base_change",
+      "to": "topic:tori",
       "kind": "boundary_dependent",
-      "topic": "root_data_and_duality.bd_covers",
+      "topic": "tori",
       "count": 1
+    },
+    {
+      "from": "affine_group_schemes.multiplicative_group_scheme",
+      "to": "topic:tori",
+      "kind": "boundary_dependent",
+      "topic": "tori",
+      "count": 2
     }
   ],
   "keywords": [

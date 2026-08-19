@@ -21,19 +21,19 @@
       "children": []
     },
     {
-      "id": "algebraic_geometry",
-      "title": "Algebraic Geometry",
+      "id": "bd_covers",
+      "title": "Bd Covers",
       "depth": 1,
       "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "topic": 1
+        "topic": 6
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 6
       },
-      "href": "algebraic_geometry/index.html",
+      "href": "bd_covers/index.html",
       "children": []
     },
     {
@@ -41,32 +41,32 @@
       "title": "Buildings And Parahorics",
       "depth": 1,
       "parent": null,
-      "node_count": 20,
-      "direct_node_count": 20,
+      "node_count": 16,
+      "direct_node_count": 16,
       "kind_counts": {
-        "definition": 18,
-        "theorem": 2
+        "topic": 16
       },
       "status_counts": {
-        "admitted": 20
+        "admitted": 16
       },
       "href": "buildings_and_parahorics/index.html",
       "children": []
     },
     {
-      "id": "commutative_algebra",
-      "title": "Commutative Algebra",
+      "id": "classical_and_exceptional_groups",
+      "title": "Classical And Exceptional Groups",
       "depth": 1,
       "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
-        "topic": 4
+        "definition": 3,
+        "topic": 2
       },
       "status_counts": {
-        "admitted": 4
+        "admitted": 5
       },
-      "href": "commutative_algebra/index.html",
+      "href": "classical_and_exceptional_groups/index.html",
       "children": []
     },
     {
@@ -92,17 +92,50 @@
       "title": "Descent And Forms",
       "depth": 1,
       "parent": null,
-      "node_count": 32,
-      "direct_node_count": 32,
+      "node_count": 33,
+      "direct_node_count": 33,
       "kind_counts": {
         "definition": 2,
-        "theorem": 8,
+        "theorem": 9,
         "topic": 22
       },
       "status_counts": {
-        "admitted": 32
+        "admitted": 33
       },
       "href": "descent_and_forms/index.html",
+      "children": []
+    },
+    {
+      "id": "foundational_inputs",
+      "title": "Foundational Inputs",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "definition": 1,
+        "topic": 8
+      },
+      "status_counts": {
+        "admitted": 9
+      },
+      "href": "foundational_inputs/index.html",
+      "children": []
+    },
+    {
+      "id": "kottwitz_structures",
+      "title": "Kottwitz Structures",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "topic": 9
+      },
+      "status_counts": {
+        "admitted": 9
+      },
+      "href": "kottwitz_structures/index.html",
       "children": []
     },
     {
@@ -110,36 +143,19 @@
       "title": "Linear Algebraic Groups",
       "depth": 1,
       "parent": null,
-      "node_count": 31,
-      "direct_node_count": 26,
+      "node_count": 27,
+      "direct_node_count": 27,
       "kind_counts": {
-        "definition": 6,
+        "definition": 4,
         "theorem": 15,
-        "topic": 10
+        "topic": 8
       },
       "status_counts": {
-        "admitted": 30,
-        "formalized": 1
+        "admitted": 25,
+        "formalized": 1,
+        "needs_definition_review": 1
       },
       "href": "linear_algebraic_groups/index.html",
-      "children": [
-        "linear_algebraic_groups.classical_and_exceptional_groups"
-      ]
-    },
-    {
-      "id": "number_theory",
-      "title": "Number Theory",
-      "depth": 1,
-      "parent": null,
-      "node_count": 3,
-      "direct_node_count": 3,
-      "kind_counts": {
-        "topic": 3
-      },
-      "status_counts": {
-        "admitted": 3
-      },
-      "href": "number_theory/index.html",
       "children": []
     },
     {
@@ -147,14 +163,15 @@
       "title": "Reductive Structure",
       "depth": 1,
       "parent": null,
-      "node_count": 52,
-      "direct_node_count": 52,
+      "node_count": 49,
+      "direct_node_count": 49,
       "kind_counts": {
-        "definition": 21,
-        "theorem": 31
+        "definition": 8,
+        "theorem": 30,
+        "topic": 11
       },
       "status_counts": {
-        "admitted": 52
+        "admitted": 49
       },
       "href": "reductive_structure/index.html",
       "children": []
@@ -164,21 +181,37 @@
       "title": "Root Data And Duality",
       "depth": 1,
       "parent": null,
-      "node_count": 64,
+      "node_count": 49,
       "direct_node_count": 49,
       "kind_counts": {
         "definition": 11,
         "theorem": 19,
-        "topic": 34
+        "topic": 19
       },
       "status_counts": {
-        "admitted": 64
+        "admitted": 49
       },
       "href": "root_data_and_duality/index.html",
-      "children": [
-        "root_data_and_duality.bd_covers",
-        "root_data_and_duality.kottwitz_structures"
-      ]
+      "children": []
+    },
+    {
+      "id": "tori",
+      "title": "Tori",
+      "depth": 1,
+      "parent": null,
+      "node_count": 19,
+      "direct_node_count": 19,
+      "kind_counts": {
+        "definition": 7,
+        "example": 1,
+        "theorem": 9,
+        "topic": 2
+      },
+      "status_counts": {
+        "admitted": 19
+      },
+      "href": "tori/index.html",
+      "children": []
     }
   ],
   "topics": {
@@ -202,20 +235,20 @@
       "href": "affine_group_schemes/index.html",
       "children": []
     },
-    "algebraic_geometry": {
-      "id": "algebraic_geometry",
-      "title": "Algebraic Geometry",
+    "bd_covers": {
+      "id": "bd_covers",
+      "title": "Bd Covers",
       "depth": 1,
       "parent": null,
-      "node_count": 1,
-      "direct_node_count": 1,
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "topic": 1
+        "topic": 6
       },
       "status_counts": {
-        "admitted": 1
+        "admitted": 6
       },
-      "href": "algebraic_geometry/index.html",
+      "href": "bd_covers/index.html",
       "children": []
     },
     "buildings_and_parahorics": {
@@ -223,32 +256,32 @@
       "title": "Buildings And Parahorics",
       "depth": 1,
       "parent": null,
-      "node_count": 20,
-      "direct_node_count": 20,
+      "node_count": 16,
+      "direct_node_count": 16,
       "kind_counts": {
-        "definition": 18,
-        "theorem": 2
+        "topic": 16
       },
       "status_counts": {
-        "admitted": 20
+        "admitted": 16
       },
       "href": "buildings_and_parahorics/index.html",
       "children": []
     },
-    "commutative_algebra": {
-      "id": "commutative_algebra",
-      "title": "Commutative Algebra",
+    "classical_and_exceptional_groups": {
+      "id": "classical_and_exceptional_groups",
+      "title": "Classical And Exceptional Groups",
       "depth": 1,
       "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
-        "topic": 4
+        "definition": 3,
+        "topic": 2
       },
       "status_counts": {
-        "admitted": 4
+        "admitted": 5
       },
-      "href": "commutative_algebra/index.html",
+      "href": "classical_and_exceptional_groups/index.html",
       "children": []
     },
     "conjugacy_classes": {
@@ -274,17 +307,50 @@
       "title": "Descent And Forms",
       "depth": 1,
       "parent": null,
-      "node_count": 32,
-      "direct_node_count": 32,
+      "node_count": 33,
+      "direct_node_count": 33,
       "kind_counts": {
         "definition": 2,
-        "theorem": 8,
+        "theorem": 9,
         "topic": 22
       },
       "status_counts": {
-        "admitted": 32
+        "admitted": 33
       },
       "href": "descent_and_forms/index.html",
+      "children": []
+    },
+    "foundational_inputs": {
+      "id": "foundational_inputs",
+      "title": "Foundational Inputs",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "definition": 1,
+        "topic": 8
+      },
+      "status_counts": {
+        "admitted": 9
+      },
+      "href": "foundational_inputs/index.html",
+      "children": []
+    },
+    "kottwitz_structures": {
+      "id": "kottwitz_structures",
+      "title": "Kottwitz Structures",
+      "depth": 1,
+      "parent": null,
+      "node_count": 9,
+      "direct_node_count": 9,
+      "kind_counts": {
+        "topic": 9
+      },
+      "status_counts": {
+        "admitted": 9
+      },
+      "href": "kottwitz_structures/index.html",
       "children": []
     },
     "linear_algebraic_groups": {
@@ -292,53 +358,19 @@
       "title": "Linear Algebraic Groups",
       "depth": 1,
       "parent": null,
-      "node_count": 31,
-      "direct_node_count": 26,
+      "node_count": 27,
+      "direct_node_count": 27,
       "kind_counts": {
-        "definition": 6,
+        "definition": 4,
         "theorem": 15,
-        "topic": 10
+        "topic": 8
       },
       "status_counts": {
-        "admitted": 30,
-        "formalized": 1
+        "admitted": 25,
+        "formalized": 1,
+        "needs_definition_review": 1
       },
       "href": "linear_algebraic_groups/index.html",
-      "children": [
-        "linear_algebraic_groups.classical_and_exceptional_groups"
-      ]
-    },
-    "linear_algebraic_groups.classical_and_exceptional_groups": {
-      "id": "linear_algebraic_groups.classical_and_exceptional_groups",
-      "title": "Linear Algebraic Groups.Classical And Exceptional Groups",
-      "depth": 2,
-      "parent": "linear_algebraic_groups",
-      "node_count": 5,
-      "direct_node_count": 5,
-      "kind_counts": {
-        "definition": 3,
-        "topic": 2
-      },
-      "status_counts": {
-        "admitted": 5
-      },
-      "href": "linear_algebraic_groups/classical_and_exceptional_groups/index.html",
-      "children": []
-    },
-    "number_theory": {
-      "id": "number_theory",
-      "title": "Number Theory",
-      "depth": 1,
-      "parent": null,
-      "node_count": 3,
-      "direct_node_count": 3,
-      "kind_counts": {
-        "topic": 3
-      },
-      "status_counts": {
-        "admitted": 3
-      },
-      "href": "number_theory/index.html",
       "children": []
     },
     "reductive_structure": {
@@ -346,14 +378,15 @@
       "title": "Reductive Structure",
       "depth": 1,
       "parent": null,
-      "node_count": 52,
-      "direct_node_count": 52,
+      "node_count": 49,
+      "direct_node_count": 49,
       "kind_counts": {
-        "definition": 21,
-        "theorem": 31
+        "definition": 8,
+        "theorem": 30,
+        "topic": 11
       },
       "status_counts": {
-        "admitted": 52
+        "admitted": 49
       },
       "href": "reductive_structure/index.html",
       "children": []
@@ -363,52 +396,36 @@
       "title": "Root Data And Duality",
       "depth": 1,
       "parent": null,
-      "node_count": 64,
+      "node_count": 49,
       "direct_node_count": 49,
       "kind_counts": {
         "definition": 11,
         "theorem": 19,
-        "topic": 34
+        "topic": 19
       },
       "status_counts": {
-        "admitted": 64
+        "admitted": 49
       },
       "href": "root_data_and_duality/index.html",
-      "children": [
-        "root_data_and_duality.bd_covers",
-        "root_data_and_duality.kottwitz_structures"
-      ]
-    },
-    "root_data_and_duality.bd_covers": {
-      "id": "root_data_and_duality.bd_covers",
-      "title": "Root Data And Duality.Bd Covers",
-      "depth": 2,
-      "parent": "root_data_and_duality",
-      "node_count": 6,
-      "direct_node_count": 6,
-      "kind_counts": {
-        "topic": 6
-      },
-      "status_counts": {
-        "admitted": 6
-      },
-      "href": "root_data_and_duality/bd_covers/index.html",
       "children": []
     },
-    "root_data_and_duality.kottwitz_structures": {
-      "id": "root_data_and_duality.kottwitz_structures",
-      "title": "Root Data And Duality.Kottwitz Structures",
-      "depth": 2,
-      "parent": "root_data_and_duality",
-      "node_count": 9,
-      "direct_node_count": 9,
+    "tori": {
+      "id": "tori",
+      "title": "Tori",
+      "depth": 1,
+      "parent": null,
+      "node_count": 19,
+      "direct_node_count": 19,
       "kind_counts": {
-        "topic": 9
+        "definition": 7,
+        "example": 1,
+        "theorem": 9,
+        "topic": 2
       },
       "status_counts": {
-        "admitted": 9
+        "admitted": 19
       },
-      "href": "root_data_and_duality/kottwitz_structures/index.html",
+      "href": "tori/index.html",
       "children": []
     }
   }

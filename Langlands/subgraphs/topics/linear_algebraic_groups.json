@@ -4,64 +4,24 @@
     "title": "Linear Algebraic Groups",
     "href": "linear_algebraic_groups/index.html",
     "parent": null,
-    "node_count": 26,
-    "descendant_node_count": 31
+    "node_count": 27,
+    "descendant_node_count": 27
   },
   "counts": {
-    "internal_nodes": 26,
-    "inlined_nodes": 5,
-    "descendant_nodes": 31,
+    "internal_nodes": 27,
+    "inlined_nodes": 0,
+    "descendant_nodes": 27,
     "child_topics": 0,
-    "inlined_child_topics": 1,
-    "non_proof_plan_nodes": 31,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 27,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 7,
+    "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 39,
-    "visible_nodes_with_selected_proof_plans": 39
+    "visible_nodes_without_proof_plans": 36,
+    "visible_nodes_with_selected_proof_plans": 36
   },
   "nodes": [
-    {
-      "id": "affine_group_schemes.special_linear_group_scheme",
-      "title": "Special Linear Group Scheme SL_n",
-      "kind": "definition",
-      "status": "admitted",
-      "href": "affine_group_schemes/affine_group_schemes_special_linear_group_scheme.html",
-      "payload": "node_payloads/affine_group_schemes_special_linear_group_scheme.json"
-    },
-    {
-      "id": "affine_group_schemes.special_orthogonal_group_scheme",
-      "title": "Special Orthogonal Group Scheme SO_n",
-      "kind": "definition",
-      "status": "admitted",
-      "href": "affine_group_schemes/affine_group_schemes_special_orthogonal_group_scheme.html",
-      "payload": "node_payloads/affine_group_schemes_special_orthogonal_group_scheme.json"
-    },
-    {
-      "id": "affine_group_schemes.symplectic_group_scheme",
-      "title": "Symplectic Group Scheme Sp_{2n}",
-      "kind": "definition",
-      "status": "admitted",
-      "href": "affine_group_schemes/affine_group_schemes_symplectic_group_scheme.html",
-      "payload": "node_payloads/affine_group_schemes_symplectic_group_scheme.json"
-    },
-    {
-      "id": "classical_and_exceptional_groups.classical_groups",
-      "title": "Classical Groups",
-      "kind": "topic",
-      "status": "admitted",
-      "href": "linear_algebraic_groups/classical_and_exceptional_groups/classical_and_exceptional_groups_classical_groups.html",
-      "payload": "node_payloads/classical_and_exceptional_groups_classical_groups.json"
-    },
-    {
-      "id": "classical_and_exceptional_groups.exceptional_groups",
-      "title": "Exceptional Groups",
-      "kind": "topic",
-      "status": "admitted",
-      "href": "linear_algebraic_groups/classical_and_exceptional_groups/classical_and_exceptional_groups_exceptional_groups.html",
-      "payload": "node_payloads/classical_and_exceptional_groups_exceptional_groups.json"
-    },
     {
       "id": "descent_and_forms.f_subgroup_field_of_definition",
       "title": "Field of Definition for Subgroups of F-Groups",
@@ -191,6 +151,14 @@
       "payload": "node_payloads/linear_algebraic_groups_lie_algebra_of_algebraic_group.json"
     },
     {
+      "id": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "title": "Definition of Linear Algebraic Groups",
+      "kind": "definition",
+      "status": "needs_definition_review",
+      "href": "linear_algebraic_groups/linear_algebraic_groups_linear_algebraic_group_definition.html",
+      "payload": "node_payloads/linear_algebraic_groups_linear_algebraic_group_definition.json"
+    },
+    {
       "id": "linear_algebraic_groups.linear_algebraic_groups",
       "title": "Linear Algebraic Groups",
       "kind": "topic",
@@ -272,16 +240,6 @@
     }
   ],
   "edges": [
-    {
-      "from": "affine_group_schemes.special_linear_group_scheme",
-      "to": "affine_group_schemes.special_orthogonal_group_scheme",
-      "kind": "uses"
-    },
-    {
-      "from": "linear_algebraic_groups.basic_examples",
-      "to": "classical_and_exceptional_groups.classical_groups",
-      "kind": "uses"
-    },
     {
       "from": "linear_algebraic_groups.algebraic_group_action_orbits_stabilizers",
       "to": "descent_and_forms.f_subgroup_field_of_definition",
@@ -442,18 +400,18 @@
       "node_count": 38
     },
     {
-      "id": "algebraic_geometry",
-      "title": "Algebraic Geometry",
-      "href": "algebraic_geometry/index.html",
-      "role": "dependency",
-      "node_count": 1
-    },
-    {
       "id": "buildings_and_parahorics",
       "title": "Buildings And Parahorics",
       "href": "buildings_and_parahorics/index.html",
       "role": "dependent",
-      "node_count": 20
+      "node_count": 16
+    },
+    {
+      "id": "classical_and_exceptional_groups",
+      "title": "Classical And Exceptional Groups",
+      "href": "classical_and_exceptional_groups/index.html",
+      "role": "dependent",
+      "node_count": 5
     },
     {
       "id": "conjugacy_classes",
@@ -467,45 +425,31 @@
       "title": "Descent And Forms",
       "href": "descent_and_forms/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 32
+      "node_count": 33
+    },
+    {
+      "id": "foundational_inputs",
+      "title": "Foundational Inputs",
+      "href": "foundational_inputs/index.html",
+      "role": "dependency",
+      "node_count": 9
     },
     {
       "id": "reductive_structure",
       "title": "Reductive Structure",
       "href": "reductive_structure/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 52
+      "node_count": 49
     },
     {
-      "id": "root_data_and_duality",
-      "title": "Root Data And Duality",
-      "href": "root_data_and_duality/index.html",
-      "role": "dependency",
-      "node_count": 64
+      "id": "tori",
+      "title": "Tori",
+      "href": "tori/index.html",
+      "role": "dependent",
+      "node_count": 19
     }
   ],
   "boundary_edges": [
-    {
-      "from": "topic:affine_group_schemes",
-      "to": "affine_group_schemes.special_linear_group_scheme",
-      "kind": "boundary_dependency",
-      "topic": "affine_group_schemes",
-      "count": 4
-    },
-    {
-      "from": "topic:affine_group_schemes",
-      "to": "affine_group_schemes.special_orthogonal_group_scheme",
-      "kind": "boundary_dependency",
-      "topic": "affine_group_schemes",
-      "count": 3
-    },
-    {
-      "from": "topic:affine_group_schemes",
-      "to": "affine_group_schemes.symplectic_group_scheme",
-      "kind": "boundary_dependency",
-      "topic": "affine_group_schemes",
-      "count": 3
-    },
     {
       "from": "topic:affine_group_schemes",
       "to": "linear_algebraic_groups.affine_finite_type_faithful_representation",
@@ -571,6 +515,13 @@
     },
     {
       "from": "topic:affine_group_schemes",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition",
+      "kind": "boundary_dependency",
+      "topic": "affine_group_schemes",
+      "count": 1
+    },
+    {
+      "from": "topic:affine_group_schemes",
       "to": "linear_algebraic_groups.linear_algebraic_groups",
       "kind": "boundary_dependency",
       "topic": "affine_group_schemes",
@@ -619,13 +570,6 @@
       "count": 1
     },
     {
-      "from": "topic:algebraic_geometry",
-      "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
-      "kind": "boundary_dependency",
-      "topic": "algebraic_geometry",
-      "count": 1
-    },
-    {
       "from": "topic:descent_and_forms",
       "to": "descent_and_forms.f_subgroup_field_of_definition",
       "kind": "boundary_dependency",
@@ -640,10 +584,17 @@
       "count": 2
     },
     {
-      "from": "topic:reductive_structure",
-      "to": "classical_and_exceptional_groups.classical_groups",
+      "from": "topic:foundational_inputs",
+      "to": "linear_algebraic_groups.linear_algebraic_group_definition",
       "kind": "boundary_dependency",
-      "topic": "reductive_structure",
+      "topic": "foundational_inputs",
+      "count": 3
+    },
+    {
+      "from": "topic:foundational_inputs",
+      "to": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
+      "kind": "boundary_dependency",
+      "topic": "foundational_inputs",
       "count": 1
     },
     {
@@ -668,24 +619,17 @@
       "count": 2
     },
     {
-      "from": "topic:root_data_and_duality",
-      "to": "classical_and_exceptional_groups.classical_groups",
-      "kind": "boundary_dependency",
-      "topic": "root_data_and_duality",
-      "count": 2
-    },
-    {
-      "from": "topic:root_data_and_duality",
-      "to": "classical_and_exceptional_groups.exceptional_groups",
-      "kind": "boundary_dependency",
-      "topic": "root_data_and_duality",
-      "count": 3
-    },
-    {
       "from": "linear_algebraic_groups.smoothness_tangent_spaces_lie_algebras",
       "to": "topic:buildings_and_parahorics",
       "kind": "boundary_dependent",
       "topic": "buildings_and_parahorics",
+      "count": 1
+    },
+    {
+      "from": "linear_algebraic_groups.basic_examples",
+      "to": "topic:classical_and_exceptional_groups",
+      "kind": "boundary_dependent",
+      "topic": "classical_and_exceptional_groups",
       "count": 1
     },
     {
@@ -742,7 +686,7 @@
       "to": "topic:reductive_structure",
       "kind": "boundary_dependent",
       "topic": "reductive_structure",
-      "count": 3
+      "count": 2
     },
     {
       "from": "linear_algebraic_groups.orbits_are_locally_closed",
@@ -757,14 +701,21 @@
       "kind": "boundary_dependent",
       "topic": "reductive_structure",
       "count": 2
+    },
+    {
+      "from": "linear_algebraic_groups.linear_algebraic_groups",
+      "to": "topic:tori",
+      "kind": "boundary_dependent",
+      "topic": "tori",
+      "count": 2
     }
   ],
   "keywords": [
     {
-      "id": "affine-group-scheme",
-      "title": "affine-group-scheme",
-      "href": "keywords/affine-group-scheme.html",
-      "count": 3
+      "id": "affine-group-schemes",
+      "title": "affine-group-schemes",
+      "href": "keywords/affine-group-schemes.html",
+      "count": 1
     },
     {
       "id": "affine-variety",
@@ -783,18 +734,6 @@
       "title": "automorphisms",
       "href": "keywords/automorphisms.html",
       "count": 1
-    },
-    {
-      "id": "classical-and-exceptional-groups",
-      "title": "classical-and-exceptional-groups",
-      "href": "keywords/classical-and-exceptional-groups.html",
-      "count": 2
-    },
-    {
-      "id": "classical-groups",
-      "title": "classical-groups",
-      "href": "keywords/classical-groups.html",
-      "count": 4
     },
     {
       "id": "closed-subgroup",
@@ -851,16 +790,16 @@
       "count": 2
     },
     {
+      "id": "definitions",
+      "title": "definitions",
+      "href": "keywords/definitions.html",
+      "count": 1
+    },
+    {
       "id": "descent",
       "title": "descent",
       "href": "keywords/descent.html",
       "count": 2
-    },
-    {
-      "id": "determinant",
-      "title": "determinant",
-      "href": "keywords/determinant.html",
-      "count": 1
     },
     {
       "id": "embedding-theorem",
@@ -878,12 +817,6 @@
       "id": "examples",
       "title": "examples",
       "href": "keywords/examples.html",
-      "count": 1
-    },
-    {
-      "id": "exceptional-groups",
-      "title": "exceptional-groups",
-      "href": "keywords/exceptional-groups.html",
       "count": 1
     },
     {
@@ -932,7 +865,7 @@
       "id": "group-scheme",
       "title": "group-scheme",
       "href": "keywords/group-scheme.html",
-      "count": 4
+      "count": 1
     },
     {
       "id": "homogeneous-space",
@@ -998,7 +931,7 @@
       "id": "linear-algebraic-groups",
       "title": "linear-algebraic-groups",
       "href": "keywords/linear-algebraic-groups.html",
-      "count": 21
+      "count": 22
     },
     {
       "id": "locally-closed",
@@ -1017,12 +950,6 @@
       "title": "orbit",
       "href": "keywords/orbit.html",
       "count": 2
-    },
-    {
-      "id": "orthogonal",
-      "title": "orthogonal",
-      "href": "keywords/orthogonal.html",
-      "count": 1
     },
     {
       "id": "quotient",
@@ -1067,18 +994,6 @@
       "count": 1
     },
     {
-      "id": "special-linear",
-      "title": "special-linear",
-      "href": "keywords/special-linear.html",
-      "count": 1
-    },
-    {
-      "id": "special-orthogonal",
-      "title": "special-orthogonal",
-      "href": "keywords/special-orthogonal.html",
-      "count": 1
-    },
-    {
       "id": "springer",
       "title": "springer",
       "href": "keywords/springer.html",
@@ -1088,12 +1003,6 @@
       "id": "stabilizer",
       "title": "stabilizer",
       "href": "keywords/stabilizer.html",
-      "count": 1
-    },
-    {
-      "id": "symplectic",
-      "title": "symplectic",
-      "href": "keywords/symplectic.html",
       "count": 1
     },
     {
@@ -1115,24 +1024,6 @@
       "count": 2
     },
     {
-      "id": "type-B",
-      "title": "type-B",
-      "href": "keywords/type-B.html",
-      "count": 1
-    },
-    {
-      "id": "type-C",
-      "title": "type-C",
-      "href": "keywords/type-C.html",
-      "count": 1
-    },
-    {
-      "id": "type-D",
-      "title": "type-D",
-      "href": "keywords/type-D.html",
-      "count": 1
-    },
-    {
       "id": "unipotent",
       "title": "unipotent",
       "href": "keywords/unipotent.html",
@@ -1142,7 +1033,5 @@
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "inlined_child_topics": [
-    "linear_algebraic_groups.classical_and_exceptional_groups"
-  ]
+  "inlined_child_topics": []
 }
