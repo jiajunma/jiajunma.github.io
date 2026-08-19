@@ -811,9 +811,9 @@
         </li>
         
         <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
+          <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L53"><code>Langlands.Tori.IsSplitTorusAlgebra</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L114"><code>Langlands.Tori.IsSplitTorusAlgebra</code></a>
           
           
           
@@ -823,16 +823,34 @@
           
           
           
-          <pre class="lean-signature"><code>def IsSplitTorusAlgebra (A : Type u) [CommRing A] [HopfAlgebra k A] : Prop :=
-  ∃ (M : Type u) (_ : AddCommGroup M) (_ : Module.Free ℤ M)
-    (_ : Module.Finite ℤ M),
-    Nonempty (A ≃ₐc[k] AddMonoidAlgebra k M)</code></pre>
+          <pre class="lean-signature"><code>class IsSplitTorusAlgebra : Prop where
+  diagonalizable : IsDiagonalizableAlgebra k A
+  free : Module.Free ℤ (Additive (GroupLike k A))
+  finite : Module.Finite ℤ (Additive (GroupLike k A))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L70"><code>Langlands.Tori.isTorusAlgebra_addMonoidAlgebra</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L131"><code>Langlands.Tori.isSplitTorusAlgebra_addMonoidAlgebra</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Torus
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem isSplitTorusAlgebra_addMonoidAlgebra
+    (M : Type u) [AddCommGroup M] [Module.Free ℤ M] [Module.Finite ℤ M] :
+    IsSplitTorusAlgebra k (AddMonoidAlgebra k M)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L141"><code>Langlands.Tori.isTorusAlgebra_addMonoidAlgebra</code></a>
           
           
           
@@ -850,7 +868,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L80"><code>Langlands.Tori.IsSplitTorusAlgebra.isTorusAlgebra</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L151"><code>Langlands.Tori.IsSplitTorusAlgebra.isTorusAlgebra</code></a>
           
           
           
@@ -862,7 +880,7 @@
           
           <pre class="lean-signature"><code>theorem IsSplitTorusAlgebra.isTorusAlgebra
     {A : Type u} [CommRing A] [HopfAlgebra k A]
-    (h : IsSplitTorusAlgebra k A) : IsTorusAlgebra k E A</code></pre>
+    [IsSplitTorusAlgebra k A] : IsTorusAlgebra k E A</code></pre>
         </li>
         
       </ul>

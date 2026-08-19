@@ -8,7 +8,7 @@
   "topics": [
     "AlgebraicGroups.Tori"
   ],
-  "body_html": "<h1>Algebraic Torus</h1>\n<p>Let \\(k\\) be a field and \\(k_s\\) a separable closure. An <strong>algebraic\ntorus</strong> over \\(k\\) is a linear algebraic group \\(T\\) over \\(k\\) such\nthat\n\\[\nT_{k_s} \\;\\cong\\; \\mathbb{G}_{m,k_s}^{\\,n}\n\\]\nfor some \\(n \\geq 0\\). The integer \\(n\\) is called the <strong>rank</strong> of\n\\(T\\).</p>\n<p>Equivalently (see <a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"../../tori/tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>) there exists a finite\nseparable extension \\(E/k\\) with \\(T_E \\cong \\mathbb{G}_{m,E}^{\\,n}\\);\nthe separable closure in the definition is not a genuine infinite\nlimit.</p>\n<p>The character lattice \\(X^*(T)\\) and cocharacter lattice \\(X_*(T)\\)\nof a torus of rank \\(n\\) are free \\(\\mathbb{Z}\\)-modules of rank\n\\(n\\) in perfect duality, carrying continuous actions of\n\\(\\Theta = \\operatorname{Gal}(k_s/k)\\); see\n<a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"../../tori/tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>. They form the\ncomplete invariant of \\(T\\) by\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>.</p>\n<p>A torus is smooth, connected, and commutative. Smoothness and\nconnectedness hold because both can be checked after base change to\n\\(k_s\\), where \\(\\mathbb{G}_m^n\\) is a smooth connected variety;\ncommutativity holds because \\(T(k_s) \\subseteq T(k_s)\\) is the group\n\\((k_s^\\times)^n\\) under the defining isomorphism and \\(T(k_s)\\) is\nschematically dense in the smooth \\(k_s\\)-group \\(T_{k_s}\\).</p>",
+  "body_html": "<h1>Algebraic Torus</h1>\n<p>Let \\(k\\) be a field and \\(k_s\\) a separable closure. An <strong>algebraic\ntorus</strong> over \\(k\\) is a linear algebraic group \\(T\\) over \\(k\\) such\nthat\n\\[\nT_{k_s} \\;\\cong\\; \\mathbb{G}_{m,k_s}^{\\,n}\n\\]\nfor some \\(n \\geq 0\\). The integer \\(n\\) is called the <strong>rank</strong> of\n\\(T\\).</p>\n<p>Equivalently (see <a class=\"node-ref\" data-node-id=\"tori.splitting_field\" href=\"../../tori/tori_splitting_field.html\">The Minimal Splitting Field of a Torus</a>) there exists a finite\nseparable extension \\(E/k\\) with \\(T_E \\cong \\mathbb{G}_{m,E}^{\\,n}\\);\nthe separable closure in the definition is not a genuine infinite\nlimit.</p>\n<p><strong>Working form (hierarchy).</strong> A torus is a <strong>special diagonalizable\ngroup</strong>: \\(T\\) is a torus split by \\(E\\) if and only if \\(T_E\\) is\ndiagonalizable and its character group \\(X^*(T_E)\\) is a <em>lattice</em> —\nfree of finite rank\n(<a class=\"node-ref\" data-node-id=\"reductive_groups.diagonalizable_groups_antiequivalence\" href=\"../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html\">Diagonalizable Groups Are Dual to Character Groups</a>:\ngroups with free abelian character group of finite rank are exactly\nthe split tori). The formalization takes this form as the\ndefinition, with \\(T_E \\cong \\mathbb{G}_m^n\\) recovered by choosing\na basis of the lattice.</p>\n<p>The character lattice \\(X^*(T)\\) and cocharacter lattice \\(X_*(T)\\)\nof a torus of rank \\(n\\) are free \\(\\mathbb{Z}\\)-modules of rank\n\\(n\\) in perfect duality, carrying continuous actions of\n\\(\\Theta = \\operatorname{Gal}(k_s/k)\\); see\n<a class=\"node-ref\" data-node-id=\"tori.character_and_cocharacter_lattices\" href=\"../../tori/tori_character_and_cocharacter_lattices.html\">Character and Cocharacter Lattices</a>. They form the\ncomplete invariant of \\(T\\) by\n<a class=\"node-ref\" data-node-id=\"tori.f_tori_galois_module_classification\" href=\"../../tori/tori_f_tori_galois_module_classification.html\">F-Tori Are Classified by Galois Modules</a>.</p>\n<p>A torus is smooth, connected, and commutative. Smoothness and\nconnectedness hold because both can be checked after base change to\n\\(k_s\\), where \\(\\mathbb{G}_m^n\\) is a smooth connected variety;\ncommutativity holds because \\(T(k_s) \\subseteq T(k_s)\\) is the group\n\\((k_s^\\times)^n\\) under the defining isomorphism and \\(T(k_s)\\) is\nschematically dense in the smooth \\(k_s\\)-group \\(T_{k_s}\\).</p>",
   "proof_html": null,
   "deps": [
     {
@@ -120,15 +120,33 @@
       "display_name": "Langlands.Tori.IsTorusAlgebra",
       "qualified_name": "Langlands.Tori.IsTorusAlgebra",
       "module": "LanglandsLean.AlgebraicGroups.Tori.Torus",
-      "kind": "def",
-      "signature": "def IsTorusAlgebra (A : Type u) [CommRing A] [HopfAlgebra k A] : Prop :=\n  ∃ (M : Type u) (_ : AddCommGroup M) (_ : Module.Free ℤ M)\n    (_ : Module.Finite ℤ M),\n    Nonempty ((E ⊗[k] A) ≃ₐc[E] AddMonoidAlgebra E M)",
+      "kind": "class",
+      "signature": "class IsTorusAlgebra : Prop where\n  diagonalizable : IsDiagonalizableAlgebra E (E ⊗[k] A)\n  free : Module.Free ℤ (Additive (GroupLike E (E ⊗[k] A)))\n  finite : Module.Finite ℤ (Additive (GroupLike E (E ⊗[k] A)))",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
       "short_revision": "main",
-      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L42",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L104",
       "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Langlands.Tori.isTorusAlgebra_iff_gm_pow",
+      "display_name": "Langlands.Tori.isTorusAlgebra_iff_gm_pow",
+      "qualified_name": "Langlands.Tori.isTorusAlgebra_iff_gm_pow",
+      "module": "LanglandsLean.AlgebraicGroups.Tori.Torus",
+      "kind": "theorem",
+      "signature": "theorem isTorusAlgebra_iff_gm_pow :\n    IsTorusAlgebra k E A ↔\n      ∃ n : ℕ, Nonempty ((E ⊗[k] A) ≃ₐc[E] AddMonoidAlgebra E (Fin n → ℤ))",
+      "docstring": null,
+      "repository_title": "LanglandsLean",
+      "revision": "main",
+      "short_revision": "main",
+      "source_url": "https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L163",
+      "doc_url": null,
+      "has_sorry": true,
       "status": "resolved",
       "reason": null,
       "suggestions": []

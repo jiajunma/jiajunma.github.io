@@ -787,7 +787,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L294"><code>Langlands.Tori.charLatticeMap</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L398"><code>Langlands.Tori.charLatticeMap</code></a>
           
           
           
@@ -795,26 +795,26 @@
             LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
           </span>
           
-          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
           
           <pre class="lean-signature"><code>noncomputable def charLatticeMap (f : A →ₐc[k] B) :
     CharLattice k E A →* CharLattice k E B where
   toFun x :=
-    ⟨Algebra.TensorProduct.map (AlgHom.id E E) f.toAlgHom x.val, by
-      sorry⟩ -- proof: M5 (base change of a Hopf hom preserves group-likes)
+    ⟨Bialgebra.TensorProduct.map (BialgHom.id E E) f x.val,
+      x.2.map (Bialgebra.TensorProduct.map (BialgHom.id E E) f)⟩
   map_one&#39; := by
     ext
-    exact map_one (Algebra.TensorProduct.map (AlgHom.id E E) f.toAlgHom)
+    exact map_one (Bialgebra.TensorProduct.map (BialgHom.id E E) f)
   map_mul&#39; := fun x y =&gt; by
     ext
-    exact map_mul (Algebra.TensorProduct.map (AlgHom.id E E) f.toAlgHom)
+    exact map_mul (Bialgebra.TensorProduct.map (BialgHom.id E E) f)
       x.val y.val</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L313"><code>Langlands.Tori.charLatticeMap_galAct</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L429"><code>Langlands.Tori.charLatticeMap_galAct</code></a>
           
           
           
@@ -822,7 +822,7 @@
             LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
           </span>
           
-          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
           
           <pre class="lean-signature"><code>theorem charLatticeMap_galAct (f : A →ₐc[k] B) (γ : E ≃ₐ[k] E)
     (x : CharLattice k E A) :
@@ -833,7 +833,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L326"><code>Langlands.Tori.existsUnique_bialgHom_of_equivariant</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L443"><code>Langlands.Tori.existsUnique_bialgHom_of_equivariant</code></a>
           
           
           
@@ -845,7 +845,7 @@
           
           <pre class="lean-signature"><code>theorem existsUnique_bialgHom_of_equivariant
     [FiniteDimensional k E] [IsGalois k E]
-    (hA : IsTorusAlgebra k E A) (hB : IsTorusAlgebra k E B)
+    [IsTorusAlgebra k E A] [IsTorusAlgebra k E B]
     (g : CharLattice k E A →* CharLattice k E B)
     (hg : ∀ γ x, g (charGalAct k E A γ x) = charGalAct k E B γ (g x)) :
     ∃! f : A →ₐc[k] B, charLatticeMap k E f = g</code></pre>

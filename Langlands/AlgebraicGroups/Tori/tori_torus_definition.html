@@ -783,9 +783,9 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
+          <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L42"><code>Langlands.Tori.IsTorusAlgebra</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L104"><code>Langlands.Tori.IsTorusAlgebra</code></a>
           
           
           
@@ -795,10 +795,28 @@
           
           
           
-          <pre class="lean-signature"><code>def IsTorusAlgebra (A : Type u) [CommRing A] [HopfAlgebra k A] : Prop :=
-  ∃ (M : Type u) (_ : AddCommGroup M) (_ : Module.Free ℤ M)
-    (_ : Module.Finite ℤ M),
-    Nonempty ((E ⊗[k] A) ≃ₐc[E] AddMonoidAlgebra E M)</code></pre>
+          <pre class="lean-signature"><code>class IsTorusAlgebra : Prop where
+  diagonalizable : IsDiagonalizableAlgebra E (E ⊗[k] A)
+  free : Module.Free ℤ (Additive (GroupLike E (E ⊗[k] A)))
+  finite : Module.Finite ℤ (Additive (GroupLike E (E ⊗[k] A)))</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Torus.lean#L163"><code>Langlands.Tori.isTorusAlgebra_iff_gm_pow</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Torus
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem isTorusAlgebra_iff_gm_pow :
+    IsTorusAlgebra k E A ↔
+      ∃ n : ℕ, Nonempty ((E ⊗[k] A) ≃ₐc[E] AddMonoidAlgebra E (Fin n → ℤ))</code></pre>
         </li>
         
       </ul>
@@ -825,6 +843,15 @@ for some \(n \geq 0\). The integer \(n\) is called the <strong>rank</strong> of
 separable extension \(E/k\) with \(T_E \cong \mathbb{G}_{m,E}^{\,n}\);
 the separable closure in the definition is not a genuine infinite
 limit.</p>
+<p><strong>Working form (hierarchy).</strong> A torus is a <strong>special diagonalizable
+group</strong>: \(T\) is a torus split by \(E\) if and only if \(T_E\) is
+diagonalizable and its character group \(X^*(T_E)\) is a <em>lattice</em> —
+free of finite rank
+(<a class="node-ref" data-node-id="reductive_groups.diagonalizable_groups_antiequivalence" href="../../reductive_groups/reductive_groups_diagonalizable_groups_antiequivalence.html">Diagonalizable Groups Are Dual to Character Groups</a>:
+groups with free abelian character group of finite rank are exactly
+the split tori). The formalization takes this form as the
+definition, with \(T_E \cong \mathbb{G}_m^n\) recovered by choosing
+a basis of the lattice.</p>
 <p>The character lattice \(X^*(T)\) and cocharacter lattice \(X_*(T)\)
 of a torus of rank \(n\) are free \(\mathbb{Z}\)-modules of rank
 \(n\) in perfect duality, carrying continuous actions of

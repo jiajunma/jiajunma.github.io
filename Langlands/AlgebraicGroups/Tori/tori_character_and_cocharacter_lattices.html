@@ -795,7 +795,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L93"><code>Langlands.Tori.charGalAct</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L190"><code>Langlands.Tori.charGalAct</code></a>
           
           
           
@@ -803,7 +803,7 @@
             LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
           </span>
           
-          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
           
           <pre class="lean-signature"><code>noncomputable def charGalAct :
     (E ≃ₐ[k] E) →* Monoid.End (CharLattice k E A) where
@@ -817,15 +817,17 @@
         ext
         exact map_mul (galAlgAut k E A γ) x.val y.val }
   map_one&#39; := by
-    sorry -- proof: M5 (Algebra.TensorProduct.congr of refl is refl)
-  map_mul&#39; := by
-    sorry -- proof: M5 (congr is multiplicative in γ)</code></pre>
+    ext x
+    exact galAlgAut_one k E A x.val
+  map_mul&#39; := fun γ δ =&gt; by
+    ext x
+    exact galAlgAut_mul k E A γ δ x.val</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L191"><code>Langlands.Tori.CocharLattice</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L296"><code>Langlands.Tori.CocharLattice</code></a>
           
           
           
@@ -841,7 +843,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L201"><code>Langlands.Tori.charPairing</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L306"><code>Langlands.Tori.charPairing</code></a>
           
           
           
@@ -861,7 +863,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L240"><code>Langlands.Tori.charPairing_perfect</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L345"><code>Langlands.Tori.charPairing_perfect</code></a>
           
           
           
@@ -871,7 +873,7 @@
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
-          <pre class="lean-signature"><code>theorem charPairing_perfect (hA : IsTorusAlgebra k E A)
+          <pre class="lean-signature"><code>theorem charPairing_perfect [IsTorusAlgebra k E A]
     (f : Additive (CharLattice k E A) →+ ℤ) :
     ∃! l : CocharLattice k E A,
       ∀ x : CharLattice k E A,

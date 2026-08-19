@@ -785,7 +785,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L150"><code>Langlands.Tori.torusRank</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L255"><code>Langlands.Tori.torusRank</code></a>
           
           
           
@@ -802,7 +802,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L161"><code>Langlands.Tori.torusSplitRank</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L266"><code>Langlands.Tori.torusSplitRank</code></a>
           
           
           
@@ -819,7 +819,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L168"><code>Langlands.Tori.torusSplitRank_le_torusRank</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L273"><code>Langlands.Tori.torusSplitRank_le_torusRank</code></a>
           
           
           
@@ -827,16 +827,16 @@
             LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
           </span>
           
-          <span class="badge status-needs_proof_review">sorry/admit</span>
           
-          <pre class="lean-signature"><code>theorem torusSplitRank_le_torusRank (hA : IsTorusAlgebra k E A) :
+          
+          <pre class="lean-signature"><code>theorem torusSplitRank_le_torusRank [IsTorusAlgebra k E A] :
     torusSplitRank k E A ≤ torusRank k E A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L178"><code>Langlands.Tori.torusSplitRank_eq_torusRank_iff</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L283"><code>Langlands.Tori.torusSplitRank_eq_torusRank_iff</code></a>
           
           
           
@@ -847,14 +847,14 @@
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem torusSplitRank_eq_torusRank_iff
-    [FiniteDimensional k E] [IsGalois k E] (hA : IsTorusAlgebra k E A) :
+    [FiniteDimensional k E] [IsGalois k E] [IsTorusAlgebra k E A] :
     torusSplitRank k E A = torusRank k E A ↔ IsSplitTorusAlgebra k A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L278"><code>Langlands.Tori.torusSplitRank_eq_zero_iff</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L383"><code>Langlands.Tori.torusSplitRank_eq_zero_iff</code></a>
           
           
           
@@ -865,7 +865,7 @@
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem torusSplitRank_eq_zero_iff
-    [FiniteDimensional k E] [IsGalois k E] (hA : IsTorusAlgebra k E A) :
+    [FiniteDimensional k E] [IsGalois k E] [IsTorusAlgebra k E A] :
     torusSplitRank k E A = 0 ↔ IsAnisotropicAlgebra k E A</code></pre>
         </li>
         

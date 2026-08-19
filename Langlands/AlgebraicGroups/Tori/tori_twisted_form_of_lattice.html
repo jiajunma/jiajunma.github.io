@@ -787,7 +787,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L164"><code>Langlands.Tori.exists_charLatticeRep_iso</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L165"><code>Langlands.Tori.exists_charLatticeRep_iso</code></a>
           
           
           
@@ -800,8 +800,8 @@
           <pre class="lean-signature"><code>theorem exists_charLatticeRep_iso
     (V : Rep.{u} ℤ (E ≃ₐ[k] E))
     (hfree : Module.Free ℤ V) (hfin : Module.Finite ℤ V) :
-    ∃ (A : Type u) (_ : CommRing A) (_ : HopfAlgebra k A),
-      IsTorusAlgebra k E A ∧ Nonempty (charLatticeRep k E A ≅ V)</code></pre>
+    ∃ T : TorusAlgCat k E,
+      Nonempty ((charLatticeFunctor k E).obj T ≅ ⟨V, hfree, hfin⟩)</code></pre>
         </li>
         
       </ul>

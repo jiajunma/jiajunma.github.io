@@ -799,7 +799,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L114"><code>Langlands.Tori.charRep</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharLattice.lean#L213"><code>Langlands.Tori.charRep</code></a>
           
           
           
@@ -807,15 +807,21 @@
             LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharLattice
           </span>
           
-          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
           
           <pre class="lean-signature"><code>noncomputable def charRep :
     Representation ℤ (E ≃ₐ[k] E) (Additive (CharLattice k E A)) where
   toFun γ := (MonoidHom.toAdditive (charGalAct k E A γ)).toIntLinearMap
   map_one&#39; := by
-    sorry -- proof: M5 (transport of charGalAct.map_one)
-  map_mul&#39; := by
-    sorry -- proof: M5 (transport of charGalAct.map_mul)</code></pre>
+    refine LinearMap.ext fun x =&gt; ?_
+    show Additive.ofMul ((charGalAct k E A 1) x.toMul) = x
+    rw [map_one (charGalAct k E A)]
+    rfl
+  map_mul&#39; := fun γ δ =&gt; by
+    refine LinearMap.ext fun x =&gt; ?_
+    show Additive.ofMul ((charGalAct k E A (γ * δ)) x.toMul) = _
+    rw [map_mul (charGalAct k E A)]
+    rfl</code></pre>
         </li>
         
         <li class="lean-ref">
@@ -899,9 +905,10 @@
           <pre class="lean-signature"><code>noncomputable def charLatticeFunctor :
     TorusAlgCat k E ⥤ LatticeCat (E ≃ₐ[k] E) where
   obj A :=
+    haveI : IsTorusAlgebra k E A.obj := A.property
     ⟨charLatticeRep k E A.obj,
-      charLattice_free k E A.obj A.property,
-      charLattice_finite k E A.obj A.property⟩
+      charLattice_free k E A.obj,
+      charLattice_finite k E A.obj⟩
   map {A B} f :=
     ⟨Rep.ofHom
       { toLinearMap :=
@@ -917,7 +924,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L132"><code>Langlands.Tori.charLatticeFunctor_faithful</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L133"><code>Langlands.Tori.charLatticeFunctor_faithful</code></a>
           
           
           
@@ -935,7 +942,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L141"><code>Langlands.Tori.charLatticeFunctor_full</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L142"><code>Langlands.Tori.charLatticeFunctor_full</code></a>
           
           
           
@@ -953,7 +960,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L151"><code>Langlands.Tori.charLatticeFunctor_essSurj</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L152"><code>Langlands.Tori.charLatticeFunctor_essSurj</code></a>
           
           
           
@@ -971,7 +978,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L179"><code>Langlands.Tori.toriClassification</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Classification.lean#L180"><code>Langlands.Tori.toriClassification</code></a>
           
           
           
