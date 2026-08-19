@@ -759,7 +759,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L245"><code>Langlands.Tori.schemeCharacterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L245"><code>Langlands.Tori.SchemeCharacterGroup</code></a>
           
           
           
@@ -769,7 +769,7 @@
           
           
           
-          <pre class="lean-signature"><code>noncomputable def schemeCharacterGroup
+          <pre class="lean-signature"><code>noncomputable def SchemeCharacterGroup
     (G : Grp (Over (Scheme.Spec.obj (op Rc)))) : Type _ :=
   G ⟶ gmGrp Rc</code></pre>
         </li>
@@ -795,7 +795,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L73"><code>Langlands.Tori.characterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L73"><code>Langlands.Tori.CharacterGroup</code></a>
           
           
           
@@ -805,14 +805,14 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev characterGroup (A : Type v) [CommSemiring A] [Bialgebra R A] : Type _ :=
+          <pre class="lean-signature"><code>abbrev CharacterGroup (A : Type v) [CommSemiring A] [Bialgebra R A] : Type _ :=
   WithConv ((AddMonoidAlgebra R ℤ) →ₐc[R] A)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L83"><code>Langlands.Tori.cocharacterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L83"><code>Langlands.Tori.coCharacterGroup</code></a>
           
           
           
@@ -822,7 +822,7 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev cocharacterGroup (A : Type v) [Semiring A] [Bialgebra R A] : Type _ :=
+          <pre class="lean-signature"><code>abbrev coCharacterGroup (A : Type v) [Semiring A] [Bialgebra R A] : Type _ :=
   WithConv (A →ₐc[R] (AddMonoidAlgebra R ℤ))</code></pre>
         </li>
         
@@ -840,7 +840,7 @@
           
           
           <pre class="lean-signature"><code>noncomputable def diagCharEquiv :
-    Multiplicative M ≃* characterGroup R (AddMonoidAlgebra R M) :=
+    Multiplicative M ≃* CharacterGroup R (AddMonoidAlgebra R M) :=
   AddEquiv.toMultiplicativeLeft
     ((zmultiplesAddEquiv M).trans
       (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))</code></pre>
@@ -860,7 +860,7 @@
           
           
           <pre class="lean-signature"><code>noncomputable def diagCocharEquiv :
-    (M →+ ℤ) ≃ cocharacterGroup R (AddMonoidAlgebra R M) :=
+    (M →+ ℤ) ≃ coCharacterGroup R (AddMonoidAlgebra R M) :=
   (AddMonoidAlgebra.mapDomainBialgHomEquiv).trans (WithConv.equiv _).symm</code></pre>
         </li>
         

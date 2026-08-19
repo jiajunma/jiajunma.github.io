@@ -42,7 +42,7 @@
       "qualified_name": "Langlands.Tori.diagCharEquiv",
       "module": "LanglandsLean.AlgebraicGroups.Tori.CharacterGroup",
       "kind": "def",
-      "signature": "noncomputable def diagCharEquiv :\n    Multiplicative M ≃* characterGroup R (AddMonoidAlgebra R M) :=\n  AddEquiv.toMultiplicativeLeft\n    ((zmultiplesAddEquiv M).trans\n      (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))",
+      "signature": "noncomputable def diagCharEquiv :\n    Multiplicative M ≃* CharacterGroup R (AddMonoidAlgebra R M) :=\n  AddEquiv.toMultiplicativeLeft\n    ((zmultiplesAddEquiv M).trans\n      (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))",
       "docstring": null,
       "repository_title": "LanglandsLean",
       "revision": "main",
