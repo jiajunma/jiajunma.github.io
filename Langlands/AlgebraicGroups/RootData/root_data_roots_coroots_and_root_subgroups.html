@@ -773,12 +773,14 @@ for non-zero weight \(\alpha \in X^*(T)\).</p>
 \[
 \Phi \;=\; \Phi(G, T) \;:=\; \{\alpha \in X^*(T) \setminus \{0\} : \mathfrak{g}_\alpha \ne 0\}.
 \]</p>
-<p>Properties:
-- \(\Phi\) is finite;
-- \(\dim \mathfrak{g}_\alpha = 1\) for each \(\alpha \in \Phi\);
-- \(\Phi = -\Phi\) (roots come in pairs \(\pm \alpha\));
-- \(\Phi\) generates a sublattice of \(X^*(T) \otimes \mathbb{Q}\) — its
-  rank is the semisimple rank of \(G\).</p>
+<p>Properties:</p>
+<ul>
+<li>\(\Phi\) is finite;</li>
+<li>\(\dim \mathfrak{g}_\alpha = 1\) for each \(\alpha \in \Phi\);</li>
+<li>\(\Phi = -\Phi\) (roots come in pairs \(\pm \alpha\));</li>
+<li>\(\Phi\) generates a sublattice of \(X^*(T) \otimes \mathbb{Q}\) — its
+  rank is the semisimple rank of \(G\).</li>
+</ul>
 <h2>Root subgroups</h2>
 <p>For each \(\alpha \in \Phi\), there is a unique connected closed
 subgroup \(U_\alpha \subseteq G\) with:</p>
@@ -819,21 +821,25 @@ structure constants</strong> (an explicit description in each Dynkin type).</p>
 <h3>\(\mathrm{GL}_n\)</h3>
 <p>\(T\) = diagonal matrices; \(X^*(T) = \mathbb{Z}\langle \varepsilon_1, \ldots, \varepsilon_n \rangle\);
 \(\Phi = \{\varepsilon_i - \varepsilon_j : i \ne j\}\).</p>
-<p>For \(\alpha = \varepsilon_i - \varepsilon_j\):
-- \(U_\alpha\) = matrices with single non-zero off-diagonal entry at
-  position \((i, j)\), i.e.\ \(I + x E_{ij}\) for \(x \in k\).
-- \(\alpha^\vee\) = the cocharacter \(t \mapsto \mathrm{diag}(1, \ldots, t, \ldots, t^{-1}, \ldots, 1)\)
-  with \(t\) in position \(i\) and \(t^{-1}\) in position \(j\).</p>
+<p>For \(\alpha = \varepsilon_i - \varepsilon_j\):</p>
+<ul>
+<li>\(U_\alpha\) = matrices with single non-zero off-diagonal entry at
+  position \((i, j)\), i.e.\ \(I + x E_{ij}\) for \(x \in k\).</li>
+<li>\(\alpha^\vee\) = the cocharacter \(t \mapsto \mathrm{diag}(1, \ldots, t, \ldots, t^{-1}, \ldots, 1)\)
+  with \(t\) in position \(i\) and \(t^{-1}\) in position \(j\).</li>
+</ul>
 <h3>\(\mathrm{Sp}_{4}\) (type \(C_2\))</h3>
 <p>8 roots: \(\pm \varepsilon_1 \pm \varepsilon_2\), \(\pm 2\varepsilon_1\),
 \(\pm 2\varepsilon_2\). Long roots \(\pm 2 \varepsilon_i\) have coroots
 \(\alpha^\vee = \varepsilon_i^\vee\) (themselves a basis of \(X_*\)).</p>
 <h2>Functoriality</h2>
 <p>For a morphism \(f : (G, T) \to (G', T')\) of reductive groups
-matching maximal tori:
-- \(f\) induces a map of character lattices \(X^*(T') \to X^*(T)\);
-- \(f\) maps \(U_\alpha\) to \(U'_{f^*(\alpha)}\) (compatibly with
-  Steinberg relations).</p>
+matching maximal tori:</p>
+<ul>
+<li>\(f\) induces a map of character lattices \(X^*(T') \to X^*(T)\);</li>
+<li>\(f\) maps \(U_\alpha\) to \(U'_{f^*(\alpha)}\) (compatibly with
+  Steinberg relations).</li>
+</ul>
 <p>This makes the root subgroup structure functorial in pairs \((G, T)\).</p>
 <h2>Borel subgroups and the choice of positive roots</h2>
 <p>A choice of Borel subgroup \(B \supseteq T\) determines a system of

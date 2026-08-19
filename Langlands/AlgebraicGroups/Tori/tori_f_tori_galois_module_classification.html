@@ -728,8 +728,6 @@
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
-      
     </div>
   </header>
 
@@ -756,94 +754,6 @@
   </div>
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L116"><code>Langlands.Tori.diagCharEquiv</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>noncomputable def diagCharEquiv :
-    Multiplicative M ≃* characterGroup R (AddMonoidAlgebra R M)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L157"><code>Langlands.Tori.diag_bialgEquiv_iff_addEquiv</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem diag_bialgEquiv_iff_addEquiv :
-    Nonempty (AddMonoidAlgebra R M ≃ₐc[R] AddMonoidAlgebra R N) ↔
-      Nonempty (M ≃+ N)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/GaloisDescent.lean#L117"><code>Langlands.Tori.twistedGroupAlgebra</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.GaloisDescent
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>noncomputable def twistedGroupAlgebra : Subalgebra k (AddMonoidAlgebra E M) where
-  carrier := {f | ∀ γ : E ≃ₐ[k] E, semilinearAut k E M σ γ f = f}
-  add_mem&#39; hf hg γ := by rw [map_add, hf γ, hg γ]
-  mul_mem&#39; hf hg γ := by rw [map_mul, hf γ, hg γ]
-  algebraMap_mem&#39; r γ := by
-    rw [AlgEquiv.commutes]</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Speiser.lean#L205"><code>Langlands.Tori.twistedGroupAlgebra_span_top</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.Speiser
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem twistedGroupAlgebra_span_top [FiniteDimensional k E] :
-    Submodule.span E
-      ((twistedGroupAlgebra k E M σ : Set (AddMonoidAlgebra E M))) = ⊤</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.CharacterGroup</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/GaloisDescent.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.GaloisDescent</code></a>, <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/Speiser.lean#L1"><code>LanglandsLean.AlgebraicGroups.Tori.Speiser</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="theorem_thmcontent thm-content body">

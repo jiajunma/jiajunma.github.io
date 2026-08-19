@@ -755,7 +755,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L73"><code>Langlands.Tori.characterGroup</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L69"><code>Langlands.Tori.characterGroup</code></a>
           
           
           
@@ -765,14 +765,14 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev characterGroup (A : Type v) [Ring A] [HopfAlgebra R A] : Type v :=
-  GroupLike R A</code></pre>
+          <pre class="lean-signature"><code>abbrev characterGroup (A : Type v) [CommSemiring A] [Bialgebra R A] : Type _ :=
+  WithConv ((AddMonoidAlgebra R ℤ) →ₐc[R] A)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L85"><code>Langlands.Tori.cocharacterHom</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L79"><code>Langlands.Tori.cocharacterGroup</code></a>
           
           
           
@@ -782,14 +782,14 @@
           
           
           
-          <pre class="lean-signature"><code>abbrev cocharacterHom (A : Type v) [Ring A] [HopfAlgebra R A] : Type _ :=
-  A →ₐc[R] AddMonoidAlgebra R ℤ</code></pre>
+          <pre class="lean-signature"><code>abbrev cocharacterGroup (A : Type v) [Semiring A] [Bialgebra R A] : Type _ :=
+  WithConv (A →ₐc[R] (AddMonoidAlgebra R ℤ))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L116"><code>Langlands.Tori.diagCharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L104"><code>Langlands.Tori.diagCharEquiv</code></a>
           
           
           
@@ -800,13 +800,16 @@
           
           
           <pre class="lean-signature"><code>noncomputable def diagCharEquiv :
-    Multiplicative M ≃* characterGroup R (AddMonoidAlgebra R M)</code></pre>
+    Multiplicative M ≃* characterGroup R (AddMonoidAlgebra R M) :=
+  AddEquiv.toMultiplicativeLeft
+    ((zmultiplesAddEquiv M).trans
+      (AddMonoidAlgebra.mapDomainBialgHomAddEquiv (R := R)))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L146"><code>Langlands.Tori.diagCocharEquiv</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L125"><code>Langlands.Tori.diagCocharEquiv</code></a>
           
           
           
@@ -817,8 +820,25 @@
           
           
           <pre class="lean-signature"><code>noncomputable def diagCocharEquiv :
-    (M →+ ℤ) ≃ cocharacterHom R (AddMonoidAlgebra R M) :=
-  AddMonoidAlgebra.mapDomainBialgHomEquiv</code></pre>
+    (M →+ ℤ) ≃ cocharacterGroup R (AddMonoidAlgebra R M) :=
+  (AddMonoidAlgebra.mapDomainBialgHomEquiv).trans (WithConv.equiv _).symm</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L183"><code>Langlands.Tori.diagGroupLikeEquiv</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            LanglandsLean @ main, LanglandsLean.AlgebraicGroups.Tori.CharacterGroup
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>noncomputable def diagGroupLikeEquiv :
+    Multiplicative M ≃* GroupLike R (AddMonoidAlgebra R M)</code></pre>
         </li>
         
       </ul>
