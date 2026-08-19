@@ -800,7 +800,7 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L188"><code>Langlands.Tori.nonempty_characterGroup_equiv_hopf</code></a>
+          <a href="https://github.com/Langlandsproject/Langlands/blob/main/lean/LanglandsLean/AlgebraicGroups/Tori/CharacterGroup.lean#L177"><code>Langlands.Tori.nonempty_characterGroup_equiv_hopf</code></a>
           
           
           
@@ -811,8 +811,8 @@
           <span class="badge status-needs_proof_review">sorry/admit</span>
           
           <pre class="lean-signature"><code>theorem nonempty_characterGroup_equiv_hopf
-    (A : Type u) [CommRing A] [HopfAlgebra R A] :
-    Nonempty (CharacterGroup R A ≃ HopfCharacterGroup R A)</code></pre>
+    (Rc : CommRingCat.{u}) (A : Type u) [CommRing A] [HopfAlgebra Rc A] :
+    Nonempty (CharacterGroup Rc (specGrp Rc A) ≃ HopfCharacterGroup Rc A)</code></pre>
         </li>
         
       </ul>
