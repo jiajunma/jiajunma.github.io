@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Target Hermitian Space for a Positive-Depth Block</h1>\n<p>Let \\(\\Gamma\\in\\mathbf g\\) be the invertible semisimple element of a single positive-depth block. Among target \\(\\varepsilon'\\)-hermitian \\(D\\)-modules \\(V'\\) with \\(\\dim_DV'=\\dim_DV\\), the condition\n\\[\nM^{-1}(\\Gamma+\\mathbf g_{x,r+})\\ne\\emptyset\n\\]\nholds exactly for the isometry class of \\(V_\\Gamma\\).</p>",
-  "proof_html": "<p>The definition of \\(V_\\Gamma\\) gives one example: for the identity map \\(w:V\\to V_\\Gamma\\), the adjoint relation gives \\(M(w)=\\Gamma\\).</p>\n<p>Conversely, suppose \\(V'\\) satisfies the displayed condition. Positive-depth\nmoment-map surjectivity\n<code>supercuspidal_theta.positive_depth_moment_map_surjectivity</code> lets us choose\n\\(w\\in\\operatorname{Hom}_D(V,V')\\) with\n\\[\nM(w)=\\Gamma.\n\\]\nThen for all \\(v_1,v_2\\in V\\),\n\\[\n\\langle wv_1,wv_2\\rangle_{V'}\n=\n\\langle v_1,\\Gamma v_2\\rangle_V\n=\n\\langle v_1,v_2\\rangle_{V_\\Gamma}.\n\\]\nThus \\(w\\) is an isometry \\(V_\\Gamma\\simeq V'\\), proving uniqueness of the target hermitian space.</p>",
+  "proof_html": "<p>The definition of \\(V_\\Gamma\\) gives one example: for the identity map \\(w:V\\to V_\\Gamma\\), the adjoint relation gives \\(M(w)=\\Gamma\\).</p>\n<p>Conversely, suppose \\(V'\\) satisfies the displayed condition. Positive-depth\nmoment-map surjectivity\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.positive_depth_moment_map_surjectivity\" href=\"supercuspidal_theta_positive_depth_moment_map_surjectivity.html\"><code>supercuspidal_theta.positive_depth_moment_map_surjectivity</code></a> lets us choose\n\\(w\\in\\operatorname{Hom}_D(V,V')\\) with\n\\[\nM(w)=\\Gamma.\n\\]\nThen for all \\(v_1,v_2\\in V\\),\n\\[\n\\langle wv_1,wv_2\\rangle_{V'}\n=\n\\langle v_1,\\Gamma v_2\\rangle_V\n=\n\\langle v_1,v_2\\rangle_{V_\\Gamma}.\n\\]\nThus \\(w\\) is an isometry \\(V_\\Gamma\\simeq V'\\), proving uniqueness of the target hermitian space.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.positive_depth_space_v_gamma",
@@ -39,5 +39,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_single_positive_depth_theta_lift.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

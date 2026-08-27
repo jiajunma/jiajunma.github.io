@@ -8,7 +8,7 @@
   "topics": [
     "supercuspidal_theta"
   ],
-  "body_html": "<h1>Target Top Block Nondegenerate Splitting</h1>\n<p>Let \\(w\\) be the vector supplied by\n<code>supercuspidal_theta.occurrence_vector_choice</code>, and write\n\\(M(w)={}^bX+{}^aX\\) with\n\\({}^bX\\in{}^b\\Gamma+{}^b\\mathbf g_{x,s}\\). Define\n\\[\n{}^bV'=w({}^bV),\\qquad {}^aV'=({}^bV')^\\perp.\n\\]\nThen \\(w|_{{}^bV}:{}^bV\\to{}^bV'\\) is an isomorphism, \\({}^bV'\\) is nondegenerate, \\(V'={}^bV'\\oplus{}^aV'\\), and \\(w({}^aV)\\subset{}^aV'\\).</p>",
+  "body_html": "<h1>Target Top Block Nondegenerate Splitting</h1>\n<p>Let \\(w\\) be the vector supplied by\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.occurrence_vector_choice\" href=\"supercuspidal_theta_occurrence_vector_choice.html\"><code>supercuspidal_theta.occurrence_vector_choice</code></a>, and write\n\\(M(w)={}^bX+{}^aX\\) with\n\\({}^bX\\in{}^b\\Gamma+{}^b\\mathbf g_{x,s}\\). Define\n\\[\n{}^bV'=w({}^bV),\\qquad {}^aV'=({}^bV')^\\perp.\n\\]\nThen \\(w|_{{}^bV}:{}^bV\\to{}^bV'\\) is an isomorphism, \\({}^bV'\\) is nondegenerate, \\(V'={}^bV'\\oplus{}^aV'\\), and \\(w({}^aV)\\subset{}^aV'\\).</p>",
   "proof_html": "<p>Every element of \\({}^b\\Gamma+{}^b\\mathbf g_{x,s}\\) is invertible on the top block, so \\(w^\\ast w={}^bX\\) makes \\(w|_{{}^bV}\\) injective and hence an isomorphism onto its image. The target form on \\(w({}^bV)\\) is computed by pairing through \\(w^\\ast w\\), hence is nondegenerate. For \\(v\\in{}^aV\\) and \\(u\\in{}^bV\\), the pairing \\(\\langle wu,wv\\rangle\\) is \\(\\langle{}^bXu,v\\rangle=0\\), so \\(w({}^aV)\\subset{}^aV'\\).</p>",
   "deps": [
     {
@@ -39,5 +39,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_target_lattice_block_splitting.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

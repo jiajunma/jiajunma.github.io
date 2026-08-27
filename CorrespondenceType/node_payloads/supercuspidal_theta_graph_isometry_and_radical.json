@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Graph Isometry and Radical Quotient</h1>\n<p>The map\n\\[\n(X,X')\\mapsto -wX+X'w\n\\]\nfrom source and target Lie algebra layers to \\(W\\) is an isometry for the symplectic forms defined by \\(\\Gamma\\) and \\(\\Gamma'\\). The graph of \\(d\\alpha\\) has radical given by the deepest centralizer layer, and after quotienting by this radical one obtains a nondegenerate finite symplectic space \\(b_0\\). In Case II the graph is already maximal isotropic and \\(b_0=0\\).</p>",
-  "proof_html": "<p>This aggregates the trace-form isometry\n<code>supercuspidal_theta.lie_layer_to_oscillator_isometry</code>, the radical computation\n<code>supercuspidal_theta.radical_of_gamma_symplectic_layer</code>, and the graph radical\nquotient <code>supercuspidal_theta.graph_radical_quotient</code>. These nodes respectively\ngive the isometry, compute the radicals using the good-element commutator, and\napply exactness plus dimension counting to identify \\(b_C\\), its orthogonal\ncomplement, and \\(b_0\\).</p>",
+  "proof_html": "<p>This aggregates the trace-form isometry\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.lie_layer_to_oscillator_isometry\" href=\"supercuspidal_theta_lie_layer_to_oscillator_isometry.html\"><code>supercuspidal_theta.lie_layer_to_oscillator_isometry</code></a>, the radical computation\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.radical_of_gamma_symplectic_layer\" href=\"supercuspidal_theta_radical_of_gamma_symplectic_layer.html\"><code>supercuspidal_theta.radical_of_gamma_symplectic_layer</code></a>, and the graph radical\nquotient <a class=\"node-ref\" data-node-id=\"supercuspidal_theta.graph_radical_quotient\" href=\"supercuspidal_theta_graph_radical_quotient.html\"><code>supercuspidal_theta.graph_radical_quotient</code></a>. These nodes respectively\ngive the isometry, compute the radicals using the good-element commutator, and\napply exactness plus dimension counting to identify \\(b_C\\), its orthogonal\ncomplement, and \\(b_0\\).</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.lie_layer_to_oscillator_isometry",
@@ -28,5 +28,6 @@
     }
   ],
   "dependents": [],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

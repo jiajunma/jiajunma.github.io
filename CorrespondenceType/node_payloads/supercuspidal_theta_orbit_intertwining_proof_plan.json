@@ -8,7 +8,7 @@
   "topics": [
     "supercuspidal_theta"
   ],
-  "body_html": "<h1>Proof Plan for Orbit Intertwining</h1>\n<ol>\n<li>Split the datum into the highest-depth block and the remaining direct sum.</li>\n<li>Decompose the oscillator residual space into block-diagonal and off-diagonal parts.</li>\n<li>Use <code>supercuspidal_theta.off_diagonal_kappa_oscillator_identification</code> to identify the off-diagonal oscillator factor with the off-diagonal Heisenberg-Weil representation.</li>\n<li>Use <code>supercuspidal_theta.block_oscillator_action_factorization</code> to factor the stabilizer representation.</li>\n<li>Apply Frobenius reciprocity to reduce the Hom space to the product of the top-block Hom space and the lower-block Hom space.</li>\n<li>Use <code>supercuspidal_theta.one_block_orbit_k_type_proposition</code> for the top block and the induction hypothesis for the lower blocks.</li>\n</ol>",
+  "body_html": "<h1>Proof Plan for Orbit Intertwining</h1>\n<ol>\n<li>Split the datum into the highest-depth block and the remaining direct sum.</li>\n<li>Decompose the oscillator residual space into block-diagonal and off-diagonal parts.</li>\n<li>Use <a class=\"node-ref\" data-node-id=\"supercuspidal_theta.off_diagonal_kappa_oscillator_identification\" href=\"supercuspidal_theta_off_diagonal_kappa_oscillator_identification.html\"><code>supercuspidal_theta.off_diagonal_kappa_oscillator_identification</code></a> to identify the off-diagonal oscillator factor with the off-diagonal Heisenberg-Weil representation.</li>\n<li>Use <a class=\"node-ref\" data-node-id=\"supercuspidal_theta.block_oscillator_action_factorization\" href=\"supercuspidal_theta_block_oscillator_action_factorization.html\"><code>supercuspidal_theta.block_oscillator_action_factorization</code></a> to factor the stabilizer representation.</li>\n<li>Apply Frobenius reciprocity to reduce the Hom space to the product of the top-block Hom space and the lower-block Hom space.</li>\n<li>Use <a class=\"node-ref\" data-node-id=\"supercuspidal_theta.one_block_orbit_k_type_proposition\" href=\"supercuspidal_theta_one_block_orbit_k_type_proposition.html\"><code>supercuspidal_theta.one_block_orbit_k_type_proposition</code></a> for the top block and the induction hypothesis for the lower blocks.</li>\n</ol>",
   "proof_html": null,
   "deps": [
     {
@@ -38,5 +38,6 @@
     }
   ],
   "dependents": [],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

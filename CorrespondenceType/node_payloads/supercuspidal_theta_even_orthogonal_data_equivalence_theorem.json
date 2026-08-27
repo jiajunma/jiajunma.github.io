@@ -8,8 +8,8 @@
   "topics": [
     "supercuspidal_theta"
   ],
-  "body_html": "<h1>Data Equivalence for Even Orthogonal Groups</h1>\n<p>Let \\(\\Sigma\\) and \\(\\Sigma'\\) be supercuspidal data for \\(G=O(V)\\), with \\(V\\) even-dimensional. Then\n\\[\n\\pi_\\Sigma\\simeq\\pi_{\\Sigma'}\n\\]\nif and only if \\(\\Sigma\\) and \\(\\Sigma'\\) are equivalent in the sense of\n<code>supercuspidal_theta.supercuspidal_datum_equivalence</code>.</p>",
-  "proof_html": "<p>If the parahoric \\(G_x^0\\) lies in \\(SO(V)\\), the restriction of \\(\\pi_\\Sigma\\) to \\(SO(V)\\) is a sum of compact inductions attached to the connected datum and its conjugate by an element of \\(O(V)\\setminus SO(V)\\). The connected Hakim-Murnaghan theorem then gives \\(G\\)-conjugacy of the data.</p>\n<p>If \\(G_x^0\\) meets the nonidentity component, the proof splits according to\nClifford theory. When the restriction of \\(\\rho\\) to the connected parahoric is\nreducible, the connected argument plus the index-two analysis gives the same\nequivalence condition. When the restriction is irreducible, both \\(\\rho\\) and\n\\(\\rho'\\) occur in the multiplicity space\n<code>supercuspidal_theta.ordinary_kappa_multiplicity_space</code>, and that multiplicity\nspace has a single irreducible constituent; hence \\(\\rho\\simeq\\rho'\\) after\naligning \\(x,\\Gamma,\\phi\\).</p>",
+  "body_html": "<h1>Data Equivalence for Even Orthogonal Groups</h1>\n<p>Let \\(\\Sigma\\) and \\(\\Sigma'\\) be supercuspidal data for \\(G=O(V)\\), with \\(V\\) even-dimensional. Then\n\\[\n\\pi_\\Sigma\\simeq\\pi_{\\Sigma'}\n\\]\nif and only if \\(\\Sigma\\) and \\(\\Sigma'\\) are equivalent in the sense of\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.supercuspidal_datum_equivalence\" href=\"supercuspidal_theta_supercuspidal_datum_equivalence.html\"><code>supercuspidal_theta.supercuspidal_datum_equivalence</code></a>.</p>",
+  "proof_html": "<p>If the parahoric \\(G_x^0\\) lies in \\(SO(V)\\), the restriction of \\(\\pi_\\Sigma\\) to \\(SO(V)\\) is a sum of compact inductions attached to the connected datum and its conjugate by an element of \\(O(V)\\setminus SO(V)\\). The connected Hakim-Murnaghan theorem then gives \\(G\\)-conjugacy of the data.</p>\n<p>If \\(G_x^0\\) meets the nonidentity component, the proof splits according to\nClifford theory. When the restriction of \\(\\rho\\) to the connected parahoric is\nreducible, the connected argument plus the index-two analysis gives the same\nequivalence condition. When the restriction is irreducible, both \\(\\rho\\) and\n\\(\\rho'\\) occur in the multiplicity space\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.ordinary_kappa_multiplicity_space\" href=\"supercuspidal_theta_ordinary_kappa_multiplicity_space.html\"><code>supercuspidal_theta.ordinary_kappa_multiplicity_space</code></a>, and that multiplicity\nspace has a single irreducible constituent; hence \\(\\rho\\simeq\\rho'\\) after\naligning \\(x,\\Gamma,\\phi\\).</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
@@ -34,5 +34,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_yu_extension.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

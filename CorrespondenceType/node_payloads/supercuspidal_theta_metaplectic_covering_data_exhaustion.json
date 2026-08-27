@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Exhaustion for Metaplectic Covering Data</h1>\n<p>Let \\(V'\\) be a symplectic \\(F\\)-space of even dimension \\(n\\), and let \\(Mp\\) be the \\(\\mathbb C^\\times\\)-metaplectic cover of \\(Sp(V')\\). If\n\\[\np\\ge \\max\\{2n+3,e_F(n+1)+2\\},\n\\]\nthen every genuine supercuspidal representation of \\(Mp\\) is attached to a covering datum.</p>",
-  "proof_html": "<p>Start with a genuine supercuspidal \\(Mp\\)-module \\(\\widetilde\\pi'\\). The conservation relation gives an odd-dimensional quadratic space \\(V\\), with \\(\\dim_FV\\le n+1\\), and a genuine supercuspidal representation \\(\\widetilde\\pi\\) on the corresponding orthogonal cover such that\n\\[\n\\widetilde\\pi'=\\theta_{V,V'}(\\widetilde\\pi).\n\\]\nThe residue-characteristic bound puts both groups under Kim's hypotheses, so\n\\(\\widetilde\\pi\\) is attached to a covering datum on the odd orthogonal side.\nThe refined K-type occurrence proposition\n<code>supercuspidal_theta.refined_k_type_occurrence_proposition</code> then produces\nsource and target data whose target attached representation is\n\\(\\widetilde\\pi'\\). The covering-data equivalence theorem\n<code>supercuspidal_theta.covering_data_equivalence_theorem</code> identifies the source\ndatum with the original one, so the target representation is attached to the\nconstructed metaplectic datum.</p>",
+  "proof_html": "<p>Start with a genuine supercuspidal \\(Mp\\)-module \\(\\widetilde\\pi'\\). The conservation relation gives an odd-dimensional quadratic space \\(V\\), with \\(\\dim_FV\\le n+1\\), and a genuine supercuspidal representation \\(\\widetilde\\pi\\) on the corresponding orthogonal cover such that\n\\[\n\\widetilde\\pi'=\\theta_{V,V'}(\\widetilde\\pi).\n\\]\nThe residue-characteristic bound puts both groups under Kim's hypotheses, so\n\\(\\widetilde\\pi\\) is attached to a covering datum on the odd orthogonal side.\nThe refined K-type occurrence proposition\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.refined_k_type_occurrence_proposition\" href=\"supercuspidal_theta_refined_k_type_occurrence_proposition.html\"><code>supercuspidal_theta.refined_k_type_occurrence_proposition</code></a> then produces\nsource and target data whose target attached representation is\n\\(\\widetilde\\pi'\\). The covering-data equivalence theorem\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.covering_data_equivalence_theorem\" href=\"supercuspidal_theta_covering_data_equivalence_theorem.html\"><code>supercuspidal_theta.covering_data_equivalence_theorem</code></a> identifies the source\ndatum with the original one, so the target representation is attached to the\nconstructed metaplectic datum.</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.covering_data_irreducibility",
@@ -39,5 +39,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_covering_data_exhaustion.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

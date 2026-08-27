@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Stabilizer Orbit Action Formula</h1>\n<p>In the one positive-depth block setting, let \\(S=\\operatorname{Stab}_{K_M}(w+B_0)\\). On the residual oscillator model \\(S(b)\\), the translated orbit representation \\(\\omega_w\\) restricts to \\(S\\) by\n\\[\n\\omega_w(h)=\\chi_M(h)\\,\\omega_b(h)\\,\\omega_b(h^{-1}w-w)\n\\qquad h\\in S,\n\\]\nwhere \\(\\chi_M\\) is the product of the source and target Moy-Prasad characters.</p>",
-  "proof_html": "<p>The generalized lattice model gives the action on the translated coset\n\\(w+B_0\\). The single-block stabilizer structure\n<code>supercuspidal_theta.single_block_stabilizer_structure</code> describes the\nstabilizer \\(S\\), while the key oscillator character identity\n<code>supercuspidal_theta.key_oscillator_character_identity</code> identifies the phase\nterm with the product character \\(\\chi_M\\). Substituting these into the\ngeneralized lattice-model formula gives the displayed action.</p>",
+  "proof_html": "<p>The generalized lattice model gives the action on the translated coset\n\\(w+B_0\\). The single-block stabilizer structure\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.single_block_stabilizer_structure\" href=\"supercuspidal_theta_single_block_stabilizer_structure.html\"><code>supercuspidal_theta.single_block_stabilizer_structure</code></a> describes the\nstabilizer \\(S\\), while the key oscillator character identity\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.key_oscillator_character_identity\" href=\"supercuspidal_theta_key_oscillator_character_identity.html\"><code>supercuspidal_theta.key_oscillator_character_identity</code></a> identifies the phase\nterm with the product character \\(\\chi_M\\). Substituting these into the\ngeneralized lattice-model formula gives the displayed action.</p>",
   "deps": [
     {
       "id": "lattice_model.generalized_lattice_model",
@@ -34,5 +34,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_stabilizer_evaluation_map.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

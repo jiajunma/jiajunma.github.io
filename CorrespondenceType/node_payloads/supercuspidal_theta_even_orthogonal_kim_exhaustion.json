@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Kim Exhaustion for Even Orthogonal Groups</h1>\n<p>Under the paper's large residue-characteristic hypotheses, every irreducible supercuspidal representation of \\(G=O(V)\\), with \\(V\\) even-dimensional, is \\(\\pi_\\Sigma\\) for some supercuspidal datum \\(\\Sigma\\).</p>",
-  "proof_html": "<p>Restrict an irreducible supercuspidal representation \\(\\pi\\) of \\(O(V)\\) to\n\\(SO(V)\\), and choose an irreducible supercuspidal constituent. Kim's\nconnected-group exhaustion writes that constituent as\n\\({}^{\\circ}\\pi_{{}^{\\circ}\\Sigma}\\). The negative-depth character extension\n<code>supercuspidal_theta.negative_depth_character_extension</code> extends the required\ndepth character from the connected centralizer to \\(G^0\\). The Yu kappa\nconstruction <code>supercuspidal_theta.yu_kappa_construction</code> supplies the\ncorresponding \\(K\\)-module \\(\\kappa\\). The multiplicity space\n\\[\n\\operatorname{Hom}_{K_{0+}}(\\kappa,\\pi)\n\\]\ncontains the depth-zero piece coming from the connected datum; choosing an\nirreducible \\(G_x^0\\)-submodule \\(\\rho\\) gives a datum \\(\\Sigma\\). The\nrepresentation \\(\\pi\\) embeds in \\(\\pi_\\Sigma\\), and\n<code>supercuspidal_theta.even_orthogonal_yu_irreducibility</code> makes \\(\\pi_\\Sigma\\)\nirreducible, so \\(\\pi=\\pi_\\Sigma\\).</p>",
+  "proof_html": "<p>Restrict an irreducible supercuspidal representation \\(\\pi\\) of \\(O(V)\\) to\n\\(SO(V)\\), and choose an irreducible supercuspidal constituent. Kim's\nconnected-group exhaustion writes that constituent as\n\\({}^{\\circ}\\pi_{{}^{\\circ}\\Sigma}\\). The negative-depth character extension\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.negative_depth_character_extension\" href=\"supercuspidal_theta_negative_depth_character_extension.html\"><code>supercuspidal_theta.negative_depth_character_extension</code></a> extends the required\ndepth character from the connected centralizer to \\(G^0\\). The Yu kappa\nconstruction <a class=\"node-ref\" data-node-id=\"supercuspidal_theta.yu_kappa_construction\" href=\"supercuspidal_theta_yu_kappa_construction.html\"><code>supercuspidal_theta.yu_kappa_construction</code></a> supplies the\ncorresponding \\(K\\)-module \\(\\kappa\\). The multiplicity space\n\\[\n\\operatorname{Hom}_{K_{0+}}(\\kappa,\\pi)\n\\]\ncontains the depth-zero piece coming from the connected datum; choosing an\nirreducible \\(G_x^0\\)-submodule \\(\\rho\\) gives a datum \\(\\Sigma\\). The\nrepresentation \\(\\pi\\) embeds in \\(\\pi_\\Sigma\\), and\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.even_orthogonal_yu_irreducibility\" href=\"supercuspidal_theta_even_orthogonal_yu_irreducibility.html\"><code>supercuspidal_theta.even_orthogonal_yu_irreducibility</code></a> makes \\(\\pi_\\Sigma\\)\nirreducible, so \\(\\pi=\\pi_\\Sigma\\).</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.even_orthogonal_yu_irreducibility",
@@ -34,5 +34,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_even_orthogonal_yu_extension.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

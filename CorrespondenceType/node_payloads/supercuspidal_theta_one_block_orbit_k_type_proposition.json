@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>One-Block Orbit K-Type Proposition</h1>\n<p>For a single positive-depth block and its lifted datum, the isotypic component of the generalized lattice-model orbit satisfies\n\\[\nS(B_0)_\\Omega[\\eta\\otimes\\eta']\\simeq \\eta\\otimes\\eta'.\n\\]</p>",
-  "proof_html": "<p>The orbit subspace is an induced representation from the stabilizer \\(S\\). The\nstabilizer evaluation map calculation\n<code>supercuspidal_theta.stabilizer_evaluation_map</code> computes the\n\\(K_{M,+}\\)-isotypic component of the stabilizer representation and identifies\nits induction with the Heisenberg-Weil type \\(\\kappa_M\\). Frobenius reciprocity\nreduces the multiplicity to the finite quotient statement\n\\[\n\\operatorname{Hom}_{\\Delta^0}(\\rho\\otimes\\rho',1),\n\\]\nwhich is one-dimensional because \\(\\rho'\\) is transported contragredient to \\(\\rho\\).</p>",
+  "proof_html": "<p>The orbit subspace is an induced representation from the stabilizer \\(S\\). The\nstabilizer evaluation map calculation\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.stabilizer_evaluation_map\" href=\"supercuspidal_theta_stabilizer_evaluation_map.html\"><code>supercuspidal_theta.stabilizer_evaluation_map</code></a> computes the\n\\(K_{M,+}\\)-isotypic component of the stabilizer representation and identifies\nits induction with the Heisenberg-Weil type \\(\\kappa_M\\). Frobenius reciprocity\nreduces the multiplicity to the finite quotient statement\n\\[\n\\operatorname{Hom}_{\\Delta^0}(\\rho\\otimes\\rho',1),\n\\]\nwhich is one-dimensional because \\(\\rho'\\) is transported contragredient to \\(\\rho\\).</p>",
   "deps": [
     {
       "id": "supercuspidal_theta.single_positive_depth_theta_lift",
@@ -34,5 +34,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_orbit_intertwining_proof_plan.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }

@@ -17,7 +17,7 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\big": "\\,", "\\bigoplus": "\\mathop{\u2a01}\\limits", "\\bigotimes": "\\mathop{\u2a02}\\limits", "\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\cap": "\u2229", "\\circ": "\u2218", "\\deg": "\\operatorname{deg}", "\\dim": "\\operatorname{dim}", "\\exp": "\\operatorname{exp}", "\\hookrightarrow": "\u21aa", "\\ker": "\\operatorname{ker}", "\\ltimes": "\u22c9", "\\oplus": "\u2295", "\\perp": "\u22a5", "\\simeq": "\u2243", "\\subset": "\u2282", "\\superset": "\u2283", "\\supset": "\u2283"}};
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\superset": "\u2283"}};
       renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
@@ -54,6 +54,10 @@
       <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
         <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
       </button>
+      <input type="search" id="keyword-search" class="keyword-search"
+             placeholder="Search 100 keywords…"
+             aria-controls="keyword-list" autocomplete="off">
+      <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
       <ul id="keyword-list" class="keyword-list nav-list">
       
         <li><a href="../keywords/apartment.html">apartment</a></li>
@@ -320,7 +324,7 @@ where \(B(G')_{2m}\) denotes target building points with jumps in \((1/(2m))\mat
 S_{B_{x,x',j/(2m)}}\qquad (j\ge k).
 \]
 The fixed-vector descent lemma
-<code>supercuspidal_theta.fixed_vector_descent_lemma</code> is the descent step: if a
+<a class="node-ref" data-node-id="supercuspidal_theta.fixed_vector_descent_lemma" href="supercuspidal_theta_fixed_vector_descent_lemma.html"><code>supercuspidal_theta.fixed_vector_descent_lemma</code></a> is the descent step: if a
 vector in \(S_{B_{x,x',j/(2m)}}\) is \(G_{x,r+}\)-fixed, then it is contained
 in a sum of spaces
 \[
@@ -330,7 +334,7 @@ as \(y\) ranges over \(B(G')_{2m}\). The descent proof uses the character
 formula for the action of \(G_{x,r}\) on a coset \(w+B_{x,x',0}\). Fixedness
 forces \(M(w)\in\mathbf g_{x,r+}\). From this condition one forms an
 \(o_D\)-module function \(N_t=(w+B_{x,x',0})L_{x,t+r/2}\) on \(V'\), and
-<code>supercuspidal_theta.module_function_self_dual_envelope</code> embeds it in a
+<a class="node-ref" data-node-id="supercuspidal_theta.module_function_self_dual_envelope" href="supercuspidal_theta_module_function_self_dual_envelope.html"><code>supercuspidal_theta.module_function_self_dual_envelope</code></a> embeds it in a
 self-dual lattice function \(L_y'\). This gives the desired containment in
 \(B_{x,y,(j-1)/(2m)}\).</p>
 <p>Iterating the descent lemma lowers \(j\) to \(k\), so every
@@ -344,6 +348,8 @@ argument with \(G\) and \(G'\) interchanged gives the opposite inequality.</p>
     </details>
     
   </div>
+
+  
 
   
   <section class="deps deps-used-by">
@@ -401,19 +407,43 @@ argument with \(G\) and \(G'\) interchanged gives the opposite inequality.</p>
         });
       });
 
-      // Keywords section toggle
+      // Keywords section toggle (folded by default: the keyword list can run
+      // into the hundreds of entries, so only Topics is open on first visit).
       var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
       var keywordList = document.getElementById('keyword-list');
-      if (keywordBtn && keywordList) {
+      // `hidden` on the list is the single source of fold truth, so a search
+      // that auto-expands the list cannot desync the toggle button.
+      function setKeywordsFolded(folded, remember) {
+        keywordList.hidden = folded;
+        if (keywordBtn) keywordBtn.setAttribute('aria-expanded', String(!folded));
+        if (remember) localStorage.setItem('sidebar-keywords-folded', String(folded));
+      }
+      if (keywordList) {
         var kwStored = localStorage.getItem('sidebar-keywords-folded');
-        var kwFolded = kwStored === 'true';
-        keywordList.hidden = kwFolded;
-        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        setKeywordsFolded(kwStored === null ? true : kwStored === 'true', false);
+      }
+      if (keywordBtn && keywordList) {
         keywordBtn.addEventListener('click', function() {
-          kwFolded = !kwFolded;
-          keywordList.hidden = kwFolded;
-          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
-          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+          setKeywordsFolded(!keywordList.hidden, true);
+        });
+      }
+
+      // Keyword search: client-side filter over the existing <li> entries,
+      // so every keyword page stays a plain reachable link with no JS.
+      var keywordSearch = document.getElementById('keyword-search');
+      var keywordEmpty = document.getElementById('keyword-empty');
+      if (keywordSearch && keywordList) {
+        var keywordItems = Array.prototype.slice.call(keywordList.querySelectorAll('li'));
+        keywordSearch.addEventListener('input', function() {
+          var query = keywordSearch.value.trim().toLowerCase();
+          if (query && keywordList.hidden) setKeywordsFolded(false, false);
+          var visible = 0;
+          keywordItems.forEach(function(item) {
+            var match = !query || item.textContent.toLowerCase().indexOf(query) !== -1;
+            item.hidden = !match;
+            if (match) visible += 1;
+          });
+          if (keywordEmpty) keywordEmpty.hidden = visible !== 0;
         });
       }
     });

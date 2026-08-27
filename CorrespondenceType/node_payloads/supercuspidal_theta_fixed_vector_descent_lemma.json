@@ -9,7 +9,7 @@
     "supercuspidal_theta"
   ],
   "body_html": "<h1>Fixed Vector Descent Lemma</h1>\n<p>For a target point \\(x'\\) and a positive integer \\(j\\), the \\(G_{x,j/m}\\)-fixed part of the support subspace attached to \\(B_{x,x',j/(2m)}\\) is contained in a sum of support subspaces at level \\((j+1)/(2m)\\) over target building points with jumps in \\((1/(2m))\\mathbb Z\\).</p>",
-  "proof_html": "<p>Decompose the support space into cosets \\(w+B_{x,x',0}\\). If a coset\ncontributes \\(G_{x,j/m+}\\)-fixed vectors, the generalized lattice-model action\nformula forces \\(M(w)\\) into the deeper source Lie lattice. The module function\n\\(N_t=(w+B_0)L_{x,t+s}\\) satisfies the hypotheses of\n<code>supercuspidal_theta.module_function_self_dual_envelope</code>, producing a\nself-dual target lattice function \\(L_y\\) that contains the coset at the next\nsupport level.</p>",
+  "proof_html": "<p>Decompose the support space into cosets \\(w+B_{x,x',0}\\). If a coset\ncontributes \\(G_{x,j/m+}\\)-fixed vectors, the generalized lattice-model action\nformula forces \\(M(w)\\) into the deeper source Lie lattice. The module function\n\\(N_t=(w+B_0)L_{x,t+s}\\) satisfies the hypotheses of\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.module_function_self_dual_envelope\" href=\"supercuspidal_theta_module_function_self_dual_envelope.html\"><code>supercuspidal_theta.module_function_self_dual_envelope</code></a>, producing a\nself-dual target lattice function \\(L_y\\) that contains the coset at the next\nsupport level.</p>",
   "deps": [
     {
       "id": "lattice_model.generalized_lattice_model",
@@ -34,5 +34,6 @@
       "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_proof_plan.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [],
+  "lean_modules": []
 }
