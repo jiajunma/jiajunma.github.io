@@ -1,0 +1,59 @@
+{
+  "id": "lattice_model.symplectic_parahoric_reductive_quotient",
+  "title": "Parahoric Reductive Quotient for Sp(W)",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_symplectic_parahoric_reductive_quotient.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Parahoric Reductive Quotient for Sp(W)</h1>\n<p>Let \\(W\\) be a symplectic \\(F\\)-space with residue field \\(k\\), and \\(G=\\operatorname{Sp}(W)\\).\nA point \\(x\\in\\mathcal B(\\operatorname{Sp}(W))\\) is a self-dual lattice function \\(\\mathscr L_x\\); write\n\\(\\mathscr L_{x,r}:=\\mathscr L_x(r)\\) for its value at level \\(r\\). It has period\n\\(\\mathscr L_{x,s+1}=\\mathfrak p\\,\\mathscr L_{x,s}\\) and self-duality\n\\[\n\\mathscr L_{x,s}^{\\#}=\\mathscr L_{x,(-s)+},\\qquad L^{\\#}=\\{w\\in W:\\langle w,L\\rangle\\subseteq\\mathfrak p\\}\n\\]\n(conductor-\\(\\mathfrak p\\) convention; see <a class=\"node-ref\" data-node-id=\"lattice_model.self_dual_lattice_function\" href=\"lattice_model_self_dual_lattice_function.html\">Self-Dual Lattice Function</a>).</p>\n<h2>Graded pieces</h2>\n<p>For \\(s\\in\\mathbb R\\) set\n\\[\n\\operatorname{gr}_s\\mathscr L_x:=\\mathscr L_{x,s}/\\mathscr L_{x,s+},\n\\]\na finite-dimensional \\(k\\)-vector space, nonzero exactly at the jumps of \\(\\mathscr L_x\\). Multiplication by\n\\(\\varpi\\) gives \\(\\operatorname{gr}_{s+1}\\mathscr L_x\\cong\\operatorname{gr}_s\\mathscr L_x\\), so it suffices to look at\n\\(s\\in[0,1)\\).</p>\n<p>The symplectic form reduces modulo \\(\\mathfrak p\\) to a perfect \\(k\\)-pairing\n\\[\n\\operatorname{gr}_{-s}\\mathscr L_x\\times\\operatorname{gr}_{s}\\mathscr L_x\\longrightarrow k,\n\\qquad (\\bar u,\\bar v)\\mapsto\\langle u,v\\rangle\\bmod\\mathfrak p .\n\\]\nHence the jump set is symmetric under \\(s\\mapsto -s\\), and within \\([0,1)\\) the jumps split into three\nkinds:</p>\n<ul>\n<li>\\(s\\equiv 0\\): the pairing is \\(\\operatorname{gr}_0\\mathscr L_x\\times\\operatorname{gr}_0\\mathscr L_x\\to k\\),\n  alternating, so \\(\\operatorname{gr}_0\\mathscr L_x\\) is a finite symplectic \\(k\\)-space.</li>\n<li>\\(s\\equiv\\tfrac12\\): here \\(-s\\equiv s\\), so \\(\\operatorname{gr}_{1/2}\\mathscr L_x\\) self-pairs through\n  \\(\\varpi\\); since \\(\\varpi\\langle\\,,\\,\\rangle\\) is still alternating, \\(\\operatorname{gr}_{1/2}\\mathscr L_x\\) is a\n  finite symplectic \\(k\\)-space.</li>\n<li>\\(0&lt;s&lt;\\tfrac12\\): \\(\\operatorname{gr}_{s}\\mathscr L_x\\) pairs perfectly with the distinct piece\n  \\(\\operatorname{gr}_{-s}\\mathscr L_x\\), giving \\(\\operatorname{gr}_{-s}\\mathscr L_x\\cong(\\operatorname{gr}_s\\mathscr L_x)^{*}\\).</li>\n</ul>\n<h2>Parahoric and reductive quotient</h2>\n<p>The Moy–Prasad groups attached to \\(x\\) are\n\\[\nG_{x,0}=\\{g\\in\\operatorname{Sp}(W):g\\mathscr L_{x,s}=\\mathscr L_{x,s}\\ \\forall s\\},\\qquad\nG_{x,0+}=\\{g\\in G_{x,0}:(g-1)\\mathscr L_{x,s}\\subseteq\\mathscr L_{x,s+}\\ \\forall s\\}.\n\\]\nSince \\(\\operatorname{Sp}(W)\\) is simply connected, \\(G_{x,0}\\) is the full stabilizer of \\(x\\) and the\nquotient is connected. The action on the graded pieces, preserving the forms and dualities above, induces\na canonical isomorphism of finite reductive groups over \\(k\\):\n\\[\n\\boxed{\\;\\mathsf G_x:=G_{x,0}/G_{x,0+}\\;\\cong\\;\n\\operatorname{Sp}\\!\\big(\\operatorname{gr}_0\\mathscr L_x\\big)\\times\n\\operatorname{Sp}\\!\\big(\\operatorname{gr}_{1/2}\\mathscr L_x\\big)\\times\n\\prod_{0&lt;s&lt;1/2}\\operatorname{GL}\\!\\big(\\operatorname{gr}_s\\mathscr L_x\\big).\\;}\n\\]\nThe two \\(\\operatorname{Sp}\\) factors are the two self-dual levels \\(s\\equiv 0\\) and \\(s\\equiv\\tfrac12\\) (the two\nends of the local Dynkin diagram of type \\(\\widetilde C_n\\)); either factor is trivial when that level is not a\njump. Each interior jump pair \\(\\{s,-s\\}\\) contributes one \\(\\operatorname{GL}(\\operatorname{gr}_s\\mathscr L_x)\\),\nacting on \\(\\operatorname{gr}_{-s}\\mathscr L_x\\) by the contragredient.</p>\n<p>With \\(\\dim\\operatorname{gr}_0\\mathscr L_x=2a\\) and \\(\\dim\\operatorname{gr}_{1/2}\\mathscr L_x=2b\\),\n\\[\n2a+2b+2\\!\\!\\sum_{0&lt;s&lt;1/2}\\dim\\operatorname{gr}_s\\mathscr L_x=\\dim_F W .\n\\]</p>\n<h2>Relation to the generalized lattice model</h2>\n<p>The lattice-model finite symplectic space is the level-\\(0\\) factor:\n\\[\n\\mathsf b_x=\\mathscr L_{x,0}/\\mathscr L_{x,0}^{\\#}=\\mathscr L_{x,0}/\\mathscr L_{x,0+}=\\operatorname{gr}_0\\mathscr L_x ,\n\\]\nso the finite Weil representation \\(S(\\mathsf b_x)\\) used in\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.generalized_lattice_model\" href=\"../supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html\">Generalized Lattice Model</a> is the Weil representation of the first factor\n\\(\\operatorname{Sp}(\\operatorname{gr}_0\\mathscr L_x)\\). The remaining factors\n\\(\\operatorname{Sp}(\\operatorname{gr}_{1/2}\\mathscr L_x)\\) and \\(\\operatorname{GL}(\\operatorname{gr}_s\\mathscr L_x)\\) act on\nthe \\(W\\)-support of the model functions rather than on the \\(S(\\mathsf b_x)\\)-values.</p>",
+  "proof_html": "<p>This is the symplectic specialization of\n<a class=\"node-ref\" data-node-id=\"lattice_model.reductive_quotient_of_self_dual_lattice\" href=\"lattice_model_reductive_quotient_of_self_dual_lattice.html\">Reductive Quotient of a Self-Dual Lattice Function</a>. By definition \\(G_{x,0+}\\) acts trivially on\neach \\(\\operatorname{gr}_s\\mathscr L_x\\), so \\(\\mathsf G_x\\) embeds into\n\\(\\prod_s\\operatorname{GL}(\\operatorname{gr}_s\\mathscr L_x)\\). Self-duality identifies \\(\\operatorname{gr}_{-s}\\mathscr L_x\\)\nwith \\((\\operatorname{gr}_s\\mathscr L_x)^{*}\\) and equips the levels \\(s\\equiv 0,\\tfrac12\\) with nondegenerate\nalternating forms; the image is exactly the subgroup preserving these data, which is the displayed product.\nSurjectivity is the standard Bruhat–Tits description of the parahoric reductive quotient. \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "lattice_model.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_self_dual_lattice_function.html"
+    },
+    {
+      "id": "lattice_model.reductive_quotient_of_self_dual_lattice",
+      "title": "Reductive Quotient of a Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_reductive_quotient_of_self_dual_lattice.html"
+    },
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model.facet_incidence_parabolic",
+      "title": "Facet Incidence as a Parabolic for Sp(W)",
+      "href": "lattice_model/lattice_model_facet_incidence_parabolic.html"
+    },
+    {
+      "id": "lattice_model.good_lattice_weil_fixed_vectors",
+      "title": "Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice",
+      "href": "lattice_model/lattice_model_good_lattice_weil_fixed_vectors.html"
+    },
+    {
+      "id": "lattice_model.lattice_model_splitting",
+      "title": "Parahoric Action on the Generalized Lattice Model",
+      "href": "lattice_model/lattice_model_lattice_model_splitting.html"
+    },
+    {
+      "id": "lattice_model.symplectic_apartment_model",
+      "title": "Apartment Model for Sp(W) via Self-Dual Lattice Functions",
+      "href": "lattice_model/lattice_model_symplectic_apartment_model.html"
+    },
+    {
+      "id": "lattice_model.vertex_weil_restriction_incompatibility",
+      "title": "Vertex Weil Restrictions over an Alcove Are Incompatible",
+      "href": "lattice_model/lattice_model_vertex_weil_restriction_incompatibility.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

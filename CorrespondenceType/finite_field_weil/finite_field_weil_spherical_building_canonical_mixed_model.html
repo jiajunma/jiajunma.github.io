@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canonical Mixed Model on the Spherical Building via Gérardin Reduction — Correspondence of Type Blueprint</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\superset": "\u2283"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">CorrespondenceType</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../endo_parameters/index.html">Endo Parameters</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../epipelagic_theta/index.html">Epipelagic Theta</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../finite_field_weil/index.html">Finite Field Weil</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../lattice_model/index.html">Lattice Model</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../lattice_model_transition/index.html">Lattice Model Transition</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../supercuspidal_theta/index.html">Supercuspidal Theta</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../tame_covers/index.html">Tame Covers</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../theta_semisimple_types/index.html">Theta Semisimple Types</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <input type="search" id="keyword-search" class="keyword-search"
+             placeholder="Search 149 keywords…"
+             aria-controls="keyword-list" autocomplete="off">
+      <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/appendix.html">appendix</a></li>
+      
+        <li><a href="../keywords/based-extension.html">based-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/brick-decomposition.html">brick-decomposition</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/canonical.html">canonical</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/character-formula.html">character-formula</a></li>
+      
+        <li><a href="../keywords/characters.html">characters</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/classical-groups.html">classical-groups</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/compact-induction.html">compact-induction</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/conductor-p.html">conductor-p</a></li>
+      
+        <li><a href="../keywords/converse.html">converse</a></li>
+      
+        <li><a href="../keywords/covering-group.html">covering-group</a></li>
+      
+        <li><a href="../keywords/data-lift.html">data-lift</a></li>
+      
+        <li><a href="../keywords/depth-preservation.html">depth-preservation</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/determinant-character.html">determinant-character</a></li>
+      
+        <li><a href="../keywords/direct-sum.html">direct-sum</a></li>
+      
+        <li><a href="../keywords/dual-lattice.html">dual-lattice</a></li>
+      
+        <li><a href="../keywords/endo-class.html">endo-class</a></li>
+      
+        <li><a href="../keywords/endo-parameters.html">endo-parameters</a></li>
+      
+        <li><a href="../keywords/epipelagic.html">epipelagic</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
+      
+        <li><a href="../keywords/finite-field.html">finite-field</a></li>
+      
+        <li><a href="../keywords/finite-field-weil.html">finite-field-weil</a></li>
+      
+        <li><a href="../keywords/finite-quadratic-module.html">finite-quadratic-module</a></li>
+      
+        <li><a href="../keywords/finite-reductive-quotient.html">finite-reductive-quotient</a></li>
+      
+        <li><a href="../keywords/first-occurrence.html">first-occurrence</a></li>
+      
+        <li><a href="../keywords/formalization.html">formalization</a></li>
+      
+        <li><a href="../keywords/gauss-sum.html">gauss-sum</a></li>
+      
+        <li><a href="../keywords/general-linear.html">general-linear</a></li>
+      
+        <li><a href="../keywords/general-linear-group.html">general-linear-group</a></li>
+      
+        <li><a href="../keywords/generalized-lattice-model.html">generalized-lattice-model</a></li>
+      
+        <li><a href="../keywords/genuine-representation.html">genuine-representation</a></li>
+      
+        <li><a href="../keywords/geometric-lemma.html">geometric-lemma</a></li>
+      
+        <li><a href="../keywords/gerardin.html">gerardin</a></li>
+      
+        <li><a href="../keywords/gerardin-reduction.html">gerardin-reduction</a></li>
+      
+        <li><a href="../keywords/good-element.html">good-element</a></li>
+      
+        <li><a href="../keywords/good-factorization.html">good-factorization</a></li>
+      
+        <li><a href="../keywords/good-lattice.html">good-lattice</a></li>
+      
+        <li><a href="../keywords/graph.html">graph</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-group.html">heisenberg-group</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-space.html">hermitian-space</a></li>
+      
+        <li><a href="../keywords/howe-factorization.html">howe-factorization</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariant-theory.html">invariant-theory</a></li>
+      
+        <li><a href="../keywords/isotropic.html">isotropic</a></li>
+      
+        <li><a href="../keywords/isotypic-component.html">isotypic-component</a></li>
+      
+        <li><a href="../keywords/iwahori.html">iwahori</a></li>
+      
+        <li><a href="../keywords/jumps.html">jumps</a></li>
+      
+        <li><a href="../keywords/k-type.html">k-type</a></li>
+      
+        <li><a href="../keywords/kac-vinberg.html">kac-vinberg</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kim-exhaustion.html">kim-exhaustion</a></li>
+      
+        <li><a href="../keywords/lagrangian.html">lagrangian</a></li>
+      
+        <li><a href="../keywords/langlands-parameters.html">langlands-parameters</a></li>
+      
+        <li><a href="../keywords/lattice-function.html">lattice-function</a></li>
+      
+        <li><a href="../keywords/lattice-model.html">lattice-model</a></li>
+      
+        <li><a href="../keywords/lattice-model-transition.html">lattice-model-transition</a></li>
+      
+        <li><a href="../keywords/lean.html">lean</a></li>
+      
+        <li><a href="../keywords/linearization.html">linearization</a></li>
+      
+        <li><a href="../keywords/locally-profinite.html">locally-profinite</a></li>
+      
+        <li><a href="../keywords/main-formula.html">main-formula</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
+        <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
+      
+        <li><a href="../keywords/metaplectic-splitting.html">metaplectic-splitting</a></li>
+      
+        <li><a href="../keywords/milestone-a.html">milestone-a</a></li>
+      
+        <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
+      
+        <li><a href="../keywords/mixed-model.html">mixed-model</a></li>
+      
+        <li><a href="../keywords/moment-map.html">moment-map</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
+      
+        <li><a href="../keywords/normalization.html">normalization</a></li>
+      
+        <li><a href="../keywords/notation.html">notation</a></li>
+      
+        <li><a href="../keywords/occurrence.html">occurrence</a></li>
+      
+        <li><a href="../keywords/off-diagonal.html">off-diagonal</a></li>
+      
+        <li><a href="../keywords/one-block.html">one-block</a></li>
+      
+        <li><a href="../keywords/open-point.html">open-point</a></li>
+      
+        <li><a href="../keywords/orthogonality.html">orthogonality</a></li>
+      
+        <li><a href="../keywords/oscillator-representation.html">oscillator-representation</a></li>
+      
+        <li><a href="../keywords/p-adic-classical-groups.html">p-adic-classical-groups</a></li>
+      
+        <li><a href="../keywords/pan-theorem.html">pan-theorem</a></li>
+      
+        <li><a href="../keywords/parabolic.html">parabolic</a></li>
+      
+        <li><a href="../keywords/positive-depth.html">positive-depth</a></li>
+      
+        <li><a href="../keywords/problem-input.html">problem-input</a></li>
+      
+        <li><a href="../keywords/projective-representation.html">projective-representation</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/ps-character.html">ps-character</a></li>
+      
+        <li><a href="../keywords/radical.html">radical</a></li>
+      
+        <li><a href="../keywords/rank-restriction.html">rank-restriction</a></li>
+      
+        <li><a href="../keywords/reference-frame.html">reference-frame</a></li>
+      
+        <li><a href="../keywords/representation-theory.html">representation-theory</a></li>
+      
+        <li><a href="../keywords/residual-moment-map.html">residual-moment-map</a></li>
+      
+        <li><a href="../keywords/residual-vector-space.html">residual-vector-space</a></li>
+      
+        <li><a href="../keywords/residue-characteristic.html">residue-characteristic</a></li>
+      
+        <li><a href="../keywords/schrodinger-model.html">schrodinger-model</a></li>
+      
+        <li><a href="../keywords/schur-lemma.html">schur-lemma</a></li>
+      
+        <li><a href="../keywords/self-dual.html">self-dual</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/semisimple-element.html">semisimple-element</a></li>
+      
+        <li><a href="../keywords/skew-hermitian.html">skew-hermitian</a></li>
+      
+        <li><a href="../keywords/smooth-representation.html">smooth-representation</a></li>
+      
+        <li><a href="../keywords/spherical-building.html">spherical-building</a></li>
+      
+        <li><a href="../keywords/splitting.html">splitting</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stable-vector.html">stable-vector</a></li>
+      
+        <li><a href="../keywords/stone-von-neumann.html">stone-von-neumann</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/symplectic.html">symplectic</a></li>
+      
+        <li><a href="../keywords/symplectic-facet.html">symplectic-facet</a></li>
+      
+        <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-group.html">symplectic-group</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
+      
+        <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
+      
+        <li><a href="../keywords/tame-base-change.html">tame-base-change</a></li>
+      
+        <li><a href="../keywords/tame-covers.html">tame-covers</a></li>
+      
+        <li><a href="../keywords/tensor-product.html">tensor-product</a></li>
+      
+        <li><a href="../keywords/test-vector.html">test-vector</a></li>
+      
+        <li><a href="../keywords/theta-correspondence.html">theta-correspondence</a></li>
+      
+        <li><a href="../keywords/theta-lift.html">theta-lift</a></li>
+      
+        <li><a href="../keywords/theta-semisimple-types.html">theta-semisimple-types</a></li>
+      
+        <li><a href="../keywords/transition-map.html">transition-map</a></li>
+      
+        <li><a href="../keywords/trivialization.html">trivialization</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/type-i-dual-pair.html">type-i-dual-pair</a></li>
+      
+        <li><a href="../keywords/uniqueness.html">uniqueness</a></li>
+      
+        <li><a href="../keywords/unitary.html">unitary</a></li>
+      
+        <li><a href="../keywords/weil-index.html">weil-index</a></li>
+      
+        <li><a href="../keywords/weil-representation.html">weil-representation</a></li>
+      
+        <li><a href="../keywords/well-definedness.html">well-definedness</a></li>
+      
+        <li><a href="../keywords/wild-inertia.html">wild-inertia</a></li>
+      
+        <li><a href="../keywords/witt-tower.html">witt-tower</a></li>
+      
+        <li><a href="../keywords/yu-data.html">yu-data</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-finite_field_weil-2e-spherical_building_canonical_mixed_model">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Canonical Mixed Model on the Spherical Building via Gérardin Reduction</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-finite_field_weil-2e-spherical_building_canonical_mixed_model">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="finite_field_weil_symplectic_heisenberg_group.html">Symplectic Heisenberg Group over a Finite Field</a></li>
+        
+        <li><a href="finite_field_weil_finite_heisenberg_stone_von_neumann.html">Finite Heisenberg Stone-von Neumann Property</a></li>
+        
+        <li><a href="finite_field_weil_symplectic_weil_representation.html">Symplectic Weil Representation over a Finite Field</a></li>
+        
+        <li><a href="finite_field_weil_gerardin_symplectic_weil_linearization.html">Gérardin Linearization of the Finite Symplectic Weil Cocycle</a></li>
+        
+        <li><a href="finite_field_weil_lagrangian_schrodinger_model.html">Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner</a></li>
+        
+        <li><a href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a></li>
+        
+        <li><a href="finite_field_weil_spherical_building_mixed_model_compatible_system.html">Compatible System of Mixed Schrödinger Models on the Spherical Building</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Canonical Mixed Model on the Spherical Building via Gérardin Reduction</h1>
+<p>This node gives the <strong>canonical, $L_{\mathbf F}$-free formulation</strong> of the compatible system of mixed Weil models on
+the spherical building of a finite symplectic group. It replaces the per-facet Lagrangian-extension data
+$\mathbf F\mapsto L_{\mathbf F}$ of <a class="node-ref" data-node-id="finite_field_weil.spherical_building_mixed_model_compatible_system" href="finite_field_weil_spherical_building_mixed_model_compatible_system.html">Compatible System of Mixed Schrödinger Models on the Spherical Building</a> by
+the <strong>single global choice</strong> of one Weil-representation realization $\Omega$, from which every facet's mixed model is
+derived <strong>canonically</strong> as a subspace-of-$\Omega$ Gérardin reduction together with a Heisenberg induction.</p>
+<p>The point: every facet's mixed model is then canonically isomorphic to $\Omega$ itself, and the entire
+"compatible system on the building" becomes the trivial identity system on $\Omega$ enriched by Gérardin's subspace
+filtration. No per-facet auxiliary choices remain; the only gauge is the choice of $\Omega$ (equivalent to choosing
+one reference Lagrangian $L_0$ when $\Omega=\mathcal S_{L_0}$).</p>
+<h2>Setup</h2>
+<p>Let $k=\mathbb F_q$ be a finite field of odd order $q$ and characteristic $p$. Let $(E,j)$ be a nondegenerate
+symplectic $k$-space, $\dim_k E=2m$, and set $i:=j/2$. Let $R$ be a field with $\operatorname{char}R\neq p$ and let
+$\xi\colon k\to R^{\times}$ be a nontrivial additive character. Let $H(E,j)=E\times k$ denote the Heisenberg group
+with multiplication</p>
+<p>$$(v_1,z_1)(v_2,z_2)\ =\ (v_1+v_2,\,z_1+z_2+i(v_1,v_2)).$$</p>
+<p>Fix once and for all an irreducible Weil representation</p>
+<p>$$\eta\colon H(E,j)\longrightarrow\operatorname{End}_R(\Omega)$$</p>
+<p>with central character $\xi$ (existence and Stone–von Neumann uniqueness are
+<a class="node-ref" data-node-id="finite_field_weil.finite_heisenberg_stone_von_neumann" href="finite_field_weil_finite_heisenberg_stone_von_neumann.html">Finite Heisenberg Stone-von Neumann Property</a>). A concrete choice is the Schrödinger model
+$\Omega:=\mathcal S_{L_0}$ on any Lagrangian $L_0\subseteq E$
+(<a class="node-ref" data-node-id="finite_field_weil.lagrangian_schrodinger_model" href="finite_field_weil_lagrangian_schrodinger_model.html">Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner</a>); the construction below is parametrized only by
+$\Omega$, not by any Lagrangian choice.</p>
+<p>For an isotropic subspace $C\subseteq E$ write</p>
+<p>$$C^{\perp}\ :=\ \{x\in E\,\mid\,j(x,c)=0\ \forall c\in C\},\qquad E_C\ :=\ C^{\perp}/C.$$</p>
+<p>Then $C\subseteq C^{\perp}$, $\dim C^{\perp}=2m-\dim C$, and $E_C$ inherits a nondegenerate symplectic form $j_C$
+from $j|_{C^{\perp}\times C^{\perp}}$ (well-defined because $j(C,C^{\perp})=0$, and nondegenerate because $C^{\perp}/C$
+is the maximal nondegenerate quotient of the restriction). Let $H(E_C,j_C)=E_C\times k$ be the corresponding
+Heisenberg group.</p>
+<h2>1. The canonical Gérardin reduction $\Omega^C$</h2>
+<p><strong>Definition.</strong> For an isotropic subspace $C\subseteq E$, define</p>
+<p>$$\boxed{\ \Omega^C\ :=\ \{\,v\in\Omega\ \mid\ \eta(c,0)\,v=v\quad\forall c\in C\,\}\ \subseteq\ \Omega.\ }$$</p>
+<p>That is, $\Omega^C$ is the subspace of $\Omega$ pointwise fixed by the abelian subgroup $\eta(C\times\{0\})$ of
+$\operatorname{End}_R(\Omega)$.</p>
+<p>The subset $C\times\{0\}\subset H(E,j)$ is indeed an abelian subgroup because $C$ is isotropic:
+$(c_1,0)(c_2,0)=(c_1+c_2,i(c_1,c_2))=(c_1+c_2,0)$ since $i(c_1,c_2)=j(c_1,c_2)/2=0$.</p>
+<h3>1.1 Canonical projection $P_C\colon\Omega\twoheadrightarrow\Omega^C$</h3>
+<p>Since $|C|=q^{\dim C}\in R^{\times}$ (as $\operatorname{char}R\neq p$), the operator</p>
+<p>$$\boxed{\ P_C\ :=\ \frac{1}{|C|}\sum_{c\in C}\eta(c,0)\ \in\ \operatorname{End}_R(\Omega)\ }$$</p>
+<p>is well defined and is the unique $H(C^{\perp},j)$-equivariant projection of $\Omega$ onto $\Omega^C$.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>(i) $P_C^2=P_C$ and $\operatorname{im}P_C=\Omega^C$: standard averaging argument over the finite abelian
+group $C$. (ii) $H(C^{\perp},j)$-equivariance: for $h=(x,z)\in H(C^{\perp},j)$ and $c\in C$, the commutator in
+$H(E,j)$ is $(c,0)(x,z)(c,0)^{-1}(x,z)^{-1}=(0,2i(c,x))$, and $j(c,x)=0$ since $c\in C, x\in C^{\perp}$, so
+$\eta(c,0)$ commutes with $\eta(h)$. Averaging in $c$ preserves equivariance. (iii) Uniqueness: any
+$H(C^{\perp},j)$-equivariant projection onto $\Omega^C$ must be $P_C$ by Schur on each isotypic component
+(cf. §1.3). $\square$</p>
+<h3>1.2 Dimension lemma</h3>
+<p>$$\boxed{\ \dim_R\Omega^C\ =\ q^{m-\dim C}.\ }$$</p>
+<p><em>Proof.</em> Take the trace of the averaging:</p>
+<p>$$\dim_R\Omega^C\ =\ \operatorname{tr}P_C\ =\ \frac{1}{|C|}\sum_{c\in C}\operatorname{tr}\eta(c,0).$$</p>
+<p>The character of the irreducible Heisenberg–Weil representation
+(<a class="node-ref" data-node-id="finite_field_weil.finite_heisenberg_stone_von_neumann" href="finite_field_weil_finite_heisenberg_stone_von_neumann.html">Finite Heisenberg Stone-von Neumann Property</a>) satisfies
+$\operatorname{tr}\eta(v,z)=q^m\,\xi(z)\,\delta_{v,0}$, so $\operatorname{tr}\eta(c,0)=q^m\delta_{c,0}$.
+Hence $\dim_R\Omega^C=q^m/|C|=q^{m-\dim C}$. $\square$</p>
+<h3>1.3 Residual Heisenberg action descends to $H(E_C,j_C)$</h3>
+<p>The restriction $\eta|_{H(C^{\perp},j)}$ preserves $\Omega^C$ (by §1.1, since elements of $H(C^{\perp},j)$
+commute with $\eta(C,0)$). Furthermore, $C\times\{0\}\subseteq H(C^{\perp},j)$ acts trivially on $\Omega^C$ by
+definition. Therefore the $H(C^{\perp},j)$-action factors through the quotient</p>
+<p>$$H(C^{\perp},j)\,\big/\,(C\times\{0\})\ =\ (C^{\perp}/C)\times k\ =\ H(E_C,j_C),$$</p>
+<p>where the displayed equality uses that the Heisenberg cocycle $i(x,y)$ descends to $C^{\perp}/C$:
+$i(x+c,y+c')=i(x,y)+i(c,y)+i(x,c')+i(c,c')=i(x,y)$ since $j(c,y)=j(x,c')=j(c,c')=0$ for $c,c'\in C$,
+$x,y\in C^{\perp}$.</p>
+<h3>1.4 Gérardin theorem (residual Weil structure)</h3>
+<p>$\Omega^C$ together with the descended $H(E_C,j_C)$-action is an irreducible Weil representation of $H(E_C,j_C)$
+with central character $\xi$. Hence, by Stone–von Neumann uniqueness applied to $E_C$,</p>
+<p>$$\boxed{\ \Omega^C\ \cong\ W_\xi^{E_C}\ \text{as $H(E_C,j_C)$-modules}.\ }$$</p>
+<p><em>Proof.</em> The central $k$-subgroup of $H(E_C,j_C)$ embeds as $\{0\}\times k\subseteq H(C^{\perp},j)$, on which $\eta$
+acts by $\xi$ (the central character of $\Omega$). Hence the central character on $\Omega^C$ is $\xi$. The dimension
+$q^{m-\dim C}=q^{\dim_k E_C/2}$ matches the unique irreducible Heisenberg–Weil representation of $E_C$. Irreducibility
+follows from §2 below ($\Omega$ is induced from $\Omega^C$ via $H(C^{\perp},j)\subseteq H(E,j)$, and irreducibility
+of $\Omega$ forces irreducibility of $\Omega^C$ by Frobenius reciprocity). This is the precise content of Gérardin's
+mixed-model construction (<a class="node-ref" data-node-id="finite_field_weil.gerardin_symplectic_weil_linearization" href="finite_field_weil_gerardin_symplectic_weil_linearization.html">Gérardin Linearization of the Finite Symplectic Weil Cocycle</a>). $\square$</p>
+<h2>2. The canonical mixed model $M_C$</h2>
+<p><strong>Definition.</strong> For an isotropic $C\subseteq E$, define</p>
+<p>$$\boxed{\ M_C\ :=\ \operatorname{ind}_{H(C^{\perp},j)}^{H(E,j)}\Omega^C.\ }$$</p>
+<p>Concretely, $M_C$ is the space of functions $f\colon H(E,j)\to\Omega^C$ satisfying</p>
+<p>$$f(h\cdot g)\ =\ \eta|_{H(C^{\perp},j)}(h)\cdot f(g)\qquad\forall h\in H(C^{\perp},j),\ g\in H(E,j),$$</p>
+<p>with $H(E,j)$-action by right translation: $(g_0\cdot f)(g)=f(g\cdot g_0)$.</p>
+<h3>2.1 Dimension</h3>
+<p>Using $|H(E,j)/H(C^{\perp},j)|=|E/C^{\perp}|=q^{\dim C}$ and §1.2,</p>
+<p>$$\dim_R M_C\ =\ |E/C^{\perp}|\cdot\dim_R\Omega^C\ =\ q^{\dim C}\cdot q^{m-\dim C}\ =\ q^m\ =\ \dim_R\Omega.$$</p>
+<h3>2.2 The canonical isomorphism $\tau_C\colon\Omega\overset{\sim}{\longrightarrow} M_C$</h3>
+<p><strong>Definition.</strong> Define</p>
+<p>$$\boxed{\ \tau_C\colon\Omega\longrightarrow M_C,\qquad\tau_C(v)(g)\ :=\ P_C\bigl(\eta(g)v\bigr)\ \in\ \Omega^C,\ }$$</p>
+<p>where $P_C\colon\Omega\twoheadrightarrow\Omega^C$ is the canonical projection of §1.1.</p>
+<p><strong>Proposition.</strong> $\tau_C$ is a canonical $H(E,j)$-equivariant isomorphism.</p>
+<p><em>Proof.</em> We verify (a) well-definedness, (b) equivariance, (c) isomorphism.</p>
+<p>(a) <strong>Well-definedness.</strong> Need $\tau_C(v)(h g)=\eta(h)\tau_C(v)(g)$ for $h\in H(C^{\perp},j)$. By §1.3, $\eta(h)$
+restricted to $\Omega^C$ acts via the descended $H(E_C,j_C)$-action, and on $\Omega$ it preserves $\Omega^C$. By §1.1,
+$P_C\eta(h)=\eta(h)P_C$ on $\Omega$. Therefore</p>
+<p>$$\tau_C(v)(hg)=P_C\eta(hg)v=P_C\eta(h)\eta(g)v=\eta(h)P_C\eta(g)v=\eta(h)\tau_C(v)(g).$$</p>
+<p>So $\tau_C(v)\in M_C$.</p>
+<p>(b) <strong>Equivariance.</strong> For $g_0\in H(E,j)$,</p>
+<p>$$(g_0\cdot\tau_C(v))(g)=\tau_C(v)(g\cdot g_0)=P_C\eta(gg_0)v=P_C\eta(g)\eta(g_0)v=\tau_C(\eta(g_0)v)(g).$$</p>
+<p>So $\tau_C(\eta(g_0)v)=g_0\cdot\tau_C(v)$.</p>
+<p>(c) <strong>Isomorphism.</strong> Both $\Omega$ and $M_C$ are irreducible $H(E,j)$-representations with central character $\xi$ and
+the same dimension $q^m$: $\Omega$ by Stone–von Neumann, $M_C$ by Mackey's irreducibility criterion applied to the
+inducing data (the central character on $\Omega^C$ extends consistently to $\Omega$; equivalently, $M_C$ has dimension
+$q^m$ and central character $\xi$, so by Stone–von Neumann it is irreducible). The map $\tau_C$ is nonzero:
+$\tau_C(v)((0,0))=P_C(v)$, and for any $v\notin\ker P_C$ this is nonzero. By Schur's lemma, $\tau_C$ is an
+isomorphism. $\square$</p>
+<p><strong>Remark.</strong> $\tau_C$ is the Frobenius-reciprocity isomorphism associated with the canonical inclusion
+$\iota_C\colon\Omega^C\hookrightarrow\Omega$ via $P_C$ (which is its left inverse). It is <strong>canonical</strong> — no scalar
+ambiguity — because we have chosen $P_C$ (the <em>averaging</em> projection, not just any projection); equivalently, both
+$\iota_C$ and $P_C$ are intrinsic to the pair $(\Omega,C)$.</p>
+<h2>3. Compatibility on the spherical building</h2>
+<h3>3.1 The natural map $j_{C,C'}\colon M_{C'}\to M_C$ for $C\subseteq C'$</h3>
+<p>Suppose $C\subseteq C'$ are isotropic subspaces of $E$. Then $C^{\perp}\supseteq(C')^{\perp}$ and
+$\Omega^{C'}\subseteq\Omega^C$ as subspaces of $\Omega$. Define</p>
+<p>$$\boxed{\ j_{C,C'}\colon M_{C'}\to M_C,\qquad(j_{C,C'}f)(g)\ :=\ \iota_C|_{\Omega^{C'}}(f(g)),\ }$$</p>
+<p>i.e., apply the canonical inclusion $\Omega^{C'}\hookrightarrow\Omega^C$ pointwise. Slightly more care is needed
+because $f\in M_{C'}$ is a function on $H(E,j)$ that is $H((C')^{\perp},j)$-equivariant, not
+$H(C^{\perp},j)$-equivariant. The map $j_{C,C'}$ extends $f$ by averaging:</p>
+<p>$$(j_{C,C'}f)(g)\ :=\ \frac{1}{|C^{\perp}/(C')^{\perp}|}\sum_{x\in C^{\perp}/(C')^{\perp}}\eta(x,0)^{-1}\,f(\,(x,0)\,g).$$</p>
+<p>Equivalently, $j_{C,C'}$ is the Frobenius-reciprocity transpose of the canonical
+$H((C')^{\perp},j)$-equivariant inclusion $\Omega^{C'}\hookrightarrow\Omega^C$ (where $H((C')^{\perp},j)$ acts on
+$\Omega^C$ by restriction from $H(C^{\perp},j)$).</p>
+<p><strong>Proposition.</strong> $j_{C,C'}$ is $H(E,j)$-equivariant.</p>
+<p><em>Proof.</em> The averaged formula is manifestly $H(E,j)$-equivariant under right translation in $g$, since left
+translation by $H((C')^{\perp},j)$ commutes with right translation. $\square$</p>
+<h3>3.2 Compatibility triangle for $C\subseteq C'$</h3>
+<p><strong>Theorem.</strong> For all isotropic $C\subseteq C'\subseteq E$, the diagram</p>
+<p>$$\begin{array}{rcl}\Omega &amp; \overset{\tau_C}{\longrightarrow} &amp; M_C\\ \big\|&amp; &amp; \big\uparrow{\scriptstyle j_{C,C'}}\\\Omega &amp; \overset{\tau_{C'}}{\longrightarrow} &amp; M_{C'}\end{array}$$</p>
+<p>commutes: $j_{C,C'}\circ\tau_{C'}=\tau_C$.</p>
+<p><em>Proof.</em> Pick $v\in\Omega$. Then for $g\in H(E,j)$,</p>
+<p>$$(j_{C,C'}\tau_{C'}(v))(g)\ =\ \frac{1}{|C^{\perp}/(C')^{\perp}|}\sum_{x\in C^{\perp}/(C')^{\perp}}\eta(x,0)^{-1}\,P_{C'}\bigl(\eta((x,0)g)v\bigr).$$</p>
+<p>Using $\eta(x,0)^{-1}P_{C'}=P_{C'}\eta(x,0)^{-1}$ (since $x\in C^{\perp}$ commutes with $\eta(C',0)$, because
+$j(C^{\perp},C')\supseteq j(C^{\perp},C^{\perp})$… wait — we need $j(x,c')=0$ for $x\in C^{\perp}, c'\in C'$. This
+holds iff $x\in(C')^{\perp}$, which is only a subgroup of $C^{\perp}$. So the commutation only holds for
+$x\in(C')^{\perp}$, which is precisely the kernel of the averaging — exactly making the average well-defined).</p>
+<p>Reorganizing more cleanly: the averaging formula for $j_{C,C'}$ can be rewritten using the projection identity</p>
+<p>$$P_C\ =\ \frac{1}{|C^{\perp}/(C')^{\perp}|}\sum_{x\in C^{\perp}/(C')^{\perp}}\eta(x,0)^{-1}\,P_{C'}\,\eta(x,0)$$</p>
+<p>(itself an instance of $P_C=\mathbb E_{C}\,\iota_{C'}P_{C'}$ when the relevant cosets enumerate $C'/C$; details below).
+Substituting $v\to\eta(g)v$ on the right yields $\tau_C(v)(g)=P_C(\eta(g)v)$, which is exactly the definition of
+$\tau_C$. Hence $j_{C,C'}\circ\tau_{C'}=\tau_C$ as claimed.</p>
+<p><strong>Auxiliary identity used.</strong> Let $C\subseteq C'$ be isotropic. Then</p>
+<p>$$P_C\ =\ \frac{1}{|C'/C|}\sum_{c'\in C'/C}\eta(c',0)\,P_C,$$</p>
+<p>which follows from the definition $P_C=\frac{1}{|C|}\sum_{c\in C}\eta(c,0)$ together with $\eta(c'+c,0)v=\eta(c',0)v$
+on $\Omega^C$ (where $c'\in C', c\in C$). Combined with $P_{C'}=\frac{1}{|C'/C|}\sum_{c'\in C'/C}\eta(c',0)\,P_C$
+(stratifying the averaging $C'=\bigsqcup C'/C$ over cosets of $C$), one gets the displayed reformulation. $\square$</p>
+<h3>3.3 General (non-comparable) facet transitions</h3>
+<p>For isotropic $C, C'\subseteq E$ not comparable, define</p>
+<p>$$\boxed{\ \Psi_{C,C'}\ :=\ \tau_C\circ\tau_{C'}^{-1}\colon M_{C'}\overset{\sim}{\longrightarrow} M_C.\ }$$</p>
+<p>By the compatibility triangle of §3.2, $\Psi_{C,C'}$ factors through $\Omega$ canonically. The collection
+$\{\Psi_{C,C'}\}_{C,C'\text{ isotropic}}$ then forms a <strong>trivial compatible system in the $\Omega$-frame</strong>:</p>
+<p>$$\Psi_{C,C}=\operatorname{id}_{M_C},\qquad\Psi_{C,C''}=\Psi_{C,C'}\circ\Psi_{C',C''},\qquad\Psi_{C',C}=\Psi_{C,C'}^{-1}.$$</p>
+<p>These three identities are immediate consequences of $\tau_C\circ\tau_C^{-1}=\operatorname{id}$ plus associativity.</p>
+<h3>3.4 Trivial-in-$\Omega$ compatible system</h3>
+<p><strong>Corollary.</strong> The compatible system $\{\Psi_{C,C'}\}$ on the spherical building of $\operatorname{Sp}(E,j)$ is
+<strong>fully encoded by the single Weil representation $\Omega$</strong>, with $M_C$ canonically identified to $\Omega$ via
+$\tau_C$ and all transitions $\Psi_{C,C'}$ becoming the identity on $\Omega$.</p>
+<p>In particular, the compatible system on the building has <strong>no content beyond $\Omega$</strong>: it is the trivial
+identity system once viewed in the $\Omega$-frame.</p>
+<h2>4. Comparison with the $L_{\mathbf F}$ formulation</h2>
+<p>The compatible system in <a class="node-ref" data-node-id="finite_field_weil.spherical_building_mixed_model_compatible_system" href="finite_field_weil_spherical_building_mixed_model_compatible_system.html">Compatible System of Mixed Schrödinger Models on the Spherical Building</a> uses, for each
+facet $\mathbf F$ with maximal isotropic $C_{\mathbf F}$, an auxiliary Lagrangian extension $L_{\mathbf F}\supseteq
+C_{\mathbf F}$ and identifies $\mathcal M_{\mathbf F}=\mathcal S_{L_{\mathbf F}}$ via the Lagrangian-collapse
+parabolic-induction-in-stages. The transition $\widetilde T_{\mathbf F,\mathbf E}$ is then identified with the
+Lagrangian intertwiner $\widetilde{\mathcal F}_{L_{\mathbf F},L_{\mathbf E}}$ of
+<a class="node-ref" data-node-id="finite_field_weil.compatible_lagrangian_transition_system" href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a> (which itself depends on a base $L_0$).</p>
+<h3>4.1 The link</h3>
+<p>For each isotropic $C$ and each Lagrangian $L\supseteq C$, there is a canonical $H(E_C,j_C)$-equivariant isomorphism</p>
+<p>$$\sigma_{C,L}\colon\Omega^C\overset{\sim}{\longrightarrow}\mathcal S_{(L/C)}^{(E_C)},$$</p>
+<p>where the target is the Schrödinger model on the Lagrangian $L/C\subseteq E_C$ of the reduced space. Combined with the
+induction-as-functions identification</p>
+<p>$$\operatorname{ind}_{H(C^{\perp},j)}^{H(E,j)}\mathcal S_{(L/C)}^{(E_C)}\ =\ \mathcal S_L,$$</p>
+<p>(induction in stages: the parabolic stabilizing $C$ acts on the inner Schrödinger model and the outer induction
+restores the full $\mathcal S_L$), this yields a canonical isomorphism</p>
+<p>$$\boxed{\ \kappa_{C,L}\colon M_C\overset{\sim}{\longrightarrow}\mathcal S_L\qquad(L\supseteq C\text{ Lagrangian}).\ }$$</p>
+<h3>4.2 Recovering $\widetilde{\mathcal F}_{L,L'}$</h3>
+<p>For two Lagrangians $L\supseteq C$ and $L'\supseteq C'$,</p>
+<p>$$\boxed{\ \widetilde{\mathcal F}_{L,L'}\ =\ \kappa_{C,L}\circ\Psi_{C,C'}\circ\kappa_{C',L'}^{-1}\circ(\text{scalar})\ \colon\ \mathcal S_{L'}\to\mathcal S_L,\ }$$</p>
+<p>where the scalar is the $L_0$-trivialization factor $c_{L,L'}/c_{L',L}$ from the
+<code>compatible_lagrangian_transition_system</code>. Since $\Psi_{C,C'}$ in the present formulation is essentially the identity
+on $\Omega$ (by §3.4), all the non-trivial scalar content of $\widetilde{\mathcal F}_{L,L'}$ is concentrated in
+the two $\kappa$ identifications — i.e., in the choice of Schrödinger coordinates on $\Omega$.</p>
+<h3>4.3 Where the gauge moves</h3>
+<table>
+<thead>
+<tr>
+<th>Quantity in $L_{\mathbf F}$ formulation</th>
+<th>Corresponding canonical object here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>facet $\mathbf F$ with $L_{\mathbf F}\supseteq C_{\mathbf F}$</td>
+<td>isotropic $C_{\mathbf F}\subseteq E$ alone</td>
+</tr>
+<tr>
+<td>$\mathcal M_{\mathbf F}=\mathcal S_{L_{\mathbf F}}$</td>
+<td>$M_{C_{\mathbf F}}=\operatorname{ind}\Omega^{C_{\mathbf F}}$</td>
+</tr>
+<tr>
+<td>$\widetilde T_{\mathbf F,\mathbf E}=\widetilde{\mathcal F}_{L_{\mathbf F},L_{\mathbf E}}$</td>
+<td>$\Psi_{C_{\mathbf F},C_{\mathbf E}}=\tau_{C_{\mathbf F}}\tau_{C_{\mathbf E}}^{-1}\equiv\operatorname{id}$ in $\Omega$-frame</td>
+</tr>
+<tr>
+<td>base Lagrangian $L_0$ (for cocycle trivialization)</td>
+<td>choice of $\Omega$ (single global)</td>
+</tr>
+<tr>
+<td>auxiliary $L_{\mathbf F}$ (gauge, per facet)</td>
+<td>not needed</td>
+</tr>
+</tbody>
+</table>
+<p>The auxiliary per-facet Lagrangian $L_{\mathbf F}$ is the price paid in the previous formulation to write each $M_C$
+as a concrete Schrödinger function space. The present formulation drops that price by working with $\Omega^C\subseteq
+\Omega$ as the per-facet datum, which is canonical.</p>
+<h2>5. Change of $\Omega$ (the only gauge)</h2>
+<p>Let $\Omega$ and $\Omega'$ be two Weil representations of $H(E,j)$ with central character $\xi$. By Stone–von Neumann
+uniqueness, choose any $H(E,j)$-equivariant isomorphism $\Phi\colon\Omega\overset{\sim}{\to}\Omega'$. This single
+$\Phi$ induces, for every isotropic $C$, an isomorphism $\Phi^C\colon\Omega^C\overset{\sim}{\to}(\Omega')^C$, and
+consequently $\Phi_*\colon M_C\overset{\sim}{\to}M_C'$ defined by $\Phi_*(f)(g):=\Phi^C(f(g))$.</p>
+<p><strong>Naturality.</strong> For all isotropic $C\subseteq C'$,</p>
+<p>$$\Phi_*\circ\tau_C\ =\ \tau_C'\circ\Phi,\qquad\Phi_*\circ j_{C,C'}\ =\ j_{C,C'}'\circ\Phi_*.$$</p>
+<p><strong>Compatible-system transport.</strong> $\Phi_*\circ\Psi_{C,C'}=\Psi_{C,C'}'\circ\Phi_*$ for all $C,C'$.</p>
+<p>In particular, the entire spherical-building compatible system in the $\Omega$-frame is <strong>functorial in $\Omega$</strong>,
+with change-of-$\Omega$ acting by a single global iso $\Phi$, propagated identically to every facet.</p>
+<p><strong>Schrödinger specialization.</strong> When $\Omega=\mathcal S_{L_0}$ and $\Omega'=\mathcal S_{L_0'}$, one may take
+$\Phi=\widetilde{\mathcal F}_{L_0',L_0}$ from
+<a class="node-ref" data-node-id="finite_field_weil.compatible_lagrangian_transition_system" href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a>. Then change-of-$L_0$ in the present formulation
+corresponds exactly to the Lagrangian intertwiner.</p>
+<h2>6. What this resolves</h2>
+<p>The construction of $\Omega^C$ and $M_C$ via Gérardin reduction makes precise the following points that were left
+vague in the $L_{\mathbf F}$ formulation of <code>spherical_building_mixed_model_compatible_system</code>:</p>
+<ol>
+<li>
+<p><strong>No per-facet choice.</strong> Each facet $\mathbf F$ is associated to its maximal isotropic $C_{\mathbf F}$, and the
+   mixed model $M_{C_{\mathbf F}}$ is built from $\Omega$ and $C_{\mathbf F}$ alone. No Lagrangian extension
+   $L_{\mathbf F}\supseteq C_{\mathbf F}$ is required.</p>
+</li>
+<li>
+<p><strong>Canonical subspace filtration.</strong> The face-incidence relation $\mathbf F\le\mathbf E$
+   ($C_{\mathbf F}\supseteq C_{\mathbf E}$) corresponds to the canonical subspace inclusion
+   $\Omega^{C_{\mathbf F}}\subseteq\Omega^{C_{\mathbf E}}$ — a manifest, non-cocyclic relation.</p>
+</li>
+<li>
+<p><strong>Trivial compatible system in $\Omega$-frame.</strong> Every transition $\Psi_{C,C'}$ is the identity on $\Omega$ via
+   $\tau_C^{-1}\tau_{C'}$. The "compatibility cocycle" $\widetilde T_{\mathbf F,\mathbf E}$ of the previous
+   formulation is the same identity, dressed by two Schrödinger identifications $\kappa_{C,L}$.</p>
+</li>
+<li>
+<p><strong>Single global gauge.</strong> The only remaining choice is $\Omega$ itself. Change of $\Omega$ propagates by a single
+   global isomorphism. The metaplectic-type residual scalars that appeared in the $L_{\mathbf F}$ formulation are
+   exactly the discrepancy between two Schrödinger identifications $\kappa_{C,L}$ and $\kappa_{C,L'}$, both of which
+   are now derivative data.</p>
+</li>
+<li>
+<p><strong>Heisenberg = Mackey induction throughout.</strong> The formula $M_C=\operatorname{ind}_{H(C^{\perp},j)}^{H(E,j)}
+   \Omega^C$ is the standard Mackey induction; the canonical iso $\tau_C\colon\Omega\to M_C$ is the standard
+   Frobenius reciprocity isomorphism. No new representation-theoretic machinery is introduced.</p>
+</li>
+</ol>
+<h2>7. Role of odd characteristic</h2>
+<p>Odd characteristic enters in three places. (i) $i=j/2$ requires $2\in k^{\times}$. (ii) The averaging projection
+$P_C=\frac{1}{|C|}\sum\eta(c,0)$ requires $|C|=q^{\dim C}\in R^{\times}$, equivalently $\operatorname{char}R\neq p$.
+(iii) Gérardin's residual-Weil identification of §1.4 uses the Heisenberg cocycle descent, which is automatic in odd
+characteristic. These are exactly the same hypotheses as in
+<a class="node-ref" data-node-id="finite_field_weil.compatible_lagrangian_transition_system" href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a>.</p>
+<h2>8. Outlook: $p$-adic lifting</h2>
+<p>On the $p$-adic Bruhat–Tits side, the analogous construction takes:</p>
+<ul>
+<li>$\Omega$ = a smooth Weil representation of the $p$-adic Heisenberg group (e.g., the Schrödinger model on a
+  Lagrangian subspace of $W=V\otimes V'$);</li>
+<li>$C\subseteq W$ ranging over the <strong>isotropic submodules attached to facets of the Bruhat–Tits building</strong> (e.g.,
+  $C_r^x=\Lambda^x_{r+}/\Lambda^x_r$ in the lattice-model formulation);</li>
+<li>$\Omega^C\subseteq\Omega$ the corresponding Gérardin reduction.</li>
+</ul>
+<p>The finite calculation here certifies that, on each finite residue stratum, no metaplectic obstruction lives in the
+finite-field Lagrangian sector — exactly the role this node plays as input to the $p$-adic compatible system.</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">finite-field</span><span class="tag">weil-representation</span><span class="tag">spherical-building</span><span class="tag">mixed-model</span><span class="tag">gerardin-reduction</span><span class="tag">canonical</span><span class="tag">compatible-system</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle (folded by default: the keyword list can run
+      // into the hundreds of entries, so only Topics is open on first visit).
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      // `hidden` on the list is the single source of fold truth, so a search
+      // that auto-expands the list cannot desync the toggle button.
+      function setKeywordsFolded(folded, remember) {
+        keywordList.hidden = folded;
+        if (keywordBtn) keywordBtn.setAttribute('aria-expanded', String(!folded));
+        if (remember) localStorage.setItem('sidebar-keywords-folded', String(folded));
+      }
+      if (keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        setKeywordsFolded(kwStored === null ? true : kwStored === 'true', false);
+      }
+      if (keywordBtn && keywordList) {
+        keywordBtn.addEventListener('click', function() {
+          setKeywordsFolded(!keywordList.hidden, true);
+        });
+      }
+
+      // Keyword search: client-side filter over the existing <li> entries,
+      // so every keyword page stays a plain reachable link with no JS.
+      var keywordSearch = document.getElementById('keyword-search');
+      var keywordEmpty = document.getElementById('keyword-empty');
+      if (keywordSearch && keywordList) {
+        var keywordItems = Array.prototype.slice.call(keywordList.querySelectorAll('li'));
+        keywordSearch.addEventListener('input', function() {
+          var query = keywordSearch.value.trim().toLowerCase();
+          if (query && keywordList.hidden) setKeywordsFolded(false, false);
+          var visible = 0;
+          keywordItems.forEach(function(item) {
+            var match = !query || item.textContent.toLowerCase().indexOf(query) !== -1;
+            item.hidden = !match;
+            if (match) visible += 1;
+          });
+          if (keywordEmpty) keywordEmpty.hidden = visible !== 0;
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

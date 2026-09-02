@@ -1,0 +1,34 @@
+{
+  "id": "tame_covers.tame_z_cover",
+  "title": "Tame Z-Covers Of Locally Profinite Groups",
+  "kind": "definition",
+  "status": "staged",
+  "href": "tame_covers/tame_covers_tame_z_cover.html",
+  "primary_topic": "tame_covers",
+  "topics": [
+    "tame_covers"
+  ],
+  "body_html": "<h1>Tame Z-Covers Of Locally Profinite Groups</h1>\n<p>Let $G$ be a locally profinite group and let $Z$ be a finite abelian group.  A\n$Z$-cover of $G$ is a topological central extension</p>\n<p>$$\n1\\to Z\\to \\widetilde G\\to G\\to 1,\n$$</p>\n<p>where $Z$ is discrete and the projection $\\widetilde G\\to G$ is a covering\nmap.</p>\n<p>The draft calls this cover tame if</p>\n<p>$$\n|G|_\\infty\\wedge |Z|=1.\n$$</p>\n<p>It is called wild otherwise.</p>\n<p>A compact subgroup $H\\subset G$ is called $Z'$-compact in the draft if</p>\n<p>$$\n|H|\\wedge |Z|=1.\n$$</p>\n<h2>Draft Caution</h2>\n<p>The name \"$Z'$-compact\" appears to mean \"prime-to-$Z$ compact\" rather than a\nnew subgroup $Z'$.  This should be renamed before becoming final paper\nnotation.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tame_covers.locally_profinite_pro_order",
+      "title": "Locally Profinite Groups And Pro-Order",
+      "href": "tame_covers/tame_covers_locally_profinite_pro_order.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tame_covers.genuine_representations_of_covers",
+      "title": "Genuine Representations Of Central Covers",
+      "href": "tame_covers/tame_covers_genuine_representations_of_covers.html"
+    },
+    {
+      "id": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "title": "Unique Splitting For Prime-To-Z Compact Subgroups",
+      "href": "tame_covers/tame_covers_unique_splitting_for_tame_cover_subgroups.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

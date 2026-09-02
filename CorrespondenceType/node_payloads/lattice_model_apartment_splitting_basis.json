@@ -8,7 +8,7 @@
   "topics": [
     "lattice_model"
   ],
-  "body_html": "<h1>Apartment Splitting Basis</h1>\n<p>Fix a basis\n\\[\n\\{e_i:i\\in I^+\\oplus I^-\\oplus I^0\\}\n\\]\nadapted to the form: \\(I^-=-I^+\\), the \\(e_i,e_{-i}\\) form hyperbolic pairs,\nand \\(I^0\\) indexes anisotropic lines. A self-dual lattice function in the\nassociated apartment is determined by real numbers \\(a_i\\) for \\(i\\in I^+\\),\nwith\n\\[\na_{-i}=-a_i,\\qquad\na_i=\\frac12\\nu(\\langle e_i,e_i\\rangle)\n\\quad(i\\in I^0),\n\\]\nand\n\\[\nL_r=\\bigoplus_{i\\in I} e_i\\,p_D^{[(r-a_i)/\\nu_D]}.\n\\]\nThe coordinates \\(a_i\\) identify the apartment with \\(\\mathbb R^n\\).</p>",
+  "body_html": "<h1>Apartment Splitting Basis</h1>\n<p>This is the shared foundation layer node for apartment splitting bases.\nIt should be used by both epipelagic and supercuspidal nodes instead of\nthe older <a class=\"node-ref\" data-node-id=\"epipelagic_theta.apartment_splitting_basis\" href=\"../epipelagic_theta/epipelagic_theta_apartment_splitting_basis.html\"><code>epipelagic_theta.apartment_splitting_basis</code></a>.</p>\n<p>Fix a basis\n\\[\n\\{e_i:i\\in I^+\\oplus I^-\\oplus I^0\\}\n\\]\nadapted to the form: \\(I^-=-I^+\\), the \\(e_i,e_{-i}\\) form hyperbolic\npairs, and \\(I^0\\) indexes anisotropic lines. A self-dual lattice function\nin the associated apartment is determined by real numbers \\(a_i\\) for\n\\(i\\in I^+\\), with\n\\[\na_{-i}=-a_i,\\qquad\na_i=\\frac12\\nu(\\langle e_i,e_i\\rangle)\n\\quad(i\\in I^0),\n\\]\nand\n\\[\nL_r=\\bigoplus_{i\\in I} e_i\\,p_D^{[(r-a_i)/\\nu_D]}.\n\\]\nThe coordinates \\(a_i\\) identify the apartment with \\(\\mathbb R^n\\).</p>",
   "proof_html": null,
   "deps": [
     {
@@ -19,9 +19,9 @@
   ],
   "dependents": [
     {
-      "id": "epipelagic_theta.apartment_splitting_basis",
-      "title": "Apartment Splitting Basis",
-      "href": "epipelagic_theta/epipelagic_theta_apartment_splitting_basis.html"
+      "id": "epipelagic_theta.apartment_fractional_jump_decomposition",
+      "title": "Apartment Fractional Jump Decomposition",
+      "href": "epipelagic_theta/epipelagic_theta_apartment_fractional_jump_decomposition.html"
     },
     {
       "id": "lattice_model.apartment_fractional_jump_decomposition",

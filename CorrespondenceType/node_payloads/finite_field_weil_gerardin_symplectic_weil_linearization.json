@@ -1,0 +1,69 @@
+{
+  "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+  "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_gerardin_symplectic_weil_linearization.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Gérardin Linearization of the Finite Symplectic Weil Cocycle</h1>\n<p>This node records the proof in Gérardin, Section 2.4, with the reduction\nlemma from Section 1.5 made explicit.  It is different from the formal\nbase-Lagrangian coboundary argument in\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.base_lagrangian_weil_index_trivialization\" href=\"finite_field_weil_base_lagrangian_weil_index_trivialization.html\">Base-Lagrangian Trivialization of the Finite Weil-Index Cocycle</a>: here the\ncocycle is the projective cocycle for the action of the full symplectic group\non a fixed Heisenberg representation.</p>\n<h2>Statement</h2>\n<p>\\begin{theorem}\n\\label{thm:gerardin-symplectic-weil-linearization}\nLet \\(k\\) be a finite field of odd order \\(q\\) and characteristic \\(p\\).  Let\n\\((E,j)\\) be a nondegenerate symplectic \\(k\\)-space, let \\(H(E,j)\\) be the\nfinite Heisenberg group, and let \\(S(E,j)\\) be the symplectic group.  Fix a\nnontrivial central character \\(\\xi:k\\to \\mathbb C^\\times\\) and let\n\\(\\eta_\\xi\\) be the corresponding finite Heisenberg representation.</p>\n<p>The projective action of \\(S(E,j)\\) on \\(\\eta_\\xi\\) is linearizable.\nEquivalently, \\(\\eta_\\xi\\) extends to a representation of\n\\(S(E,j)\\ltimes H(E,j)\\).  The restriction to \\(S(E,j)\\) is the finite\nsymplectic Weil representation.\n\\end{theorem}</p>\n<p>\\begin{proof}\nWe write \\(S=S(E,j)\\) and \\(H=H(E,j)\\).  Since \\(S\\) acts on \\(H\\) by\n\\(s(w,z)=(sw,z)\\) and fixes the center, the Stone-von Neumann class\n\\(\\eta_\\xi\\) is \\(S\\)-stable.  Therefore, after choosing a realization of\n\\(\\eta_\\xi\\), one obtains a projective representation of \\(S\\).  Its cocycle\nis exactly the obstruction to extending \\(\\eta_\\xi\\) from \\(H\\) to\n\\(S\\ltimes H\\).</p>\n<p>We first construct an honest extension over a maximal parabolic subgroup.\nChoose a maximal isotropic subspace \\(E_+\\subset E\\), and let\n\\(P=P(E_+)\\subset S\\) be its stabilizer.  Gérardin defines a character\n\\(\\chi_{E_+}\\) of \\(P\\) by</p>\n<p>$$\n\\chi_{E_+}(s)=\\bigl(\\det(s|_{E_+})\\bigr)^{(q-1)/2}.\n$$</p>\n<p>This is the unique nontrivial real character of \\(P\\) that is trivial on the\nsubgroup acting trivially on \\(E_+\\).  The subgroup \\(E_+\\times k\\subset H\\)\nis abelian.  On the semidirect-product subgroup\n\\(P\\ltimes(E_+\\times k)\\subset P\\ltimes H\\), take the one-dimensional\nrepresentation</p>\n<p>$$\n(s,x,z)\\longmapsto \\chi_{E_+}(s)\\xi(z).\n$$</p>\n<p>Induce it to \\(P\\ltimes H\\).  On restriction to \\(H\\), this induced\nrepresentation has central character \\(\\xi\\) and degree \\([H:Z]^{1/2}\\).\nBy the finite Heisenberg Stone-von Neumann criterion, its restriction to \\(H\\)\nis a realization of \\(\\eta_\\xi\\).  Hence the projective action is already\nlinearized on \\(P\\).</p>\n<p>Every parabolic subgroup of the finite symplectic group contains a\n\\(p\\)-Sylow subgroup of \\(S\\).  Since \\(P\\) contains such a \\(p\\)-Sylow,\nthe restriction of the projective cocycle to a \\(p\\)-Sylow is trivial.  The\ngroup \\(H\\) is a \\(p\\)-group and \\(\\xi\\) has order \\(p\\).  Therefore\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.projective_cocycle_linearization_criterion\" href=\"finite_field_weil_projective_cocycle_linearization_criterion.html\">Projective Cocycle Linearization Criterion for Finite Heisenberg Representations</a> applies:\nthe projective cocycle is trivial on all of \\(S\\).  Thus \\(\\eta_\\xi\\)\nextends to \\(S\\ltimes H\\).</p>\n<p>This proves existence.  For uniqueness, any two extensions differ by a\none-dimensional character of \\(S\\), because \\(\\eta_\\xi\\) is irreducible on\n\\(H\\).  Gérardin uses that finite symplectic groups in odd characteristic\nare perfect except for \\(S=\\operatorname{Sp}_2(\\mathbb F_3)\\).  In the\nperfect cases, the character is trivial.  In the exceptional case\n\\(\\operatorname{Sp}_2(\\mathbb F_3)\\), the possible extensions are separated\nby their decomposition into the known irreducibles of the binary tetrahedral\ngroup; Gérardin selects the unique extension disjoint from its complex\nconjugate.  This gives the distinguished Weil representation. \\(\\square\\)\n\\end{proof}</p>\n<h2>Explicit Normalization in a Witt Model</h2>\n<p>Gérardin also records the normalization of the extension in a concrete\nSchrödinger model.  This is where the finite quadratic Weil-index constants\nof <a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_quadratic_weil_index\" href=\"finite_field_weil_finite_quadratic_weil_index.html\">Finite Quadratic Weil Index</a> enter.</p>\n<p>Fix a Witt decomposition</p>\n<p>$$\nE=E_+\\oplus E_-,\n$$</p>\n<p>with \\(E_+\\) and \\(E_-\\) maximal isotropic and paired by \\(j\\).  Realize\n\\(\\eta_\\xi\\) on the space \\(C[E_-]\\) of functions on \\(E_-\\).  If\n\\(\\tau:k\\to \\mathbb C^\\times\\) is the additive character corresponding to\n\\(\\xi\\), the Heisenberg action is</p>\n<p>$$\n(\\eta(x_++y_0,z)F)(y)\n=\n\\tau(z+i(y,x_+))F(y+y_0),\n$$</p>\n<p>for \\(x_+\\in E_+\\), \\(y_0,y\\in E_-\\), and \\(z\\in k\\).  The stabilizer\n\\(P(E_+)\\) acts by the parabolic formulas:</p>\n<p>$$\n(\\pi_+(s)F)(y)=\\chi_{E_+}(s)F(a_-^{-1}y)\n$$</p>\n<p>for a Levi element with \\(E_-\\)-block \\(a_-\\), and</p>\n<p>$$\n(\\pi_+(u_b)F)(y)=\\tau(i(by,y))F(y)\n$$</p>\n<p>for the unipotent element defined by an \\(i\\)-symmetric map\n\\(b:E_-\\to E_+\\).  These formulas give the already constructed\n\\(P(E_+)\\ltimes H\\)-extension.</p>\n<p>To extend from \\(P(E_+)\\) to \\(S\\), one must normalize the operator attached\nto an element exchanging \\(E_+\\) and \\(E_-\\).  Let \\(c:E_+\\to E_-\\) be an\nisomorphism.  Let \\(c^\\vee:E_-\\to E_+\\) be the adjoint map required by the\nsymplectic form, so that \\(s_c\\in S\\) is represented by the block matrix</p>\n<p>$$\ns_c=\n\\begin{pmatrix}\n0 &amp; c^\\vee\\\\\nc &amp; 0\n\\end{pmatrix}\n$$</p>\n<p>with respect to \\(E_+\\oplus E_-\\).  The underlying operator is a Fourier\ntransform.  With Gérardin's self-dual finite measure, put</p>\n<p>$$\n\\widehat F(x)=\\int_{E_-}F(y)\\tau(i(y,x))\\,dy,\n\\qquad x\\in E_+.\n$$</p>\n<p>The operator has the form</p>\n<p>$$\n(\\sigma(s_c)F)(y)=\\varphi(c^{-1})\\widehat F(c^{-1}y)\n$$</p>\n<p>for \\(y\\in E_-\\), where \\(c^{-1}y\\in E_+\\).  The scalar\n\\(\\varphi(c^{-1})\\) is not arbitrary: the relations between \\(P(E_+)\\) and\nthe element \\(s_c\\) force it.</p>\n<p>Let \\(b:E_-\\to E_+\\) be an \\(i\\)-symmetric isomorphism.  Comparing the two\nsides of Gérardin's relation (2.13) gives a Gaussian sum\n\\(w_\\tau(b)\\) with</p>\n<p>$$\n\\int_{E_-}\\tau(i(by',y')-i(by',y))\\,dy'\n=\nw_\\tau(b)\\,\\tau(i(by,y))^{-1}.\n$$</p>\n<p>The same relation forces</p>\n<p>$$\n\\varphi(b)w_\\tau(b)=1.\n$$</p>\n<p>The Gaussian sum is evaluated by diagonalizing the quadratic form\n\\(y\\mapsto i(by,y)\\).  If \\(d(b)\\) is its discriminant, then</p>\n<p>$$\nw_\\tau(b)=W(\\tau)^{\\dim E_-}d(b)^{(1-q)/2},\n\\qquad\nW(\\tau)=\\int_k \\tau(t^2/2)\\,dt.\n$$</p>\n<p>Thus the Fourier operator normalization is determined by the one-dimensional\nGauss sum \\(W(\\tau)\\) and the discriminant of the quadratic form.  Gérardin's\nformula (2.18) can be written as</p>\n<p>$$\n(\\sigma(s_c)F)(y)\n=\nW(\\tau)^{-\\dim E_-}(\\det c)^{(1-q)/2}\\widehat F(c^{-1}y),\n$$</p>\n<p>up to the notational convention for identifying \\(E_+\\) and \\(E_-^\\vee\\).</p>\n<p>The calculation also eliminates the remaining possible characters in the\nextension.  A possible modification on the parabolic side is a character of\nthe Levi and a character of the unipotent radical.  Conjugation by the Levi\nforces the unipotent character to be trivial, except for the small\n\\(\\operatorname{Sp}_2(\\mathbb F_3)\\) case already handled above.  The\nGaussian relation then forces the Levi character to be trivial.  Consequently\nthe Fourier-Gaussian formula fixes the same distinguished extension obtained\nabstractly from the \\(p\\)-Sylow argument.</p>\n<h2>Nonmaximal Isotropic Parabolics</h2>\n<p>Gérardin also proves the compatible statement for a nonzero isotropic\nsubspace \\(E_1\\subset E\\).  Choose a decomposition</p>\n<p>$$\nE=E_1\\oplus E_0\\oplus E_-,\n$$</p>\n<p>where \\(E_-\\) is isotropic and dual to \\(E_1\\), and \\(E_0\\) is symplectic.\nThe representation over the stabilizer \\(P(E_1)\\) is realized on</p>\n<p>$$\nC[E_-]\\otimes \\mathcal H_0,\n$$</p>\n<p>where \\(\\mathcal H_0\\) carries the already constructed Weil representation of\n\\(S(E_0)\\ltimes H(E_0)\\).  On the \\(E_1\\oplus E_-\\) part the formulas are the\nsame Fourier and quadratic-character formulas as in the maximal case; on the\n\\(E_0\\) part the action is the lower-dimensional Weil representation.</p>\n<p>The remaining ambiguity could only be a one-dimensional character on the\n\\(S(E_0)\\)-factor.  Gérardin rules this out by restricting to rank-one\nsymplectic subgroups and their unipotent radicals; the characters agree on\nthe relevant Sylow subgroups, hence the possible character is trivial.  This\nfinishes the proof that the parabolic model in part (b) of the symplectic Weil\nrepresentation theorem is the restriction of the same global Weil representation.</p>\n<h2>Relation to Lagrangian Transition Cocycles</h2>\n<p>The theorem trivializes the projective cocycle for the \\(S(E,j)\\)-action on a\nfixed Heisenberg representation.  Once one writes this representation in\ndifferent Schrödinger models, the same choice of linear Weil representation\nprovides coherent normalizations of the Fourier intertwiners between those\nmodels.  The resulting scalar corrections are the finite-field Weil-index or\nGaussian-sum constants.  This is the Gérardin source for the statement that\nthe finite-field obstruction is not a genuine metaplectic obstruction: over a\nfinite field of odd characteristic, the projective Weil cocycle is a\ncoboundary.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.symplectic_heisenberg_group",
+      "title": "Symplectic Heisenberg Group over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_heisenberg_group.html"
+    },
+    {
+      "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
+      "title": "Finite Heisenberg Central Character Criterion",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_central_character_criterion.html"
+    },
+    {
+      "id": "finite_field_weil.projective_cocycle_linearization_criterion",
+      "title": "Projective Cocycle Linearization Criterion for Finite Heisenberg Representations",
+      "href": "finite_field_weil/finite_field_weil_projective_cocycle_linearization_criterion.html"
+    },
+    {
+      "id": "finite_field_weil.gl_weil_representation",
+      "title": "General Linear Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_gl_weil_representation.html"
+    },
+    {
+      "id": "finite_field_weil.finite_quadratic_weil_index",
+      "title": "Finite Quadratic Weil Index",
+      "href": "finite_field_weil/finite_field_weil_finite_quadratic_weil_index.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.compatible_lagrangian_transition_system",
+      "title": "Compatible System of Schrödinger-Model Intertwiners over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_compatible_lagrangian_transition_system.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_canonical_mixed_model",
+      "title": "Canonical Mixed Model on the Spherical Building via Gérardin Reduction",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_canonical_mixed_model.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_mixed_model_compatible_system",
+      "title": "Compatible System of Mixed Schrödinger Models on the Spherical Building",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_mixed_model_compatible_system.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

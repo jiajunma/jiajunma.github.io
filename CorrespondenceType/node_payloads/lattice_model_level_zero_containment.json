@@ -1,0 +1,39 @@
+{
+  "id": "lattice_model.level_zero_containment",
+  "title": "Level-0 Lattice Under Specialization to a Face",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_level_zero_containment.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Level-0 Lattice Under Specialization to a Face</h1>\n<p>Let \\(G=\\operatorname{Sp}(W)\\), let \\(x\\) lie in an open facet \\(F\\) of \\(\\mathcal B(\\operatorname{Sp}(W))\\), and let\n\\(y\\in\\overline F\\) (so \\(\\operatorname{facet}(y)\\le F\\)). Then\n\\[\n\\mathscr L_{x,0}\\subseteq\\mathscr L_{y,0},\n\\]\nwith equality in a hyperbolic-plane slot \\(H_i\\) unless the corresponding coordinate of \\(y\\) is an integer (a\nlevel-\\(0\\) jump of \\(\\mathscr L_y\\) in \\(H_i\\)).</p>",
+  "proof_html": "<p>By Bruhat-Tits the facet closure \\(\\overline F\\) lies in an apartment; fix one, \\(\\mathcal A\\), attached to a\nmaximal split torus, with associated Witt basis \\(\\{e_i,f_i\\}_{i=1}^n\\) (Broussous-Stevens, Sections 2-4). In this\nchart the points of \\(\\mathcal A\\) are tuples \\(\\underline a=(a_1,\\dots,a_n)\\) and the self-dual lattice function of\n\\(\\underline a\\) is\n\\[\n\\mathscr L_{\\underline a,s}=\\bigoplus_{i=1}^n\\big(\\mathfrak p^{\\lceil s-a_i\\rceil}e_i\\oplus\\mathfrak p^{\\lceil s+a_i\\rceil}f_i\\big)\n\\]\n(<a class=\"node-ref\" data-node-id=\"lattice_model.symplectic_apartment_model\" href=\"lattice_model_symplectic_apartment_model.html\">Apartment Model for Sp(W) via Self-Dual Lattice Functions</a>: the Broussous-Stevens norm \\(\\alpha_p\\) read as a lattice\nfunction, in the sign convention fixed there; self-dual by <a class=\"node-ref\" data-node-id=\"lattice_model.self_dual_lattice_function\" href=\"lattice_model_self_dual_lattice_function.html\">Self-Dual Lattice Function</a>).\nBoth \\(x,y\\in\\overline F\\subseteq\\mathcal A\\), so both lattice functions are split by this basis. Write\n\\(a_i=a_i(x)\\) and \\(b_i=a_i(y)\\). Reading the formula at \\(s=0\\),\n\\[\n\\mathscr L_{x,0}=\\bigoplus_i\\big(\\mathfrak p^{\\lceil -a_i\\rceil}e_i\\oplus\\mathfrak p^{\\lceil a_i\\rceil}f_i\\big),\n\\qquad\n\\mathscr L_{y,0}=\\bigoplus_i\\big(\\mathfrak p^{\\lceil -b_i\\rceil}e_i\\oplus\\mathfrak p^{\\lceil b_i\\rceil}f_i\\big),\n\\]\nand, since a larger \\(\\mathfrak p\\)-power is a smaller lattice, \\(\\mathscr L_{x,0}\\subseteq\\mathscr L_{y,0}\\) is equivalent to\n\\[\n\\lceil -a_i\\rceil\\ge\\lceil -b_i\\rceil\\quad\\text{and}\\quad\\lceil a_i\\rceil\\ge\\lceil b_i\\rceil\\qquad(\\forall i).\\tag{$\\ast$}\n\\]</p>\n<p>The jumps of \\(\\mathscr L_{\\underline a}\\) in \\(s\\) lie at \\(s\\equiv a_i\\) and \\(s\\equiv -a_i\\pmod 1\\) (the\n\\(e_i\\)- and \\(f_i\\)-lines). Two of them collide — so the lattice chain, hence the facet of \\(\\underline a\\),\nchanges — across \\(a_i\\equiv -a_i\\), i.e. across each hyperplane \\(\\{a_i=\\tfrac m2\\}\\) (\\(m\\in\\mathbb Z\\)); each is\ntherefore a wall (the affine \\(C_n\\)-wall of the long root \\(2\\epsilon_i\\); Broussous-Stevens, Section 4). A facet\nmeets no wall transversally: it lies in a closed alcove face and is disjoint from every wall not containing it\n(Bruhat-Tits). Fix \\(i\\); there are two cases.</p>\n<ul>\n<li>(degenerate) Some wall \\(\\{a_i=\\tfrac m2\\}\\) contains \\(F\\): then \\(a_i\\equiv\\tfrac m2\\) on \\(\\overline F\\), so\n  \\(b_i=a_i\\) and \\((\\ast)\\) holds with equality in slot \\(i\\).</li>\n<li>(non-degenerate) No such wall contains \\(F\\): then \\(F\\) is disjoint from every \\(\\{a_i=\\tfrac m2\\}\\); since\n  \\(a_i\\) is affine and \\(F\\) convex and connected, \\(a_i(F)\\) is an interval meeting no \\(\\tfrac m2\\), so\n  \\(a_i\\in(\\tfrac k2,\\tfrac{k+1}2)\\) for a single \\(k=k_i\\in\\mathbb Z\\). As \\(a_i\\) is affine and \\(\\overline F\\)\n  compact convex, \\(a_i(\\overline F)=\\overline{a_i(F)}\\), hence \\(b_i\\in[\\tfrac k2,\\tfrac{k+1}2]\\).</li>\n</ul>\n<p>In the non-degenerate case the open interval \\((\\tfrac{k}{2},\\tfrac{k+1}{2})\\) has length \\(\\tfrac12\\) and contains\nno integer, so \\(\\lceil a_i\\rceil\\) and \\(\\lceil -a_i\\rceil\\) are constant on it. Split on the parity of \\(k\\):</p>\n<ul>\n<li>\\(k=2\\ell\\): then \\(a_i\\in(\\ell,\\ell+\\tfrac12)\\), so \\(\\lceil a_i\\rceil=\\ell+1\\) and \\(\\lceil -a_i\\rceil=-\\ell\\).\n  As \\(b_i\\in[\\ell,\\ell+\\tfrac12]\\) we get \\(\\lceil b_i\\rceil\\in\\{\\ell,\\ell+1\\}\\le\\ell+1\\) and \\(\\lceil -b_i\\rceil=-\\ell\\).</li>\n<li>\\(k=2\\ell+1\\): then \\(a_i\\in(\\ell+\\tfrac12,\\ell+1)\\), so \\(\\lceil a_i\\rceil=\\ell+1\\) and \\(\\lceil -a_i\\rceil=-\\ell\\).\n  As \\(b_i\\in[\\ell+\\tfrac12,\\ell+1]\\) we get \\(\\lceil b_i\\rceil=\\ell+1\\) and \\(\\lceil -b_i\\rceil\\in\\{-\\ell-1,-\\ell\\}\\le-\\ell\\).</li>\n</ul>\n<p>In both cases \\((\\ast)\\) holds, so \\(\\mathscr L_{x,0}\\subseteq\\mathscr L_{y,0}\\). In a non-degenerate slot a strict\ninequality occurs iff \\(b_i\\) is the integer endpoint of \\([\\tfrac{k}{2},\\tfrac{k+1}{2}]\\) (namely \\(b_i=\\ell\\) for\n\\(k=2\\ell\\), or \\(b_i=\\ell+1\\) for \\(k=2\\ell+1\\)), i.e. iff \\(b_i\\in\\mathbb Z\\) — equivalently \\(0\\) is a jump of\n\\(\\mathscr L_y\\) in \\(H_i\\). \\(\\square\\)</p>\n<h2>Corollary</h2>\n<p>Applying the duality \\(\\#\\) (which reverses inclusions and sends \\(\\mathscr L_{\\bullet,0}\\) to\n\\(\\mathscr L_{\\bullet,0+}\\)) gives \\(\\mathscr L_{y,0+}\\subseteq\\mathscr L_{x,0+}\\), hence the four-term chain\n\\[\n\\mathscr L_{y,0+}\\ \\subseteq\\ \\mathscr L_{x,0+}\\ \\subseteq\\ \\mathscr L_{x,0}\\ \\subseteq\\ \\mathscr L_{y,0}.\n\\]\nThus \\(\\mathsf b_x=\\mathscr L_{x,0}/\\mathscr L_{x,0+}\\) is a symplectic subquotient \\(U^{\\perp}/U\\) of\n\\(\\mathsf b_y=\\mathscr L_{y,0}/\\mathscr L_{y,0+}\\), with \\(U=\\mathscr L_{x,0+}/\\mathscr L_{y,0+}\\) isotropic — the\nlevel-\\(0\\) input to the parabolic and flag attached to the incidence.</p>",
+  "deps": [
+    {
+      "id": "lattice_model.symplectic_apartment_model",
+      "title": "Apartment Model for Sp(W) via Self-Dual Lattice Functions",
+      "href": "lattice_model/lattice_model_symplectic_apartment_model.html"
+    },
+    {
+      "id": "lattice_model.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_self_dual_lattice_function.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model.compatible_transition_maps",
+      "title": "Canonical Transition Maps Between Generalized Lattice Models",
+      "href": "lattice_model/lattice_model_compatible_transition_maps.html"
+    },
+    {
+      "id": "lattice_model.facet_incidence_parabolic",
+      "title": "Facet Incidence as a Parabolic for Sp(W)",
+      "href": "lattice_model/lattice_model_facet_incidence_parabolic.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

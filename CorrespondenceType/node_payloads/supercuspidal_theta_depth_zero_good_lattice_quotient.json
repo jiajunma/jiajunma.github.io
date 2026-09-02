@@ -8,13 +8,18 @@
   "topics": [
     "supercuspidal_theta"
   ],
-  "body_html": "<h1>Good Lattice Quotients at Depth Zero</h1>\n<p>For a vertex \\(x\\) represented by a good lattice \\(L\\), the two residual spaces are\n\\[\n\\ell=L/L^\\ast p_D,\\qquad \\ell^\\ast=L^\\ast/L.\n\\]\nThey carry induced finite-field hermitian forms, and\n\\[\nG_x/G_{x,0+}\\simeq U(\\ell)\\times U(\\ell^\\ast).\n\\]\nThe Witt classes of \\(\\ell\\) and \\(\\ell^\\ast\\) depend only on the Witt class of \\(V\\), not on the chosen good lattice.</p>",
+  "body_html": "<h1>Good Lattice Quotients at Depth Zero</h1>\n<p>For a vertex \\(x\\) represented by a good lattice \\(L\\), the two residual spaces are\n\\[\n\\ell=L/L^\\#p_D,\\qquad \\ell^\\#=L^\\#/L.\n\\]\nThey carry induced finite-field hermitian forms, and\n\\[\nG_x/G_{x,0+}\\simeq U(\\ell)\\times U(\\ell^\\#).\n\\]\nThe Witt classes of \\(\\ell\\) and \\(\\ell^\\#\\) depend only on the Witt class of \\(V\\), not on the chosen good lattice.</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "supercuspidal_theta.depth_zero_k_type",
       "title": "Depth Zero K Type",
       "href": "supercuspidal_theta/supercuspidal_theta_depth_zero_k_type.html"
+    },
+    {
+      "id": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "title": "Hermitian Dual Lattice With Conductor p",
+      "href": "lattice_model/lattice_model_hermitian_dual_lattice_conductor_p.html"
     }
   ],
   "dependents": [],

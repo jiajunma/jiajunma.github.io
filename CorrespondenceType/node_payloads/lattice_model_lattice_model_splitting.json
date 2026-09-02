@@ -1,0 +1,39 @@
+{
+  "id": "lattice_model.lattice_model_splitting",
+  "title": "Parahoric Action on the Generalized Lattice Model",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_lattice_model_splitting.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Parahoric Action on the Generalized Lattice Model</h1>\n<p>Let \\(x\\in\\mathcal B(\\operatorname{Sp}(W))\\), with generalized lattice model\n\\(\\Omega_x=S(\\mathscr L_{x,0})\\) of functions \\(f:W\\to S(\\mathsf b_x)\\) satisfying\n\\[\nf(a+w)=\\psi\\!\\big(\\tfrac12\\langle w,a\\rangle\\big)\\,\\overline{\\omega}_x(\\bar a)\\,f(w),\\qquad a\\in\\mathscr L_{x,0},\n\\]\nwhere \\(\\mathsf b_x=\\mathscr L_{x,0}/\\mathscr L_{x,0+}\\) and \\(\\overline{\\omega}_x\\) is the oscillator representation of\nthe finite Heisenberg group \\(H(\\mathsf b_x)\\) and of \\(\\operatorname{Sp}(\\mathsf b_x)\\) (see\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.generalized_lattice_model\" href=\"../supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html\">Generalized Lattice Model</a>, <a class=\"node-ref\" data-node-id=\"finite_field_weil.symplectic_weil_representation\" href=\"../finite_field_weil/finite_field_weil_symplectic_weil_representation.html\">Symplectic Weil Representation over a Finite Field</a>).\nThe parahoric \\(G_{x,0}\\) stabilizes \\(\\mathscr L_{x,0}\\) and \\(\\mathscr L_{x,0+}\\), hence reduces to\n\\(\\bar g\\in\\operatorname{Sp}(\\mathsf b_x)\\) under\n\\(G_{x,0}\\to\\operatorname{Sp}(\\mathsf b_x)\\) (see <a class=\"node-ref\" data-node-id=\"lattice_model.symplectic_parahoric_reductive_quotient\" href=\"lattice_model_symplectic_parahoric_reductive_quotient.html\">Parahoric Reductive Quotient for Sp(W)</a>).</p>\n<h2>The action</h2>\n<p>\\(G_{x,0}\\) acts on \\(\\Omega_x\\) by the <strong>natural translation, twisted by the finite Weil action on the values</strong>:\n\\[\n\\boxed{\\;(\\omega_x(g)f)(w)=\\overline{\\omega}_x(\\bar g)\\,f(g^{-1}w),\\qquad g\\in G_{x,0},\\ f\\in\\Omega_x,\\ w\\in W.\\;}\n\\]\nThis is the default action of \\(G_{x,0}\\) on \\(\\Omega_x\\), written \\(\\omega_x\\); here \\(\\overline{\\omega}_x\\) denotes the\nfinite Weil representation \\(\\omega_{\\mathsf b_x}\\) of \\(\\mathsf b_x\\). The factor \\(f\\mapsto f\\circ g^{-1}\\) is the\ngeometric action of \\(g\\in\\operatorname{Sp}(W)\\) on functions on \\(W\\)\n(no Jacobian, since \\(g\\) preserves the symplectic form and the lattice); \\(\\overline{\\omega}_x(\\bar g)\\) is the\nfinite Weil action on the coefficient space \\(S(\\mathsf b_x)\\).</p>\n<p>This \\(\\omega_x\\) is a genuine representation of \\(G_{x,0}\\) (no central extension needed, because over a residue\nfield of odd order the finite Weil representation \\(\\overline{\\omega}_x\\) is a true representation of\n\\(\\operatorname{Sp}(\\mathsf b_x)\\)). Equivalently it is the lattice-model splitting\n\\[\n\\xi_x:G_{x,0}\\to Mp(W),\\qquad \\omega_x=\\omega_\\psi\\circ\\xi_x ,\n\\]\nthe \\(\\xi_B\\) of <a class=\"node-ref\" data-node-id=\"supercuspidal_theta.generalized_lattice_model\" href=\"../supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html\">Generalized Lattice Model</a> specialized to the point \\(x\\). It is\ncanonical: the only datum is the additive character \\(\\psi\\); no polarization, comparison intertwiner, or Haar\nchoice enters.</p>\n<p>On the pro-unipotent radical \\(G_{x,0+}\\) the reduction is trivial (\\(\\bar g=1\\)), so\n\\[\n(\\omega_x(g)f)(w)=f(g^{-1}w),\\qquad g\\in G_{x,0+},\n\\]\npure translation — which is why the splitting is canonical on \\(G_{x,0+}\\); the genuine content of \\(\\xi_x\\) lives\non the finite reductive quotient \\(\\mathsf G_x\\), through \\(\\overline{\\omega}_x\\).</p>",
+  "proof_html": "<p><strong>Well-defined.</strong> For \\(a\\in\\mathscr L_{x,0}\\), \\(g^{-1}a\\in\\mathscr L_{x,0}\\) and \\(\\langle g^{-1}w,g^{-1}a\\rangle=\\langle w,a\\rangle\\),\nso the covariance gives\n\\[\n(\\omega_x(g)f)(a+w)=\\overline{\\omega}_x(\\bar g)\\,f(g^{-1}a+g^{-1}w)\n=\\psi\\!\\big(\\tfrac12\\langle w,a\\rangle\\big)\\,\\overline{\\omega}_x(\\bar g)\\,\\overline{\\omega}_x(\\bar g^{-1}\\bar a)\\,f(g^{-1}w).\n\\]\nThe intertwining property of the oscillator representation,\n\\(\\overline{\\omega}_x(\\bar g)\\,\\overline{\\omega}_x(\\bar v)\\,\\overline{\\omega}_x(\\bar g)^{-1}=\\overline{\\omega}_x(\\bar g\\bar v)\\)\nfor \\(\\bar v\\in\\mathsf b_x\\), turns \\(\\overline{\\omega}_x(\\bar g)\\overline{\\omega}_x(\\bar g^{-1}\\bar a)\\) into\n\\(\\overline{\\omega}_x(\\bar a)\\overline{\\omega}_x(\\bar g)\\), so\n\\((\\omega_x(g)f)(a+w)=\\psi(\\tfrac12\\langle w,a\\rangle)\\,\\overline{\\omega}_x(\\bar a)\\,(\\omega_x(g)f)(w)\\); hence\n\\(\\omega_x(g)f\\in\\Omega_x\\).</p>\n<p><strong>Multiplicative.</strong> \\((\\omega_x(g_1)\\omega_x(g_2)f)(w)=\\overline{\\omega}_x(\\bar g_1)\\overline{\\omega}_x(\\bar g_2)f((g_1g_2)^{-1}w)\n=\\overline{\\omega}_x(\\overline{g_1g_2})f((g_1g_2)^{-1}w)=(\\omega_x(g_1g_2)f)(w)\\), using that \\(\\bar{\\cdot}\\) is a homomorphism\nand \\(\\overline{\\omega}_x\\) a representation of \\(\\operatorname{Sp}(\\mathsf b_x)\\). The identification \\(\\omega_x=\\omega_\\psi\\circ\\xi_x\\)\nis the lattice-model construction of <a class=\"node-ref\" data-node-id=\"supercuspidal_theta.generalized_lattice_model\" href=\"../supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html\">Generalized Lattice Model</a>. \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
+    },
+    {
+      "id": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "title": "Parahoric Reductive Quotient for Sp(W)",
+      "href": "lattice_model/lattice_model_symplectic_parahoric_reductive_quotient.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model.good_lattice_weil_fixed_vectors",
+      "title": "Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice",
+      "href": "lattice_model/lattice_model_good_lattice_weil_fixed_vectors.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

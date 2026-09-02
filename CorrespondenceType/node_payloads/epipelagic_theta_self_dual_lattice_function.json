@@ -8,13 +8,18 @@
   "topics": [
     "epipelagic_theta"
   ],
-  "body_html": "<h1>Self-Dual Lattice Function</h1>\n<p>Let \\(V\\) carry a nondegenerate sesquilinear form. For an \\(o_D\\)-lattice \\(L\\subseteq V\\), its dual is\n\\[\nL^\\vee=\\{v\\in V : \\langle v,L\\rangle_V\\subseteq \\mathbf p_D\\}.\n\\]</p>\n<p>For a lattice function \\(L\\), the dual lattice function is defined by\n\\[\n(L^\\vee)_s=(L_{(-s)+})^\\vee.\n\\]\nThe lattice function is self-dual when \\(L=L^\\vee\\). Under the Bruhat-Tits identification for classical groups, points in the building correspond to self-dual lattice functions.</p>",
+  "body_html": "<h1>Self-Dual Lattice Function</h1>\n<p>Let \\(V\\) carry a nondegenerate sesquilinear form. For an \\(o_D\\)-lattice \\(L\\subseteq V\\), its dual is\n\\[\nL^\\#=\\{v\\in V : \\langle v,L\\rangle_V\\subseteq \\mathfrak p_D\\}.\n\\]\nThis knowledge base uses the conductor-\\(\\mathfrak p\\) convention for the fixed additive character \\(\\psi\\). Some sources denote the same dual lattice by \\(L^\\ast\\); the notation \\(L^\\vee\\) is avoided here.</p>\n<p>For a lattice function \\(L\\), the dual lattice function is defined by\n\\[\n(L^\\#)_s=(L_{(-s)+})^\\#.\n\\]\nThe lattice function is self-dual when \\(L=L^\\#\\). Under the Bruhat-Tits identification for classical groups, points in the building correspond to self-dual lattice functions.</p>",
   "proof_html": null,
   "deps": [
     {
-      "id": "lattice_model.self_dual_lattice_function",
-      "title": "Self-Dual Lattice Function",
-      "href": "lattice_model/lattice_model_self_dual_lattice_function.html"
+      "id": "lattice_model.lattice_function",
+      "title": "Lattice Function",
+      "href": "lattice_model/lattice_model_lattice_function.html"
+    },
+    {
+      "id": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "title": "Hermitian Dual Lattice With Conductor p",
+      "href": "lattice_model/lattice_model_hermitian_dual_lattice_conductor_p.html"
     }
   ],
   "dependents": [],

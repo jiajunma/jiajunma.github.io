@@ -12,12 +12,33 @@
   "proof_html": null,
   "deps": [
     {
-      "id": "lattice_model.lattice_fixed_vector_model",
-      "title": "Lattice Fixed Vector Model",
-      "href": "lattice_model/lattice_model_lattice_fixed_vector_model.html"
+      "id": "supercuspidal_theta.generalized_lattice_model",
+      "title": "Generalized Lattice Model",
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
     }
   ],
-  "dependents": [],
+  "dependents": [
+    {
+      "id": "lattice_model.compatible_transition_maps",
+      "title": "Canonical Transition Maps Between Generalized Lattice Models",
+      "href": "lattice_model/lattice_model_compatible_transition_maps.html"
+    },
+    {
+      "id": "supercuspidal_theta.depth_preservation_building_sum",
+      "title": "Building Sum Formula for Depth Preservation",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_building_sum.html"
+    },
+    {
+      "id": "supercuspidal_theta.depth_preservation_proof_plan",
+      "title": "Proof Plan for Depth Preservation",
+      "href": "supercuspidal_theta/supercuspidal_theta_depth_preservation_proof_plan.html"
+    },
+    {
+      "id": "supercuspidal_theta.module_function_self_dual_envelope",
+      "title": "Self-Dual Envelope of a Module Function",
+      "href": "supercuspidal_theta/supercuspidal_theta_module_function_self_dual_envelope.html"
+    }
+  ],
   "lean_refs": [],
   "lean_modules": []
 }

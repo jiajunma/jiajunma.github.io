@@ -1,0 +1,34 @@
+{
+  "id": "lattice_model_transition.incidence_ratio_character",
+  "title": "Incidence Ratio Character For Original Lattice-Model Splittings",
+  "kind": "definition",
+  "status": "staged",
+  "href": "lattice_model_transition/lattice_model_transition_incidence_ratio_character.html",
+  "primary_topic": "lattice_model_transition",
+  "topics": [
+    "lattice_model_transition"
+  ],
+  "body_html": "<h1>Incidence Ratio Character For Original Lattice-Model Splittings</h1>\n<p>For an incidence $E\\leq F$ in $\\mathcal{P}$, restrict $s_E$ to\n$K_F\\subseteq K_E$.  Then $s_F$ and $s_E|_{K_F}$ are two splittings of the\nsame metaplectic cover over $K_F$.  Therefore they differ by a unique\ncharacter</p>\n<p>$$\n\\delta^{\\mathrm{lm}}_{E,F}:K_F\\to\\{\\pm1\\}\n$$</p>\n<p>defined by</p>\n<p>$$\ns_F(k)=\\delta^{\\mathrm{lm}}_{E,F}(k)\\,s_E(k),\n\\qquad k\\in K_F.\n$$</p>\n<p>This character is part of the problem data to be computed.  Its existence and\ncharacter property are formal consequences of comparing two group-theoretic\nsplittings of a central double cover.</p>\n<p>The character $\\delta^{\\mathrm{lm}}_{E,F}$ is not defined by a transition map\nbetween the vector spaces $\\Omega_F$ and $\\Omega_E$.  It is not affected by\nrescaling or normalizing such a transition map.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "title": "Generalized Lattice Models And Original Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_generalized_lattice_model_and_original_splittings.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "title": "Allowed Local Inputs For The Lattice-Model Transition Problem",
+      "href": "lattice_model_transition/lattice_model_transition_allowed_local_inputs_transition_problem.html"
+    },
+    {
+      "id": "lattice_model_transition.self_dual_test_vector_normalization",
+      "title": "Self-Dual Test-Vector Normalization For Nested Lattice Models",
+      "href": "lattice_model_transition/lattice_model_transition_self_dual_test_vector_normalization.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

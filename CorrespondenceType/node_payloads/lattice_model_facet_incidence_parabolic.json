@@ -1,0 +1,49 @@
+{
+  "id": "lattice_model.facet_incidence_parabolic",
+  "title": "Facet Incidence as a Parabolic for Sp(W)",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_facet_incidence_parabolic.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Facet Incidence as a Parabolic for Sp(W)</h1>\n<p>By Broussous-Stevens, a point of \\(\\mathcal B(\\operatorname{Sp}(W))\\) corresponds bijectively to a self-dual\nlattice function (an MM-norm); write \\(\\mathscr L_{x,r}:=\\mathscr L_x(r)\\) for the value at level \\(r\\). The lattice\nfunction is attached to the <strong>point</strong>, not to its facet: two points in the same open facet share the same\nlattice chain (the underlying set of lattices) and the same parahoric, but their lattice functions differ, since\nthe jump positions move within the facet. Consequently the generalized lattice-model data\n\\[\n\\mathscr L_x,\\quad \\mathscr L_{x,0},\\quad \\mathscr L_{x,0+}=\\mathscr L_{x,0}^{\\#},\\quad\n\\mathsf b_x=\\mathscr L_{x,0}/\\mathscr L_{x,0+},\\quad \\Omega_x\n\\]\nare attached to a <strong>point</strong> \\(x\\). Only the parahoric \\(G_{x,0}\\), its pro-unipotent radical \\(G_{x,0+}\\), and\nthe reductive quotient \\(\\mathsf G_x\\) (see <a class=\"node-ref\" data-node-id=\"lattice_model.symplectic_parahoric_reductive_quotient\" href=\"lattice_model_symplectic_parahoric_reductive_quotient.html\">Parahoric Reductive Quotient for Sp(W)</a>)\ndepend on the facet of \\(x\\) alone. There is no facet-level lattice \"\\(L_E\\)\".</p>\n<p>Fix points \\(x,y\\) with \\(\\operatorname{facet}(y)=E\\le F=\\operatorname{facet}(x)\\), i.e. \\(E\\subseteq\\overline F\\).</p>\n<h2>Parahoric inclusion and the parabolic (facet level)</h2>\n<p>Since \\(\\operatorname{chain}(E)\\subseteq\\operatorname{chain}(F)\\) (a face uses a sub-chain), the parahorics\nsatisfy \\(G_{x,0}\\subseteq G_{y,0}\\). The image\n\\[\nP:=\\operatorname{im}\\big(G_{x,0}\\hookrightarrow G_{y,0}\\twoheadrightarrow\\mathsf G_y\\big)\\subseteq\\mathsf G_y\n\\]\nis a parabolic subgroup, with \\(\\operatorname{im}(G_{x,0+})\\) its unipotent radical \\(U_P\\) and\n\\[\nP/U_P\\ \\cong\\ \\mathsf G_x .\n\\]\nSo \\(\\mathsf G_x\\) is the Levi quotient of a parabolic of \\(\\mathsf G_y\\). This statement involves only the\nfacets \\(E\\le F\\), not the choice of points.</p>\n<h2>The flag, via the induced filtration</h2>\n<p>The flag is the filtration that the finer function \\(\\mathscr L_x\\) induces on each graded piece of\n\\(\\mathscr L_y\\). For a jump level \\(s\\) of \\(\\mathscr L_y\\), with\n\\(\\operatorname{gr}_s\\mathscr L_y=\\mathscr L_{y,s}/\\mathscr L_{y,s+}\\), set\n\\[\nF^t:=\\frac{(\\mathscr L_{x,t}\\cap\\mathscr L_{y,s})+\\mathscr L_{y,s+}}{\\mathscr L_{y,s+}}\n\\;\\cong\\;\\frac{\\mathscr L_{x,t}\\cap\\mathscr L_{y,s}}{\\mathscr L_{x,t}\\cap\\mathscr L_{y,s+}}\\ \\subseteq\\ \\operatorname{gr}_s\\mathscr L_y,\n\\qquad t\\in\\mathbb R .\n\\]\nThis is decreasing in \\(t\\); its jumps give the flag, with steps \\(\\mathscr L_{x,t_i}\\cap\\mathscr L_{y,s}\\).\nIntersecting with \\(\\mathscr L_{y,s}\\) clamps automatically (\\(F^t=\\operatorname{gr}_s\\mathscr L_y\\) for \\(t\\) small,\n\\(F^t=0\\) for \\(t\\) large), so no nesting hypothesis is needed and the same recipe applies to any pair of points,\nnot only an incidence \\(E\\le F\\): it is the relative-position filtration of the two functions.</p>\n<p>On the level-\\(0\\) factor \\(\\operatorname{Sp}(\\mathsf b_y)\\) (\\(s=0\\)) self-duality is automatic: since\n\\((\\mathscr L_{x,t}\\cap\\mathscr L_{y,0})^{\\#}=\\mathscr L_{x,(-t)+}+\\mathscr L_{y,0+}\\), the steps \\(F^t\\) and \\(F^{-t}\\)\nare mutually perpendicular, so the flag is self-dual. Its associated graded pieces \\(F^t/F^{t+}\\) pair\n\\(t\\leftrightarrow -t\\) into the \\(\\operatorname{GL}\\) blocks, and the middle piece is the symplectic core\n\\[\nF^{0}/F^{0+}=\\mathscr L_{x,0}/\\mathscr L_{x,0+}=\\mathsf b_x .\n\\]\nHence \\(P\\cap\\operatorname{Sp}(\\mathsf b_y)\\) is the stabilizer of this flag, with Levi\n\\(\\prod_{t&gt;0}\\operatorname{GL}(F^t/F^{t+})\\times\\operatorname{Sp}(\\mathsf b_x)\\). The single-step case (one isotropic\n\\(U=F^{0+}\\), \\(U^{\\perp}=F^{0}\\)) is the finite maximal-parabolic picture of\n<a class=\"node-ref\" data-node-id=\"lattice_model_transition.finite_field_maximal_parabolic_weil_input\" href=\"../lattice_model_transition/lattice_model_transition_finite_field_maximal_parabolic_weil_input.html\">Finite-Field Maximal-Parabolic Weil Input</a> with \\(X=U\\), \\(\\ell_0=\\mathsf b_x\\),\n\\(Y\\cong X^{*}\\). The same construction on \\(\\operatorname{Sp}(\\operatorname{gr}_{1/2}\\mathscr L_y)\\) and on each\n\\(\\operatorname{GL}(\\operatorname{gr}_s\\mathscr L_y)\\) gives the remaining flags. The nesting used here,\n\\(\\mathscr L_{y,0+}\\subseteq\\mathscr L_{x,0+}\\subseteq\\mathscr L_{x,0}\\subseteq\\mathscr L_{y,0}\\), is\n<a class=\"node-ref\" data-node-id=\"lattice_model.level_zero_containment\" href=\"lattice_model_level_zero_containment.html\">Level-0 Lattice Under Specialization to a Face</a> (valid because \\(y\\in\\overline{F}\\)); the lattice data are\npoint-attached, but the invariant comparison across the incidence is the parahoric and \\(\\mathsf G_x\\).</p>\n<h2>Example: barycenter of an alcove</h2>\n<p>Take \\(W=\\bigoplus_{i=1}^n H_i\\) and \\(x=x_*\\) the barycenter of the alcove \\(0\\le a_1\\le\\cdots\\le a_n\\le\\tfrac12\\),\ni.e. \\(a_i=\\tfrac{i}{2(n+1)}\\) (see <a class=\"node-ref\" data-node-id=\"lattice_model.symplectic_apartment_model\" href=\"lattice_model_symplectic_apartment_model.html\">Apartment Model for Sp(W) via Self-Dual Lattice Functions</a>). The \\(a_i\\) are distinct in\n\\((0,\\tfrac12)\\), so \\(\\mathscr L_{x_*}\\) has \\(2n\\) jumps, none at \\(0\\) or \\(\\tfrac12\\): \\(\\mathsf b_{x_*}=0\\) and\n\\(\\mathsf G_{x_*}=\\operatorname{GL}_1^{\\,n}\\) (the Iwahori). Over \\(y=v_0\\) (hyperspecial,\n\\(\\mathsf b_{v_0}=L_0/\\mathfrak p L_0\\), \\(\\mathsf G_{v_0}=\\operatorname{Sp}_{2n}(k)\\)),\n\\[\nF^t=\\langle\\bar e_i: t\\le a_i\\rangle\\oplus\\langle\\bar f_i: t\\le -a_i\\rangle ,\n\\]\nand as \\(t\\) rises through \\(-a_n&lt;\\cdots&lt;-a_1&lt;a_1&lt;\\cdots&lt;a_n\\) one basis vector drops at each jump, giving the\ncomplete flag\n\\[\n0\\subsetneq\\langle\\bar e_n\\rangle\\subsetneq\\cdots\\subsetneq\\langle\\bar e_1,\\dots,\\bar e_n\\rangle\\subsetneq\n\\langle\\bar e_1,\\dots,\\bar e_n,\\bar f_1\\rangle\\subsetneq\\cdots\\subsetneq\\mathsf b_{v_0}.\n\\]\nSo \\(P_{v_0}^{x_*}\\) is a Borel subgroup of \\(\\operatorname{Sp}_{2n}(k)\\), with Levi the maximal torus\n\\(\\operatorname{GL}_1^{\\,n}=\\mathsf G_{x_*}\\) and symplectic core \\(0=\\mathsf b_{x_*}\\). The barycenter is the\nmaximally-refined incidence: a full isotropic flag on \\(\\mathsf b_{v_0}\\), and \\(P\\) a Borel.</p>",
+  "proof_html": "<p>Standard Bruhat-Tits. \\(G_{x,0+}\\) acts trivially on the graded pieces of \\(\\mathscr L_y\\), so the image of\n\\(G_{x,0}\\) in \\(\\mathsf G_y\\) preserves the flag induced by the finer lattices of \\(\\mathscr L_x\\) and is the\ncorresponding parabolic; its Levi quotient is the automorphism group of the associated graded, namely\n\\(\\mathsf G_x\\) by <a class=\"node-ref\" data-node-id=\"lattice_model.symplectic_parahoric_reductive_quotient\" href=\"lattice_model_symplectic_parahoric_reductive_quotient.html\">Parahoric Reductive Quotient for Sp(W)</a>. Isotropy of \\(U\\) follows from\n\\(\\mathscr L_{x,0+}=\\mathscr L_{x,0}^{\\#}\\). \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "title": "Parahoric Reductive Quotient for Sp(W)",
+      "href": "lattice_model/lattice_model_symplectic_parahoric_reductive_quotient.html"
+    },
+    {
+      "id": "lattice_model.symplectic_apartment_model",
+      "title": "Apartment Model for Sp(W) via Self-Dual Lattice Functions",
+      "href": "lattice_model/lattice_model_symplectic_apartment_model.html"
+    },
+    {
+      "id": "lattice_model.level_zero_containment",
+      "title": "Level-0 Lattice Under Specialization to a Face",
+      "href": "lattice_model/lattice_model_level_zero_containment.html"
+    },
+    {
+      "id": "lattice_model.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_self_dual_lattice_function.html"
+    },
+    {
+      "id": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "title": "Finite-Field Maximal-Parabolic Weil Input",
+      "href": "lattice_model_transition/lattice_model_transition_finite_field_maximal_parabolic_weil_input.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model.vertex_weil_restriction_incompatibility",
+      "title": "Vertex Weil Restrictions over an Alcove Are Incompatible",
+      "href": "lattice_model/lattice_model_vertex_weil_restriction_incompatibility.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

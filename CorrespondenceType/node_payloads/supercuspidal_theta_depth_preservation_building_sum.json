@@ -12,14 +12,14 @@
   "proof_html": "<p>The inclusion from right to left is immediate: each summand \\(S_{B_{x,y,r/2}}\\) is fixed by \\(G_{x,r+}\\) by the lattice-model action formula.</p>\n<p>For the reverse inclusion, write \\(r=k/m\\). Fix a target point \\(x'\\in B(G')_{2m}\\). The oscillator model is the union of subspaces\n\\[\nS_{B_{x,x',j/(2m)}}\\qquad (j\\ge k).\n\\]\nThe fixed-vector descent lemma\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.fixed_vector_descent_lemma\" href=\"supercuspidal_theta_fixed_vector_descent_lemma.html\"><code>supercuspidal_theta.fixed_vector_descent_lemma</code></a> is the descent step: if a\nvector in \\(S_{B_{x,x',j/(2m)}}\\) is \\(G_{x,r+}\\)-fixed, then it is contained\nin a sum of spaces\n\\[\nS_{B_{x,y,(j-1)/(2m)}}\n\\]\nas \\(y\\) ranges over \\(B(G')_{2m}\\). The descent proof uses the character\nformula for the action of \\(G_{x,r}\\) on a coset \\(w+B_{x,x',0}\\). Fixedness\nforces \\(M(w)\\in\\mathbf g_{x,r+}\\). From this condition one forms an\n\\(o_D\\)-module function \\(N_t=(w+B_{x,x',0})L_{x,t+r/2}\\) on \\(V'\\), and\n<a class=\"node-ref\" data-node-id=\"supercuspidal_theta.module_function_self_dual_envelope\" href=\"supercuspidal_theta_module_function_self_dual_envelope.html\"><code>supercuspidal_theta.module_function_self_dual_envelope</code></a> embeds it in a\nself-dual lattice function \\(L_y'\\). This gives the desired containment in\n\\(B_{x,y,(j-1)/(2m)}\\).</p>\n<p>Iterating the descent lemma lowers \\(j\\) to \\(k\\), so every\n\\(G_{x,r+}\\)-fixed vector lies in the displayed sum over \\(y\\). This proves the\nbuilding-sum formula. If \\(\\pi\\) has depth \\(r\\) and its theta lift is nonzero,\nan intertwining map from the oscillator representation sends some\n\\(S_{B_{x,y,r/2}}\\) nontrivially to the target representation; hence the target\nhas \\(G'_{y,r+}\\)-fixed vectors and has depth at most \\(r\\). Applying the same\nargument with \\(G\\) and \\(G'\\) interchanged gives the opposite inequality.</p>",
   "deps": [
     {
-      "id": "lattice_model.generalized_lattice_model",
+      "id": "supercuspidal_theta.generalized_lattice_model",
       "title": "Generalized Lattice Model",
-      "href": "lattice_model/lattice_model_generalized_lattice_model.html"
+      "href": "supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html"
     },
     {
-      "id": "lattice_model.lattice_fixed_vector_model",
+      "id": "supercuspidal_theta.lattice_fixed_vector_model",
       "title": "Lattice Fixed Vector Model",
-      "href": "lattice_model/lattice_model_lattice_fixed_vector_model.html"
+      "href": "supercuspidal_theta/supercuspidal_theta_lattice_fixed_vector_model.html"
     },
     {
       "id": "supercuspidal_theta.module_function_self_dual_envelope",

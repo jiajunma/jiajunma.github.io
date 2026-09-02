@@ -4,22 +4,22 @@
     "title": "Lattice Model",
     "href": "lattice_model/index.html",
     "parent": null,
-    "node_count": 14,
-    "descendant_node_count": 14
+    "node_count": 19,
+    "descendant_node_count": 19
   },
   "counts": {
-    "internal_nodes": 14,
-    "inlined_nodes": 0,
-    "descendant_nodes": 14,
+    "internal_nodes": 19,
+    "inlined_nodes": 19,
+    "descendant_nodes": 19,
     "child_topics": 0,
-    "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 14,
+    "inlined_child_topics": 19,
+    "non_proof_plan_nodes": 19,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 3,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 18,
-    "visible_nodes_with_selected_proof_plans": 18
+    "visible_nodes_without_proof_plans": 24,
+    "visible_nodes_with_selected_proof_plans": 24
   },
   "nodes": [
     {
@@ -47,6 +47,14 @@
       "payload": "node_payloads/lattice_model_classical_building_self_dual_lattice_functions.json"
     },
     {
+      "id": "lattice_model.compatible_transition_maps",
+      "title": "Canonical Transition Maps Between Generalized Lattice Models",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_compatible_transition_maps.html",
+      "payload": "node_payloads/lattice_model_compatible_transition_maps.json"
+    },
+    {
       "id": "lattice_model.d_norm",
       "title": "D Norm",
       "kind": "definition",
@@ -55,20 +63,12 @@
       "payload": "node_payloads/lattice_model_d_norm.json"
     },
     {
-      "id": "lattice_model.dual_lattice_conventions",
-      "title": "Dual Lattice Conventions",
-      "kind": "concept",
+      "id": "lattice_model.facet_incidence_parabolic",
+      "title": "Facet Incidence as a Parabolic for Sp(W)",
+      "kind": "lemma",
       "status": "staged",
-      "href": "lattice_model/lattice_model_dual_lattice_conventions.html",
-      "payload": "node_payloads/lattice_model_dual_lattice_conventions.json"
-    },
-    {
-      "id": "lattice_model.generalized_lattice_model",
-      "title": "Generalized Lattice Model",
-      "kind": "definition",
-      "status": "staged",
-      "href": "lattice_model/lattice_model_generalized_lattice_model.html",
-      "payload": "node_payloads/lattice_model_generalized_lattice_model.json"
+      "href": "lattice_model/lattice_model_facet_incidence_parabolic.html",
+      "payload": "node_payloads/lattice_model_facet_incidence_parabolic.json"
     },
     {
       "id": "lattice_model.gl_building_lattice_functions",
@@ -79,12 +79,20 @@
       "payload": "node_payloads/lattice_model_gl_building_lattice_functions.json"
     },
     {
-      "id": "lattice_model.lattice_fixed_vector_model",
-      "title": "Lattice Fixed Vector Model",
+      "id": "lattice_model.good_lattice_weil_fixed_vectors",
+      "title": "Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_good_lattice_weil_fixed_vectors.html",
+      "payload": "node_payloads/lattice_model_good_lattice_weil_fixed_vectors.json"
+    },
+    {
+      "id": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "title": "Hermitian Dual Lattice With Conductor p",
       "kind": "definition",
       "status": "staged",
-      "href": "lattice_model/lattice_model_lattice_fixed_vector_model.html",
-      "payload": "node_payloads/lattice_model_lattice_fixed_vector_model.json"
+      "href": "lattice_model/lattice_model_hermitian_dual_lattice_conductor_p.html",
+      "payload": "node_payloads/lattice_model_hermitian_dual_lattice_conductor_p.json"
     },
     {
       "id": "lattice_model.lattice_function",
@@ -95,12 +103,28 @@
       "payload": "node_payloads/lattice_model_lattice_function.json"
     },
     {
-      "id": "lattice_model.reductive_quotient_self_dual_lattice",
+      "id": "lattice_model.lattice_model_splitting",
+      "title": "Parahoric Action on the Generalized Lattice Model",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_lattice_model_splitting.html",
+      "payload": "node_payloads/lattice_model_lattice_model_splitting.json"
+    },
+    {
+      "id": "lattice_model.level_zero_containment",
+      "title": "Level-0 Lattice Under Specialization to a Face",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_level_zero_containment.html",
+      "payload": "node_payloads/lattice_model_level_zero_containment.json"
+    },
+    {
+      "id": "lattice_model.reductive_quotient_of_self_dual_lattice",
       "title": "Reductive Quotient of a Self-Dual Lattice Function",
       "kind": "lemma",
       "status": "staged",
-      "href": "lattice_model/lattice_model_reductive_quotient_self_dual_lattice.html",
-      "payload": "node_payloads/lattice_model_reductive_quotient_self_dual_lattice.json"
+      "href": "lattice_model/lattice_model_reductive_quotient_of_self_dual_lattice.html",
+      "payload": "node_payloads/lattice_model_reductive_quotient_of_self_dual_lattice.json"
     },
     {
       "id": "lattice_model.self_dual_lattice_function",
@@ -111,12 +135,28 @@
       "payload": "node_payloads/lattice_model_self_dual_lattice_function.json"
     },
     {
-      "id": "lattice_model.symplectic_annihilator_finite_quotient",
-      "title": "Symplectic Annihilator Finite Quotient",
-      "kind": "definition",
+      "id": "lattice_model.symplectic_apartment_model",
+      "title": "Apartment Model for Sp(W) via Self-Dual Lattice Functions",
+      "kind": "concept",
       "status": "staged",
-      "href": "lattice_model/lattice_model_symplectic_annihilator_finite_quotient.html",
-      "payload": "node_payloads/lattice_model_symplectic_annihilator_finite_quotient.json"
+      "href": "lattice_model/lattice_model_symplectic_apartment_model.html",
+      "payload": "node_payloads/lattice_model_symplectic_apartment_model.json"
+    },
+    {
+      "id": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "title": "Parahoric Reductive Quotient for Sp(W)",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_symplectic_parahoric_reductive_quotient.html",
+      "payload": "node_payloads/lattice_model_symplectic_parahoric_reductive_quotient.json"
+    },
+    {
+      "id": "lattice_model.tensor_dual_self_duality",
+      "title": "Tensor Product Self-Duality",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "lattice_model/lattice_model_tensor_dual_self_duality.html",
+      "payload": "node_payloads/lattice_model_tensor_dual_self_duality.json"
     },
     {
       "id": "lattice_model.tensor_product_lattice_function",
@@ -127,12 +167,12 @@
       "payload": "node_payloads/lattice_model_tensor_product_lattice_function.json"
     },
     {
-      "id": "lattice_model.tensor_product_self_duality",
-      "title": "Tensor Product Self-Duality",
-      "kind": "lemma",
+      "id": "lattice_model.vertex_weil_restriction_incompatibility",
+      "title": "Vertex Weil Restrictions over an Alcove Are Incompatible",
+      "kind": "proposition",
       "status": "staged",
-      "href": "lattice_model/lattice_model_tensor_product_self_duality.html",
-      "payload": "node_payloads/lattice_model_tensor_product_self_duality.json"
+      "href": "lattice_model/lattice_model_vertex_weil_restriction_incompatibility.html",
+      "payload": "node_payloads/lattice_model_vertex_weil_restriction_incompatibility.json"
     }
   ],
   "edges": [
@@ -157,13 +197,33 @@
       "kind": "uses"
     },
     {
-      "from": "lattice_model.lattice_function",
-      "to": "lattice_model.dual_lattice_conventions",
+      "from": "lattice_model.level_zero_containment",
+      "to": "lattice_model.compatible_transition_maps",
       "kind": "uses"
     },
     {
-      "from": "lattice_model.symplectic_annihilator_finite_quotient",
-      "to": "lattice_model.generalized_lattice_model",
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.compatible_transition_maps",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.level_zero_containment",
+      "to": "lattice_model.facet_incidence_parabolic",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.facet_incidence_parabolic",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.facet_incidence_parabolic",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.facet_incidence_parabolic",
       "kind": "uses"
     },
     {
@@ -177,8 +237,23 @@
       "kind": "uses"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
-      "to": "lattice_model.lattice_fixed_vector_model",
+      "from": "lattice_model.lattice_model_splitting",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors",
       "kind": "uses"
     },
     {
@@ -187,17 +262,32 @@
       "kind": "uses"
     },
     {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.lattice_model_splitting",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.level_zero_containment",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.level_zero_containment",
+      "kind": "uses"
+    },
+    {
       "from": "lattice_model.apartment_fractional_jump_decomposition",
-      "to": "lattice_model.reductive_quotient_self_dual_lattice",
+      "to": "lattice_model.reductive_quotient_of_self_dual_lattice",
       "kind": "uses"
     },
     {
       "from": "lattice_model.classical_building_self_dual_lattice_functions",
-      "to": "lattice_model.reductive_quotient_self_dual_lattice",
+      "to": "lattice_model.reductive_quotient_of_self_dual_lattice",
       "kind": "uses"
     },
     {
-      "from": "lattice_model.dual_lattice_conventions",
+      "from": "lattice_model.hermitian_dual_lattice_conductor_p",
       "to": "lattice_model.self_dual_lattice_function",
       "kind": "uses"
     },
@@ -207,8 +297,33 @@
       "kind": "uses"
     },
     {
-      "from": "lattice_model.dual_lattice_conventions",
-      "to": "lattice_model.symplectic_annihilator_finite_quotient",
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.symplectic_apartment_model",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.symplectic_apartment_model",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.reductive_quotient_of_self_dual_lattice",
+      "to": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.tensor_dual_self_duality",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.tensor_product_lattice_function",
+      "to": "lattice_model.tensor_dual_self_duality",
       "kind": "uses"
     },
     {
@@ -217,13 +332,23 @@
       "kind": "uses"
     },
     {
-      "from": "lattice_model.self_dual_lattice_function",
-      "to": "lattice_model.tensor_product_self_duality",
+      "from": "lattice_model.facet_incidence_parabolic",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility",
       "kind": "uses"
     },
     {
-      "from": "lattice_model.tensor_product_lattice_function",
-      "to": "lattice_model.tensor_product_self_duality",
+      "from": "lattice_model.good_lattice_weil_fixed_vectors",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility",
       "kind": "uses"
     }
   ],
@@ -233,30 +358,86 @@
       "title": "Epipelagic Theta",
       "href": "epipelagic_theta/index.html",
       "role": "dependent",
-      "node_count": 39
+      "node_count": 40
     },
     {
       "id": "finite_field_weil",
       "title": "Finite Field Weil",
       "href": "finite_field_weil/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 25
+      "role": "dependency",
+      "node_count": 31
+    },
+    {
+      "id": "lattice_model_transition",
+      "title": "Lattice Model Transition",
+      "href": "lattice_model_transition/index.html",
+      "role": "dependency",
+      "node_count": 6
     },
     {
       "id": "supercuspidal_theta",
       "title": "Supercuspidal Theta",
       "href": "supercuspidal_theta/index.html",
-      "role": "dependent",
+      "role": "dependency_and_dependent",
       "node_count": 87
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:finite_field_weil",
-      "to": "lattice_model.generalized_lattice_model",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors",
       "kind": "boundary_dependency",
       "topic": "finite_field_weil",
+      "count": 1
+    },
+    {
+      "from": "topic:finite_field_weil",
+      "to": "lattice_model.lattice_model_splitting",
+      "kind": "boundary_dependency",
+      "topic": "finite_field_weil",
+      "count": 1
+    },
+    {
+      "from": "topic:finite_field_weil",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility",
+      "kind": "boundary_dependency",
+      "topic": "finite_field_weil",
+      "count": 1
+    },
+    {
+      "from": "topic:lattice_model_transition",
+      "to": "lattice_model.facet_incidence_parabolic",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model_transition",
+      "count": 1
+    },
+    {
+      "from": "topic:supercuspidal_theta",
+      "to": "lattice_model.compatible_transition_maps",
+      "kind": "boundary_dependency",
+      "topic": "supercuspidal_theta",
       "count": 2
+    },
+    {
+      "from": "topic:supercuspidal_theta",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors",
+      "kind": "boundary_dependency",
+      "topic": "supercuspidal_theta",
+      "count": 1
+    },
+    {
+      "from": "topic:supercuspidal_theta",
+      "to": "lattice_model.lattice_model_splitting",
+      "kind": "boundary_dependency",
+      "topic": "supercuspidal_theta",
+      "count": 1
+    },
+    {
+      "from": "topic:supercuspidal_theta",
+      "to": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "kind": "boundary_dependency",
+      "topic": "supercuspidal_theta",
+      "count": 1
     },
     {
       "from": "lattice_model.apartment_fractional_jump_decomposition",
@@ -284,10 +465,17 @@
       "to": "topic:epipelagic_theta",
       "kind": "boundary_dependent",
       "topic": "epipelagic_theta",
-      "count": 1
+      "count": 2
     },
     {
       "from": "lattice_model.gl_building_lattice_functions",
+      "to": "topic:epipelagic_theta",
+      "kind": "boundary_dependent",
+      "topic": "epipelagic_theta",
+      "count": 1
+    },
+    {
+      "from": "lattice_model.hermitian_dual_lattice_conductor_p",
       "to": "topic:epipelagic_theta",
       "kind": "boundary_dependent",
       "topic": "epipelagic_theta",
@@ -298,21 +486,21 @@
       "to": "topic:epipelagic_theta",
       "kind": "boundary_dependent",
       "topic": "epipelagic_theta",
-      "count": 1
+      "count": 3
     },
     {
-      "from": "lattice_model.reductive_quotient_self_dual_lattice",
+      "from": "lattice_model.reductive_quotient_of_self_dual_lattice",
       "to": "topic:epipelagic_theta",
       "kind": "boundary_dependent",
       "topic": "epipelagic_theta",
-      "count": 2
+      "count": 1
     },
     {
       "from": "lattice_model.self_dual_lattice_function",
       "to": "topic:epipelagic_theta",
       "kind": "boundary_dependent",
       "topic": "epipelagic_theta",
-      "count": 2
+      "count": 4
     },
     {
       "from": "lattice_model.tensor_product_lattice_function",
@@ -322,37 +510,16 @@
       "count": 5
     },
     {
-      "from": "lattice_model.tensor_product_self_duality",
-      "to": "topic:epipelagic_theta",
+      "from": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "to": "topic:supercuspidal_theta",
       "kind": "boundary_dependent",
-      "topic": "epipelagic_theta",
-      "count": 1
-    },
-    {
-      "from": "lattice_model.symplectic_annihilator_finite_quotient",
-      "to": "topic:finite_field_weil",
-      "kind": "boundary_dependent",
-      "topic": "finite_field_weil",
+      "topic": "supercuspidal_theta",
       "count": 2
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
+      "from": "lattice_model.self_dual_lattice_function",
       "to": "topic:supercuspidal_theta",
       "kind": "boundary_dependent",
-      "topic": "supercuspidal_theta",
-      "count": 8
-    },
-    {
-      "from": "lattice_model.lattice_fixed_vector_model",
-      "to": "topic:supercuspidal_theta",
-      "kind": "boundary_dependent",
-      "topic": "supercuspidal_theta",
-      "count": 3
-    },
-    {
-      "from": "lattice_model.lattice_fixed_vector_model",
-      "to": "topic:supercuspidal_theta",
-      "kind": "boundary_proof_plan_dependent",
       "topic": "supercuspidal_theta",
       "count": 1
     }
@@ -362,19 +529,19 @@
       "id": "apartment",
       "title": "apartment",
       "href": "keywords/apartment.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "appendix",
       "title": "appendix",
       "href": "keywords/appendix.html",
-      "count": 3
+      "count": 2
     },
     {
       "id": "building",
       "title": "building",
       "href": "keywords/building.html",
-      "count": 5
+      "count": 11
     },
     {
       "id": "classical-group",
@@ -383,9 +550,21 @@
       "count": 1
     },
     {
-      "id": "depth-preservation",
-      "title": "depth-preservation",
-      "href": "keywords/depth-preservation.html",
+      "id": "coefficient-system",
+      "title": "coefficient-system",
+      "href": "keywords/coefficient-system.html",
+      "count": 1
+    },
+    {
+      "id": "conductor-p",
+      "title": "conductor-p",
+      "href": "keywords/conductor-p.html",
+      "count": 2
+    },
+    {
+      "id": "depth-zero",
+      "title": "depth-zero",
+      "href": "keywords/depth-zero.html",
       "count": 1
     },
     {
@@ -395,16 +574,10 @@
       "count": 1
     },
     {
-      "id": "finite-quotient",
-      "title": "finite-quotient",
-      "href": "keywords/finite-quotient.html",
-      "count": 1
-    },
-    {
       "id": "finite-reductive-quotient",
       "title": "finite-reductive-quotient",
       "href": "keywords/finite-reductive-quotient.html",
-      "count": 2
+      "count": 6
     },
     {
       "id": "generalized-lattice-model",
@@ -413,16 +586,34 @@
       "count": 3
     },
     {
+      "id": "heisenberg-group",
+      "title": "heisenberg-group",
+      "href": "keywords/heisenberg-group.html",
+      "count": 1
+    },
+    {
+      "id": "intertwiner",
+      "title": "intertwiner",
+      "href": "keywords/intertwiner.html",
+      "count": 1
+    },
+    {
+      "id": "iwahori",
+      "title": "iwahori",
+      "href": "keywords/iwahori.html",
+      "count": 1
+    },
+    {
       "id": "lattice-function",
       "title": "lattice-function",
       "href": "keywords/lattice-function.html",
-      "count": 11
+      "count": 14
     },
     {
       "id": "metaplectic-cover",
       "title": "metaplectic-cover",
       "href": "keywords/metaplectic-cover.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "moy-prasad",
@@ -446,7 +637,13 @@
       "id": "oscillator-representation",
       "title": "oscillator-representation",
       "href": "keywords/oscillator-representation.html",
-      "count": 2
+      "count": 1
+    },
+    {
+      "id": "parabolic",
+      "title": "parabolic",
+      "href": "keywords/parabolic.html",
+      "count": 1
     },
     {
       "id": "self-dual",
@@ -455,20 +652,58 @@
       "count": 2
     },
     {
-      "id": "symplectic-annihilator",
-      "title": "symplectic-annihilator",
-      "href": "keywords/symplectic-annihilator.html",
-      "count": 2
+      "id": "splitting",
+      "title": "splitting",
+      "href": "keywords/splitting.html",
+      "count": 1
+    },
+    {
+      "id": "symplectic-group",
+      "title": "symplectic-group",
+      "href": "keywords/symplectic-group.html",
+      "count": 8
     },
     {
       "id": "tensor-product",
       "title": "tensor-product",
       "href": "keywords/tensor-product.html",
       "count": 2
+    },
+    {
+      "id": "weil-index",
+      "title": "weil-index",
+      "href": "keywords/weil-index.html",
+      "count": 1
+    },
+    {
+      "id": "weil-representation",
+      "title": "weil-representation",
+      "href": "keywords/weil-representation.html",
+      "count": 2
     }
   ],
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "lattice_model.apartment_fractional_jump_decomposition",
+    "lattice_model.apartment_splitting_basis",
+    "lattice_model.classical_building_self_dual_lattice_functions",
+    "lattice_model.compatible_transition_maps",
+    "lattice_model.d_norm",
+    "lattice_model.facet_incidence_parabolic",
+    "lattice_model.gl_building_lattice_functions",
+    "lattice_model.good_lattice_weil_fixed_vectors",
+    "lattice_model.hermitian_dual_lattice_conductor_p",
+    "lattice_model.lattice_function",
+    "lattice_model.lattice_model_splitting",
+    "lattice_model.level_zero_containment",
+    "lattice_model.reductive_quotient_of_self_dual_lattice",
+    "lattice_model.self_dual_lattice_function",
+    "lattice_model.symplectic_apartment_model",
+    "lattice_model.symplectic_parahoric_reductive_quotient",
+    "lattice_model.tensor_dual_self_duality",
+    "lattice_model.tensor_product_lattice_function",
+    "lattice_model.vertex_weil_restriction_incompatibility"
+  ]
 }

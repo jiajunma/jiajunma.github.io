@@ -1,0 +1,28 @@
+{
+  "id": "tame_covers.locally_profinite_pro_order",
+  "title": "Locally Profinite Groups And Pro-Order",
+  "kind": "definition",
+  "status": "staged",
+  "href": "tame_covers/tame_covers_locally_profinite_pro_order.html",
+  "primary_topic": "tame_covers",
+  "topics": [
+    "tame_covers"
+  ],
+  "body_html": "<h1>Locally Profinite Groups And Pro-Order</h1>\n<p>A topological group $G$ is locally profinite if it has a basis of neighborhoods\nof the identity made of open compact subgroups.</p>\n<p>For a compact open subgroup $K\\subset G$, its pro-order $|K|$ is the least\ncommon multiple, in the sense of supernatural numbers, of the orders of the\nfinite quotients of $K$.</p>\n<p>The pro-order of $G$ is</p>\n<p>$$\n|G|:=\\operatorname{lcm}_{K\\subset G\\text{ compact open}} |K|.\n$$</p>\n<p>The draft writes a supernatural number as a function on primes and decomposes</p>\n<p>$$\n|G|=|G|_f |G|_\\infty,\n$$</p>\n<p>where $|G|_f$ and $|G|_\\infty$ have disjoint supports.  The greatest common\ndivisor of supernatural numbers is denoted by $\\wedge$.</p>\n<h2>Draft Caution</h2>\n<p>This node records the convention used by the current TeX draft.  It does not\nattempt to prove the supernatural-number formalism or its functorial\nproperties.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "tame_covers.smooth_representations_and_character_isotypic_subspaces",
+      "title": "Smooth Representations And Character Isotypic Subspaces",
+      "href": "tame_covers/tame_covers_smooth_representations_and_character_isotypic_subspaces.html"
+    },
+    {
+      "id": "tame_covers.tame_z_cover",
+      "title": "Tame Z-Covers Of Locally Profinite Groups",
+      "href": "tame_covers/tame_covers_tame_z_cover.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

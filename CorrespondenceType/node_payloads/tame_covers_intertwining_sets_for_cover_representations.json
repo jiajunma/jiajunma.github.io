@@ -1,0 +1,28 @@
+{
+  "id": "tame_covers.intertwining_sets_for_cover_representations",
+  "title": "Intertwining Sets For Cover Representations",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "tame_covers/tame_covers_intertwining_sets_for_cover_representations.html",
+  "primary_topic": "tame_covers",
+  "topics": [
+    "tame_covers"
+  ],
+  "body_html": "<h1>Intertwining Sets For Cover Representations</h1>\n<p>Let $H,H'\\subset G$ be closed subgroups.  For ordinary representations\n$\\sigma_0$ of $H$ and $\\sigma'_0$ of $H'$, define</p>\n<p>$$\nI(\\sigma_0,\\sigma'_0)\n=\n\\{g\\in G:\n\\operatorname{Hom}_{H^g\\cap H'}(\\sigma_0^g,\\sigma'_0)\\ne 0\\}.\n$$</p>\n<p>For $\\alpha$-genuine representations $\\sigma$ of $\\widetilde H$ and $\\sigma'$\nof $\\widetilde H'$, define</p>\n<p>$$\nI(\\sigma,\\sigma')\n=\n\\{\\widetilde g\\in\\widetilde G:\n\\operatorname{Hom}_{\\widetilde H^{\\widetilde g}\\cap\\widetilde H'}\n(\\sigma^{\\widetilde g},\\sigma')\\ne 0\\}.\n$$</p>\n<p>If $H$ and $H'$ are prime-to-$Z$ compact subgroups, so the relevant splittings\nare unique, the draft asserts</p>\n<p>$$\nI(\\sigma,\\sigma')\n=\n\\widetilde{I(\\sigma_0,\\sigma'_0)}.\n$$</p>\n<p>Here $\\sigma_0=\\sigma|_H$ and $\\sigma'_0=\\sigma'|_{H'}$ under the unique\nsplittings.</p>\n<h2>Draft Caution</h2>\n<p>The TeX has a typo in the label spelling, <code>interwining</code>.  The mathematical\nstatement is used to transfer intertwining questions from a tame cover back to\nthe underlying group.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tame_covers.genuine_representations_of_covers",
+      "title": "Genuine Representations Of Central Covers",
+      "href": "tame_covers/tame_covers_genuine_representations_of_covers.html"
+    },
+    {
+      "id": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "title": "Unique Splitting For Prime-To-Z Compact Subgroups",
+      "href": "tame_covers/tame_covers_unique_splitting_for_tame_cover_subgroups.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

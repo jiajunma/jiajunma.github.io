@@ -8,7 +8,7 @@
   "topics": [
     "lattice_model"
   ],
-  "body_html": "<h1>Lattice Function</h1>\n<p>Let \\(V\\) be a right \\(D\\)-vector space. A lattice function on \\(V\\) assigns to\neach real number \\(s\\) an \\(o_D\\)-lattice \\(L_s\\), decreasing in \\(s\\),\ncompatible with scalar translation, and left-continuous:\n\\[\nL_t\\subseteq L_s\\quad(s&lt;t),\\qquad\nL_{s+\\nu(d)}=L_s d,\\qquad\nL_s=\\bigcap_{t&lt;s}L_t.\n\\]\nWrite\n\\[\nL_{r+}=\\bigcup_{t&gt;r}L_t,\\qquad\n\\operatorname{Jump}(L)=\\{r\\in\\mathbb R:L_r\\ne L_{r+}\\}.\n\\]</p>\n<p>The lattice function induces filtrations on \\(\\operatorname{End}_D(V)\\) and\n\\(\\operatorname{GL}_D(V)\\) by requiring an operator or group element to shift\neach \\(L_s\\) into \\(L_{s+r}\\).</p>",
+  "body_html": "<h1>Lattice Function</h1>\n<p>This node is the foundation layer for lattice functions and buildings.\nIt should be used by both epipelagic and supercuspidal nodes instead of\nthe older <a class=\"node-ref\" data-node-id=\"epipelagic_theta.lattice_function\" href=\"../epipelagic_theta/epipelagic_theta_lattice_function.html\"><code>epipelagic_theta.lattice_function</code></a>.</p>\n<p>Let \\(V\\) be a right \\(D\\)-vector space. A lattice function \\(\\mathscr L\\) on \\(V\\) assigns to each real number\n\\(s\\) an \\(\\mathfrak o_D\\)-lattice \\(\\mathscr L_s\\), decreasing in \\(s\\), compatible with scalar translation, and\nleft-continuous:\n\\[\n\\mathscr L_t \\subseteq \\mathscr L_s \\quad(s&lt;t), \\qquad \\mathscr L_{s+\\nu(d)}=\\mathscr L_s\\, d, \\qquad\n\\mathscr L_s=\\bigcap_{t&lt;s} \\mathscr L_t.\n\\]\nOne writes\n\\[\n\\mathscr L_{r+}=\\bigcup_{t&gt;r}\\mathscr L_t,\\qquad\n\\operatorname{Jump}(\\mathscr L)=\\{r\\in \\mathbb R: \\mathscr L_r\\ne \\mathscr L_{r+}\\}.\n\\]</p>\n<p>The lattice function induces filtrations on \\(\\operatorname{End}_D(V)\\) and \\(\\operatorname{GL}_D(V)\\) by requiring\noperators or group elements to shift every \\(\\mathscr L_s\\) into \\(\\mathscr L_{s+r}\\).</p>\n<p>In the paper, lattice functions are interchangeable with splittable \\(D\\)-norms via\n\\(\\mathscr L_r=\\ell^{-1}([r,\\infty))\\). The symbol \\(\\mathscr L\\) denotes the function; \\(\\mathscr L_s\\) is a single\nlattice (its value at level \\(s\\)).</p>\n<p>When a lattice function is attached to a point \\(x\\) of the building (the Broussous-Stevens point-to-norm\nbijection; see <a class=\"node-ref\" data-node-id=\"lattice_model.self_dual_lattice_function\" href=\"lattice_model_self_dual_lattice_function.html\">Self-Dual Lattice Function</a>), we write \\(\\mathscr L_x\\) for the function and\n\\(\\mathscr L_{x,r}:=\\mathscr L_x(r)\\) for its value at level \\(r\\), with \\(\\mathscr L_{x,0}\\) and \\(\\mathscr L_{x,0+}\\)\nat levels \\(0\\) and \\(0^+\\). The level subscript carries the point: different points of one facet share the same\nlattice chain but give different functions \\(\\mathscr L_x\\).</p>",
   "proof_html": null,
   "deps": [
     {
@@ -19,14 +19,19 @@
   ],
   "dependents": [
     {
-      "id": "epipelagic_theta.lattice_function",
-      "title": "Lattice Function",
-      "href": "epipelagic_theta/epipelagic_theta_lattice_function.html"
+      "id": "epipelagic_theta.gl_building_lattice_functions",
+      "title": "GL Building as Lattice Functions",
+      "href": "epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html"
     },
     {
-      "id": "lattice_model.dual_lattice_conventions",
-      "title": "Dual Lattice Conventions",
-      "href": "lattice_model/lattice_model_dual_lattice_conventions.html"
+      "id": "epipelagic_theta.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_self_dual_lattice_function.html"
+    },
+    {
+      "id": "epipelagic_theta.tensor_product_lattice_function",
+      "title": "Tensor Product Lattice Function",
+      "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html"
     },
     {
       "id": "lattice_model.gl_building_lattice_functions",

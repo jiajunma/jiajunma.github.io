@@ -1,0 +1,34 @@
+{
+  "id": "finite_field_weil.projective_cocycle_linearization_criterion",
+  "title": "Projective Cocycle Linearization Criterion for Finite Heisenberg Representations",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_projective_cocycle_linearization_criterion.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Projective Cocycle Linearization Criterion for Finite Heisenberg Representations</h1>\n<p>This is Gérardin's reduction lemma, written in the notation needed for the\nfinite-field Weil representation.</p>\n<h2>Setup</h2>\n<p>Let \\(H\\) be a finite group with center \\(Z\\), and let \\(\\xi\\) be a character\nof \\(Z\\) satisfying the central-commutator condition of\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_heisenberg_central_character_criterion\" href=\"finite_field_weil_finite_heisenberg_central_character_criterion.html\">Finite Heisenberg Central Character Criterion</a>.\nThus there is a unique irreducible class \\(\\eta_\\xi\\) of representations of\n\\(H\\) whose restriction to \\(Z\\) is \\(\\xi\\).</p>\n<p>Let \\(G\\) be a finite group of automorphisms of \\(H\\) acting trivially on\n\\(Z\\).  Fix a realization \\(\\eta\\) of \\(\\eta_\\xi\\).  For each \\(g\\in G\\),\nthe representation</p>\n<p>$$\nh\\longmapsto \\eta(g h g^{-1})\n$$</p>\n<p>has the same central character \\(\\xi\\).  By uniqueness it is isomorphic to\n\\(\\eta\\).  Choose an intertwining operator \\(Y(g)\\), so</p>\n<p>$$\nY(g)\\eta(h)Y(g)^{-1}=\\eta(g h g^{-1}).\n$$</p>\n<p>The operator \\(Y(g)\\) is unique up to scalar.  Therefore Schur's lemma gives\na scalar \\(c(g,g')\\in \\mathbb C^\\times\\) with</p>\n<p>$$\nY(g)Y(g')=c(g,g')Y(gg').\n$$</p>\n<p>After choosing \\(Y(g)\\) unitary, \\(c(g,g')\\in U(1)\\).  Associativity of\noperator multiplication gives the cocycle identity</p>\n<p>$$\nc(g,g')c(gg',g'')=c(g,g'g'')c(g',g'').\n$$</p>\n<p>The class \\([c]\\in H^2(G,U(1))\\) is the projective Weil cocycle.  It is\ntrivial exactly when the operators \\(Y(g)\\) can be rescaled to satisfy\n\\(Y(g)Y(g')=Y(gg')\\), equivalently when \\(\\eta\\) extends to a representation\nof the semidirect product \\(G\\ltimes H\\).</p>\n<h2>Statement</h2>\n<p>\\begin{lemma}\n\\label{lem:finite-heisenberg-projective-cocycle-linearization}\nAssume in addition that \\(H\\) is a \\(p\\)-group and that the nontrivial\ncentral character \\(\\xi\\) has order \\(p\\).  Let \\(G_p\\subset G\\) be a\n\\(p\\)-Sylow subgroup.  The projective representation of \\(G\\) attached to\n\\(\\eta_\\xi\\) has a linearization if and only if its restriction to \\(G_p\\)\nhas a linearization.\n\\end{lemma}</p>\n<p>\\begin{proof}\nOne direction is immediate: a linear representation of \\(G\\) restricts to a\nlinear representation of \\(G_p\\).  We prove the converse.</p>\n<p>Let \\([c]\\in H^2(G,U(1))\\) be the projective cocycle class.  First we show\nthat \\([c]\\) is \\(p\\)-primary.  Since \\(\\xi\\) has order \\(p\\), the character\n\\(\\xi^{-1}\\) is \\(\\xi^{p-1}\\).  Gérardin's finite Heisenberg character\ncalculation says that the tensor power \\(\\eta^{\\otimes(p-1)}\\) is a direct\nsum of copies of the irreducible representation with central character\n\\(\\xi^{-1}\\).  Indeed, on \\(Z\\) the tensor power has central character\n\\(\\xi^{p-1}=\\xi^{-1}\\), and its character is still supported on \\(Z\\); the\ndegree comparison gives the multiplicity.</p>\n<p>The projective \\(G\\)-action on \\(\\eta^{\\otimes(p-1)}\\) has cocycle\n\\(c^{p-1}\\).  The representation with central character \\(\\xi^{-1}\\) is the\ncontragredient, equivalently the complex conjugate, of the representation\nwith central character \\(\\xi\\).  Its projective cocycle is therefore\n\\(c^{-1}\\).  Since \\(\\eta^{\\otimes(p-1)}\\) is a multiple of that conjugate\nclass, the two projective cocycles define the same class:</p>\n<p>$$\n[c]^{p-1}=[c]^{-1}.\n$$</p>\n<p>Hence</p>\n<p>$$\n[c]^p=1.\n$$</p>\n<p>Thus \\([c]\\) lies in the \\(p\\)-primary subgroup of \\(H^2(G,U(1))\\).</p>\n<p>Now suppose the restriction to \\(G_p\\) is linearizable.  Then</p>\n<p>$$\n\\operatorname{res}^{G}_{G_p}([c])=0.\n$$</p>\n<p>For finite groups, restriction and corestriction satisfy</p>\n<p>$$\n\\operatorname{cor}^{G}_{G_p}\\operatorname{res}^{G}_{G_p}(x)\n=[G:G_p]\\,x\n$$</p>\n<p>for every \\(x\\in H^2(G,U(1))\\).  Applying this to \\(x=[c]\\) gives\n\\([G:G_p][c]=0\\).  The integer \\([G:G_p]\\) is prime to \\(p\\), while \\([c]\\)\nhas \\(p\\)-power order.  Therefore \\([c]=0\\).</p>\n<p>Thus the projective cocycle is a coboundary on \\(G\\), so the projective\nrepresentation of \\(G\\) can be rescaled to a genuine representation.  This is\nthe desired linearization. \\(\\square\\)\n\\end{proof}</p>\n<h2>Role in Gérardin's Proof</h2>\n<p>For the symplectic finite-field Weil representation, \\(H=H(E,j)\\) is a\n\\(p\\)-group and \\(G=S(E,j)\\).  A parabolic subgroup stabilizing a maximal\nisotropic subspace contains a \\(p\\)-Sylow subgroup of \\(S(E,j)\\).  Therefore\nit is enough to construct the Heisenberg representation over that parabolic;\nGérardin then invokes this lemma to obtain a global linearization over\n\\(S(E,j)\\).</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
+      "title": "Finite Heisenberg Central Character Criterion",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_central_character_criterion.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+      "href": "finite_field_weil/finite_field_weil_gerardin_symplectic_weil_linearization.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

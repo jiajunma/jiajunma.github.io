@@ -1,0 +1,74 @@
+{
+  "id": "finite_field_weil.weil_index_trivialization",
+  "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</h1>\n<p>This is the summary node for the finite-field Weil-index calculation.  The\nproof is split into smaller nodes so that each step can be cited separately.\nIt separates two facts: the formal base-Lagrangian coboundary identity for\nchosen Lagrangian intertwiners, and Gérardin's linearization of the full\nprojective symplectic Weil cocycle.</p>\n<h2>Setup</h2>\n<p>Let \\(k\\) be a finite field of odd order \\(q\\), let \\((E,j)\\) be a\nnondegenerate symplectic \\(k\\)-space of dimension \\(2m\\), and put \\(i=j/2\\).\nFix a nontrivial additive character \\(\\xi:k\\to R^\\times\\), where\n\\(\\operatorname{char}R\\neq \\operatorname{char}k\\).</p>\n<p>For each Lagrangian \\(L\\subset E\\), let \\(\\mathcal S_L\\) be the Schrödinger\nmodel of the finite Heisenberg representation with central character \\(\\xi\\).</p>\n<h2>Raw Transition</h2>\n<p>For Lagrangians \\(L,L'\\), the raw change-of-Lagrangian map is</p>\n<p>$$\n(\\mathcal F_{L,L'}\\varphi)(v)\n=\n\\sum_{a\\in L/(L\\cap L')}\n\\xi(i(a,v))\\varphi(v+a).\n$$</p>\n<p>By <a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_intertwiner\" href=\"finite_field_weil_lagrangian_transition_intertwiner.html\">Change-of-Lagrangian Intertwiner for Finite Schrödinger Models</a>, this is a\nwell-defined \\(H(E,j)\\)-intertwiner</p>\n<p>$$\n\\mathcal F_{L,L'}:\\mathcal S_{L'}\\to\\mathcal S_L.\n$$</p>\n<p>It is nonzero.  By <a class=\"node-ref\" data-node-id=\"finite_field_weil.schrodinger_hom_line\" href=\"finite_field_weil_schrodinger_hom_line.html\">One-Dimensional Hom Line for Finite Schrödinger Models</a>, the\nintertwiner line is one-dimensional:</p>\n<p>$$\n\\operatorname{Hom}_{H(E,j)}(\\mathcal S_{L'},\\mathcal S_L)\n=R\\cdot \\mathcal F_{L,L'}.\n$$</p>\n<h2>Orthogonality</h2>\n<p>Set</p>\n<p>$$\nd_{L,L'}:=m-\\dim_k(L\\cap L').\n$$</p>\n<p>By <a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_orthogonality\" href=\"finite_field_weil_lagrangian_transition_orthogonality.html\">Orthogonality of Change-of-Lagrangian Intertwiners</a>,</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ \\mathcal F_{L',L}\n=\nq^{d_{L,L'}}\\operatorname{id}_{\\mathcal S_L}.\n$$</p>\n<p>Thus every \\(\\mathcal F_{L,L'}\\) is an isomorphism.</p>\n<h2>Weil-Index Cocycle</h2>\n<p>For three Lagrangians \\(L,L',L''\\), define \\(\\gamma(L,L',L'')\\in R^\\times\\)\nby</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ \\mathcal F_{L',L''}\n=\n\\gamma(L,L',L'')\\mathcal F_{L,L''}.\n$$</p>\n<p>By <a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_weil_index_cocycle\" href=\"finite_field_weil_finite_weil_index_cocycle.html\">Finite Weil-Index Cocycle for Lagrangian Transitions</a>, these scalars satisfy\nthe cocycle identity</p>\n<p>$$\n\\gamma(L,L',L'')\\gamma(L,L'',L''')\n=\n\\gamma(L',L'',L''')\\gamma(L,L',L''').\n$$</p>\n<p>This \\(\\gamma\\) is the finite Weil-index cocycle for the chosen raw\nnormalization of the transition maps.  It should be distinguished from the\nfinite quadratic Weil index\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_quadratic_weil_index\" href=\"finite_field_weil_finite_quadratic_weil_index.html\">Finite Quadratic Weil Index</a>, which is a normalized\nGauss sum attached to a finite quadratic module.  Gérardin's formulas connect\nthe two by identifying Fourier-normalization constants with quadratic\nGauss-sum Weil indices.</p>\n<h2>Base-Lagrangian Trivialization</h2>\n<p>Fix a base Lagrangian \\(L_0\\).  Define</p>\n<p>$$\nc_{L,L'}:=\\gamma(L,L',L_0).\n$$</p>\n<p>By <a class=\"node-ref\" data-node-id=\"finite_field_weil.base_lagrangian_weil_index_trivialization\" href=\"finite_field_weil_base_lagrangian_weil_index_trivialization.html\">Base-Lagrangian Trivialization of the Finite Weil-Index Cocycle</a>,</p>\n<p>$$\n\\gamma(L,L',L'')=c_{L,L'}c_{L',L''}c_{L,L''}^{-1}.\n$$</p>\n<p>Also \\(c_{L,L}=1\\).</p>\n<p>Therefore the normalized maps</p>\n<p>$$\n\\widetilde{\\mathcal F}_{L,L'}:=c_{L,L'}^{-1}\\mathcal F_{L,L'}\n$$</p>\n<p>compose strictly:</p>\n<p>$$\n\\widetilde{\\mathcal F}_{L,L'}\\circ\n\\widetilde{\\mathcal F}_{L',L''}\n=\n\\widetilde{\\mathcal F}_{L,L''}.\n$$</p>\n<p>An explicit formula for \\(c_{L,L'}\\) is</p>\n<p>$$\nc_{L,L'}\n=\n\\sum_{\\substack{\na\\in L'/(L'\\cap L_0)\\\\\nb\\in L/(L\\cap L')\\\\\na+b\\in L_0\n}}\n\\xi(i(a,b)).\n$$</p>\n<p>No \\(q^{1/2}\\) or external metaplectic cover is needed for this\nbase-Lagrangian trivialization.</p>\n<h2>Gérardin Linearization</h2>\n<p>Gérardin's proof of the finite-field linearization is recorded in\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.gerardin_symplectic_weil_linearization\" href=\"finite_field_weil_gerardin_symplectic_weil_linearization.html\">Gérardin Linearization of the Finite Symplectic Weil Cocycle</a>.  Its\nstarting point is the projective action of \\(S(E,j)\\) on the unique\nHeisenberg representation.  The obstruction is a projective group cocycle on\n\\(S(E,j)\\), not merely the three-Lagrangian scalar \\(\\gamma(L,L',L'')\\).</p>\n<p>The proof has two parts.  First, the Heisenberg representation is extended\nover the parabolic stabilizer of a maximal isotropic subspace.  Since this\nparabolic contains a \\(p\\)-Sylow subgroup of \\(S(E,j)\\), Gérardin's\n\\(p\\)-Sylow criterion\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.projective_cocycle_linearization_criterion\" href=\"finite_field_weil_projective_cocycle_linearization_criterion.html\">Projective Cocycle Linearization Criterion for Finite Heisenberg Representations</a>\nimplies that the global projective cocycle is trivial.  Second, the concrete\nWitt model fixes the normalization of the extension by Fourier transform and\nGaussian sums, yielding formulas (2.10)-(2.18) in Gérardin.</p>\n<h2>Interpretation</h2>\n<p>The raw intertwiners \\(\\mathcal F_{L,L'}\\) do not compose strictly in general;\ntheir defect is the Weil-index cocycle \\(\\gamma\\).  Over a finite field, this\ncocycle is a coboundary after fixing \\(L_0\\), so the Lagrangian Schrödinger\nmodels admit a compatible system of transition maps.  The remaining question\nfor \\(p\\)-adic lattice-model transitions is not this finite Lagrangian\ncocycle, but the separate \\(p\\)-adic metaplectic splitting behavior.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_intertwiner.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_orthogonality",
+      "title": "Orthogonality of Change-of-Lagrangian Intertwiners",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_orthogonality.html"
+    },
+    {
+      "id": "finite_field_weil.schrodinger_hom_line",
+      "title": "One-Dimensional Hom Line for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_schrodinger_hom_line.html"
+    },
+    {
+      "id": "finite_field_weil.finite_weil_index_cocycle",
+      "title": "Finite Weil-Index Cocycle for Lagrangian Transitions",
+      "href": "finite_field_weil/finite_field_weil_finite_weil_index_cocycle.html"
+    },
+    {
+      "id": "finite_field_weil.base_lagrangian_weil_index_trivialization",
+      "title": "Base-Lagrangian Trivialization of the Finite Weil-Index Cocycle",
+      "href": "finite_field_weil/finite_field_weil_base_lagrangian_weil_index_trivialization.html"
+    },
+    {
+      "id": "finite_field_weil.finite_quadratic_weil_index",
+      "title": "Finite Quadratic Weil Index",
+      "href": "finite_field_weil/finite_field_weil_finite_quadratic_weil_index.html"
+    },
+    {
+      "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+      "href": "finite_field_weil/finite_field_weil_gerardin_symplectic_weil_linearization.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.compatible_lagrangian_transition_system",
+      "title": "Compatible System of Schrödinger-Model Intertwiners over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_compatible_lagrangian_transition_system.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_schrodinger_model",
+      "title": "Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_schrodinger_model.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_mixed_model_compatible_system",
+      "title": "Compatible System of Mixed Schrödinger Models on the Spherical Building",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_mixed_model_compatible_system.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_reference_frame",
+      "title": "Lagrangian Reference Frame for the Spherical-Building Compatible System",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_reference_frame.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -8,7 +8,7 @@
   "topics": [
     "lattice_model"
   ],
-  "body_html": "<h1>Tensor Product Lattice Function</h1>\n<p>Given lattice functions \\(L\\) on \\(V\\) and \\(L'\\) on \\(V'\\), their tensor\nproduct lattice function on \\(W=V\\otimes_D V'\\) is\n\\[\n(L\\otimes L')_t=\\sum_{r+r'=t} L_r\\otimes_{o_D}L'_{r'}.\n\\]\nIts jump set satisfies\n\\[\n\\operatorname{Jump}(L\\otimes L')\n=\\operatorname{Jump}(L)+\\operatorname{Jump}(L').\n\\]</p>\n<p>For building points \\(x\\in B(G)\\) and \\(x'\\in B(G')\\), this construction gives\nthe lattice function \\(B_{x,x'}=L_x\\otimes L_{x'}\\) used in the generalized\nlattice model of the oscillator representation.</p>",
+  "body_html": "<h1>Tensor Product Lattice Function</h1>\n<p>This is the shared foundation layer node for tensor-product lattice\nfunctions. It should be used by both epipelagic and supercuspidal nodes\ninstead of the older <a class=\"node-ref\" data-node-id=\"epipelagic_theta.tensor_product_lattice_function\" href=\"../epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html\"><code>epipelagic_theta.tensor_product_lattice_function</code></a>.</p>\n<p>Given lattice functions \\(L\\) on \\(V\\) and \\(L'\\) on \\(V'\\), their tensor\nproduct lattice function on \\(W=V\\otimes_D V'\\) is\n\\[\n(L\\otimes L')_t=\\sum_{r+r'=t} L_r\\otimes_{o_D}L'_{r'}.\n\\]\nIts jump set satisfies\n\\[\n\\operatorname{Jump}(L\\otimes L')=\\operatorname{Jump}(L)+\\operatorname{Jump}(L').\n\\]</p>\n<p>For building points \\(x\\in B(G)\\) and \\(x'\\in B(G')\\), this construction\ngives the lattice function \\(B_{x,x'}=L_x\\otimes L_{x'}\\) used in the\ngeneralized lattice model of the oscillator representation.</p>",
   "proof_html": null,
   "deps": [
     {
@@ -39,14 +39,14 @@
       "href": "epipelagic_theta/epipelagic_theta_residual_moment_map_condition.html"
     },
     {
-      "id": "epipelagic_theta.tensor_product_lattice_function",
-      "title": "Tensor Product Lattice Function",
-      "href": "epipelagic_theta/epipelagic_theta_tensor_product_lattice_function.html"
+      "id": "epipelagic_theta.tensor_dual_self_duality",
+      "title": "Tensor Product Self-Duality",
+      "href": "epipelagic_theta/epipelagic_theta_tensor_dual_self_duality.html"
     },
     {
-      "id": "lattice_model.tensor_product_self_duality",
+      "id": "lattice_model.tensor_dual_self_duality",
       "title": "Tensor Product Self-Duality",
-      "href": "lattice_model/lattice_model_tensor_product_self_duality.html"
+      "href": "lattice_model/lattice_model_tensor_dual_self_duality.html"
     }
   ],
   "lean_refs": [],

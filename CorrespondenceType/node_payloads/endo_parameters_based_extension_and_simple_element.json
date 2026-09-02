@@ -1,0 +1,28 @@
+{
+  "id": "endo_parameters.based_extension_and_simple_element",
+  "title": "Based Extensions And Simple Elements",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_based_extension_and_simple_element.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>Based Extensions And Simple Elements</h1>\n<p>A based extension of $F$ is a pair</p>\n<p>$$\n(E,\\beta)\n$$</p>\n<p>where $E=F[\\beta]$ is a finite field extension of $F$ inside a fixed algebraic\nclosure, and $\\beta$ is a distinguished generator.</p>\n<p>The draft uses an invariant</p>\n<p>$$\nk_F(\\beta)\\in\\mathbb{Q}\\sqcup\\{\\infty\\}\n$$</p>\n<p>with</p>\n<p>$$\n\\operatorname{val}_F(\\beta)\\leq k_F(\\beta),\n$$</p>\n<p>with equality precisely when $\\beta=0$ or $\\beta$ is minimal.  A based\nextension $(E,\\beta)$ is called simple if</p>\n<p>$$\nk_F(\\beta)&lt;0.\n$$</p>\n<p>In that case $\\beta$ is called a simple element.</p>\n<h2>Draft Caution</h2>\n<p>The current TeX explicitly says it does not recall the definition of\n$k_F(\\beta)$, and it leaves a TODO about the normalization of\n$\\operatorname{val}_F$.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "endo_parameters.ps_character_and_endo_class",
+      "title": "PS-Characters And Endo-Classes",
+      "href": "endo_parameters/endo_parameters_ps_character_and_endo_class.html"
+    },
+    {
+      "id": "endo_parameters.similar_based_extensions",
+      "title": "Similar Based Extensions",
+      "href": "endo_parameters/endo_parameters_similar_based_extensions.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

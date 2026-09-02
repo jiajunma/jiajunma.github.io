@@ -2,16 +2,46 @@
   "id": "finite_field_weil.symplectic_heisenberg_group",
   "title": "Symplectic Heisenberg Group over a Finite Field",
   "kind": "definition",
-  "status": "admitted",
+  "status": "staged",
   "href": "finite_field_weil/finite_field_weil_symplectic_heisenberg_group.html",
   "primary_topic": "finite_field_weil",
   "topics": [
     "finite_field_weil"
   ],
-  "body_html": "<h1>Symplectic Heisenberg Group over a Finite Field</h1>\n<p>Let $k$ be a finite field of odd order, let $(E,j)$ be a finite-dimensional symplectic $k$-vector space, and put $i=j/2$. The Heisenberg group $H(E,j)$ is the set $E \\times k$ with group law\n$$\n(w,z)(w',z')=(w+w',z+z'+i(w,w')).\n$$\nIt is a central extension\n$$\n0 \\to k \\to H(E,j) \\to E \\to 0.\n$$</p>",
+  "body_html": "<h1>Symplectic Heisenberg Group over a Finite Field</h1>\n<p>Let $k$ be a finite field of odd order, let $(E,j)$ be a finite-dimensional symplectic $k$-vector space, and put $i=j/2$. The Heisenberg group $H(E,j)$ is the set $E \\times k$ with group law</p>\n<p>$$\n(w,z)(w',z')=(w+w',z+z'+i(w,w')).\n$$</p>\n<p>It is a central extension</p>\n<p>$$\n0 \\to k \\to H(E,j) \\to E \\to 0.\n$$</p>",
   "proof_html": null,
   "deps": [],
   "dependents": [
+    {
+      "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+      "href": "finite_field_weil/finite_field_weil_gerardin_symplectic_weil_linearization.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_schrodinger_model",
+      "title": "Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_schrodinger_model.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_intertwiner.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_canonical_mixed_model",
+      "title": "Canonical Mixed Model on the Spherical Building via Gérardin Reduction",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_canonical_mixed_model.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_mixed_model_compatible_system",
+      "title": "Compatible System of Mixed Schrödinger Models on the Spherical Building",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_mixed_model_compatible_system.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_reference_frame",
+      "title": "Lagrangian Reference Frame for the Spherical-Building Compatible System",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_reference_frame.html"
+    },
     {
       "id": "finite_field_weil.symplectic_weil_representation",
       "title": "Symplectic Weil Representation over a Finite Field",
@@ -21,6 +51,11 @@
       "id": "finite_field_weil.unitary_heisenberg_group",
       "title": "Unitary Heisenberg Group over a Finite Field",
       "href": "finite_field_weil/finite_field_weil_unitary_heisenberg_group.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization_lean_plan",
+      "title": "Lean Formalization Plan for the Weil-Index Trivialization Theorem",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization_lean_plan.html"
     }
   ],
   "lean_refs": [],

@@ -1,0 +1,34 @@
+{
+  "id": "tame_covers.genuine_representations_of_covers",
+  "title": "Genuine Representations Of Central Covers",
+  "kind": "definition",
+  "status": "staged",
+  "href": "tame_covers/tame_covers_genuine_representations_of_covers.html",
+  "primary_topic": "tame_covers",
+  "topics": [
+    "tame_covers"
+  ],
+  "body_html": "<h1>Genuine Representations Of Central Covers</h1>\n<p>Let $\\widetilde G$ be a $Z$-cover of $G$, let $R$ be a commutative ring, and\nlet</p>\n<p>$$\n\\alpha:Z\\to R^\\times\n$$</p>\n<p>be a character.  A smooth $R[\\widetilde G]$-module $(\\pi,V)$ is\n$\\alpha$-genuine if</p>\n<p>$$\n\\pi(z)=\\alpha(z)\\operatorname{id}_V\n\\qquad\n(z\\in Z).\n$$</p>\n<p>The category of such modules is denoted</p>\n<p>$$\n\\operatorname{Rep}_R^{\\alpha\\text{-gen}}(\\widetilde G).\n$$</p>\n<p>If $H\\subset G$ is a subgroup over which the cover splits and a splitting\n$\\iota_H:H\\to\\widetilde H$ is chosen, restriction along $\\iota_H$ gives an\nequivalence between $\\alpha$-genuine representations of $\\widetilde H$ and\nordinary representations of $H$.  If the splitting is unique, the draft writes\nthe ordinary representation as $\\sigma|_H$ without further choices.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tame_covers.tame_z_cover",
+      "title": "Tame Z-Covers Of Locally Profinite Groups",
+      "href": "tame_covers/tame_covers_tame_z_cover.html"
+    },
+    {
+      "id": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "title": "Unique Splitting For Prime-To-Z Compact Subgroups",
+      "href": "tame_covers/tame_covers_unique_splitting_for_tame_cover_subgroups.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tame_covers.intertwining_sets_for_cover_representations",
+      "title": "Intertwining Sets For Cover Representations",
+      "href": "tame_covers/tame_covers_intertwining_sets_for_cover_representations.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

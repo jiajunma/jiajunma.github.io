@@ -8,8 +8,8 @@
   "topics": [
     "lattice_model"
   ],
-  "body_html": "<h1>GL Building as Lattice Functions</h1>\n<p>The extended building \\(B(\\operatorname{GL}(V))\\) is identified with the set\nof lattice functions on \\(V\\), equivalently with splittable \\(D\\)-norms, as a\n\\(\\operatorname{GL}(V)\\)-set. This identification is unique up to translation.</p>\n<p>If \\(x\\in B(\\operatorname{GL}(V))\\) corresponds to \\(L\\), then the\noperator-shift filtrations attached to \\(L\\) agree with the Moy-Prasad\nfiltrations at \\(x\\).</p>",
-  "proof_html": "<p>The source cites the standard Bruhat-Tits and Moy-Prasad identification. On an\napartment, a splittable norm is determined by a splitting basis, and the\nMoy-Prasad lattice conditions are exactly the operator-shift conditions defining\nthe lattice-function filtration.</p>",
+  "body_html": "<h1>GL Building as Lattice Functions</h1>\n<p>This is the shared foundation layer node for the GL building identification.\nIt should be used by both epipelagic and supercuspidal nodes instead of\nthe older <a class=\"node-ref\" data-node-id=\"epipelagic_theta.gl_building_lattice_functions\" href=\"../epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html\"><code>epipelagic_theta.gl_building_lattice_functions</code></a>.</p>\n<p>The extended building \\(B(\\operatorname{GL}(V))\\) is identified with the set\nof lattice functions on \\(V\\), equivalently with splittable \\(D\\)-norms, as a\n\\(\\operatorname{GL}(V)\\)-set. This identification is unique up to translation.</p>\n<p>If \\(x\\in B(\\operatorname{GL}(V))\\) corresponds to \\(L\\), then\n\\[\n\\operatorname{LieGL}(V)_{x,r}=\\operatorname{LieGL}(V)_{L,r},\\qquad\n\\operatorname{GL}(V)_{x,r}=\\operatorname{GL}(V)_{L,r}\\quad(r&gt;0),\n\\]\nand\n\\[\n\\operatorname{GL}(V)_x=\\operatorname{GL}(V)_L.\n\\]</p>",
+  "proof_html": "<p>The paper cites the standard Bruhat-Tits and Moy-Prasad identification.\nOn an apartment, a splittable norm is determined by the values of a\nsplitting basis, and the Moy-Prasad lattice conditions are exactly the\noperator-shift conditions defining \\(\\operatorname{LieGL}(V)_{L,r}\\) and\n\\(\\operatorname{GL}(V)_{L,r}\\).</p>",
   "deps": [
     {
       "id": "lattice_model.d_norm",
@@ -24,9 +24,9 @@
   ],
   "dependents": [
     {
-      "id": "epipelagic_theta.gl_building_lattice_functions",
-      "title": "GL Building as Lattice Functions",
-      "href": "epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html"
+      "id": "epipelagic_theta.classical_building_self_dual_lattice_functions",
+      "title": "Classical Buildings as Self-Dual Lattice Functions",
+      "href": "epipelagic_theta/epipelagic_theta_classical_building_self_dual_lattice_functions.html"
     },
     {
       "id": "lattice_model.classical_building_self_dual_lattice_functions",

@@ -1,0 +1,249 @@
+{
+  "topic": {
+    "id": "endo_parameters",
+    "title": "Endo Parameters",
+    "href": "endo_parameters/index.html",
+    "parent": null,
+    "node_count": 10,
+    "descendant_node_count": 10
+  },
+  "counts": {
+    "internal_nodes": 10,
+    "inlined_nodes": 10,
+    "descendant_nodes": 10,
+    "child_topics": 0,
+    "inlined_child_topics": 10,
+    "non_proof_plan_nodes": 10,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 0,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
+  },
+  "nodes": [
+    {
+      "id": "endo_parameters.based_extension_and_simple_element",
+      "title": "Based Extensions And Simple Elements",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_based_extension_and_simple_element.html",
+      "payload": "node_payloads/endo_parameters_based_extension_and_simple_element.json"
+    },
+    {
+      "id": "endo_parameters.classical_group_endo_parameter",
+      "title": "Endo-Parameters For Classical Groups",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_classical_group_endo_parameter.html",
+      "payload": "node_payloads/endo_parameters_classical_group_endo_parameter.json"
+    },
+    {
+      "id": "endo_parameters.endo_correspondence_open_definition",
+      "title": "Endo-Correspondence Is Still An Open Definition In The Draft",
+      "kind": "task",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_endo_correspondence_open_definition.html",
+      "payload": "node_payloads/endo_parameters_endo_correspondence_open_definition.json"
+    },
+    {
+      "id": "endo_parameters.epsilon_sigma_endo_parameter",
+      "title": "Epsilon-Sigma Endo-Parameters",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_epsilon_sigma_endo_parameter.html",
+      "payload": "node_payloads/endo_parameters_epsilon_sigma_endo_parameter.json"
+    },
+    {
+      "id": "endo_parameters.gl_endo_parameter",
+      "title": "GL Endo-Parameters",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_gl_endo_parameter.html",
+      "payload": "node_payloads/endo_parameters_gl_endo_parameter.json"
+    },
+    {
+      "id": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+      "title": "Hermitian Monoids For Self-Dual Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_hermitian_monoids_for_self_dual_endo_classes.html",
+      "payload": "node_payloads/endo_parameters_hermitian_monoids_for_self_dual_endo_classes.json"
+    },
+    {
+      "id": "endo_parameters.ps_character_and_endo_class",
+      "title": "PS-Characters And Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_ps_character_and_endo_class.html",
+      "payload": "node_payloads/endo_parameters_ps_character_and_endo_class.json"
+    },
+    {
+      "id": "endo_parameters.self_dual_endo_classes",
+      "title": "Self-Dual Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_self_dual_endo_classes.html",
+      "payload": "node_payloads/endo_parameters_self_dual_endo_classes.json"
+    },
+    {
+      "id": "endo_parameters.similar_based_extensions",
+      "title": "Similar Based Extensions",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_similar_based_extensions.html",
+      "payload": "node_payloads/endo_parameters_similar_based_extensions.json"
+    },
+    {
+      "id": "endo_parameters.wild_parameter",
+      "title": "Wild Parameters And Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "href": "endo_parameters/endo_parameters_wild_parameter.html",
+      "payload": "node_payloads/endo_parameters_wild_parameter.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "endo_parameters.epsilon_sigma_endo_parameter",
+      "to": "endo_parameters.classical_group_endo_parameter",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.classical_group_endo_parameter",
+      "to": "endo_parameters.endo_correspondence_open_definition",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.epsilon_sigma_endo_parameter",
+      "to": "endo_parameters.endo_correspondence_open_definition",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+      "to": "endo_parameters.epsilon_sigma_endo_parameter",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.ps_character_and_endo_class",
+      "to": "endo_parameters.gl_endo_parameter",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.self_dual_endo_classes",
+      "to": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.based_extension_and_simple_element",
+      "to": "endo_parameters.ps_character_and_endo_class",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.ps_character_and_endo_class",
+      "to": "endo_parameters.self_dual_endo_classes",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.based_extension_and_simple_element",
+      "to": "endo_parameters.similar_based_extensions",
+      "kind": "uses"
+    },
+    {
+      "from": "endo_parameters.gl_endo_parameter",
+      "to": "endo_parameters.wild_parameter",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
+  "keywords": [
+    {
+      "id": "based-extension",
+      "title": "based-extension",
+      "href": "keywords/based-extension.html",
+      "count": 1
+    },
+    {
+      "id": "classical-groups",
+      "title": "classical-groups",
+      "href": "keywords/classical-groups.html",
+      "count": 2
+    },
+    {
+      "id": "endo-class",
+      "title": "endo-class",
+      "href": "keywords/endo-class.html",
+      "count": 2
+    },
+    {
+      "id": "endo-parameters",
+      "title": "endo-parameters",
+      "href": "keywords/endo-parameters.html",
+      "count": 10
+    },
+    {
+      "id": "general-linear-group",
+      "title": "general-linear-group",
+      "href": "keywords/general-linear-group.html",
+      "count": 1
+    },
+    {
+      "id": "hermitian-space",
+      "title": "hermitian-space",
+      "href": "keywords/hermitian-space.html",
+      "count": 1
+    },
+    {
+      "id": "langlands-parameters",
+      "title": "langlands-parameters",
+      "href": "keywords/langlands-parameters.html",
+      "count": 1
+    },
+    {
+      "id": "open-point",
+      "title": "open-point",
+      "href": "keywords/open-point.html",
+      "count": 1
+    },
+    {
+      "id": "ps-character",
+      "title": "ps-character",
+      "href": "keywords/ps-character.html",
+      "count": 1
+    },
+    {
+      "id": "self-dual",
+      "title": "self-dual",
+      "href": "keywords/self-dual.html",
+      "count": 2
+    },
+    {
+      "id": "theta-correspondence",
+      "title": "theta-correspondence",
+      "href": "keywords/theta-correspondence.html",
+      "count": 1
+    },
+    {
+      "id": "wild-inertia",
+      "title": "wild-inertia",
+      "href": "keywords/wild-inertia.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "endo_parameters.based_extension_and_simple_element",
+    "endo_parameters.classical_group_endo_parameter",
+    "endo_parameters.endo_correspondence_open_definition",
+    "endo_parameters.epsilon_sigma_endo_parameter",
+    "endo_parameters.gl_endo_parameter",
+    "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+    "endo_parameters.ps_character_and_endo_class",
+    "endo_parameters.self_dual_endo_classes",
+    "endo_parameters.similar_based_extensions",
+    "endo_parameters.wild_parameter"
+  ]
+}

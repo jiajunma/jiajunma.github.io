@@ -1,0 +1,49 @@
+{
+  "id": "theta_semisimple_types.main_isotypic_formula",
+  "title": "Main Isotypic Formula For Semisimple Theta Data",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_main_isotypic_formula.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>Main Isotypic Formula For Semisimple Theta Data</h1>\n<p>The theta draft aims to prove</p>\n<p>$$\n\\omega[\\psi_\\beta|_{H_{\\Sigma,+}}]\n=\n\\sum_{\\substack{w\\in W\\\\ M(w)=\\beta}}\n\\sum_{\\bar x'\\in B(Z_{G'})}\n\\omega_{x,x'(w,\\bar x'),w}.\n$$</p>\n<p>Equivalently, after fixing $w$ with $M(w)=\\beta$, it records the consequence</p>\n<p>$$\n\\omega[\\psi_\\beta|_{H_{\\Sigma,+}}]\n=\n\\mathcal H(G')\n\\sum_{\\bar x'\\in\\mathcal C(Z_{G'})}\n\\omega_{x,x'(w,\\bar x'),w}.\n$$</p>\n<p>In the no-depth-zero case, the draft says $x'$ is determined by $w$ and</p>\n<p>$$\n\\omega[\\psi_\\beta|_{H_{\\Sigma,+}}]\n=\n\\operatorname{cInd}_{S'_w}^{G'}(\\omega_{x,x',w}).\n$$</p>",
+  "proof_html": "<p>Shape In The Draft</p>\n<p>The intended proof is induction on the number of bricks:</p>\n<ol>\n<li>decompose the $G_{x,s^+}$-isotypic space into lattice-model support pieces;</li>\n<li>use the geometric lemma to move $M(w)$ into the diagonal part;</li>\n<li>split off the largest brick;</li>\n<li>correct the largest brick by the single-brick argument;</li>\n<li>apply the induction hypothesis to the remaining bricks.</li>\n</ol>\n<h2>Draft Caution</h2>\n<p>The current TeX has a proof skeleton but not a fully closed proof.  This node\nshould be treated as a partial proposition.</p>",
+  "deps": [
+    {
+      "id": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+      "title": "The Subgroup H Sigma Plus And The Character Psi Beta",
+      "href": "theta_semisimple_types/theta_semisimple_types_h_sigma_plus_character_subgroup.html"
+    },
+    {
+      "id": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "title": "Target Building Point From w And The Depth-Zero Point",
+      "href": "theta_semisimple_types/theta_semisimple_types_target_building_point_from_w_and_depth_zero_point.html"
+    },
+    {
+      "id": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "title": "Support Pieces In The Generalized Lattice Model",
+      "href": "theta_semisimple_types/theta_semisimple_types_generalized_lattice_model_support_piece.html"
+    },
+    {
+      "id": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+      "title": "Geometric Lemma For Diagonal Reduction",
+      "href": "theta_semisimple_types/theta_semisimple_types_geometric_lemma_for_diagonal_reduction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+      "title": "Hecke Module Problem For Semisimple Theta",
+      "href": "theta_semisimple_types/theta_semisimple_types_hecke_module_problem_for_semisimple_theta.html"
+    },
+    {
+      "id": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "title": "Occurrence Propositions For Semisimple Types",
+      "href": "theta_semisimple_types/theta_semisimple_types_semisimple_type_occurrence_propositions.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

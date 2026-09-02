@@ -1,0 +1,33 @@
+{
+  "id": "finite_field_weil.finite_quadratic_weil_index",
+  "title": "Finite Quadratic Weil Index",
+  "kind": "definition",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_finite_quadratic_weil_index.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Finite Quadratic Weil Index</h1>\n<p>This node defines the finite Gauss-sum Weil index.  It is the scalar\nappearing in Gérardin's Fourier-Gaussian normalization.  It should be\ndistinguished from the three-Lagrangian transition cocycle\n\\(\\gamma(L,L',L'')\\): that cocycle can often be computed by a Gauss-sum Weil\nindex, but it is not the definition of the Weil index of a quadratic form.</p>\n<p>The finite-group algebra in this node is Lean-checked in\n<code>lean/FiniteQuadraticWeilIndex.lean</code> using the Lean 4.30/mathlib project\n<code>/Users/hoxide/mycodes/lean-shared</code>.  The Lean file formalizes finite\nquadratic characters, the unnormalized Gauss sum, the normalized Weil index\nafter choosing a square root of \\(|A|\\), additive-character orthogonality, and\nthe identity</p>\n<p>$$\nG(q)G(q^{-1})=|A|.\n$$</p>\n<p>It does not formalize Gérardin's finite-field discriminant formula.</p>\n<h2>Finite Quadratic Module</h2>\n<p>Let \\(A\\) be a finite abelian group.  A quadratic character on \\(A\\) is a\nfunction</p>\n<p>$$\nq:A\\longrightarrow \\mathbb C^\\times\n$$</p>\n<p>such that the function</p>\n<p>$$\nb_q(x,y):=q(x+y)q(x)^{-1}q(y)^{-1}\n$$</p>\n<p>is a bimultiplicative character of \\(A\\times A\\).  The quadratic character is\nnondegenerate if</p>\n<p>$$\nA\\longrightarrow \\operatorname{Hom}(A,\\mathbb C^\\times),\n\\qquad\nx\\longmapsto b_q(x,-)\n$$</p>\n<p>is an isomorphism.</p>\n<h2>Definition</h2>\n<p>For a nondegenerate finite quadratic module \\((A,q)\\), define its Weil index\nby the normalized Gauss sum</p>\n<p>$$\n\\omega(A,q)\n:=\n|A|^{-1/2}\\sum_{x\\in A}q(x).\n$$</p>\n<p>Equivalently, if \\(dx\\) is the self-dual measure on \\(A\\), meaning</p>\n<p>$$\n\\int_A f(x)\\,dx\n=\n|A|^{-1/2}\\sum_{x\\in A}f(x),\n$$</p>\n<p>then</p>\n<p>$$\n\\omega(A,q)=\\int_A q(x)\\,dx.\n$$</p>\n<p>The square root \\(|A|^{1/2}\\) is the positive real square root.  For\nnondegenerate \\(q\\), the Weil index has absolute value one:</p>\n<p>$$\n|\\omega(A,q)|=1.\n$$</p>\n<p>Indeed, let</p>\n<p>$$\nG(q):=\\sum_{x\\in A}q(x).\n$$</p>\n<p>Then</p>\n<p>$$\n\\begin{aligned}\n|G(q)|^2\n&amp;=\n\\sum_{x,y\\in A}q(x)q(y)^{-1}\\\\\n&amp;=\n\\sum_{z,y\\in A}q(y+z)q(y)^{-1}\\\\\n&amp;=\n\\sum_{z,y\\in A}q(z)b_q(y,z).\n\\end{aligned}\n$$</p>\n<p>For fixed \\(z\\), the inner sum</p>\n<p>$$\n\\sum_{y\\in A}b_q(y,z)\n$$</p>\n<p>is \\(|A|\\) if \\(z=0\\) and is \\(0\\) otherwise.  The nonzero case is the usual\northogonality of nontrivial characters of \\(A\\), and nondegeneracy says that\n\\(b_q(-,z)\\) is nontrivial for every \\(z\\neq0\\).  Hence</p>\n<p>$$\n|G(q)|^2=|A|,\n$$</p>\n<p>and therefore \\(|\\omega(A,q)|=1\\).</p>\n<h2>Finite-Field Quadratic Form</h2>\n<p>Let \\(k\\) be a finite field of odd order \\(q_0\\), let\n\\(\\psi:k\\to \\mathbb C^\\times\\) be a nontrivial additive character, and let\n\\((V,Q)\\) be a finite-dimensional nondegenerate quadratic \\(k\\)-space.  Put</p>\n<p>$$\nq_Q(v):=\\psi(Q(v)).\n$$</p>\n<p>Then the Weil index of \\((V,Q)\\) with respect to \\(\\psi\\) is</p>\n<p>$$\n\\omega_\\psi(V,Q)\n:=\nq_0^{-\\dim V/2}\\sum_{v\\in V}\\psi(Q(v)).\n$$</p>\n<p>If</p>\n<p>$$\nQ(x_1,\\ldots,x_n)\n=\n\\frac{1}{2}\\sum_{r=1}^n a_r x_r^2,\n\\qquad a_r\\in k^\\times,\n$$</p>\n<p>then</p>\n<p>$$\n\\omega_\\psi(V,Q)\n=\nW(\\psi)^n\\chi\\!\\left(\\prod_{r=1}^n a_r\\right),\n$$</p>\n<p>where \\(\\chi:k^\\times\\to\\{\\pm1\\}\\) is the quadratic character and</p>\n<p>$$\nW(\\psi)\n:=\nq_0^{-1/2}\\sum_{t\\in k}\\psi(t^2/2).\n$$</p>\n<p>The factor \\(\\prod_r a_r\\) is the discriminant of \\(Q\\), up to squares.  Thus\nthe formula depends only on the dimension, the one-dimensional Gauss sum\n\\(W(\\psi)\\), and the discriminant class.</p>\n<h2>Gérardin's Notation</h2>\n<p>In Gérardin Section 2.4, choose a Witt decomposition</p>\n<p>$$\nE=E_+\\oplus E_-.\n$$</p>\n<p>Let \\(b:E_-\\to E_+\\) be an \\(i\\)-symmetric isomorphism.  Gérardin's quadratic\nform on \\(E_-\\) is</p>\n<p>$$\nQ_b(y):=i(by,y).\n$$</p>\n<p>With his self-dual finite measure \\(dy\\), the Gaussian constant is</p>\n<p>$$\nw_\\tau(b)\n=\n\\int_{E_-}\\tau(Q_b(y))\\,dy.\n$$</p>\n<p>In the notation of this node,</p>\n<p>$$\nw_\\tau(b)=\\omega_\\tau(E_-,Q_b).\n$$</p>\n<p>Gérardin evaluates it as</p>\n<p>$$\nw_\\tau(b)\n=\nW(\\tau)^{\\dim E_-}d(b)^{(1-q_0)/2},\n$$</p>\n<p>where \\(d(b)\\) is the discriminant of \\(Q_b\\).  Since\n\\(a^{(q_0-1)/2}\\) is the quadratic character of \\(a\\), the exponent\n\\((1-q_0)/2\\) is the same quadratic-character factor, up to the harmless\ninverse convention.</p>\n<p>The relation in Gérardin's Fourier normalization is</p>\n<p>$$\n\\varphi(b)\\,w_\\tau(b)=1.\n$$</p>\n<p>Thus the operator attached to an element exchanging \\(E_+\\) and \\(E_-\\) is\nnormalized by the inverse of the finite quadratic Weil index.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+      "href": "finite_field_weil/finite_field_weil_gerardin_symplectic_weil_linearization.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization_lean_plan",
+      "title": "Lean Formalization Plan for the Weil-Index Trivialization Theorem",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization_lean_plan.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

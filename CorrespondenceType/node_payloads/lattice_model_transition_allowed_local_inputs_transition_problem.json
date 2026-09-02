@@ -1,0 +1,43 @@
+{
+  "id": "lattice_model_transition.allowed_local_inputs_transition_problem",
+  "title": "Allowed Local Inputs For The Lattice-Model Transition Problem",
+  "kind": "concept",
+  "status": "staged",
+  "href": "lattice_model_transition/lattice_model_transition_allowed_local_inputs_transition_problem.html",
+  "primary_topic": "lattice_model_transition",
+  "topics": [
+    "lattice_model_transition"
+  ],
+  "body_html": "<h1>Allowed Local Inputs For The Lattice-Model Transition Problem</h1>\n<p>For the transition-map problem, the solver may use the following facts as\nblack boxes.</p>\n<ol>\n<li>\n<p>The tensor lattice construction gives the affine embedding\n   $\\iota:B(G)\\times B(G')\\to B(\\operatorname{Sp}(W))$.</p>\n</li>\n<li>\n<p>On each facet $\\mathfrak{f}\\subset B(\\operatorname{Sp}(W))$, the lattice\n   data $\\mathcal{B}_0$ and $\\mathcal{B}_{0^+}$ are constant.</p>\n</li>\n<li>\n<p>For each pulled-back facet $F\\in\\mathcal{P}$, the pair $(L_F,L_F^+)$ and\n   the model $\\Omega_F=\\mathcal{S}(L_F)$ are well-defined.  The solver should\n   not spend effort proving the pulled-back facet fiber statement unless an\n   inconsistency appears later.</p>\n</li>\n<li>\n<p>If $E\\leq F$ in $\\mathcal{P}$, then $K_F\\subseteq K_E$.</p>\n</li>\n<li>\n<p>Good lattices contain self-dual lattices.  In particular, in the nested\n   situation $B_0\\subseteq B'_0$ one may choose a self-dual lattice\n   $A_0\\subseteq B_0\\subseteq B'_0$.</p>\n</li>\n<li>\n<p>The generalized lattice model $\\mathcal{S}(L)$ attached to a pair\n   $L^+\\subset L$ with $L^+=L^\\perp$ realizes the same Weil representation for\n   all such pairs.</p>\n</li>\n<li>\n<p>The lattice model attached to a symplectic facet $\\mathfrak{f}$ gives a\n   splitting of the metaplectic cover over the corresponding parahoric\n   $K_{\\mathfrak{f}}$, hence a representation $\\rho_{\\mathfrak{f}}$.</p>\n</li>\n<li>\n<p>If $\\mathfrak{e}\\subseteq\\overline{\\mathfrak{f}}$, then the parahoric\n   subgroups satisfy $K_{\\mathfrak{f}}\\subseteq K_{\\mathfrak{e}}$.</p>\n</li>\n<li>\n<p>The Haar measure on $W$ is fixed by the self-dual normalization: self-dual\n   lattices, equivalently lattices with\n   $\\mathcal{B}_0=\\mathcal{B}_{0^+}$ in the present notation, have measure\n   $1$.</p>\n</li>\n<li>\n<p>The finite-field maximal-parabolic Weil input may be used as a black box:\n    for a decomposition $\\ell=X\\oplus\\ell_0\\oplus Y$, the mixed Schrödinger\n    model is $\\mathcal{S}(Y,\\mathbf{S}_0)$, the unipotent radical fixes\n    evaluation at $0\\in Y$, and the Levi\n    $\\operatorname{GL}(X)\\times\\operatorname{Sp}(\\ell_0)$ acts on that\n    evaluation by the quadratic determinant character on\n    $\\operatorname{GL}(X)$ times the residual finite Weil representation on\n    $\\mathbf{S}_0$.</p>\n</li>\n</ol>\n<p>No transition operator between different lattice models is allowed as a black\nbox.  Constructing and normalizing comparison maps is part of the problem.\nThe splitting-ratio character $\\delta^{\\mathrm{lm}}_{E,F}$ is defined before\nchoosing such a transition map, by comparing the original splittings $s_F$ and\n$s_E|_{K_F}$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "title": "Pulled-Back Symplectic Facet Setup",
+      "href": "lattice_model_transition/lattice_model_transition_pulled_back_symplectic_facet_setup.html"
+    },
+    {
+      "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "title": "Generalized Lattice Models And Original Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_generalized_lattice_model_and_original_splittings.html"
+    },
+    {
+      "id": "lattice_model_transition.incidence_ratio_character",
+      "title": "Incidence Ratio Character For Original Lattice-Model Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_incidence_ratio_character.html"
+    },
+    {
+      "id": "lattice_model_transition.self_dual_test_vector_normalization",
+      "title": "Self-Dual Test-Vector Normalization For Nested Lattice Models",
+      "href": "lattice_model_transition/lattice_model_transition_self_dual_test_vector_normalization.html"
+    },
+    {
+      "id": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "title": "Finite-Field Maximal-Parabolic Weil Input",
+      "href": "lattice_model_transition/lattice_model_transition_finite_field_maximal_parabolic_weil_input.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

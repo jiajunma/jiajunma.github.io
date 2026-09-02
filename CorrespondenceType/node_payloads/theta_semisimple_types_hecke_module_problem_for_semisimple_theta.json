@@ -1,0 +1,28 @@
+{
+  "id": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+  "title": "Hecke Module Problem For Semisimple Theta",
+  "kind": "task",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_hecke_module_problem_for_semisimple_theta.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>Hecke Module Problem For Semisimple Theta</h1>\n<p>The theta draft introduces the multiplicity space</p>\n<p>$$\n\\mathcal M_{\\Sigma,\\Sigma'}\n:=\n\\operatorname{Hom}_{K\\times K'}\n(\\rho_\\Sigma\\otimes\\rho'_{\\Sigma'},\\omega).\n$$</p>\n<p>It is intended to be related to Hecke algebras attached to the types\n$\\rho_\\Sigma$ and $\\rho'_{\\Sigma'}$.</p>\n<p>The draft asks for a support-preserving isomorphism</p>\n<p>$$\n\\mathcal H'(G_\\beta//\\rho'^0)\n\\cong\n\\mathcal H'(G'//\\rho'_\\Sigma)\n$$</p>\n<p>and discusses whether there is an algebra monomorphism</p>\n<p>$$\n\\mathcal H'(G'//\\rho'_\\Sigma)\\to R_c[G'].\n$$</p>\n<p>It also records the expected module compatibility</p>\n<p>$$\n\\operatorname{Hom}_{K'^0}\n(\\rho',\n\\operatorname{Hom}_{K'_{0+}}(\\kappa',\\pi'))\n\\cong\n\\operatorname{Hom}_{K'}\n(\\rho'\\otimes\\kappa',\\pi')\n$$</p>\n<p>as a module statement for the corresponding Hecke algebras.</p>\n<p>None of these compatibilities is established in the current draft; they form the\nopen Hecke-module layer of the semisimple theta correspondence.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "theta_semisimple_types.main_isotypic_formula",
+      "title": "Main Isotypic Formula For Semisimple Theta Data",
+      "href": "theta_semisimple_types/theta_semisimple_types_main_isotypic_formula.html"
+    },
+    {
+      "id": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "title": "Occurrence Propositions For Semisimple Types",
+      "href": "theta_semisimple_types/theta_semisimple_types_semisimple_type_occurrence_propositions.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

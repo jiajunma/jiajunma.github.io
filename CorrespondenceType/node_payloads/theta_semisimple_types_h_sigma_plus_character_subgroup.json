@@ -1,0 +1,29 @@
+{
+  "id": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+  "title": "The Subgroup H Sigma Plus And The Character Psi Beta",
+  "kind": "definition",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_h_sigma_plus_character_subgroup.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>The Subgroup H Sigma Plus And The Character Psi Beta</h1>\n<p>The theta draft defines a subgroup recursively by the length of the brick\ndecomposition:</p>\n<p>$$\nH_{\\Sigma,x,+}\n:=\nG_{x,s^+}\\,H_{\\Sigma_a,x_a,+},\n$$</p>\n<p>where $\\Sigma_a$ denotes the lower-depth remainder after removing the maximal\ndepth brick, and $s$ is half the depth of the top brick.</p>\n<p>The draft says $H_{\\Sigma,x,+}$ is the largest subgroup of $G_{x,0+}$ on which\nthe function</p>\n<p>$$\n\\psi_\\beta(C(X)):=\\psi(\\operatorname{tr}(X\\beta))\n$$</p>\n<p>restricts to a character.</p>\n<h2>Draft Caution</h2>\n<p>The notation $C(X)$ and the exact Cayley-transform convention are not defined\nin this local section.  This node records the intended role of\n$H_{\\Sigma,x,+}$ rather than a complete standalone construction.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "theta_semisimple_types.pre_semisimple_character_datum",
+      "title": "Pre-Semisimple Character Datum In The Theta Draft",
+      "href": "theta_semisimple_types/theta_semisimple_types_pre_semisimple_character_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "theta_semisimple_types.main_isotypic_formula",
+      "title": "Main Isotypic Formula For Semisimple Theta Data",
+      "href": "theta_semisimple_types/theta_semisimple_types_main_isotypic_formula.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

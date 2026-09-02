@@ -4,22 +4,22 @@
     "title": "Epipelagic Theta",
     "href": "epipelagic_theta/index.html",
     "parent": null,
-    "node_count": 39,
-    "descendant_node_count": 39
+    "node_count": 40,
+    "descendant_node_count": 40
   },
   "counts": {
-    "internal_nodes": 39,
-    "inlined_nodes": 39,
-    "descendant_nodes": 39,
+    "internal_nodes": 40,
+    "inlined_nodes": 40,
+    "descendant_nodes": 40,
     "child_topics": 0,
-    "inlined_child_topics": 39,
-    "non_proof_plan_nodes": 38,
+    "inlined_child_topics": 40,
+    "non_proof_plan_nodes": 39,
     "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 1,
     "boundary_topics": 2,
     "proof_plan_attachments": 1,
-    "visible_nodes_without_proof_plans": 41,
-    "visible_nodes_with_selected_proof_plans": 42
+    "visible_nodes_without_proof_plans": 42,
+    "visible_nodes_with_selected_proof_plans": 43
   },
   "nodes": [
     {
@@ -143,6 +143,14 @@
       "status": "staged",
       "href": "epipelagic_theta/epipelagic_theta_gl_building_lattice_functions.html",
       "payload": "node_payloads/epipelagic_theta_gl_building_lattice_functions.json"
+    },
+    {
+      "id": "epipelagic_theta.hermitian_dual_lattice_conductor_p",
+      "title": "Hermitian Dual Lattice With Conductor p",
+      "kind": "definition",
+      "status": "staged",
+      "href": "epipelagic_theta/epipelagic_theta_hermitian_dual_lattice_conductor_p.html",
+      "payload": "node_payloads/epipelagic_theta_hermitian_dual_lattice_conductor_p.json"
     },
     {
       "id": "epipelagic_theta.invariant_subspace_rank_lemma",
@@ -605,7 +613,7 @@
       "title": "Lattice Model",
       "href": "lattice_model/index.html",
       "role": "dependency",
-      "node_count": 14
+      "node_count": 19
     },
     {
       "id": "supercuspidal_theta",
@@ -635,14 +643,7 @@
       "to": "epipelagic_theta.classical_building_self_dual_lattice_functions",
       "kind": "boundary_dependency",
       "topic": "lattice_model",
-      "count": 1
-    },
-    {
-      "from": "topic:lattice_model",
-      "to": "epipelagic_theta.d_norm",
-      "kind": "boundary_dependency",
-      "topic": "lattice_model",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:lattice_model",
@@ -656,7 +657,7 @@
       "to": "epipelagic_theta.gl_building_lattice_functions",
       "kind": "boundary_dependency",
       "topic": "lattice_model",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:lattice_model",
@@ -684,7 +685,7 @@
       "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
       "kind": "boundary_dependency",
       "topic": "lattice_model",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:lattice_model",
@@ -712,7 +713,7 @@
       "to": "epipelagic_theta.self_dual_lattice_function",
       "kind": "boundary_dependency",
       "topic": "lattice_model",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:lattice_model",
@@ -726,7 +727,7 @@
       "to": "epipelagic_theta.tensor_dual_self_duality",
       "kind": "boundary_dependency",
       "topic": "lattice_model",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:lattice_model",
@@ -779,6 +780,18 @@
       "id": "classical-group",
       "title": "classical-group",
       "href": "keywords/classical-group.html",
+      "count": 1
+    },
+    {
+      "id": "conductor-p",
+      "title": "conductor-p",
+      "href": "keywords/conductor-p.html",
+      "count": 2
+    },
+    {
+      "id": "dual-lattice",
+      "title": "dual-lattice",
+      "href": "keywords/dual-lattice.html",
       "count": 1
     },
     {
@@ -851,7 +864,7 @@
       "id": "lattice-function",
       "title": "lattice-function",
       "href": "keywords/lattice-function.html",
-      "count": 14
+      "count": 15
     },
     {
       "id": "lattice-model",
@@ -899,6 +912,12 @@
       "id": "norm",
       "title": "norm",
       "href": "keywords/norm.html",
+      "count": 1
+    },
+    {
+      "id": "notation",
+      "title": "notation",
+      "href": "keywords/notation.html",
       "count": 1
     },
     {
@@ -1042,6 +1061,7 @@
     "epipelagic_theta.epipelagic_theta_main_proof_plan",
     "epipelagic_theta.epipelagic_theta_main_theorem",
     "epipelagic_theta.gl_building_lattice_functions",
+    "epipelagic_theta.hermitian_dual_lattice_conductor_p",
     "epipelagic_theta.invariant_subspace_rank_lemma",
     "epipelagic_theta.kac_vinberg_epipelagic_grading",
     "epipelagic_theta.lattice_function",

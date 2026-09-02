@@ -1,0 +1,44 @@
+{
+  "id": "finite_field_weil.lagrangian_transition_orthogonality",
+  "title": "Orthogonality of Change-of-Lagrangian Intertwiners",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_lagrangian_transition_orthogonality.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Orthogonality of Change-of-Lagrangian Intertwiners</h1>\n<p>Use the notation of <a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_intertwiner\" href=\"finite_field_weil_lagrangian_transition_intertwiner.html\">Change-of-Lagrangian Intertwiner for Finite Schrödinger Models</a>.\nThus \\(k\\) has odd order \\(q\\), \\((E,j)\\) is symplectic, \\(i=j/2\\), and\n\\(\\mathcal F_{L,L'}:\\mathcal S_{L'}\\to\\mathcal S_L\\) is</p>\n<p>$$\n(\\mathcal F_{L,L'}\\varphi)(v)\n=\n\\sum_{a\\in L/(L\\cap L')}\n\\xi(i(a,v))\\varphi(v+a).\n$$</p>\n<p>Let</p>\n<p>$$\nd_{L,L'}:=\\dim_k L/(L\\cap L')\n=m-\\dim_k(L\\cap L'),\n\\qquad \\dim_k E=2m.\n$$</p>\n<h2>Statement</h2>\n<p>For all Lagrangians \\(L,L'\\subset E\\),</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ \\mathcal F_{L',L}\n=\nq^{d_{L,L'}}\\operatorname{id}_{\\mathcal S_L}.\n$$</p>\n<p>After interchanging \\(L\\) and \\(L'\\), also</p>\n<p>$$\n\\mathcal F_{L',L}\\circ \\mathcal F_{L,L'}\n=\nq^{d_{L,L'}}\\operatorname{id}_{\\mathcal S_{L'}}.\n$$</p>\n<p>Hence \\(\\mathcal F_{L,L'}\\) is an isomorphism, with inverse</p>\n<p>$$\n\\mathcal F_{L,L'}^{-1}=q^{-d_{L,L'}}\\mathcal F_{L',L}.\n$$</p>",
+  "proof_html": "<p>Let \\(\\varphi\\in\\mathcal S_L\\).  Expanding the composition gives</p>\n<p>$$\n(\\mathcal F_{L,L'}\\mathcal F_{L',L}\\varphi)(v)\n=\n\\sum_{b\\in L/(L\\cap L')}\n\\xi(i(b,v))\n\\sum_{a\\in L'/(L\\cap L')}\n\\xi(i(a,v+b))\\varphi(v+b+a).\n$$</p>\n<p>Because \\(b\\in L\\), the \\(L\\)-covariance of \\(\\varphi\\) gives</p>\n<p>$$\n\\varphi(v+b+a)\n=\n\\varphi((v+a)+b)\n=\n\\xi(i(v+a,b))\\varphi(v+a).\n$$</p>\n<p>The total phase is</p>\n<p>$$\ni(b,v)+i(a,v+b)+i(v+a,b).\n$$</p>\n<p>Expanding and using alternation of \\(i\\),</p>\n<p>$$\n\\begin{aligned}\ni(b,v)+i(a,v+b)+i(v+a,b)\n&amp;=i(b,v)+i(a,v)+i(a,b)+i(v,b)+i(a,b)\\\\\n&amp;=i(a,v)+2i(a,b)\\\\\n&amp;=i(a,v)+j(a,b).\n\\end{aligned}\n$$</p>\n<p>Therefore</p>\n<p>$$\n(\\mathcal F_{L,L'}\\mathcal F_{L',L}\\varphi)(v)\n=\n\\sum_{a\\in L'/(L\\cap L')}\n\\xi(i(a,v))\\varphi(v+a)\n\\left(\\sum_{b\\in L/(L\\cap L')}\\xi(j(a,b))\\right).\n$$</p>\n<p>For fixed \\(a\\in L'\\), the map</p>\n<p>$$\n\\bar b\\longmapsto \\xi(j(a,b))\n$$</p>\n<p>is a character of the finite abelian group \\(L/(L\\cap L')\\).  It is trivial\nexactly when \\(j(a,L)=0\\).  Since \\(L\\) is Lagrangian, \\(L^\\perp=L\\); hence,\nfor \\(a\\in L'\\), this means \\(a\\in L\\cap L'\\).</p>\n<p>Here is the only point using that \\(\\xi\\) is nontrivial as an additive\ncharacter of \\(k\\).  If the \\(k\\)-linear functional \\(b\\mapsto j(a,b)\\) on\n\\(L\\) is nonzero, then its image is all of \\(k\\).  Since \\(\\xi\\) is not\ntrivial on \\(k\\), the composite \\(b\\mapsto \\xi(j(a,b))\\) is then a nontrivial\ncharacter of the additive group \\(L/(L\\cap L')\\).</p>\n<p>Thus the inner character sum is</p>\n<p>$$\n\\sum_{b\\in L/(L\\cap L')}\\xi(j(a,b))\n=\n\\begin{cases}\nq^{d_{L,L'}},&amp; a\\in L\\cap L',\\\\\n0,&amp; a\\notin L\\cap L'.\n\\end{cases}\n$$</p>\n<p>The vanishing in the nontrivial case is elementary: if \\(\\chi\\) is a\nnontrivial character of a finite abelian group \\(A\\), choose \\(a_0\\in A\\) with\n\\(\\chi(a_0)\\neq1\\).  For \\(S=\\sum_{a\\in A}\\chi(a)\\), translation by \\(a_0\\)\ngives \\(S=\\chi(a_0)S\\), so \\((\\chi(a_0)-1)S=0\\).  Since \\(R\\) is a field and\n\\(\\chi(a_0)\\neq1\\), one has \\(S=0\\).</p>\n<p>Only the zero coset in \\(L'/(L\\cap L')\\) survives.  Hence</p>\n<p>$$\n(\\mathcal F_{L,L'}\\mathcal F_{L',L}\\varphi)(v)\n=q^{d_{L,L'}}\\varphi(v).\n$$</p>\n<p>Repeating the same argument with \\(L\\) and \\(L'\\) interchanged gives</p>\n<p>$$\n\\mathcal F_{L',L}\\mathcal F_{L,L'}\n=\nq^{d_{L,L'}}\\operatorname{id}_{\\mathcal S_{L'}}.\n$$</p>\n<p>Since \\(q\\) is invertible in \\(R\\), the displayed two-sided identities show\nthat \\(\\mathcal F_{L,L'}\\) is invertible with the stated inverse. \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_intertwiner.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.compatible_lagrangian_transition_system",
+      "title": "Compatible System of Schrödinger-Model Intertwiners over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_compatible_lagrangian_transition_system.html"
+    },
+    {
+      "id": "finite_field_weil.finite_weil_index_cocycle",
+      "title": "Finite Weil-Index Cocycle for Lagrangian Transitions",
+      "href": "finite_field_weil/finite_field_weil_finite_weil_index_cocycle.html"
+    },
+    {
+      "id": "finite_field_weil.schrodinger_hom_line",
+      "title": "One-Dimensional Hom Line for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_schrodinger_hom_line.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

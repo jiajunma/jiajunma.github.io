@@ -1,0 +1,29 @@
+{
+  "id": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+  "title": "Hermitian Monoids For Self-Dual Endo-Classes",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_hermitian_monoids_for_self_dual_endo_classes.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>Hermitian Monoids For Self-Dual Endo-Classes</h1>\n<p>Fix a sign $\\varepsilon$ and an extension $F/F_0$ of degree at most $2$.</p>\n<p>For a self-dual extension $(E,\\beta)$ of $F/F_0$, let</p>\n<p>$$\n\\operatorname{herm}_{\\varepsilon}(E/E_0)\n$$</p>\n<p>be the monoid of isometry classes of $\\varepsilon$-Hermitian spaces over\n$E/E_0$.  It maps to the monoid of $E$-vector spaces by forgetting the\nHermitian form.</p>\n<p>For nonzero self-dual simple elements $\\beta,\\beta'$, the draft uses a unique\nbijection</p>\n<p>$$\n\\mathfrak w_{\\varepsilon,\\beta',\\beta}:\n\\operatorname{herm}_{\\varepsilon}(E/E_0)\n\\to\n\\operatorname{herm}_{\\varepsilon}(E'/E'_0)\n$$</p>\n<p>which preserves dimension and anisotropic dimension and satisfies</p>\n<p>$$\n\\mathfrak w_{-1,\\beta',\\beta}(E(\\beta))=E'(\\beta'),\n\\qquad\n\\mathfrak w_{1,\\beta',\\beta}(E(\\beta^2))=E'(\\beta'^2).\n$$</p>\n<p>For $\\beta=\\beta'=0$, the draft defines\n$\\mathfrak w_{\\varepsilon,0,0}$ to be the identity on\n$\\operatorname{herm}_{\\varepsilon}(F/F_0)$.</p>\n<p>For a self-dual endo-class $\\mathfrak c$, define\n$\\operatorname{herm}_{\\varepsilon}(\\mathfrak c)$ as equivalence classes\n$[\\beta,V]$, where $\\beta$ is a self-dual simple element supporting a\nps-character in $\\mathfrak c$ and\n$V\\in\\operatorname{herm}_{\\varepsilon}(F[\\beta]/F[\\beta]_0)$, modulo the\nidentifications $\\mathfrak w_{\\varepsilon,\\beta',\\beta}$ for similar\nself-dual extensions.</p>\n<p>For a non-self-dual endo-class $\\mathfrak c$, the draft sets</p>\n<p>$$\n\\operatorname{herm}_{\\varepsilon}(\\mathfrak c)\n=\n\\operatorname{vect}(\\mathfrak c).\n$$</p>\n<h2>Draft Caution</h2>\n<p>The TeX leaves a TODO about transfer on monoids of Hermitian spaces and the\nquaternionic case.  This node records the intended structure, not a verified\nclassification theorem.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "endo_parameters.self_dual_endo_classes",
+      "title": "Self-Dual Endo-Classes",
+      "href": "endo_parameters/endo_parameters_self_dual_endo_classes.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "endo_parameters.epsilon_sigma_endo_parameter",
+      "title": "Epsilon-Sigma Endo-Parameters",
+      "href": "endo_parameters/endo_parameters_epsilon_sigma_endo_parameter.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

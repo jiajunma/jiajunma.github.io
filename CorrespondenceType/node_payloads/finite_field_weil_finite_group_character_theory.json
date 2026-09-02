@@ -1,0 +1,28 @@
+{
+  "id": "finite_field_weil.finite_group_character_theory",
+  "title": "Finite Group Character Theory Basics",
+  "kind": "concept",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_finite_group_character_theory.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Finite Group Character Theory Basics</h1>\n<p>Standard facts from the ordinary (complex) representation theory of finite groups,\ncollected here as a reusable dependency for the finite Heisenberg–Weil nodes. Let\n\\(H\\) be a finite group and let representations be finite-dimensional over\n\\(\\mathbb C\\). For a representation \\(\\eta\\) of \\(H\\) write \\(\\chi_\\eta(h)=\\operatorname{tr}\\eta(h)\\)\nfor its character and \\(\\deg(\\eta)=\\chi_\\eta(1)\\) for its degree.</p>\n<ol>\n<li>\n<p><strong>Conjugation invariance.</strong> \\(\\operatorname{tr}\\big(\\eta(g)\\eta(h)\\eta(g)^{-1}\\big)=\\chi_\\eta(h)\\)\nfor all \\(g,h\\in H\\); in particular \\(\\chi_\\eta\\) is a class function.</p>\n</li>\n<li>\n<p><strong>Central scalars.</strong> If \\(Z\\) is the center of \\(H\\) and \\(\\eta|_Z=\\xi\\) is a\ncharacter of \\(Z\\) (i.e. \\(\\eta(z)=\\xi(z)\\,\\mathrm{id}\\) for \\(z\\in Z\\)), then\n\\(\\chi_\\eta(z)=\\xi(z)\\deg(\\eta)\\) and \\(|\\chi_\\eta(z)|=\\deg(\\eta)\\) for all \\(z\\in Z\\).</p>\n</li>\n<li>\n<p><strong>Irreducibility.</strong> The number\n\\(\\langle\\chi_\\eta,\\chi_\\eta\\rangle=\\tfrac{1}{|H|}\\sum_{h\\in H}|\\chi_\\eta(h)|^2\\)\nis a nonnegative integer, and \\(\\eta\\) is irreducible if and only if\n\\(\\langle\\chi_\\eta,\\chi_\\eta\\rangle=1\\).</p>\n</li>\n<li>\n<p><strong>Character determines representation.</strong> Two finite-dimensional representations\nof \\(H\\) are isomorphic if and only if they have the same character.</p>\n</li>\n<li>\n<p><strong>Induction.</strong> For a subgroup \\(A\\le H\\) and a representation \\(\\sigma\\) of \\(A\\),\nthe induced representation \\(\\operatorname{Ind}_A^H\\sigma\\) has degree\n\\([H:A]\\cdot\\deg(\\sigma)\\); and if \\(Z\\le A\\) with \\(Z\\) central in \\(H\\) and\n\\(\\sigma(z)=\\xi(z)\\,\\mathrm{id}\\) for \\(z\\in Z\\), then\n\\((\\operatorname{Ind}_A^H\\sigma)(z)=\\xi(z)\\,\\mathrm{id}\\) for \\(z\\in Z\\), i.e.\n\\(\\operatorname{Ind}_A^H\\sigma\\) also restricts to \\(\\xi\\) on \\(Z\\).</p>\n</li>\n</ol>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
+      "title": "Finite Heisenberg Central Character Criterion",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_central_character_criterion.html"
+    },
+    {
+      "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "title": "Finite Heisenberg Stone-von Neumann Property",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_stone_von_neumann.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

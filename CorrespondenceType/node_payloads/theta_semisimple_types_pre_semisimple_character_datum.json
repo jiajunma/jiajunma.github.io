@@ -1,0 +1,33 @@
+{
+  "id": "theta_semisimple_types.pre_semisimple_character_datum",
+  "title": "Pre-Semisimple Character Datum In The Theta Draft",
+  "kind": "definition",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_pre_semisimple_character_datum.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>Pre-Semisimple Character Datum In The Theta Draft</h1>\n<p>The current theta draft starts with a datum</p>\n<p>$$\n\\Sigma=(V,\\beta,\\phi)\n$$</p>\n<p>called a pre-semisimple character datum for the unitary group $G=U(V)$.  The\nTeX uses:</p>\n<ul>\n<li>a semisimple element $\\beta$;</li>\n<li>a character datum $\\phi$;</li>\n<li>the centralizer</li>\n</ul>\n<p>$$\nG^0=\\operatorname{Cent}_G(\\beta);\n$$</p>\n<ul>\n<li>for a point $x\\in B(G^0)$, an isotypic datum or representation denoted\n  $\\phi_{\\Sigma,x}$.</li>\n</ul>\n<p>The draft decomposes</p>\n<p>$$\n\\beta=\\bigoplus_i\\beta_i,\n\\qquad\nV=\\bigoplus_i V_i,\n\\qquad\n\\Sigma=\\bigoplus_i\\Sigma_i.\n$$</p>\n<p>It also writes</p>\n<p>$$\nG^0={}^+G^0\\times Z_G\n$$</p>\n<p>where $Z_G$ is the depth-zero block.</p>\n<h2>Draft Caution</h2>\n<p>Part III does not yet give a standalone formal definition of all allowed\ntriples $(V,\\beta,\\phi)$ or the construction of $\\phi_{\\Sigma,x}$.  This node\nrecords the data explicitly used by the theta draft.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "theta_semisimple_types.brick_decomposition",
+      "title": "Brick Decomposition For Semisimple Theta Data",
+      "href": "theta_semisimple_types/theta_semisimple_types_brick_decomposition.html"
+    },
+    {
+      "id": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+      "title": "The Subgroup H Sigma Plus And The Character Psi Beta",
+      "href": "theta_semisimple_types/theta_semisimple_types_h_sigma_plus_character_subgroup.html"
+    },
+    {
+      "id": "theta_semisimple_types.moment_map_condition",
+      "title": "Moment-Map Condition For Semisimple Theta Occurrence",
+      "href": "theta_semisimple_types/theta_semisimple_types_moment_map_condition.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

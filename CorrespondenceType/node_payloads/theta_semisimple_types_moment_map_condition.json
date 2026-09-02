@@ -1,0 +1,34 @@
+{
+  "id": "theta_semisimple_types.moment_map_condition",
+  "title": "Moment-Map Condition For Semisimple Theta Occurrence",
+  "kind": "concept",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_moment_map_condition.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>Moment-Map Condition For Semisimple Theta Occurrence</h1>\n<p>The theta draft uses the moment map</p>\n<p>$$\nM:W\\to\\mathfrak g\n$$</p>\n<p>and its counterpart $M'$ for the other member of the dual pair.</p>\n<p>Given a pre-semisimple character datum $\\Sigma=(V,\\beta,\\phi)$, the basic\noccurrence condition is the existence of an element $w\\in W$ such that</p>\n<p>$$\nM(w)=\\beta.\n$$</p>\n<p>When such a $w$ is fixed, the target semisimple datum is intended to have</p>\n<p>$$\n\\beta'=-M'(w).\n$$</p>\n<p>For a brick decomposition $\\beta=\\bigoplus_i\\beta_i$, the draft writes</p>\n<p>$$\nw=\\sum_i w_i,\n\\qquad\nV'_i:=w_iV_i.\n$$</p>\n<h2>Draft Caution</h2>\n<p>The current TeX uses cited single-brick and multi-brick facts to justify\nnondegeneracy of $V'_i$ and blockwise decompositions of $V'$.  Those facts are\nnot proved inside the current theta draft.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "theta_semisimple_types.pre_semisimple_character_datum",
+      "title": "Pre-Semisimple Character Datum In The Theta Draft",
+      "href": "theta_semisimple_types/theta_semisimple_types_pre_semisimple_character_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "title": "Occurrence Propositions For Semisimple Types",
+      "href": "theta_semisimple_types/theta_semisimple_types_semisimple_type_occurrence_propositions.html"
+    },
+    {
+      "id": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "title": "Target Building Point From w And The Depth-Zero Point",
+      "href": "theta_semisimple_types/theta_semisimple_types_target_building_point_from_w_and_depth_zero_point.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

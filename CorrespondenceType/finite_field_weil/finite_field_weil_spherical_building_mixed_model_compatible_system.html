@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compatible System of Mixed Schrödinger Models on the Spherical Building — Correspondence of Type Blueprint</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\superset": "\u2283"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">CorrespondenceType</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../endo_parameters/index.html">Endo Parameters</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../epipelagic_theta/index.html">Epipelagic Theta</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../finite_field_weil/index.html">Finite Field Weil</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../lattice_model/index.html">Lattice Model</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../lattice_model_transition/index.html">Lattice Model Transition</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../supercuspidal_theta/index.html">Supercuspidal Theta</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../tame_covers/index.html">Tame Covers</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../theta_semisimple_types/index.html">Theta Semisimple Types</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <input type="search" id="keyword-search" class="keyword-search"
+             placeholder="Search 149 keywords…"
+             aria-controls="keyword-list" autocomplete="off">
+      <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/appendix.html">appendix</a></li>
+      
+        <li><a href="../keywords/based-extension.html">based-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/brick-decomposition.html">brick-decomposition</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/canonical.html">canonical</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/character-formula.html">character-formula</a></li>
+      
+        <li><a href="../keywords/characters.html">characters</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/classical-groups.html">classical-groups</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/compact-induction.html">compact-induction</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/conductor-p.html">conductor-p</a></li>
+      
+        <li><a href="../keywords/converse.html">converse</a></li>
+      
+        <li><a href="../keywords/covering-group.html">covering-group</a></li>
+      
+        <li><a href="../keywords/data-lift.html">data-lift</a></li>
+      
+        <li><a href="../keywords/depth-preservation.html">depth-preservation</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/determinant-character.html">determinant-character</a></li>
+      
+        <li><a href="../keywords/direct-sum.html">direct-sum</a></li>
+      
+        <li><a href="../keywords/dual-lattice.html">dual-lattice</a></li>
+      
+        <li><a href="../keywords/endo-class.html">endo-class</a></li>
+      
+        <li><a href="../keywords/endo-parameters.html">endo-parameters</a></li>
+      
+        <li><a href="../keywords/epipelagic.html">epipelagic</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
+      
+        <li><a href="../keywords/finite-field.html">finite-field</a></li>
+      
+        <li><a href="../keywords/finite-field-weil.html">finite-field-weil</a></li>
+      
+        <li><a href="../keywords/finite-quadratic-module.html">finite-quadratic-module</a></li>
+      
+        <li><a href="../keywords/finite-reductive-quotient.html">finite-reductive-quotient</a></li>
+      
+        <li><a href="../keywords/first-occurrence.html">first-occurrence</a></li>
+      
+        <li><a href="../keywords/formalization.html">formalization</a></li>
+      
+        <li><a href="../keywords/gauss-sum.html">gauss-sum</a></li>
+      
+        <li><a href="../keywords/general-linear.html">general-linear</a></li>
+      
+        <li><a href="../keywords/general-linear-group.html">general-linear-group</a></li>
+      
+        <li><a href="../keywords/generalized-lattice-model.html">generalized-lattice-model</a></li>
+      
+        <li><a href="../keywords/genuine-representation.html">genuine-representation</a></li>
+      
+        <li><a href="../keywords/geometric-lemma.html">geometric-lemma</a></li>
+      
+        <li><a href="../keywords/gerardin.html">gerardin</a></li>
+      
+        <li><a href="../keywords/gerardin-reduction.html">gerardin-reduction</a></li>
+      
+        <li><a href="../keywords/good-element.html">good-element</a></li>
+      
+        <li><a href="../keywords/good-factorization.html">good-factorization</a></li>
+      
+        <li><a href="../keywords/good-lattice.html">good-lattice</a></li>
+      
+        <li><a href="../keywords/graph.html">graph</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-group.html">heisenberg-group</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-space.html">hermitian-space</a></li>
+      
+        <li><a href="../keywords/howe-factorization.html">howe-factorization</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariant-theory.html">invariant-theory</a></li>
+      
+        <li><a href="../keywords/isotropic.html">isotropic</a></li>
+      
+        <li><a href="../keywords/isotypic-component.html">isotypic-component</a></li>
+      
+        <li><a href="../keywords/iwahori.html">iwahori</a></li>
+      
+        <li><a href="../keywords/jumps.html">jumps</a></li>
+      
+        <li><a href="../keywords/k-type.html">k-type</a></li>
+      
+        <li><a href="../keywords/kac-vinberg.html">kac-vinberg</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kim-exhaustion.html">kim-exhaustion</a></li>
+      
+        <li><a href="../keywords/lagrangian.html">lagrangian</a></li>
+      
+        <li><a href="../keywords/langlands-parameters.html">langlands-parameters</a></li>
+      
+        <li><a href="../keywords/lattice-function.html">lattice-function</a></li>
+      
+        <li><a href="../keywords/lattice-model.html">lattice-model</a></li>
+      
+        <li><a href="../keywords/lattice-model-transition.html">lattice-model-transition</a></li>
+      
+        <li><a href="../keywords/lean.html">lean</a></li>
+      
+        <li><a href="../keywords/linearization.html">linearization</a></li>
+      
+        <li><a href="../keywords/locally-profinite.html">locally-profinite</a></li>
+      
+        <li><a href="../keywords/main-formula.html">main-formula</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
+        <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
+      
+        <li><a href="../keywords/metaplectic-splitting.html">metaplectic-splitting</a></li>
+      
+        <li><a href="../keywords/milestone-a.html">milestone-a</a></li>
+      
+        <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
+      
+        <li><a href="../keywords/mixed-model.html">mixed-model</a></li>
+      
+        <li><a href="../keywords/moment-map.html">moment-map</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
+      
+        <li><a href="../keywords/normalization.html">normalization</a></li>
+      
+        <li><a href="../keywords/notation.html">notation</a></li>
+      
+        <li><a href="../keywords/occurrence.html">occurrence</a></li>
+      
+        <li><a href="../keywords/off-diagonal.html">off-diagonal</a></li>
+      
+        <li><a href="../keywords/one-block.html">one-block</a></li>
+      
+        <li><a href="../keywords/open-point.html">open-point</a></li>
+      
+        <li><a href="../keywords/orthogonality.html">orthogonality</a></li>
+      
+        <li><a href="../keywords/oscillator-representation.html">oscillator-representation</a></li>
+      
+        <li><a href="../keywords/p-adic-classical-groups.html">p-adic-classical-groups</a></li>
+      
+        <li><a href="../keywords/pan-theorem.html">pan-theorem</a></li>
+      
+        <li><a href="../keywords/parabolic.html">parabolic</a></li>
+      
+        <li><a href="../keywords/positive-depth.html">positive-depth</a></li>
+      
+        <li><a href="../keywords/problem-input.html">problem-input</a></li>
+      
+        <li><a href="../keywords/projective-representation.html">projective-representation</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/ps-character.html">ps-character</a></li>
+      
+        <li><a href="../keywords/radical.html">radical</a></li>
+      
+        <li><a href="../keywords/rank-restriction.html">rank-restriction</a></li>
+      
+        <li><a href="../keywords/reference-frame.html">reference-frame</a></li>
+      
+        <li><a href="../keywords/representation-theory.html">representation-theory</a></li>
+      
+        <li><a href="../keywords/residual-moment-map.html">residual-moment-map</a></li>
+      
+        <li><a href="../keywords/residual-vector-space.html">residual-vector-space</a></li>
+      
+        <li><a href="../keywords/residue-characteristic.html">residue-characteristic</a></li>
+      
+        <li><a href="../keywords/schrodinger-model.html">schrodinger-model</a></li>
+      
+        <li><a href="../keywords/schur-lemma.html">schur-lemma</a></li>
+      
+        <li><a href="../keywords/self-dual.html">self-dual</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/semisimple-element.html">semisimple-element</a></li>
+      
+        <li><a href="../keywords/skew-hermitian.html">skew-hermitian</a></li>
+      
+        <li><a href="../keywords/smooth-representation.html">smooth-representation</a></li>
+      
+        <li><a href="../keywords/spherical-building.html">spherical-building</a></li>
+      
+        <li><a href="../keywords/splitting.html">splitting</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stable-vector.html">stable-vector</a></li>
+      
+        <li><a href="../keywords/stone-von-neumann.html">stone-von-neumann</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/symplectic.html">symplectic</a></li>
+      
+        <li><a href="../keywords/symplectic-facet.html">symplectic-facet</a></li>
+      
+        <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-group.html">symplectic-group</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
+      
+        <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
+      
+        <li><a href="../keywords/tame-base-change.html">tame-base-change</a></li>
+      
+        <li><a href="../keywords/tame-covers.html">tame-covers</a></li>
+      
+        <li><a href="../keywords/tensor-product.html">tensor-product</a></li>
+      
+        <li><a href="../keywords/test-vector.html">test-vector</a></li>
+      
+        <li><a href="../keywords/theta-correspondence.html">theta-correspondence</a></li>
+      
+        <li><a href="../keywords/theta-lift.html">theta-lift</a></li>
+      
+        <li><a href="../keywords/theta-semisimple-types.html">theta-semisimple-types</a></li>
+      
+        <li><a href="../keywords/transition-map.html">transition-map</a></li>
+      
+        <li><a href="../keywords/trivialization.html">trivialization</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/type-i-dual-pair.html">type-i-dual-pair</a></li>
+      
+        <li><a href="../keywords/uniqueness.html">uniqueness</a></li>
+      
+        <li><a href="../keywords/unitary.html">unitary</a></li>
+      
+        <li><a href="../keywords/weil-index.html">weil-index</a></li>
+      
+        <li><a href="../keywords/weil-representation.html">weil-representation</a></li>
+      
+        <li><a href="../keywords/well-definedness.html">well-definedness</a></li>
+      
+        <li><a href="../keywords/wild-inertia.html">wild-inertia</a></li>
+      
+        <li><a href="../keywords/witt-tower.html">witt-tower</a></li>
+      
+        <li><a href="../keywords/yu-data.html">yu-data</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-finite_field_weil-2e-spherical_building_mixed_model_compatible_system">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Compatible System of Mixed Schrödinger Models on the Spherical Building</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-finite_field_weil-2e-spherical_building_mixed_model_compatible_system">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="finite_field_weil_symplectic_heisenberg_group.html">Symplectic Heisenberg Group over a Finite Field</a></li>
+        
+        <li><a href="finite_field_weil_finite_heisenberg_stone_von_neumann.html">Finite Heisenberg Stone-von Neumann Property</a></li>
+        
+        <li><a href="finite_field_weil_symplectic_weil_representation.html">Symplectic Weil Representation over a Finite Field</a></li>
+        
+        <li><a href="finite_field_weil_gerardin_symplectic_weil_linearization.html">Gérardin Linearization of the Finite Symplectic Weil Cocycle</a></li>
+        
+        <li><a href="finite_field_weil_weil_index_trivialization.html">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a></li>
+        
+        <li><a href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a></li>
+        
+        <li><a href="../supercuspidal_theta/supercuspidal_theta_finite_field_heisenberg_weil_mixed_model.html">Finite-Field Heisenberg-Weil Mixed Model</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Compatible System of Mixed Schrödinger Models on the Spherical Building</h1>
+<p>This node extends the Lagrangian compatible system of
+<a class="node-ref" data-node-id="finite_field_weil.compatible_lagrangian_transition_system" href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a> from chambers to <strong>all facets</strong> of the spherical
+building of a finite symplectic group, using the Gérardin mixed model attached to a parabolic. It is the finite-field
+prototype of the compatible system one wants on the $p$-adic Bruhat–Tits side.</p>
+<h2>What a "compatible system" is, in one paragraph</h2>
+<p>For each facet $\mathbf F$ we have a concrete model $\mathcal M_{\mathbf F}$ of the unique abstract Weil
+representation $V$. The collection $\{\mathcal M_{\mathbf F}\}_{\mathbf F}$ is <em>a priori</em> a "discrete bundle" of
+vector spaces over the facet poset, with each fiber isomorphic to $V$ only abstractly (Schur gives a
+one-dimensional Hom for every ordered pair, with no canonical generator). A <strong>compatible system</strong> is a
+coherent choice of canonical generators of all these Hom-lines — equivalently, a family</p>
+<p>$$\widetilde T_{\mathbf F,\mathbf E}\colon\mathcal M_{\mathbf E}\overset{\sim}{\longrightarrow}\mathcal M_{\mathbf F}\qquad(\text{for all ordered pairs of facets})$$</p>
+<p>satisfying identity on the diagonal, cocycle composition (middle index cancels), inverse on the swap, and
+$G$-equivariance. Such a family <strong>trivializes</strong> the discrete bundle: it identifies every $\mathcal M_{\mathbf F}$
+with a single ambient $V$. The theorem below says this trivialization exists and is unique up to per-facet
+rescaling, and the only essential input is <strong>Gérardin's linearization theorem</strong> at every relevant rank — the
+input that fails on the $p$-adic side and forces the genuine metaplectic cover there.</p>
+<h2>Setup</h2>
+<p>Let $k=\mathbb F_q$ be a finite field of odd order $q$ and residue characteristic $p$. Let $(E,j)$ be a nondegenerate
+symplectic $k$-space of dimension $2m$, $i=j/2$, $H(E,j)$ its Heisenberg group, $G=\operatorname{Sp}(E,j)$, and
+$\xi\colon k\to R^{\times}$ a nontrivial character. The coefficient field $R$ has $\operatorname{char}R\neq p$, contains
+the values of $\xi$, and is a splitting field for the relevant finite Heisenberg groups.</p>
+<p>The spherical building $\Delta(G)$ has facets indexed by isotropic flags</p>
+<p>$$\mathbf F\colon\ C_1\subsetneq C_2\subsetneq\cdots\subsetneq C_r,\qquad C_i\subseteq C_i^{\perp},\ 1\leq r\leq m,$$</p>
+<p>with convention $C_0=0$; the stabilizer $P_{\mathbf F}=\operatorname{Stab}_G(\mathbf F)$ is the parabolic of $\mathbf F$,
+with Levi $\prod_{i=1}^{r}\operatorname{GL}(C_i/C_{i-1})\times\operatorname{Sp}(E_{C_r})$ where $E_{C}:=C^\perp/C$.
+Chambers are saturated flags ending in a Lagrangian. The face relation is sub-flag inclusion:
+$\mathbf F\leq\mathbf E$ iff $\mathbf F$ is obtained from $\mathbf E$ by removing some elements of the flag; in
+particular the maximal element of $\mathbf F$ is a subspace of the maximal element of $\mathbf E$.</p>
+<p><strong>Rank hypothesis.</strong> For every rank $2k$ that appears in the recursion below
+($0\leq k\leq m-\dim C_r$ as $\mathbf F$ ranges over the facets), the group $\operatorname{Sp}_{2k}(k)$ is perfect.
+This excludes $(k,q)\in\{(1,2),(1,3),(2,2)\}$; in particular it is automatic for $q\geq 5$ or for $m\geq 3$.</p>
+<p>Recursively define $W_\xi^{E_C}$ for each isotropic $C\subseteq E$ to be the canonical <strong>linear</strong> Weil representation
+of $\operatorname{Sp}(E_C)$ from <a class="node-ref" data-node-id="finite_field_weil.gerardin_symplectic_weil_linearization" href="finite_field_weil_gerardin_symplectic_weil_linearization.html">Gérardin Linearization of the Finite Symplectic Weil Cocycle</a>; the rank hypothesis
+ensures uniqueness. Write $\eta_\xi^{E_C}$ for its Heisenberg action of $H(E_C)$. The base $V=W_\xi^E$ has
+dimension $q^m$.</p>
+<h2>The mixed model at a facet</h2>
+<p>For a facet $\mathbf F$ with maximal isotropic $C=C_r$, define</p>
+<p>$$
+\mathcal M_{\mathbf F}\;:=\;\Big\{\varphi\colon E\to W_\xi^{E_C}\ \big|\ \varphi(v+x)=\xi\!\big(i(v,x)\big)\,\eta_\xi^{E_C}(\bar x)\,\varphi(v)\ \forall x\in C^{\perp}\Big\},
+$$</p>
+<p>where $\bar x$ is the image of $x$ in $E_C=C^\perp/C$. The standard $H(E,j)$-action</p>
+<p>$$
+\big(\eta_\xi(u,s)\varphi\big)(v)=\xi\!\big(s+i(u,v)\big)\,\varphi(v-u)
+$$</p>
+<p>preserves $\mathcal M_{\mathbf F}$, and the Levi acts canonically: each $\operatorname{GL}(C_i/C_{i-1})$ acts on the
+coset variable through Gérardin's quadratic determinant character $\chi_{C_i/C_{i-1}}$, while $\operatorname{Sp}(E_C)$
+acts on the values via $W_\xi^{E_C}$. Counting dimensions,</p>
+<p>$$\dim_R\mathcal M_{\mathbf F}=[E:C^{\perp}]\cdot\dim_R W_\xi^{E_C}=q^{\dim C}\cdot q^{m-\dim C}=q^{m},$$</p>
+<p>so each $\mathcal M_{\mathbf F}$ is a full model of the irreducible $V$. By induction-in-stages,
+$\mathcal M_{\mathbf F}\cong\operatorname{ind}_{H(C_r^{\perp})}^{H(E,j)}W_\xi^{E_{C_r}}$ — Gérardin's parabolic-induction
+description of the mixed model.</p>
+<h2>Canonical intertwiners: explicit on one direction</h2>
+<p>For any ordered pair of facets we use the convention</p>
+<p>$$\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}\colon\mathcal M_{\mathbf E}\longrightarrow\mathcal M_{\mathbf F},$$</p>
+<p>so that composition cancels the middle index. Schur on the irreducible $V$ gives
+$\dim_R\operatorname{Hom}_{H(E,j)}(\mathcal M_{\mathbf E},\mathcal M_{\mathbf F})=1$, hence
+$\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}$ is determined up to a unique nonzero scalar.</p>
+<p><strong>Incident pair, the pointwise direction.</strong> Let $\mathbf F\leq\mathbf E$ with $C_r:=\max\mathbf F\subseteq C_s:=\max\mathbf E$.
+The Gérardin reduction at the smaller rank gives a canonical surjective $H(E_{C_s})$-equivariant projection</p>
+<p>$$\rho_{C_s/C_r}\colon W_\xi^{E_{C_r}}\twoheadrightarrow W_\xi^{E_{C_s}}$$</p>
+<p>onto the $C_s/C_r$-invariants (up to Gérardin's $\chi$-twist on the Levi quotient). The pointwise formula</p>
+<p>$$
+\boxed{\;\mathcal F^{\mathrm{mix}}_{\mathbf E,\mathbf F}\colon\mathcal M_{\mathbf F}\longrightarrow\mathcal M_{\mathbf E},\qquad
+\varphi\longmapsto\rho_{C_s/C_r}\circ\varphi\;}
+$$</p>
+<p>is a well-defined $H(E,j)$-isomorphism. <strong>The map goes from the smaller-isotropic mixed model to the
+bigger-isotropic one</strong>, not the reverse. To check well-definedness: for $x\in C_s^{\perp}\subseteq C_r^{\perp}$ the
+covariance of $\varphi$ gives $\varphi(v+x)=\xi(i(v,x))\,\eta_\xi^{E_{C_r}}(\bar x_{E_{C_r}})\varphi(v)$; applying
+$\rho_{C_s/C_r}$ and using $\bar x_{E_{C_r}}\in(C_s/C_r)^{\perp}\subseteq E_{C_r}$ gives the corresponding
+$E_{C_s}$-covariance of $\rho_{C_s/C_r}\circ\varphi$, which is exactly the covariance defining
+$\mathcal M_{\mathbf E}$. Bijectivity follows from Schur on irreducibles since the dimensions agree at $q^m$.</p>
+<p><strong>Incident pair, the abstract direction.</strong> The reverse map</p>
+<p>$$\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}\colon\mathcal M_{\mathbf E}\longrightarrow\mathcal M_{\mathbf F}$$</p>
+<p>is the inverse of the pointwise reduction. It exists and is canonical by Schur, but it is <strong>not</strong> pointwise — the
+naive "$\psi\mapsto\iota\circ\psi$" using a section $\iota$ of $\rho_{C_s/C_r}$ would land in a function with
+$C_s^{\perp}$-covariance only, not the $C_r^{\perp}$-covariance demanded by $\mathcal M_{\mathbf F}$. The explicit
+inverse is the parabolic induction-in-stages unfolding: write $\varphi(v)\in W_\xi^{E_{C_r}}$ via the Gérardin
+realization of $W_\xi^{E_{C_r}}$ as functions $E_{C_r}\to W_\xi^{E_{C_s}}$ with $(C_s/C_r)^{\perp}$-covariance, then
+the value $\varphi(v)$ at the coset of $\bar c\in C_s/C_r\subseteq E_{C_r}$ is determined by $\psi(v+c)$ for $c\in C_s$
+lifting $\bar c$, up to a Heisenberg phase. The cleanest concrete unfolding is via the Lagrangian-collapse
+identification below.</p>
+<p><strong>Non-incident pair.</strong> For general $\mathbf F,\mathbf E$ the canonical $\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}$
+is defined by composing pointwise reductions and their inverses along any chain in the facet poset from $\mathbf E$
+to $\mathbf F$; chain-independence is forced by the cocycle property below.</p>
+<h2>Composition cocycle</h2>
+<p>There are unique $\Gamma(\mathbf F,\mathbf E,\mathbf G)\in R^{\times}$ such that</p>
+<p>$$\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}\circ\mathcal F^{\mathrm{mix}}_{\mathbf E,\mathbf G}\;=\;\Gamma(\mathbf F,\mathbf E,\mathbf G)\,\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf G},$$</p>
+<p>and $\Gamma$ satisfies the standard $2$-cocycle identity by associativity, verbatim as in
+<a class="node-ref" data-node-id="finite_field_weil.weil_index_trivialization" href="finite_field_weil_weil_index_trivialization.html">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a>:</p>
+<p>$$\Gamma(\mathbf A,\mathbf B,\mathbf C)\,\Gamma(\mathbf A,\mathbf C,\mathbf D)=\Gamma(\mathbf B,\mathbf C,\mathbf D)\,\Gamma(\mathbf A,\mathbf B,\mathbf D).$$</p>
+<h2>Statement</h2>
+<ol>
+<li>
+<p><strong>(Trivialization.)</strong> Fix any base facet $\mathbf F_0$ (e.g. the empty flag, the facet with no $C_i$'s) and set
+   $c_{\mathbf F,\mathbf E}:=\Gamma(\mathbf F,\mathbf E,\mathbf F_0)$. Then $\Gamma=\delta c$, and
+   $$
+   \widetilde T_{\mathbf F,\mathbf E}\;:=\;c_{\mathbf F,\mathbf E}^{-1}\,\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}\;\colon\;\mathcal M_{\mathbf E}\overset{\sim}{\longrightarrow}\mathcal M_{\mathbf F}
+   $$
+   is an exact cocycle of $H(E,j)$-isomorphisms:
+   $$
+   \widetilde T_{\mathbf F,\mathbf F}=\operatorname{id}_{\mathcal M_{\mathbf F}},\quad \widetilde T_{\mathbf F,\mathbf E}\circ\widetilde T_{\mathbf E,\mathbf G}=\widetilde T_{\mathbf F,\mathbf G},\quad \widetilde T_{\mathbf E,\mathbf F}=\widetilde T_{\mathbf F,\mathbf E}^{-1}.
+   $$</p>
+</li>
+<li>
+<p><strong>($G$-equivariance.)</strong> Under the rank hypothesis the system can be chosen $G$-equivariant:
+   $g\,\widetilde T_{\mathbf F,\mathbf E}\,g^{-1}=\widetilde T_{g\mathbf F,g\mathbf E}$ for $g\in G$.</p>
+</li>
+<li>
+<p><strong>(Uniqueness.)</strong> Any other system of $H(E,j)$-equivariant isomorphisms
+   $T'_{\mathbf F,\mathbf E}\colon\mathcal M_{\mathbf E}\to\mathcal M_{\mathbf F}$ satisfying the compatibility differs
+   from $\widetilde T$ only by per-facet rescaling: there are $\nu_{\mathbf F}\in R^{\times}$ with
+   $T'_{\mathbf F,\mathbf E}=(\nu_{\mathbf E}/\nu_{\mathbf F})\widetilde T_{\mathbf F,\mathbf E}$.</p>
+</li>
+</ol>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p><strong>Cocycle trivialization.</strong> Applying the $2$-cocycle identity of $\Gamma$ to the quadruple
+$(\mathbf F,\mathbf E,\mathbf G,\mathbf F_0)$ gives</p>
+<p>$$
+\Gamma(\mathbf F,\mathbf E,\mathbf G)\,\Gamma(\mathbf F,\mathbf G,\mathbf F_0)=\Gamma(\mathbf E,\mathbf G,\mathbf F_0)\,\Gamma(\mathbf F,\mathbf E,\mathbf F_0),
+$$</p>
+<p>so $\Gamma(\mathbf F,\mathbf E,\mathbf G)=c_{\mathbf F,\mathbf E}\,c_{\mathbf E,\mathbf G}\,c_{\mathbf F,\mathbf G}^{-1}$,
+i.e. $\Gamma=\delta c$ as $1$-cochain coboundary. Substituting into
+$\widetilde T=c^{-1}\mathcal F^{\mathrm{mix}}$ gives</p>
+<p>$$\widetilde T_{\mathbf F,\mathbf E}\circ\widetilde T_{\mathbf E,\mathbf G}=\frac{\Gamma(\mathbf F,\mathbf E,\mathbf G)}{c_{\mathbf F,\mathbf E}\,c_{\mathbf E,\mathbf G}}\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf G}=c_{\mathbf F,\mathbf G}^{-1}\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf G}=\widetilde T_{\mathbf F,\mathbf G}.$$</p>
+<p>Diagonal: $c_{\mathbf F,\mathbf F}=\Gamma(\mathbf F,\mathbf F,\mathbf F_0)=1$ because
+$\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf F}=\operatorname{id}$. Inverse: taking $\mathbf G=\mathbf F$ in the
+composition law gives $\widetilde T_{\mathbf E,\mathbf F}=\widetilde T_{\mathbf F,\mathbf E}^{-1}$.</p>
+<p><strong>$G$-equivariance.</strong> The cocycle $\Gamma$ is $G$-invariant because the pointwise reductions $\rho_{C_s/C_r}$ are
+natural in the symplectic data and $G$ permutes facets. Under the rank hypothesis and
+<a class="node-ref" data-node-id="finite_field_weil.gerardin_symplectic_weil_linearization" href="finite_field_weil_gerardin_symplectic_weil_linearization.html">Gérardin Linearization of the Finite Symplectic Weil Cocycle</a>, each value representation $W_\xi^{E_C}$ is the
+unique linear $\operatorname{Sp}(E_C)$-representative of its class; hence
+$\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}$ is $G$-equivariant on the nose, and the same is true of
+$\widetilde T$ after the coboundary rescaling.</p>
+<p><strong>Uniqueness.</strong> Let $T'$ be another compatible system. Since each Hom-line is one-dimensional, there are unique
+$\mu_{\mathbf F,\mathbf E}\in R^{\times}$ with $T'_{\mathbf F,\mathbf E}=\mu_{\mathbf F,\mathbf E}\,\widetilde T_{\mathbf F,\mathbf E}$.
+The compatibility of both $T'$ and $\widetilde T$ forces $\mu_{\mathbf F,\mathbf E}\,\mu_{\mathbf E,\mathbf G}=\mu_{\mathbf F,\mathbf G}$
+and $\mu_{\mathbf F,\mathbf F}=1$. Fix any base $\mathbf B$ and set $\nu_{\mathbf F}:=\mu_{\mathbf F,\mathbf B}$; taking
+$(\mathbf F,\mathbf E,\mathbf B)$ in the cocycle gives $\mu_{\mathbf F,\mathbf E}=\nu_{\mathbf F}/\nu_{\mathbf E}$. So
+$T'_{\mathbf F,\mathbf E}=(\nu_{\mathbf F}/\nu_{\mathbf E})\widetilde T_{\mathbf F,\mathbf E}$, which under the
+convention $\widetilde T\colon\mathcal M_{\mathbf E}\to\mathcal M_{\mathbf F}$ is the relabeling of each
+$\mathcal M_{\mathbf F}$ by the scalar $\nu_{\mathbf F}$. $\square$</p>
+<h2>Concrete realization: Lagrangian collapse</h2>
+<p>For computation, the abstract direction $\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}\colon\mathcal M_{\mathbf E}\to\mathcal M_{\mathbf F}$
+(which is not pointwise) is best replaced by the <strong>fully concrete Schrödinger model</strong>. Assign to each facet
+$\mathbf F$ a <strong>Lagrangian extension</strong> $L_{\mathbf F}\supseteq C_r^{\mathbf F}$ (equivalently, a chamber refining
+$\mathbf F$). By induction-in-stages,</p>
+<p>$$
+\mathcal M_{\mathbf F}\;=\;\operatorname{ind}_{H(C_r^\perp)}^{H(E)}\,\operatorname{ind}_{\bar L_{\mathbf F}\times k}^{H(E_{C_r})}\bar\xi\;=\;\operatorname{ind}_{L_{\mathbf F}\times k}^{H(E)}\xi\;=\;\mathcal S_{L_{\mathbf F}},
+$$</p>
+<p>where $\bar L_{\mathbf F}=L_{\mathbf F}/C_r$ is the descended Lagrangian of $E_{C_r}$. So the mixed model <strong>is</strong> the
+ordinary Schrödinger model on the chosen Lagrangian, the recursive value-space data unfolds into ordinary
+$L_{\mathbf F}$-covariance, and</p>
+<p>$$
+\widetilde T_{\mathbf F,\mathbf E}\;=\;\widetilde{\mathcal F}_{L_{\mathbf F},L_{\mathbf E}}
+$$</p>
+<p>from <a class="node-ref" data-node-id="finite_field_weil.compatible_lagrangian_transition_system" href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a>, with an explicit character-sum kernel in
+both directions. The Lagrangian assignment $\mathbf F\mapsto L_{\mathbf F}$ is a gauge: different assignments yield
+equivalent compatible systems by part 3 above.</p>
+<h2>Recovering the chamber case</h2>
+<p>For a chamber $\mathbf F$ ending in Lagrangian $L=C_m$, $L_{\mathbf F}=L$ is forced,
+$\mathcal M_{\mathbf F}=\mathcal S_L$, and
+$\widetilde T_{\mathbf F,\mathbf E}=\widetilde{\mathcal F}_{L,L'}$ exactly as in the Lagrangian theorem. The
+spherical-building theorem is thus a strict extension of the Lagrangian theorem from chambers to all facets,
+realized through the parabolic structure of $P_{\mathbf F}$.</p>
+<h2>Role of odd characteristic and Gérardin's linearization</h2>
+<p>Odd characteristic provides $i=j/2$ and $q\in R^{\times}$, exactly as for the Lagrangian theorem. The new ingredient
+at the facet level is the <strong>recursive use of Gérardin's linearization theorem</strong> at every rank $2k$ that appears as
+$E_C$ for some isotropic $C\subseteq E$. At each rank the linear lift exists and is unique by perfectness (the rank
+hypothesis), so the value spaces $W_\xi^{E_C}$ are canonically determined and the canonical intertwiners propagate
+without projective ambiguity. Without this input, only the projective system of intertwiners exists (one Hom-line
+per pair, no preferred generator), and the theorem reduces to the <em>existence</em> of a compatible system rather than
+a canonical one.</p>
+<p>This is the input that fails on the $p$-adic side: the metaplectic cover
+$\operatorname{Mp}(W)\to\operatorname{Sp}(W)$ is a genuine nontrivial extension, the linearization is unavailable,
+and the residue is the genuine splitting character $\delta$.</p>
+<h2>What this is for</h2>
+<p>This is the finite-field model of the Bruhat–Tits compatible system one wants in the $p$-adic generalized
+lattice-model transition problem: facets ↔ generalized lattice models, parabolics ↔ parahorics, mixed model on
+values ↔ oscillator-rep coefficients at the residual symplectic. The finite-field statement carries no metaplectic
+obstruction; the $p$-adic counterpart will carry the genuine splitting character $\delta$ as its only residue.</p>
+<h2>Summary of corrections from the previous version</h2>
+<p>The earlier draft had the explicit pointwise formula in the wrong direction: it claimed
+$\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}=\iota_{C_s/C_r}\circ(-)$ pointwise from $\mathcal M_{\mathbf E}$ to
+$\mathcal M_{\mathbf F}$, but this map fails the $C_r^{\perp}$-covariance demanded by $\mathcal M_{\mathbf F}$
+(its image carries only $C_s^{\perp}$-covariance). The corrected pointwise formula uses the <strong>Gérardin reduction</strong>
+$\rho_{C_s/C_r}$ instead of an inclusion, and goes the <strong>other way</strong>:
+$\mathcal F^{\mathrm{mix}}_{\mathbf E,\mathbf F}=\rho_{C_s/C_r}\circ(-)\colon\mathcal M_{\mathbf F}\to\mathcal M_{\mathbf E}$.
+The reverse direction $\mathcal F^{\mathrm{mix}}_{\mathbf F,\mathbf E}$ is canonical by Schur but not pointwise; the
+Lagrangian collapse below makes it concretely computable via a character sum.</p>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="finite_field_weil_spherical_building_canonical_mixed_model.html">Canonical Mixed Model on the Spherical Building via Gérardin Reduction</a></li>
+      
+      <li><a href="finite_field_weil_spherical_building_reference_frame.html">Lagrangian Reference Frame for the Spherical-Building Compatible System</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">finite-field</span><span class="tag">weil-representation</span><span class="tag">spherical-building</span><span class="tag">parabolic</span><span class="tag">mixed-model</span><span class="tag">compatible-system</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle (folded by default: the keyword list can run
+      // into the hundreds of entries, so only Topics is open on first visit).
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      // `hidden` on the list is the single source of fold truth, so a search
+      // that auto-expands the list cannot desync the toggle button.
+      function setKeywordsFolded(folded, remember) {
+        keywordList.hidden = folded;
+        if (keywordBtn) keywordBtn.setAttribute('aria-expanded', String(!folded));
+        if (remember) localStorage.setItem('sidebar-keywords-folded', String(folded));
+      }
+      if (keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        setKeywordsFolded(kwStored === null ? true : kwStored === 'true', false);
+      }
+      if (keywordBtn && keywordList) {
+        keywordBtn.addEventListener('click', function() {
+          setKeywordsFolded(!keywordList.hidden, true);
+        });
+      }
+
+      // Keyword search: client-side filter over the existing <li> entries,
+      // so every keyword page stays a plain reachable link with no JS.
+      var keywordSearch = document.getElementById('keyword-search');
+      var keywordEmpty = document.getElementById('keyword-empty');
+      if (keywordSearch && keywordList) {
+        var keywordItems = Array.prototype.slice.call(keywordList.querySelectorAll('li'));
+        keywordSearch.addEventListener('input', function() {
+          var query = keywordSearch.value.trim().toLowerCase();
+          if (query && keywordList.hidden) setKeywordsFolded(false, false);
+          var visible = 0;
+          keywordItems.forEach(function(item) {
+            var match = !query || item.textContent.toLowerCase().indexOf(query) !== -1;
+            item.hidden = !match;
+            if (match) visible += 1;
+          });
+          if (keywordEmpty) keywordEmpty.hidden = visible !== 0;
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

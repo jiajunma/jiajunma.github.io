@@ -1,0 +1,168 @@
+{
+  "topic": {
+    "id": "tame_covers",
+    "title": "Tame Covers",
+    "href": "tame_covers/index.html",
+    "parent": null,
+    "node_count": 6,
+    "descendant_node_count": 6
+  },
+  "counts": {
+    "internal_nodes": 6,
+    "inlined_nodes": 6,
+    "descendant_nodes": 6,
+    "child_topics": 0,
+    "inlined_child_topics": 6,
+    "non_proof_plan_nodes": 6,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 0,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
+  },
+  "nodes": [
+    {
+      "id": "tame_covers.genuine_representations_of_covers",
+      "title": "Genuine Representations Of Central Covers",
+      "kind": "definition",
+      "status": "staged",
+      "href": "tame_covers/tame_covers_genuine_representations_of_covers.html",
+      "payload": "node_payloads/tame_covers_genuine_representations_of_covers.json"
+    },
+    {
+      "id": "tame_covers.intertwining_sets_for_cover_representations",
+      "title": "Intertwining Sets For Cover Representations",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "tame_covers/tame_covers_intertwining_sets_for_cover_representations.html",
+      "payload": "node_payloads/tame_covers_intertwining_sets_for_cover_representations.json"
+    },
+    {
+      "id": "tame_covers.locally_profinite_pro_order",
+      "title": "Locally Profinite Groups And Pro-Order",
+      "kind": "definition",
+      "status": "staged",
+      "href": "tame_covers/tame_covers_locally_profinite_pro_order.html",
+      "payload": "node_payloads/tame_covers_locally_profinite_pro_order.json"
+    },
+    {
+      "id": "tame_covers.smooth_representations_and_character_isotypic_subspaces",
+      "title": "Smooth Representations And Character Isotypic Subspaces",
+      "kind": "definition",
+      "status": "staged",
+      "href": "tame_covers/tame_covers_smooth_representations_and_character_isotypic_subspaces.html",
+      "payload": "node_payloads/tame_covers_smooth_representations_and_character_isotypic_subspaces.json"
+    },
+    {
+      "id": "tame_covers.tame_z_cover",
+      "title": "Tame Z-Covers Of Locally Profinite Groups",
+      "kind": "definition",
+      "status": "staged",
+      "href": "tame_covers/tame_covers_tame_z_cover.html",
+      "payload": "node_payloads/tame_covers_tame_z_cover.json"
+    },
+    {
+      "id": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "title": "Unique Splitting For Prime-To-Z Compact Subgroups",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "tame_covers/tame_covers_unique_splitting_for_tame_cover_subgroups.html",
+      "payload": "node_payloads/tame_covers_unique_splitting_for_tame_cover_subgroups.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "tame_covers.tame_z_cover",
+      "to": "tame_covers.genuine_representations_of_covers",
+      "kind": "uses"
+    },
+    {
+      "from": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "to": "tame_covers.genuine_representations_of_covers",
+      "kind": "uses"
+    },
+    {
+      "from": "tame_covers.genuine_representations_of_covers",
+      "to": "tame_covers.intertwining_sets_for_cover_representations",
+      "kind": "uses"
+    },
+    {
+      "from": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "to": "tame_covers.intertwining_sets_for_cover_representations",
+      "kind": "uses"
+    },
+    {
+      "from": "tame_covers.locally_profinite_pro_order",
+      "to": "tame_covers.smooth_representations_and_character_isotypic_subspaces",
+      "kind": "uses"
+    },
+    {
+      "from": "tame_covers.locally_profinite_pro_order",
+      "to": "tame_covers.tame_z_cover",
+      "kind": "uses"
+    },
+    {
+      "from": "tame_covers.tame_z_cover",
+      "to": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
+  "keywords": [
+    {
+      "id": "covering-group",
+      "title": "covering-group",
+      "href": "keywords/covering-group.html",
+      "count": 2
+    },
+    {
+      "id": "genuine-representation",
+      "title": "genuine-representation",
+      "href": "keywords/genuine-representation.html",
+      "count": 1
+    },
+    {
+      "id": "intertwining",
+      "title": "intertwining",
+      "href": "keywords/intertwining.html",
+      "count": 1
+    },
+    {
+      "id": "locally-profinite",
+      "title": "locally-profinite",
+      "href": "keywords/locally-profinite.html",
+      "count": 1
+    },
+    {
+      "id": "smooth-representation",
+      "title": "smooth-representation",
+      "href": "keywords/smooth-representation.html",
+      "count": 1
+    },
+    {
+      "id": "splitting",
+      "title": "splitting",
+      "href": "keywords/splitting.html",
+      "count": 1
+    },
+    {
+      "id": "tame-covers",
+      "title": "tame-covers",
+      "href": "keywords/tame-covers.html",
+      "count": 6
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "tame_covers.genuine_representations_of_covers",
+    "tame_covers.intertwining_sets_for_cover_representations",
+    "tame_covers.locally_profinite_pro_order",
+    "tame_covers.smooth_representations_and_character_isotypic_subspaces",
+    "tame_covers.tame_z_cover",
+    "tame_covers.unique_splitting_for_tame_cover_subgroups"
+  ]
+}

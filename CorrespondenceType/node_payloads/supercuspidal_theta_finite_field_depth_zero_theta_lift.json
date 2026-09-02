@@ -8,13 +8,18 @@
   "topics": [
     "supercuspidal_theta"
   ],
-  "body_html": "<h1>Depth Zero Theta Lift via Finite Fields</h1>\n<p>For a good lattice \\(L\\) representing a vertex \\(x\\), the finite reductive quotient of \\(G_x\\) decomposes into unitary groups attached to the residue spaces\n\\[\n\\ell=L/L^\\ast p_D,\\qquad \\ell^\\ast=L^\\ast/L.\n\\]\nThus a depth zero representation decomposes as \\(\\rho_\\ell\\otimes\\rho_{\\ell^\\ast}\\).</p>\n<p>For two vertices \\(x\\) and \\(x'\\), the depth zero \\(K\\)-type \\((x',\\rho')\\) is a theta lift of \\((x,\\rho)\\) if the finite-field representations satisfy the two finite oscillator correspondences\n\\[\n\\rho_{\\ell'^\\ast}\\in \\theta_{\\ell,\\ell'^\\ast}(\\rho_\\ell),\n\\qquad\n\\rho_{\\ell'}\\in \\theta_{\\ell^\\ast,\\ell'}(\\rho_{\\ell^\\ast}).\n\\]\nFor cuspidal \\(\\rho\\), the relevant finite-field theta lift is unique at first occurrence.</p>\n<p>For a depth zero supercuspidal datum \\(\\Sigma=(x,0,1,\\rho)\\), the data-level lift \\(\\#_{V,T'}(\\Sigma)\\) is obtained by taking these first-occurrence finite-field lifts in the target Witt tower and rebuilding the target depth-zero datum.</p>",
+  "body_html": "<h1>Depth Zero Theta Lift via Finite Fields</h1>\n<p>For a good lattice \\(L\\) representing a vertex \\(x\\), the finite reductive quotient of \\(G_x\\) decomposes into unitary groups attached to the residue spaces\n\\[\n\\ell=L/L^\\#p_D,\\qquad \\ell^\\#=L^\\#/L.\n\\]\nThus a depth zero representation decomposes as \\(\\rho_\\ell\\otimes\\rho_{\\ell^\\#}\\).</p>\n<p>For two vertices \\(x\\) and \\(x'\\), the depth zero \\(K\\)-type \\((x',\\rho')\\) is a theta lift of \\((x,\\rho)\\) if the finite-field representations satisfy the two finite oscillator correspondences\n\\[\n\\rho_{\\ell'^\\#}\\in \\theta_{\\ell,\\ell'^\\#}(\\rho_\\ell),\n\\qquad\n\\rho_{\\ell'}\\in \\theta_{\\ell^\\#,\\ell'}(\\rho_{\\ell^\\#}).\n\\]\nFor cuspidal \\(\\rho\\), the relevant finite-field theta lift is unique at first occurrence.</p>\n<p>For a depth zero supercuspidal datum \\(\\Sigma=(x,0,1,\\rho)\\), the data-level lift \\(\\#_{V,T'}(\\Sigma)\\) is obtained by taking these first-occurrence finite-field lifts in the target Witt tower and rebuilding the target depth-zero datum.</p>",
   "proof_html": null,
   "deps": [
     {
       "id": "supercuspidal_theta.depth_zero_k_type",
       "title": "Depth Zero K Type",
       "href": "supercuspidal_theta/supercuspidal_theta_depth_zero_k_type.html"
+    },
+    {
+      "id": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "title": "Hermitian Dual Lattice With Conductor p",
+      "href": "lattice_model/lattice_model_hermitian_dual_lattice_conductor_p.html"
     },
     {
       "id": "finite_field_weil.unitary_weil_representation",

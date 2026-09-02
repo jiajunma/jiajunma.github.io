@@ -1,6 +1,172 @@
 {
   "nodes": [
     {
+      "id": "endo_parameters.based_extension_and_simple_element",
+      "title": "Based Extensions And Simple Elements",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "endo-class"
+      ],
+      "topic": "endo_parameters",
+      "used_by": [
+        "endo_parameters.ps_character_and_endo_class",
+        "endo_parameters.similar_based_extensions"
+      ]
+    },
+    {
+      "id": "endo_parameters.classical_group_endo_parameter",
+      "title": "Endo-Parameters For Classical Groups",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "classical-groups"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.epsilon_sigma_endo_parameter"
+      ],
+      "used_by": [
+        "endo_parameters.endo_correspondence_open_definition"
+      ]
+    },
+    {
+      "id": "endo_parameters.endo_correspondence_open_definition",
+      "title": "Endo-Correspondence Is Still An Open Definition In The Draft",
+      "kind": "task",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "open-point",
+        "theta-correspondence"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.classical_group_endo_parameter",
+        "endo_parameters.epsilon_sigma_endo_parameter"
+      ]
+    },
+    {
+      "id": "endo_parameters.epsilon_sigma_endo_parameter",
+      "title": "Epsilon-Sigma Endo-Parameters",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "classical-groups"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.hermitian_monoids_for_self_dual_endo_classes"
+      ],
+      "used_by": [
+        "endo_parameters.classical_group_endo_parameter",
+        "endo_parameters.endo_correspondence_open_definition"
+      ]
+    },
+    {
+      "id": "endo_parameters.gl_endo_parameter",
+      "title": "GL Endo-Parameters",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "general-linear-group"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.ps_character_and_endo_class"
+      ],
+      "used_by": [
+        "endo_parameters.wild_parameter"
+      ]
+    },
+    {
+      "id": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+      "title": "Hermitian Monoids For Self-Dual Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "hermitian-space",
+        "self-dual"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.self_dual_endo_classes"
+      ],
+      "used_by": [
+        "endo_parameters.epsilon_sigma_endo_parameter"
+      ]
+    },
+    {
+      "id": "endo_parameters.ps_character_and_endo_class",
+      "title": "PS-Characters And Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "ps-character",
+        "endo-class"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.based_extension_and_simple_element"
+      ],
+      "used_by": [
+        "endo_parameters.gl_endo_parameter",
+        "endo_parameters.self_dual_endo_classes"
+      ]
+    },
+    {
+      "id": "endo_parameters.self_dual_endo_classes",
+      "title": "Self-Dual Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "self-dual"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.ps_character_and_endo_class"
+      ],
+      "used_by": [
+        "endo_parameters.hermitian_monoids_for_self_dual_endo_classes"
+      ]
+    },
+    {
+      "id": "endo_parameters.similar_based_extensions",
+      "title": "Similar Based Extensions",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "based-extension"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.based_extension_and_simple_element"
+      ]
+    },
+    {
+      "id": "endo_parameters.wild_parameter",
+      "title": "Wild Parameters And Endo-Classes",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "endo-parameters",
+        "langlands-parameters",
+        "wild-inertia"
+      ],
+      "topic": "endo_parameters",
+      "uses": [
+        "endo_parameters.gl_endo_parameter"
+      ]
+    },
+    {
       "id": "epipelagic_theta.alpha_star_and_exceptional_character_restriction",
       "title": "Alpha Star and Exceptional Character Restriction",
       "kind": "lemma",
@@ -31,7 +197,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.apartment_fractional_jump_decomposition"
+        "lattice_model.apartment_splitting_basis"
       ]
     },
     {
@@ -46,7 +212,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.apartment_splitting_basis"
+        "lattice_model.self_dual_lattice_function"
       ]
     },
     {
@@ -72,7 +238,8 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.classical_building_self_dual_lattice_functions"
+        "lattice_model.gl_building_lattice_functions",
+        "lattice_model.self_dual_lattice_function"
       ]
     },
     {
@@ -85,10 +252,7 @@
         "building",
         "norm"
       ],
-      "topic": "epipelagic_theta",
-      "uses": [
-        "lattice_model.d_norm"
-      ]
+      "topic": "epipelagic_theta"
     },
     {
       "id": "epipelagic_theta.epipelagic_data_equivalence",
@@ -270,8 +434,22 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.gl_building_lattice_functions"
+        "lattice_model.d_norm",
+        "lattice_model.lattice_function"
       ]
+    },
+    {
+      "id": "epipelagic_theta.hermitian_dual_lattice_conductor_p",
+      "title": "Hermitian Dual Lattice With Conductor p",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "dual-lattice",
+        "conductor-p",
+        "notation"
+      ],
+      "topic": "epipelagic_theta"
     },
     {
       "id": "epipelagic_theta.invariant_subspace_rank_lemma",
@@ -325,7 +503,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.lattice_function"
+        "lattice_model.d_norm"
       ]
     },
     {
@@ -483,7 +661,8 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.reductive_quotient_self_dual_lattice"
+        "lattice_model.apartment_fractional_jump_decomposition",
+        "lattice_model.classical_building_self_dual_lattice_functions"
       ]
     },
     {
@@ -499,7 +678,7 @@
       "topic": "epipelagic_theta",
       "uses": [
         "lattice_model.apartment_fractional_jump_decomposition",
-        "lattice_model.reductive_quotient_self_dual_lattice"
+        "lattice_model.reductive_quotient_of_self_dual_lattice"
       ],
       "used_by": [
         "epipelagic_theta.residual_exact_sequence_splitting"
@@ -595,11 +774,13 @@
       "tags": [
         "lattice-function",
         "self-dual",
-        "classical-group"
+        "classical-group",
+        "conductor-p"
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.self_dual_lattice_function"
+        "lattice_model.hermitian_dual_lattice_conductor_p",
+        "lattice_model.lattice_function"
       ]
     },
     {
@@ -669,7 +850,8 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.tensor_product_self_duality"
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.tensor_product_lattice_function"
       ]
     },
     {
@@ -684,7 +866,7 @@
       ],
       "topic": "epipelagic_theta",
       "uses": [
-        "lattice_model.tensor_product_lattice_function"
+        "lattice_model.lattice_function"
       ]
     },
     {
@@ -710,18 +892,92 @@
       ]
     },
     {
+      "id": "finite_field_weil.base_lagrangian_weil_index_trivialization",
+      "title": "Base-Lagrangian Trivialization of the Finite Weil-Index Cocycle",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "heisenberg-group",
+        "lagrangian",
+        "weil-index",
+        "trivialization"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_weil_index_cocycle",
+        "finite_field_weil.lagrangian_transition_intertwiner"
+      ],
+      "used_by": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.weil_index_trivialization"
+      ]
+    },
+    {
+      "id": "finite_field_weil.compatible_lagrangian_transition_system",
+      "title": "Compatible System of Schrödinger-Model Intertwiners over a Finite Field",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "compatible-system",
+        "lagrangian",
+        "cocycle"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.base_lagrangian_weil_index_trivialization",
+        "finite_field_weil.finite_weil_index_cocycle",
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.lagrangian_transition_intertwiner",
+        "finite_field_weil.lagrangian_transition_orthogonality",
+        "finite_field_weil.schrodinger_hom_line",
+        "finite_field_weil.weil_index_trivialization"
+      ],
+      "used_by": [
+        "finite_field_weil.spherical_building_canonical_mixed_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
+        "finite_field_weil.spherical_building_reference_frame",
+        "finite_field_weil.weil_index_trivialization_lean_plan"
+      ]
+    },
+    {
+      "id": "finite_field_weil.finite_group_character_theory",
+      "title": "Finite Group Character Theory Basics",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "representation-theory",
+        "characters",
+        "induction"
+      ],
+      "topic": "finite_field_weil",
+      "used_by": [
+        "finite_field_weil.finite_heisenberg_central_character_criterion",
+        "finite_field_weil.finite_heisenberg_stone_von_neumann"
+      ]
+    },
+    {
       "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
       "title": "Finite Heisenberg Central Character Criterion",
       "kind": "lemma",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "heisenberg-group",
         "stone-von-neumann"
       ],
       "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_group_character_theory"
+      ],
       "used_by": [
         "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.projective_cocycle_linearization_criterion",
         "finite_field_weil.symplectic_weil_representation",
         "finite_field_weil.unitary_weil_representation"
       ]
@@ -730,7 +986,7 @@
       "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
       "title": "Finite Heisenberg Stone-von Neumann Property",
       "kind": "proposition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -738,20 +994,97 @@
       ],
       "topic": "finite_field_weil",
       "uses": [
+        "finite_field_weil.finite_group_character_theory",
         "finite_field_weil.finite_heisenberg_central_character_criterion",
         "finite_field_weil.gl_heisenberg_group"
       ],
       "used_by": [
         "finite_field_weil.gl_weil_representation",
-        "finite_field_weil.padic_lattice_model_bridge",
-        "lattice_model.generalized_lattice_model"
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.spherical_building_canonical_mixed_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system"
+      ]
+    },
+    {
+      "id": "finite_field_weil.finite_quadratic_weil_index",
+      "title": "Finite Quadratic Weil Index",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "finite-quadratic-module",
+        "gauss-sum",
+        "weil-index",
+        "gerardin"
+      ],
+      "topic": "finite_field_weil",
+      "used_by": [
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.weil_index_trivialization",
+        "finite_field_weil.weil_index_trivialization_lean_plan"
+      ]
+    },
+    {
+      "id": "finite_field_weil.finite_weil_index_cocycle",
+      "title": "Finite Weil-Index Cocycle for Lagrangian Transitions",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "heisenberg-group",
+        "lagrangian",
+        "weil-index",
+        "cocycle"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.lagrangian_transition_intertwiner",
+        "finite_field_weil.lagrangian_transition_orthogonality",
+        "finite_field_weil.schrodinger_hom_line"
+      ],
+      "used_by": [
+        "finite_field_weil.base_lagrangian_weil_index_trivialization",
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.weil_index_trivialization"
+      ]
+    },
+    {
+      "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "symplectic",
+        "heisenberg-group",
+        "projective-representation",
+        "cocycle",
+        "linearization",
+        "gerardin"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_central_character_criterion",
+        "finite_field_weil.finite_quadratic_weil_index",
+        "finite_field_weil.gl_weil_representation",
+        "finite_field_weil.projective_cocycle_linearization_criterion",
+        "finite_field_weil.symplectic_heisenberg_group"
+      ],
+      "used_by": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.spherical_building_canonical_mixed_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
+        "finite_field_weil.symplectic_weil_representation",
+        "finite_field_weil.weil_index_trivialization"
       ]
     },
     {
       "id": "finite_field_weil.gl_heisenberg_group",
       "title": "Heisenberg Group Attached to a Finite Vector Space",
       "kind": "definition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -767,7 +1100,7 @@
       "id": "finite_field_weil.gl_weil_character_fixed_points",
       "title": "General Linear Weil Character Fixed-Point Formula",
       "kind": "proposition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "character-formula",
@@ -776,16 +1109,13 @@
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.gl_weil_representation"
-      ],
-      "used_by": [
-        "finite_field_weil.gl_weil_representation_decomposition"
       ]
     },
     {
       "id": "finite_field_weil.gl_weil_representation",
       "title": "General Linear Weil Representation over a Finite Field",
       "kind": "proposition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "weil-representation",
@@ -797,148 +1127,213 @@
         "finite_field_weil.gl_heisenberg_group"
       ],
       "used_by": [
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
         "finite_field_weil.gl_weil_character_fixed_points",
-        "finite_field_weil.gl_weil_representation_decomposition",
         "finite_field_weil.symplectic_weil_representation"
       ]
     },
     {
-      "id": "finite_field_weil.gl_weil_representation_decomposition",
-      "title": "General Linear Weil Representation Decomposition",
-      "kind": "proposition",
-      "status": "staged",
-      "tags": [
-        "finite-field",
-        "general-linear",
-        "character-theory",
-        "decomposition"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
-      ],
-      "topic": "finite_field_weil",
-      "uses": [
-        "finite_field_weil.gl_weil_character_fixed_points",
-        "finite_field_weil.gl_weil_representation",
-        "finite_field_weil.parabolic_type"
-      ]
-    },
-    {
-      "id": "finite_field_weil.maximal_torus_signed_partitions",
-      "title": "Signed Partitions for Maximal Tori",
-      "kind": "proposition",
-      "status": "staged",
-      "tags": [
-        "finite-field",
-        "maximal-torus",
-        "signed-partition"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
-      ],
-      "topic": "finite_field_weil",
-      "uses": [
-        "finite_field_weil.maximal_torus_weight_orbits",
-        "finite_field_weil.unitary_space_finite_field"
-      ]
-    },
-    {
-      "id": "finite_field_weil.maximal_torus_weight_orbits",
-      "title": "Maximal Torus Weight Orbits in a Finite Symplectic Group",
+      "id": "finite_field_weil.lagrangian_schrodinger_model",
+      "title": "Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner",
       "kind": "definition",
       "status": "staged",
       "tags": [
         "finite-field",
-        "maximal-torus",
-        "symplectic"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
-      ],
-      "topic": "finite_field_weil",
-      "uses": [
-        "finite_field_weil.symplectic_weil_representation",
-        "finite_field_weil.unitary_space_finite_field"
-      ],
-      "used_by": [
-        "finite_field_weil.maximal_torus_signed_partitions",
-        "finite_field_weil.symplectic_weil_torus_character_formula"
-      ]
-    },
-    {
-      "id": "finite_field_weil.padic_lattice_model_bridge",
-      "title": "Finite-Field Weil Input for p-adic Lattice Models",
-      "kind": "concept",
-      "status": "staged",
-      "tags": [
-        "p-adic-theta",
-        "lattice-model",
-        "reductive-quotient"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
+        "weil-representation",
+        "heisenberg-group",
+        "schrodinger-model",
+        "lagrangian"
       ],
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.finite_heisenberg_stone_von_neumann",
-        "finite_field_weil.symplectic_direct_sum_tensor",
-        "finite_field_weil.symplectic_fixed_point_absolute_character",
+        "finite_field_weil.lagrangian_transition_intertwiner",
+        "finite_field_weil.schrodinger_hom_line",
+        "finite_field_weil.symplectic_heisenberg_group",
         "finite_field_weil.symplectic_weil_representation",
-        "lattice_model.symplectic_annihilator_finite_quotient"
+        "finite_field_weil.weil_index_trivialization"
       ],
       "used_by": [
-        "finite_field_weil.request_padic_finite_quotient_reduction"
+        "finite_field_weil.spherical_building_canonical_mixed_model",
+        "finite_field_weil.spherical_building_reference_frame",
+        "finite_field_weil.weil_index_trivialization_lean_plan"
       ]
     },
     {
-      "id": "finite_field_weil.parabolic_type",
-      "title": "Parabolic Type of a Finite Reductive Group Representation",
-      "kind": "definition",
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "kind": "lemma",
       "status": "staged",
       "tags": [
         "finite-field",
-        "character-theory",
-        "parabolic-type"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
-      ],
-      "topic": "finite_field_weil",
-      "used_by": [
-        "finite_field_weil.gl_weil_representation_decomposition",
-        "finite_field_weil.symplectic_weil_even_odd_components"
-      ]
-    },
-    {
-      "id": "finite_field_weil.request_padic_finite_quotient_reduction",
-      "title": "Request for p-adic to Finite-Quotient Reduction Lemma",
-      "kind": "task",
-      "status": "staged",
-      "tags": [
-        "p-adic-theta",
-        "follow-up-request",
-        "reductive-quotient"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
+        "weil-representation",
+        "heisenberg-group",
+        "lagrangian",
+        "transition-map"
       ],
       "topic": "finite_field_weil",
       "uses": [
-        "finite_field_weil.padic_lattice_model_bridge",
-        "lattice_model.symplectic_annihilator_finite_quotient"
+        "finite_field_weil.symplectic_heisenberg_group"
+      ],
+      "used_by": [
+        "finite_field_weil.base_lagrangian_weil_index_trivialization",
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.finite_weil_index_cocycle",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.lagrangian_transition_orthogonality",
+        "finite_field_weil.schrodinger_hom_line",
+        "finite_field_weil.weil_index_trivialization"
+      ]
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_orthogonality",
+      "title": "Orthogonality of Change-of-Lagrangian Intertwiners",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "heisenberg-group",
+        "lagrangian",
+        "orthogonality"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.lagrangian_transition_intertwiner"
+      ],
+      "used_by": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.finite_weil_index_cocycle",
+        "finite_field_weil.schrodinger_hom_line",
+        "finite_field_weil.weil_index_trivialization"
+      ]
+    },
+    {
+      "id": "finite_field_weil.projective_cocycle_linearization_criterion",
+      "title": "Projective Cocycle Linearization Criterion for Finite Heisenberg Representations",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "heisenberg-group",
+        "weil-representation",
+        "projective-representation",
+        "cocycle",
+        "linearization"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.finite_heisenberg_central_character_criterion"
+      ],
+      "used_by": [
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.symplectic_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.schrodinger_hom_line",
+      "title": "One-Dimensional Hom Line for Finite Schrödinger Models",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "heisenberg-group",
+        "schrodinger-model",
+        "lagrangian",
+        "schur-lemma"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.lagrangian_transition_intertwiner",
+        "finite_field_weil.lagrangian_transition_orthogonality"
+      ],
+      "used_by": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.finite_weil_index_cocycle",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.weil_index_trivialization"
+      ]
+    },
+    {
+      "id": "finite_field_weil.spherical_building_canonical_mixed_model",
+      "title": "Canonical Mixed Model on the Spherical Building via Gérardin Reduction",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "spherical-building",
+        "mixed-model",
+        "gerardin-reduction",
+        "canonical",
+        "compatible-system"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
+        "finite_field_weil.symplectic_heisenberg_group",
+        "finite_field_weil.symplectic_weil_representation"
+      ]
+    },
+    {
+      "id": "finite_field_weil.spherical_building_mixed_model_compatible_system",
+      "title": "Compatible System of Mixed Schrödinger Models on the Spherical Building",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "spherical-building",
+        "parabolic",
+        "mixed-model",
+        "compatible-system"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.finite_heisenberg_stone_von_neumann",
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.symplectic_heisenberg_group",
+        "finite_field_weil.symplectic_weil_representation",
+        "finite_field_weil.weil_index_trivialization",
+        "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model"
+      ],
+      "used_by": [
+        "finite_field_weil.spherical_building_canonical_mixed_model",
+        "finite_field_weil.spherical_building_reference_frame"
+      ]
+    },
+    {
+      "id": "finite_field_weil.spherical_building_reference_frame",
+      "title": "Lagrangian Reference Frame for the Spherical-Building Compatible System",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "spherical-building",
+        "reference-frame",
+        "compatible-system",
+        "lagrangian"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
+        "finite_field_weil.symplectic_heisenberg_group",
+        "finite_field_weil.weil_index_trivialization"
       ]
     },
     {
       "id": "finite_field_weil.symplectic_direct_sum_tensor",
       "title": "Symplectic Weil Representation on Orthogonal Direct Sums",
       "kind": "proposition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "tensor-product",
@@ -947,18 +1342,13 @@
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.symplectic_weil_representation"
-      ],
-      "used_by": [
-        "finite_field_weil.padic_lattice_model_bridge",
-        "finite_field_weil.symplectic_weil_recursive_character_formula",
-        "finite_field_weil.symplectic_weil_torus_character_formula"
       ]
     },
     {
       "id": "finite_field_weil.symplectic_fixed_point_absolute_character",
       "title": "Absolute Value of the Symplectic Weil Character",
       "kind": "theorem",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "character-formula",
@@ -967,18 +1357,13 @@
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.symplectic_weil_representation"
-      ],
-      "used_by": [
-        "finite_field_weil.padic_lattice_model_bridge",
-        "finite_field_weil.symplectic_weil_even_odd_components",
-        "finite_field_weil.symplectic_weil_recursive_character_formula"
       ]
     },
     {
       "id": "finite_field_weil.symplectic_heisenberg_group",
       "title": "Symplectic Heisenberg Group over a Finite Field",
       "kind": "definition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -986,59 +1371,22 @@
       ],
       "topic": "finite_field_weil",
       "used_by": [
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.lagrangian_transition_intertwiner",
+        "finite_field_weil.spherical_building_canonical_mixed_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
+        "finite_field_weil.spherical_building_reference_frame",
         "finite_field_weil.symplectic_weil_representation",
-        "finite_field_weil.unitary_heisenberg_group"
-      ]
-    },
-    {
-      "id": "finite_field_weil.symplectic_weil_even_odd_components",
-      "title": "Even and Odd Components of the Symplectic Weil Representation",
-      "kind": "proposition",
-      "status": "staged",
-      "tags": [
-        "finite-field",
-        "symplectic",
-        "character-theory",
-        "decomposition"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
-      ],
-      "topic": "finite_field_weil",
-      "uses": [
-        "finite_field_weil.parabolic_type",
-        "finite_field_weil.symplectic_fixed_point_absolute_character",
-        "finite_field_weil.symplectic_weil_representation"
-      ]
-    },
-    {
-      "id": "finite_field_weil.symplectic_weil_recursive_character_formula",
-      "title": "Recursive Symplectic Weil Character Formula",
-      "kind": "theorem",
-      "status": "needs_statement_review",
-      "tags": [
-        "finite-field",
-        "symplectic",
-        "character-formula",
-        "gaussian-sum"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
-      ],
-      "topic": "finite_field_weil",
-      "uses": [
-        "finite_field_weil.symplectic_direct_sum_tensor",
-        "finite_field_weil.symplectic_fixed_point_absolute_character",
-        "finite_field_weil.symplectic_weil_torus_character_formula"
+        "finite_field_weil.unitary_heisenberg_group",
+        "finite_field_weil.weil_index_trivialization_lean_plan"
       ]
     },
     {
       "id": "finite_field_weil.symplectic_weil_representation",
       "title": "Symplectic Weil Representation over a Finite Field",
       "kind": "theorem",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "weil-representation",
@@ -1047,51 +1395,29 @@
       "topic": "finite_field_weil",
       "uses": [
         "finite_field_weil.finite_heisenberg_central_character_criterion",
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
         "finite_field_weil.gl_weil_representation",
+        "finite_field_weil.projective_cocycle_linearization_criterion",
         "finite_field_weil.symplectic_heisenberg_group"
       ],
       "used_by": [
-        "finite_field_weil.maximal_torus_weight_orbits",
-        "finite_field_weil.padic_lattice_model_bridge",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.spherical_building_canonical_mixed_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
         "finite_field_weil.symplectic_direct_sum_tensor",
         "finite_field_weil.symplectic_fixed_point_absolute_character",
-        "finite_field_weil.symplectic_weil_even_odd_components",
-        "finite_field_weil.symplectic_weil_torus_character_formula",
         "finite_field_weil.unitary_weil_representation",
-        "lattice_model.generalized_lattice_model",
+        "lattice_model.good_lattice_weil_fixed_vectors",
+        "lattice_model.lattice_model_splitting",
+        "lattice_model.vertex_weil_restriction_incompatibility",
         "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model"
-      ]
-    },
-    {
-      "id": "finite_field_weil.symplectic_weil_torus_character_formula",
-      "title": "Symplectic Weil Character on Semisimple Elements",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "finite-field",
-        "symplectic",
-        "character-formula",
-        "maximal-torus"
-      ],
-      "primary_topic": "finite_field_weil",
-      "topics": [
-        "finite_field_weil"
-      ],
-      "topic": "finite_field_weil",
-      "uses": [
-        "finite_field_weil.maximal_torus_weight_orbits",
-        "finite_field_weil.symplectic_direct_sum_tensor",
-        "finite_field_weil.symplectic_weil_representation"
-      ],
-      "used_by": [
-        "finite_field_weil.symplectic_weil_recursive_character_formula"
       ]
     },
     {
       "id": "finite_field_weil.unitary_direct_sum_tensor",
       "title": "Unitary Weil Representation on Orthogonal Direct Sums",
       "kind": "proposition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "tensor-product",
@@ -1109,7 +1435,7 @@
       "id": "finite_field_weil.unitary_fixed_point_absolute_character",
       "title": "Absolute Value of the Unitary Weil Character",
       "kind": "theorem",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "character-formula",
@@ -1127,7 +1453,7 @@
       "id": "finite_field_weil.unitary_heisenberg_group",
       "title": "Unitary Heisenberg Group over a Finite Field",
       "kind": "proposition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "heisenberg-group",
@@ -1146,7 +1472,7 @@
       "id": "finite_field_weil.unitary_space_finite_field",
       "title": "Finite-Field Unitary Space in Gérardin's Convention",
       "kind": "definition",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "unitary",
@@ -1154,8 +1480,6 @@
       ],
       "topic": "finite_field_weil",
       "used_by": [
-        "finite_field_weil.maximal_torus_signed_partitions",
-        "finite_field_weil.maximal_torus_weight_orbits",
         "finite_field_weil.unitary_heisenberg_group"
       ]
     },
@@ -1163,7 +1487,7 @@
       "id": "finite_field_weil.unitary_weil_character_formula",
       "title": "Unitary Weil Character Formula over a Finite Field",
       "kind": "theorem",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "character-formula",
@@ -1180,7 +1504,7 @@
       "id": "finite_field_weil.unitary_weil_representation",
       "title": "Unitary Weil Representation over a Finite Field",
       "kind": "theorem",
-      "status": "admitted",
+      "status": "staged",
       "tags": [
         "finite-field",
         "weil-representation",
@@ -1200,6 +1524,57 @@
       ]
     },
     {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "finite-field",
+        "weil-representation",
+        "heisenberg-group",
+        "cocycle",
+        "weil-index"
+      ],
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.base_lagrangian_weil_index_trivialization",
+        "finite_field_weil.finite_quadratic_weil_index",
+        "finite_field_weil.finite_weil_index_cocycle",
+        "finite_field_weil.gerardin_symplectic_weil_linearization",
+        "finite_field_weil.lagrangian_transition_intertwiner",
+        "finite_field_weil.lagrangian_transition_orthogonality",
+        "finite_field_weil.schrodinger_hom_line"
+      ],
+      "used_by": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
+        "finite_field_weil.spherical_building_reference_frame"
+      ]
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization_lean_plan",
+      "title": "Lean Formalization Plan for the Weil-Index Trivialization Theorem",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "lean",
+        "formalization",
+        "milestone-a",
+        "finite-field",
+        "weil-representation"
+      ],
+      "target": "finite_field_weil.weil_index_trivialization",
+      "plan_status": "selected",
+      "topic": "finite_field_weil",
+      "uses": [
+        "finite_field_weil.compatible_lagrangian_transition_system",
+        "finite_field_weil.finite_quadratic_weil_index",
+        "finite_field_weil.lagrangian_schrodinger_model",
+        "finite_field_weil.symplectic_heisenberg_group"
+      ]
+    },
+    {
       "id": "lattice_model.apartment_fractional_jump_decomposition",
       "title": "Apartment Fractional Jump Decomposition",
       "kind": "definition",
@@ -1209,18 +1584,14 @@
         "lattice-function",
         "finite-reductive-quotient"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "uses": [
         "lattice_model.apartment_splitting_basis"
       ],
       "used_by": [
-        "epipelagic_theta.apartment_fractional_jump_decomposition",
+        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
         "epipelagic_theta.residual_exact_sequence_apartment_splitting",
-        "lattice_model.reductive_quotient_self_dual_lattice"
+        "lattice_model.reductive_quotient_of_self_dual_lattice"
       ]
     },
     {
@@ -1233,16 +1604,12 @@
         "apartment",
         "lattice-function"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "uses": [
         "lattice_model.self_dual_lattice_function"
       ],
       "used_by": [
-        "epipelagic_theta.apartment_splitting_basis",
+        "epipelagic_theta.apartment_fractional_jump_decomposition",
         "lattice_model.apartment_fractional_jump_decomposition"
       ]
     },
@@ -1256,19 +1623,35 @@
         "lattice-function",
         "moy-prasad"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "uses": [
         "lattice_model.gl_building_lattice_functions",
         "lattice_model.self_dual_lattice_function"
       ],
       "used_by": [
-        "epipelagic_theta.classical_building_self_dual_lattice_functions",
+        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
         "epipelagic_theta.tame_base_change_buildings",
-        "lattice_model.reductive_quotient_self_dual_lattice"
+        "lattice_model.reductive_quotient_of_self_dual_lattice"
+      ]
+    },
+    {
+      "id": "lattice_model.compatible_transition_maps",
+      "title": "Canonical Transition Maps Between Generalized Lattice Models",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "generalized-lattice-model",
+        "heisenberg-group",
+        "intertwiner",
+        "symplectic-group",
+        "metaplectic-cover"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.level_zero_containment",
+        "lattice_model.self_dual_lattice_function",
+        "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.lattice_fixed_vector_model"
       ]
     },
     {
@@ -1281,72 +1664,35 @@
         "building",
         "norm"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "used_by": [
-        "epipelagic_theta.d_norm",
+        "epipelagic_theta.gl_building_lattice_functions",
+        "epipelagic_theta.lattice_function",
         "lattice_model.gl_building_lattice_functions",
         "lattice_model.lattice_function"
       ]
     },
     {
-      "id": "lattice_model.dual_lattice_conventions",
-      "title": "Dual Lattice Conventions",
-      "kind": "concept",
+      "id": "lattice_model.facet_incidence_parabolic",
+      "title": "Facet Incidence as a Parabolic for Sp(W)",
+      "kind": "lemma",
       "status": "staged",
       "tags": [
-        "notation",
-        "dual-lattice",
-        "lattice-function",
-        "symplectic-annihilator"
-      ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
+        "building",
+        "finite-reductive-quotient",
+        "symplectic-group",
+        "parabolic"
       ],
       "topic": "lattice_model",
       "uses": [
-        "lattice_model.lattice_function"
-      ],
-      "used_by": [
+        "lattice_model.level_zero_containment",
         "lattice_model.self_dual_lattice_function",
-        "lattice_model.symplectic_annihilator_finite_quotient"
-      ]
-    },
-    {
-      "id": "lattice_model.generalized_lattice_model",
-      "title": "Generalized Lattice Model",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "generalized-lattice-model",
-        "oscillator-representation",
-        "metaplectic-cover"
-      ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model",
-        "finite_field_weil"
-      ],
-      "topic": "lattice_model",
-      "uses": [
-        "finite_field_weil.finite_heisenberg_stone_von_neumann",
-        "finite_field_weil.symplectic_weil_representation",
-        "lattice_model.symplectic_annihilator_finite_quotient"
+        "lattice_model.symplectic_apartment_model",
+        "lattice_model.symplectic_parahoric_reductive_quotient",
+        "lattice_model_transition.finite_field_maximal_parabolic_weil_input"
       ],
       "used_by": [
-        "lattice_model.lattice_fixed_vector_model",
-        "supercuspidal_theta.covering_supercuspidal_datum",
-        "supercuspidal_theta.depth_preservation_building_sum",
-        "supercuspidal_theta.depth_zero_pan_theorem",
-        "supercuspidal_theta.fixed_vector_descent_lemma",
-        "supercuspidal_theta.generalized_lattice_model",
-        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
-        "supercuspidal_theta.key_oscillator_character_identity",
-        "supercuspidal_theta.stabilizer_orbit_action_formula"
+        "lattice_model.vertex_weil_restriction_incompatibility"
       ]
     },
     {
@@ -1359,43 +1705,59 @@
         "lattice-function",
         "moy-prasad"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "uses": [
         "lattice_model.d_norm",
         "lattice_model.lattice_function"
       ],
       "used_by": [
-        "epipelagic_theta.gl_building_lattice_functions",
+        "epipelagic_theta.classical_building_self_dual_lattice_functions",
         "lattice_model.classical_building_self_dual_lattice_functions"
       ]
     },
     {
-      "id": "lattice_model.lattice_fixed_vector_model",
-      "title": "Lattice Fixed Vector Model",
-      "kind": "definition",
+      "id": "lattice_model.good_lattice_weil_fixed_vectors",
+      "title": "Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice",
+      "kind": "proposition",
       "status": "staged",
       "tags": [
-        "appendix",
+        "building",
         "generalized-lattice-model",
-        "depth-preservation"
-      ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
+        "finite-reductive-quotient",
+        "symplectic-group",
+        "depth-zero",
+        "weil-representation"
       ],
       "topic": "lattice_model",
       "uses": [
-        "lattice_model.generalized_lattice_model"
+        "finite_field_weil.symplectic_weil_representation",
+        "lattice_model.lattice_model_splitting",
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.symplectic_apartment_model",
+        "lattice_model.symplectic_parahoric_reductive_quotient",
+        "supercuspidal_theta.generalized_lattice_model"
       ],
       "used_by": [
-        "supercuspidal_theta.depth_preservation_building_sum",
-        "supercuspidal_theta.depth_preservation_proof_plan",
-        "supercuspidal_theta.lattice_fixed_vector_model",
-        "supercuspidal_theta.module_function_self_dual_envelope"
+        "lattice_model.vertex_weil_restriction_incompatibility"
+      ]
+    },
+    {
+      "id": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "title": "Hermitian Dual Lattice With Conductor p",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-function",
+        "dual-lattice",
+        "conductor-p",
+        "notation"
+      ],
+      "topic": "lattice_model",
+      "used_by": [
+        "epipelagic_theta.self_dual_lattice_function",
+        "lattice_model.self_dual_lattice_function",
+        "supercuspidal_theta.depth_zero_good_lattice_quotient",
+        "supercuspidal_theta.finite_field_depth_zero_theta_lift"
       ]
     },
     {
@@ -1408,24 +1770,62 @@
         "building",
         "moy-prasad"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "uses": [
         "lattice_model.d_norm"
       ],
       "used_by": [
-        "epipelagic_theta.lattice_function",
-        "lattice_model.dual_lattice_conventions",
+        "epipelagic_theta.gl_building_lattice_functions",
+        "epipelagic_theta.self_dual_lattice_function",
+        "epipelagic_theta.tensor_product_lattice_function",
         "lattice_model.gl_building_lattice_functions",
         "lattice_model.self_dual_lattice_function",
         "lattice_model.tensor_product_lattice_function"
       ]
     },
     {
-      "id": "lattice_model.reductive_quotient_self_dual_lattice",
+      "id": "lattice_model.lattice_model_splitting",
+      "title": "Parahoric Action on the Generalized Lattice Model",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "generalized-lattice-model",
+        "metaplectic-cover",
+        "splitting",
+        "symplectic-group"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "finite_field_weil.symplectic_weil_representation",
+        "lattice_model.symplectic_parahoric_reductive_quotient",
+        "supercuspidal_theta.generalized_lattice_model"
+      ],
+      "used_by": [
+        "lattice_model.good_lattice_weil_fixed_vectors"
+      ]
+    },
+    {
+      "id": "lattice_model.level_zero_containment",
+      "title": "Level-0 Lattice Under Specialization to a Face",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "building",
+        "lattice-function",
+        "symplectic-group"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.symplectic_apartment_model"
+      ],
+      "used_by": [
+        "lattice_model.compatible_transition_maps",
+        "lattice_model.facet_incidence_parabolic"
+      ]
+    },
+    {
+      "id": "lattice_model.reductive_quotient_of_self_dual_lattice",
       "title": "Reductive Quotient of a Self-Dual Lattice Function",
       "kind": "lemma",
       "status": "staged",
@@ -1434,18 +1834,14 @@
         "finite-reductive-quotient",
         "lattice-function"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "uses": [
         "lattice_model.apartment_fractional_jump_decomposition",
         "lattice_model.classical_building_self_dual_lattice_functions"
       ],
       "used_by": [
-        "epipelagic_theta.reductive_quotient_of_self_dual_lattice",
-        "epipelagic_theta.residual_exact_sequence_apartment_splitting"
+        "epipelagic_theta.residual_exact_sequence_apartment_splitting",
+        "lattice_model.symplectic_parahoric_reductive_quotient"
       ]
     },
     {
@@ -1456,47 +1852,93 @@
       "tags": [
         "lattice-function",
         "self-dual",
-        "classical-group"
-      ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
+        "classical-group",
+        "conductor-p"
       ],
       "topic": "lattice_model",
       "uses": [
-        "lattice_model.dual_lattice_conventions",
+        "lattice_model.hermitian_dual_lattice_conductor_p",
         "lattice_model.lattice_function"
       ],
       "used_by": [
+        "epipelagic_theta.apartment_splitting_basis",
+        "epipelagic_theta.classical_building_self_dual_lattice_functions",
         "epipelagic_theta.lattice_model_section",
-        "epipelagic_theta.self_dual_lattice_function",
+        "epipelagic_theta.tensor_dual_self_duality",
         "lattice_model.apartment_splitting_basis",
         "lattice_model.classical_building_self_dual_lattice_functions",
-        "lattice_model.tensor_product_self_duality"
+        "lattice_model.compatible_transition_maps",
+        "lattice_model.facet_incidence_parabolic",
+        "lattice_model.good_lattice_weil_fixed_vectors",
+        "lattice_model.level_zero_containment",
+        "lattice_model.symplectic_apartment_model",
+        "lattice_model.symplectic_parahoric_reductive_quotient",
+        "lattice_model.tensor_dual_self_duality",
+        "supercuspidal_theta.generalized_lattice_model"
       ]
     },
     {
-      "id": "lattice_model.symplectic_annihilator_finite_quotient",
-      "title": "Symplectic Annihilator Finite Quotient",
-      "kind": "definition",
+      "id": "lattice_model.symplectic_apartment_model",
+      "title": "Apartment Model for Sp(W) via Self-Dual Lattice Functions",
+      "kind": "concept",
       "status": "staged",
       "tags": [
-        "symplectic-annihilator",
-        "finite-quotient",
-        "generalized-lattice-model"
-      ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
+        "building",
+        "lattice-function",
+        "symplectic-group",
+        "apartment"
       ],
       "topic": "lattice_model",
       "uses": [
-        "lattice_model.dual_lattice_conventions"
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.symplectic_parahoric_reductive_quotient"
       ],
       "used_by": [
-        "finite_field_weil.padic_lattice_model_bridge",
-        "finite_field_weil.request_padic_finite_quotient_reduction",
-        "lattice_model.generalized_lattice_model"
+        "lattice_model.facet_incidence_parabolic",
+        "lattice_model.good_lattice_weil_fixed_vectors",
+        "lattice_model.level_zero_containment",
+        "lattice_model.vertex_weil_restriction_incompatibility"
+      ]
+    },
+    {
+      "id": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "title": "Parahoric Reductive Quotient for Sp(W)",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "building",
+        "finite-reductive-quotient",
+        "symplectic-group",
+        "lattice-function"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.reductive_quotient_of_self_dual_lattice",
+        "lattice_model.self_dual_lattice_function",
+        "supercuspidal_theta.generalized_lattice_model"
+      ],
+      "used_by": [
+        "lattice_model.facet_incidence_parabolic",
+        "lattice_model.good_lattice_weil_fixed_vectors",
+        "lattice_model.lattice_model_splitting",
+        "lattice_model.symplectic_apartment_model",
+        "lattice_model.vertex_weil_restriction_incompatibility"
+      ]
+    },
+    {
+      "id": "lattice_model.tensor_dual_self_duality",
+      "title": "Tensor Product Self-Duality",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "tensor-product",
+        "self-dual",
+        "lattice-function"
+      ],
+      "topic": "lattice_model",
+      "uses": [
+        "lattice_model.self_dual_lattice_function",
+        "lattice_model.tensor_product_lattice_function"
       ]
     },
     {
@@ -1509,10 +1951,6 @@
         "tensor-product",
         "oscillator-representation"
       ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
-      ],
       "topic": "lattice_model",
       "uses": [
         "lattice_model.lattice_function"
@@ -1522,31 +1960,141 @@
         "epipelagic_theta.moment_map_lattice_compatibility",
         "epipelagic_theta.residual_exact_sequence_splitting",
         "epipelagic_theta.residual_moment_map_condition",
-        "epipelagic_theta.tensor_product_lattice_function",
-        "lattice_model.tensor_product_self_duality"
+        "epipelagic_theta.tensor_dual_self_duality",
+        "lattice_model.tensor_dual_self_duality"
       ]
     },
     {
-      "id": "lattice_model.tensor_product_self_duality",
-      "title": "Tensor Product Self-Duality",
-      "kind": "lemma",
+      "id": "lattice_model.vertex_weil_restriction_incompatibility",
+      "title": "Vertex Weil Restrictions over an Alcove Are Incompatible",
+      "kind": "proposition",
       "status": "staged",
       "tags": [
-        "tensor-product",
-        "self-dual",
-        "lattice-function"
-      ],
-      "primary_topic": "lattice_model",
-      "topics": [
-        "lattice_model"
+        "building",
+        "iwahori",
+        "finite-reductive-quotient",
+        "symplectic-group",
+        "weil-representation",
+        "weil-index",
+        "coefficient-system"
       ],
       "topic": "lattice_model",
       "uses": [
-        "lattice_model.self_dual_lattice_function",
-        "lattice_model.tensor_product_lattice_function"
+        "finite_field_weil.symplectic_weil_representation",
+        "lattice_model.facet_incidence_parabolic",
+        "lattice_model.good_lattice_weil_fixed_vectors",
+        "lattice_model.symplectic_apartment_model",
+        "lattice_model.symplectic_parahoric_reductive_quotient"
+      ]
+    },
+    {
+      "id": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "title": "Allowed Local Inputs For The Lattice-Model Transition Problem",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "lattice-model-transition",
+        "problem-input"
+      ],
+      "topic": "lattice_model_transition",
+      "uses": [
+        "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+        "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+        "lattice_model_transition.incidence_ratio_character",
+        "lattice_model_transition.pulled_back_symplectic_facet_setup",
+        "lattice_model_transition.self_dual_test_vector_normalization"
+      ]
+    },
+    {
+      "id": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "title": "Finite-Field Maximal-Parabolic Weil Input",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "lattice-model-transition",
+        "finite-field-weil",
+        "parabolic"
+      ],
+      "topic": "lattice_model_transition",
+      "used_by": [
+        "lattice_model.facet_incidence_parabolic",
+        "lattice_model_transition.allowed_local_inputs_transition_problem"
+      ]
+    },
+    {
+      "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "title": "Generalized Lattice Models And Original Splittings",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-model-transition",
+        "generalized-lattice-model",
+        "metaplectic-splitting"
+      ],
+      "topic": "lattice_model_transition",
+      "uses": [
+        "lattice_model_transition.pulled_back_symplectic_facet_setup"
       ],
       "used_by": [
-        "epipelagic_theta.tensor_dual_self_duality"
+        "lattice_model_transition.allowed_local_inputs_transition_problem",
+        "lattice_model_transition.incidence_ratio_character",
+        "lattice_model_transition.self_dual_test_vector_normalization",
+        "theta_semisimple_types.generalized_lattice_model_support_piece"
+      ]
+    },
+    {
+      "id": "lattice_model_transition.incidence_ratio_character",
+      "title": "Incidence Ratio Character For Original Lattice-Model Splittings",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "lattice-model-transition",
+        "metaplectic-splitting",
+        "character"
+      ],
+      "topic": "lattice_model_transition",
+      "uses": [
+        "lattice_model_transition.generalized_lattice_model_and_original_splittings"
+      ],
+      "used_by": [
+        "lattice_model_transition.allowed_local_inputs_transition_problem",
+        "lattice_model_transition.self_dual_test_vector_normalization"
+      ]
+    },
+    {
+      "id": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "title": "Pulled-Back Symplectic Facet Setup",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "lattice-model-transition",
+        "building",
+        "symplectic-facet"
+      ],
+      "topic": "lattice_model_transition",
+      "used_by": [
+        "lattice_model_transition.allowed_local_inputs_transition_problem",
+        "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+        "theta_semisimple_types.generalized_lattice_model_support_piece"
+      ]
+    },
+    {
+      "id": "lattice_model_transition.self_dual_test_vector_normalization",
+      "title": "Self-Dual Test-Vector Normalization For Nested Lattice Models",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "lattice-model-transition",
+        "test-vector",
+        "normalization"
+      ],
+      "topic": "lattice_model_transition",
+      "uses": [
+        "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+        "lattice_model_transition.incidence_ratio_character"
+      ],
+      "used_by": [
+        "lattice_model_transition.allowed_local_inputs_transition_problem"
       ]
     },
     {
@@ -1859,7 +2407,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.generalized_lattice_model",
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.supercuspidal_datum"
       ],
       "used_by": [
@@ -1924,9 +2472,9 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.generalized_lattice_model",
-        "lattice_model.lattice_fixed_vector_model",
         "supercuspidal_theta.fixed_vector_descent_lemma",
+        "supercuspidal_theta.generalized_lattice_model",
+        "supercuspidal_theta.lattice_fixed_vector_model",
         "supercuspidal_theta.module_function_self_dual_envelope"
       ],
       "used_by": [
@@ -1948,8 +2496,8 @@
       "plan_status": "selected",
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.lattice_fixed_vector_model",
-        "supercuspidal_theta.fixed_vector_descent_lemma"
+        "supercuspidal_theta.fixed_vector_descent_lemma",
+        "supercuspidal_theta.lattice_fixed_vector_model"
       ]
     },
     {
@@ -1964,6 +2512,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
+        "lattice_model.hermitian_dual_lattice_conductor_p",
         "supercuspidal_theta.depth_zero_k_type"
       ]
     },
@@ -1995,8 +2544,8 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.generalized_lattice_model",
-        "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+        "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+        "supercuspidal_theta.generalized_lattice_model"
       ]
     },
     {
@@ -2162,6 +2711,7 @@
       "topic": "supercuspidal_theta",
       "uses": [
         "finite_field_weil.unitary_weil_representation",
+        "lattice_model.hermitian_dual_lattice_conductor_p",
         "supercuspidal_theta.depth_zero_k_type"
       ],
       "used_by": [
@@ -2184,6 +2734,7 @@
         "finite_field_weil.symplectic_weil_representation"
       ],
       "used_by": [
+        "finite_field_weil.spherical_building_mixed_model_compatible_system",
         "supercuspidal_theta.yu_special_isomorphism"
       ]
     },
@@ -2214,7 +2765,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.generalized_lattice_model",
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.module_function_self_dual_envelope"
       ],
       "used_by": [
@@ -2234,7 +2785,21 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.generalized_lattice_model"
+        "lattice_model.self_dual_lattice_function"
+      ],
+      "used_by": [
+        "lattice_model.compatible_transition_maps",
+        "lattice_model.good_lattice_weil_fixed_vectors",
+        "lattice_model.lattice_model_splitting",
+        "lattice_model.symplectic_parahoric_reductive_quotient",
+        "supercuspidal_theta.covering_supercuspidal_datum",
+        "supercuspidal_theta.depth_preservation_building_sum",
+        "supercuspidal_theta.depth_zero_pan_theorem",
+        "supercuspidal_theta.fixed_vector_descent_lemma",
+        "supercuspidal_theta.k_type_orbit_intertwining_proposition",
+        "supercuspidal_theta.key_oscillator_character_identity",
+        "supercuspidal_theta.lattice_fixed_vector_model",
+        "supercuspidal_theta.stabilizer_orbit_action_formula"
       ]
     },
     {
@@ -2343,9 +2908,9 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.block_induction_setup",
         "supercuspidal_theta.block_oscillator_action_factorization",
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.off_diagonal_kappa_oscillator_identification",
         "supercuspidal_theta.one_block_orbit_k_type_proposition",
         "supercuspidal_theta.theta_block_decomposition_setup",
@@ -2390,8 +2955,8 @@
       "topic": "supercuspidal_theta",
       "uses": [
         "epipelagic_theta.moment_map_pairing_formulas",
-        "lattice_model.generalized_lattice_model",
         "supercuspidal_theta.dalpha_layer_properties",
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.single_block_stabilizer_structure"
       ],
       "used_by": [
@@ -2410,7 +2975,13 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.lattice_fixed_vector_model"
+        "supercuspidal_theta.generalized_lattice_model"
+      ],
+      "used_by": [
+        "lattice_model.compatible_transition_maps",
+        "supercuspidal_theta.depth_preservation_building_sum",
+        "supercuspidal_theta.depth_preservation_proof_plan",
+        "supercuspidal_theta.module_function_self_dual_envelope"
       ]
     },
     {
@@ -2503,7 +3074,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.lattice_fixed_vector_model"
+        "supercuspidal_theta.lattice_fixed_vector_model"
       ],
       "used_by": [
         "supercuspidal_theta.depth_preservation_building_sum",
@@ -3019,7 +3590,7 @@
       ],
       "topic": "supercuspidal_theta",
       "uses": [
-        "lattice_model.generalized_lattice_model",
+        "supercuspidal_theta.generalized_lattice_model",
         "supercuspidal_theta.key_oscillator_character_identity",
         "supercuspidal_theta.single_block_stabilizer_structure"
       ],
@@ -3275,28 +3846,347 @@
         "supercuspidal_theta.even_orthogonal_yu_irreducibility",
         "supercuspidal_theta.yu_kappa_construction"
       ]
+    },
+    {
+      "id": "tame_covers.genuine_representations_of_covers",
+      "title": "Genuine Representations Of Central Covers",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "tame-covers",
+        "genuine-representation"
+      ],
+      "topic": "tame_covers",
+      "uses": [
+        "tame_covers.tame_z_cover",
+        "tame_covers.unique_splitting_for_tame_cover_subgroups"
+      ],
+      "used_by": [
+        "tame_covers.intertwining_sets_for_cover_representations"
+      ]
+    },
+    {
+      "id": "tame_covers.intertwining_sets_for_cover_representations",
+      "title": "Intertwining Sets For Cover Representations",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "tame-covers",
+        "intertwining"
+      ],
+      "topic": "tame_covers",
+      "uses": [
+        "tame_covers.genuine_representations_of_covers",
+        "tame_covers.unique_splitting_for_tame_cover_subgroups"
+      ]
+    },
+    {
+      "id": "tame_covers.locally_profinite_pro_order",
+      "title": "Locally Profinite Groups And Pro-Order",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "tame-covers",
+        "locally-profinite"
+      ],
+      "topic": "tame_covers",
+      "used_by": [
+        "tame_covers.smooth_representations_and_character_isotypic_subspaces",
+        "tame_covers.tame_z_cover"
+      ]
+    },
+    {
+      "id": "tame_covers.smooth_representations_and_character_isotypic_subspaces",
+      "title": "Smooth Representations And Character Isotypic Subspaces",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "tame-covers",
+        "smooth-representation"
+      ],
+      "topic": "tame_covers",
+      "uses": [
+        "tame_covers.locally_profinite_pro_order"
+      ]
+    },
+    {
+      "id": "tame_covers.tame_z_cover",
+      "title": "Tame Z-Covers Of Locally Profinite Groups",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "tame-covers",
+        "covering-group"
+      ],
+      "topic": "tame_covers",
+      "uses": [
+        "tame_covers.locally_profinite_pro_order"
+      ],
+      "used_by": [
+        "tame_covers.genuine_representations_of_covers",
+        "tame_covers.unique_splitting_for_tame_cover_subgroups"
+      ]
+    },
+    {
+      "id": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "title": "Unique Splitting For Prime-To-Z Compact Subgroups",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "tame-covers",
+        "splitting",
+        "covering-group"
+      ],
+      "topic": "tame_covers",
+      "uses": [
+        "tame_covers.tame_z_cover"
+      ],
+      "used_by": [
+        "tame_covers.genuine_representations_of_covers",
+        "tame_covers.intertwining_sets_for_cover_representations"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.brick_decomposition",
+      "title": "Brick Decomposition For Semisimple Theta Data",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "brick-decomposition"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.pre_semisimple_character_datum"
+      ],
+      "used_by": [
+        "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+        "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "title": "Support Pieces In The Generalized Lattice Model",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "lattice-model",
+        "support"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+        "lattice_model_transition.pulled_back_symplectic_facet_setup"
+      ],
+      "used_by": [
+        "theta_semisimple_types.main_isotypic_formula"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+      "title": "Geometric Lemma For Diagonal Reduction",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "geometric-lemma"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.brick_decomposition"
+      ],
+      "used_by": [
+        "theta_semisimple_types.main_isotypic_formula"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+      "title": "The Subgroup H Sigma Plus And The Character Psi Beta",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "semisimple-character"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.pre_semisimple_character_datum"
+      ],
+      "used_by": [
+        "theta_semisimple_types.main_isotypic_formula"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+      "title": "Hecke Module Problem For Semisimple Theta",
+      "kind": "task",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "hecke-algebra",
+        "open-point"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.main_isotypic_formula",
+        "theta_semisimple_types.semisimple_type_occurrence_propositions"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.main_isotypic_formula",
+      "title": "Main Isotypic Formula For Semisimple Theta Data",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "main-formula",
+        "isotypic-component"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.generalized_lattice_model_support_piece",
+        "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+        "theta_semisimple_types.h_sigma_plus_character_subgroup",
+        "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point"
+      ],
+      "used_by": [
+        "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+        "theta_semisimple_types.semisimple_type_occurrence_propositions"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.moment_map_condition",
+      "title": "Moment-Map Condition For Semisimple Theta Occurrence",
+      "kind": "concept",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "moment-map"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.pre_semisimple_character_datum"
+      ],
+      "used_by": [
+        "theta_semisimple_types.semisimple_type_occurrence_propositions",
+        "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.pre_semisimple_character_datum",
+      "title": "Pre-Semisimple Character Datum In The Theta Draft",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "semisimple-character"
+      ],
+      "topic": "theta_semisimple_types",
+      "used_by": [
+        "theta_semisimple_types.brick_decomposition",
+        "theta_semisimple_types.h_sigma_plus_character_subgroup",
+        "theta_semisimple_types.moment_map_condition"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "title": "Occurrence Propositions For Semisimple Types",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "occurrence"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.main_isotypic_formula",
+        "theta_semisimple_types.moment_map_condition"
+      ],
+      "used_by": [
+        "theta_semisimple_types.hecke_module_problem_for_semisimple_theta"
+      ]
+    },
+    {
+      "id": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "title": "Target Building Point From w And The Depth-Zero Point",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "theta-semisimple-types",
+        "building",
+        "theta-lift"
+      ],
+      "topic": "theta_semisimple_types",
+      "uses": [
+        "theta_semisimple_types.brick_decomposition",
+        "theta_semisimple_types.moment_map_condition"
+      ],
+      "used_by": [
+        "theta_semisimple_types.main_isotypic_formula"
+      ]
     }
   ],
   "edges": [
+    {
+      "from": "endo_parameters.epsilon_sigma_endo_parameter",
+      "to": "endo_parameters.classical_group_endo_parameter"
+    },
+    {
+      "from": "endo_parameters.classical_group_endo_parameter",
+      "to": "endo_parameters.endo_correspondence_open_definition"
+    },
+    {
+      "from": "endo_parameters.epsilon_sigma_endo_parameter",
+      "to": "endo_parameters.endo_correspondence_open_definition"
+    },
+    {
+      "from": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+      "to": "endo_parameters.epsilon_sigma_endo_parameter"
+    },
+    {
+      "from": "endo_parameters.ps_character_and_endo_class",
+      "to": "endo_parameters.gl_endo_parameter"
+    },
+    {
+      "from": "endo_parameters.self_dual_endo_classes",
+      "to": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes"
+    },
+    {
+      "from": "endo_parameters.based_extension_and_simple_element",
+      "to": "endo_parameters.ps_character_and_endo_class"
+    },
+    {
+      "from": "endo_parameters.ps_character_and_endo_class",
+      "to": "endo_parameters.self_dual_endo_classes"
+    },
+    {
+      "from": "endo_parameters.based_extension_and_simple_element",
+      "to": "endo_parameters.similar_based_extensions"
+    },
+    {
+      "from": "endo_parameters.gl_endo_parameter",
+      "to": "endo_parameters.wild_parameter"
+    },
     {
       "from": "epipelagic_theta.residual_fiber_stabilizer",
       "to": "epipelagic_theta.alpha_star_and_exceptional_character_restriction"
     },
     {
-      "from": "lattice_model.apartment_fractional_jump_decomposition",
+      "from": "lattice_model.apartment_splitting_basis",
       "to": "epipelagic_theta.apartment_fractional_jump_decomposition"
     },
     {
-      "from": "lattice_model.apartment_splitting_basis",
+      "from": "lattice_model.self_dual_lattice_function",
       "to": "epipelagic_theta.apartment_splitting_basis"
     },
     {
-      "from": "lattice_model.classical_building_self_dual_lattice_functions",
+      "from": "lattice_model.gl_building_lattice_functions",
       "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
     },
     {
-      "from": "lattice_model.d_norm",
-      "to": "epipelagic_theta.d_norm"
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "epipelagic_theta.classical_building_self_dual_lattice_functions"
     },
     {
       "from": "epipelagic_theta.epipelagic_datum",
@@ -3415,7 +4305,11 @@
       "to": "epipelagic_theta.epipelagic_theta_main_theorem"
     },
     {
-      "from": "lattice_model.gl_building_lattice_functions",
+      "from": "lattice_model.d_norm",
+      "to": "epipelagic_theta.gl_building_lattice_functions"
+    },
+    {
+      "from": "lattice_model.lattice_function",
       "to": "epipelagic_theta.gl_building_lattice_functions"
     },
     {
@@ -3439,7 +4333,7 @@
       "to": "epipelagic_theta.kac_vinberg_epipelagic_grading"
     },
     {
-      "from": "lattice_model.lattice_function",
+      "from": "lattice_model.d_norm",
       "to": "epipelagic_theta.lattice_function"
     },
     {
@@ -3475,7 +4369,11 @@
       "to": "epipelagic_theta.moment_map_pairing_formulas"
     },
     {
-      "from": "lattice_model.reductive_quotient_self_dual_lattice",
+      "from": "lattice_model.apartment_fractional_jump_decomposition",
+      "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice"
+    },
+    {
+      "from": "lattice_model.classical_building_self_dual_lattice_functions",
       "to": "epipelagic_theta.reductive_quotient_of_self_dual_lattice"
     },
     {
@@ -3483,7 +4381,7 @@
       "to": "epipelagic_theta.residual_exact_sequence_apartment_splitting"
     },
     {
-      "from": "lattice_model.reductive_quotient_self_dual_lattice",
+      "from": "lattice_model.reductive_quotient_of_self_dual_lattice",
       "to": "epipelagic_theta.residual_exact_sequence_apartment_splitting"
     },
     {
@@ -3527,7 +4425,11 @@
       "to": "epipelagic_theta.residual_moment_map_condition"
     },
     {
-      "from": "lattice_model.self_dual_lattice_function",
+      "from": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "to": "epipelagic_theta.self_dual_lattice_function"
+    },
+    {
+      "from": "lattice_model.lattice_function",
       "to": "epipelagic_theta.self_dual_lattice_function"
     },
     {
@@ -3543,11 +4445,15 @@
       "to": "epipelagic_theta.tame_base_change_buildings"
     },
     {
-      "from": "lattice_model.tensor_product_self_duality",
+      "from": "lattice_model.self_dual_lattice_function",
       "to": "epipelagic_theta.tensor_dual_self_duality"
     },
     {
       "from": "lattice_model.tensor_product_lattice_function",
+      "to": "epipelagic_theta.tensor_dual_self_duality"
+    },
+    {
+      "from": "lattice_model.lattice_function",
       "to": "epipelagic_theta.tensor_product_lattice_function"
     },
     {
@@ -3559,12 +4465,88 @@
       "to": "epipelagic_theta.unrefined_minimal_k_type_correspondence"
     },
     {
+      "from": "finite_field_weil.finite_weil_index_cocycle",
+      "to": "finite_field_weil.base_lagrangian_weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_intertwiner",
+      "to": "finite_field_weil.base_lagrangian_weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.base_lagrangian_weil_index_trivialization",
+      "to": "finite_field_weil.compatible_lagrangian_transition_system"
+    },
+    {
+      "from": "finite_field_weil.finite_weil_index_cocycle",
+      "to": "finite_field_weil.compatible_lagrangian_transition_system"
+    },
+    {
+      "from": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "to": "finite_field_weil.compatible_lagrangian_transition_system"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_intertwiner",
+      "to": "finite_field_weil.compatible_lagrangian_transition_system"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_orthogonality",
+      "to": "finite_field_weil.compatible_lagrangian_transition_system"
+    },
+    {
+      "from": "finite_field_weil.schrodinger_hom_line",
+      "to": "finite_field_weil.compatible_lagrangian_transition_system"
+    },
+    {
+      "from": "finite_field_weil.weil_index_trivialization",
+      "to": "finite_field_weil.compatible_lagrangian_transition_system"
+    },
+    {
+      "from": "finite_field_weil.finite_group_character_theory",
+      "to": "finite_field_weil.finite_heisenberg_central_character_criterion"
+    },
+    {
+      "from": "finite_field_weil.finite_group_character_theory",
+      "to": "finite_field_weil.finite_heisenberg_stone_von_neumann"
+    },
+    {
       "from": "finite_field_weil.finite_heisenberg_central_character_criterion",
       "to": "finite_field_weil.finite_heisenberg_stone_von_neumann"
     },
     {
       "from": "finite_field_weil.gl_heisenberg_group",
       "to": "finite_field_weil.finite_heisenberg_stone_von_neumann"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_intertwiner",
+      "to": "finite_field_weil.finite_weil_index_cocycle"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_orthogonality",
+      "to": "finite_field_weil.finite_weil_index_cocycle"
+    },
+    {
+      "from": "finite_field_weil.schrodinger_hom_line",
+      "to": "finite_field_weil.finite_weil_index_cocycle"
+    },
+    {
+      "from": "finite_field_weil.finite_heisenberg_central_character_criterion",
+      "to": "finite_field_weil.gerardin_symplectic_weil_linearization"
+    },
+    {
+      "from": "finite_field_weil.finite_quadratic_weil_index",
+      "to": "finite_field_weil.gerardin_symplectic_weil_linearization"
+    },
+    {
+      "from": "finite_field_weil.gl_weil_representation",
+      "to": "finite_field_weil.gerardin_symplectic_weil_linearization"
+    },
+    {
+      "from": "finite_field_weil.projective_cocycle_linearization_criterion",
+      "to": "finite_field_weil.gerardin_symplectic_weil_linearization"
+    },
+    {
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.gerardin_symplectic_weil_linearization"
     },
     {
       "from": "finite_field_weil.gl_weil_representation",
@@ -3579,60 +4561,124 @@
       "to": "finite_field_weil.gl_weil_representation"
     },
     {
-      "from": "finite_field_weil.gl_weil_character_fixed_points",
-      "to": "finite_field_weil.gl_weil_representation_decomposition"
+      "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "to": "finite_field_weil.lagrangian_schrodinger_model"
     },
     {
-      "from": "finite_field_weil.gl_weil_representation",
-      "to": "finite_field_weil.gl_weil_representation_decomposition"
+      "from": "finite_field_weil.lagrangian_transition_intertwiner",
+      "to": "finite_field_weil.lagrangian_schrodinger_model"
     },
     {
-      "from": "finite_field_weil.parabolic_type",
-      "to": "finite_field_weil.gl_weil_representation_decomposition"
+      "from": "finite_field_weil.schrodinger_hom_line",
+      "to": "finite_field_weil.lagrangian_schrodinger_model"
     },
     {
-      "from": "finite_field_weil.maximal_torus_weight_orbits",
-      "to": "finite_field_weil.maximal_torus_signed_partitions"
-    },
-    {
-      "from": "finite_field_weil.unitary_space_finite_field",
-      "to": "finite_field_weil.maximal_torus_signed_partitions"
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.lagrangian_schrodinger_model"
     },
     {
       "from": "finite_field_weil.symplectic_weil_representation",
-      "to": "finite_field_weil.maximal_torus_weight_orbits"
+      "to": "finite_field_weil.lagrangian_schrodinger_model"
     },
     {
-      "from": "finite_field_weil.unitary_space_finite_field",
-      "to": "finite_field_weil.maximal_torus_weight_orbits"
+      "from": "finite_field_weil.weil_index_trivialization",
+      "to": "finite_field_weil.lagrangian_schrodinger_model"
+    },
+    {
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.lagrangian_transition_intertwiner"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_intertwiner",
+      "to": "finite_field_weil.lagrangian_transition_orthogonality"
+    },
+    {
+      "from": "finite_field_weil.finite_heisenberg_central_character_criterion",
+      "to": "finite_field_weil.projective_cocycle_linearization_criterion"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_intertwiner",
+      "to": "finite_field_weil.schrodinger_hom_line"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_orthogonality",
+      "to": "finite_field_weil.schrodinger_hom_line"
+    },
+    {
+      "from": "finite_field_weil.compatible_lagrangian_transition_system",
+      "to": "finite_field_weil.spherical_building_canonical_mixed_model"
     },
     {
       "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
-      "to": "finite_field_weil.padic_lattice_model_bridge"
+      "to": "finite_field_weil.spherical_building_canonical_mixed_model"
     },
     {
-      "from": "finite_field_weil.symplectic_direct_sum_tensor",
-      "to": "finite_field_weil.padic_lattice_model_bridge"
+      "from": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "to": "finite_field_weil.spherical_building_canonical_mixed_model"
     },
     {
-      "from": "finite_field_weil.symplectic_fixed_point_absolute_character",
-      "to": "finite_field_weil.padic_lattice_model_bridge"
+      "from": "finite_field_weil.lagrangian_schrodinger_model",
+      "to": "finite_field_weil.spherical_building_canonical_mixed_model"
+    },
+    {
+      "from": "finite_field_weil.spherical_building_mixed_model_compatible_system",
+      "to": "finite_field_weil.spherical_building_canonical_mixed_model"
+    },
+    {
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.spherical_building_canonical_mixed_model"
     },
     {
       "from": "finite_field_weil.symplectic_weil_representation",
-      "to": "finite_field_weil.padic_lattice_model_bridge"
+      "to": "finite_field_weil.spherical_building_canonical_mixed_model"
     },
     {
-      "from": "lattice_model.symplectic_annihilator_finite_quotient",
-      "to": "finite_field_weil.padic_lattice_model_bridge"
+      "from": "finite_field_weil.compatible_lagrangian_transition_system",
+      "to": "finite_field_weil.spherical_building_mixed_model_compatible_system"
     },
     {
-      "from": "finite_field_weil.padic_lattice_model_bridge",
-      "to": "finite_field_weil.request_padic_finite_quotient_reduction"
+      "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "to": "finite_field_weil.spherical_building_mixed_model_compatible_system"
     },
     {
-      "from": "lattice_model.symplectic_annihilator_finite_quotient",
-      "to": "finite_field_weil.request_padic_finite_quotient_reduction"
+      "from": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "to": "finite_field_weil.spherical_building_mixed_model_compatible_system"
+    },
+    {
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.spherical_building_mixed_model_compatible_system"
+    },
+    {
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "finite_field_weil.spherical_building_mixed_model_compatible_system"
+    },
+    {
+      "from": "finite_field_weil.weil_index_trivialization",
+      "to": "finite_field_weil.spherical_building_mixed_model_compatible_system"
+    },
+    {
+      "from": "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model",
+      "to": "finite_field_weil.spherical_building_mixed_model_compatible_system"
+    },
+    {
+      "from": "finite_field_weil.compatible_lagrangian_transition_system",
+      "to": "finite_field_weil.spherical_building_reference_frame"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_schrodinger_model",
+      "to": "finite_field_weil.spherical_building_reference_frame"
+    },
+    {
+      "from": "finite_field_weil.spherical_building_mixed_model_compatible_system",
+      "to": "finite_field_weil.spherical_building_reference_frame"
+    },
+    {
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.spherical_building_reference_frame"
+    },
+    {
+      "from": "finite_field_weil.weil_index_trivialization",
+      "to": "finite_field_weil.spherical_building_reference_frame"
     },
     {
       "from": "finite_field_weil.symplectic_weil_representation",
@@ -3643,31 +4689,11 @@
       "to": "finite_field_weil.symplectic_fixed_point_absolute_character"
     },
     {
-      "from": "finite_field_weil.parabolic_type",
-      "to": "finite_field_weil.symplectic_weil_even_odd_components"
-    },
-    {
-      "from": "finite_field_weil.symplectic_fixed_point_absolute_character",
-      "to": "finite_field_weil.symplectic_weil_even_odd_components"
-    },
-    {
-      "from": "finite_field_weil.symplectic_weil_representation",
-      "to": "finite_field_weil.symplectic_weil_even_odd_components"
-    },
-    {
-      "from": "finite_field_weil.symplectic_direct_sum_tensor",
-      "to": "finite_field_weil.symplectic_weil_recursive_character_formula"
-    },
-    {
-      "from": "finite_field_weil.symplectic_fixed_point_absolute_character",
-      "to": "finite_field_weil.symplectic_weil_recursive_character_formula"
-    },
-    {
-      "from": "finite_field_weil.symplectic_weil_torus_character_formula",
-      "to": "finite_field_weil.symplectic_weil_recursive_character_formula"
-    },
-    {
       "from": "finite_field_weil.finite_heisenberg_central_character_criterion",
+      "to": "finite_field_weil.symplectic_weil_representation"
+    },
+    {
+      "from": "finite_field_weil.gerardin_symplectic_weil_linearization",
       "to": "finite_field_weil.symplectic_weil_representation"
     },
     {
@@ -3675,20 +4701,12 @@
       "to": "finite_field_weil.symplectic_weil_representation"
     },
     {
-      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "from": "finite_field_weil.projective_cocycle_linearization_criterion",
       "to": "finite_field_weil.symplectic_weil_representation"
     },
     {
-      "from": "finite_field_weil.maximal_torus_weight_orbits",
-      "to": "finite_field_weil.symplectic_weil_torus_character_formula"
-    },
-    {
-      "from": "finite_field_weil.symplectic_direct_sum_tensor",
-      "to": "finite_field_weil.symplectic_weil_torus_character_formula"
-    },
-    {
-      "from": "finite_field_weil.symplectic_weil_representation",
-      "to": "finite_field_weil.symplectic_weil_torus_character_formula"
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.symplectic_weil_representation"
     },
     {
       "from": "finite_field_weil.unitary_weil_representation",
@@ -3731,6 +4749,50 @@
       "to": "finite_field_weil.unitary_weil_representation"
     },
     {
+      "from": "finite_field_weil.base_lagrangian_weil_index_trivialization",
+      "to": "finite_field_weil.weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.finite_quadratic_weil_index",
+      "to": "finite_field_weil.weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.finite_weil_index_cocycle",
+      "to": "finite_field_weil.weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "to": "finite_field_weil.weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_intertwiner",
+      "to": "finite_field_weil.weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_transition_orthogonality",
+      "to": "finite_field_weil.weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.schrodinger_hom_line",
+      "to": "finite_field_weil.weil_index_trivialization"
+    },
+    {
+      "from": "finite_field_weil.compatible_lagrangian_transition_system",
+      "to": "finite_field_weil.weil_index_trivialization_lean_plan"
+    },
+    {
+      "from": "finite_field_weil.finite_quadratic_weil_index",
+      "to": "finite_field_weil.weil_index_trivialization_lean_plan"
+    },
+    {
+      "from": "finite_field_weil.lagrangian_schrodinger_model",
+      "to": "finite_field_weil.weil_index_trivialization_lean_plan"
+    },
+    {
+      "from": "finite_field_weil.symplectic_heisenberg_group",
+      "to": "finite_field_weil.weil_index_trivialization_lean_plan"
+    },
+    {
       "from": "lattice_model.apartment_splitting_basis",
       "to": "lattice_model.apartment_fractional_jump_decomposition"
     },
@@ -3747,20 +4809,40 @@
       "to": "lattice_model.classical_building_self_dual_lattice_functions"
     },
     {
-      "from": "lattice_model.lattice_function",
-      "to": "lattice_model.dual_lattice_conventions"
+      "from": "lattice_model.level_zero_containment",
+      "to": "lattice_model.compatible_transition_maps"
     },
     {
-      "from": "finite_field_weil.finite_heisenberg_stone_von_neumann",
-      "to": "lattice_model.generalized_lattice_model"
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.compatible_transition_maps"
     },
     {
-      "from": "finite_field_weil.symplectic_weil_representation",
-      "to": "lattice_model.generalized_lattice_model"
+      "from": "supercuspidal_theta.generalized_lattice_model",
+      "to": "lattice_model.compatible_transition_maps"
     },
     {
-      "from": "lattice_model.symplectic_annihilator_finite_quotient",
-      "to": "lattice_model.generalized_lattice_model"
+      "from": "supercuspidal_theta.lattice_fixed_vector_model",
+      "to": "lattice_model.compatible_transition_maps"
+    },
+    {
+      "from": "lattice_model.level_zero_containment",
+      "to": "lattice_model.facet_incidence_parabolic"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.facet_incidence_parabolic"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.facet_incidence_parabolic"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.facet_incidence_parabolic"
+    },
+    {
+      "from": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "to": "lattice_model.facet_incidence_parabolic"
     },
     {
       "from": "lattice_model.d_norm",
@@ -3771,23 +4853,63 @@
       "to": "lattice_model.gl_building_lattice_functions"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
-      "to": "lattice_model.lattice_fixed_vector_model"
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors"
+    },
+    {
+      "from": "lattice_model.lattice_model_splitting",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors"
+    },
+    {
+      "from": "supercuspidal_theta.generalized_lattice_model",
+      "to": "lattice_model.good_lattice_weil_fixed_vectors"
     },
     {
       "from": "lattice_model.d_norm",
       "to": "lattice_model.lattice_function"
     },
     {
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "lattice_model.lattice_model_splitting"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.lattice_model_splitting"
+    },
+    {
+      "from": "supercuspidal_theta.generalized_lattice_model",
+      "to": "lattice_model.lattice_model_splitting"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.level_zero_containment"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.level_zero_containment"
+    },
+    {
       "from": "lattice_model.apartment_fractional_jump_decomposition",
-      "to": "lattice_model.reductive_quotient_self_dual_lattice"
+      "to": "lattice_model.reductive_quotient_of_self_dual_lattice"
     },
     {
       "from": "lattice_model.classical_building_self_dual_lattice_functions",
-      "to": "lattice_model.reductive_quotient_self_dual_lattice"
+      "to": "lattice_model.reductive_quotient_of_self_dual_lattice"
     },
     {
-      "from": "lattice_model.dual_lattice_conventions",
+      "from": "lattice_model.hermitian_dual_lattice_conductor_p",
       "to": "lattice_model.self_dual_lattice_function"
     },
     {
@@ -3795,20 +4917,92 @@
       "to": "lattice_model.self_dual_lattice_function"
     },
     {
-      "from": "lattice_model.dual_lattice_conventions",
-      "to": "lattice_model.symplectic_annihilator_finite_quotient"
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.symplectic_apartment_model"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.symplectic_apartment_model"
+    },
+    {
+      "from": "lattice_model.reductive_quotient_of_self_dual_lattice",
+      "to": "lattice_model.symplectic_parahoric_reductive_quotient"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.symplectic_parahoric_reductive_quotient"
+    },
+    {
+      "from": "supercuspidal_theta.generalized_lattice_model",
+      "to": "lattice_model.symplectic_parahoric_reductive_quotient"
+    },
+    {
+      "from": "lattice_model.self_dual_lattice_function",
+      "to": "lattice_model.tensor_dual_self_duality"
+    },
+    {
+      "from": "lattice_model.tensor_product_lattice_function",
+      "to": "lattice_model.tensor_dual_self_duality"
     },
     {
       "from": "lattice_model.lattice_function",
       "to": "lattice_model.tensor_product_lattice_function"
     },
     {
-      "from": "lattice_model.self_dual_lattice_function",
-      "to": "lattice_model.tensor_product_self_duality"
+      "from": "finite_field_weil.symplectic_weil_representation",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility"
     },
     {
-      "from": "lattice_model.tensor_product_lattice_function",
-      "to": "lattice_model.tensor_product_self_duality"
+      "from": "lattice_model.facet_incidence_parabolic",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility"
+    },
+    {
+      "from": "lattice_model.good_lattice_weil_fixed_vectors",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility"
+    },
+    {
+      "from": "lattice_model.symplectic_apartment_model",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility"
+    },
+    {
+      "from": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "to": "lattice_model.vertex_weil_restriction_incompatibility"
+    },
+    {
+      "from": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem"
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem"
+    },
+    {
+      "from": "lattice_model_transition.incidence_ratio_character",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem"
+    },
+    {
+      "from": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem"
+    },
+    {
+      "from": "lattice_model_transition.self_dual_test_vector_normalization",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem"
+    },
+    {
+      "from": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "to": "lattice_model_transition.generalized_lattice_model_and_original_splittings"
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "lattice_model_transition.incidence_ratio_character"
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "lattice_model_transition.self_dual_test_vector_normalization"
+    },
+    {
+      "from": "lattice_model_transition.incidence_ratio_character",
+      "to": "lattice_model_transition.self_dual_test_vector_normalization"
     },
     {
       "from": "supercuspidal_theta.supercuspidal_datum",
@@ -3931,7 +5125,7 @@
       "to": "supercuspidal_theta.covering_splitting_difference_character"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
+      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.covering_supercuspidal_datum"
     },
     {
@@ -3955,15 +5149,15 @@
       "to": "supercuspidal_theta.dalpha_layer_properties"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
-      "to": "supercuspidal_theta.depth_preservation_building_sum"
-    },
-    {
-      "from": "lattice_model.lattice_fixed_vector_model",
-      "to": "supercuspidal_theta.depth_preservation_building_sum"
-    },
-    {
       "from": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "to": "supercuspidal_theta.depth_preservation_building_sum"
+    },
+    {
+      "from": "supercuspidal_theta.generalized_lattice_model",
+      "to": "supercuspidal_theta.depth_preservation_building_sum"
+    },
+    {
+      "from": "supercuspidal_theta.lattice_fixed_vector_model",
       "to": "supercuspidal_theta.depth_preservation_building_sum"
     },
     {
@@ -3971,23 +5165,27 @@
       "to": "supercuspidal_theta.depth_preservation_building_sum"
     },
     {
-      "from": "lattice_model.lattice_fixed_vector_model",
+      "from": "supercuspidal_theta.fixed_vector_descent_lemma",
       "to": "supercuspidal_theta.depth_preservation_proof_plan"
     },
     {
-      "from": "supercuspidal_theta.fixed_vector_descent_lemma",
+      "from": "supercuspidal_theta.lattice_fixed_vector_model",
       "to": "supercuspidal_theta.depth_preservation_proof_plan"
+    },
+    {
+      "from": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "to": "supercuspidal_theta.depth_zero_good_lattice_quotient"
     },
     {
       "from": "supercuspidal_theta.depth_zero_k_type",
       "to": "supercuspidal_theta.depth_zero_good_lattice_quotient"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
+      "from": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
       "to": "supercuspidal_theta.depth_zero_pan_theorem"
     },
     {
-      "from": "supercuspidal_theta.finite_field_depth_zero_theta_lift",
+      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.depth_zero_pan_theorem"
     },
     {
@@ -4075,6 +5273,10 @@
       "to": "supercuspidal_theta.finite_field_depth_zero_theta_lift"
     },
     {
+      "from": "lattice_model.hermitian_dual_lattice_conductor_p",
+      "to": "supercuspidal_theta.finite_field_depth_zero_theta_lift"
+    },
+    {
       "from": "supercuspidal_theta.depth_zero_k_type",
       "to": "supercuspidal_theta.finite_field_depth_zero_theta_lift"
     },
@@ -4083,7 +5285,7 @@
       "to": "supercuspidal_theta.finite_field_heisenberg_weil_mixed_model"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
+      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.fixed_vector_descent_lemma"
     },
     {
@@ -4091,7 +5293,7 @@
       "to": "supercuspidal_theta.fixed_vector_descent_lemma"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
+      "from": "lattice_model.self_dual_lattice_function",
       "to": "supercuspidal_theta.generalized_lattice_model"
     },
     {
@@ -4131,15 +5333,15 @@
       "to": "supercuspidal_theta.k_type_datum_theta_lift"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
-      "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition"
-    },
-    {
       "from": "supercuspidal_theta.block_induction_setup",
       "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition"
     },
     {
       "from": "supercuspidal_theta.block_oscillator_action_factorization",
+      "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition"
+    },
+    {
+      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.k_type_orbit_intertwining_proposition"
     },
     {
@@ -4175,11 +5377,11 @@
       "to": "supercuspidal_theta.key_oscillator_character_identity"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
+      "from": "supercuspidal_theta.dalpha_layer_properties",
       "to": "supercuspidal_theta.key_oscillator_character_identity"
     },
     {
-      "from": "supercuspidal_theta.dalpha_layer_properties",
+      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.key_oscillator_character_identity"
     },
     {
@@ -4187,7 +5389,7 @@
       "to": "supercuspidal_theta.key_oscillator_character_identity"
     },
     {
-      "from": "lattice_model.lattice_fixed_vector_model",
+      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.lattice_fixed_vector_model"
     },
     {
@@ -4231,7 +5433,7 @@
       "to": "supercuspidal_theta.metaplectic_covering_data_exhaustion"
     },
     {
-      "from": "lattice_model.lattice_fixed_vector_model",
+      "from": "supercuspidal_theta.lattice_fixed_vector_model",
       "to": "supercuspidal_theta.module_function_self_dual_envelope"
     },
     {
@@ -4475,7 +5677,7 @@
       "to": "supercuspidal_theta.stabilizer_induced_module_calculation"
     },
     {
-      "from": "lattice_model.generalized_lattice_model",
+      "from": "supercuspidal_theta.generalized_lattice_model",
       "to": "supercuspidal_theta.stabilizer_orbit_action_formula"
     },
     {
@@ -4589,6 +5791,98 @@
     {
       "from": "supercuspidal_theta.good_factorization",
       "to": "supercuspidal_theta.yu_special_isomorphism"
+    },
+    {
+      "from": "tame_covers.tame_z_cover",
+      "to": "tame_covers.genuine_representations_of_covers"
+    },
+    {
+      "from": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "to": "tame_covers.genuine_representations_of_covers"
+    },
+    {
+      "from": "tame_covers.genuine_representations_of_covers",
+      "to": "tame_covers.intertwining_sets_for_cover_representations"
+    },
+    {
+      "from": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+      "to": "tame_covers.intertwining_sets_for_cover_representations"
+    },
+    {
+      "from": "tame_covers.locally_profinite_pro_order",
+      "to": "tame_covers.smooth_representations_and_character_isotypic_subspaces"
+    },
+    {
+      "from": "tame_covers.locally_profinite_pro_order",
+      "to": "tame_covers.tame_z_cover"
+    },
+    {
+      "from": "tame_covers.tame_z_cover",
+      "to": "tame_covers.unique_splitting_for_tame_cover_subgroups"
+    },
+    {
+      "from": "theta_semisimple_types.pre_semisimple_character_datum",
+      "to": "theta_semisimple_types.brick_decomposition"
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "theta_semisimple_types.generalized_lattice_model_support_piece"
+    },
+    {
+      "from": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "to": "theta_semisimple_types.generalized_lattice_model_support_piece"
+    },
+    {
+      "from": "theta_semisimple_types.brick_decomposition",
+      "to": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction"
+    },
+    {
+      "from": "theta_semisimple_types.pre_semisimple_character_datum",
+      "to": "theta_semisimple_types.h_sigma_plus_character_subgroup"
+    },
+    {
+      "from": "theta_semisimple_types.main_isotypic_formula",
+      "to": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta"
+    },
+    {
+      "from": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "to": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta"
+    },
+    {
+      "from": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "to": "theta_semisimple_types.main_isotypic_formula"
+    },
+    {
+      "from": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+      "to": "theta_semisimple_types.main_isotypic_formula"
+    },
+    {
+      "from": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+      "to": "theta_semisimple_types.main_isotypic_formula"
+    },
+    {
+      "from": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "to": "theta_semisimple_types.main_isotypic_formula"
+    },
+    {
+      "from": "theta_semisimple_types.pre_semisimple_character_datum",
+      "to": "theta_semisimple_types.moment_map_condition"
+    },
+    {
+      "from": "theta_semisimple_types.main_isotypic_formula",
+      "to": "theta_semisimple_types.semisimple_type_occurrence_propositions"
+    },
+    {
+      "from": "theta_semisimple_types.moment_map_condition",
+      "to": "theta_semisimple_types.semisimple_type_occurrence_propositions"
+    },
+    {
+      "from": "theta_semisimple_types.brick_decomposition",
+      "to": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point"
+    },
+    {
+      "from": "theta_semisimple_types.moment_map_condition",
+      "to": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point"
     }
   ]
 }

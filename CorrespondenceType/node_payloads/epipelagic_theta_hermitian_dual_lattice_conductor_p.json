@@ -1,0 +1,17 @@
+{
+  "id": "epipelagic_theta.hermitian_dual_lattice_conductor_p",
+  "title": "Hermitian Dual Lattice With Conductor p",
+  "kind": "definition",
+  "status": "staged",
+  "href": "epipelagic_theta/epipelagic_theta_hermitian_dual_lattice_conductor_p.html",
+  "primary_topic": "epipelagic_theta",
+  "topics": [
+    "epipelagic_theta"
+  ],
+  "body_html": "<h1>Hermitian Dual Lattice With Conductor p</h1>\n<p>In this knowledge base, the fixed additive character \\(\\psi:F\\to \\mathbb C^\\times\\) has conductor \\(\\mathfrak p\\): it is trivial on \\(\\mathfrak p\\) and nontrivial on \\(\\mathfrak o\\). With this normalization, the hermitian dual of an \\(o_D\\)-lattice \\(L\\subseteq V\\) is\n\\[\nL^\\#=\\{v\\in V:\\langle v,L\\rangle_V\\subseteq \\mathfrak p_D\\}.\n\\]</p>\n<p>This is the convention used for self-dual lattice functions in the theta-correspondence nodes. Some sources write the same object as \\(L^\\ast\\); this knowledge base uses \\(L^\\#\\) for the hermitian dual lattice.</p>\n<p>The alternative convention\n\\[\n\\{v\\in V:\\langle v,L\\rangle_V\\subseteq \\mathfrak o_D\\}\n\\]\nbelongs to a different normalization, equivalently a different conductor convention or a shifted duality convention. It should not be silently identified with the conductor-\\(\\mathfrak p\\) dual above.</p>\n<p>For symplectic lattice-model objects, the \\(\\psi\\)-annihilator of a lattice \\(A\\subseteq W\\) is likewise conductor-dependent:\n\\[\nA^\\perp=\\{w\\in W:\\psi(\\langle w,A\\rangle_W)=1\\}.\n\\]\nUnder the present conductor-\\(\\mathfrak p\\) assumption this means \\(\\langle w,A\\rangle_W\\subseteq \\mathfrak p\\). This is a symplectic annihilator, not the hermitian dual lattice \\(L^\\#\\), even though both use the same conductor normalization.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

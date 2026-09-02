@@ -1,0 +1,64 @@
+{
+  "id": "finite_field_weil.lagrangian_schrodinger_model",
+  "title": "Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner",
+  "kind": "definition",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_lagrangian_schrodinger_model.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner</h1>\n<p>This node gives an <strong>explicit</strong> realization of the finite Heisenberg–Weil representation on the functions attached to\na Lagrangian, together with the canonical intertwiner between the realizations attached to two Lagrangians. It is the\nconcrete counterpart of the abstract class $W_\\xi^{E,j}$ of\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.symplectic_weil_representation\" href=\"finite_field_weil_symplectic_weil_representation.html\">Symplectic Weil Representation over a Finite Field</a>: that node fixes the representation only up to isomorphism,\nwhile a realization requires a polarization. The family of these realizations, with the intertwiners below, is the\n\"unified model\" in which one writes formulas; the price of the polarization is recorded in the composition law.</p>\n<h2>Setup</h2>\n<p>Let $k$ be a finite field of odd order, $(E,j)$ a nondegenerate symplectic $k$-space of dimension $2m$, $i=j/2$, and\n$H(E,j)=E\\times k$ the Heisenberg group of <a class=\"node-ref\" data-node-id=\"finite_field_weil.symplectic_heisenberg_group\" href=\"finite_field_weil_symplectic_heisenberg_group.html\">Symplectic Heisenberg Group over a Finite Field</a> with\n$(w,z)(w',z')=(w+w',z+z'+i(w,w'))$. Fix a nontrivial central character $\\xi\\colon k\\to R^{\\times}$, where $R$ is a\ncoefficient field with $\\operatorname{char}R\\neq p$ containing the values of $\\xi$ (an additive character of $k$). By\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_heisenberg_stone_von_neumann\" href=\"finite_field_weil_finite_heisenberg_stone_von_neumann.html\">Finite Heisenberg Stone-von Neumann Property</a> the irreducible representation $\\eta_\\xi$ of central\ncharacter $\\xi$ is unique up to isomorphism, of dimension $|E|^{1/2}=q^{m}$.</p>\n<p>A <strong>Lagrangian</strong> $L\\subseteq E$ is a maximal isotropic subspace: $j(L,L)=0$ and $\\dim_k L=m$, so $|L|=|E/L|=q^m$.</p>\n<h2>The Schrödinger model $\\mathcal S_L$</h2>\n<p>The subgroup $H(L)=L\\times k$ is abelian (since $L$ is isotropic), and $\\tilde\\xi_L(a,z):=\\xi(z)$ is a character of it.\nDefine</p>\n<p>$$\n\\mathcal S_L:=\\operatorname{ind}_{H(L)}^{H(E,j)}\\tilde\\xi_L,\n$$</p>\n<p>realized concretely as the functions on $E$ transforming under $L$ by the cocycle:</p>\n<p>$$\n\\mathcal S_L=\\big\\{\\varphi\\colon E\\to R \\ \\big|\\ \\varphi(v+a)=\\xi\\!\\big(i(v,a)\\big)\\,\\varphi(v)\\ \\ \\forall a\\in L\\big\\},\n\\qquad \\dim_R\\mathcal S_L=|E/L|=q^{m}.\n$$</p>\n<p>The Heisenberg group acts by</p>\n<p>$$\n\\big(\\eta_\\xi(u,s)\\varphi\\big)(v)=\\xi\\!\\big(s+i(u,v)\\big)\\,\\varphi(v-u),\\qquad (u,s)\\in H(E,j).\n$$</p>\n<p>(Both formulas are obtained from the induced-representation model $f(h(a,z))=\\xi(z)^{-1}f(h)$, $\\varphi(v)=f(v,0)$:\n$(v,0)(a,0)=(v+a,i(v,a))$ gives the covariance, and $(u,s)^{-1}(v,0)=(v-u,-s-i(u,v))$ gives the action.) By\nStone–von Neumann $\\mathcal S_L$ is a model of $\\eta_\\xi$, and the Weil representation $W_\\xi^{E,j}$ of $S(E,j)$ acts on\nthe same space extending $\\eta_\\xi$.</p>\n<h2>The change-of-Lagrangian intertwiner</h2>\n<p>For two Lagrangians \\(L,L'\\) define\n\\(\\mathcal F_{L,L'}\\colon\\mathcal S_{L'}\\to\\mathcal S_L\\) by</p>\n<p>$$\n\\big(\\mathcal F_{L,L'}\\varphi\\big)(v)=\\sum_{a\\in L/(L\\cap L')}\\xi\\!\\big(i(a,v)\\big)\\,\\varphi(v+a).\n$$</p>\n<p>The verification that this formula is well-defined and \\(H(E,j)\\)-equivariant\nis isolated in <a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_intertwiner\" href=\"finite_field_weil_lagrangian_transition_intertwiner.html\">Change-of-Lagrangian Intertwiner for Finite Schrödinger Models</a>.\nThe self-contained Hom-line calculation\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.schrodinger_hom_line\" href=\"finite_field_weil_schrodinger_hom_line.html\">One-Dimensional Hom Line for Finite Schrödinger Models</a> then shows</p>\n<p>$$\n\\operatorname{Hom}_{H(E,j)}(\\mathcal S_{L'},\\mathcal S_L)\n=R\\cdot\\mathcal F_{L,L'}.\n$$</p>\n<p>Thus the displayed sum fixes a normalization of the unique intertwiner line.\nWhen \\(L\\cap L'=0\\) (transverse), \\(E=L\\oplus L'\\) and the sum is the finite\nFourier transform with kernel \\(\\xi\\circ i\\).</p>\n<h2>Composition: the Weil index</h2>\n<p>For three Lagrangians, \\(\\mathcal F_{L,L'}\\circ\\mathcal F_{L',L''}\\) and\n\\(\\mathcal F_{L,L''}\\) are both \\(H(E,j)\\)-intertwiners\n\\(\\mathcal S_{L''}\\to\\mathcal S_L\\), hence proportional:</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ\\mathcal F_{L',L''}=\\gamma(L,L',L'')\\cdot\\mathcal F_{L,L''},\\qquad \\gamma(L,L',L'')\\in R^{\\times}.\n$$</p>\n<p>The scalar $\\gamma$ is the <strong>finite Weil index</strong> attached to this raw normalization.  It measures the failure of the raw\nintertwiners $\\mathcal F_{L,L'}$ to compose strictly.  The detailed calculation is split out in\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.weil_index_trivialization\" href=\"finite_field_weil_weil_index_trivialization.html\">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a>: after fixing a base Lagrangian $L_0$, the cocycle is a coboundary\nand the rescaled operators form a compatible system.  Thus the raw Fourier normalization has a cocycle, but the\nfinite-field Lagrangian cocycle is not an unavoidable obstruction once a base trivialization is chosen.</p>\n<h2>Why this is the page to start from</h2>\n<p>Writing any transition map between generalized lattice models requires realizing $\\mathbf S(\\mathsf b)$ for the finite\nsymplectic quotients $\\mathsf b$ on <strong>both</strong> sides at once. The models $\\mathcal S_L$ together with the intertwiners\n$\\mathcal F_{L,L'}$ are that common framework: a Lagrangian $L$ is the finite shadow of a self-dual lattice $A$, and\n$\\mathcal F_{L,L'}$ is the finite shadow of a change of $A$. The next node isolates the one property that the\n$A$-independence of the lattice-model transition rests on: $\\gamma$ (equivalently $\\mathcal F$) is <strong>invariant under\nsymplectic reduction by an isotropic subspace contained in both Lagrangians</strong>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.symplectic_heisenberg_group",
+      "title": "Symplectic Heisenberg Group over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_heisenberg_group.html"
+    },
+    {
+      "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
+      "title": "Finite Heisenberg Stone-von Neumann Property",
+      "href": "finite_field_weil/finite_field_weil_finite_heisenberg_stone_von_neumann.html"
+    },
+    {
+      "id": "finite_field_weil.symplectic_weil_representation",
+      "title": "Symplectic Weil Representation over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_symplectic_weil_representation.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_intertwiner.html"
+    },
+    {
+      "id": "finite_field_weil.schrodinger_hom_line",
+      "title": "One-Dimensional Hom Line for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_schrodinger_hom_line.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.spherical_building_canonical_mixed_model",
+      "title": "Canonical Mixed Model on the Spherical Building via Gérardin Reduction",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_canonical_mixed_model.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_reference_frame",
+      "title": "Lagrangian Reference Frame for the Spherical-Building Compatible System",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_reference_frame.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization_lean_plan",
+      "title": "Lean Formalization Plan for the Weil-Index Trivialization Theorem",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization_lean_plan.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tame_covers.smooth_representations_and_character_isotypic_subspaces",
+  "title": "Smooth Representations And Character Isotypic Subspaces",
+  "kind": "definition",
+  "status": "staged",
+  "href": "tame_covers/tame_covers_smooth_representations_and_character_isotypic_subspaces.html",
+  "primary_topic": "tame_covers",
+  "topics": [
+    "tame_covers"
+  ],
+  "body_html": "<h1>Smooth Representations And Character Isotypic Subspaces</h1>\n<p>Let $G$ be a locally profinite group and let $R$ be a commutative ring.  The\ncategory $\\operatorname{Rep}_R(G)$ consists of smooth $R[G]$-modules: an\n$R$-module $V$ with an $R$-linear $G$-action such that every vector has open\nstabilizer.</p>\n<p>Let $K\\subset G$ be compact and let $\\psi:K\\to R^\\times$ be a character.  For\n$V\\in\\operatorname{Rep}_R(K)$, define</p>\n<p>$$\nV^\\psi:=\\{v\\in V:k\\cdot v=\\psi(k)v\\text{ for all }k\\in K\\}.\n$$</p>\n<p>If $K$ has invertible pro-order in $R$, the draft identifies $V^\\psi$ with the\n$\\psi$-coinvariants</p>\n<p>$$\nV_\\psi:=V/V[\\psi],\n$$</p>\n<p>where</p>\n<p>$$\nV[\\psi]=\n\\langle k\\cdot v-\\psi(k)v:k\\in K,\\ v\\in V\\rangle.\n$$</p>\n<p>For a ring morphism $R\\to R'$, the draft asserts the scalar-extension formula</p>\n<p>$$\nV^\\psi\\otimes_R R'\n\\simeq\n(V\\otimes_R R')^{\\psi_{R'}}.\n$$</p>\n<h2>Draft Caution</h2>\n<p>The TeX proof uses the central idempotent $e_{K,\\psi}$ in a Hecke algebra.  The\ndraft has minor prose errors, but the intended statement is clear.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tame_covers.locally_profinite_pro_order",
+      "title": "Locally Profinite Groups And Pro-Order",
+      "href": "tame_covers/tame_covers_locally_profinite_pro_order.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

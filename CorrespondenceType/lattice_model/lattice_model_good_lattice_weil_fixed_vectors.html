@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice — Correspondence of Type Blueprint</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\superset": "\u2283"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">CorrespondenceType</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../endo_parameters/index.html">Endo Parameters</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../epipelagic_theta/index.html">Epipelagic Theta</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../finite_field_weil/index.html">Finite Field Weil</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../lattice_model/index.html">Lattice Model</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../lattice_model_transition/index.html">Lattice Model Transition</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../supercuspidal_theta/index.html">Supercuspidal Theta</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../tame_covers/index.html">Tame Covers</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../theta_semisimple_types/index.html">Theta Semisimple Types</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <input type="search" id="keyword-search" class="keyword-search"
+             placeholder="Search 149 keywords…"
+             aria-controls="keyword-list" autocomplete="off">
+      <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/appendix.html">appendix</a></li>
+      
+        <li><a href="../keywords/based-extension.html">based-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/brick-decomposition.html">brick-decomposition</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/canonical.html">canonical</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/character-formula.html">character-formula</a></li>
+      
+        <li><a href="../keywords/characters.html">characters</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/classical-groups.html">classical-groups</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/compact-induction.html">compact-induction</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/conductor-p.html">conductor-p</a></li>
+      
+        <li><a href="../keywords/converse.html">converse</a></li>
+      
+        <li><a href="../keywords/covering-group.html">covering-group</a></li>
+      
+        <li><a href="../keywords/data-lift.html">data-lift</a></li>
+      
+        <li><a href="../keywords/depth-preservation.html">depth-preservation</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/determinant-character.html">determinant-character</a></li>
+      
+        <li><a href="../keywords/direct-sum.html">direct-sum</a></li>
+      
+        <li><a href="../keywords/dual-lattice.html">dual-lattice</a></li>
+      
+        <li><a href="../keywords/endo-class.html">endo-class</a></li>
+      
+        <li><a href="../keywords/endo-parameters.html">endo-parameters</a></li>
+      
+        <li><a href="../keywords/epipelagic.html">epipelagic</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
+      
+        <li><a href="../keywords/finite-field.html">finite-field</a></li>
+      
+        <li><a href="../keywords/finite-field-weil.html">finite-field-weil</a></li>
+      
+        <li><a href="../keywords/finite-quadratic-module.html">finite-quadratic-module</a></li>
+      
+        <li><a href="../keywords/finite-reductive-quotient.html">finite-reductive-quotient</a></li>
+      
+        <li><a href="../keywords/first-occurrence.html">first-occurrence</a></li>
+      
+        <li><a href="../keywords/formalization.html">formalization</a></li>
+      
+        <li><a href="../keywords/gauss-sum.html">gauss-sum</a></li>
+      
+        <li><a href="../keywords/general-linear.html">general-linear</a></li>
+      
+        <li><a href="../keywords/general-linear-group.html">general-linear-group</a></li>
+      
+        <li><a href="../keywords/generalized-lattice-model.html">generalized-lattice-model</a></li>
+      
+        <li><a href="../keywords/genuine-representation.html">genuine-representation</a></li>
+      
+        <li><a href="../keywords/geometric-lemma.html">geometric-lemma</a></li>
+      
+        <li><a href="../keywords/gerardin.html">gerardin</a></li>
+      
+        <li><a href="../keywords/gerardin-reduction.html">gerardin-reduction</a></li>
+      
+        <li><a href="../keywords/good-element.html">good-element</a></li>
+      
+        <li><a href="../keywords/good-factorization.html">good-factorization</a></li>
+      
+        <li><a href="../keywords/good-lattice.html">good-lattice</a></li>
+      
+        <li><a href="../keywords/graph.html">graph</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-group.html">heisenberg-group</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-space.html">hermitian-space</a></li>
+      
+        <li><a href="../keywords/howe-factorization.html">howe-factorization</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariant-theory.html">invariant-theory</a></li>
+      
+        <li><a href="../keywords/isotropic.html">isotropic</a></li>
+      
+        <li><a href="../keywords/isotypic-component.html">isotypic-component</a></li>
+      
+        <li><a href="../keywords/iwahori.html">iwahori</a></li>
+      
+        <li><a href="../keywords/jumps.html">jumps</a></li>
+      
+        <li><a href="../keywords/k-type.html">k-type</a></li>
+      
+        <li><a href="../keywords/kac-vinberg.html">kac-vinberg</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kim-exhaustion.html">kim-exhaustion</a></li>
+      
+        <li><a href="../keywords/lagrangian.html">lagrangian</a></li>
+      
+        <li><a href="../keywords/langlands-parameters.html">langlands-parameters</a></li>
+      
+        <li><a href="../keywords/lattice-function.html">lattice-function</a></li>
+      
+        <li><a href="../keywords/lattice-model.html">lattice-model</a></li>
+      
+        <li><a href="../keywords/lattice-model-transition.html">lattice-model-transition</a></li>
+      
+        <li><a href="../keywords/lean.html">lean</a></li>
+      
+        <li><a href="../keywords/linearization.html">linearization</a></li>
+      
+        <li><a href="../keywords/locally-profinite.html">locally-profinite</a></li>
+      
+        <li><a href="../keywords/main-formula.html">main-formula</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
+        <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
+      
+        <li><a href="../keywords/metaplectic-splitting.html">metaplectic-splitting</a></li>
+      
+        <li><a href="../keywords/milestone-a.html">milestone-a</a></li>
+      
+        <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
+      
+        <li><a href="../keywords/mixed-model.html">mixed-model</a></li>
+      
+        <li><a href="../keywords/moment-map.html">moment-map</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
+      
+        <li><a href="../keywords/normalization.html">normalization</a></li>
+      
+        <li><a href="../keywords/notation.html">notation</a></li>
+      
+        <li><a href="../keywords/occurrence.html">occurrence</a></li>
+      
+        <li><a href="../keywords/off-diagonal.html">off-diagonal</a></li>
+      
+        <li><a href="../keywords/one-block.html">one-block</a></li>
+      
+        <li><a href="../keywords/open-point.html">open-point</a></li>
+      
+        <li><a href="../keywords/orthogonality.html">orthogonality</a></li>
+      
+        <li><a href="../keywords/oscillator-representation.html">oscillator-representation</a></li>
+      
+        <li><a href="../keywords/p-adic-classical-groups.html">p-adic-classical-groups</a></li>
+      
+        <li><a href="../keywords/pan-theorem.html">pan-theorem</a></li>
+      
+        <li><a href="../keywords/parabolic.html">parabolic</a></li>
+      
+        <li><a href="../keywords/positive-depth.html">positive-depth</a></li>
+      
+        <li><a href="../keywords/problem-input.html">problem-input</a></li>
+      
+        <li><a href="../keywords/projective-representation.html">projective-representation</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/ps-character.html">ps-character</a></li>
+      
+        <li><a href="../keywords/radical.html">radical</a></li>
+      
+        <li><a href="../keywords/rank-restriction.html">rank-restriction</a></li>
+      
+        <li><a href="../keywords/reference-frame.html">reference-frame</a></li>
+      
+        <li><a href="../keywords/representation-theory.html">representation-theory</a></li>
+      
+        <li><a href="../keywords/residual-moment-map.html">residual-moment-map</a></li>
+      
+        <li><a href="../keywords/residual-vector-space.html">residual-vector-space</a></li>
+      
+        <li><a href="../keywords/residue-characteristic.html">residue-characteristic</a></li>
+      
+        <li><a href="../keywords/schrodinger-model.html">schrodinger-model</a></li>
+      
+        <li><a href="../keywords/schur-lemma.html">schur-lemma</a></li>
+      
+        <li><a href="../keywords/self-dual.html">self-dual</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/semisimple-element.html">semisimple-element</a></li>
+      
+        <li><a href="../keywords/skew-hermitian.html">skew-hermitian</a></li>
+      
+        <li><a href="../keywords/smooth-representation.html">smooth-representation</a></li>
+      
+        <li><a href="../keywords/spherical-building.html">spherical-building</a></li>
+      
+        <li><a href="../keywords/splitting.html">splitting</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stable-vector.html">stable-vector</a></li>
+      
+        <li><a href="../keywords/stone-von-neumann.html">stone-von-neumann</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/symplectic.html">symplectic</a></li>
+      
+        <li><a href="../keywords/symplectic-facet.html">symplectic-facet</a></li>
+      
+        <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-group.html">symplectic-group</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
+      
+        <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
+      
+        <li><a href="../keywords/tame-base-change.html">tame-base-change</a></li>
+      
+        <li><a href="../keywords/tame-covers.html">tame-covers</a></li>
+      
+        <li><a href="../keywords/tensor-product.html">tensor-product</a></li>
+      
+        <li><a href="../keywords/test-vector.html">test-vector</a></li>
+      
+        <li><a href="../keywords/theta-correspondence.html">theta-correspondence</a></li>
+      
+        <li><a href="../keywords/theta-lift.html">theta-lift</a></li>
+      
+        <li><a href="../keywords/theta-semisimple-types.html">theta-semisimple-types</a></li>
+      
+        <li><a href="../keywords/transition-map.html">transition-map</a></li>
+      
+        <li><a href="../keywords/trivialization.html">trivialization</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/type-i-dual-pair.html">type-i-dual-pair</a></li>
+      
+        <li><a href="../keywords/uniqueness.html">uniqueness</a></li>
+      
+        <li><a href="../keywords/unitary.html">unitary</a></li>
+      
+        <li><a href="../keywords/weil-index.html">weil-index</a></li>
+      
+        <li><a href="../keywords/weil-representation.html">weil-representation</a></li>
+      
+        <li><a href="../keywords/well-definedness.html">well-definedness</a></li>
+      
+        <li><a href="../keywords/wild-inertia.html">wild-inertia</a></li>
+      
+        <li><a href="../keywords/witt-tower.html">witt-tower</a></li>
+      
+        <li><a href="../keywords/yu-data.html">yu-data</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-lattice_model-2e-good_lattice_weil_fixed_vectors">
+  <header class="proposition_thmheading thm-heading">
+    <span class="proposition_thmcaption thm-caption">Proposition</span>
+    <span class="proposition_thmtitle thm-title">Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-proposition">proposition</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-lattice_model-2e-good_lattice_weil_fixed_vectors">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="lattice_model_self_dual_lattice_function.html">Self-Dual Lattice Function</a></li>
+        
+        <li><a href="lattice_model_symplectic_apartment_model.html">Apartment Model for Sp(W) via Self-Dual Lattice Functions</a></li>
+        
+        <li><a href="lattice_model_symplectic_parahoric_reductive_quotient.html">Parahoric Reductive Quotient for Sp(W)</a></li>
+        
+        <li><a href="lattice_model_lattice_model_splitting.html">Parahoric Action on the Generalized Lattice Model</a></li>
+        
+        <li><a href="../supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html">Generalized Lattice Model</a></li>
+        
+        <li><a href="../finite_field_weil/finite_field_weil_symplectic_weil_representation.html">Symplectic Weil Representation over a Finite Field</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="proposition_thmcontent thm-content body">
+    <h1>Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice</h1>
+<p>This node localizes the Weil representation of \(\operatorname{Sp}(W)\) at a good
+lattice \(L\): it identifies the space of vectors fixed by the pro-unipotent
+radical \(G_{L,0^+}\) with the finite Weil representation \(S(\mathsf b_x)\) of the
+level-\(0\) symplectic factor of the parahoric reductive quotient, computed inside
+the generalized lattice model. This is the building-localization statement: the
+assignment \(L\mapsto\omega_\psi^{\,G_{L,0^+}}\) attaches to each good lattice
+(equivalently, to each vertex of \(\mathcal B(\operatorname{Sp}(W))\)) a finite Weil
+representation of a finite reductive group.</p>
+<h2>Setup</h2>
+<p>Let \(F\) be a non-archimedean local field with ring of integers \(\mathfrak o\),
+maximal ideal \(\mathfrak p\), residue field \(k=\mathfrak o/\mathfrak p\) of odd
+cardinality \(q\), and uniformizer \(\varpi\). Fix an additive character \(\psi\)
+of \(F\) of conductor \(\mathfrak p\) (trivial on \(\mathfrak p\), nontrivial on
+\(\mathfrak o\)); since \(q\) is odd, \(\tfrac12\in\mathfrak o^\times\). Let
+\((W,\langle\,,\rangle)\) be a symplectic \(F\)-space of dimension \(2n\),
+\(G=\operatorname{Sp}(W)\), and \(\omega_\psi\) the Weil representation of \(G\)
+attached to \(\psi\). For an \(\mathfrak o\)-lattice \(L\subseteq W\) write</p>
+<p>$$
+L^{\#}=\{w\in W:\langle w,L\rangle\subseteq\mathfrak p\}.
+$$</p>
+<p>A <strong>good lattice</strong> is an \(\mathfrak o\)-lattice \(L\subseteq W\) with</p>
+<p>$$
+L\ \supseteq\ L^{\#}\ \supseteq\ \mathfrak p L
+\qquad(\text{equivalently } L^{\#}\subseteq L\subseteq\varpi^{-1}L^{\#}).
+$$</p>
+<p>A self-dual lattice (\(L=L^{\#}\)) is good; good lattices are strictly more general
+than self-dual ones. Good lattices are exactly the level-\(0\) lattices
+\(L=\mathscr L_{x,0}\) of the vertices \(x\) of the Bruhat–Tits building
+\(\mathcal B(\operatorname{Sp}(W))\) whose stabilizer is a maximal parahoric; the
+associated self-dual lattice function is constant equal to \(L\) on a neighborhood
+of level \(0\) and jumps only at the self-paired levels \(0\) and \(\tfrac12\pmod 1\)
+(see <a class="node-ref" data-node-id="lattice_model.self_dual_lattice_function" href="lattice_model_self_dual_lattice_function.html">Self-Dual Lattice Function</a>,
+<a class="node-ref" data-node-id="lattice_model.symplectic_apartment_model" href="lattice_model_symplectic_apartment_model.html">Apartment Model for Sp(W) via Self-Dual Lattice Functions</a>).</p>
+<p>The symplectic form induces nondegenerate symplectic \(k\)-forms on the two graded
+pieces</p>
+<p>$$
+\mathsf b_x:=L/L^{\#}\ (\dim_k\mathsf b_x=2a),\qquad
+\mathsf b_x':=L^{\#}/\mathfrak p L\ (\dim_k\mathsf b_x'=2c),\qquad a+c=n.
+$$</p>
+<p>For \(w\in L\) write \(\bar w\in\mathsf b_x\) for its image in \(L/L^{\#}\). The
+parahoric is the lattice stabilizer \(G_{L,0}=\operatorname{Sp}(L)=\{g\in G:gL=L\}\)
+(such a \(g\) automatically fixes \(L^{\#}\) and \(\mathfrak p L\)), and its
+pro-unipotent radical is</p>
+<p>$$
+G_{L,0^+}=\{g\in\operatorname{Sp}(L):(g-1)L\subseteq L^{\#}\ \text{ and }\ (g-1)L^{\#}\subseteq\mathfrak p L\}.
+$$</p>
+<p>Then \(G_{L,0^+}\) is normal in \(G_{L,0}\), and reduction induces an isomorphism of
+finite reductive groups over \(k\)</p>
+<p>$$
+\mathsf G_x:=G_{L,0}/G_{L,0^+}\ \overset{\sim}{\longrightarrow}\
+\operatorname{Sp}(\mathsf b_x)\times\operatorname{Sp}(\mathsf b_x')
+=\operatorname{Sp}_{2a}(k)\times\operatorname{Sp}_{2c}(k),\qquad g\mapsto(\bar g,\bar g'),
+$$</p>
+<p>where \(\bar g\) (resp. \(\bar g'\)) is the action of \(g\) on \(\mathsf b_x=L/L^{\#}\)
+(resp. \(\mathsf b_x'=L^{\#}/\mathfrak p L\))
+(<a class="node-ref" data-node-id="lattice_model.symplectic_parahoric_reductive_quotient" href="lattice_model_symplectic_parahoric_reductive_quotient.html">Parahoric Reductive Quotient for Sp(W)</a>). The level-\(0\)
+factor \(\operatorname{Sp}(\mathsf b_x)\) is the one that enters the generalized
+lattice model.</p>
+<p><strong>Generalized lattice model</strong> (<a class="node-ref" data-node-id="supercuspidal_theta.generalized_lattice_model" href="../supercuspidal_theta/supercuspidal_theta_generalized_lattice_model.html">Generalized Lattice Model</a>,
+<a class="node-ref" data-node-id="lattice_model.lattice_model_splitting" href="lattice_model_lattice_model_splitting.html">Parahoric Action on the Generalized Lattice Model</a>). Let \(\Omega_x=S(\mathscr L_{x,0})\)
+be the space of locally constant, compactly supported maps \(f:W\to S(\mathsf b_x)\)
+satisfying the covariance rule</p>
+<p>$$
+f(a+w)=\psi\!\big(\tfrac12\langle w,a\rangle\big)\,\overline\omega_x(\bar a)\,f(w),
+\qquad a\in L,\ w\in W,
+$$</p>
+<p>where \(\bar a\in\mathsf b_x=L/L^{\#}\) is the reduction of \(a\in L\) (so for
+\(a\in L^{\#}\), \(\bar a=0\) and \(f(a+w)=\psi(\tfrac12\langle w,a\rangle)f(w)\)), and
+\(\overline\omega_x\) is the finite oscillator representation of the finite Heisenberg
+group \(H(\mathsf b_x)\) and of \(\operatorname{Sp}(\mathsf b_x)\)
+(<a class="node-ref" data-node-id="finite_field_weil.symplectic_weil_representation" href="../finite_field_weil/finite_field_weil_symplectic_weil_representation.html">Symplectic Weil Representation over a Finite Field</a>). The relevant Heisenberg
+cocycle is</p>
+<p>$$
+\overline\omega_x(\bar u)\,\overline\omega_x(\bar v)
+=\psi\!\big(\tfrac12\langle\bar u,\bar v\rangle\big)\,\overline\omega_x(\bar u+\bar v),
+\qquad \bar u,\bar v\in\mathsf b_x,
+$$</p>
+<p>with \(\psi\) read on \(k\) via \(\bar t\mapsto\psi(t)\) (well defined as
+\(\psi|_{\mathfrak p}=1\)). The space \(\Omega_x\) realizes \(\omega_\psi\) over
+\(G_{L,0}\) through the lattice-model splitting, the action being</p>
+<p>$$
+(\omega_x(g)f)(w)=\overline\omega_x(\bar g)\,f(g^{-1}w),\qquad g\in G_{L,0},
+$$</p>
+<p>where \(\bar g\in\operatorname{Sp}(\mathsf b_x)\) is the first-factor reduction; the
+second factor \(\operatorname{Sp}(\mathsf b_x')\) enters only through the geometric
+translation \(f\mapsto f(g^{-1}\cdot)\) on the \(W\)-support, not through the
+\(S(\mathsf b_x)\)-values. On \(G_{L,0^+}\) the first-factor reduction is trivial
+(\(\bar g=1\)), so the action is the bare geometric translation
+\((\omega_x(g)f)(w)=f(g^{-1}w)\).</p>
+<h2>Statement</h2>
+<p>Let \(L\) be a good lattice with vertex \(x\), and let \(\Omega_x\) be its generalized
+lattice model with the action \(\omega_x\) above. Define</p>
+<p>$$
+\iota:S(\mathsf b_x)\longrightarrow\Omega_x,\qquad
+(\iota\phi)(w)=f_\phi(w)=
+\begin{cases}\overline\omega_x(\bar w)\,\phi,&amp; w\in L,\\ 0,&amp; w\notin L,\end{cases}
+$$</p>
+<p>where \(\bar w\in\mathsf b_x=L/L^{\#}\) is the reduction of \(w\in L\). Then:</p>
+<ol>
+<li>
+<p>\(\iota\) is a well-defined linear injection whose image lies in the fixed space
+\(\Omega_x^{\,G_{L,0^+}}\).</p>
+</li>
+<li>
+<p>\(\iota\) intertwines the finite Weil representation \(\overline\omega_x\) of
+\(\operatorname{Sp}(\mathsf b_x)\) on \(S(\mathsf b_x)\) with the residual
+\(\mathsf G_x\)-action induced by \(\omega_x\): for all \(g\in G_{L,0}\),
+\(\ \omega_x(g)\,\iota\phi=\iota\big(\overline\omega_x(\bar g)\phi\big)\), where
+\(\bar g\in\operatorname{Sp}(\mathsf b_x)\) is the first-factor reduction. In
+particular the second reductive-quotient factor
+\(\operatorname{Sp}(\mathsf b_x')=\operatorname{Sp}(L^{\#}/\mathfrak p L)\) acts
+trivially on \(\operatorname{im}\iota\).</p>
+</li>
+<li>
+<p>\(\iota\) is surjective onto \(\Omega_x^{\,G_{L,0^+}}\); equivalently every
+\(G_{L,0^+}\)-fixed vector is supported on \(L\). Consequently, using
+\(\Omega_x\cong\omega_\psi|_{G_{L,0}}\),</p>
+</li>
+</ol>
+<p>$$
+\boxed{\;\omega_\psi^{\,G_{L,0^+}}\;=\;\Omega_x^{\,G_{L,0^+}}\;\cong\;S(\mathsf b_x)
+\quad\text{as }\mathsf G_x\text{-representations},\;}
+$$</p>
+<p>finite-dimensional of dimension \(\dim_{\mathbb C}S(\mathsf b_x)=q^{a}\), where
+\(2a=\dim_k(L/L^{\#})\); the first factor \(\operatorname{Sp}(\mathsf b_x)\) acts by
+the finite Weil representation \(\overline\omega_x\) and the second factor
+\(\operatorname{Sp}(\mathsf b_x')\) acts trivially.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Throughout, \(\bar{(\cdot)}\) denotes reduction modulo \(L^{\#}\) (for vectors of
+\(L\), giving elements of \(\mathsf b_x=L/L^{\#}\)) or the first-factor reduction
+modulo \(G_{L,0^+}\) (for elements of \(G_{L,0}\), giving elements of
+\(\operatorname{Sp}(\mathsf b_x)\)).</p>
+<h3>(A) \(\iota\) is well defined and lands in \(\Omega_x\)</h3>
+<p>Fix \(\phi\in S(\mathsf b_x)\). The function \(f_\phi\) is supported on the compact
+open set \(L\), and on \(L\) it depends only on \(\bar w\in\mathsf b_x\) (a finite
+set), hence is locally constant and compactly supported. It remains to verify the
+covariance rule for all \(a\in L\), \(w\in W\). If \(w\notin L\) then \(a+w\notin L\)
+(as \(a\in L\)), so both sides vanish. If \(w\in L\) then \(a+w\in L\) and, by the
+Heisenberg cocycle,</p>
+<p>$$
+\psi\!\big(\tfrac12\langle w,a\rangle\big)\,\overline\omega_x(\bar a)\,f_\phi(w)
+=\psi\!\big(\tfrac12\langle w,a\rangle\big)\,\overline\omega_x(\bar a)\,\overline\omega_x(\bar w)\,\phi
+=\psi\!\big(\tfrac12\langle w,a\rangle\big)\,\psi\!\big(\tfrac12\langle\bar a,\bar w\rangle\big)\,
+\overline\omega_x(\bar a+\bar w)\,\phi .
+$$</p>
+<p>Now \(\langle\bar a,\bar w\rangle\) is \(\langle a,w\rangle\bmod\mathfrak p\) and
+\(\langle a,w\rangle=-\langle w,a\rangle\), so the two phases cancel and the
+right-hand side equals \(\overline\omega_x(\overline{a+w})\phi=f_\phi(a+w)\). Hence
+\(f_\phi\in\Omega_x\). Linearity is clear, and injectivity follows from
+\(f_\phi(0)=\phi\).</p>
+<h3>(B) \(\iota\) lands in the fixed space; the intertwining; the second factor is trivial</h3>
+<p>Let \(h\in G_{L,0^+}\). Then \((h-1)L\subseteq L^{\#}\), so \(h\) preserves \(L\) and
+acts trivially on \(L/L^{\#}\); in particular \(\overline{h^{-1}w}=\bar w\) for
+\(w\in L\). Since the \(G_{L,0^+}\)-action is bare translation,</p>
+<p>$$
+(\omega_x(h)f_\phi)(w)=f_\phi(h^{-1}w)=\overline\omega_x(\overline{h^{-1}w})\phi=\overline\omega_x(\bar w)\phi=f_\phi(w)
+$$</p>
+<p>for \(w\in L\), and both sides vanish for \(w\notin L\). Hence
+\(\operatorname{im}\iota\subseteq\Omega_x^{\,G_{L,0^+}}\).</p>
+<p>Now let \(g\in G_{L,0}\). For \(w\notin L\) both sides of the asserted identity vanish
+at \(w\). For \(w\in L\), the action formula and \(\overline{g^{-1}w}=\bar g^{-1}\bar w\)
+give</p>
+<p>$$
+(\omega_x(g)f_\phi)(w)=\overline\omega_x(\bar g)\,\overline\omega_x(\bar g^{-1}\bar w)\,\phi .
+$$</p>
+<p>The conjugation identity
+\(\overline\omega_x(\bar g)\,\overline\omega_x(\bar v)\,\overline\omega_x(\bar g)^{-1}
+=\overline\omega_x(\bar g\bar v)\)
+(<a class="node-ref" data-node-id="lattice_model.lattice_model_splitting" href="lattice_model_lattice_model_splitting.html">Parahoric Action on the Generalized Lattice Model</a>,
+<a class="node-ref" data-node-id="finite_field_weil.symplectic_weil_representation" href="../finite_field_weil/finite_field_weil_symplectic_weil_representation.html">Symplectic Weil Representation over a Finite Field</a>) gives</p>
+<p>$$
+\overline\omega_x(\bar g)\,\overline\omega_x(\bar g^{-1}\bar w)
+=\overline\omega_x(\bar w)\,\overline\omega_x(\bar g),
+$$</p>
+<p>so \((\omega_x(g)f_\phi)(w)=\overline\omega_x(\bar w)\big(\overline\omega_x(\bar g)\phi\big)
+=f_{\overline\omega_x(\bar g)\phi}(w)\). Thus
+\(\omega_x(g)\iota\phi=\iota(\overline\omega_x(\bar g)\phi)\) for all \(g\in G_{L,0}\).
+Because only the first-factor reduction \(\bar g\) appears, any \(g\) whose image in
+\(\mathsf G_x\) has first component \(1\) acts trivially on \(\operatorname{im}\iota\);
+hence the second factor \(\operatorname{Sp}(\mathsf b_x')\) acts trivially. This proves
+(1) and (2). (Since \(G_{L,0^+}\) is normal in \(G_{L,0}\), the space
+\(\Omega_x^{\,G_{L,0^+}}\) is \(G_{L,0}\)-stable and carries the displayed
+\(\mathsf G_x\)-action.)</p>
+<h3>(C) Surjectivity: every \(G_{L,0^+}\)-fixed vector is supported on \(L\)</h3>
+<p>The argument rests on two detection lemmas for points outside the good lattice.</p>
+<p><strong>(C1) Lattice duality detects outside points.</strong> <em>If \(x\in W\setminus L\), then there
+is \(v\in L^{\#}\) with \(\langle x,v\rangle\notin\mathfrak p\).</em> Indeed the symplectic
+form identifies \(W\) with its \(F\)-linear dual, and for a full \(\mathfrak o\)-lattice
+the \(\mathfrak p\)-dual operation satisfies the double-dual identity
+\((L^{\#})^{\#}=L\) (choose an \(\mathfrak o\)-basis of \(L\); this is the usual
+double-dual identity for a perfect pairing, with the same \(\mathfrak p\)-normalization
+on both duals). Hence \(\langle x,L^{\#}\rangle\subseteq\mathfrak p\) is equivalent to
+\(x\in(L^{\#})^{\#}=L\); so \(x\notin L\) forces some \(v\in L^{\#}\) with
+\(\langle x,v\rangle\notin\mathfrak p\).</p>
+<p><strong>(C2) A pro-unipotent transvection shifts \(x\) by a phase-detecting vector.</strong> <em>For
+every \(x\in W\setminus L\) there exist \(h\in G_{L,0^+}\) and \(a\in L^{\#}\) with
+\(h^{-1}x=x+a\) and \(\psi(\tfrac12\langle x,a\rangle)\ne 1\).</em> By (C1) choose
+\(v\in L^{\#}\) with \(\alpha:=\langle x,v\rangle\notin\mathfrak p\); let
+\(r=v_F(\alpha)\le 0\). Since the character induced by \(\psi\) on \(k\) is nontrivial
+and \(q\) is odd, choose \(u\in\mathfrak o^\times\) with
+\(\psi(-\tfrac12 u(\varpi^{-r}\alpha)^2)\ne 1\), and put \(c=\varpi^{-2r}u\in\mathfrak o\).
+Define the symplectic transvection \(h(y)=y+c\langle y,v\rangle v\) (symplectic because
+\(\langle v,v\rangle=0\) and the linear cross terms cancel). If \(y\in L\) then
+\(\langle y,v\rangle\in\mathfrak p\) (as \(v\in L^{\#}\)), so
+\((h-1)y=c\langle y,v\rangle v\in\mathfrak p L^{\#}\subseteq L^{\#}\); if \(y\in L^{\#}\)
+then \(y\in L\) (goodness of \(L\)) and likewise \((h-1)y\in\mathfrak p L^{\#}\subseteq\mathfrak p L\).
+Thus \(h\in G_{L,0^+}\). With \(h^{-1}(y)=y-c\langle y,v\rangle v\) and \(a:=-c\alpha v\),
+the coefficient \(c\alpha\) has valuation \(-r\ge 0\), so \(a\in L^{\#}\), \(h^{-1}x=x+a\),
+and</p>
+<p>$$
+\tfrac12\langle x,a\rangle=-\tfrac12 c\alpha^2=-\tfrac12 u(\varpi^{-r}\alpha)^2,
+$$</p>
+<p>so by the choice of \(u\), \(\psi(\tfrac12\langle x,a\rangle)\ne 1\).</p>
+<p><strong>Conclusion of (C).</strong> Let \(f\in\Omega_x^{\,G_{L,0^+}}\) and \(x\in W\setminus L\).
+Choose \(h\in G_{L,0^+}\) and \(a\in L^{\#}\) as in (C2). Fixedness gives
+\(f(x)=f(h^{-1}x)=f(x+a)\); and since \(a\in L^{\#}\subseteq L\) has \(\bar a=0\), the
+covariance rule gives \(f(x+a)=\psi(\tfrac12\langle x,a\rangle)f(x)\). As the scalar is
+\(\ne 1\), \(f(x)=0\). Hence \(\operatorname{supp}(f)\subseteq L\). On \(L\), covariance
+with base point \(0\) gives \(f(w)=\overline\omega_x(\bar w)f(0)\), i.e.
+\(f=\iota\phi\) with \(\phi:=f(0)\in S(\mathsf b_x)\). So \(\iota\) is onto
+\(\Omega_x^{\,G_{L,0^+}}\).</p>
+<h3>Conclusion</h3>
+<p>\(\iota:S(\mathsf b_x)\to\Omega_x^{\,G_{L,0^+}}\) is an isomorphism, and by (2) the
+induced \(\mathsf G_x\)-action is \(\overline\omega_x\) on the first factor and trivial
+on the second. Through the lattice-model splitting
+\(\Omega_x\cong\omega_\psi|_{G_{L,0}}\), so \(\omega_\psi^{\,G_{L,0^+}}\cong S(\mathsf b_x)\),
+of dimension \(\dim_{\mathbb C}S(\mathsf b_x)=q^{a}\) with \(2a=\dim_k(L/L^{\#})\). \(\square\)</p>
+<h2>Remarks</h2>
+<ul>
+<li>
+<p><strong>Two extreme good lattices.</strong> When \(L^{\#}=\mathfrak p L\) (the \(\alpha=0\) vertex)
+  one has \(\mathsf b_x=L/\mathfrak p L\cong k^{2n}\), \(\mathsf b_x'=0\), and
+  \(\mathsf G_x=\operatorname{Sp}_{2n}(k)\), so \(\omega_\psi^{\,G_{L,0^+}}\cong S(\mathsf b_x)\)
+  has dimension \(q^{n}\). The other extreme is the self-dual case \(L=L^{\#}\) (the
+  hyperspecial \(\alpha=\tfrac12\) vertex), where \(\mathsf b_x=0\), the fixed space is
+  one-dimensional (\(q^{0}=1\)), and the surviving symplectic factor is
+  \(\operatorname{Sp}(\mathsf b_x')\). The general good lattice interpolates between these.</p>
+</li>
+<li>
+<p><strong>Building localization.</strong> Letting \(L\) (equivalently the vertex \(x\)) vary, the
+  assignment \(x\mapsto\omega_\psi^{\,G_{x,0^+}}\cong S(\mathsf b_x)\) is the stalk of a
+  \(G\)-equivariant coefficient system on \(\mathcal B(\operatorname{Sp}(W))\): each
+  stalk is a finite Weil representation of the level-\(0\) factor of the finite
+  reductive quotient \(\mathsf G_x\). The transition maps for an incidence \(y\le x\)
+  are governed by the symplectic subquotient
+  \(\mathsf b_x=U^{\perp}/U\subseteq\mathsf b_y\) of
+  <a class="node-ref" data-node-id="lattice_model.level_zero_containment" href="lattice_model_level_zero_containment.html">Level-0 Lattice Under Specialization to a Face</a>, i.e. by parabolic restriction of the
+  finite Weil representations.</p>
+</li>
+<li>
+<p><strong>Non-good parahorics.</strong> For a non-maximal parahoric (interior jumps present), the
+  reductive quotient acquires \(\operatorname{GL}\) factors,
+  \(\mathsf G_x=\operatorname{Sp}(\operatorname{gr}_0)\times\operatorname{Sp}(\operatorname{gr}_{1/2})\times\prod_{0&lt;s&lt;1/2}\operatorname{GL}(\operatorname{gr}_s)\)
+  (<a class="node-ref" data-node-id="lattice_model.symplectic_parahoric_reductive_quotient" href="lattice_model_symplectic_parahoric_reductive_quotient.html">Parahoric Reductive Quotient for Sp(W)</a>); the
+  \(\operatorname{GL}\) factors act on functions on the Lagrangian
+  \(\operatorname{gr}_s\). The good-lattice (vertex) case isolates the level-\(0\)
+  symplectic factor and is the content above.</p>
+</li>
+<li>
+<p><strong>Oddness of \(q\).</strong> Used twice: \(\tfrac12\in\mathfrak o^\times\) (so the phase
+  computation and the model make sense, and the transvection of (C2) can hit a
+  nontrivial character), and \(\overline\omega_x\) is a genuine representation of
+  \(\operatorname{Sp}(\mathsf b_x)\) over \(k\), so no metaplectic cover intervenes
+  (<a class="node-ref" data-node-id="lattice_model.lattice_model_splitting" href="lattice_model_lattice_model_splitting.html">Parahoric Action on the Generalized Lattice Model</a>).</p>
+</li>
+<li>
+<p><strong>Provenance.</strong> This corrected general-good-lattice statement and proof were
+  re-derived and machine-checked with the Rethlas generator/verifier loop; the two
+  detection lemmas (C1)–(C2) were produced autonomously by the generator. An earlier
+  draft mistakenly defined a good lattice as \(\psi\)-self-dual (\(L^{\#}=\mathfrak p L\)),
+  which is only the single extreme \(\alpha=0\) vertex; the correct notion is
+  \(L\supseteq L^{\#}\supseteq\mathfrak p L\), corresponding to all vertices.</p>
+</li>
+</ul>
+      </div>
+    </details>
+    
+  </div>
+
+  
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="lattice_model_vertex_weil_restriction_incompatibility.html">Vertex Weil Restrictions over an Alcove Are Incompatible</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">building</span><span class="tag">generalized-lattice-model</span><span class="tag">finite-reductive-quotient</span><span class="tag">symplectic-group</span><span class="tag">depth-zero</span><span class="tag">weil-representation</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle (folded by default: the keyword list can run
+      // into the hundreds of entries, so only Topics is open on first visit).
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      // `hidden` on the list is the single source of fold truth, so a search
+      // that auto-expands the list cannot desync the toggle button.
+      function setKeywordsFolded(folded, remember) {
+        keywordList.hidden = folded;
+        if (keywordBtn) keywordBtn.setAttribute('aria-expanded', String(!folded));
+        if (remember) localStorage.setItem('sidebar-keywords-folded', String(folded));
+      }
+      if (keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        setKeywordsFolded(kwStored === null ? true : kwStored === 'true', false);
+      }
+      if (keywordBtn && keywordList) {
+        keywordBtn.addEventListener('click', function() {
+          setKeywordsFolded(!keywordList.hidden, true);
+        });
+      }
+
+      // Keyword search: client-side filter over the existing <li> entries,
+      // so every keyword page stays a plain reachable link with no JS.
+      var keywordSearch = document.getElementById('keyword-search');
+      var keywordEmpty = document.getElementById('keyword-empty');
+      if (keywordSearch && keywordList) {
+        var keywordItems = Array.prototype.slice.call(keywordList.querySelectorAll('li'));
+        keywordSearch.addEventListener('input', function() {
+          var query = keywordSearch.value.trim().toLowerCase();
+          if (query && keywordList.hidden) setKeywordsFolded(false, false);
+          var visible = 0;
+          keywordItems.forEach(function(item) {
+            var match = !query || item.textContent.toLowerCase().indexOf(query) !== -1;
+            item.hidden = !match;
+            if (match) visible += 1;
+          });
+          if (keywordEmpty) keywordEmpty.hidden = visible !== 0;
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

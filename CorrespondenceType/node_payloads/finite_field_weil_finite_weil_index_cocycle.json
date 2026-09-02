@@ -1,0 +1,49 @@
+{
+  "id": "finite_field_weil.finite_weil_index_cocycle",
+  "title": "Finite Weil-Index Cocycle for Lagrangian Transitions",
+  "kind": "definition",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_finite_weil_index_cocycle.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Finite Weil-Index Cocycle for Lagrangian Transitions</h1>\n<p>Use the Lagrangian transition intertwiners\n\\(\\mathcal F_{L,L'}:\\mathcal S_{L'}\\to\\mathcal S_L\\) of\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_intertwiner\" href=\"finite_field_weil_lagrangian_transition_intertwiner.html\">Change-of-Lagrangian Intertwiner for Finite Schrödinger Models</a>.\nBy <a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_orthogonality\" href=\"finite_field_weil_lagrangian_transition_orthogonality.html\">Orthogonality of Change-of-Lagrangian Intertwiners</a>, each\n\\(\\mathcal F_{L,L'}\\) is an isomorphism.</p>\n<h2>Definition</h2>\n<p>For three Lagrangians \\(L,L',L''\\subset E\\), define</p>\n<p>$$\n\\gamma(L,L',L'')\\in R^\\times\n$$</p>\n<p>by</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ \\mathcal F_{L',L''}\n=\n\\gamma(L,L',L'')\\,\\mathcal F_{L,L''}.\n$$</p>\n<p>This scalar is the finite Weil-index cocycle attached to the raw\nchange-of-Lagrangian intertwiners \\(\\mathcal F_{L,L'}\\).\nIt is not the primary definition of the finite quadratic Weil index; that\nnormalized Gauss-sum definition is recorded in\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_quadratic_weil_index\" href=\"finite_field_weil_finite_quadratic_weil_index.html\">Finite Quadratic Weil Index</a>.  The name here means\nthat this transition cocycle is the scalar obstruction which, after choosing\nexplicit Fourier-Gaussian normalizations, is computed by finite Weil-index\nconstants.</p>\n<h2>Why the Scalar Exists</h2>\n<p>Both sides are \\(H(E,j)\\)-homomorphisms</p>\n<p>$$\n\\mathcal S_{L''}\\longrightarrow \\mathcal S_L.\n$$</p>\n<p>By <a class=\"node-ref\" data-node-id=\"finite_field_weil.schrodinger_hom_line\" href=\"finite_field_weil_schrodinger_hom_line.html\">One-Dimensional Hom Line for Finite Schrödinger Models</a>,</p>\n<p>$$\n\\operatorname{Hom}_{H(E,j)}(\\mathcal S_{L''},\\mathcal S_L)\n=R\\cdot \\mathcal F_{L,L''}.\n$$</p>\n<p>Thus there is a unique scalar \\(\\gamma(L,L',L'')\\in R\\) with</p>\n<p>$$\n\\mathcal F_{L,L'}\\mathcal F_{L',L''}\n=\n\\gamma(L,L',L'')\\mathcal F_{L,L''}.\n$$</p>\n<p>The scalar is nonzero because both \\(\\mathcal F_{L,L'}\\mathcal F_{L',L''}\\)\nand \\(\\mathcal F_{L,L''}\\) are isomorphisms.  Since \\(R\\) is a field, this\nmeans \\(\\gamma(L,L',L'')\\in R^\\times\\).</p>\n<p>This is the only input from Schur's lemma: it identifies the line in which the\ncomposition lives.  The next calculation identifies the scalar in that line.</p>\n<h2>Extracting the Scalar</h2>\n<p>Let \\(\\mathbf 1_{L''}\\in\\mathcal S_{L''}\\) be the characteristic function of\n\\(L''\\).  It belongs to \\(\\mathcal S_{L''}\\): if \\(c\\in L''\\), then both\n\\(\\mathbf 1_{L''}(v+c)\\) and \\(\\mathbf 1_{L''}(v)\\) vanish unless\n\\(v\\in L''\\), and if \\(v\\in L''\\) then \\(i(v,c)=0\\).  Hence the covariance\ncondition is satisfied.</p>\n<p>The normalizing value of \\(\\mathcal F_{L,L''}\\) on this vector is</p>\n<p>$$\n(\\mathcal F_{L,L''}\\mathbf 1_{L''})(0)=1,\n$$</p>\n<p>because</p>\n<p>$$\n(\\mathcal F_{L,L''}\\mathbf 1_{L''})(0)\n=\n\\sum_{b\\in L/(L\\cap L'')}\n\\mathbf 1_{L''}(b),\n$$</p>\n<p>and a representative \\(b\\in L\\) lies in \\(L''\\) exactly for the zero coset of\n\\(L/(L\\cap L'')\\).</p>\n<p>Therefore evaluating</p>\n<p>$$\n\\mathcal F_{L,L'}\\mathcal F_{L',L''}\n=\n\\gamma(L,L',L'')\\mathcal F_{L,L''}\n$$</p>\n<p>on \\(\\mathbf 1_{L''}\\) at \\(0\\) gives the scalar itself:</p>\n<p>$$\n\\gamma(L,L',L'')\n=\n(\\mathcal F_{L,L'}\\mathcal F_{L',L''}\\mathbf 1_{L''})(0).\n$$</p>\n<p>Now expand the two transition sums.  The outer transition gives</p>\n<p>$$\n(\\mathcal F_{L,L'}\\mathcal F_{L',L''}\\mathbf 1_{L''})(0)\n=\n\\sum_{b\\in L/(L\\cap L')}\n(\\mathcal F_{L',L''}\\mathbf 1_{L''})(b),\n$$</p>\n<p>because \\(i(b,0)=0\\).  For each such \\(b\\), the inner transition gives</p>\n<p>$$\n(\\mathcal F_{L',L''}\\mathbf 1_{L''})(b)\n=\n\\sum_{a\\in L'/(L'\\cap L'')}\n\\xi(i(a,b))\\,\\mathbf 1_{L''}(b+a).\n$$</p>\n<p>Combining the two formulas gives the explicit finite sum</p>\n<p>$$\n\\gamma(L,L',L'')\n=\n\\sum_{\\substack{\nb\\in L/(L\\cap L')\\\\\na\\in L'/(L'\\cap L'')\\\\\na+b\\in L''\n}}\n\\xi(i(a,b)).\n$$</p>\n<p>The condition \\(a+b\\in L''\\) is exactly the condition that\n\\(\\mathbf 1_{L''}(b+a)\\) be nonzero.  No division or square root enters this\nformula.</p>\n<h2>Cocycle Identity</h2>\n<p>For four Lagrangians \\(L,L',L'',L'''\\), the scalars satisfy</p>\n<p>$$\n\\gamma(L,L',L'')\\,\\gamma(L,L'',L''')\n=\n\\gamma(L',L'',L''')\\,\\gamma(L,L',L''').\n$$</p>\n<p>Indeed, associativity of composition gives</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ\n(\\mathcal F_{L',L''}\\circ \\mathcal F_{L'',L'''})\n=\n(\\mathcal F_{L,L'}\\circ \\mathcal F_{L',L''})\n\\circ \\mathcal F_{L'',L'''}.\n$$</p>\n<p>Compute the left-hand side in two applications of the defining relation.\nFirst,</p>\n<p>$$\n\\mathcal F_{L',L''}\\circ \\mathcal F_{L'',L'''}\n=\n\\gamma(L',L'',L''')\\mathcal F_{L',L'''}.\n$$</p>\n<p>Composing with \\(\\mathcal F_{L,L'}\\) gives</p>\n<p>$$\n\\gamma(L',L'',L''')\\,\\gamma(L,L',L''')\\mathcal F_{L,L'''},\n$$</p>\n<p>because</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ \\mathcal F_{L',L'''}\n=\n\\gamma(L,L',L''')\\mathcal F_{L,L'''}.\n$$</p>\n<p>Similarly, for the right-hand side,</p>\n<p>$$\n\\mathcal F_{L,L'}\\circ \\mathcal F_{L',L''}\n=\n\\gamma(L,L',L'')\\mathcal F_{L,L''},\n$$</p>\n<p>and then</p>\n<p>$$\n\\gamma(L,L',L'')\\,\\gamma(L,L'',L''')\\mathcal F_{L,L'''}.\n$$</p>\n<p>Since \\(\\mathcal F_{L,L'''}\\neq0\\), the cocycle identity follows.</p>\n<h2>Normalization Dependence</h2>\n<p>The scalar \\(\\gamma\\) depends on the raw normalization of the intertwiners\n\\(\\mathcal F_{L,L'}\\).  If one rescales</p>\n<p>$$\n\\mathcal F_{L,L'}^\\alpha=\\alpha_{L,L'}\\mathcal F_{L,L'},\n\\qquad \\alpha_{L,L'}\\in R^\\times,\n$$</p>\n<p>then the cocycle changes by the coboundary</p>\n<p>$$\n\\gamma^\\alpha(L,L',L'')\n=\n\\frac{\\alpha_{L,L'}\\alpha_{L',L''}}{\\alpha_{L,L''}}\n\\gamma(L,L',L'').\n$$</p>\n<p>Indeed,</p>\n<p>$$\n\\begin{aligned}\n\\mathcal F^\\alpha_{L,L'}\\mathcal F^\\alpha_{L',L''}\n&amp;=\n\\alpha_{L,L'}\\alpha_{L',L''}\n\\mathcal F_{L,L'}\\mathcal F_{L',L''}\\\\\n&amp;=\n\\alpha_{L,L'}\\alpha_{L',L''}\n\\gamma(L,L',L'')\\mathcal F_{L,L''}\\\\\n&amp;=\n\\frac{\\alpha_{L,L'}\\alpha_{L',L''}}{\\alpha_{L,L''}}\n\\gamma(L,L',L'')\\mathcal F^\\alpha_{L,L''}.\n\\end{aligned}\n$$</p>\n<p>Thus the Weil index records the failure of the chosen raw transition maps to\ncompose strictly; it is not itself an invariant of the abstract Heisenberg\nrepresentation without a normalization convention.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_intertwiner.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_orthogonality",
+      "title": "Orthogonality of Change-of-Lagrangian Intertwiners",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_orthogonality.html"
+    },
+    {
+      "id": "finite_field_weil.schrodinger_hom_line",
+      "title": "One-Dimensional Hom Line for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_schrodinger_hom_line.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.base_lagrangian_weil_index_trivialization",
+      "title": "Base-Lagrangian Trivialization of the Finite Weil-Index Cocycle",
+      "href": "finite_field_weil/finite_field_weil_base_lagrangian_weil_index_trivialization.html"
+    },
+    {
+      "id": "finite_field_weil.compatible_lagrangian_transition_system",
+      "title": "Compatible System of Schrödinger-Model Intertwiners over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_compatible_lagrangian_transition_system.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

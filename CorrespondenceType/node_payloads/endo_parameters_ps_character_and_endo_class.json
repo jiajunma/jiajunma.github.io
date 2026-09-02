@@ -1,0 +1,34 @@
+{
+  "id": "endo_parameters.ps_character_and_endo_class",
+  "title": "PS-Characters And Endo-Classes",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_ps_character_and_endo_class.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>PS-Characters And Endo-Classes</h1>\n<p>Let $(E,\\beta)$ be a simple based extension of $F$.  A ps-character supported\non $\\beta$ is a transfer-compatible rule assigning to every triple</p>\n<p>$$\n(V,\\varphi,x)\n$$</p>\n<p>a simple character in $\\mathcal C(x,\\varphi(\\beta))$, where:</p>\n<ul>\n<li>$V$ is a finite-dimensional $F$-vector space;</li>\n<li>$\\varphi:E\\hookrightarrow\\operatorname{End}_F(V)$ is an embedding, so $V$ is\n  viewed as an $E$-vector space;</li>\n<li>$x$ is a point in the building of\n  $\\operatorname{GL}_{\\varphi(E)}(V)$.</li>\n</ul>\n<p>A simple character in the image of a ps-character is called a realization.</p>\n<p>Two ps-characters are equivalent if there exist realizations on a common\n$F$-vector space $V$ which intertwine in $\\operatorname{GL}_F(V)$.  The draft\nstates that this is equivalent to asking that any realizations on a common\nvector space intertwine.</p>\n<p>An endo-class is an equivalence class of ps-characters.  The set of\nendo-classes over $F$ is denoted</p>\n<p>$$\n\\mathscr E(F).\n$$</p>\n<p>The unique endo-class supported on $0$ is the trivial endo-class\n$\\mathfrak c_0$.  The non-trivial endo-classes form</p>\n<p>$$\n\\mathscr E^+(F):=\\mathscr E(F)\\setminus\\{\\mathfrak c_0\\}.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "endo_parameters.based_extension_and_simple_element",
+      "title": "Based Extensions And Simple Elements",
+      "href": "endo_parameters/endo_parameters_based_extension_and_simple_element.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "endo_parameters.gl_endo_parameter",
+      "title": "GL Endo-Parameters",
+      "href": "endo_parameters/endo_parameters_gl_endo_parameter.html"
+    },
+    {
+      "id": "endo_parameters.self_dual_endo_classes",
+      "title": "Self-Dual Endo-Classes",
+      "href": "endo_parameters/endo_parameters_self_dual_endo_classes.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

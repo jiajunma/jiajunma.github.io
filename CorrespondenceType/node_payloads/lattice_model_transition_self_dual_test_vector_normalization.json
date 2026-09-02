@@ -1,0 +1,34 @@
+{
+  "id": "lattice_model_transition.self_dual_test_vector_normalization",
+  "title": "Self-Dual Test-Vector Normalization For Nested Lattice Models",
+  "kind": "concept",
+  "status": "staged",
+  "href": "lattice_model_transition/lattice_model_transition_self_dual_test_vector_normalization.html",
+  "primary_topic": "lattice_model_transition",
+  "topics": [
+    "lattice_model_transition"
+  ],
+  "body_html": "<h1>Self-Dual Test-Vector Normalization For Nested Lattice Models</h1>\n<p>Fix once and for all the Haar measure on $W$ used in all lattice-model\nintegral operators.  The normalization convention is:</p>\n<ul>\n<li>A lattice $L\\subset W$ is called self-dual when $L=L^\\perp$.  Here\n  $L^\\perp=\\{w\\in W:\\psi(\\langle w,l\\rangle_W)=1\\;\\forall l\\in L\\}$ is the\n  symplectic dual (orthogonal complement).  In the hermitian-setting KB\n  nodes the notation $L^\\#$ denotes the metric dual\n  $\\{v:h(v,L)\\subseteq\\mathfrak{o}_D\\}$, which is a different object.</li>\n<li>In the notation of the transition-map problem, the self-dual case is the\n  case $\\mathcal{B}_0=\\mathcal{B}_{0^+}$.</li>\n<li>Every self-dual lattice has Haar volume $1$:</li>\n</ul>\n<p>$$\n\\mu(L)=1\n\\qquad\\text{if }L=L^\\perp.\n$$</p>\n<p>Thus the Haar measure is not an additional missing choice.  If a transition\nconstruction still has a scalar ambiguity, the ambiguity must come from the\nchoice of comparison intertwiners, splittings, polarizations, or finite\nFourier-transform normalizations, not from an unspecified Haar measure.</p>\n<p>Suppose two lattice models are attached to lattices</p>\n<p>$$\nB_0\\subseteq B'_0.\n$$</p>\n<p>Choose a self-dual lattice</p>\n<p>$$\nA_0\\subseteq B_0\\subseteq B'_0.\n$$</p>\n<p>The existence of such an $A_0$ is treated as available for good lattices:\nevery good lattice contains a self-dual lattice, and in the nested case one\nchooses $A_0$ inside the smaller lattice.</p>\n<p>Let</p>\n<p>$$\n\\Omega_{A_0}:=\\mathcal{S}(A_0)\n$$</p>\n<p>be the lattice model with respect to the self-dual lattice $A_0$.  Since\n$A_0$ is self-dual, its distinguished test vector is the characteristic\nfunction</p>\n<p>$$\nv_{A_0}:=\\mathbf{1}_{A_0}\\in \\Omega_{A_0}.\n$$</p>\n<p>This is the reference test vector.  The test line attached to $A_0$ in the\n$B_0$-lattice model, and likewise in the $B'_0$-lattice model, is defined by\ncomparing those models with $\\Omega_{A_0}$ and taking the inverse image of the\nline $\\mathbb{C}\\,\\mathbf{1}_{A_0}$.</p>\n<p>Equivalently, the transition map between the $B_0$- and $B'_0$-models should\nbe normalized by requiring that, after comparison with the $A_0$-model, it\ncarries the vector corresponding to $\\mathbf{1}_{A_0}$ to the vector\ncorresponding to $\\mathbf{1}_{A_0}$ with scalar $1$.</p>\n<p>In the pulled-back facet setting, when an incidence $E\\leq F$ gives</p>\n<p>$$\nL_F\\subseteq L_E,\n$$</p>\n<p>the test-vector normalization is applied with</p>\n<p>$$\nB_0=L_F,\n\\qquad\nB'_0=L_E.\n$$</p>\n<p>The same test vector can be used to compute the already-defined character\n$\\delta^{\\mathrm{lm}}_{E,F}$.  For $k\\in K_F\\subseteq K_E$, compare the\nactions of the original splittings $s_F(k)$ and $s_E(k)$ on\n$\\mathbf{1}_{A_0}$ after transporting both actions to the $A_0$-model.</p>\n<p>More generally, if $kA_0\\ne A_0$, compare the two induced maps from\n$\\mathbb{C}\\,\\mathbf{1}_{A_0}$ in the $A_0$-model to\n$\\mathbb{C}\\,\\mathbf{1}_{kA_0}$ in the $kA_0$-model.  The ratio of these two\nscalars should recover</p>\n<p>$$\n\\delta^{\\mathrm{lm}}_{E,F}(k).\n$$</p>\n<p>The existence of a common reference model or common normalized comparison\nintertwiners does not by itself imply $\\delta^{\\mathrm{lm}}_{E,F}=1$.  The\ncharacter compares the already chosen lattice-model splittings $s_F$ and\n$s_E$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "title": "Generalized Lattice Models And Original Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_generalized_lattice_model_and_original_splittings.html"
+    },
+    {
+      "id": "lattice_model_transition.incidence_ratio_character",
+      "title": "Incidence Ratio Character For Original Lattice-Model Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_incidence_ratio_character.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "title": "Allowed Local Inputs For The Lattice-Model Transition Problem",
+      "href": "lattice_model_transition/lattice_model_transition_allowed_local_inputs_transition_problem.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

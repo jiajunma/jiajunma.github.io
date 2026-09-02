@@ -1,0 +1,34 @@
+{
+  "id": "tame_covers.unique_splitting_for_tame_cover_subgroups",
+  "title": "Unique Splitting For Prime-To-Z Compact Subgroups",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "tame_covers/tame_covers_unique_splitting_for_tame_cover_subgroups.html",
+  "primary_topic": "tame_covers",
+  "topics": [
+    "tame_covers"
+  ],
+  "body_html": "<h1>Unique Splitting For Prime-To-Z Compact Subgroups</h1>\n<p>Let</p>\n<p>$$\n1\\to Z\\to \\widetilde G\\to G\\to 1\n$$</p>\n<p>be a $Z$-cover.  If $H\\subset G$ is compact and</p>\n<p>$$\n|H|\\wedge |Z|=1,\n$$</p>\n<p>then the draft asserts that there is a unique group homomorphism</p>\n<p>$$\n\\iota_H:H\\to \\widetilde H\n$$</p>\n<p>which is a section of $\\widetilde H\\to H$.  In particular,</p>\n<p>$$\n\\widetilde H\\simeq H\\times Z\n$$</p>\n<p>as topological groups.</p>\n<h2>Draft Caution</h2>\n<p>The TeX proof gives two sketches: one via vanishing of group cohomology and\none via exactness of invariants.  The conclusion is intended as a reusable\ninput for comparing genuine cover representations with ordinary\nrepresentations on prime-to-$Z$ compact subgroups.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "tame_covers.tame_z_cover",
+      "title": "Tame Z-Covers Of Locally Profinite Groups",
+      "href": "tame_covers/tame_covers_tame_z_cover.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "tame_covers.genuine_representations_of_covers",
+      "title": "Genuine Representations Of Central Covers",
+      "href": "tame_covers/tame_covers_genuine_representations_of_covers.html"
+    },
+    {
+      "id": "tame_covers.intertwining_sets_for_cover_representations",
+      "title": "Intertwining Sets For Cover Representations",
+      "href": "tame_covers/tame_covers_intertwining_sets_for_cover_representations.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

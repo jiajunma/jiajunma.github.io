@@ -1,0 +1,49 @@
+{
+  "id": "finite_field_weil.schrodinger_hom_line",
+  "title": "One-Dimensional Hom Line for Finite Schrödinger Models",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_schrodinger_hom_line.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>One-Dimensional Hom Line for Finite Schrödinger Models</h1>\n<p>Use the setup of <a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_intertwiner\" href=\"finite_field_weil_lagrangian_transition_intertwiner.html\">Change-of-Lagrangian Intertwiner for Finite Schrödinger Models</a>.\nThus \\(k\\) has odd order, \\((E,j)\\) is symplectic, \\(i=j/2\\), and\n\\(\\mathcal S_L\\) is the Schrödinger model attached to a Lagrangian \\(L\\).</p>\n<h2>Statement</h2>\n<p>For Lagrangians \\(L,L'\\subset E\\),</p>\n<p>$$\n\\operatorname{Hom}_{H(E,j)}(\\mathcal S_{L'},\\mathcal S_L)\n=\nR\\cdot \\mathcal F_{L,L'}.\n$$</p>\n<p>In particular this Hom space is one-dimensional over \\(R\\), and every\n\\(H(E,j)\\)-endomorphism of \\(\\mathcal S_L\\) is scalar.</p>",
+  "proof_html": "<p>First prove the endomorphism statement for \\(\\mathcal S_L\\).  Choose a\nLagrangian complement \\(M\\) of \\(L\\), so</p>\n<p>$$\nE=M\\oplus L.\n$$</p>\n<p>Such an \\(M\\) exists by extending a basis of \\(L\\) to a symplectic basis of\n\\(E\\).  Restriction to \\(M\\) identifies \\(\\mathcal S_L\\) with all functions\non \\(M\\): if \\(v=m+a\\) with \\(m\\in M\\), \\(a\\in L\\), then the covariance rule\nforces</p>\n<p>$$\n\\varphi(m+a)=\\xi(i(m,a))\\varphi(m).\n$$</p>\n<p>Let \\(e_m\\) be the function corresponding to the delta function at\n\\(m\\in M\\).  The action of \\(M\\subset H(E,j)\\) is translation:</p>\n<p>$$\n\\eta_\\xi(u,0)e_m=e_{m+u}\n\\qquad (u,m\\in M),\n$$</p>\n<p>because \\(M\\) is isotropic.  The action of \\(L\\subset H(E,j)\\) is diagonal:</p>\n<p>$$\n\\eta_\\xi(a,0)e_m=\\xi(j(a,m))e_m\n\\qquad (a\\in L,\\ m\\in M).\n$$</p>\n<p>Indeed,</p>\n<p>$$\n(\\eta_\\xi(a,0)\\varphi)(m)\n=\\xi(i(a,m))\\varphi(m-a)\n=\\xi(i(a,m))\\xi(i(m,-a))\\varphi(m)\n=\\xi(j(a,m))\\varphi(m).\n$$</p>\n<p>The characters</p>\n<p>$$\na\\longmapsto \\xi(j(a,m))\n$$</p>\n<p>of \\(L\\) are distinct as \\(m\\) varies in \\(M\\).  If \\(m\\neq m'\\), then\n\\(m-m'\\neq0\\); nondegeneracy of \\(j\\) and \\(L^\\perp=L\\) imply that the\nlinear functional \\(a\\mapsto j(a,m-m')\\) on \\(L\\) is nonzero, hence takes\nsome value outside \\(\\ker\\xi\\).</p>\n<p>Let \\(T\\in\\operatorname{End}_{H(E,j)}(\\mathcal S_L)\\).  Write</p>\n<p>$$\nT e_m=\\sum_{n\\in M} t_{n,m}e_n.\n$$</p>\n<p>Commuting with every \\(\\eta_\\xi(a,0)\\), \\(a\\in L\\), gives</p>\n<p>$$\n\\xi(j(a,n))t_{n,m}=\\xi(j(a,m))t_{n,m}\n\\qquad \\text{for all }a\\in L.\n$$</p>\n<p>By distinctness of the characters, \\(t_{n,m}=0\\) for \\(n\\neq m\\).  Thus\n\\(T\\) is diagonal:</p>\n<p>$$\nT e_m=\\lambda_m e_m.\n$$</p>\n<p>Commuting with translations by \\(u\\in M\\) gives</p>\n<p>$$\n\\lambda_{m+u}=\\lambda_m\n\\qquad (m,u\\in M).\n$$</p>\n<p>Hence all \\(\\lambda_m\\) are equal, and \\(T\\) is scalar.</p>\n<p>Now let</p>\n<p>$$\nT:\\mathcal S_{L'}\\to\\mathcal S_L\n$$</p>\n<p>be \\(H(E,j)\\)-linear.  By\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.lagrangian_transition_orthogonality\" href=\"finite_field_weil_lagrangian_transition_orthogonality.html\">Orthogonality of Change-of-Lagrangian Intertwiners</a>,\n\\(\\mathcal F_{L',L}\\) is an isomorphism.  Therefore</p>\n<p>$$\n\\mathcal F_{L',L}T\\in \\operatorname{End}_{H(E,j)}(\\mathcal S_{L'})\n$$</p>\n<p>is scalar, say \\(\\mathcal F_{L',L}T=\\lambda\\operatorname{id}\\).  Since</p>\n<p>$$\n\\mathcal F_{L',L}^{-1}\n=\nq^{-d_{L,L'}}\\mathcal F_{L,L'},\n$$</p>\n<p>we get</p>\n<p>$$\nT=\\lambda q^{-d_{L,L'}}\\mathcal F_{L,L'}.\n$$</p>\n<p>Thus</p>\n<p>$$\n\\operatorname{Hom}_{H(E,j)}(\\mathcal S_{L'},\\mathcal S_L)\n=R\\cdot\\mathcal F_{L,L'}.\n$$</p>\n<p>\\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_intertwiner.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_orthogonality",
+      "title": "Orthogonality of Change-of-Lagrangian Intertwiners",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_orthogonality.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.compatible_lagrangian_transition_system",
+      "title": "Compatible System of Schrödinger-Model Intertwiners over a Finite Field",
+      "href": "finite_field_weil/finite_field_weil_compatible_lagrangian_transition_system.html"
+    },
+    {
+      "id": "finite_field_weil.finite_weil_index_cocycle",
+      "title": "Finite Weil-Index Cocycle for Lagrangian Transitions",
+      "href": "finite_field_weil/finite_field_weil_finite_weil_index_cocycle.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_schrodinger_model",
+      "title": "Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_schrodinger_model.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

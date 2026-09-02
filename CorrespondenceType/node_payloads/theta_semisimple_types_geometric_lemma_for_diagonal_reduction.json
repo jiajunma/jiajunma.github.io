@@ -1,0 +1,29 @@
+{
+  "id": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+  "title": "Geometric Lemma For Diagonal Reduction",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_geometric_lemma_for_diagonal_reduction.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>Geometric Lemma For Diagonal Reduction</h1>\n<p>Let $\\beta$ be a semisimple element of depth $r$, and let</p>\n<p>$$\n\\mathfrak g^\\dagger_{x,-t}\n$$</p>\n<p>denote the diagonal part of $\\mathfrak g_{x,-t}$ with respect to the brick\ndecomposition.  The current theta draft states that for each $-t&lt;r$,</p>\n<p>$$\nG_{x,r-t}\\bigl(\\beta+\\mathfrak g^\\dagger_{x,-t}\\bigr)\n=\n\\beta+\\mathfrak g_{x,-t}.\n$$</p>\n<p>In particular, for $s=r/2$,</p>\n<p>$$\nG_{x,s}\\bigl(\\beta+\\mathfrak g^\\dagger_{x,-s}\\bigr)\n=\n\\beta+\\mathfrak g_{x,-s}.\n$$</p>\n<p>This lemma is used to replace the condition</p>\n<p>$$\nM(w)\\in\\beta+\\mathfrak g_{x,-s}\n$$</p>\n<p>by the stronger diagonal condition</p>\n<p>$$\nM(w)\\in\\beta+\\mathfrak g^\\dagger_{x,-s}\n$$</p>\n<p>after acting by $G_{x,s}$.</p>\n<h2>Draft Caution</h2>\n<p>The current TeX states this lemma but does not prove it.  The existing spec\ncontains a proof sketch based on surjectivity of $\\operatorname{ad}(\\beta)$ on\noff-diagonal associated graded pieces.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "theta_semisimple_types.brick_decomposition",
+      "title": "Brick Decomposition For Semisimple Theta Data",
+      "href": "theta_semisimple_types/theta_semisimple_types_brick_decomposition.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "theta_semisimple_types.main_isotypic_formula",
+      "title": "Main Isotypic Formula For Semisimple Theta Data",
+      "href": "theta_semisimple_types/theta_semisimple_types_main_isotypic_formula.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

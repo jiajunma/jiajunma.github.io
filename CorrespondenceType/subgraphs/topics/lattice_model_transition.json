@@ -1,0 +1,239 @@
+{
+  "topic": {
+    "id": "lattice_model_transition",
+    "title": "Lattice Model Transition",
+    "href": "lattice_model_transition/index.html",
+    "parent": null,
+    "node_count": 6,
+    "descendant_node_count": 6
+  },
+  "counts": {
+    "internal_nodes": 6,
+    "inlined_nodes": 6,
+    "descendant_nodes": 6,
+    "child_topics": 0,
+    "inlined_child_topics": 6,
+    "non_proof_plan_nodes": 6,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
+  },
+  "nodes": [
+    {
+      "id": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "title": "Allowed Local Inputs For The Lattice-Model Transition Problem",
+      "kind": "concept",
+      "status": "staged",
+      "href": "lattice_model_transition/lattice_model_transition_allowed_local_inputs_transition_problem.html",
+      "payload": "node_payloads/lattice_model_transition_allowed_local_inputs_transition_problem.json"
+    },
+    {
+      "id": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "title": "Finite-Field Maximal-Parabolic Weil Input",
+      "kind": "concept",
+      "status": "staged",
+      "href": "lattice_model_transition/lattice_model_transition_finite_field_maximal_parabolic_weil_input.html",
+      "payload": "node_payloads/lattice_model_transition_finite_field_maximal_parabolic_weil_input.json"
+    },
+    {
+      "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "title": "Generalized Lattice Models And Original Splittings",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model_transition/lattice_model_transition_generalized_lattice_model_and_original_splittings.html",
+      "payload": "node_payloads/lattice_model_transition_generalized_lattice_model_and_original_splittings.json"
+    },
+    {
+      "id": "lattice_model_transition.incidence_ratio_character",
+      "title": "Incidence Ratio Character For Original Lattice-Model Splittings",
+      "kind": "definition",
+      "status": "staged",
+      "href": "lattice_model_transition/lattice_model_transition_incidence_ratio_character.html",
+      "payload": "node_payloads/lattice_model_transition_incidence_ratio_character.json"
+    },
+    {
+      "id": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "title": "Pulled-Back Symplectic Facet Setup",
+      "kind": "concept",
+      "status": "staged",
+      "href": "lattice_model_transition/lattice_model_transition_pulled_back_symplectic_facet_setup.html",
+      "payload": "node_payloads/lattice_model_transition_pulled_back_symplectic_facet_setup.json"
+    },
+    {
+      "id": "lattice_model_transition.self_dual_test_vector_normalization",
+      "title": "Self-Dual Test-Vector Normalization For Nested Lattice Models",
+      "kind": "concept",
+      "status": "staged",
+      "href": "lattice_model_transition/lattice_model_transition_self_dual_test_vector_normalization.html",
+      "payload": "node_payloads/lattice_model_transition_self_dual_test_vector_normalization.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.incidence_ratio_character",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.self_dual_test_vector_normalization",
+      "to": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "to": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "lattice_model_transition.incidence_ratio_character",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "lattice_model_transition.self_dual_test_vector_normalization",
+      "kind": "uses"
+    },
+    {
+      "from": "lattice_model_transition.incidence_ratio_character",
+      "to": "lattice_model_transition.self_dual_test_vector_normalization",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "lattice_model",
+      "title": "Lattice Model",
+      "href": "lattice_model/index.html",
+      "role": "dependent",
+      "node_count": 19
+    },
+    {
+      "id": "theta_semisimple_types",
+      "title": "Theta Semisimple Types",
+      "href": "theta_semisimple_types/index.html",
+      "role": "dependent",
+      "node_count": 10
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+      "to": "topic:lattice_model",
+      "kind": "boundary_dependent",
+      "topic": "lattice_model",
+      "count": 1
+    },
+    {
+      "from": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "to": "topic:theta_semisimple_types",
+      "kind": "boundary_dependent",
+      "topic": "theta_semisimple_types",
+      "count": 1
+    },
+    {
+      "from": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "to": "topic:theta_semisimple_types",
+      "kind": "boundary_dependent",
+      "topic": "theta_semisimple_types",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "building",
+      "title": "building",
+      "href": "keywords/building.html",
+      "count": 1
+    },
+    {
+      "id": "character",
+      "title": "character",
+      "href": "keywords/character.html",
+      "count": 1
+    },
+    {
+      "id": "finite-field-weil",
+      "title": "finite-field-weil",
+      "href": "keywords/finite-field-weil.html",
+      "count": 1
+    },
+    {
+      "id": "generalized-lattice-model",
+      "title": "generalized-lattice-model",
+      "href": "keywords/generalized-lattice-model.html",
+      "count": 1
+    },
+    {
+      "id": "lattice-model-transition",
+      "title": "lattice-model-transition",
+      "href": "keywords/lattice-model-transition.html",
+      "count": 6
+    },
+    {
+      "id": "metaplectic-splitting",
+      "title": "metaplectic-splitting",
+      "href": "keywords/metaplectic-splitting.html",
+      "count": 2
+    },
+    {
+      "id": "normalization",
+      "title": "normalization",
+      "href": "keywords/normalization.html",
+      "count": 1
+    },
+    {
+      "id": "parabolic",
+      "title": "parabolic",
+      "href": "keywords/parabolic.html",
+      "count": 1
+    },
+    {
+      "id": "problem-input",
+      "title": "problem-input",
+      "href": "keywords/problem-input.html",
+      "count": 1
+    },
+    {
+      "id": "symplectic-facet",
+      "title": "symplectic-facet",
+      "href": "keywords/symplectic-facet.html",
+      "count": 1
+    },
+    {
+      "id": "test-vector",
+      "title": "test-vector",
+      "href": "keywords/test-vector.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "lattice_model_transition.allowed_local_inputs_transition_problem",
+    "lattice_model_transition.finite_field_maximal_parabolic_weil_input",
+    "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+    "lattice_model_transition.incidence_ratio_character",
+    "lattice_model_transition.pulled_back_symplectic_facet_setup",
+    "lattice_model_transition.self_dual_test_vector_normalization"
+  ]
+}

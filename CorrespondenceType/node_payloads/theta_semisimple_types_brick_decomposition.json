@@ -1,0 +1,34 @@
+{
+  "id": "theta_semisimple_types.brick_decomposition",
+  "title": "Brick Decomposition For Semisimple Theta Data",
+  "kind": "concept",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_brick_decomposition.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>Brick Decomposition For Semisimple Theta Data</h1>\n<p>For a pre-semisimple character datum</p>\n<p>$$\n\\Sigma=(V,\\beta,\\phi),\n$$</p>\n<p>the theta draft uses a brick decomposition</p>\n<p>$$\n\\beta=\\bigoplus_i\\beta_i,\n\\qquad\nV=\\bigoplus_i V_i,\n\\qquad\n\\Sigma=\\bigoplus_i\\Sigma_i.\n$$</p>\n<p>The positive-depth part and depth-zero block are separated by the decomposition</p>\n<p>$$\nG^0={}^+G^0\\times Z_G.\n$$</p>\n<p>In inductive arguments, the draft often splits</p>\n<p>$$\n\\Sigma=\\Sigma_b\\oplus\\Sigma_a\n$$</p>\n<p>where $\\Sigma_b$ is the brick of maximal depth and $\\Sigma_a$ is the remaining\nsum of lower-depth bricks.</p>\n<h2>Draft Caution</h2>\n<p>The TeX assumes the brick decomposition exists and has standard compatibility\nwith centralizers, lattice functions, and Moy-Prasad filtrations.  The current\ntheta draft does not restate those foundations.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "theta_semisimple_types.pre_semisimple_character_datum",
+      "title": "Pre-Semisimple Character Datum In The Theta Draft",
+      "href": "theta_semisimple_types/theta_semisimple_types_pre_semisimple_character_datum.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+      "title": "Geometric Lemma For Diagonal Reduction",
+      "href": "theta_semisimple_types/theta_semisimple_types_geometric_lemma_for_diagonal_reduction.html"
+    },
+    {
+      "id": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "title": "Target Building Point From w And The Depth-Zero Point",
+      "href": "theta_semisimple_types/theta_semisimple_types_target_building_point_from_w_and_depth_zero_point.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "theta_semisimple_types.generalized_lattice_model_support_piece",
+  "title": "Support Pieces In The Generalized Lattice Model",
+  "kind": "definition",
+  "status": "staged",
+  "href": "theta_semisimple_types/theta_semisimple_types_generalized_lattice_model_support_piece.html",
+  "primary_topic": "theta_semisimple_types",
+  "topics": [
+    "theta_semisimple_types"
+  ],
+  "body_html": "<h1>Support Pieces In The Generalized Lattice Model</h1>\n<p>For $(x,x')\\in B(G)\\times B(G')$, the theta draft writes</p>\n<p>$$\n\\omega_{x,x'}\n$$</p>\n<p>for the generalized lattice model of the Weil representation attached to the\ntensor lattice function $\\mathcal B_{x,x'}$.</p>\n<p>It also chooses an isomorphism</p>\n<p>$$\n\\mathfrak W_{x,x'}:\\omega_{x,x'}\\overset{\\sim}{\\longrightarrow}\\omega\n$$</p>\n<p>to the abstract Weil representation, and then identifies subspaces of\n$\\omega_{x,x'}$ with their images in $\\omega$.</p>\n<p>For $w\\in W$, the support piece is</p>\n<p>$$\n\\omega_{x,x',w}\n:=\n\\{f\\in\\omega_{x,x'}:\\operatorname{supp}(f)\\subseteq w+\\mathcal B_{x,x',0}\\}.\n$$</p>\n<h2>Draft Caution</h2>\n<p>The current TeX calls $\\mathfrak W_{x,x'}$ a fixed equivariant isomorphism.\nTransition maps between different choices are not made canonical there; this\nis exactly the issue isolated in the lattice-model transition problem.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "title": "Pulled-Back Symplectic Facet Setup",
+      "href": "lattice_model_transition/lattice_model_transition_pulled_back_symplectic_facet_setup.html"
+    },
+    {
+      "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "title": "Generalized Lattice Models And Original Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_generalized_lattice_model_and_original_splittings.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "theta_semisimple_types.main_isotypic_formula",
+      "title": "Main Isotypic Formula For Semisimple Theta Data",
+      "href": "theta_semisimple_types/theta_semisimple_types_main_isotypic_formula.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

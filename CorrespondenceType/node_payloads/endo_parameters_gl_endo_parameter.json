@@ -1,0 +1,29 @@
+{
+  "id": "endo_parameters.gl_endo_parameter",
+  "title": "GL Endo-Parameters",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_gl_endo_parameter.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>GL Endo-Parameters</h1>\n<p>For an endo-class $\\mathfrak c\\in\\mathscr E(F)$, the draft defines a monoid\n$\\operatorname{vect}(\\mathfrak c)$ whose elements are equivalence classes\n$[\\beta,V]$, where $\\beta$ supports a ps-character in $\\mathfrak c$ and $V$ is\na finite-dimensional $F[\\beta]$-vector space.  The equivalence relation uses\nsimilarity of based extensions and equality of $F[\\beta]$-dimension.</p>\n<p>A $\\operatorname{GL}$-endo-parameter over $F$ is a finitely supported section\nof</p>\n<p>$$\n\\bigsqcup_{\\mathfrak c\\in\\mathscr E(F)}\n\\operatorname{vect}(\\mathfrak c)\n\\longrightarrow\n\\mathscr E(F).\n$$</p>\n<p>The set of such parameters is denoted $\\mathscr{EP}(F)$.  Its degree is</p>\n<p>$$\n\\deg(f)=\n\\sum_{\\mathfrak c\\in\\mathscr E(F)}\n\\dim_F(f(\\mathfrak c)).\n$$</p>\n<p>The subset of degree $N$ parameters is denoted $\\mathscr{EP}_N(F)$.</p>\n<p>The totally positive part $\\mathscr{EP}^+(F)$ consists of parameters supported\non $\\mathscr E^+(F)$, i.e. away from the trivial endo-class.  Restricting away\nfrom the trivial endo-class gives the depth-positive part of a parameter.</p>\n<h2>Draft Caution</h2>\n<p>The draft says one may think of a $\\operatorname{GL}$-endo-parameter as a\nfunction $\\mathscr E(F)\\to\\mathbb Z_{\\ge 0}$, but this loses the bundle/fiber\nlanguage needed later for classical groups.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "endo_parameters.ps_character_and_endo_class",
+      "title": "PS-Characters And Endo-Classes",
+      "href": "endo_parameters/endo_parameters_ps_character_and_endo_class.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "endo_parameters.wild_parameter",
+      "title": "Wild Parameters And Endo-Classes",
+      "href": "endo_parameters/endo_parameters_wild_parameter.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

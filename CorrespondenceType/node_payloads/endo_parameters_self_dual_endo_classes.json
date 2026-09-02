@@ -1,0 +1,29 @@
+{
+  "id": "endo_parameters.self_dual_endo_classes",
+  "title": "Self-Dual Endo-Classes",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_self_dual_endo_classes.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>Self-Dual Endo-Classes</h1>\n<p>Let $F/F_0$ be an extension of degree at most $2$, with Galois group generated\nby $x\\mapsto\\overline x$.</p>\n<p>A based extension $(E,\\beta)$ of $F$ is self-dual over $F/F_0$ if the\ninvolution on $F$ extends to an involution on $E$ which sends</p>\n<p>$$\n\\beta\\longmapsto -\\beta.\n$$</p>\n<p>If $\\beta\\ne 0$, then $E/E_0$ is quadratic, where $E_0$ is the fixed field of\nthe involution.</p>\n<p>The draft uses an involution</p>\n<p>$$\n\\sigma:\\mathscr E(F)\\to\\mathscr E(F)\n$$</p>\n<p>on endo-classes.  If an endo-class $\\mathfrak c$ contains a ps-character\nsupported on $\\beta$, then $\\sigma(\\mathfrak c)$ contains a ps-character\nsupported on $-\\beta$.  The involution preserves degree and fixes the trivial\nendo-class.</p>\n<p>An endo-class $\\mathfrak c$ is self-dual if</p>\n<p>$$\n\\sigma(\\mathfrak c)=\\mathfrak c.\n$$</p>\n<p>In this case the draft states that $\\mathfrak c$ contains a ps-character\nsupported on a self-dual element.</p>\n<h2>Conflict Note</h2>\n<p>The older <code>spec/endo/def/self-dual-extension.md</code> says \"a self-dual element\n$\\beta$ satisfies $\\beta=-\\beta$\".  That is not the formulation used in the\ncurrent TeX.  The current TeX says the involution sends $\\beta$ to $-\\beta$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "endo_parameters.ps_character_and_endo_class",
+      "title": "PS-Characters And Endo-Classes",
+      "href": "endo_parameters/endo_parameters_ps_character_and_endo_class.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+      "title": "Hermitian Monoids For Self-Dual Endo-Classes",
+      "href": "endo_parameters/endo_parameters_hermitian_monoids_for_self_dual_endo_classes.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

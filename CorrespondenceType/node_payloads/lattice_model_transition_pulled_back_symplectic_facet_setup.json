@@ -1,0 +1,33 @@
+{
+  "id": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+  "title": "Pulled-Back Symplectic Facet Setup",
+  "kind": "concept",
+  "status": "staged",
+  "href": "lattice_model_transition/lattice_model_transition_pulled_back_symplectic_facet_setup.html",
+  "primary_topic": "lattice_model_transition",
+  "topics": [
+    "lattice_model_transition"
+  ],
+  "body_html": "<h1>Pulled-Back Symplectic Facet Setup</h1>\n<p>Let $F_0$ be a non-archimedean local field of odd residual characteristic.\nFix a non-trivial additive character</p>\n<p>$$\n\\psi:F_0\\to\\mathbb{C}^\\times .\n$$</p>\n<p>Let $D$ be the division algebra with involution used for the dual pair, and\nlet $\\mathfrak{o}_D$ be its maximal order.</p>\n<p>Let</p>\n<p>$$\n(G,G')=(U(V,h),U(V',h'))\n$$</p>\n<p>be a reductive dual pair, where $V$ and $V'$ are right $D$-modules, $h$ is\n$\\varepsilon$-Hermitian, and $h'$ is $(-\\varepsilon)$-Hermitian.  Let</p>\n<p>$$\nW=V\\otimes_D V'\n$$</p>\n<p>be the associated symplectic $F$-space.</p>\n<p>For</p>\n<p>$$\nz=(x,x')\\in B(G)\\times B(G'),\n$$</p>\n<p>let $\\mathcal{L}_x$ and $\\mathcal{L}'_{x'}$ be the corresponding self-dual\nlattice functions on $V$ and $V'$.  Define the tensor lattice function on $W$\nby</p>\n<p>$$\n\\mathcal{B}_{z,t}\n:=\n\\mathcal{B}_{x,x',t}\n:=\n(\\mathcal{L}_x\\otimes_D\\mathcal{L}'_{x'})_t\n=\n\\sum_{t=t_1+t_2}\n\\mathcal{L}_{x,t_1}\\otimes_{\\mathfrak{o}_D}\\mathcal{L}'_{x',t_2}.\n$$</p>\n<p>Equivalently, using $W\\simeq\\operatorname{Hom}_D(V,V')$,</p>\n<p>$$\n\\mathcal{B}_{x,x',t}\n=\n\\bigcap_r\n\\operatorname{Hom}_{\\mathfrak{o}_D}\n(\\mathcal{L}_{x,r},\\mathcal{L}'_{x',t+r}).\n$$</p>\n<p>This gives an affine embedding</p>\n<p>$$\n\\iota:\nB(G)\\times B(G')\n\\longrightarrow\nB(\\operatorname{Sp}(W)),\n\\qquad\nz=(x,x')\\longmapsto \\mathcal{B}_z.\n$$</p>\n<p>In applications one may replace $B(G)\\times B(G')$ by a sub-building product\nsuch as $B(G^0)\\times B(G'^0)$.  For the transition-map problem, write</p>\n<p>$$\nX:=B(G)\\times B(G')\n$$</p>\n<p>unless a smaller domain is explicitly imposed.</p>\n<p>The relevant facet structure on $X$ is the pullback of the\nsymplectic-building facet structure along $\\iota$, not the naive product\nfacet structure.</p>\n<p>Define $\\mathcal{P}$ to be the set of non-empty connected polyhedral\ncomponents of</p>\n<p>$$\n\\iota^{-1}(\\mathfrak{f}),\n\\qquad\n\\mathfrak{f}\\in\\operatorname{Fac}(\\operatorname{Sp}(W)).\n$$</p>\n<p>For $F\\in\\mathcal{P}$, let</p>\n<p>$$\n\\mathfrak{f}_F\\subset B(\\operatorname{Sp}(W))\n$$</p>\n<p>be the unique symplectic facet such that</p>\n<p>$$\nF\\subseteq \\iota^{-1}(\\mathfrak{f}_F).\n$$</p>\n<p>Define incidence in $\\mathcal{P}$ by</p>\n<p>$$\nE\\leq F\n\\quad\\Longleftrightarrow\\quad\nE\\subseteq \\overline F\n$$</p>\n<p>inside $X$.  In the transition-map problem, this incidence convention is taken\nto imply</p>\n<p>$$\n\\mathfrak{f}_E\\subseteq \\overline{\\mathfrak{f}_F}\n$$</p>\n<p>inside $B(\\operatorname{Sp}(W))$.</p>\n<p>For $F\\in\\mathcal{P}$, choose any $z\\in F$.  Since $\\iota(F)$ lies in one\nsymplectic facet, the lattices</p>\n<p>$$\nL_F:=\\mathcal{B}_{z,0},\n\\qquad\nL_F^+:=\\mathcal{B}_{z,0^+}\n$$</p>\n<p>are treated as independent of $z\\in F$.  This pulled-back facet structure is\npart of the fixed input for the transition-map problem, not a target to be\nre-proved.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "title": "Allowed Local Inputs For The Lattice-Model Transition Problem",
+      "href": "lattice_model_transition/lattice_model_transition_allowed_local_inputs_transition_problem.html"
+    },
+    {
+      "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+      "title": "Generalized Lattice Models And Original Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_generalized_lattice_model_and_original_splittings.html"
+    },
+    {
+      "id": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "title": "Support Pieces In The Generalized Lattice Model",
+      "href": "theta_semisimple_types/theta_semisimple_types_generalized_lattice_model_support_piece.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

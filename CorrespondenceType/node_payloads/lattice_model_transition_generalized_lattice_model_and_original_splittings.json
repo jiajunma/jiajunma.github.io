@@ -1,0 +1,44 @@
+{
+  "id": "lattice_model_transition.generalized_lattice_model_and_original_splittings",
+  "title": "Generalized Lattice Models And Original Splittings",
+  "kind": "definition",
+  "status": "staged",
+  "href": "lattice_model_transition/lattice_model_transition_generalized_lattice_model_and_original_splittings.html",
+  "primary_topic": "lattice_model_transition",
+  "topics": [
+    "lattice_model_transition"
+  ],
+  "body_html": "<h1>Generalized Lattice Models And Original Splittings</h1>\n<p>Work in the setup of\n<a class=\"node-ref\" data-node-id=\"lattice_model_transition.pulled_back_symplectic_facet_setup\" href=\"lattice_model_transition_pulled_back_symplectic_facet_setup.html\"><code>lattice_model_transition.pulled_back_symplectic_facet_setup</code></a>.</p>\n<p>For a pulled-back symplectic facet $F\\in\\mathcal{P}$, set</p>\n<p>$$\n\\mathbf{b}_F:=L_F/L_F^+.\n$$</p>\n<p>This is a finite symplectic vector space.  Let</p>\n<p>$$\n(\\bar\\omega_{\\mathbf{b}_F},\\mathbf{S}(\\mathbf{b}_F))\n$$</p>\n<p>be the finite oscillator representation attached to the finite Heisenberg\ngroup of $\\mathbf{b}_F$.</p>\n<p>The generalized lattice model at $F$ is</p>\n<p>$$\n\\Omega_F:=\\mathcal{S}(L_F),\n$$</p>\n<p>where $\\mathcal{S}(L_F)$ is the space of locally constant functions</p>\n<p>$$\n\\Phi:W\\to \\mathbf{S}(\\mathbf{b}_F)\n$$</p>\n<p>compactly supported modulo $L_F$ and satisfying</p>\n<p>$$\n\\Phi(a+w)\n=\n\\psi\\!\\left(\\tfrac12\\langle w,a\\rangle_W\\right)\n\\bar\\omega_{\\mathbf{b}_F}(\\bar a)\\Phi(w),\n\\qquad\na\\in L_F,\\ w\\in W.\n$$</p>\n<p>Here $\\bar a$ is the image of $a$ in $\\mathbf{b}_F=L_F/L_F^+$.</p>\n<p>Let</p>\n<p>$$\nK_F:=\\operatorname{Fix}_{\\operatorname{Sp}(W)}(\\mathfrak{f}_F)\n$$</p>\n<p>be the pointwise fixer, equivalently the parahoric subgroup attached to the\nsymplectic facet $\\mathfrak{f}_F$.</p>\n<p>The generalized lattice model gives an ordinary representation</p>\n<p>$$\n\\rho_F:K_F\\to\\operatorname{GL}(\\Omega_F)\n$$</p>\n<p>after choosing the original lattice-model splitting of the metaplectic cover.\nWrite this fixed splitting as</p>\n<p>$$\ns_F:K_F\\to Mp(W).\n$$</p>\n<p>The word \"original\" means that these are the splittings supplied by the\nlattice-model construction before any later twist by characters.</p>\n<p>For an incidence $E\\leq F$, the transition-map problem takes as fixed input\nthat</p>\n<p>$$\nK_F\\subseteq K_E.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model_transition.pulled_back_symplectic_facet_setup",
+      "title": "Pulled-Back Symplectic Facet Setup",
+      "href": "lattice_model_transition/lattice_model_transition_pulled_back_symplectic_facet_setup.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model_transition.allowed_local_inputs_transition_problem",
+      "title": "Allowed Local Inputs For The Lattice-Model Transition Problem",
+      "href": "lattice_model_transition/lattice_model_transition_allowed_local_inputs_transition_problem.html"
+    },
+    {
+      "id": "lattice_model_transition.incidence_ratio_character",
+      "title": "Incidence Ratio Character For Original Lattice-Model Splittings",
+      "href": "lattice_model_transition/lattice_model_transition_incidence_ratio_character.html"
+    },
+    {
+      "id": "lattice_model_transition.self_dual_test_vector_normalization",
+      "title": "Self-Dual Test-Vector Normalization For Nested Lattice Models",
+      "href": "lattice_model_transition/lattice_model_transition_self_dual_test_vector_normalization.html"
+    },
+    {
+      "id": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "title": "Support Pieces In The Generalized Lattice Model",
+      "href": "theta_semisimple_types/theta_semisimple_types_generalized_lattice_model_support_piece.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

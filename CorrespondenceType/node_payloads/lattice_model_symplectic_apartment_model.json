@@ -1,0 +1,49 @@
+{
+  "id": "lattice_model.symplectic_apartment_model",
+  "title": "Apartment Model for Sp(W) via Self-Dual Lattice Functions",
+  "kind": "concept",
+  "status": "staged",
+  "href": "lattice_model/lattice_model_symplectic_apartment_model.html",
+  "primary_topic": "lattice_model",
+  "topics": [
+    "lattice_model"
+  ],
+  "body_html": "<h1>Apartment Model for Sp(W) via Self-Dual Lattice Functions</h1>\n<p>Write \\(W=\\bigoplus_{i=1}^n H_i\\) with hyperbolic planes \\(H_i=Fe_i\\oplus Ff_i\\), \\(\\langle e_i,f_i\\rangle=1\\),\nso \\(\\dim_F W=2n\\) and \\(G=\\operatorname{Sp}(W)\\). A point of the standard apartment is\n\\(\\underline a=(a_1,\\dots,a_n)\\in\\mathbb R^n\\), giving the self-dual lattice function (conductor-\\(\\mathfrak p\\))\nwhose value at level \\(s\\) is\n\\[\n\\mathscr L_{\\underline a,s}=\\bigoplus_{i=1}^n\\Big(\\mathfrak p^{\\lceil s-a_i\\rceil}e_i\\ \\oplus\\ \\mathfrak p^{\\lceil s+a_i\\rceil}f_i\\Big).\n\\]\nThis is self-dual in the sense of <a class=\"node-ref\" data-node-id=\"lattice_model.self_dual_lattice_function\" href=\"lattice_model_self_dual_lattice_function.html\">Self-Dual Lattice Function</a>:\n\\(\\mathscr L_{\\underline a,s}^{\\#}=\\mathscr L_{\\underline a,(-s)+}\\). It is the Broussous-Stevens MM-norm\n\\(\\alpha_p\\) (Prop 4.1) read as a lattice function via \\(\\mathscr L_{\\underline a,r}=\\{w:\\alpha_p(w)\\ge r\\}\\); the\nsign of \\(a_i\\) is a Weyl convention, fixed here so that the \\(e_i\\)-exponent is \\(\\lceil s-a_i\\rceil\\) (the literal\nBS norm gives \\(\\lceil s+a_i\\rceil\\), i.e. \\(a_i\\mapsto-a_i\\)). The affine Weyl group \\(\\widetilde C_n\\) (signed\npermutations of the \\(a_i\\) together with integral translations) acts, and a fundamental alcove is\n\\[\n0\\le a_1\\le a_2\\le\\cdots\\le a_n\\le\\tfrac12 .\n\\]\nBy Broussous-Stevens, \\(\\underline a\\mapsto\\mathscr L_{\\underline a}\\) is the apartment chart of the bijection\nbetween points of \\(\\mathcal B(\\operatorname{Sp}(W))\\) and self-dual lattice functions. The lattice function is\nattached to the <strong>point</strong> \\(\\underline a\\), not to its facet: within an open facet the lattice chain (the set of\nlattices) and the parahoric are fixed, but \\(\\mathscr L_{\\underline a}\\) still varies as the jump positions\n\\(\\pm a_i\\) move.</p>\n<h2>Jump dictionary</h2>\n<p>Plane \\(H_i\\) jumps at \\(s\\equiv a_i\\) (the \\(e_i\\)-line) and \\(s\\equiv -a_i\\) (the \\(f_i\\)-line). Hence:</p>\n<ul>\n<li>\\(a_i=0\\): \\(\\bar e_i,\\bar f_i\\) lie in \\(\\operatorname{gr}_0\\) — the first symplectic end.</li>\n<li>\\(a_i=\\tfrac12\\): \\(\\bar e_i,\\bar f_i\\) lie in \\(\\operatorname{gr}_{1/2}\\) — the second symplectic end.</li>\n<li>\\(a_i\\in(0,\\tfrac12)\\): a \\(\\operatorname{GL}_1\\) pair \\((\\operatorname{gr}_{a_i},\\operatorname{gr}_{-a_i})\\).</li>\n</ul>\n<p>Equal coordinates merge their blocks: a cluster of \\(p\\) zeros gives \\(\\operatorname{Sp}_{2p}\\), a cluster of \\(r\\)\nhalves gives \\(\\operatorname{Sp}_{2r}\\), and a cluster of \\(k\\) equal interior values gives \\(\\operatorname{GL}_k\\). This\nreproduces the reductive quotient of <a class=\"node-ref\" data-node-id=\"lattice_model.symplectic_parahoric_reductive_quotient\" href=\"lattice_model_symplectic_parahoric_reductive_quotient.html\">Parahoric Reductive Quotient for Sp(W)</a>:\n\\[\n\\mathsf G_{\\underline a}=\\operatorname{Sp}_{2p}\\times\\operatorname{Sp}_{2r}\\times\\prod_c\\operatorname{GL}_{k_c},\n\\qquad p+r+\\sum_c k_c=n .\n\\]</p>\n<p>A facet is a coincidence pattern among \\(\\{0,a_1,\\dots,a_n,\\tfrac12\\}\\); a face is obtained by imposing strictly\nmore coincidences (moving coordinates to \\(0\\) or \\(\\tfrac12\\), or merging clusters).</p>\n<h2>Example: Sp(4)</h2>\n<p>Alcove \\(0\\le a_1\\le a_2\\le\\tfrac12\\):</p>\n<ul>\n<li>\\(v_0=(0,0)\\): \\(\\mathsf G=\\operatorname{Sp}_4\\), with \\(\\operatorname{gr}_0\\) of dimension \\(4\\).</li>\n<li>\\(v_1=(0,\\tfrac12)\\): \\(\\mathsf G=\\operatorname{Sp}_2\\times\\operatorname{Sp}_2\\) — both ends nonzero, \\(\\operatorname{gr}_0\\)\n  and \\(\\operatorname{gr}_{1/2}\\) each of dimension \\(2\\). This vertex has no analogue for \\(\\operatorname{Sp}_2\\).</li>\n<li>\\(v_2=(\\tfrac12,\\tfrac12)\\): \\(\\mathsf G=\\operatorname{Sp}_4\\) at the second end.</li>\n<li>chamber \\(0&lt;a_1&lt;a_2&lt;\\tfrac12\\): \\(\\mathsf G=\\operatorname{GL}_1\\times\\operatorname{GL}_1\\) (Iwahori).</li>\n</ul>\n<p>The level-\\(0\\) lattice depends only on which coordinates vanish:\n\\(\\mathscr L_{\\underline a,0}=\\bigoplus_i(\\mathfrak o e_i\\oplus\\mathfrak p^{\\,[a_i&gt;0]}f_i)\\). The incidence of a point\nof the edge \\((0,a_2)\\), \\(0&lt;a_2&lt;\\tfrac12\\), over \\(v_0\\), and the resulting canonical isotropic flag on\n\\(\\operatorname{gr}_0\\mathscr L_{v_0}\\), are worked out in <a class=\"node-ref\" data-node-id=\"lattice_model.facet_incidence_parabolic\" href=\"lattice_model_facet_incidence_parabolic.html\">Facet Incidence as a Parabolic for Sp(W)</a>.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "lattice_model.self_dual_lattice_function",
+      "title": "Self-Dual Lattice Function",
+      "href": "lattice_model/lattice_model_self_dual_lattice_function.html"
+    },
+    {
+      "id": "lattice_model.symplectic_parahoric_reductive_quotient",
+      "title": "Parahoric Reductive Quotient for Sp(W)",
+      "href": "lattice_model/lattice_model_symplectic_parahoric_reductive_quotient.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "lattice_model.facet_incidence_parabolic",
+      "title": "Facet Incidence as a Parabolic for Sp(W)",
+      "href": "lattice_model/lattice_model_facet_incidence_parabolic.html"
+    },
+    {
+      "id": "lattice_model.good_lattice_weil_fixed_vectors",
+      "title": "Pro-Unipotent Fixed Vectors of the Weil Representation at a Good Lattice",
+      "href": "lattice_model/lattice_model_good_lattice_weil_fixed_vectors.html"
+    },
+    {
+      "id": "lattice_model.level_zero_containment",
+      "title": "Level-0 Lattice Under Specialization to a Face",
+      "href": "lattice_model/lattice_model_level_zero_containment.html"
+    },
+    {
+      "id": "lattice_model.vertex_weil_restriction_incompatibility",
+      "title": "Vertex Weil Restrictions over an Alcove Are Incompatible",
+      "href": "lattice_model/lattice_model_vertex_weil_restriction_incompatibility.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

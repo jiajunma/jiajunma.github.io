@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lean Formalization Plan for the Weil-Index Trivialization Theorem — Correspondence of Type Blueprint</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {"\\boxminus": "\u229f", "\\boxplus": "\u229e", "\\boxtimes": "\u22a0", "\\superset": "\u2283"}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">CorrespondenceType</a>
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+        <li class="topic-leaf">
+          <a href="../endo_parameters/index.html">Endo Parameters</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../epipelagic_theta/index.html">Epipelagic Theta</a>
+        </li>
+      
+        <li class="topic-leaf topic-active">
+          <a href="../finite_field_weil/index.html">Finite Field Weil</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../lattice_model/index.html">Lattice Model</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../lattice_model_transition/index.html">Lattice Model Transition</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../supercuspidal_theta/index.html">Supercuspidal Theta</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../tame_covers/index.html">Tame Covers</a>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../theta_semisimple_types/index.html">Theta Semisimple Types</a>
+        </li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <input type="search" id="keyword-search" class="keyword-search"
+             placeholder="Search 149 keywords…"
+             aria-controls="keyword-list" autocomplete="off">
+      <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../keywords/apartment.html">apartment</a></li>
+      
+        <li><a href="../keywords/appendix.html">appendix</a></li>
+      
+        <li><a href="../keywords/based-extension.html">based-extension</a></li>
+      
+        <li><a href="../keywords/block-decomposition.html">block-decomposition</a></li>
+      
+        <li><a href="../keywords/brick-decomposition.html">brick-decomposition</a></li>
+      
+        <li><a href="../keywords/building.html">building</a></li>
+      
+        <li><a href="../keywords/canonical.html">canonical</a></li>
+      
+        <li><a href="../keywords/character.html">character</a></li>
+      
+        <li><a href="../keywords/character-formula.html">character-formula</a></li>
+      
+        <li><a href="../keywords/characters.html">characters</a></li>
+      
+        <li><a href="../keywords/classical-group.html">classical-group</a></li>
+      
+        <li><a href="../keywords/classical-groups.html">classical-groups</a></li>
+      
+        <li><a href="../keywords/cocycle.html">cocycle</a></li>
+      
+        <li><a href="../keywords/coefficient-system.html">coefficient-system</a></li>
+      
+        <li><a href="../keywords/compact-induction.html">compact-induction</a></li>
+      
+        <li><a href="../keywords/compatible-system.html">compatible-system</a></li>
+      
+        <li><a href="../keywords/conductor-p.html">conductor-p</a></li>
+      
+        <li><a href="../keywords/converse.html">converse</a></li>
+      
+        <li><a href="../keywords/covering-group.html">covering-group</a></li>
+      
+        <li><a href="../keywords/data-lift.html">data-lift</a></li>
+      
+        <li><a href="../keywords/depth-preservation.html">depth-preservation</a></li>
+      
+        <li><a href="../keywords/depth-zero.html">depth-zero</a></li>
+      
+        <li><a href="../keywords/determinant-character.html">determinant-character</a></li>
+      
+        <li><a href="../keywords/direct-sum.html">direct-sum</a></li>
+      
+        <li><a href="../keywords/dual-lattice.html">dual-lattice</a></li>
+      
+        <li><a href="../keywords/endo-class.html">endo-class</a></li>
+      
+        <li><a href="../keywords/endo-parameters.html">endo-parameters</a></li>
+      
+        <li><a href="../keywords/epipelagic.html">epipelagic</a></li>
+      
+        <li><a href="../keywords/equivalence.html">equivalence</a></li>
+      
+        <li><a href="../keywords/even-orthogonal.html">even-orthogonal</a></li>
+      
+        <li><a href="../keywords/exact-sequence.html">exact-sequence</a></li>
+      
+        <li><a href="../keywords/exceptional-case.html">exceptional-case</a></li>
+      
+        <li><a href="../keywords/finite-field.html">finite-field</a></li>
+      
+        <li><a href="../keywords/finite-field-weil.html">finite-field-weil</a></li>
+      
+        <li><a href="../keywords/finite-quadratic-module.html">finite-quadratic-module</a></li>
+      
+        <li><a href="../keywords/finite-reductive-quotient.html">finite-reductive-quotient</a></li>
+      
+        <li><a href="../keywords/first-occurrence.html">first-occurrence</a></li>
+      
+        <li><a href="../keywords/formalization.html">formalization</a></li>
+      
+        <li><a href="../keywords/gauss-sum.html">gauss-sum</a></li>
+      
+        <li><a href="../keywords/general-linear.html">general-linear</a></li>
+      
+        <li><a href="../keywords/general-linear-group.html">general-linear-group</a></li>
+      
+        <li><a href="../keywords/generalized-lattice-model.html">generalized-lattice-model</a></li>
+      
+        <li><a href="../keywords/genuine-representation.html">genuine-representation</a></li>
+      
+        <li><a href="../keywords/geometric-lemma.html">geometric-lemma</a></li>
+      
+        <li><a href="../keywords/gerardin.html">gerardin</a></li>
+      
+        <li><a href="../keywords/gerardin-reduction.html">gerardin-reduction</a></li>
+      
+        <li><a href="../keywords/good-element.html">good-element</a></li>
+      
+        <li><a href="../keywords/good-factorization.html">good-factorization</a></li>
+      
+        <li><a href="../keywords/good-lattice.html">good-lattice</a></li>
+      
+        <li><a href="../keywords/graph.html">graph</a></li>
+      
+        <li><a href="../keywords/hecke-algebra.html">hecke-algebra</a></li>
+      
+        <li><a href="../keywords/heisenberg-group.html">heisenberg-group</a></li>
+      
+        <li><a href="../keywords/heisenberg-weil.html">heisenberg-weil</a></li>
+      
+        <li><a href="../keywords/hermitian-space.html">hermitian-space</a></li>
+      
+        <li><a href="../keywords/howe-factorization.html">howe-factorization</a></li>
+      
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
+        <li><a href="../keywords/intertwiner.html">intertwiner</a></li>
+      
+        <li><a href="../keywords/intertwining.html">intertwining</a></li>
+      
+        <li><a href="../keywords/invariant-theory.html">invariant-theory</a></li>
+      
+        <li><a href="../keywords/isotropic.html">isotropic</a></li>
+      
+        <li><a href="../keywords/isotypic-component.html">isotypic-component</a></li>
+      
+        <li><a href="../keywords/iwahori.html">iwahori</a></li>
+      
+        <li><a href="../keywords/jumps.html">jumps</a></li>
+      
+        <li><a href="../keywords/k-type.html">k-type</a></li>
+      
+        <li><a href="../keywords/kac-vinberg.html">kac-vinberg</a></li>
+      
+        <li><a href="../keywords/kappa.html">kappa</a></li>
+      
+        <li><a href="../keywords/kim-exhaustion.html">kim-exhaustion</a></li>
+      
+        <li><a href="../keywords/lagrangian.html">lagrangian</a></li>
+      
+        <li><a href="../keywords/langlands-parameters.html">langlands-parameters</a></li>
+      
+        <li><a href="../keywords/lattice-function.html">lattice-function</a></li>
+      
+        <li><a href="../keywords/lattice-model.html">lattice-model</a></li>
+      
+        <li><a href="../keywords/lattice-model-transition.html">lattice-model-transition</a></li>
+      
+        <li><a href="../keywords/lean.html">lean</a></li>
+      
+        <li><a href="../keywords/linearization.html">linearization</a></li>
+      
+        <li><a href="../keywords/locally-profinite.html">locally-profinite</a></li>
+      
+        <li><a href="../keywords/main-formula.html">main-formula</a></li>
+      
+        <li><a href="../keywords/main-theorem.html">main-theorem</a></li>
+      
+        <li><a href="../keywords/matrix-calculation.html">matrix-calculation</a></li>
+      
+        <li><a href="../keywords/metaplectic-cover.html">metaplectic-cover</a></li>
+      
+        <li><a href="../keywords/metaplectic-splitting.html">metaplectic-splitting</a></li>
+      
+        <li><a href="../keywords/milestone-a.html">milestone-a</a></li>
+      
+        <li><a href="../keywords/minimal-k-type.html">minimal-k-type</a></li>
+      
+        <li><a href="../keywords/mixed-model.html">mixed-model</a></li>
+      
+        <li><a href="../keywords/moment-map.html">moment-map</a></li>
+      
+        <li><a href="../keywords/moy-prasad.html">moy-prasad</a></li>
+      
+        <li><a href="../keywords/multiplicity.html">multiplicity</a></li>
+      
+        <li><a href="../keywords/norm.html">norm</a></li>
+      
+        <li><a href="../keywords/normalization.html">normalization</a></li>
+      
+        <li><a href="../keywords/notation.html">notation</a></li>
+      
+        <li><a href="../keywords/occurrence.html">occurrence</a></li>
+      
+        <li><a href="../keywords/off-diagonal.html">off-diagonal</a></li>
+      
+        <li><a href="../keywords/one-block.html">one-block</a></li>
+      
+        <li><a href="../keywords/open-point.html">open-point</a></li>
+      
+        <li><a href="../keywords/orthogonality.html">orthogonality</a></li>
+      
+        <li><a href="../keywords/oscillator-representation.html">oscillator-representation</a></li>
+      
+        <li><a href="../keywords/p-adic-classical-groups.html">p-adic-classical-groups</a></li>
+      
+        <li><a href="../keywords/pan-theorem.html">pan-theorem</a></li>
+      
+        <li><a href="../keywords/parabolic.html">parabolic</a></li>
+      
+        <li><a href="../keywords/positive-depth.html">positive-depth</a></li>
+      
+        <li><a href="../keywords/problem-input.html">problem-input</a></li>
+      
+        <li><a href="../keywords/projective-representation.html">projective-representation</a></li>
+      
+        <li><a href="../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../keywords/ps-character.html">ps-character</a></li>
+      
+        <li><a href="../keywords/radical.html">radical</a></li>
+      
+        <li><a href="../keywords/rank-restriction.html">rank-restriction</a></li>
+      
+        <li><a href="../keywords/reference-frame.html">reference-frame</a></li>
+      
+        <li><a href="../keywords/representation-theory.html">representation-theory</a></li>
+      
+        <li><a href="../keywords/residual-moment-map.html">residual-moment-map</a></li>
+      
+        <li><a href="../keywords/residual-vector-space.html">residual-vector-space</a></li>
+      
+        <li><a href="../keywords/residue-characteristic.html">residue-characteristic</a></li>
+      
+        <li><a href="../keywords/schrodinger-model.html">schrodinger-model</a></li>
+      
+        <li><a href="../keywords/schur-lemma.html">schur-lemma</a></li>
+      
+        <li><a href="../keywords/self-dual.html">self-dual</a></li>
+      
+        <li><a href="../keywords/semisimple-character.html">semisimple-character</a></li>
+      
+        <li><a href="../keywords/semisimple-element.html">semisimple-element</a></li>
+      
+        <li><a href="../keywords/skew-hermitian.html">skew-hermitian</a></li>
+      
+        <li><a href="../keywords/smooth-representation.html">smooth-representation</a></li>
+      
+        <li><a href="../keywords/spherical-building.html">spherical-building</a></li>
+      
+        <li><a href="../keywords/splitting.html">splitting</a></li>
+      
+        <li><a href="../keywords/stabilizer.html">stabilizer</a></li>
+      
+        <li><a href="../keywords/stable-vector.html">stable-vector</a></li>
+      
+        <li><a href="../keywords/stone-von-neumann.html">stone-von-neumann</a></li>
+      
+        <li><a href="../keywords/supercuspidal.html">supercuspidal</a></li>
+      
+        <li><a href="../keywords/support.html">support</a></li>
+      
+        <li><a href="../keywords/symplectic.html">symplectic</a></li>
+      
+        <li><a href="../keywords/symplectic-facet.html">symplectic-facet</a></li>
+      
+        <li><a href="../keywords/symplectic-form.html">symplectic-form</a></li>
+      
+        <li><a href="../keywords/symplectic-group.html">symplectic-group</a></li>
+      
+        <li><a href="../keywords/symplectic-orthogonal.html">symplectic-orthogonal</a></li>
+      
+        <li><a href="../keywords/symplectic-space.html">symplectic-space</a></li>
+      
+        <li><a href="../keywords/tame-base-change.html">tame-base-change</a></li>
+      
+        <li><a href="../keywords/tame-covers.html">tame-covers</a></li>
+      
+        <li><a href="../keywords/tensor-product.html">tensor-product</a></li>
+      
+        <li><a href="../keywords/test-vector.html">test-vector</a></li>
+      
+        <li><a href="../keywords/theta-correspondence.html">theta-correspondence</a></li>
+      
+        <li><a href="../keywords/theta-lift.html">theta-lift</a></li>
+      
+        <li><a href="../keywords/theta-semisimple-types.html">theta-semisimple-types</a></li>
+      
+        <li><a href="../keywords/transition-map.html">transition-map</a></li>
+      
+        <li><a href="../keywords/trivialization.html">trivialization</a></li>
+      
+        <li><a href="../keywords/type.html">type</a></li>
+      
+        <li><a href="../keywords/type-i-dual-pair.html">type-i-dual-pair</a></li>
+      
+        <li><a href="../keywords/uniqueness.html">uniqueness</a></li>
+      
+        <li><a href="../keywords/unitary.html">unitary</a></li>
+      
+        <li><a href="../keywords/weil-index.html">weil-index</a></li>
+      
+        <li><a href="../keywords/weil-representation.html">weil-representation</a></li>
+      
+        <li><a href="../keywords/well-definedness.html">well-definedness</a></li>
+      
+        <li><a href="../keywords/wild-inertia.html">wild-inertia</a></li>
+      
+        <li><a href="../keywords/witt-tower.html">witt-tower</a></li>
+      
+        <li><a href="../keywords/yu-data.html">yu-data</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="proof-plan_thmwrapper theorem-style-proof-plan node-page" id="node-finite_field_weil-2e-weil_index_trivialization_lean_plan">
+  <header class="proof-plan_thmheading thm-heading">
+    <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+    <span class="proof-plan_thmtitle thm-title">Lean Formalization Plan for the Weil-Index Trivialization Theorem</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-proof-plan">proof-plan</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-finite_field_weil-2e-weil_index_trivialization_lean_plan">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="finite_field_weil_lagrangian_schrodinger_model.html">Lagrangian Schrödinger Model and Change-of-Lagrangian Intertwiner</a></li>
+        
+        <li><a href="finite_field_weil_symplectic_heisenberg_group.html">Symplectic Heisenberg Group over a Finite Field</a></li>
+        
+        <li><a href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a></li>
+        
+        <li><a href="finite_field_weil_finite_quadratic_weil_index.html">Finite Quadratic Weil Index</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+
+  <div class="proof-plan_thmcontent thm-content body">
+    <h1>Lean Formalization Plan for the Weil-Index Trivialization Theorem</h1>
+<p>This proof-plan node breaks <strong>Milestone A</strong> — the Lean formalization of
+<a class="node-ref" data-node-id="finite_field_weil.weil_index_trivialization" href="finite_field_weil_weil_index_trivialization.html">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a> — into named Lean declarations with their signatures and
+dependencies, in topological order.</p>
+<h2>Goal and scope</h2>
+<p>Formalize the statements and proofs of
+<a class="node-ref" data-node-id="finite_field_weil.weil_index_trivialization" href="finite_field_weil_weil_index_trivialization.html">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a> over an abstract finite symplectic $k$-space with a chosen
+nontrivial central character $\xi\colon k\to R^{\times}$, $\operatorname{char}R\neq p$, in Lean 4 + Mathlib 4,
+<strong>reusing</strong> the existing <code>lean/FiniteWeilCocycle.lean</code> (abstract scalar cocycle) and <code>lean/FiniteQuadraticWeilIndex.lean</code>
+(Gauss-sum orthogonality).</p>
+<p>Out of scope for this milestone: Schur on the Heisenberg irreducible
+(Step (II)/(2) of the theorem will be derived directly from orthogonality without invoking Stone–von Neumann),
+Gérardin's linearization (deferred to later milestone), spherical-building mixed models (deferred).</p>
+<h2>Architecture</h2>
+<p>Two viable locations:</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lean/</code> in this repo</td>
+<td>Co-located with mdblueprint nodes; no cross-repo coordination</td>
+<td>No Mathlib import in current bare files; needs <code>lakefile</code></td>
+</tr>
+<tr>
+<td><code>~/mydoc/thetatype/ThetaType/FiniteWeil/</code></td>
+<td>Shares Mathlib + <code>lean-repl</code> infra; future-proof for $p$-adic</td>
+<td>Splits md and Lean across repos</td>
+</tr>
+</tbody>
+</table>
+<p>Recommended: write into <code>~/mydoc/thetatype/ThetaType/FiniteWeil/</code> and bring the two existing files along; the local
+<code>lean/</code> becomes a stub pointing to the canonical location. The plan below uses module path <code>ThetaType.FiniteWeil.*</code>
+throughout.</p>
+<h2>Step list (topological order)</h2>
+<h3>Layer L2: foundational structures</h3>
+<ol>
+<li><strong><code>ThetaType.FiniteWeil.SymplecticSpace</code></strong> — the underlying $(E,j)$.</li>
+</ol>
+<p>```lean
+   variable (k : Type*) [Field k] [Fintype k] [Fact (Odd (Fintype.card k))]</p>
+<p>structure SymplecticSpace where
+     E : Type*
+     [addCommGroup : AddCommGroup E]
+     [module : Module k E]
+     [fintype : Fintype E]
+     [decEq : DecidableEq E]
+     j : E →ₗ[k] E →ₗ[k] k
+     skew : ∀ x y, j x y = - j y x
+     nondeg : ∀ x, (∀ y, j x y = 0) → x = 0</p>
+<p>noncomputable def i (S : SymplecticSpace k) : S.E →ₗ[k] S.E →ₗ[k] k := -- j/2
+   ```</p>
+<p><em>Deps:</em> none. <em>Difficulty:</em> low.</p>
+<ol>
+<li><strong><code>ThetaType.FiniteWeil.Isotropic</code></strong> — isotropic and Lagrangian subspaces.</li>
+</ol>
+<p>```lean
+   def IsIsotropic (S : SymplecticSpace k) (L : Submodule k S.E) : Prop :=
+     ∀ x ∈ L, ∀ y ∈ L, S.j x y = 0</p>
+<p>structure Lagrangian (S : SymplecticSpace k) where
+     L : Submodule k S.E
+     isotropic : IsIsotropic S L
+     maximal : ∀ M : Submodule k S.E, L ≤ M → IsIsotropic S M → L = M
+   ```</p>
+<p><em>Deps:</em> <code>SymplecticSpace</code>. <em>Difficulty:</em> low.</p>
+<ol>
+<li><strong><code>ThetaType.FiniteWeil.HeisenbergGroup</code></strong> — $H(E,j)=E\times k$ with the cocycle.</li>
+</ol>
+<p>```lean
+   structure HeisenbergGroup (S : SymplecticSpace k) where
+     w : S.E
+     z : k</p>
+<p>instance : Group (HeisenbergGroup S) where
+     mul x y := ⟨x.w + y.w, x.z + y.z + S.i x.w y.w⟩
+     -- etc.
+   ```</p>
+<p><em>Deps:</em> <code>SymplecticSpace</code>. <em>Difficulty:</em> low (a calculation). State: group axioms via <code>decide</code> over the cocycle.</p>
+<h3>Layer L2 (continued): Schrödinger model</h3>
+<ol>
+<li><strong><code>ThetaType.FiniteWeil.SchroedingerModel</code></strong> — $\mathcal S_L=\{\varphi\colon E\to R\mid\varphi(v+a)=\xi(i(v,a))\varphi(v),\ a\in L\}$.</li>
+</ol>
+<p>```lean
+   variable (R : Type*) [Field R] [CharZero R] -- or appropriate splitting hypothesis
+   variable (ξ : AddChar k R) (hξ : ξ ≠ 0)</p>
+<p>def SchroedingerModel (L : Lagrangian S) : Submodule R (S.E → R) :=
+     { φ | ∀ v a, a ∈ L.L → φ (v + a) = ξ (S.i v a) * φ v }
+   ```</p>
+<p><em>Deps:</em> <code>Lagrangian</code>, <code>HeisenbergGroup</code>. <em>Difficulty:</em> low.</p>
+<ol>
+<li><strong><code>ThetaType.FiniteWeil.SchroedingerModel.heisAction</code></strong> — $\eta_\xi$ action on $\mathcal S_L$.</li>
+</ol>
+<p>```lean
+   def heisAction (h : HeisenbergGroup S) :
+       SchroedingerModel R ξ L →ₗ[R] SchroedingerModel R ξ L :=
+     -- (η_ξ(u,s) φ)(v) = ξ(s + i(u,v)) * φ(v - u)
+     fun ⟨φ, hφ⟩ =&gt; ⟨fun v =&gt; ξ (h.z + S.i h.w v) * φ (v - h.w), by …⟩</p>
+<p>theorem heisAction_isRep :
+       MonoidHom (HeisenbergGroup S) (SchroedingerModel R ξ L →ₗ[R] SchroedingerModel R ξ L) := …
+   ```</p>
+<p><em>Deps:</em> (4). <em>Difficulty:</em> medium (preserve covariance; group homomorphism check).</p>
+<h3>Layer L2: intertwiner</h3>
+<ol>
+<li><strong><code>ThetaType.FiniteWeil.FIntertwiner</code></strong> — $\mathcal F_{L,L'}\colon\mathcal S_{L'}\to\mathcal S_L$ by the sum formula
+   (matching the convention of <a class="node-ref" data-node-id="finite_field_weil.compatible_lagrangian_transition_system" href="finite_field_weil_compatible_lagrangian_transition_system.html">Compatible System of Schrödinger-Model Intertwiners over a Finite Field</a>).</li>
+</ol>
+<p><code>lean
+   noncomputable def FIntertwiner (L L' : Lagrangian S) :
+       SchroedingerModel R ξ L' →ₗ[R] SchroedingerModel R ξ L :=
+     fun ⟨φ, hφ⟩ =&gt; ⟨fun v =&gt;
+       ∑ a ∈ Finset.image Quotient.mk (L.L ⊓ L'.L) (L.L.toAddSubgroup.quotient _).toFinset,
+         ξ (S.i (Quotient.out a) v) * φ (v + Quotient.out a), by …⟩</code></p>
+<p>Or, equivalently, using the manifestly representative-free averaged form
+   $\mathcal F_{L,L'}\varphi=|L\cap L'|^{-1}\sum_{a\in L}\xi(i(a,v))\varphi(v+a)$.</p>
+<p><em>Deps:</em> (4). <em>Difficulty:</em> medium (coset-sum well-definedness).</p>
+<ol>
+<li><strong><code>FIntertwiner_lands</code></strong> — the output is in $\mathcal S_L$.</li>
+</ol>
+<p><code>lean
+   theorem FIntertwiner_lands (L L' : Lagrangian S) (φ : SchroedingerModel R ξ L') :
+       ∀ v b, b ∈ L.L → (FIntertwiner L L' φ).1 (v + b) = ξ (S.i v b) * (FIntertwiner L L' φ).1 v</code></p>
+<p><em>Deps:</em> (6). <em>Difficulty:</em> medium (reindex; the $i(a,b)=0$ and $i(b,b)=0$ for $a,b\in L$ algebra).</p>
+<ol>
+<li><strong><code>FIntertwiner_intertwines</code></strong> — $\mathcal F$ commutes with $\eta_\xi$.</li>
+</ol>
+<p><code>lean
+   theorem FIntertwiner_intertwines (L L' : Lagrangian S) (h : HeisenbergGroup S)
+       (φ : SchroedingerModel R ξ L') :
+       FIntertwiner L L' (heisAction h φ) = heisAction h (FIntertwiner L L' φ)</code></p>
+<p><em>Deps:</em> (5), (6). <em>Difficulty:</em> medium.</p>
+<h3>Layer L3: orthogonality and cocycle</h3>
+<ol>
+<li><strong><code>d_LL</code></strong> — the index $d_{L,L'}=m-\dim_k(L\cap L')$ and the orthogonality scalar.</li>
+</ol>
+<p><code>lean
+   noncomputable def d_LL (L L' : Lagrangian S) : ℕ :=
+     (Fintype.card k) ^ ((FiniteDimensional.finrank k L.L) -
+       (FiniteDimensional.finrank k (L.L ⊓ L'.L)))</code></p>
+<p><em>Deps:</em> <code>Lagrangian</code>. <em>Difficulty:</em> low.</p>
+<ol>
+<li>
+<p><strong><code>FIntertwiner_orthogonality</code></strong> — the load-bearing computation.</p>
+<p><code>lean
+theorem FIntertwiner_orthogonality (L L' : Lagrangian S) :
+    FIntertwiner L L' ∘ₗ FIntertwiner L' L = d_LL L L' • LinearMap.id</code></p>
+<p><em>Deps:</em> (6)–(8), and the character-sum machinery from <code>FiniteQuadraticWeilIndex.lean</code>. <em>Difficulty:</em> the hard step.
+Proof structure: (a) double sum + reindex; (b) inner character sum over $L/(L\cap L')$ vanishes off the trivial coset
+(use <code>character_sum_eq_zero_of_ne_zero</code> from <code>FiniteQuadraticWeilIndex.lean</code>); (c) surviving term gives
+$q^{d}\cdot\varphi(v)$.</p>
+</li>
+<li>
+<p><strong><code>gamma_def</code></strong> — define the cocycle scalar from composition.</p>
+<p><code>lean
+noncomputable def gamma (L L' L'' : Lagrangian S) : R :=
+  -- the unique scalar γ ∈ R^× with F(L,L') ∘ F(L',L'') = γ • F(L,L'').
+  -- Construct via: compose with F(L'',L) (which gives q^{d_{L,L''}} • F(L',L'')),
+  -- then the scalar is q^{-d_{L,L''}} times the composed thing.
+  …</code></p>
+<p><em>Deps:</em> (10). <em>Difficulty:</em> low-medium. Uses orthogonality to extract the scalar without invoking Schur.</p>
+</li>
+<li>
+<p><strong><code>gamma_is_2cocycle</code></strong> — associativity of composition gives the cocycle identity.</p>
+<p><code>lean
+theorem gamma_is_2cocycle :
+    IsTransitionCocycle (gamma S R ξ : ι → ι → ι → R)</code></p>
+<p>where <code>ι = Lagrangian S</code> and <code>IsTransitionCocycle</code> is from <code>FiniteWeilCocycle.lean</code>.</p>
+<p><em>Deps:</em> (11). <em>Difficulty:</em> medium (direct associativity argument).</p>
+</li>
+</ol>
+<h3>Layer L3 → L0: instance of the abstract trivialization</h3>
+<ol>
+<li>
+<p><strong><code>abstractTransitionSystem</code></strong> — package the concrete data as <code>AbstractTransitionSystem</code>.</p>
+<p><code>lean
+noncomputable def abstractTransitionSystem :
+    AbstractTransitionSystem (Lagrangian S) R := {
+  Hom := fun L L' =&gt; SchroedingerModel R ξ L' →ₗ[R] SchroedingerModel R ξ L
+  comp := fun f g =&gt; f.comp g
+  smul := fun a f =&gt; a • f
+  F := FIntertwiner
+  gamma := gamma
+  comp_F := …
+  smul_F_cancel := …
+  … }</code></p>
+<p><em>Deps:</em> (1)–(12). <em>Difficulty:</em> low (assembly).</p>
+</li>
+<li>
+<p><strong><code>weil_index_trivialization</code></strong> — the main theorem, via the abstract machinery.</p>
+<p><code>lean
+theorem weil_index_trivialization (L₀ : Lagrangian S) :
+    ∃ (c : Lagrangian S → Lagrangian S → R),
+      (∀ L L' L'', gamma L L' L'' = c L L' * c L' L'' * (c L L'')⁻¹) ∧
+      (∀ L, c L L = 1) := by
+  let T := abstractTransitionSystem (S := S) (R := R) (ξ := ξ)
+  have hcoc := T.gamma_isTransitionCocycle
+  refine ⟨fun L L' =&gt; gamma L L' L₀, ?_, ?_⟩
+  · exact fun L L' L'' =&gt; cocycle_eq_base_coboundary ⟨L₀⟩ hcoc
+  · intro L; …  -- F(L,L) = id, so γ(L,L,L₀) = 1</code></p>
+<p><em>Deps:</em> (13) plus the existing <code>FiniteWeilCocycle</code> lemmas. <em>Difficulty:</em> low (mostly assembly).</p>
+</li>
+</ol>
+<h2>Total cost and milestones</h2>
+<ul>
+<li>Layer L2 (steps 1–6, structural): ~600–1000 LOC. Single morning–afternoon push once the typeclasses settle.</li>
+<li>Layer L2-extension (steps 7–8): ~200 LOC. Algebra.</li>
+<li>Layer L3 (steps 9–12): the orthogonality proof (step 10) is the time sink; the rest is ~200 LOC.</li>
+<li>L3 → L0 hookup (steps 13–14): trivial assembly given the above.</li>
+</ul>
+<p><strong>Milestone A complete = <code>weil_index_trivialization</code> is a proven Lean theorem matching the md statement.</strong></p>
+<h2>What this milestone deliberately omits</h2>
+<ul>
+<li>The <strong>Schur step</strong> (uniqueness of <code>gamma</code> up to scalar via $\operatorname{End}_H=R$) is <em>replaced</em> by an explicit
+  construction in step 11. Stone–von Neumann is not formalized.</li>
+<li>The <strong>canonical / equivariant version</strong> via Gérardin's linearization is deferred to Milestone B.</li>
+<li>The <strong>spherical-building mixed-model</strong> statement
+  <a class="node-ref" data-node-id="finite_field_weil.spherical_building_mixed_model_compatible_system" href="finite_field_weil_spherical_building_mixed_model_compatible_system.html">Compatible System of Mixed Schrödinger Models on the Spherical Building</a> is Milestone C; it reuses Milestone A
+  through the Lagrangian collapse.</li>
+</ul>
+<h2>Suggested next actions</h2>
+<ol>
+<li>Set up <code>~/mydoc/thetatype/ThetaType/FiniteWeil/</code> with the two existing bare files migrated and proper Mathlib
+   imports.</li>
+<li>Start with Layer L2 (steps 1–6). Verify each via <code>lean-repl</code> before moving on.</li>
+<li>The orthogonality proof (step 10) is the load-bearing step; it should follow the md proof closely and will likely
+   need a dedicated session.</li>
+</ol>
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">lean</span><span class="tag">formalization</span><span class="tag">milestone-a</span><span class="tag">finite-field</span><span class="tag">weil-representation</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Global Topics section toggle
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (btn && list) {
+        var stored = localStorage.getItem('sidebar-topics-folded');
+        var folded = stored === 'true';
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        btn.addEventListener('click', function() {
+          folded = !folded;
+          list.hidden = folded;
+          btn.setAttribute('aria-expanded', String(!folded));
+          localStorage.setItem('sidebar-topics-folded', String(folded));
+        });
+      }
+
+      // Per-root-topic <details> fold state via localStorage
+      document.querySelectorAll('details[data-topic-root]').forEach(function(details) {
+        var rootId = details.getAttribute('data-topic-root');
+        var key = 'sidebar-topic-open-' + rootId;
+        // Only restore if localStorage has an explicit stored value (don't override active-path open)
+        var stored = localStorage.getItem(key);
+        if (stored !== null) {
+          details.open = stored === 'true';
+        }
+        details.addEventListener('toggle', function() {
+          localStorage.setItem(key, String(details.open));
+        });
+      });
+
+      // Keywords section toggle (folded by default: the keyword list can run
+      // into the hundreds of entries, so only Topics is open on first visit).
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      // `hidden` on the list is the single source of fold truth, so a search
+      // that auto-expands the list cannot desync the toggle button.
+      function setKeywordsFolded(folded, remember) {
+        keywordList.hidden = folded;
+        if (keywordBtn) keywordBtn.setAttribute('aria-expanded', String(!folded));
+        if (remember) localStorage.setItem('sidebar-keywords-folded', String(folded));
+      }
+      if (keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        setKeywordsFolded(kwStored === null ? true : kwStored === 'true', false);
+      }
+      if (keywordBtn && keywordList) {
+        keywordBtn.addEventListener('click', function() {
+          setKeywordsFolded(!keywordList.hidden, true);
+        });
+      }
+
+      // Keyword search: client-side filter over the existing <li> entries,
+      // so every keyword page stays a plain reachable link with no JS.
+      var keywordSearch = document.getElementById('keyword-search');
+      var keywordEmpty = document.getElementById('keyword-empty');
+      if (keywordSearch && keywordList) {
+        var keywordItems = Array.prototype.slice.call(keywordList.querySelectorAll('li'));
+        keywordSearch.addEventListener('input', function() {
+          var query = keywordSearch.value.trim().toLowerCase();
+          if (query && keywordList.hidden) setKeywordsFolded(false, false);
+          var visible = 0;
+          keywordItems.forEach(function(item) {
+            var match = !query || item.textContent.toLowerCase().indexOf(query) !== -1;
+            item.hidden = !match;
+            if (match) visible += 1;
+          });
+          if (keywordEmpty) keywordEmpty.hidden = visible !== 0;
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

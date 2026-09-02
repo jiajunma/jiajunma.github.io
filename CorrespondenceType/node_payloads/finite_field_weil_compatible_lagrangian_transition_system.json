@@ -1,0 +1,74 @@
+{
+  "id": "finite_field_weil.compatible_lagrangian_transition_system",
+  "title": "Compatible System of Schrödinger-Model Intertwiners over a Finite Field",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "finite_field_weil/finite_field_weil_compatible_lagrangian_transition_system.html",
+  "primary_topic": "finite_field_weil",
+  "topics": [
+    "finite_field_weil"
+  ],
+  "body_html": "<h1>Compatible System of Schrödinger-Model Intertwiners over a Finite Field</h1>\n<p>This node records the consequence of <a class=\"node-ref\" data-node-id=\"finite_field_weil.weil_index_trivialization\" href=\"finite_field_weil_weil_index_trivialization.html\">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a>: over a finite field of odd\ncharacteristic the Schrödinger models of the Weil representation, attached to the various Lagrangians, fit into a\n<strong>compatible system</strong> of intertwiners — a coherent family of identifications closed under composition. It is the\nfinite-field model of the kind of compatible system one wants on the $p$-adic side, and it shows the finite-field part\nof any transition map carries no metaplectic obstruction.</p>\n<p>The formal compatible system below uses the base-Lagrangian coboundary\ntrivialization.  Gérardin's original proof that the full finite-field\nsymplectic Weil projective cocycle linearizes is the separate input\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.gerardin_symplectic_weil_linearization\" href=\"finite_field_weil_gerardin_symplectic_weil_linearization.html\">Gérardin Linearization of the Finite Symplectic Weil Cocycle</a>.</p>\n<h2>Setup (recalled)</h2>\n<p>Notation as in <a class=\"node-ref\" data-node-id=\"finite_field_weil.weil_index_trivialization\" href=\"finite_field_weil_weil_index_trivialization.html\">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a>: $k$ is a finite field of odd order $q$ and\ncharacteristic $p$, $(E,j)$ a nondegenerate symplectic $k$-space with $i=j/2$, $H(E,j)$ its Heisenberg group, and\n$\\xi\\colon k\\to R^{\\times}$ a nontrivial character into a field $R$ with $\\operatorname{char}R\\neq p$. For a Lagrangian\n$L\\subseteq E$, $\\mathcal S_L$ is the Schrödinger model, and</p>\n<p>$$\n\\mathcal F_{L,L'}\\colon\\mathcal S_{L'}\\to\\mathcal S_L,\\qquad\n(\\mathcal F_{L,L'}\\varphi)(v)=\\sum_{a\\in L/(L\\cap L')}\\xi(i(a,v))\\,\\varphi(v+a)\n$$</p>\n<p>is the canonical $H(E,j)$-intertwiner. By that node these satisfy the orthogonality\n$\\mathcal F_{L,L'}\\circ\\mathcal F_{L',L}=q^{\\,d_{L,L'}}\\operatorname{id}$ ($d_{L,L'}=m-\\dim_k(L\\cap L')$,\n$\\dim_k E=2m$), compose by a cocycle $\\mathcal F_{L,L'}\\circ\\mathcal F_{L',L''}=\\gamma(L,L',L'')\\mathcal F_{L,L''}$, and\n— fixing any base Lagrangian $L_0$ — the cocycle is a coboundary $\\gamma=\\delta c$ with the explicit, division-free\ncharacter sum</p>\n<p>$$\nc_{L,L'}=\\gamma(L,L',L_0)=\\!\\!\\sum_{\\substack{a\\in L'/(L'\\cap L_0),\\ b\\in L/(L\\cap L')\\\\ a+b\\in L_0}}\\!\\!\\xi\\big(i(a,b)\\big)\\in R^{\\times}.\n$$</p>\n<h2>Statement</h2>\n<p>Put $\\widetilde{\\mathcal F}_{L,L'}:=c_{L,L'}^{-1}\\,\\mathcal F_{L,L'}$. Then $\\{\\widetilde{\\mathcal F}_{L,L'}\\}$ is a\n<strong>compatible system</strong> of $H(E,j)$-isomorphisms between the Schrödinger models: for all Lagrangians $L,L',L''$,</p>\n<p>$$\n\\widetilde{\\mathcal F}_{L,L}=\\operatorname{id}_{\\mathcal S_L},\\qquad\n\\widetilde{\\mathcal F}_{L,L'}\\circ\\widetilde{\\mathcal F}_{L',L''}=\\widetilde{\\mathcal F}_{L,L''},\\qquad\n\\widetilde{\\mathcal F}_{L',L}=\\widetilde{\\mathcal F}_{L,L'}^{-1}.\n$$</p>\n<p>Moreover the system is unique up to relabeling: for any other compatible\nsystem \\(T_{L,L'}\\), there are scalars \\(\\nu_L\\in R^\\times\\) such that</p>\n<p>$$\nT_{L,L'}=(\\nu_{L'}/\\nu_L)\\widetilde{\\mathcal F}_{L,L'}.\n$$</p>",
+  "proof_html": "<p>By <a class=\"node-ref\" data-node-id=\"finite_field_weil.weil_index_trivialization\" href=\"finite_field_weil_weil_index_trivialization.html\">Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle</a>, $\\gamma=\\delta c$, i.e.\n$\\gamma(L,L',L'')=c_{L,L'}c_{L',L''}c_{L,L''}^{-1}$, and $c_{L,L}=1$. Hence</p>\n<p>$$\n\\begin{aligned}\n\\widetilde{\\mathcal F}_{L,L'}\\circ\\widetilde{\\mathcal F}_{L',L''}\n&amp;=\nc_{L,L'}^{-1}c_{L',L''}^{-1}\n(\\mathcal F_{L,L'}\\circ\\mathcal F_{L',L''})\\\\\n&amp;=\nc_{L,L'}^{-1}c_{L',L''}^{-1}\n\\gamma(L,L',L'')\\mathcal F_{L,L''}\\\\\n&amp;=\nc_{L,L''}^{-1}\\mathcal F_{L,L''}\\\\\n&amp;=\n\\widetilde{\\mathcal F}_{L,L''}.\n\\end{aligned}\n$$</p>\n<p>In the third line we used the coboundary identity for \\(\\gamma\\).  Also\n\\(\\widetilde{\\mathcal F}_{L,L}=c_{L,L}^{-1}\\mathcal F_{L,L}\n=\\operatorname{id}_{\\mathcal S_L}\\), since \\(c_{L,L}=1\\) and\n\\(\\mathcal F_{L,L}\\) is the identity.</p>\n<p>Taking \\(L''=L\\) in the strict composition law gives</p>\n<p>$$\n\\widetilde{\\mathcal F}_{L,L'}\\circ\\widetilde{\\mathcal F}_{L',L}\n=\n\\widetilde{\\mathcal F}_{L,L}\n=\n\\operatorname{id}_{\\mathcal S_L}.\n$$</p>\n<p>Interchanging \\(L\\) and \\(L'\\) gives</p>\n<p>$$\n\\widetilde{\\mathcal F}_{L',L}\\circ\\widetilde{\\mathcal F}_{L,L'}\n=\n\\operatorname{id}_{\\mathcal S_{L'}}.\n$$</p>\n<p>Thus \\(\\widetilde{\\mathcal F}_{L',L}=\\widetilde{\\mathcal F}_{L,L'}^{-1}\\).\nEach \\(\\widetilde{\\mathcal F}_{L,L'}\\) is a nonzero scalar multiple of the\n\\(H(E,j)\\)-homomorphism \\(\\mathcal F_{L,L'}\\), hence is itself an\n\\(H(E,j)\\)-isomorphism.</p>\n<p>For uniqueness, let \\(T_{L,L'}\\) be any other compatible system built from\nnonzero \\(H(E,j)\\)-intertwiners between the same Schrödinger models.  By\n<a class=\"node-ref\" data-node-id=\"finite_field_weil.schrodinger_hom_line\" href=\"finite_field_weil_schrodinger_hom_line.html\">One-Dimensional Hom Line for Finite Schrödinger Models</a>, there are unique scalars\n\\(\\mu_{L,L'}\\in R^\\times\\) such that</p>\n<p>$$\nT_{L,L'}=\\mu_{L,L'}\\widetilde{\\mathcal F}_{L,L'}.\n$$</p>\n<p>Compatibility of \\(T\\) and of \\(\\widetilde{\\mathcal F}\\) means</p>\n<p>$$\nT_{L,L'}T_{L',L''}=T_{L,L''},\n\\qquad\n\\widetilde{\\mathcal F}_{L,L'}\\widetilde{\\mathcal F}_{L',L''}\n=\n\\widetilde{\\mathcal F}_{L,L''}.\n$$</p>\n<p>Substituting \\(T_{A,B}=\\mu_{A,B}\\widetilde{\\mathcal F}_{A,B}\\) gives</p>\n<p>$$\n\\mu_{L,L'}\\mu_{L',L''}\\widetilde{\\mathcal F}_{L,L''}\n=\n\\mu_{L,L''}\\widetilde{\\mathcal F}_{L,L''}.\n$$</p>\n<p>Since \\(\\widetilde{\\mathcal F}_{L,L''}\\neq0\\), the coefficients are equal:</p>\n<p>$$\n\\mu_{L,L'}\\mu_{L',L''}=\\mu_{L,L''},\\qquad \\mu_{L,L}=1.\n$$</p>\n<p>Fix one base Lagrangian \\(B\\) and set \\(\\nu_L:=\\mu_{B,L}\\).  Taking\n\\((B,L,L')\\) in the preceding identity gives</p>\n<p>$$\n\\nu_L\\mu_{L,L'}=\\nu_{L'},\n$$</p>\n<p>so</p>\n<p>$$\n\\mu_{L,L'}=\\nu_L^{-1}\\nu_{L'}.\n$$</p>\n<p>Thus every compatible system differs from\n\\(\\widetilde{\\mathcal F}_{L,L'}\\) by rescaling the object \\(\\mathcal S_L\\) by\n\\(\\nu_L^{-1}\\), equivalently by the displayed factor\n\\(\\nu_{L'}/\\nu_L\\) on the map from \\(\\mathcal S_{L'}\\) to \\(\\mathcal S_L\\).\nThis is the asserted relabeling. \\(\\square\\)</p>\n<h2>Role of odd characteristic</h2>\n<p>Odd characteristic is essential in these nodes because it makes \\(i=j/2\\)\navailable in the Heisenberg cocycle and in the covariance formulas.  The\ncondition \\(\\operatorname{char}R\\neq p\\) makes \\(q\\) a unit in \\(R\\), so the\nfactor \\(q^{d_{L,L'}}\\) in the orthogonality identity is invertible.  These\nare the only hypotheses needed for the compatible transition system proved\nabove.</p>\n<h2>Interpretation for Lattice-Model Transitions</h2>\n<p>The result proved here is only the finite-field statement: the Lagrangian\nSchrödinger transition cocycle is a coboundary after choosing a base\nLagrangian.  Thus, when this finite calculation appears as a residual factor\ninside a \\(p\\)-adic lattice-model comparison, this finite Lagrangian cocycle\nis not by itself an obstruction to strict transition maps.  Any remaining\n\\(p\\)-adic metaplectic splitting issue is a separate input, not proved in this\nfinite-field node.</p>",
+  "deps": [
+    {
+      "id": "finite_field_weil.weil_index_trivialization",
+      "title": "Orthogonality and Trivialization of the Change-of-Lagrangian Cocycle",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_intertwiner",
+      "title": "Change-of-Lagrangian Intertwiner for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_intertwiner.html"
+    },
+    {
+      "id": "finite_field_weil.lagrangian_transition_orthogonality",
+      "title": "Orthogonality of Change-of-Lagrangian Intertwiners",
+      "href": "finite_field_weil/finite_field_weil_lagrangian_transition_orthogonality.html"
+    },
+    {
+      "id": "finite_field_weil.schrodinger_hom_line",
+      "title": "One-Dimensional Hom Line for Finite Schrödinger Models",
+      "href": "finite_field_weil/finite_field_weil_schrodinger_hom_line.html"
+    },
+    {
+      "id": "finite_field_weil.finite_weil_index_cocycle",
+      "title": "Finite Weil-Index Cocycle for Lagrangian Transitions",
+      "href": "finite_field_weil/finite_field_weil_finite_weil_index_cocycle.html"
+    },
+    {
+      "id": "finite_field_weil.base_lagrangian_weil_index_trivialization",
+      "title": "Base-Lagrangian Trivialization of the Finite Weil-Index Cocycle",
+      "href": "finite_field_weil/finite_field_weil_base_lagrangian_weil_index_trivialization.html"
+    },
+    {
+      "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+      "href": "finite_field_weil/finite_field_weil_gerardin_symplectic_weil_linearization.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "finite_field_weil.spherical_building_canonical_mixed_model",
+      "title": "Canonical Mixed Model on the Spherical Building via Gérardin Reduction",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_canonical_mixed_model.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_mixed_model_compatible_system",
+      "title": "Compatible System of Mixed Schrödinger Models on the Spherical Building",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_mixed_model_compatible_system.html"
+    },
+    {
+      "id": "finite_field_weil.spherical_building_reference_frame",
+      "title": "Lagrangian Reference Frame for the Spherical-Building Compatible System",
+      "href": "finite_field_weil/finite_field_weil_spherical_building_reference_frame.html"
+    },
+    {
+      "id": "finite_field_weil.weil_index_trivialization_lean_plan",
+      "title": "Lean Formalization Plan for the Weil-Index Trivialization Theorem",
+      "href": "finite_field_weil/finite_field_weil_weil_index_trivialization_lean_plan.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

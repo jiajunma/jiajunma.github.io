@@ -1,0 +1,297 @@
+{
+  "topic": {
+    "id": "theta_semisimple_types",
+    "title": "Theta Semisimple Types",
+    "href": "theta_semisimple_types/index.html",
+    "parent": null,
+    "node_count": 10,
+    "descendant_node_count": 10
+  },
+  "counts": {
+    "internal_nodes": 10,
+    "inlined_nodes": 10,
+    "descendant_nodes": 10,
+    "child_topics": 0,
+    "inlined_child_topics": 10,
+    "non_proof_plan_nodes": 10,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
+  },
+  "nodes": [
+    {
+      "id": "theta_semisimple_types.brick_decomposition",
+      "title": "Brick Decomposition For Semisimple Theta Data",
+      "kind": "concept",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_brick_decomposition.html",
+      "payload": "node_payloads/theta_semisimple_types_brick_decomposition.json"
+    },
+    {
+      "id": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "title": "Support Pieces In The Generalized Lattice Model",
+      "kind": "definition",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_generalized_lattice_model_support_piece.html",
+      "payload": "node_payloads/theta_semisimple_types_generalized_lattice_model_support_piece.json"
+    },
+    {
+      "id": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+      "title": "Geometric Lemma For Diagonal Reduction",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_geometric_lemma_for_diagonal_reduction.html",
+      "payload": "node_payloads/theta_semisimple_types_geometric_lemma_for_diagonal_reduction.json"
+    },
+    {
+      "id": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+      "title": "The Subgroup H Sigma Plus And The Character Psi Beta",
+      "kind": "definition",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_h_sigma_plus_character_subgroup.html",
+      "payload": "node_payloads/theta_semisimple_types_h_sigma_plus_character_subgroup.json"
+    },
+    {
+      "id": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+      "title": "Hecke Module Problem For Semisimple Theta",
+      "kind": "task",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_hecke_module_problem_for_semisimple_theta.html",
+      "payload": "node_payloads/theta_semisimple_types_hecke_module_problem_for_semisimple_theta.json"
+    },
+    {
+      "id": "theta_semisimple_types.main_isotypic_formula",
+      "title": "Main Isotypic Formula For Semisimple Theta Data",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_main_isotypic_formula.html",
+      "payload": "node_payloads/theta_semisimple_types_main_isotypic_formula.json"
+    },
+    {
+      "id": "theta_semisimple_types.moment_map_condition",
+      "title": "Moment-Map Condition For Semisimple Theta Occurrence",
+      "kind": "concept",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_moment_map_condition.html",
+      "payload": "node_payloads/theta_semisimple_types_moment_map_condition.json"
+    },
+    {
+      "id": "theta_semisimple_types.pre_semisimple_character_datum",
+      "title": "Pre-Semisimple Character Datum In The Theta Draft",
+      "kind": "definition",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_pre_semisimple_character_datum.html",
+      "payload": "node_payloads/theta_semisimple_types_pre_semisimple_character_datum.json"
+    },
+    {
+      "id": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "title": "Occurrence Propositions For Semisimple Types",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_semisimple_type_occurrence_propositions.html",
+      "payload": "node_payloads/theta_semisimple_types_semisimple_type_occurrence_propositions.json"
+    },
+    {
+      "id": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "title": "Target Building Point From w And The Depth-Zero Point",
+      "kind": "definition",
+      "status": "staged",
+      "href": "theta_semisimple_types/theta_semisimple_types_target_building_point_from_w_and_depth_zero_point.html",
+      "payload": "node_payloads/theta_semisimple_types_target_building_point_from_w_and_depth_zero_point.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "theta_semisimple_types.pre_semisimple_character_datum",
+      "to": "theta_semisimple_types.brick_decomposition",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.brick_decomposition",
+      "to": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.pre_semisimple_character_datum",
+      "to": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.main_isotypic_formula",
+      "to": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "to": "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "to": "theta_semisimple_types.main_isotypic_formula",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+      "to": "theta_semisimple_types.main_isotypic_formula",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.h_sigma_plus_character_subgroup",
+      "to": "theta_semisimple_types.main_isotypic_formula",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "to": "theta_semisimple_types.main_isotypic_formula",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.pre_semisimple_character_datum",
+      "to": "theta_semisimple_types.moment_map_condition",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.main_isotypic_formula",
+      "to": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.moment_map_condition",
+      "to": "theta_semisimple_types.semisimple_type_occurrence_propositions",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.brick_decomposition",
+      "to": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "kind": "uses"
+    },
+    {
+      "from": "theta_semisimple_types.moment_map_condition",
+      "to": "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "lattice_model_transition",
+      "title": "Lattice Model Transition",
+      "href": "lattice_model_transition/index.html",
+      "role": "dependency",
+      "node_count": 6
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:lattice_model_transition",
+      "to": "theta_semisimple_types.generalized_lattice_model_support_piece",
+      "kind": "boundary_dependency",
+      "topic": "lattice_model_transition",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "brick-decomposition",
+      "title": "brick-decomposition",
+      "href": "keywords/brick-decomposition.html",
+      "count": 1
+    },
+    {
+      "id": "building",
+      "title": "building",
+      "href": "keywords/building.html",
+      "count": 1
+    },
+    {
+      "id": "geometric-lemma",
+      "title": "geometric-lemma",
+      "href": "keywords/geometric-lemma.html",
+      "count": 1
+    },
+    {
+      "id": "hecke-algebra",
+      "title": "hecke-algebra",
+      "href": "keywords/hecke-algebra.html",
+      "count": 1
+    },
+    {
+      "id": "isotypic-component",
+      "title": "isotypic-component",
+      "href": "keywords/isotypic-component.html",
+      "count": 1
+    },
+    {
+      "id": "lattice-model",
+      "title": "lattice-model",
+      "href": "keywords/lattice-model.html",
+      "count": 1
+    },
+    {
+      "id": "main-formula",
+      "title": "main-formula",
+      "href": "keywords/main-formula.html",
+      "count": 1
+    },
+    {
+      "id": "moment-map",
+      "title": "moment-map",
+      "href": "keywords/moment-map.html",
+      "count": 1
+    },
+    {
+      "id": "occurrence",
+      "title": "occurrence",
+      "href": "keywords/occurrence.html",
+      "count": 1
+    },
+    {
+      "id": "open-point",
+      "title": "open-point",
+      "href": "keywords/open-point.html",
+      "count": 1
+    },
+    {
+      "id": "semisimple-character",
+      "title": "semisimple-character",
+      "href": "keywords/semisimple-character.html",
+      "count": 2
+    },
+    {
+      "id": "support",
+      "title": "support",
+      "href": "keywords/support.html",
+      "count": 1
+    },
+    {
+      "id": "theta-lift",
+      "title": "theta-lift",
+      "href": "keywords/theta-lift.html",
+      "count": 1
+    },
+    {
+      "id": "theta-semisimple-types",
+      "title": "theta-semisimple-types",
+      "href": "keywords/theta-semisimple-types.html",
+      "count": 10
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "theta_semisimple_types.brick_decomposition",
+    "theta_semisimple_types.generalized_lattice_model_support_piece",
+    "theta_semisimple_types.geometric_lemma_for_diagonal_reduction",
+    "theta_semisimple_types.h_sigma_plus_character_subgroup",
+    "theta_semisimple_types.hecke_module_problem_for_semisimple_theta",
+    "theta_semisimple_types.main_isotypic_formula",
+    "theta_semisimple_types.moment_map_condition",
+    "theta_semisimple_types.pre_semisimple_character_datum",
+    "theta_semisimple_types.semisimple_type_occurrence_propositions",
+    "theta_semisimple_types.target_building_point_from_w_and_depth_zero_point"
+  ]
+}

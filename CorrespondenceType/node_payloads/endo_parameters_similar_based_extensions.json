@@ -1,0 +1,23 @@
+{
+  "id": "endo_parameters.similar_based_extensions",
+  "title": "Similar Based Extensions",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_similar_based_extensions.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>Similar Based Extensions</h1>\n<p>For a based extension $(E,\\beta)$ with $\\beta\\ne 0$, write $y_\\beta$ for the\nimage of</p>\n<p>$$\n\\varpi_F^{n/g}\\beta^{e/g}\n$$</p>\n<p>in the residue field $k_E$, where</p>\n<p>$$\ne=e(E/F),\n\\qquad\nn=-\\operatorname{val}_E(\\beta),\n\\qquad\ng=\\gcd(n,e).\n$$</p>\n<p>Set $y_0=0$ in $k_F$.</p>\n<p>Two based extensions $(E,\\beta)$ and $(E',\\beta')$ of $F$ are similar if:</p>\n<ol>\n<li>$f(E/F)=f(E'/F)$ and $e(E/F)=e(E'/F)$;</li>\n<li>$\\operatorname{val}_E(\\beta)=\\operatorname{val}_{E'}(\\beta')$;</li>\n<li>there is a $k_F$-linear field isomorphism $k_E\\simeq k_{E'}$ sending\n   $y_\\beta$ to $y_{\\beta'}$.</li>\n</ol>\n<p>The draft states that this notion is independent of the chosen uniformizer\n$\\varpi_F$.</p>\n<p>If two ps-characters are endo-equivalent and supported on $\\beta$ and\n$\\beta'$, then $(F[\\beta],\\beta)$ and $(F[\\beta'],\\beta')$ are similar.  Hence\nan endo-class has a well-defined degree.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "endo_parameters.based_extension_and_simple_element",
+      "title": "Based Extensions And Simple Elements",
+      "href": "endo_parameters/endo_parameters_based_extension_and_simple_element.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}

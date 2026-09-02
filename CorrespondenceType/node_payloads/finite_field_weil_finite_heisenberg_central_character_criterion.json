@@ -2,20 +2,36 @@
   "id": "finite_field_weil.finite_heisenberg_central_character_criterion",
   "title": "Finite Heisenberg Central Character Criterion",
   "kind": "lemma",
-  "status": "admitted",
+  "status": "staged",
   "href": "finite_field_weil/finite_field_weil_finite_heisenberg_central_character_criterion.html",
   "primary_topic": "finite_field_weil",
   "topics": [
     "finite_field_weil"
   ],
-  "body_html": "<h1>Finite Heisenberg Central Character Criterion</h1>\n<p>Let $H$ be a finite group with center $Z$, and let $\\xi$ be a character of $Z$ such that for every $h \\in H \\setminus Z$ there is $h' \\in H$ with $(h',h) \\in Z$ and $\\xi((h',h)) \\ne 1$.</p>\n<p>If a representation $\\eta$ of $H$ restricts to $\\xi$ on $Z$, then the character of $\\eta$ is supported on $Z$. Such an $\\eta$ is irreducible if and only if\n$$\n\\deg(\\eta)^2=[H:Z],\n$$\nand in that case its isomorphism class is uniquely determined by $\\xi$.</p>",
-  "proof_html": null,
-  "deps": [],
+  "body_html": "<h1>Finite Heisenberg Central Character Criterion</h1>\n<p>Let $H$ be a finite group with center $Z$, and let $\\xi$ be a character of $Z$ such that for every $h \\in H \\setminus Z$ there is $h' \\in H$ with $(h',h) \\in Z$ and $\\xi((h',h)) \\ne 1$.</p>\n<p>If a representation $\\eta$ of $H$ restricts to $\\xi$ on $Z$, then the character of $\\eta$ is supported on $Z$. Such an $\\eta$ is irreducible if and only if</p>\n<p>$$\n\\deg(\\eta)^2=[H:Z],\n$$</p>\n<p>and in that case its isomorphism class is uniquely determined by $\\xi$.</p>",
+  "proof_html": "<p>Write \\(d=\\deg(\\eta)\\). Let \\(h\\in H\\setminus Z\\). By hypothesis there exists \\(h'\\in H\\) such that</p>\n<p>$$\nc:=(h',h)=h'hh'^{-1}h^{-1}\\in Z\n\\quad\\text{and}\\quad\n\\xi(c)\\neq 1.\n$$</p>\n<p>Rearranging the definition of the commutator gives</p>\n<p>$$\nh'hh'^{-1}=ch.\n$$</p>\n<p>Apply \\(\\eta\\) and take traces. By conjugation invariance from <a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_group_character_theory\" href=\"finite_field_weil_finite_group_character_theory.html\">Finite Group Character Theory Basics</a>,</p>\n<p>$$\n\\chi_\\eta(h)\n=\n\\operatorname{tr}\\big(\\eta(h')\\eta(h)\\eta(h')^{-1}\\big)\n=\n\\operatorname{tr}\\big(\\eta(ch)\\big).\n$$</p>\n<p>Since \\(c\\in Z\\) and \\(\\eta|_Z=\\xi\\), we have \\(\\eta(c)=\\xi(c)\\,\\mathrm{id}\\), so</p>\n<p>$$\n\\operatorname{tr}\\big(\\eta(ch)\\big)\n=\n\\operatorname{tr}\\big(\\eta(c)\\eta(h)\\big)\n=\n\\xi(c)\\operatorname{tr}(\\eta(h))\n=\n\\xi(c)\\chi_\\eta(h).\n$$</p>\n<p>Hence</p>\n<p>$$\n(1-\\xi(c))\\chi_\\eta(h)=0.\n$$</p>\n<p>Because \\(\\xi(c)\\neq 1\\), it follows that \\(\\chi_\\eta(h)=0\\). Thus \\(\\chi_\\eta\\) is supported on \\(Z\\).</p>\n<p>Now compute the character inner product. For \\(z\\in Z\\), the central-scalar statement in <a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_group_character_theory\" href=\"finite_field_weil_finite_group_character_theory.html\">Finite Group Character Theory Basics</a> gives</p>\n<p>$$\n\\chi_\\eta(z)=\\xi(z)\\,d\n\\quad\\text{and hence}\\quad\n|\\chi_\\eta(z)|=d.\n$$</p>\n<p>Since \\(\\chi_\\eta\\) vanishes on \\(H\\setminus Z\\),</p>\n<p>$$\n\\langle \\chi_\\eta,\\chi_\\eta\\rangle\n=\n\\frac{1}{|H|}\\sum_{x\\in H}|\\chi_\\eta(x)|^2\n=\n\\frac{1}{|H|}\\sum_{z\\in Z}|\\chi_\\eta(z)|^2\n=\n\\frac{1}{|H|}\\sum_{z\\in Z} d^2\n=\n\\frac{|Z|\\,d^2}{|H|}\n=\n\\frac{d^2}{[H:Z]}.\n$$</p>\n<p>By the irreducibility criterion in <a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_group_character_theory\" href=\"finite_field_weil_finite_group_character_theory.html\">Finite Group Character Theory Basics</a>, \\(\\eta\\) is irreducible if and only if \\(\\langle \\chi_\\eta,\\chi_\\eta\\rangle=1\\). Therefore</p>\n<p>$$\n\\eta \\text{ is irreducible }\n\\Longleftrightarrow\n\\frac{d^2}{[H:Z]}=1\n\\Longleftrightarrow\nd^2=[H:Z].\n$$</p>\n<p>Finally, suppose \\(\\eta_1\\) and \\(\\eta_2\\) are irreducible finite-dimensional complex representations of \\(H\\) restricting to the same character \\(\\xi\\) on \\(Z\\). By the criterion just proved, both have degree</p>\n<p>$$\n\\deg(\\eta_1)=\\deg(\\eta_2)=\\sqrt{[H:Z]}.\n$$</p>\n<p>Their characters are supported on \\(Z\\), and for \\(z\\in Z\\),</p>\n<p>$$\n\\chi_{\\eta_1}(z)=\\xi(z)\\deg(\\eta_1)=\\xi(z)\\sqrt{[H:Z]}\n=\\xi(z)\\deg(\\eta_2)=\\chi_{\\eta_2}(z).\n$$</p>\n<p>They also both vanish on \\(H\\setminus Z\\). Hence</p>\n<p>$$\n\\chi_{\\eta_1}=\\chi_{\\eta_2}.\n$$</p>\n<p>By character-determines-representation in <a class=\"node-ref\" data-node-id=\"finite_field_weil.finite_group_character_theory\" href=\"finite_field_weil_finite_group_character_theory.html\">Finite Group Character Theory Basics</a>, \\(\\eta_1\\cong\\eta_2\\). So, in the irreducible case, the isomorphism class is uniquely determined by \\(\\xi\\). \\(\\square\\)</p>",
+  "deps": [
+    {
+      "id": "finite_field_weil.finite_group_character_theory",
+      "title": "Finite Group Character Theory Basics",
+      "href": "finite_field_weil/finite_field_weil_finite_group_character_theory.html"
+    }
+  ],
   "dependents": [
     {
       "id": "finite_field_weil.finite_heisenberg_stone_von_neumann",
       "title": "Finite Heisenberg Stone-von Neumann Property",
       "href": "finite_field_weil/finite_field_weil_finite_heisenberg_stone_von_neumann.html"
+    },
+    {
+      "id": "finite_field_weil.gerardin_symplectic_weil_linearization",
+      "title": "Gérardin Linearization of the Finite Symplectic Weil Cocycle",
+      "href": "finite_field_weil/finite_field_weil_gerardin_symplectic_weil_linearization.html"
+    },
+    {
+      "id": "finite_field_weil.projective_cocycle_linearization_criterion",
+      "title": "Projective Cocycle Linearization Criterion for Finite Heisenberg Representations",
+      "href": "finite_field_weil/finite_field_weil_projective_cocycle_linearization_criterion.html"
     },
     {
       "id": "finite_field_weil.symplectic_weil_representation",

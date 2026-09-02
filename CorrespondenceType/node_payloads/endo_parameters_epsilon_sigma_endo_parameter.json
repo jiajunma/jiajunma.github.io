@@ -1,0 +1,34 @@
+{
+  "id": "endo_parameters.epsilon_sigma_endo_parameter",
+  "title": "Epsilon-Sigma Endo-Parameters",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_epsilon_sigma_endo_parameter.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>Epsilon-Sigma Endo-Parameters</h1>\n<p>An $(\\varepsilon,\\sigma)$-endo-parameter over $F$ is a $\\sigma$-invariant\nfinitely supported section of</p>\n<p>$$\n\\bigsqcup_{\\mathfrak c\\in\\mathscr E(F)}\n\\operatorname{herm}_{\\varepsilon}(\\mathfrak c)\n\\longrightarrow\n\\mathscr E(F).\n$$</p>\n<p>The set of such parameters is denoted</p>\n<p>$$\n\\mathscr{EP}_{\\varepsilon}(F)^\\sigma.\n$$</p>\n<p>There is a forgetful map</p>\n<p>$$\n\\mathscr{EP}_{\\varepsilon}(F)^\\sigma\n\\to\n\\mathscr{EP}(F)^\\sigma.\n$$</p>\n<p>The totally positive subset</p>\n<p>$$\n\\mathscr{EP}_{\\varepsilon}^+(F)^\\sigma\n$$</p>\n<p>consists of parameters supported away from the trivial endo-class.</p>\n<h2>Draft Caution</h2>\n<p>This is only the lightweight draft-level formulation needed by the current\npaper.  The precise KSS definition should be extracted from the registered KSS\nPDF source later.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "endo_parameters.hermitian_monoids_for_self_dual_endo_classes",
+      "title": "Hermitian Monoids For Self-Dual Endo-Classes",
+      "href": "endo_parameters/endo_parameters_hermitian_monoids_for_self_dual_endo_classes.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "endo_parameters.classical_group_endo_parameter",
+      "title": "Endo-Parameters For Classical Groups",
+      "href": "endo_parameters/endo_parameters_classical_group_endo_parameter.html"
+    },
+    {
+      "id": "endo_parameters.endo_correspondence_open_definition",
+      "title": "Endo-Correspondence Is Still An Open Definition In The Draft",
+      "href": "endo_parameters/endo_parameters_endo_correspondence_open_definition.html"
+    }
+  ],
+  "lean_refs": [],
+  "lean_modules": []
+}

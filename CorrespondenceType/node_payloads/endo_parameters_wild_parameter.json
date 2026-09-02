@@ -1,0 +1,23 @@
+{
+  "id": "endo_parameters.wild_parameter",
+  "title": "Wild Parameters And Endo-Classes",
+  "kind": "definition",
+  "status": "staged",
+  "href": "endo_parameters/endo_parameters_wild_parameter.html",
+  "primary_topic": "endo_parameters",
+  "topics": [
+    "endo_parameters"
+  ],
+  "body_html": "<h1>Wild Parameters And Endo-Classes</h1>\n<p>Let $W_F$ be the Weil group of $F$, and let</p>\n<p>$$\nWD_F=W_F\\times\\operatorname{SL}_2(\\mathbb C)\n$$</p>\n<p>be the Weil-Deligne group.  Let $P_F$ be the wild inertia group.</p>\n<p>Write</p>\n<p>$$\nW_F\\backslash\\widehat{P_F}\n$$</p>\n<p>for the set of $W_F$-orbits of irreducible continuous representations of\n$P_F$.  If $[\\rho]$ is such an orbit, let $\\ell([\\rho])$ be its orbit length\nand define</p>\n<p>$$\n\\dim([\\rho])=\\ell([\\rho])\\dim(\\rho).\n$$</p>\n<p>A wild $\\operatorname{GL}$-parameter over $F$ is a finitely supported section\nof</p>\n<p>$$\n(W_F\\backslash\\widehat{P_F})\\times\\mathbb N\n\\longrightarrow\nW_F\\backslash\\widehat{P_F}.\n$$</p>\n<p>Equivalently, it is a finitely supported function</p>\n<p>$$\nf:W_F\\backslash\\widehat{P_F}\\to\\mathbb N.\n$$</p>\n<p>Its degree is</p>\n<p>$$\n\\deg(f)=\n\\sum_{[\\rho]}\n\\dim([\\rho])f([\\rho]).\n$$</p>\n<p>The draft denotes the set of wild parameters by $\\mathscr{WP}(F)$ and the\ndegree $N$ subset by $\\mathscr{WP}_N(F)$.</p>\n<p>The current TeX states that there is a canonical bijection</p>\n<p>$$\n\\mathscr E(F)\\to W_F\\backslash\\widehat{P_F}\n$$</p>\n<p>compatible with local Langlands and cuspidal support, and that this induces a\ncommuting diagram between irreducible $\\operatorname{GL}_N(F)$\nrepresentations, Langlands parameters, endo-parameters, and wild parameters.</p>\n<h2>Draft Caution</h2>\n<p>The compatibility is cited in the TeX.  This node records the draft's intended\ninput; it does not prove the cited local Langlands compatibility.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "endo_parameters.gl_endo_parameter",
+      "title": "GL Endo-Parameters",
+      "href": "endo_parameters/endo_parameters_gl_endo_parameter.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [],
+  "lean_modules": []
+}
